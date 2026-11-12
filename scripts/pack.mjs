@@ -1,0 +1,100 @@
+/**
+ * 打发行包：白名单装，不整目录打。
+ *
+ * 起因（2026-11-08）：0.2.2 那个包把「运行规则」「测试清单」「发给谁」「记忆规则」也打进去了。
+ * 那是创作侧的东西——别人拆开包，等于看见我们怎么判断、怎么测、发给谁。
+ *
+ * 白名单之外的，一律不进包；工厂、脚本、测试、人格底本更不进。
+ *
+ * 用法：node scripts/pack.mjs
+ */
+import { readFileSync, writeFileSync, mkdirSync, cpSync, existsSync, readdirSync, rmSync, statSync } from 'node:fs'
+
+import { join, dirname } from 'node:path'
+import { homedir, tmpdir } from 'node:os'
+import { execFileSync } from 'node:child_process'
+import { fileURLToPath } from 'node:url'
+
+const ROOT = dirname(dirname(fileURLToPath(import.meta.url)))
+const pkg = JSON.parse(readFileSync(join(ROOT, 'package.json'), 'utf8'))
+const NAME = String(pkg.name || 'dsh-consciousness')
+const VER = String(pkg.version || '0.0.0')
+
+// 防回归：先把本机路径扫一遍，命中就不许打包
+try {
+  execFileSync(process.execPath, [join(ROOT, 'scripts', 'check_personal_paths.mjs')], { stdio: 'inherit' })
+} catch (e) {
+  if (e && e.status === 1) {
+    console.error('打包中止：发现硬编码本机路径')
+    process.exit(1)
+  }
+  console.warn('警告：路径守卫没跑起来（' + (e && e.message) + '），继续打包')
+}
+
+
+// 只准这些东西进包
+const WHITELIST_FILES = [
+  'package.json', 'index.js', 'client.js', 'cordis.patch.yml',
+  'README.md', 'INSTALL.md', 'LICENSE', 'install.ps1', 'selfupdate.mjs', '安装卡.docx',
+]
+const WHITELIST_DIRS = ['lib', 'assets']
+
+// 这几份名字单独点出来：绝不许进包
+const FORBIDDEN = ['运行规则.md', '记忆规则.md', '测试清单.md', '发给谁.md']
+
+const outDir = join(homedir(), 'Desktop', '识海发版')
+mkdirSync(outDir, { recursive: true })
+
+const stage = join(tmpdir(), 'pack-' + Date.now())
+const inside = join(stage, 'package')
+mkdirSync(inside, { recursive: true })
+
+let n = 0
+for (const f of WHITELIST_FILES) {
+  const src = join(ROOT, f)
+  if (!existsSync(src)) continue
+  cpSync(src, join(inside, f))
+  n++
+}
+for (const d of WHITELIST_DIRS) {
+  const src = join(ROOT, d)
+  if (!existsSync(src)) continue
+  cpSync(src, join(inside, d), { recursive: true })
+  n++
+}
+
+function walk(dir, acc = []) {
+  for (const name of readdirSync(dir)) {
+    const p = join(dir, name)
+    if (statSync(p).isDirectory()) walk(p, acc)
+    else acc.push(p)
+  }
+  return acc
+}
+
+// 垃圾这四类不许进包（2026-11-08）：实测 0.2.10 里混进了 10 个 .bak，
+// 里面是旧代码，还可能带着老版本的名字。备份只该留在工作目录。
+for (const f of walk(inside)) {
+  if (/\.bak|\.oldcode$|\.crashed\d*$|\.tgz$/.test(f)) rmSync(f, { force: true })
+}
+
+// 双保险：万一白名单写漏了，这几份出现了就删掉并报错
+const leaked = []
+for (const bad of FORBIDDEN) {
+  const p = join(inside, bad)
+  if (existsSync(p)) { rmSync(p); leaked.push(bad) }
+}
+
+const files = walk(inside)
+const total = files.reduce((s, f) => s + statSync(f).size, 0)
+
+const tgz = join(outDir, `${NAME}-${VER}.tgz`)
+execFileSync('tar', ['-czf', tgz, '-C', stage, 'package'], { stdio: 'inherit' })
+rmSync(stage, { recursive: true, force: true })
+
+console.log(`打好：${tgz}`)
+console.log(`文件 ${files.length} 个 · ${(total / 1024 / 1024).toFixed(1)} MB`)
+if (leaked.length) console.log(`⚠ 白名单漏了、已剔除：${leaked.join('、')}`)
+console.log('包内顶层：')
+const tops = [...new Set(files.map((f) => f.slice(inside.length + 1).split(/[\\/]/)[0]))].sort()
+for (const t of tops) console.log('   ' + t)

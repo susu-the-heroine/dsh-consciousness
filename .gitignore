@@ -1,0 +1,10 @@
+node_modules/
+_backups/
+*.log
+*.db
+*.db-wal
+*.db-shm
+memory.db
+assets/embed/*.onnx
+assets/embed/*.wasm
+assets/background.mp4

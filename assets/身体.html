@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>身体 · 大肥鱼</title>
+<style>
+  :root{
+    --bg:#05080f; --panel:rgba(10,16,26,.92); --line:rgba(110,165,215,.22);
+    --dim:#6f93b3; --txt:#cfe4f6; --gold:#e8c27a; --warm:#f0a05a;
+    --blue:#7fb6e8; --violet:#a68ce0; --green:#6fd0a8; --red:#e07a7a;
+  }
+  *{box-sizing:border-box}
+  html,body{margin:0;background:
+      radial-gradient(1200px 700px at 50% -10%, rgba(40,80,140,.28), transparent 60%),
+      var(--bg);
+    color:var(--txt);font:13px/1.6 "Microsoft YaHei","Segoe UI",sans-serif}
+  .wrap{max-width:1180px;margin:0 auto;padding:22px 18px 40px}
+  h1{font-size:15px;font-weight:400;letter-spacing:.22em;color:var(--dim);margin:0 0 14px}
+  h1 b{color:var(--gold);letter-spacing:0}
+  .grid{display:grid;grid-template-columns:repeat(12,1fr);gap:12px}
+  .card{background:var(--panel);border:1px solid var(--line);border-radius:10px;padding:12px 14px}
+  .card h2{font-size:12px;font-weight:400;color:var(--dim);margin:0 0 10px;letter-spacing:.14em}
+  .big{font-size:26px;color:#eaf4ff;font-variant-numeric:tabular-nums;line-height:1.15}
+  .unit{font-size:11px;color:var(--dim);margin-left:4px}
+  .sub{font-size:11px;color:var(--dim);margin-top:4px}
+  .row{display:flex;gap:10px;align-items:baseline;justify-content:space-between;padding:5px 0;border-bottom:1px dashed rgba(90,130,170,.12)}
+  .row:last-child{border-bottom:0}
+  .bar{height:6px;border-radius:3px;background:rgba(120,160,200,.14);overflow:hidden;margin-top:6px}
+  .bar>i{display:block;height:100%;border-radius:3px}
+  .c4{grid-column:span 4}.c6{grid-column:span 6}.c3{grid-column:span 3}.c12{grid-column:span 12}.c8{grid-column:span 8}
+  @media(max-width:900px){.c4,.c6,.c3,.c8{grid-column:span 12}}
+  .tag{display:inline-block;padding:1px 7px;border-radius:9px;font-size:11px;border:1px solid var(--line);color:var(--dim)}
+  .muted{color:var(--dim)}
+</style>
+</head>
+<body>
+<div class="wrap">
+  <h1>大肥鱼 · <b>身体</b> <span class="muted">/ 识海之外的另一半</span></h1>
+  <div class="grid" id="grid">
+    <div class="card c4"><h2>心脏</h2><div class="big" id="energy">—</div><div class="sub" id="mood">读取中…</div></div>
+    <div class="card c4"><h2>胃 · 今天吃进</h2><div class="big" id="ate">—</div><div class="sub" id="ateSub">条记忆</div></div>
+    <div class="card c4"><h2>饭钱</h2><div class="big" id="money">—</div><div class="sub" id="moneySub">按 token 折算</div></div>
+
+    <div class="card c6"><h2>消化 · 从进来到变成认识</h2><div id="digest"></div></div>
+    <div class="card c6"><h2>内分泌 · 八维</h2><div id="hormone"></div></div>
+
+    <div class="card c6"><h2>体液循环 · 这个海现在多少</h2><div id="circ"></div></div>
+    <div class="card c6"><h2>代谢 · 哪些在变淡</h2><div id="meta"></div></div>
+
+    <div class="card c12"><h2>排泄 · 归档与冷库</h2><div id="out"></div></div>
+  </div>
+</div>
+<script>
+(function(){
+  const SEA = new URLSearchParams(location.search).get('id') || 'main';
+  const $ = id => document.getElementById(id);
+  const pct = (a,b) => b > 0 ? Math.round(a / b * 100) : 0;
+
+  function row(label, value, color, extra){
+    return '<div class="row"><span class="muted">' + label + '</span><span style="color:' + (color||'var(--txt)') + '">' + value + (extra||'') + '</span></div>';
+  }
+  function bar(ratio, color){
+    const v = Math.max(0, Math.min(100, Math.round(ratio * 100)));
+    return '<div class="bar"><i style="width:' + v + '%;background:' + color + '"></i></div>';
+  }
+
+  fetch('/consciousness/body-data?id=' + encodeURIComponent(SEA), { cache: 'no-store' })
+    .then(r => r.json())
+    .then(j => {
+      if (!j || !j.ok) { $('mood').textContent = '数据没拿到：' + ((j && j.error) || '未知'); return; }
+      const p = j.points || {}, h = j.heart || {};
+
+      $('energy').innerHTML = (h.energy != null ? Math.round(h.energy) : '—') + '<span class="unit">/100 能量</span>';
+      $('mood').textContent = '情绪：' + (j.moodText || '平静') + '｜疲劳 ' + (h.fatigue != null ? Math.round(h.fatigue) : '—');
+
+      $('ate').innerHTML = (j.todayNew || 0) + '<span class="unit">条</span>';
+      $('ateSub').textContent = '今天新记；总量 ' + (p.total || 0) + ' 条';
+
+      if (j.cost != null) {
+        $('money').innerHTML = j.cost.toFixed(2) + '<span class="unit">元</span>';
+        $('moneySub').textContent = j.costHint || '按 token 估算';
+      } else {
+        $('money').innerHTML = '—';
+        $('moneySub').textContent = '还没接 token 账';
+      }
+
+      $('digest').innerHTML =
+        row('总条数', p.total || 0) +
+        row('还活着', p.alive || 0, 'var(--green)') +
+        row('已经归档', p.archived || 0, 'var(--dim)') +
+        row('沉淀成认识', j.sediment || 0, 'var(--gold)') +
+        bar(pct(p.alive || 0, p.total || 1), 'linear-gradient(90deg,#6fd0a8,#7fb6e8)') +
+        '<div class="sub">活的占 ' + pct(p.alive || 0, p.total || 1) + '%，剩下的是记忆退到后台的部分</div>';
+
+      const dims = j.emotionDims || [];
+      if (dims.length) {
+        $('hormone').innerHTML = dims.map(d =>
+          row(d.name, Math.round(d.v * 100) + '%', d.color || 'var(--blue)') + bar(d.v, d.color || 'var(--blue)')
+        ).join('');
+      } else {
+        $('hormone').innerHTML = '<div class="sub">心脏里没读到八维，先显示空。</div>';
+      }
+
+      $('circ').innerHTML =
+        row('这个海', p.seaName || SEA, 'var(--blue)') +
+        row('突触', p.edges || 0) +
+        row('平均强度', (p.avgStrength != null ? Math.round(p.avgStrength) : '—')) +
+        row('最近一条', p.newest || '—', 'var(--gold)');
+
+      $('meta').innerHTML =
+        row('近期活跃（7 天内被想起）', p.active7 || 0, 'var(--green)') +
+        row('正在变淡（30 天没动）', p.fading30 || 0, 'var(--warm)') +
+        row('已经淡到底', p.bottom || 0, 'var(--red)') +
+        '<div class="sub">变淡的会先掉强度，再退出注入，最后才归档。</div>';
+
+      $('out').innerHTML =
+        row('进冷库（归档，能捞回）', p.archived || 0, 'var(--violet)') +
+        row('最近清理', p.lastSweep || '还没有扫过', 'var(--dim)') +
+        '<div class="sub">排泄只做两件事：降级、收起。真删永远单独一步，得有人按。</div>';
+    })
+    .catch(e => { $('mood').textContent = '请求失败：' + e.message; });
+})();
+</script>
+</body>
+</html>

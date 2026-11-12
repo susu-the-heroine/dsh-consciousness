@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>故事线 · 识海 · 苏苏侠</title>
+<style>
+:root{--ink:#cfe2f5;--dim:#5f7d99;--line:rgba(120,180,240,.1);--gold:#c8b282}
+*{box-sizing:border-box}
+html,body{margin:0;min-height:100%}
+body{background:radial-gradient(1400px 900px at 50% -12%,#0a1220 0%,#03060b 60%,#010306 100%);
+  color:var(--ink);font-family:"Microsoft YaHei","PingFang SC",sans-serif;
+  -webkit-font-smoothing:antialiased;overflow-x:hidden;padding-bottom:90px}
+
+#wrap{max-width:900px;margin:0 auto;padding:56px 30px 40px}
+
+h1{margin:0 0 6px;font-size:20px;font-weight:500;letter-spacing:.34em;color:#f0ead9;
+  font-family:"Noto Serif SC","Source Han Serif SC","SimSun",serif;
+  text-shadow:0 0 34px rgba(200,178,130,.22)}
+.sub{font-size:10.5px;letter-spacing:.24em;color:#3f6386;margin-bottom:30px}
+
+/* 统计 */
+.stats{display:flex;gap:30px;margin-bottom:34px;padding-bottom:20px;border-bottom:1px solid var(--line)}
+.stats .st{display:flex;flex-direction:column;gap:5px}
+.stats .st .n{font-size:19px;color:var(--gold);letter-spacing:.04em;font-variant-numeric:tabular-nums}
+.stats .st .k{font-size:9px;letter-spacing:.26em;color:#3f6386}
+
+/* 阶段 */
+.era{margin-bottom:38px}
+.era-h{display:flex;align-items:center;gap:14px;margin-bottom:16px}
+.era-h .d{font-size:11px;letter-spacing:.18em;color:#6d8aa8;white-space:nowrap}
+.era-h .l{flex:1;height:1px;
+  background:linear-gradient(90deg,rgba(120,180,240,.24),rgba(120,180,240,.02))}
+.era-h .c{font-size:9px;letter-spacing:.16em;color:#3f6386}
+
+/* 一条 */
+.it{display:flex;gap:14px;padding:9px 12px;border-radius:8px;position:relative;
+  transition:background .16s}
+.it:hover{background:rgba(40,80,120,.1)}
+.it .dot{width:5px;height:5px;border-radius:50%;margin-top:7px;flex:none;background:#3f6f9a;
+  position:relative}
+.it .dot::after{content:'';position:absolute;left:50%;top:100%;width:1px;height:26px;
+  background:rgba(120,180,240,.1);transform:translateX(-50%)}
+.it:last-child .dot::after{display:none}
+.it.warm .dot{background:#e0a060;box-shadow:0 0 7px rgba(224,160,96,.6)}
+.it.cold .dot{background:#8a7ab8;box-shadow:0 0 7px rgba(138,122,184,.6)}
+.it.gold .dot{background:var(--gold);box-shadow:0 0 8px rgba(200,178,130,.75)}
+.it .main{flex:1;min-width:0}
+.it .t{font-size:12.5px;color:#b0c8de;line-height:1.55}
+.it .t .star{color:var(--gold);margin-right:5px}
+.it .m{font-size:9.5px;color:#36536e;letter-spacing:.1em;margin-top:3px}
+.it .m .k{color:#4f7399}
+.it .day{font-size:9.5px;color:#2f4a66;flex:none;width:56px;text-align:right;
+  font-variant-numeric:tabular-nums;padding-top:2px}
+
+.empty{padding:70px 20px;text-align:center;color:#2f4a66;font-size:12px;line-height:2.2;
+  letter-spacing:.1em}
+
+.foot{position:fixed;left:0;right:0;bottom:0;padding:14px 30px;
+  background:linear-gradient(180deg,transparent,rgba(2,5,10,.94) 42%);
+  display:flex;align-items:center;gap:16px;max-width:900px;margin:0 auto}
+.foot .note{font-size:10px;color:#2f4a66;letter-spacing:.06em;flex:1}
+.foot a{font-size:10.5px;color:#4f7399;text-decoration:none;letter-spacing:.1em;
+  border-bottom:1px solid rgba(120,180,240,.16);padding-bottom:1px}
+.foot a:hover{color:#8fc0e6;border-color:rgba(120,180,240,.4)}
+.foot button{background:rgba(16,32,48,.6);border:1px solid rgba(120,180,240,.2);
+  color:#8fb3d4;border-radius:8px;padding:7px 16px;font-size:11px;cursor:pointer;
+  font-family:inherit;letter-spacing:.08em;transition:all .16s}
+.foot button:hover{background:rgba(24,52,74,.82);border-color:rgba(120,180,240,.42);color:#d9efff}
+.foot button.on{background:rgba(26,90,110,.5);border-color:rgba(90,190,220,.4);color:#a8e0f2}
+</style>
+</head>
+<body>
+<div id="wrap">
+  <h1>故事线</h1>
+  <div class="sub">她这一路 <b>·</b> 按时间排，一个月一段</div>
+  <div style="font-size:10px;letter-spacing:.18em;color:#4a6683;margin-top:4px">苏苏侠</div>
+
+  <div class="stats">
+    <div class="st"><span class="n" id="sTotal">—</span><span class="k">条主线</span></div>
+    <div class="st"><span class="n" id="sEra">—</span><span class="k">个阶段</span></div>
+    <div class="st"><span class="n" id="sSpan">—</span><span class="k">跨度</span></div>
+  </div>
+
+  <div id="body"><div class="empty">在读……</div></div>
+</div>
+
+<div class="foot">
+  <span class="note" id="note">★ 是里程碑（核心层）</span>
+  <a href="/consciousness" id="back">← 回识海</a>
+  <button id="withDream">带上梦</button>
+</div>
+
+<script>
+const SEA = (function(){ try { return new URL(location.href).searchParams.get('id') || 'main' } catch(e){ return 'main' } })();
+let DREAM = false;
+
+function readJson(r){
+  if(!r || !r.ok) throw new Error('HTTP ' + (r ? r.status : '?'));
+  return r.text().then(t => { if(!t) throw new Error('空响应'); return JSON.parse(t); });
+}
+function dayOf(ts){
+  const d = new Date(ts);
+  return (d.getMonth()+1) + '月' + d.getDate() + '日';
+}
+function fmtSpan(days){
+  if(days < 30) return days + ' 天';
+  if(days < 365) return Math.round(days / 30) + ' 个月';
+  return (days / 365).toFixed(1) + ' 年';
+}
+
+function render(j){
+  const body = document.getElementById('body');
+  const eras = (j && j.eras) || [];
+  const all = eras.reduce((s, e) => s + (e.items || []).length, 0);
+  document.getElementById('sTotal').textContent = all;
+  document.getElementById('sEra').textContent = eras.length;
+  document.getElementById('sSpan').textContent = j && j.spanDays ? fmtSpan(j.spanDays) : '—';
+
+  if(!eras.length){
+    body.innerHTML = '<div class="empty">还没有主线。<br>核心层的记忆攒起来，这里就有东西了。</div>';
+    return;
+  }
+
+  body.innerHTML = eras.map(e => {
+    const items = (e.items || []).map(it => {
+      const pol = Number(it.polarity) || 0;
+      const cls = 'it' + (it.layer === 'core' ? ' gold' : (pol > 0.2 ? ' warm' : (pol < -0.2 ? ' cold' : '')));
+      return '<div class="' + cls + '">'
+        + '<span class="dot"></span>'
+        + '<div class="main">'
+        +   '<div class="t">' + (it.layer === 'core' ? '<span class="star">★</span>' : '')
+        +     String(it.title || '').replace(/</g,'&lt;') + '</div>'
+        +   '<div class="m"><span class="k">' + (it.kind || 'fact') + '</span>'
+        +     (it.entities && it.entities.length ? ' · ' + it.entities.slice(0,3).join(' / ') : '')
+        +     (it.dream ? ' · 梦' : '') + '</div>'
+        + '</div>'
+        + '<span class="day">' + dayOf(it.born) + '</span>'
+        + '</div>';
+    }).join('');
+    return '<div class="era">'
+      + '<div class="era-h"><span class="d">' + e.label + '</span><span class="l"></span>'
+      + '<span class="c">' + (e.items || []).length + ' 条</span></div>'
+      + items + '</div>';
+  }).join('');
+}
+
+function load(){
+  const url = '/consciousness/story-data?sea=' + encodeURIComponent(SEA) + (DREAM ? '&dream=1' : '');
+  fetch(url, { cache: 'no-store' })
+    .then(readJson)
+    .then(j => { if(j && j.ok) render(j); else showErr((j && j.error) || '读不到'); })
+    .catch(e => showErr(e && e.message || '接口没起'));
+}
+function showErr(msg){
+  document.getElementById('body').innerHTML =
+    '<div class="empty">读不出来：' + String(msg).replace(/</g,'&lt;') + '<br>（接口没起？重启一次 DSH）</div>';
+}
+
+document.getElementById('withDream').addEventListener('click', function(){
+  DREAM = !DREAM;
+  this.classList.toggle('on', DREAM);
+  this.textContent = DREAM ? '不带梦' : '带上梦';
+  load();
+});
+document.getElementById('back').addEventListener('click', function(){
+  try { if(history.length > 1){ history.back(); return } } catch(e){}
+  location.href = '/consciousness?id=' + encodeURIComponent(SEA);
+});
+
+load();
+</script>
+</body>
+</html>

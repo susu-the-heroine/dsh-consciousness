@@ -1,0 +1,67 @@
+<!doctype html>
+<html lang="zh-CN"><head><meta charset="utf-8"><title>重放</title>
+<style>
+  html,body{margin:0;height:100%;background:#03050a;overflow:hidden;font-family:"Microsoft YaHei",sans-serif}
+  canvas{display:block}
+  #h{position:fixed;left:44px;top:38px;z-index:2;pointer-events:none}
+  #h h1{margin:0;font-size:26px;color:#c8b282;font-weight:600;letter-spacing:.1em}
+  #h p{margin:8px 0 0;font-size:13px;color:#5b82ac}
+</style></head>
+<body>
+<canvas id="c"></canvas>
+<div id="h"><h1>重放</h1><p>闲下来的时候，它按写进来的顺序，把一段往事一颗一颗点亮。</p></div>
+<script src="/sea-demo/lib.js"></script>
+<script>
+const cv=document.getElementById('c'),ctx=cv.getContext('2d');
+const dpr=2;
+let W=0,H=0;
+function resize(){W=innerWidth;H=innerHeight;cv.width=W*dpr;cv.height=H*dpr;
+  cv.style.width=W+'px';cv.style.height=H+'px';ctx.setTransform(dpr,0,0,dpr,0,0);}
+addEventListener('resize',resize);resize();
+const SIZE=22;
+
+const SEQ=[
+  {d:'03-14', t:'第一次说起这件事', kind:'fact',    aura:'#e0b070'},
+  {d:'05-02', t:'中间卡了很久',     kind:'feeling', aura:'#8f7fc4'},
+  {d:'07-19', t:'忽然想通了',       kind:'feeling', aura:'#e0b070'},
+  {d:'09-26', t:'后来一直没忘',     kind:'feeling', aura:'#8f7fc4'},
+];
+SEQ.forEach(function(n,i){ n.v=vectorize(SEA_COLOR[n.kind], SIZE, 900+i*53, n.kind); });
+
+function frame(ts){
+  if(!frame.t0) frame.t0=ts;
+  const t=((ts-frame.t0)/1000)%16;
+  ctx.clearRect(0,0,W,H);
+  const cy=H*0.45, span=Math.min(W*0.62,720), x0=W/2-span/2, step=span/(SEQ.length-1);
+  const k=Math.min(W,H)/900*1.25, hold=1.6;
+
+  let cur=-1;
+  if(t>1){ cur=Math.floor((t-1)/hold); if(cur>=SEQ.length) cur=-1; }
+
+  for(let i=0;i<SEQ.length;i++){
+    const n=SEQ[i], x=x0+i*step;
+    let a=0.12;
+    if(cur===i) a=1; else if(cur>i) a=0.42;
+    drawNeuron(ctx,x,cy,k,n.v,{st:cur===i?1:0.5, alpha:a, aura:n.aura, glow:cur===i?1.9:1});
+    ctx.textAlign='center';
+    ctx.font='12px "Microsoft YaHei",sans-serif';
+    ctx.fillStyle='rgba(120,150,185,'+(cur===i?0.95:0.4)+')';
+    ctx.fillText(n.d, x, cy-SIZE*k*3.0);
+    ctx.font='13px "Microsoft YaHei",sans-serif';
+    ctx.fillStyle='rgba(210,228,248,'+(cur===i?0.95:0.4)+')';
+    ctx.fillText(n.t, x, cy+SIZE*k*3.4);
+  }
+
+  if(cur>0){
+    ctx.strokeStyle='rgba(120,180,240,.22)'; ctx.lineWidth=1;
+    ctx.beginPath(); ctx.moveTo(x0,cy); ctx.lineTo(x0+Math.min(cur,SEQ.length-1)*step,cy); ctx.stroke();
+  }
+
+  ctx.textAlign='center'; ctx.font='15px "Microsoft YaHei",sans-serif';
+  ctx.fillStyle='rgba(200,220,244,.8)';
+  ctx.fillText(cur<0?'它在发呆':('想起第 '+(cur+1)+' 件'), W/2, H-90);
+  requestAnimationFrame(frame);
+}
+setTimeout(function(){requestAnimationFrame(frame);}, 2500);
+</script>
+</body></html>

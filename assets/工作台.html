@@ -1,0 +1,296 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>工作台 · 识海 · 苏苏侠</title>
+<style>
+:root{--ink:#cfe2f5;--dim:#5f7d99;--line:rgba(120,180,240,.1);--gold:#c8b282}
+*{box-sizing:border-box}
+html,body{margin:0;min-height:100%}
+body{background:radial-gradient(1400px 900px at 50% -12%,#0a1220 0%,#03060b 60%,#010306 100%);
+  color:var(--ink);font-family:"Microsoft YaHei","PingFang SC",sans-serif;
+  -webkit-font-smoothing:antialiased;overflow-x:hidden;padding-bottom:100px}
+
+#wrap{max-width:840px;margin:0 auto;padding:52px 28px 40px}
+
+h1{margin:0 0 6px;font-size:20px;font-weight:500;letter-spacing:.34em;color:#f0ead9;
+  font-family:"Noto Serif SC","Source Han Serif SC","SimSun",serif;
+  text-shadow:0 0 34px rgba(200,178,130,.22)}
+.sub{font-size:10.5px;letter-spacing:.24em;color:#3f6386;margin-bottom:26px}
+
+/* tabs */
+.tabs{display:flex;gap:4px;border-bottom:1px solid var(--line);margin-bottom:26px}
+.tab{position:relative;padding:10px 20px 12px;font-size:12px;letter-spacing:.14em;
+  color:#456a8c;cursor:pointer;border:none;background:transparent;font-family:inherit;
+  transition:color .18s}
+.tab:hover{color:#8fc0e6}
+.tab.on{color:#d8ecff}
+.tab.on::after{content:'';position:absolute;left:16%;right:16%;bottom:-1px;height:1px;
+  background:linear-gradient(90deg,transparent,rgba(130,210,245,.95),transparent);
+  box-shadow:0 0 10px rgba(110,190,230,.6)}
+
+/* 面板 */
+.panel{display:none}
+.panel.on{display:block;animation:fadeIn .28s ease}
+@keyframes fadeIn{from{opacity:0;transform:translateY(5px)}to{opacity:1;transform:none}}
+
+/* 卡片 */
+.card{background:linear-gradient(180deg,rgba(12,20,32,.72),rgba(6,11,19,.72));
+  border:1px solid rgba(120,180,240,.11);border-radius:12px;padding:16px 18px;margin-bottom:16px}
+.card h3{margin:0 0 12px;font-size:11px;letter-spacing:.22em;color:#5f8cb2;font-weight:500}
+.card .n{font-size:9.5px;letter-spacing:.14em;color:#3f6386;font-weight:400;margin-left:8px}
+
+/* 交接卡 */
+.handoff pre{background:rgba(3,7,12,.7);border:1px solid rgba(120,180,240,.1);border-radius:9px;
+  padding:14px 16px;font-size:11.5px;line-height:1.95;color:#a8c0d6;
+  white-space:pre-wrap;word-break:break-word;max-height:52vh;overflow-y:auto;margin:0;
+  font-family:"Microsoft YaHei","PingFang SC",monospace;
+  scrollbar-width:thin;scrollbar-color:rgba(120,180,240,.2) transparent}
+.handoff pre::-webkit-scrollbar{width:4px}
+.handoff pre::-webkit-scrollbar-thumb{background:rgba(120,180,240,.2);border-radius:2px}
+.handoff .bar{display:flex;gap:10px;margin-top:12px;align-items:center}
+.handoff .bar .s{font-size:10px;color:#3f6386;flex:1}
+
+/* 沉淀 */
+.sd{display:flex;gap:14px;align-items:flex-start;padding:11px 12px;border-radius:9px;
+  border-bottom:1px solid rgba(120,180,240,.05);transition:background .16s}
+.sd:hover{background:rgba(40,80,120,.1)}
+.sd .main{flex:1;min-width:0}
+.sd .k{font-size:12px;color:#b0c8de}
+.sd .k .ent{color:var(--gold)}
+.sd .m{font-size:9.5px;color:#36536e;letter-spacing:.1em;margin-top:4px}
+.sd .m b{color:#5f8cb2;font-weight:400}
+.sd .num{font-size:18px;color:var(--gold);font-variant-numeric:tabular-nums;flex:none;width:38px;
+  text-align:right;letter-spacing:.02em}
+.sd .num small{font-size:9px;color:#3f6386;display:block}
+
+/* 作息 */
+.bars{display:flex;align-items:flex-end;gap:5px;height:130px;padding:10px 4px;margin-bottom:12px}
+.bars .h{flex:1;display:flex;flex-direction:column;justify-content:flex-end;align-items:center;gap:5px}
+.bars .h i{width:100%;border-radius:2px 2px 0 0;min-height:2px;
+  background:linear-gradient(180deg,rgba(110,200,235,.9),rgba(60,130,175,.35));
+  transition:height .5s cubic-bezier(.3,.8,.4,1)}
+.bars .h.peak i{background:linear-gradient(180deg,rgba(230,180,110,.95),rgba(160,110,60,.4));
+  box-shadow:0 0 14px rgba(230,180,110,.45)}
+.bars .h span{font-size:8px;color:#2f4a66}
+
+/* 通用按钮 */
+.btn{background:rgba(16,32,48,.6);border:1px solid rgba(120,180,240,.2);color:#8fb3d4;
+  border-radius:8px;padding:8px 16px;font-size:11px;cursor:pointer;font-family:inherit;
+  letter-spacing:.08em;transition:all .16s}
+.btn:hover{background:rgba(24,52,74,.82);border-color:rgba(120,180,240,.42);color:#d9efff}
+.btn.primary{background:linear-gradient(180deg,#1a7f9e,#12657f);border:none;color:#eaf9ff;
+  box-shadow:0 6px 18px rgba(20,120,150,.3)}
+.btn.primary:hover{box-shadow:0 9px 24px rgba(24,140,175,.42)}
+.btn:disabled{opacity:.42;cursor:default}
+
+.empty{padding:52px 20px;text-align:center;color:#2f4a66;font-size:11.5px;line-height:2.1;
+  letter-spacing:.1em}
+
+.foot{position:fixed;left:0;right:0;bottom:0;padding:13px 28px;
+  background:linear-gradient(180deg,transparent,rgba(2,5,10,.94) 42%);
+  display:flex;align-items:center;gap:14px;max-width:840px;margin:0 auto}
+.foot .note{font-size:10px;color:#2f4a66;letter-spacing:.06em;flex:1}
+.foot a{font-size:10.5px;color:#4f7399;text-decoration:none;letter-spacing:.1em;
+  border-bottom:1px solid rgba(120,180,240,.16);padding-bottom:1px}
+.foot a:hover{color:#8fc0e6;border-color:rgba(120,180,240,.4)}
+
+#toast{position:fixed;left:50%;bottom:74px;transform:translateX(-50%);
+  background:rgba(10,20,32,.96);border:1px solid rgba(120,180,240,.24);border-radius:9px;
+  padding:9px 18px;font-size:11.5px;color:#bcd8f0;opacity:0;transition:opacity .24s;
+  pointer-events:none;z-index:99}
+#toast.on{opacity:1}
+</style>
+</head>
+<body>
+<div id="wrap">
+  <h1>工作台</h1><div style="font-size:10px;letter-spacing:.18em;color:#4a6683;margin-top:5px">苏苏侠</div>
+  <div class="sub">交接 <b>·</b> 沉淀 <b>·</b> 作息</div>
+
+  <div class="tabs">
+    <button class="tab on" data-p="handoff">交接卡</button>
+    <button class="tab" data-p="sediment">沉淀</button>
+    <button class="tab" data-p="rhythm">作息</button>
+  </div>
+
+  <!-- 交接卡 -->
+  <div class="panel on handoff" id="p-handoff">
+    <div class="card">
+      <h3>交接卡<span class="n">上下文满了就把它喂给新窗口</span></h3>
+      <pre id="handoffText">在读……</pre>
+      <div class="bar">
+        <span class="s" id="handoffStat"></span>
+        <button class="btn" id="copyHandoff">复制</button>
+        <button class="btn" id="reloadHandoff">重读</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- 沉淀 -->
+  <div class="panel" id="p-sediment">
+    <div class="card">
+      <h3>该沉淀的<span class="n">同一件事，不同日子出现 3 次以上</span></h3>
+      <div id="sedimentList"><div class="empty">在读……</div></div>
+    </div>
+  </div>
+
+  <!-- 作息 -->
+  <div class="panel" id="p-rhythm">
+    <div class="card">
+      <h3>作息<span class="n">按真实时间戳看你几点冒头</span></h3>
+      <div id="rhythmBody"><div class="empty">在读……</div></div>
+    </div>
+  </div>
+</div>
+
+<div class="foot">
+  <span class="note" id="footNote">—</span>
+  <a href="/consciousness" id="back">← 回识海</a>
+</div>
+
+<div id="toast"></div>
+
+<script>
+const SEA = (function(){ try { return new URL(location.href).searchParams.get('id') || 'main' } catch(e){ return 'main' } })();
+
+function toast(m){
+  const el = document.getElementById('toast');
+  el.textContent = m; el.classList.add('on');
+  clearTimeout(el._t); el._t = setTimeout(() => el.classList.remove('on'), 2200);
+}
+function readJson(r){
+  if(!r || !r.ok) throw new Error('HTTP ' + (r ? r.status : '?'));
+  return r.text().then(t => { if(!t) throw new Error('空响应'); return JSON.parse(t) });
+}
+const esc = s => String(s == null ? '' : s).replace(/</g,'&lt;').replace(/&/g,'&amp;');
+
+/* ---------- tab ---------- */
+document.querySelectorAll('.tab').forEach(t => {
+  t.addEventListener('click', function(){
+    document.querySelectorAll('.tab').forEach(x => x.classList.remove('on'));
+    document.querySelectorAll('.panel').forEach(x => x.classList.remove('on'));
+    t.classList.add('on');
+    const p = document.getElementById('p-' + t.getAttribute('data-p'));
+    if(p) p.classList.add('on');
+    load(t.getAttribute('data-p'));
+  });
+});
+
+/* ---------- 交接卡 ---------- */
+function loadHandoff(){
+  const pre = document.getElementById('handoffText');
+  pre.textContent = '在读……';
+  fetch('/consciousness/handoff?sea=' + encodeURIComponent(SEA), { cache:'no-store' })
+    .then(readJson)
+    .then(j => {
+      if(!j || !j.ok){ pre.textContent = '读不出来：' + ((j && j.error) || '未知'); return }
+      pre.textContent = j.text || '（空的）';
+      document.getElementById('handoffStat').textContent =
+        (j.text || '').length + ' 字 · 核心 ' + (j.core || []).length
+        + ' · 活口 ' + (j.open || []).length + ' · 最近 ' + (j.recent || []).length;
+      document.getElementById('footNote').textContent = '交接卡：核心 ' + (j.core||[]).length + ' 条';
+    })
+    .catch(e => { pre.textContent = '读不出来：' + (e && e.message || '未知') + '\n（接口没起？重启一次 DSH）' });
+}
+
+document.getElementById('copyHandoff').addEventListener('click', function(){
+  const txt = document.getElementById('handoffText').textContent || '';
+  if(!txt){ toast('没有可复制的'); return }
+  try {
+    navigator.clipboard.writeText(txt).then(
+      () => toast('复制好了，粘到新窗口'),
+      () => fallbackCopy(txt)
+    );
+  } catch(e){ fallbackCopy(txt) }
+});
+function fallbackCopy(txt){
+  try {
+    const ta = document.createElement('textarea');
+    ta.value = txt; ta.style.position = 'fixed'; ta.style.opacity = '0';
+    document.body.appendChild(ta); ta.select();
+    document.execCommand('copy');
+    document.body.removeChild(ta);
+    toast('复制好了');
+  } catch(e){ toast('复制失败，手动选吧') }
+}
+document.getElementById('reloadHandoff').addEventListener('click', loadHandoff);
+
+/* ---------- 沉淀 ---------- */
+function loadSediment(){
+  const box = document.getElementById('sedimentList');
+  box.innerHTML = '<div class="empty">在读……</div>';
+  fetch('/consciousness/sediment-data?sea=' + encodeURIComponent(SEA), { cache:'no-store' })
+    .then(readJson)
+    .then(j => {
+      if(!j || !j.ok){ box.innerHTML = '<div class="empty">读不出来：' + esc((j && j.error) || '未知') + '</div>'; return }
+      const items = j.items || [];
+      if(!items.length){
+        box.innerHTML = '<div class="empty">还没有该沉淀的。<br>同一件事在不同日子出现 3 次以上，才会出现在这儿。</div>';
+        return;
+      }
+      box.innerHTML = items.map(x => {
+        const ents = (x.entities || []).map(e => '<span class="ent">' + esc(e) + '</span>').join(' / ');
+        return '<div class="sd">'
+          + '<div class="num">' + (x.days || 0) + '<small>天</small></div>'
+          + '<div class="main">'
+          +   '<div class="k">' + ents + ' <span style="color:#4f7399">·</span> ' + esc(x.category || '') + '</div>'
+          +   '<div class="m">出现 <b>' + (x.count||0) + '</b> 次 · 可信度 <b>' + (x.confidence||0) + '</b></div>'
+          +   '<div class="m">' + (x.titles||[]).map(t => esc(t)).join(' / ') + '</div>'
+          + '</div></div>';
+      }).join('');
+    })
+    .catch(e => { box.innerHTML = '<div class="empty">读不出来：' + esc(e && e.message || '未知') + '</div>' });
+}
+
+/* ---------- 作息 ---------- */
+function loadRhythm(){
+  const box = document.getElementById('rhythmBody');
+  box.innerHTML = '<div class="empty">在读……</div>';
+  fetch('/consciousness/rhythm-data?sea=' + encodeURIComponent(SEA), { cache:'no-store' })
+    .then(readJson)
+    .then(j => {
+      if(!j || !j.ok){ box.innerHTML = '<div class="empty">读不出来：' + esc((j && j.error) || '未知') + '</div>'; return }
+      const hours = j.hours || [];
+      if(!hours.length){
+        box.innerHTML = '<div class="empty">' + esc(j.summary || '还看不出作息。')
+          + '<br><span style="font-size:10px;color:#2f4a66">真时间 ' + j.realCount + ' 条 / 共 ' + j.totalCount + ' 条</span>'
+          + (j.note ? '<br><span style="font-size:10px;color:#2f4a66">' + esc(j.note) + '</span>' : '')
+          + '</div>';
+        return;
+      }
+      const max = Math.max.apply(null, hours.map(h => h.n || 0));
+      const peak = Math.max.apply(null, hours.map(h => h.n || 0));
+      const bars = hours.map(h => {
+        const pct = max ? Math.max(2, Math.round((h.n / max) * 100)) : 2;
+        const isPeak = h.n === peak && peak > 0;
+        return '<div class="h' + (isPeak ? ' peak' : '') + '">'
+          + '<i style="height:' + pct + '%"></i>'
+          + '<span>' + h.h + '</span></div>';
+      }).join('');
+      box.innerHTML = '<div style="font-size:12px;color:#b0c8de;margin-bottom:8px">' + esc(j.summary || '') + '</div>'
+        + '<div class="bars">' + bars + '</div>'
+        + '<div style="font-size:10px;color:#2f4a66;letter-spacing:.06em">'
+        + '真时间 ' + j.realCount + ' 条 / 共 ' + j.totalCount + ' 条'
+        + (j.night ? ' · 夜里活跃' : '') + '</div>';
+    })
+    .catch(e => { box.innerHTML = '<div class="empty">读不出来：' + esc(e && e.message || '未知') + '</div>' });
+}
+
+/* ---------- 路由 ---------- */
+function load(which){
+  if(which === 'handoff') loadHandoff();
+  else if(which === 'sediment') loadSediment();
+  else if(which === 'rhythm') loadRhythm();
+}
+
+document.getElementById('back').addEventListener('click', function(){
+  try { if(history.length > 1){ history.back(); return } } catch(e){}
+  location.href = '/consciousness?id=' + encodeURIComponent(SEA);
+});
+
+// 默认开交接卡
+loadHandoff();
+</script>
+</body>
+</html>

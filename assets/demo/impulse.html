@@ -1,0 +1,73 @@
+<!doctype html>
+<html lang="zh-CN"><head><meta charset="utf-8"><title>冲动</title>
+<style>
+  html,body{margin:0;height:100%;background:#03050a;overflow:hidden;font-family:"Microsoft YaHei",sans-serif}
+  canvas{display:block}
+  #h{position:fixed;left:44px;top:38px;z-index:2;pointer-events:none}
+  #h h1{margin:0;font-size:26px;color:#c8b282;font-weight:600;letter-spacing:.1em}
+  #h p{margin:8px 0 0;font-size:13px;color:#5b82ac}
+</style></head>
+<body>
+<canvas id="c"></canvas>
+<div id="h"><h1>冲动</h1><p>没人跟它说话，它也在放电。一道光从一头扫到另一头。</p></div>
+<script src="/sea-demo/lib.js"></script>
+<script>
+const cv=document.getElementById('c'),ctx=cv.getContext('2d');
+const dpr=2;
+let W=0,H=0;
+function resize(){W=innerWidth;H=innerHeight;cv.width=W*dpr;cv.height=H*dpr;
+  cv.style.width=W+'px';cv.style.height=H+'px';ctx.setTransform(dpr,0,0,dpr,0,0);}
+addEventListener('resize',resize);resize();
+const SIZE=20;
+
+const N=8, nodes=[];
+for(let i=0;i<N;i++){
+  const a=(i/N)*6.283-1.2;
+  const kind=i%2?'fact':'feeling';
+  nodes.push({a:a, d:0.55+0.12*Math.sin(i*2.1), kind:kind,
+    v:vectorize(SEA_COLOR[kind], SIZE, 400+i*61, kind)});
+}
+
+function frame(ts){
+  if(!frame.t0) frame.t0=ts;
+  const t=((ts-frame.t0)/1000)%7;
+  ctx.clearRect(0,0,W,H);
+  const cx=W/2, cy=H*0.47, R=Math.min(W,H)*0.30;
+  const wave = t<1 ? -1 : (t-1)/2.0;
+  const k=Math.min(W,H)/900*1.25;
+
+  ctx.strokeStyle='rgba(80,130,180,.18)'; ctx.lineWidth=1;
+  for(let i=0;i<N;i++){
+    const a1=nodes[i], a2=nodes[(i+1)%N];
+    ctx.beginPath();
+    ctx.moveTo(cx+Math.cos(a1.a)*R*a1.d*1.7, cy+Math.sin(a1.a)*R*a1.d*1.4);
+    ctx.lineTo(cx+Math.cos(a2.a)*R*a2.d*1.7, cy+Math.sin(a2.a)*R*a2.d*1.4);
+    ctx.stroke();
+  }
+
+  for(const n of nodes){
+    const x=cx+Math.cos(n.a)*R*n.d*1.7;
+    const y=cy+Math.sin(n.a)*R*n.d*1.4;
+    const px=(x-(cx-R*0.9))/(R*1.8);
+    let boost=0;
+    if(wave>=0){ const e=Math.abs(px-wave); if(e<0.14) boost=1-e/0.14; }
+    drawNeuron(ctx,x,y,k,n.v,{st:0.6+0.4*boost, alpha:0.35+0.65*boost, aura:'#79b8e8', glow:1+boost*1.5});
+  }
+
+  if(wave>=-0.1 && wave<1.2){
+    const wx=cx-R*0.9+wave*R*1.8;
+    const g=ctx.createLinearGradient(wx-100,0,wx+100,0);
+    g.addColorStop(0,'rgba(140,200,255,0)');
+    g.addColorStop(.5,'rgba(170,220,255,.16)');
+    g.addColorStop(1,'rgba(140,200,255,0)');
+    ctx.fillStyle=g; ctx.fillRect(wx-100,cy-H*0.22,200,H*0.44);
+  }
+
+  ctx.textAlign='center'; ctx.font='15px "Microsoft YaHei",sans-serif';
+  ctx.fillStyle='rgba(200,220,244,.8)';
+  ctx.fillText(t<1?'安静':(wave<1?'放电中':'又安静了'), W/2, H-90);
+  requestAnimationFrame(frame);
+}
+setTimeout(function(){requestAnimationFrame(frame);}, 2500);
+</script>
+</body></html>

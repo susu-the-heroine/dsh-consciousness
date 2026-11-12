@@ -1,0 +1,54 @@
+<!doctype html>
+<html lang="zh-CN"><head><meta charset="utf-8"><title>极性</title>
+<style>
+  html,body{margin:0;height:100%;background:#03050a;overflow:hidden;font-family:"Microsoft YaHei",sans-serif}
+  canvas{display:block}
+  #h{position:fixed;left:44px;top:38px;z-index:2;pointer-events:none}
+  #h h1{margin:0;font-size:26px;color:#c8b282;font-weight:600;letter-spacing:.1em}
+  #h p{margin:8px 0 0;font-size:13px;color:#5b82ac}
+</style></head>
+<body>
+<canvas id="c"></canvas>
+<div id="h"><h1>极性</h1><p>内核按分类上色，外面那圈光才是情绪：金是正向，紫是负向。</p></div>
+<script src="/sea-demo/lib.js"></script>
+<script>
+const cv=document.getElementById('c'),ctx=cv.getContext('2d');
+const dpr=2;
+let W=0,H=0;
+function resize(){W=innerWidth;H=innerHeight;cv.width=W*dpr;cv.height=H*dpr;
+  cv.style.width=W+'px';cv.style.height=H+'px';ctx.setTransform(dpr,0,0,dpr,0,0);}
+addEventListener('resize',resize);resize();
+const SIZE=22;
+
+const SETS=[
+  {kind:'fact',    aura:'#e0b070', label:'事实 · 正向', note:'记得清楚，想起来是暖的'},
+  {kind:'fact',    aura:'#8f7fc4', label:'事实 · 负向', note:'记得清楚，想起来是凉的'},
+  {kind:'feeling', aura:'#e0b070', label:'情绪 · 正向', note:'暖的那一类'},
+  {kind:'feeling', aura:'#8f7fc4', label:'情绪 · 负向', note:'凉的那一类'},
+];
+SETS.forEach(function(s,i){ s.v=vectorize(SEA_COLOR[s.kind], SIZE, 200+i*71, s.kind); });
+
+function frame(ts){
+  ctx.clearRect(0,0,W,H);
+  const k=Math.min(W,H)/900*1.45;
+  const gx=Math.min(W*0.26,340), gy=Math.min(H*0.26,230);
+  const cx=W/2, cy=H*0.46;
+  for(let i=0;i<SETS.length;i++){
+    const s=SETS[i];
+    const x=cx+((i%2)?gx/2:-gx/2)*1.7;
+    const y=cy+((i<2)?-gy/2:gy/2);
+    const pulse=1+0.12*Math.sin(ts/900+i*1.7);
+    drawNeuron(ctx,x,y,k,s.v,{st:1,alpha:1,aura:s.aura,glow:pulse});
+    ctx.textAlign='center';
+    ctx.font='15px "Microsoft YaHei",sans-serif';
+    ctx.fillStyle='rgba(220,235,250,.9)';
+    ctx.fillText(s.label, x, y+SIZE*k*3.4);
+    ctx.font='12px "Microsoft YaHei",sans-serif';
+    ctx.fillStyle='rgba(110,140,172,.8)';
+    ctx.fillText(s.note, x, y+SIZE*k*3.4+20);
+  }
+  requestAnimationFrame(frame);
+}
+setTimeout(function(){requestAnimationFrame(frame);}, 2500);
+</script>
+</body></html>

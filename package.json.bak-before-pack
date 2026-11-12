@@ -1,0 +1,44 @@
+{
+  "name": "dsh-consciousness2",
+  "version": "0.1.1",
+  "description": "识海：给 AI 用的长期记忆球，可写可看",
+  "type": "module",
+  "main": "index.js",
+  "exports": {
+    ".": "./index.js",
+    "./client": "./client.js",
+    "./cordis.patch.yml": "./cordis.patch.yml",
+    "./package.json": "./package.json"
+  },
+  "files": [
+    "index.js",
+    "client.js",
+    "cordis.patch.yml",
+    "selfupdate.mjs",
+    "README.md",
+    "INSTALL.md",
+    "install.ps1",
+    "记忆规则.md",
+    "安装卡.docx",
+    "assets",
+    "LICENSE"
+  ],
+  "dsh": {
+    "bundle": {
+      "patch": "./cordis.patch.yml"
+    },
+    "client": {
+      "platform": "web",
+      "inject": [
+        "@deepseek-ai/dsh-client-runtime",
+        "@deepseek-ai/dsh-client-ui-settings"
+      ]
+    }
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://gitee.com/susu-the-heroine/dsh-consciousness.git"
+  },
+  "homepage": "https://gitee.com/susu-the-heroine/dsh-consciousness#readme",
+  "license": "SEE LICENSE IN LICENSE"
+}

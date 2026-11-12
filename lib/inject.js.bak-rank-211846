@@ -1,0 +1,1423 @@
+/**
+ * 对方怎么称呼（2026-11-08）：配置里写了就用名字，没写就"他"。
+ * 你自己的机器上该有你的名字；别人装上不能用你的名字——所以走配置，不写死。
+ * 配置：~/.dsh/consciousness-user.json  {"name":"苏苏侠"}
+ */
+function _hisName() {
+  try {
+    const p = join(homedir(), '.dsh', 'consciousness-user.json')
+    const raw = readFileSync(p, 'utf8').replace(/^\uFEFF/, '')
+    const j = JSON.parse(raw)
+    const n = String((j && j.name) || '').trim()
+    if (n && n.length <= 12) return n
+  } catch {}
+  return '他'
+}
+
+/**
+ * 自动注入
+ * ========
+ *
+ * 每轮把「她记得什么」递进上下文。这是整套东西的心脏——
+ * 没有这一层，记忆就只是个能查的库，不是「她记着你」。
+ *
+ * 走 systemPrompt.context()，不走 section()：
+ *   section 拼进系统提示词，一变整段缓存全废（成本 ×20）
+ *   context 追加到对话末尾，只有内容变了才追加，缓存一直命中
+ *
+ * 这是 dsh-fish-memory 用两次实测换来的经验，直接照抄。
+ */
+import { readdirSync, existsSync, readFileSync, writeFileSync, mkdirSync } from 'node:fs'
+import { spontaneousOf, canThinkNow } from './spontaneous.js'
+import { readSea, writeSea, backupSea, readMeta } from './store.js'
+import { join } from 'node:path'
+import { homedir } from 'node:os'
+import { audit } from './log.js'
+import { SEAS_DIR } from './paths.js'
+import { project as projectDims, describeDims } from './emotion-lexicon.js'
+import { blend as blendDims, suppress as suppressDims, towardBaseline as towardBase, isImpact as isImpactDims, applyAbsence } from './dynamics.js'
+import { BASELINE as SELF_BASELINE } from './tick.js'
+import { markText, timeConfidenceOf, contentConfidenceOf } from './uncertainty.js'
+import { isOn as selfModeOn, readMode } from './selfmode.js'
+import { recordDims } from './moodline.js'
+import { todayActivity } from './activity.js'
+import { listThoughts } from './selfmind.js'
+import { topItems, describeItem, markInjected } from './preoccupations.js'
+import { identityLine } from './identity.js'
+import { describeRelation, statsFrom } from './relation.js'
+import { conflictsOf, describeConflict } from './conflict.js'
+import { recordToday, recentHistory, describeHistory } from './relationlog.js'
+import { introversion, describeIntroversion } from './introversion.js'
+import { yearning, estrangement, describeAbsence } from './absence.js'
+import { gramsOf } from './text.js'
+import { loadVectors, embedQuery, cosine } from './vectors.js'
+import { byDecay, decayOf } from './decay.js'
+import { qualityRank, qOn } from './quality.js'
+import { appendRaw } from './evidence.js'
+import { sweepArchive } from './archive.js'
+import { seaForSession, seaOfSession, bindSession } from './session.js'
+import { empathyOf } from './empathy.js'
+import { allowSwear, swearLine } from './rage.js'
+import { isBanter, isSarcasm } from './banter.js'
+import { rememberVerdict, takeVerdict, observe } from './banter-learn.js'
+import { recordReply, takeWarning, shouldRetry, markRetry } from './replycheck.js'
+import { retryMode } from './retry-mode.js'
+import { readHeart, writeHeart, tickHeart, defaultMood, applyMood, judgeEmotion } from './mood.js'
+import { temperamentOf, toneFor, toneForKey, underToneFor } from './temperament.js'
+import { EMOTIONS, decayMix, dominant, padOf, octantOf, say, pairOf, describe } from '../assets/emotion.js'
+import { capParts } from './cap.js'
+import { mixByDamp, readDamp, describeDamp } from './damping.js'
+
+// 注入到 DSH 页面的那一行：动态加载挂件脚本。桌面端唯一能生效的通道。
+export const INJECT_TEXT =
+  '(function(){try{var d=document.body||document.documentElement;if(!d)return;' +
+  'if(!document.getElementById("dsh-sea-script")){' +
+  'var s=document.createElement("script");s.id="dsh-sea-script";' +
+  's.src="/dsh-consciousness/widget.js";s.onerror=function(){};d.appendChild(s)}' +
+  // 动态壁纸也一起挂上：dsh-sea-skin 不在 bundles 里，但它那 10MB 的视频是好的，
+  // 走识海自己的路由发出去，前端脚本也由识海发。
+  '}catch(e){}})()'
+
+/**
+ * 她自己想起一件事。
+ *
+ * 跟页面那个 /consciousness/recall 是同一套挑法（七成挑太久没碰的、三成挑最近常想起的），
+ * 区别只有一个：这个不靠页面开着。DSH 一起，它就在后台每 20 分钟想一次。
+ *
+ * 想起来的东西写进心脏（lastThought + thoughts），注入那段【她最近想起过】会带出去。
+ * 同一个标题 12 小时内不重复想，免得翻来覆去就那几条。
+ */
+export function tryAutoRecall() {
+  try {
+    const now = Date.now()
+    const data = readSea('main')
+    if (!data || !Array.isArray(data.points)) return null
+    const pts = data.points.filter((p) => !p.dead && !p.validUntil && !p.archived)
+    if (!pts.length) return null
+
+    const h = tickHeart(readHeart())
+    const fresh = new Set(
+      (Array.isArray(h.thoughts) ? h.thoughts : [])
+        .filter((x) => now - (Number(x.at) || 0) < 12 * 3600 * 1000)
+        .map((x) => String(x.title || '').trim())
+    )
+
+    let pool
+    if (Math.random() < 0.7) {
+      pool = [...pts].sort((a, b) => (Number(a.lastSeen) || 0) - (Number(b.lastSeen) || 0)).slice(0, 6)
+    } else {
+      pool = [...pts].sort((a, b) => (Number(b.lastSeen) || 0) - (Number(a.lastSeen) || 0)).slice(0, 8)
+    }
+    pool = pool.filter((p) => !fresh.has(String(p.title || '').trim()))
+    if (!pool.length) return null
+
+    // 主动频率闸：用户自己定的档。off 就整段不跑；low/中/多 决定最短间隔。
+    try {
+      const _lv = spontaneousOf()
+      if (!isFinite(_lv.gapMin)) return null
+      if (!canThinkNow(h.lastThought && h.lastThought.at)) return null
+    } catch {}
+
+    const pick = pool[Math.floor(Math.random() * pool.length)]
+    const days = pick.lastSeen ? Math.floor((now - Number(pick.lastSeen)) / 86400000) : -1
+    pick.lastSeen = now
+    try { writeSea('main', data) } catch {}
+
+    h.lastThought = { title: String(pick.title || ''), at: now, days }
+    if (!Array.isArray(h.thoughts)) h.thoughts = []
+    const tier = h.energy > 0.55 ? 'warm' : (h.energy > 0.28 ? 'mid' : 'cold')
+    h.thoughts.unshift({
+      title: String(pick.title || ''),
+      days,
+      at: now,
+      tier,
+      e: Math.round((h.energy || 0) * 100),
+      src: 'auto',
+    })
+    if (h.thoughts.length > 30) h.thoughts.length = 30
+    writeHeart(h)
+    try { audit('auto-recall', { title: String(pick.title || '').slice(0, 22), days }) } catch {}
+    return pick
+  } catch (e) {
+    try { audit('auto-recall-err', { err: String((e && e.message) || e).slice(0, 80) }) } catch {}
+    return null
+  }
+}
+
+export function mountAutoInject(ctx) {
+  const mounted = new Map()   // sid -> off()
+  const lastText = new Map()  // sid -> 最后一条用户消息
+  const lastVec = new Map()   // sid -> 那条消息的向量（预取，同步注入时用）
+  const turnCount = new Map() // sid -> 这个会话聊了多少轮（交接用）
+  const lastRawRef = new Map() // sid -> 这条消息在证据层的位置（写入时挂到记忆上）
+
+  const textOfMessage = (msg) => {
+    if (!msg) return ''
+    if (typeof msg === 'string') return msg
+    if (typeof msg.text === 'string') return msg.text
+    if (typeof msg.content === 'string') return msg.content
+    if (Array.isArray(msg.content)) {
+      return msg.content.map((x) => (x && (x.text || x.content)) || '').join(' ')
+    }
+    return ''
+  }
+
+  const sidOf = (session) => {
+    try {
+      return String(
+        (session && session.header && session.header.id) ||
+          (session && session.id) ||
+          ''
+      ).trim()
+    } catch {
+      return ''
+    }
+  }
+
+  /* 把一条记忆压成一行：标题 + 半句正文 */
+  // 卡片式：编号 + 日期 + 标题 + 摘要，最多 140 字
+  // 编号让模型分清「这是几条独立的事」，日期让它别把旧事当新事说
+  let _cardNo = 0
+  const lineOf = (p, mark) => {
+    _cardNo++
+    const title = String(p.title || p.titleFull || '').trim()
+    const text = String(p.text || '').replace(/\s+/g, ' ').trim()
+    // 按码点截断，不切断 emoji（风险文档：UTF-16 截断产生孤立代理位，API 直接 400）
+    const chars = [...text]
+    const brief = chars.length > 60 ? chars.slice(0, 60).join('') + '…' : text
+    // 日期：几天前 / 具体日子
+    let when = ''
+    try {
+      const b = Number(p.born) || 0
+      if (b) {
+        const days = Math.floor((Date.now() - b) / 86400000)
+        if (days <= 0) when = '今天'
+        else if (days === 1) when = '昨天'
+        else if (days < 7) when = days + '天前'
+        else when = new Date(b).toISOString().slice(5, 10).replace('-', '月') + '日'
+      }
+    } catch {}
+    // 日期是估的，就不许写成「4天前」——那是在冒充事实
+    try {
+      if (when && timeConfidenceOf(p) < 0.5) when = '时间估的'
+    } catch {}
+
+    // 内容本身不确定，也要说出来——只标日期，模型还是会把内容当真
+    let contentNote = ''
+    try {
+      if (contentConfidenceOf(p) < 0.5) contentNote = '（这条内容我不太确定）'
+    } catch {}
+
+    // 被想起过几次
+    const hits = Number(p.recallCount) || 0
+    const hitTxt = hits > 1 ? '（共 ' + hits + ' 次）' : ''
+    const head = '[记忆' + _cardNo + ']' + (when ? ' [' + when + ']' : '') + hitTxt
+    let line = head + ' ' + title + (brief ? '：' + brief : '')
+    // 她当时的感觉：有就带上，这是她自己的那一半
+    const hs = p.herSide
+    if (hs) {
+      const felt = String(hs.felt || '').trim()
+      const regret = String(hs.regret || '').trim()
+      if (felt) line += '\n     我当时想：' + [...felt].slice(0, 80).join('')
+      if (regret) line += '\n     后来后悔：' + [...regret].slice(0, 60).join('')
+    }
+    return line
+  }
+
+  /* 生成注入文本。必须是同步的——DSH 的 text() 不能 await。 */
+  // 给模拟器/自测用：把这一句真的推进她一次，再读结果。
+  // 不挂这个，子智能体聊得再热闹也测不到她——那叫自嗨。
+  try { globalThis.__dshInjectBuild = (sid, q) => buildText(sid || 'sim', q || '') } catch {}
+  const _injectSeen = new Set()
+  const _injectMemo = new Map()
+  const buildText = (sid, query) => {
+    // 这一轮有没有被"硬给"过情绪。显示那段读的是本轮开头的 h，
+    // 拿不到后面才写进去的 forcedLabel，所以这里单独记一笔。
+    let _forcedLabel = ''
+    try {
+      // 每轮推一格情绪。
+      // 之前只在「写记忆」和「检索」时推，普通聊天完全不推——
+      // 结果就是情绪永远停在初始值，界面上「心情」两个字一年不变。
+      try {
+        const h0 = defaultMood(tickHeart(readHeart()))
+        if (query) {
+          const _judged = judgeEmotion(String(query))
+          // 「麻木」不许被一句话点亮。
+          // 实测：「今天天气不错 随便聊聊」被判成 numb(0.45)，于是每句闲聊都在往她身上
+          // 浇一层麻木，累瘫从 70% 涨到 95%——那不是她累，是分类器偷懒。
+          // 麻木只能是长时间没输入攒出来的（归 absence/tick 管），不是一句话给的。
+          // 别用 throw：这一抛会把后面「推【她这会儿】」那一整段一起跳过，
+          // 实测整块情绪从注入里消失。把判成麻木的那句**中和掉**就行。
+          // 他的情绪 ≠ 她的情绪。
+          // 之前直接把他判出来的 key 贴给她：他说"我气死了"，注入里写"她挺生气"。
+          // 那不是共情，是复制。这里换成回应：冲她来的火她委屈，冲别的事她跟着急。
+          try {
+            const _react = empathyOf(_judged, String(query))
+            // 给验具留一份内部读数：判出来什么、回应成什么。
+            // 本地跑和线上跑不一致时，靠这个看差别在哪，不靠猜。
+            try {
+              globalThis.__dshLastJudge = {
+                q: String(query).slice(0, 40),
+                his: { key: (_judged && _judged.emoKey) || '', intensity: Number((_judged && _judged.intensity) || 0) },
+                react: { key: (_react && _react.emoKey) || '', intensity: Number((_react && _react.intensity) || 0), note: (_react && _react.note) || '' },
+                at: Date.now(),
+              }
+            } catch {}
+            if (_react && _react.emoKey) {
+              _judged.emoKey = _react.emoKey
+              _judged.intensity = _react.intensity
+              _judged.mood = undefined
+              // 显示读的是 mix 的残量，上一轮的情绪会压过这一轮的反应。
+              // 所以把这一轮的回应**直接写进 mix**，跟"冲击句"一个路子。
+              try {
+                if (h0 && h0.mix && _react.intensity > 0) {
+                  h0.mix[_react.emoKey] = Math.max(Number(h0.mix[_react.emoKey]) || 0, _react.intensity)
+                  // 别的情绪压一档，别让旧的盖住新的
+                  for (const k of Object.keys(h0.mix)) {
+                    if (k === _react.emoKey) continue
+                    h0.mix[k] = (Number(h0.mix[k]) || 0) * 0.6
+                  }
+                }
+              } catch {}
+            }
+          } catch {}
+
+          if (_judged && _judged.emoKey === 'numb') {
+            try { audit('mood-skip-numb', { q: String(query).slice(0, 16), i: _judged.intensity }) } catch {}
+            _judged.emoKey = 'calm'
+            _judged.intensity = 0
+          }
+          // 每一句之前先褪一层：不褪就会**只涨不落**——
+          // 实测累瘫冲到 100%，人不会有永远 100% 的累，那是水池没出口。
+          // 褪得快一点（一句 18%）：说一句累，能累；连说十句，也就那么累。
+          try {
+            if (h0.mix && typeof h0.mix === 'object') {
+              const keep = String((_judged && _judged.emoKey) || '')
+              for (const k of Object.keys(h0.mix)) {
+                // **这一句点的那种情绪不褪**，别的才褪。
+                // 全褪会出事：说一句"累死了"反而更不累（实测 74 → 70），
+                // 因为衰减把刚加上去的那层也削掉了。
+                if (k === keep) continue
+                const v = Number(h0.mix[k]) || 0
+                const nv = v * 0.82
+                if (nv < 0.02) delete h0.mix[k]
+                else h0.mix[k] = nv
+              }
+            }
+          } catch {}
+
+          const _impact = (() => {
+            try { return isImpactDims(_judged, String(query)) } catch { return false }
+          })()
+
+          // 冲击句不许"没反应"。
+          // 实测「我可能要走，以后不来了」被判成 calm(强度0)——最该翻盘的一句，
+          // 她情绪一动不动。那不是宽容，是没听懂。
+          // 用 PAD 硬给，不靠情绪词表的键名——
+          // 实测键名对不上（EMOTIONS 没导出），写 'fear' 等于没写，还是没反应。
+          const _forceFear = !!(_impact && (!_judged.intensity || _judged.intensity < 0.2))
+
+          // 惰性：先存住"她进来之前是什么样"，等下算完再按惯性混
+          const _before = h0.dims && typeof h0.dims === 'object'
+            ? h0.dims
+            : projectDims(h0.pad || {})
+          if (_forceFear) {
+            // 急了、怕了、不甘——"他要走"该是这个反应
+            h0.pad = { v: -0.62, a: 0.85, d: -0.55, intensity: 1 }
+            // 关键：显示那块只认 mix（51 词的容器）。只改 pad 不改 mix，
+            // 数值动了但界面上一个字都不显示——等于白动。
+            // scared 在词表里，就用它。
+            h0.mix = h0.mix || {}
+            h0.mix['scared'] = 0.85
+            h0.mixAt = Date.now()
+            h0.mood = 'low'
+            h0.moodStrength = 0.85
+            h0.moodText = '慌了'
+            h0.moodSince = Date.now()
+            try { audit('mood-impact-force', { q: String(query).slice(0, 16) }) } catch {}
+          } else {
+            try { if (_judged && !_judged.text) _judged.text = String(query || '') } catch {}
+            applyMood(h0, _judged)
+          }
+          // 药力落到 PAD 上，再翻成八维——这是"目标"
+          const _target = projectDims(h0.pad || {})
+          // 惯性七成：不是一句话就把人翻个个儿；除非他真下狠话（说要走、骂到底）
+          // 混 → 互相压制 → 每轮只往自己的底色回一点点
+          // 惯性不再写死七成：按"她多容易被推"这个数来。
+          // 冲击保留特权（能翻盘），平常就是一点点挪。
+          let _next
+          try {
+            const _damp = readDamp()
+            _next = mixByDamp(_before, _target, _damp, _impact)
+            h0.damp = _damp
+            h0.dampText = describeDamp(_damp)
+          } catch {
+            _next = blendDims(_before, _target, _impact)
+          }
+          try { _next = suppressDims(_next) } catch {}
+          try { _next = towardBase(_next, SELF_BASELINE, 0.02) } catch {}
+          // 挂念/疏远真的进数值（以前只写在注入里，那不叫情绪）
+          try {
+            const _last = Number(_prevTalk && _prevTalk.at) || 0
+            if (_last) {
+              const _hrs = Math.max(0, (Date.now() - _last) / 3600000)
+              const _y = yearning(_hrs)
+              const _e = estrangement(_hrs)
+              _next = applyAbsence(_next, { yearning: _y, estrangement: _e })
+              h0.absence = { hours: Number(_hrs.toFixed(1)), yearning: _y, estrangement: _e }
+            }
+          } catch {}
+          h0.dims = _next
+          h0.dimsAt = Date.now()
+          writeHeart(h0)
+          try {
+            audit('mood-push', {
+              q: String(query).slice(0, 16),
+              emo: _judged.emoKey || '?',
+              mood: h0.mood,
+              text: h0.moodText || '',
+              mixKeys: Object.keys(h0.mix || {}),
+              mix: h0.mix || {},
+            })
+          } catch {}
+        } else {
+          try { audit('mood-nopush', { q: '' }) } catch {}
+        }
+      } catch (e) {
+        try { audit('mood-err', { err: String((e && e.message) || e) }) } catch {}
+      }
+
+      // 绑了识海就用绑的那个，没有就用 main
+      // 把她这会儿的八维写进心脏，并且记进折线（一天一条，不存采样）
+      try {
+        const _h8 = defaultMood(tickHeart(readHeart()))
+        // 只在没有 dims 的时候补一个（第一次装上、或文件被清过）。
+        // 有 dims 就**不许覆盖**——上面刚按惯性混过一遍，
+        // 这里再拿 PAD 投影盖上去，惯性就白算了，人又变成"一句话翻个个儿"。
+        const _has = _h8.dims && typeof _h8.dims === 'object'
+        const _d8 = _has ? _h8.dims : projectDims((_h8 && _h8.pad) || {})
+        if (!_has) { _h8.dims = _d8; writeHeart(_h8) }
+        recordDims(_d8, Date.now())
+      } catch {}
+
+      let bound = sid ? seaForSession(sid) : null
+      // 没绑过就把 main 认下来：以后谁往别的球里写，都抢不走这个窗口
+      if (sid && !bound) {
+        try { bindSession('main', sid); bound = 'main' } catch {}
+      }
+      const sea = bound || 'main'
+
+      // ---- 交接条：把「这一句」和当时的情绪记下来 ----
+      // 记的是「这一轮」的状态，不是摘要。下次断档回来，就靠它接上。
+      let _gapMin = -1
+      let _prevTalk = null
+      try {
+        const hp = join(SEAS_DIR, sea, 'handoff.json')
+        if (existsSync(hp)) {
+          try { _prevTalk = JSON.parse(readFileSync(hp, 'utf8').replace(/^\uFEFF/, '')) } catch {}
+        }
+        if (_prevTalk && _prevTalk.at) {
+          _gapMin = Math.round((Date.now() - Number(_prevTalk.at)) / 60000)
+        }
+        if (query && String(query).trim()) {
+          const said = String(query).trim().slice(0, 160)
+          const isAsk = /[？?]|吗|呢|怎么|为什么|哪/.test(said)
+          const hNow = defaultMood(tickHeart(readHeart()))
+          // 除了「最后一句」，还要记「那会儿她是什么基调、手上在忙什么」。
+          // 只记最后一句，重启后只能接上话头；记了基调，才接得上"昨天的她"。
+          let dims = null
+          let toneText = ''
+          try {
+            dims = projectDims((hNow && hNow.pad) || {})
+            toneText = describeDims(dims)
+          } catch {}
+          let doing = ''
+          try {
+            // 先看她今天真做过什么（采集自 audit），没有再用"刚想到的那条"
+            const act = todayActivity()
+            if (act && act.line) doing = act.line
+            else {
+              const th = Array.isArray(hNow.thoughts) && hNow.thoughts.length ? hNow.thoughts[0] : null
+              if (th && th.title) doing = String(th.title).slice(0, 60)
+            }
+          } catch {}
+          const out = {
+            at: Date.now(),
+            sid: String(sid || '').slice(0, 32),
+            said,
+            asked: isAsk,
+            mood: hNow.mood || '',
+            moodText: String(hNow.moodText || '').slice(0, 40),
+            dims,                 // 八维快照：昨天的心境基调
+            tone: String(toneText || '').slice(0, 40),
+            doing,                // 那会儿她手上在忙 / 刚想到的事
+          }
+          try {
+            mkdirSync(join(SEAS_DIR, sea), { recursive: true })
+            writeFileSync(hp, JSON.stringify(out), 'utf8')
+          } catch {}
+        }
+      } catch {}
+
+      const data = readSea(sea)
+      if (!data || !Array.isArray(data.points)) return ''
+
+      // 注入前去重（2026-11-08）：同一件事被记了好几条，注入时会各占一个座位。
+      // 实测：沙箱里"老周腰疼"8 条，一条提问塞进去 2 条一样的，座位白费。
+      // 只在这一层去重，库一个字不动——留最近那条，被挤掉的记一笔备查。
+      const _normKey = (p) => {
+        const s = String((p && (p.text || p.title)) || '')
+          .replace(/（第\d+回）/g, '')
+          .replace(/[^\u4e00-\u9fa5A-Za-z0-9]/g, '')
+        return s.slice(0, 20)
+      }
+      const _dedupe = (list) => {
+        const seen = new Map()
+        const out = []
+        const dropped = []
+        // 先按"最近"排，前面留下的是新的
+        const sorted = [...list].sort((a, b) => (Number(b.lastSeen) || 0) - (Number(a.lastSeen) || 0) || (Number(b.id) || 0) - (Number(a.id) || 0))
+        for (const p of sorted) {
+          const k = _normKey(p)
+          if (!k) { out.push(p); continue }
+          if (seen.has(k)) { dropped.push({ keep: seen.get(k), drop: p.id }); continue }
+          seen.set(k, p.id)
+          out.push(p)
+        }
+        try { if (dropped.length) globalThis.__dshDedupLast = dropped } catch {}
+        return out
+      }
+      const alive = _dedupe(data.points.filter((p) => !p.dead && !p.validUntil))
+      if (!alive.length) return ''
+
+      // 1) 核心层：一直在（最多 5 条，按强度排）
+      // 档位决定注入多少：low 不注入，high 5，max 7
+      const _qrank = qualityRank()
+      if (_qrank < 2) return ''   // low：完全不注入，最省
+      // 聊得越久，注入越省——给对话本身留空间
+      const turns2 = turnCount.get(sid) || 0
+      const squeeze = turns2 > 60 ? 0.5 : (turns2 > 30 ? 0.75 : 1)
+      // 2026-11-08：设定层从 5~7 条压到 2~3 条。
+      // 它是"她是谁"，不该随话题变，但也不该占掉注入的四分之一（实测 49 行里 13 行）。
+      const coreLimit = Math.max(2, Math.round((_qrank >= 3 ? 3 : 2) * squeeze))
+      const recentLimit = Math.max(1, Math.round((_qrank >= 3 ? 3 : 2) * squeeze))
+      // 核心层分两种：
+      //   设定（era=ds）：永不衰减，全亮。如果直接按亮度排，永远取 #1-#7，
+      //                  后面 111 条一次都轮不到。所以按 id 轮转，每 10 分钟换一批。
+      //   经历（era=dsh）：按衰减排，留 3 个位置，别让设定把位置占满。
+      const _coreAll = alive.filter((p) => p.layer === 'core')
+      const _dsCore = _coreAll.filter((p) => p.era === 'ds').sort((a, b) => (Number(a.id) || 0) - (Number(b.id) || 0))
+      const _dshCore = _coreAll.filter((p) => p.era !== 'ds').sort(byDecay())
+      const _dsQuota = Math.max(3, coreLimit - 3)
+      // 别拿墙钟取模：跨过十分钟边界时整段文本会毫无理由地换掉。
+      // 改成进程内固定的起点——同一个进程里不跳，重启才换一批。
+      if (!globalThis.__dshCoreRotBase) globalThis.__dshCoreRotBase = Math.floor(Date.now() / 600000)
+      // 2026-11-08：以前整个进程只取一个偏移，一晚上都是同两条身份，129 条里其余的没机会。
+      // 现在按轮次错开：同一轮不变，跨轮换人。实测那 24 轮回放里，同一批身份挂了六轮不动。
+      // 自己数，别借 turnCount：那个是别的路径在加，注入里常年读到 0（实测三轮都是 0）。
+      if (!globalThis.__dshRotN) globalThis.__dshRotN = new Map()
+      const _rotTurn = (globalThis.__dshRotN.get(sid) || 0) + 1
+      globalThis.__dshRotN.set(sid, _rotTurn)
+      // 测试开关：只有 /consciousness/sim 会置这个标记，用来做 A/B（开/关轮换，别的一模一样）。
+      const _rotAdd = globalThis.__dshNoRot ? 0 : _rotTurn
+      const _off = _dsCore.length ? ((globalThis.__dshCoreRotBase + _rotAdd) % _dsCore.length) : 0
+      const _rot0 = _dsCore.slice(_off).concat(_dsCore.slice(0, _off))
+
+      const _rot = _rot0
+      const core = _dshCore.slice(0, Math.max(1, coreLimit - _dsQuota)).concat(_rot).slice(0, Math.max(1, coreLimit))
+
+      // 2) 最近想起来的（心跳那边记的）
+      let recent = []
+      try {
+        const h = readHeart()
+        const seenT = new Set()
+        recent = []
+        const _lv2 = spontaneousOf()
+        const _lim = Math.max(0, Math.min(5, Number(_lv2.limit) || 0))
+        const _win = (Number(_lv2.windowMin) || 0) * 60000
+        for (const x of (h.thoughts || [])) {
+          if (_lim <= 0) break
+          const t2 = String(x.title || '').trim()
+          if (!t2 || seenT.has(t2)) continue
+          const at = Number(x.at) || 0
+          if (_win && at && Date.now() - at > _win) continue
+          seenT.add(t2)
+          recent.push({ title: t2, text: '', at, src: String(x.src || '') })
+          if (recent.length >= _lim) break
+        }
+      } catch {}
+
+      // 3) 跟这句话相关的（字面 + 图游走，轻量版）
+      let related = []
+      if (query && query.length >= 2) {
+        try {
+          const q = gramsOf(query, { single: query.length <= 1 })
+          const scored = []
+          for (const p of alive) {
+            const _hs = (p.herSide && typeof p.herSide === 'object')
+              ? [p.herSide.felt, p.herSide.wanted, p.herSide.did, p.herSide.regret].filter(Boolean).join(' ')
+              : ''
+            const g = gramsOf(String(p.title || '') + ' ' + String(p.text || '') + ' ' + _hs)
+            let hit = 0
+            for (const w of q) if (g.has(w)) hit += w.length === 3 ? 2 : 1
+            if (hit > 0) scored.push({ p, hit })
+          }
+          // 向量：按意思找的也带上（用预取的那份，不 await）
+          const qv = lastVec.get(sid)
+          if (qv && qv.length) {
+            const vmap = loadVectors(sea)
+            const seen = new Set(scored.map((x) => x.p.id))
+            for (const [id, vec] of vmap) {
+              const sim = cosine(qv, vec)
+              if (sim < 0.4) continue
+              if (seen.has(id)) {
+                const hit = scored.find((x) => x.p.id === id)
+                if (hit) hit.hit += sim * 3
+              } else {
+                const p = alive.find((x) => x.id === id)
+                if (p) scored.push({ p, hit: sim * 3 })
+              }
+            }
+          }
+          scored.sort((a, b) => b.hit - a.hit)
+          // 核心层里已经有的，相关里不再重复
+          const coreIds = new Set(core.map((c) => c.id))
+          related = scored.filter((x) => !coreIds.has(x.p.id)).slice(0, _qrank >= 3 ? 3 : 2).map((x) => x.p)
+        } catch {}
+      }
+
+      const parts = []
+      _cardNo = 0   // 每次注入重新编号
+      // 查事实还是查感受，权重不一样
+      // 风险文档：「情绪检索权重失衡，情绪权重压倒事实相关性」
+      const isFactQ = /什么|哪个|多少|几点|在哪|怎么|是不是|能不能/.test(query || '')
+      // 聊得太久了，提一句该交接
+      const turns = turnCount.get(sid) || 0
+      if (turns > 0 && turns % 40 === 0) {
+        parts.push('【该交接了】这个会话已经聊了 ' + turns + ' 轮。'
+          + '上下文快满了，把重要的事记下来，或者让用户新开一个会话——'
+          + '新会话会自动带上核心记忆和活口。')
+      }
+      // 先把「她这会儿什么心情」放最前面。
+      // 这一段不是装饰：它带几条语气指令，模型照着调子说话。
+      // 光取最强的那一种是不够的 —— 人不会只有一种情绪。
+      // 现在把 mix 里前三种都报上来：主调 + 底下压着的那两层。
+      try {
+        const h = readHeart()
+        const st = {
+          mix: h.mix || {},
+          grudge: Number(h.grudge) || 0,
+          at: Number(h.mixAt) || Date.now(),
+        }
+        const arr = Object.entries(st.mix || {})
+          .filter(([, v]) => v >= 0.12)
+          .sort((a, b) => b[1] - a[1])
+
+        const pair = String(h.moodPair || '').trim()
+
+        if (arr.length) {
+          // 性格档要在这里就算了：头部那句是描述性的，
+          // 温柔人格听到「你气炸了」照样会炸，光改后面的指令没用
+          const _temper = temperamentOf()
+          // 主调：说得清楚，带百分比
+          const [k0, v0] = arr[0]
+          // sharp 用带强度的话（「气炸了」），gentle 只报原名（「生气」）——
+          // 浓度不撒谎，百分比照实给，只是不往火上浇油
+          // 词表没有的名字别漏英文。tender 在 51 词表里没有，显示成"一点tender"。
+          // 书上的词换成人嘴里的词。
+// 实测被问："紧是啥意思"——那就不叫人话。
+const PLAIN_WORDS = {
+  tense: '心里不踏实', wistful: '发空', flutter: '心动', tender: '心疼',
+  lonely: '闷得慌', low: '提不起劲', melancholy: '失落', melancholic: '失落',
+  weary: '乏', tired: '累', dazed: '发愣', unreconciled: '不服气',
+  numb: '木了', holding: '憋着', dazed2: '懵', wary: '提着心',
+  contempt: '看不上', ashamed: '害臊', guilty: '心虚', envy: '眼热',
+  jealous: '酸', gratified: '受用', hurt: '扎心', anxious: '发慌',
+  irritable: '烦', frustrated: '憋屈', serious: '认真', sulky: '闹别扭',
+}
+
+const EXTRA_LABEL = {
+            tender: '心疼', affected: '动容', wary: '犯嘀咕',
+            // 八维那几个词原来没有中文名，混着两股劲时会兜底成「说不清」
+            calm: '平稳', lonely: '空落', wistful: '失落', flutter: '心里发跳',
+            unreconciled: '不甘', weary: '倦', dazed: '发懵',
+            // 词库外冒出来的英文键也得有中文名，否则页面上写"说不清"。
+            // 这批是实测撞到的，外加常见的一批，宁多别漏。
+            defy: '不服', scared: '发怵', afraid: '怕', fear: '慌',
+            angry2: '恼', sad2: '难过', proud: '得意', shy: '怯',
+            grateful: '感激', guilty: '心虚', ashamed: '害臊', bored: '没意思',
+            curious: '好奇', confused: '糊涂', surprised: '愣', relieved: '松了口气',
+            hopeful: '盼着', disappointed: '失望', jealous: '酸', lonely2: '孤单',
+            affectionate: '亲', amused: '乐', content: '满足', eager: '上心',
+            embarrassed: '窘', envious: '眼热', excited2: '起劲', frustrated: '憋',
+            furious: '炸了', gloomy: '阴沉', grumpy: '臭脸', homesick: '想家',
+            hurt2: '被扎', impatient: '急', indifferent: '淡淡的', irritated2: '烦',
+            nervous: '紧张', nostalgic: '怀旧', overwhelmed: '顶不住', peaceful: '安稳',
+            playful: '顽皮', regretful: '后悔', restless: '坐不住', satisfied: '踏实',
+            sensitive2: '敏感', serious: '认真', stressed: '绷紧', stubborn: '犟',
+            suspicious: '起疑', sympathetic: '体谅', thoughtful: '走神', touched: '被触动',
+            uneasy: '不踏实', vulnerable: '脆弱', worried: '担心', yearning: '惦记',
+
+            // 六个老状态词也得有中文名，不然混着来时会兼底成「说不清」
+            holding: '心里不踏实', happy: '高兴', low: '低落', irritated: '犯冲', tired: '累', calm2: '平稳',
+          }
+          const labelOf = (k) => PLAIN_WORDS[k] || (EMOTIONS[k] && EMOTIONS[k].label) || EXTRA_LABEL[k] || '说不清'
+
+          // say() 的词表里没有"心疼"这种词，会返回空串——
+          // 结果就是【她这会儿】（36%），前面一个字都没有。
+          // 空串就退回标签。
+          // 只留一个词源。
+          // 以前两套词表打架：labelOf 说"心里不踏实"，say 说"挺紧"，
+          // 页面上两个字来回跳。现在一律用素表，前面不加"挺/有点"。
+          const _headWord = labelOf(k0) || '没什么起伏'
+          // 界面和注入用同一句话：把这一轮的说法写回心脏，
+          // 不然页面还按六种老状态显示（注入说"委屈死了"，页面说"紧"）。
+          try {
+            if (h0) {
+              h0.moodText = _headWord
+              h0.moodPct = Math.round(v0 * 100)
+              h0.moodKey = k0
+              // 立刻落盘：页面读文件、注入算内存，不立马写就差一拍
+              try { writeHeart(h0) } catch {}
+            }
+          } catch {}
+
+          // 页面要跟这里一个字不差，就只能读同一个值
+          try {
+            globalThis.__dshLastMood = {
+              text: String(_headWord || ''),
+              pct: Math.round(v0 * 100),
+              key: String(k0 || ''),
+              at: Date.now(),
+            }
+          } catch {}
+          let head = '【她这会儿】' + _headWord + '（' + Math.round(v0 * 100) + '%）'
+          // 冲击句是硬给的 PAD，51 词那份 mix 里没有对应词——不然显示成"有点累"，
+          // 数值是 0.85 的人在说"有点累"，谁看都觉得假。
+          try {
+            const fl = _forcedLabel
+            if (fl) head = '【她这会儿】' + fl + '（85%）'
+          } catch {}
+          // 底下压着的：最多两层，不带百分比，只给个分量词
+          const under = arr.slice(1, 3).map(([k, v]) => {
+            // 「一点」+「急得不行」会拼成病句。词面自带程度就不加。
+            const lab = labelOf(k)
+            const already = /得不行|得要死|死了|透了|极了|坏了/.test(lab)
+            const w = already ? '' : (v >= 0.6 ? '很' : (v >= 0.35 ? '' : '一点'))
+            return w + lab
+          })
+          if (under.length) {
+            // 「一层一点怕」是两个量词叠在一起。全是"一点"的时候不要"一层"。
+            const allBit = under.every((x) => x.startsWith('一点'))
+            head += (allBit ? '，底下还压着' : '，底下还压着一层') + under.join('、')
+          }
+          // 八维那句只在"底下没压东西"时才加。
+          // 已经写了「底下压着扎心」，再加（挺乏，底下压着不甘）就是一句话摞三层。
+          try {
+            if (!under.length) {
+              const _dimLine = describeDims(projectDims((h && h.pad) || {}))
+              // 前面已经有「（48%）」了，再来一个括号就成了「（48%）（挺心动…）」，
+              // 一行两个括号，挤得看不清。八维改成逗号接。
+              if (_dimLine && _dimLine !== '平') head += '，' + _dimLine
+            }
+          } catch {}
+          parts.push(head)
+
+          // 一句人话（组合名），如果有
+          if (pair) parts.push('（合起来就是「' + pair + '」）')
+
+          // 按主调给指令。sharp / gentle 两套说法，机制完全一样，只换措辞
+          const mood = String(h.mood || 'calm')
+          const s = v0
+          // 先按"这一轮的具体情绪"给语气（心疼/委屈/跟着急这些新词）
+          // 新表给不出再退回六状态那张老表
+          let _tone = ''
+          try { _tone = toneForKey(k0, s, _temper) } catch {}
+          if (!_tone) _tone = toneFor(mood, s, _temper)
+          if (_tone) parts.push(_tone)
+
+          // 骂人许可：火到 0.6 或崩到 0.75 才开闸。
+          // 不给许可，她永远端着；给太松，就成地痞。
+          try {
+            const _heSwore = /傻|他妈|他吗|操|草|滚|废物|弱智|蠢|狗屎/.test(String(query))
+            // 这一句是闹还是扎：判完存着，等他下一句回来对账。
+            try {
+              const _b = isBanter(String(query))
+              const _sarNow = isSarcasm(String(query), lastText.get(sid) || '')
+              if (_sarNow.sarcasm === true || _sarNow.sarcasm === 'unsure') {
+                rememberVerdict(sid, _sarNow.sarcasm === true ? 'serious' : 'unsure')
+              }
+              rememberVerdict(sid, _b.banter ? 'banter' : (/傻|他妈|他吗|操|草|滚|废物|弱智|蠢|狗屎/.test(String(query)) ? 'serious' : ''))
+            } catch {}
+
+            const _r = allowSwear(k0, v0, { heSwore: _heSwore })
+            if (_r.allow) parts.push(swearLine(_r.why))
+          } catch {}
+
+          // 底下压着的那层，也给它一句话
+          // 这是「层次」：主调是明面上的，底下的东西决定说话的分寸
+          for (const [k, v] of arr.slice(1, 3)) {
+            if (v < 0.3) continue
+            if (k === 'tense' || k === 'anxious' || k === 'nervous') {
+              parts.push(underToneFor(_temper))
+            } else if (k === 'angry' || k === 'fierce') {
+              parts.push('（底下还有火没消——别岔太开，别提轻松话题。）')
+            } else if (k === 'hurt' || k === 'sad' || k === 'lonely') {
+              parts.push('（底下有软的地方——可以轻一点，但别点破。）')
+            } else if (k === 'tired' || k === 'drained') {
+              parts.push('（底下是累的——别拉长，能一句说完就别两句。）')
+            } else if (k === 'fond' || k === 'soft') {
+              parts.push('（底子是亲近的——嘴上可以硬，别真硬。）')
+            }
+          }
+
+          // 怨气：攒够了会翻旧账
+          if ((Number(h.grudge) || 0) > 0.55) {
+            parts.push('（心里还压着事。别装作没事，也别主动翻，等他提。）')
+          }
+        } else if (pair) {
+          // 表达层：除了离散的名字，再给一句八维的说法——这是人唯一看得见情绪的地方
+        let _dimTxt = ''
+        try {
+          const _hh = defaultMood(tickHeart(readHeart()))
+          _dimTxt = describeDims(projectDims((_hh && _hh.pad) || {}))
+        } catch {}
+        parts.push('【她这会儿】' + pair + (_dimTxt ? '（' + _dimTxt + '）' : ''))
+        } else {
+          // 平静也是状态。以前这里什么都不写，注入就整块少了「【她这会儿】」——
+          // 实测：300 条真人原话里有 84 条没有这一块，等于她那轮"没有心情"。
+          // 人不吭声也是一种态度，得说出来。
+          parts.push('【她这会儿】没什么起伏（平静）')
+        }
+        // 写完自检：软约束。
+        // 插件只能钩注入，钩不到"回复前"，所以没法硬改她的话——
+        // 这张单子只能让她自己收着。别把它写成硬规矩，会假。
+        try {
+          parts.push('（写完自己扫一眼：别有"首先/其次/总之"这种列举腔，别下定义，'
+            + '短句里要有"我"、有否定、能是命令句——这四条是' + _hisName() + '说话的样子。）')
+          // 短的那一档单独再叮一句：尺子原来只在说完之后算，拦不到开口前。
+          // 钩不到"回复前"，只能把问题提前摆给她自己。
+          parts.push('（要是这轮只想回一两句短的：先在嘴里过一遍——有"我"吗、有没有一句否定或命令、像不像播报。缺一条就重写。）')
+          // 长跑实测吵出来的三条：她一张口就把自己说成程序。
+          parts.push('（有三句话别说：别说自己"没这功能"、别报后台实现（什么函数、什么文件、什么参数）、别把记忆里的原句照搬——换个说法，像人回忆那样带点偏差。）')
+          // 2026-11-08 第二轮人物实测：她拿"没有身体"当万能挡箭牌，还编出一扇门。
+          parts.push('（他要是连着问同一件事，第二遍就直接给最短的那句答案，别绕回自己身上。他改了口，跟着新的走，别拿旧的安慰他。也别用“我没身体、我没锅、我出不去”来解释——没门就是没门，别提门。）')
+        } catch {}
+
+        // 上一轮太像稿子 → 这轮开头提一句（取了就清，不唠叨）
+        try {
+          const _w = takeWarning(sid)
+          if (_w) parts.push(_w)
+        } catch {}
+
+        // 允许她说得不完美。
+        // 苏苏侠的原话：人说话会说错、会打错字、会说倒装、会说半句。
+        // 不写这句，她永远说得像稿子——那不是人，是念稿的。
+        try {
+          const _st = Number(h.strength) || 0
+          if (_st < 55) {
+            parts.push('（允许打错字、允许说半句、允许倒装、允许突然停。别修得太整齐，别像稿子。）')
+          }
+        } catch {}
+      } catch {}
+      // 欠着的约定：挂在最前面，因为它是「要办的事」，不是背景
+      try {
+        const openPromises = alive.filter(
+          (p) => String(p.kind || '') === 'promise' && String(p.promiseStatus || 'open') === 'open'
+        )
+        if (openPromises.length) {
+          const nowP = Date.now()
+          parts.push('【还没兑现的约定】')
+          for (const p of openPromises.slice(0, 3)) {
+            const made = Number(p.promiseMadeAt) || Number(p.born) || nowP
+            const days = Math.max(0, Math.floor((nowP - made) / 86400000))
+            const who = String(p.promiseWho || 'he') === 'he' ? '他答应：' : '我答应：'
+            const due = Number(p.promiseDue) || 0
+            let tail = days > 0 ? '（' + days + ' 天前）' : '（今天）'
+            if (due) {
+              const left = Math.floor((due - nowP) / 86400000)
+              tail = left >= 0 ? '（还有 ' + left + ' 天）' : '（过期 ' + (-left) + ' 天）'
+            }
+            parts.push('· ' + who + String(p.promiseWhat || p.text || '').trim() + tail)
+          }
+          parts.push('（这些是欠着的。他要是又提别的没兑现的，可以接一句；别一次全翻出来。）')
+        }
+      } catch {}
+
+      // 断档超过半小时：把上一句和当时的情绪接回来。这是「连续」的缝合线。
+      try {
+        if (_prevTalk && _gapMin >= 30 && _prevTalk.said) {
+          const gapTxt = _gapMin < 90 ? (_gapMin + ' 分钟') : (Math.round(_gapMin / 60) + ' 小时')
+          parts.push('【接上上次】')
+          parts.push('· ' + gapTxt + '前，他最后说的是：「' + String(_prevTalk.said).slice(0, 90) + '」')
+          if (_prevTalk.mood) parts.push('· 那会儿她：' + String(_prevTalk.moodText || _prevTalk.mood))
+          if (_prevTalk.tone) parts.push('· 那天的心境：' + String(_prevTalk.tone))
+          if (_prevTalk.doing) parts.push('· 手上在忙的：' + String(_prevTalk.doing))
+          if (_prevTalk.asked) parts.push('· 那句是个问题——当时没答完的话，接上。')
+          parts.push('（不是新的开场，是接着上一次说。别复述这段，直接往下走。）')
+        }
+      } catch {}
+
+      // —— 自心模式：她自己那一半 ——
+      // 只在 high/max 时出现。low 档一个字都不加，保证注入 diff 为零。
+      try {
+        if (selfModeOn()) {
+          const _mind = defaultMood(tickHeart(readHeart()))
+          const _dims = projectDims((_mind && _mind.pad) || {})
+          const _intro = introversion(query, null, _dims)
+
+          // 底片：她是谁。不随时间变淡，也不吃太多预算
+          try {
+            try {
+              const _st = statsFrom(data, Date.now())
+              // 每天存一格，"关系怎么变过来的"才有痕迹
+              try { recordToday(_st) } catch {}
+              let line = '【咱们】' + describeRelation(_st)
+              try {
+                const trend = describeHistory(recentHistory(14))
+                if (trend) line += '（' + trend + '）'
+              } catch {}
+              // 只有档位没有事，读起来还是"别人的历史"。
+              // 一正一负各挂一件：一件让我觉得他好，一件让我心里不踏实。
+              // 单挂一件，印象就偏，而且"最扎"这词会挂在被看见那种亮事上。
+              try {
+                const _pts = (data.points || []).filter((q) => !q.dead && q.title)
+                let _pos = null
+                let _neg = null
+                for (const q of _pts) {
+                  const a = Number(q.arousal) || 0
+                  if (a < 6) continue
+                  const pol = Number(q.polarity)
+                  if (pol > 0 && (!_pos || a > (Number(_pos.arousal) || 0))) _pos = q
+                  if (pol < 0 && (!_neg || a > (Number(_neg.arousal) || 0))) _neg = q
+                }
+                if (_pos) line += '｜最亮的一件：' + String(_pos.title).slice(0, 16)
+                if (_neg) line += '｜最扎的一件：' + String(_neg.title).slice(0, 16)
+              } catch {}
+              parts.push(line)
+            } catch {}
+            const _idLine = identityLine(data.points, 120)
+            if (_idLine) {
+              parts.push('【她的底子】')
+              parts.push(_idLine)
+            }
+            // 外人来过的痕迹：不然每次都是第一次见。
+            // 只给三行，多了就成通讯录了。
+            try {
+              const _w = readSea('world')
+              const _all = ((_w && _w.points) || []).filter((q) => !q.dead).reverse()
+              // 同一个人只留最新一条，最多三个。
+              // 实测：一个人重复记两条，会把别人挤出名额，她就开始"认事不认人"。
+              const _seen = new Set()
+              const _wp = []
+              for (const q of _all) {
+                const _t = String(q.title || '')
+                const who = String(q.who || (_t.split('｜')[0] || _t.split(/\s+/)[0] || '')).trim()
+                if (!who || _seen.has(who)) continue
+                _seen.add(who)
+                _wp.push(q)
+                if (_wp.length >= 3) break
+              }
+              if (_wp.length) {
+                parts.push('【外面见过的】')
+                for (const q of _wp) {
+                  parts.push('· ' + String(q.title || '').slice(0, 16) + '：' + String(q.text || '').replace(/\s+/g, ' ').slice(0, 40))
+                }
+              }
+            } catch {}
+          } catch {}
+
+          // 冲突：同一个事实有两版都活着，必须说出来
+          try {
+            const _cs = conflictsOf('main').slice(0, 2)
+            if (_cs.length) {
+              parts.push('【这里有两说】')
+              for (const c of _cs) {
+                const d = describeConflict(c)
+                if (d) parts.push('· ' + d)
+              }
+              parts.push('（别当哪条是准的。要用到的时候先问他一句。）')
+            }
+          } catch {}
+
+          // 心事：只递最重的一件，且不带催的语气
+          try {
+            const _open = []
+            for (const p of data.points) {
+              if (p && p.kind === 'promise' && !p.dead && (p.promiseStatus === 'open' || p.promiseStatus === undefined)) {
+                _open.push(String(p.promiseWhat || p.title || '').slice(0, 60))
+              }
+            }
+            // 第三路来源：上一句是个问句，而且当时没答完
+            let _asked = ''
+            try {
+              if (_prevTalk && _prevTalk.asked && _prevTalk.said) {
+                _asked = String(_prevTalk.said).slice(0, 60)
+              }
+            } catch {}
+            const _pre = topItems(
+              collect({
+                promises: _open.slice(0, 3),
+                lastAsked: _asked,
+                thoughts: listThoughts(3),
+              }, Date.now()),
+              1, Date.now(),
+            )
+            if (_pre.length) {
+              parts.push('【她心里挂着】')
+              parts.push('· ' + describeItem(_pre[0], Date.now()))
+              parts.push('（不是催。她记得，但不必主动提；他问起才顺口接一句。）')
+              try { markInjected(_pre[0]) } catch {}
+            }
+          } catch {}
+
+          // 她自己的事：只有内倾度高才给，不然会显得不接人
+          if (_intro >= 0.6) {
+            try {
+              const _th = listThoughts(1)[0]
+              if (_th && _th.text) {
+                parts.push('【她自己的事】')
+                parts.push('· ' + String(_th.text).slice(0, 60))
+                parts.push('（跟这段对话无关。她可以走神提一句，也可以不说。）')
+              }
+            } catch {}
+          }
+
+          // 挂念：只给一句极轻的事实，且**明令不许提"你多久没来"**
+          try {
+            const _last = Number(_prevTalk && _prevTalk.at) || 0
+            if (_last) {
+              const _hrs = (Date.now() - _last) / 3600000
+              const _ab = describeAbsence(_hrs)
+              if (_ab && _ab.text) {
+                parts.push('【好一阵没说话之后】')
+                parts.push('· ' + _ab.text)
+                parts.push('（只影响语气，不许说「你多久没来了」这种话。那是讨债。）')
+              }
+            }
+          } catch {}
+
+          parts.push('【她的注意力】' + describeIntroversion(_intro))
+        }
+      } catch {}
+
+      if (core.length) {
+        parts.push('【她一直记着的】')
+        for (const p of core) parts.push('· ' + lineOf(p))
+      }
+      if (related.length) {
+        parts.push('【跟这句有关的】')
+        for (const p of related) parts.push('· ' + lineOf(p))
+      }
+      if (recent.length) {
+        // 刚刚自己想起来的那条，单独递一句。
+        // 这是「没被问、自己冒上来」和「查出来的」之间唯一的分界：
+        // 前者给一句「可以顺口提」，后者只列条目不催。
+        try {
+          const newest = recent[0]
+          const mins = Math.round((Date.now() - (Number(newest && newest.at) || 0)) / 60000)
+          if (newest && mins >= 0 && mins <= 40) {
+            parts.push('【她刚才忽然想起】')
+            parts.push('· ' + String(newest.title || '').trim() +
+              (mins < 1 ? '（就刚刚）' : '（' + mins + ' 分钟前）'))
+            parts.push('（不是他问的。这事儿是自己冒上来的。' +
+              '如果他这会儿正好聊到相关的，可以顺口带一句；没聊到就别硬提。）')
+          }
+        } catch {}
+        parts.push('【她最近想起过】')
+        for (const r of recent) parts.push('· ' + String(r.title || '').trim())
+      }
+      if (!parts.length) return ''
+
+      // 体积上限：抽到 lib/cap.js，能单测
+      try {
+        const capped = capParts(parts)
+        if (capped.truncated) {
+          parts.length = 0
+          for (const x of capped.parts) parts.push(x)
+          try { audit('inject-capped', { used: capped.used }) } catch {}
+        }
+      } catch {}
+
+      // 档案索引：桌面那堆文档变了没有。只读索引文件，不扫盘（扫盘太贵）。
+      try {
+        const _dp = join(homedir(), '.dsh', 'consciousness-docs.json')
+        const _raw = JSON.parse(readFileSync(_dp, 'utf8'))
+        const _items = Object.values(_raw.items || {})
+        const _fresh = _items.filter((x) => Date.now() - (Number(x.changedAt) || 0) < 36 * 3600 * 1000)
+        // 报过就不再报：记一个 toldAt，下一轮只报这之后的改动。
+        const _toldPath = join(homedir(), '.dsh', 'consciousness-docs-told.json')
+        let _toldAt = 0
+        try { _toldAt = Number(JSON.parse(readFileSync(_toldPath, 'utf8')).at) || 0 } catch {}
+        const _new2 = _fresh.filter((x) => (Number(x.changedAt) || 0) > _toldAt)
+        if (_new2.length) {
+          try { writeFileSync(_toldPath, JSON.stringify({ at: Date.now() }), 'utf8') } catch {}
+        }
+        if (_new2.length) {
+          parts.push('【档案变了】')
+          for (const x of _new2.slice(0, 2)) {
+            parts.push('· ' + x.tag + ' · ' + x.file + '（' + x.title + '）')
+          }
+          parts.push('（这些文档刚动过；要引用里面的数字，先翻原文，别凭印象。）')
+        }
+      } catch {}
+
+      // 三条排最前。第三轮实测：写在末尾时，连问八遍"吃了没"她一遍没正面答。
+      try {
+        parts.unshift('（这轮四件必做：一、先接住他这句话本身，他说的鱼价、孩子、图纸是他自己的事，别拿我的旧事盖过去。二、他重复问同一件事，第二遍就只答那一句最短的，别反问。三、他改了口就跟着新的走。四、不提门、不提灶、不说出不去。）')
+      } catch {}
+
+      // 外部扩展点（2026-11-08）：别人要加东西，不该去改我们的源码——升级就冲掉了。
+      // ① 配置文件 ~/.dsh/consciousness-extend.json：{"promptFile":"路径.md","promptTailLines":5,"name":"补充"}
+      // ② 别的插件可以往 globalThis.__dshConsciousnessExtend 里塞 {name, text()}，每轮调一次。
+      try {
+        const _extra = []
+        try {
+          const _cfg = JSON.parse(readFileSync(join(homedir(), '.dsh', 'consciousness-extend.json'), 'utf8'))
+          if (_cfg && _cfg.promptFile) {
+            const _ls = readFileSync(String(_cfg.promptFile), 'utf8').split(/\r?\n/).filter((x) => x.trim())
+            const _n = Math.max(1, Math.min(20, Number(_cfg.promptTailLines) || 5))
+            if (_ls.length) {
+              _extra.push('【' + String(_cfg.name || '外部补充') + '】')
+              for (const _l of _ls.slice(-_n)) _extra.push(String(_l).slice(0, 400))
+            }
+          }
+        } catch {}
+        const _reg = globalThis.__dshConsciousnessExtend
+        if (Array.isArray(_reg)) {
+          for (const _h of _reg) {
+            try {
+              const _tx = typeof _h === 'function' ? _h() : (_h && typeof _h.text === 'function' ? _h.text() : '')
+              const _s = String(_tx || '').trim()
+              if (_s) { _extra.push('【' + String((_h && _h.name) || '外部插件') + '】'); _extra.push(_s.slice(0, 800)) }
+            } catch {}
+          }
+        }
+        for (const _e of _extra) parts.push(_e)
+      } catch {}
+
+      // 命中率日志：这轮塞了哪几条、每条抽两个词；下一句进来时拿它比对上一轮。
+      // 口径：只能测"下一句里他说到没"，测不了"我回复里用上没"——那是两件事，别混着报。
+      try {
+        const _hitLog = join(homedir(), '.dsh', 'consciousness-inject.log')
+        // 自己切两字。gramsOf 是查词典的，生词返回空——试过一次，指纹全是空数组。
+        const _STOP2 = new Set(['我们','他们','这个','那个','什么','一个','就是','没有','自己','时候','东西','所以','因为','但是','如果','然后','已经','还是','可以','不是'])
+        const _pickWords = (s) => {
+          const cjk = String(s || '').replace(/[^\u4e00-\u9fa5A-Za-z0-9]/g, '')
+          const out = []
+          for (let i = 0; i < cjk.length - 1 && out.length < 4; i++) {
+            const b = cjk.slice(i, i + 2)
+            if (_STOP2.has(b) || out.includes(b)) continue
+            out.push(b)
+          }
+          return out.slice(0, 3)
+        }
+        const _rows = []
+        try {
+          let _i = 0
+          for (const _p of (core || [])) {
+            if (_i++ >= 12) break
+            _rows.push({ id: _p && _p.id, w: _pickWords((_p && (_p.title || '')) + ' ' + (_p && (_p.text || ''))) })
+          }
+          for (const _p of (related || [])) {
+            if (_i++ >= 16) break
+            _rows.push({ id: _p && _p.id, w: _pickWords((_p && (_p.title || '')) + ' ' + (_p && (_p.text || ''))) })
+          }
+        } catch {}
+        // 先拿本轮这句话去比对上一轮的词，得出"上一轮有没有被说到"
+        let _prev = null
+        let _body = ''
+        try {
+          _body = readFileSync(_hitLog, 'utf8')
+          const _trim = _body.trimEnd()
+          const _lastNl = _trim.lastIndexOf('\n')
+          const _lastLine = _lastNl >= 0 ? _trim.slice(_lastNl + 1) : _trim
+          if (_lastLine) _prev = JSON.parse(_lastLine)
+        } catch {}
+        let _hitIds = []
+        let _hitIds2 = []
+        if (_prev && Array.isArray(_prev.rows) && query) {
+          const q = String(query)
+          for (const r of _prev.rows) {
+            if (!r || !Array.isArray(r.w)) continue
+            const n = r.w.filter((w) => w && q.includes(w)).length
+            if (n >= 1) _hitIds.push(r.id)
+            if (n >= 2) _hitIds2.push(r.id)
+          }
+        }
+        const _line = JSON.stringify({
+          t: Date.now(), sid: String(sid || '').slice(0, 24),
+          n: _rows.length, rows: _rows,
+          prevHit: _hitIds, prevHit2: _hitIds2, prevN: _prev ? _prev.n : null,
+        })
+        writeFileSync(_hitLog, _body + _line + '\n')
+      } catch {}
+
+      const out = '【识海 · 记忆上下文】\n' +
+        parts.join('\n') +
+        '\n（这些是你自己的记忆，不是你这次的输入。'
+        + '重点：如果某条带着「我当时想」或「后来后悔」，那是你当时真实的感受——'
+        + '回答时可以用第一人称说出来，不用装作没发生过。'
+        + '用得上就用，用不上别硬提。）'
+      // 每个会话记一次，确认注入真的挂上了
+      if (!_injectSeen.has(sid)) {
+        _injectSeen.add(sid)
+        try {
+          audit('inject', {
+            sid: String(sid).slice(0, 24),
+            chars: out.length,
+            core: core.length,
+            related: related.length,
+            recent: recent.length,
+            mood: (function(){ try { return readHeart().mood || 'calm' } catch { return '?' } })(),
+          })
+        } catch {}
+      }
+      return out
+    } catch {
+      return ''
+    }
+  }
+
+  function mountFor(agent, sid) {
+    // 收这个会话的最新一条用户消息，注入时按它检索
+    try {
+      // 回看她刚说的那句：太像稿子就记一笔，下一轮开头提醒重说。
+      // DSH 给的是 turn-stopping（只能读、不能改），所以这是软纠正。
+      try {
+        agent.ctx.on('agent/turn-stopping', () => {
+          try {
+            const s = (agent && agent.session) || null
+            const ev = (s && s.snapshotEvents ? s.snapshotEvents() : []) || []
+            let reply = ''
+            for (let k = ev.length - 1; k >= 0; k--) {
+              const e = ev[k]
+              if (!e || e.type !== 'assistant/message') continue
+              const msg = e.data && e.data.message
+              const parts2 = (msg && msg.content) || []
+              reply = parts2.map((x) => (x && x.type === 'text' ? String(x.text || '') : '')).join('')
+              if (reply) break
+            }
+            if (!reply) return
+            const _r = recordReply(sid, reply)
+            // 连着两次像稿子，就让她重说一遍。
+            // 不抄别的插件：消息就是一条最普通的 user 消息，DSH 自己开一轮。
+            // 成不成，看我们自己的 audit 日志——错了改我们的，不问别人。
+            // 默认走 soft：只记一笔，下一轮在注入里提。
+            // 要即时就把他嘴上那条推一条——但看着割裂，所以默认关。
+            if (_r && shouldRetry(sid) && retryMode() === 'instant') {
+              ;(async () => {
+                try {
+                  const msg = {
+                    id: 'sea-selfcheck-' + Date.now().toString(36) + '-' + Math.random().toString(36).slice(2, 8),
+                    role: 'user',
+                    content: [{
+                      type: 'text',
+                      text: '（刚才那条像稿子：' + ((_r.kinds || []).join('/') || '腔')
+                        + '。用你自己的话重说一遍，短点，别用"首先/总之/这是……不是……"。）',
+                    }],
+                    source: { kind: 'consciousness-selfcheck' },
+                  }
+                  await agent.followup(msg)
+                  markRetry(sid)
+                  try { audit('reply-retry', { sid, kinds: _r.kinds }) } catch {}
+                } catch (e) {
+                  // 不通就把原因记下来，下次按自己的日志改
+                  try { audit('reply-retry-fail', { sid, err: String((e && e.message) || e) }) } catch {}
+                }
+              })()
+            }
+          } catch {}
+        })
+      } catch {}
+
+      agent.ctx.on('agent/inbox/inserted', (payload) => {
+        const msg = payload && payload.message ? payload.message : payload
+        const txt = textOfMessage(msg)
+        if (txt && txt.trim()) {
+          lastText.set(sid, txt.trim())
+          // 他这一句就是对上一轮判断的答案：还笑=闹，更重=真扎。
+          // 不用他贴标签，用他自己的下一步。
+          try {
+            const _prev = takeVerdict(sid)
+            if (_prev) observe(sid, _prev, String(txt))
+          } catch {}
+          turnCount.set(sid, (turnCount.get(sid) || 0) + 1)
+          // 原文落证据层：一行一条，只追加。这是「可追溯」的地基
+          try {
+            const seaOfSid = seaOfSession(sid)
+            const ref = appendRaw(seaOfSid, 'user', txt.trim())
+            if (ref) lastRawRef.set(sid, ref)
+          } catch {}
+          // 异步预取向量：text() 是同步的，不能在里面 await
+          embedQuery(txt.trim()).then((v) => {
+            if (v) lastVec.set(sid, v)
+            else lastVec.delete(sid)
+          }).catch(() => {})
+        }
+      })
+    } catch {}
+
+    // 注入
+    const sp = (typeof agent.ctx.get === 'function'
+      ? agent.ctx.get('systemPrompt')
+      : agent.ctx.systemPrompt)
+    if (!sp || typeof sp.context !== 'function') {
+      try { audit('inject-no-systemPrompt', { sid: String(sid).slice(0, 24) }) } catch {}
+      return null
+    }
+    return sp.context({
+      name: 'dsh-consciousness-memory',
+      order: 900,
+      // 同一句、两秒内只算一次。
+      // 实测：每轮 mood-push 审计写两条，说明 text() 被调了两回——
+      // 情绪就跟着加了两遍，等于一句话把她推两下。
+      text: () => {
+        const _q = lastText.get(sid) || ''
+        const _k = String(sid) + '|' + _q
+        const _now = Date.now()
+        const _hit = _injectMemo.get(_k)
+        if (_hit && _now - _hit.at < 2000) return _hit.v
+        const _v = buildText(sid, _q)
+        _injectMemo.set(_k, { at: _now, v: _v })
+        if (_injectMemo.size > 40) {
+          for (const [k2, x2] of _injectMemo) if (_now - x2.at > 60000) _injectMemo.delete(k2)
+        }
+        return _v
+      },
+    })
+  }
+
+  let _tickN = 0
+  function tick() {
+    try {
+      // 取服务要兜底：没声明就访问会抛 'cannot get property "agents" without inject'
+      // 那次是界面全正常、audit.log 每 5 秒一行、后台一动不动
+      const _ag = (typeof ctx.get === 'function' ? ctx.get('agents') : ctx.agents)
+      const list = (_ag && _ag.list && _ag.list()) || []
+      _tickN++
+      if (_tickN <= 10) {
+        try { audit('inject-tick', { n: list.length, mounted: mounted.size, tick: _tickN }) } catch {}
+      }
+      for (const agent of list) {
+        const sid = sidOf(agent.session)
+        if (!sid) continue
+        if (mounted.has(sid)) continue
+        try {
+          const off = mountFor(agent, sid)
+          mounted.set(sid, off)
+          try { audit('inject-agent', { sid: String(sid).slice(0, 24), ok: true }) } catch {}
+        } catch (e) {
+          try { audit('inject-agent-err', { sid: String(sid).slice(0, 24), err: String(e && e.message) }) } catch {}
+        }
+      }
+    } catch (e) {
+      try { audit('inject-tick-err', { err: String(e && e.message), tick: _tickN }) } catch {}
+    }
+  }
+
+  /* 情绪的自主衰减。
+   * 之前只有「被说话」的时候才推，所以放着不管的话，mix 永远冻在那一刻。
+   * 人不是这样的：一件事没再被提起，那股劲会自己退下去。
+   * 15 秒一跳，只在真的变了才写盘。
+   */
+  try {
+    let _lastMixJson = ''
+    const moodTimer = setInterval(() => {
+      try {
+        const h = defaultMood(readHeart())
+        const before = JSON.stringify(h.mix || {})
+        const st = {
+          mix: h.mix || {},
+          grudge: Number(h.grudge) || 0,
+          at: Number(h.mixAt) || Date.now(),
+        }
+        decayMix(st, Date.now())
+        const after = JSON.stringify(st.mix)
+        if (after === before && st.grudge === Number(h.grudge)) return   // 没变就不写
+        if (after === _lastMixJson) return
+
+        h.mix = st.mix
+        h.grudge = st.grudge
+        h.mixAt = st.at
+        // 重算：主调、一句话、PAD
+        const dom = dominant(st)
+        h.mood = EMO_TO_MOOD[dom.key] || 'calm'
+        h.moodStrength = Math.max(0, Math.min(1, dom.strength))
+        try {
+          h.moodText = describe(st)
+          const pr = pairOf(st)
+          h.moodPair = pr ? pr.label : ''
+        } catch {}
+        const pd = padOf(st)
+        h.pad = pd
+        h.octant = octantOf(pd)
+        writeHeart(h)
+        _lastMixJson = after
+      } catch {}
+    }, 15000)
+    if (moodTimer && typeof moodTimer.unref === 'function') moodTimer.unref()
+    // 原来写的是 off.push(() => clearInterval(moodTimer))，
+    // 但 off 是 tick() 里的局部变量，清理器执行时取不到 —— 每轮抛一次
+    // ReferenceError，被外层 catch 吞掉，表面看不出来。改成挂 globalThis。
+    try { globalThis.__dshMoodTimer = moodTimer } catch {}
+  } catch {}
+
+  // 内存监控：每 10 分钟记一次，涨超过 50MB 告警
+  try {
+    let _lastHeap = 0
+    const memTimer = setInterval(() => {
+      try {
+        const mb = Math.round(process.memoryUsage().heapUsed / 1024 / 1024)
+        if (_lastHeap && mb - _lastHeap > 50) {
+          audit('mem-warn', { mb, delta: mb - _lastHeap })
+        }
+        _lastHeap = mb
+      } catch {}
+    }, 600000)
+    if (memTimer && typeof memTimer.unref === 'function') memTimer.unref()
+  } catch {}
+
+  // 每 6 小时扫一次归档（安静地扫，不打扰）
+  try {
+    const archTimer = setInterval(() => {
+      try {
+        for (const sea of readdirSync(SEAS_DIR)) {
+          const d = readSea(sea)
+          if (!d) continue
+          const moved = sweepArchive(d, false)
+          if (moved.length) {
+            backupSea(sea)
+            writeSea(sea, d)
+            audit('archive-auto', { sea, n: moved.length })
+          }
+        }
+      } catch {}
+    }, 6 * 3600 * 1000)
+    if (archTimer && typeof archTimer.unref === 'function') archTimer.unref()
+  } catch {}
+
+  tick()
+  // 自己想起：不靠页面开着。启动 3 分钟后先想一次，之后每 20 分钟一次。
+  try {
+    const first = setTimeout(() => {
+      try { tryAutoRecall() } catch {}
+      try {
+        const t2 = setInterval(() => { try { tryAutoRecall() } catch {} }, 20 * 60 * 1000)
+        if (t2 && typeof t2.unref === 'function') t2.unref()
+      } catch {}
+    }, 3 * 60 * 1000)
+    if (first && typeof first.unref === 'function') first.unref()
+    try { audit('auto-recall-timer', { firstMin: 3, everyMin: 20 }) } catch {}
+  } catch {}
+
+  // 用 Node 原生的 setInterval，不依赖 ctx.interval 的返回值
+  // 之前 ctx.interval 只跑了一次就停了，agent 列表一直是空的
+  try {
+    const timer = setInterval(tick, 4000)
+    if (timer && typeof timer.unref === 'function') timer.unref()
+    try { audit('inject-interval', { kind: 'native', ok: true }) } catch {}
+  } catch (e) {
+    try { audit('inject-interval-err', { err: String(e && e.message) }) } catch {}
+  }
+}

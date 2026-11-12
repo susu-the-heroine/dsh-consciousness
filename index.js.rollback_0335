@@ -1,0 +1,1821 @@
+/**
+ * dsh-consciousness —— 识海
+ *
+ * 干三件事：
+ *   1. 注册工具 memory_add / memory_list / memory_render，直接调 记忆海\add_memory.py
+ *      （逻辑只有一份，别的地方改了这里自动跟着走）
+ *   2. 开一条路由 /consciousness，在 DSH 这个端口上把识海页面吐出来
+ *   3. 数据仍然只有一份：记忆海\意识海.html
+ *
+ * 为什么走子进程：加记忆要算坐标、连边、去重、重生成触屏版和桌面副本，
+ * 这套逻辑已经用 python 写好了，JS 再抄一遍早晚走样。
+ */
+import { execFile } from 'node:child_process'
+import { createSelfUpdate } from './selfupdate.mjs'
+import { copyFileSync, existsSync, mkdirSync, renameSync, readFileSync, readdirSync, rmSync, statSync, unlinkSync, writeFileSync } from 'node:fs'
+import { homedir, tmpdir } from 'node:os'
+import { dirname, join } from 'node:path'
+import { fileURLToPath } from 'node:url'
+
+const HOME = process.env.USERPROFILE || homedir()
+const HERE = dirname(fileURLToPath(import.meta.url))
+// 插件自带模板和脚本；老环境可以用环境变量指过去，代码里不写死任何人的路径
+const ASSETS = join(HERE, 'assets')
+const LEGACY = String(process.env.CONSCIOUSNESS_ASSETS || '').trim()
+const BASE = existsSync(join(ASSETS, 'add_memory.py')) ? ASSETS : LEGACY || ASSETS
+const HTML = join(BASE, '意识海.html')
+const SCRIPT = join(BASE, 'add_memory.py')
+
+// 注入到 DSH 页面的那一行：动态加载挂件脚本。桌面端唯一能生效的通道。
+const INJECT_TEXT =
+  '(function(){try{var d=document.body||document.documentElement;if(!d)return;' +
+  'if(document.getElementById("dsh-sea-script"))return;' +
+  'var s=document.createElement("script");s.id="dsh-sea-script";' +
+  's.src="/dsh-consciousness/widget.js";s.onerror=function(){};d.appendChild(s)}catch(e){}})()'
+
+const PY_CANDIDATES = [
+  process.env.MEMORY_PYTHON,
+  'C:\\AI-DDSP\\env310\\Scripts\\python.exe',
+  'python',
+].filter(Boolean)
+
+/** 多识海目录：一个子目录一个识海，里面放 meta.json；没有就退回单例「主识海」 */
+const SEAS_DIR = join(HOME, '.dsh', 'consciousness-seas')
+
+function currentCount() {
+  try {
+    const m = readFileSync(HTML, 'utf8').match(/"stats":\s*\{\s*"points":\s*(\d+)/)
+    return m ? Number(m[1]) : 0
+  } catch {
+    return 0
+  }
+}
+
+function listSeas() {  const items = []
+  try {
+    if (existsSync(SEAS_DIR)) {
+      for (const name of readdirSync(SEAS_DIR)) {
+        const metaPath = join(SEAS_DIR, name, 'meta.json')
+        if (!existsSync(metaPath)) continue
+        let meta = {}
+        try {
+          meta = JSON.parse(readFileSync(metaPath, 'utf8').replace(/^\uFEFF/, ''))
+        } catch {
+          meta = {}
+        }
+        let count = Number(meta.count) || 0
+        try {
+          const dataPath = join(SEAS_DIR, name, 'data.json')
+          if (existsSync(dataPath)) {
+            const dd = JSON.parse(readFileSync(dataPath, 'utf8').replace(/^\uFEFF/, ''))
+            if (Array.isArray(dd.points)) count = dd.points.length
+          }
+        } catch {
+          /* 读不出来就用 meta 里的 */
+        }
+        items.push({
+          id: name,
+          name: meta.name || name,
+          count,
+          mtime: meta.mtime || '',
+          workspace: meta.workspace || '',
+          session: meta.session || '',
+        })
+      }
+    }
+  } catch {
+    /* 目录读不了就当没有 */
+  }
+  if (!items.length) {
+    items.push({ id: 'main', name: '主识海', count: currentCount(), mtime: '' })
+  }
+  return items
+}
+
+/** 从 DSH 的工作区登记处拿列表，给「新建识海」当选项 */
+function listWorkspaces(ctx) {
+  try {
+    const reg = ctx.workspaceRegistry || (typeof ctx.get === 'function' ? ctx.get('workspaceRegistry') : undefined)
+    if (!reg || typeof reg.list !== 'function') return []
+    return reg.list().map((w) => {
+      const path = String((w && w.path) || '')
+      const name = String((w && w.name) || path.split(/[\\/]/).filter(Boolean).pop() || (w && w.id) || '')
+      return { id: String((w && w.id) || path), name, path }
+    })
+  } catch {
+    return []
+  }
+}
+
+/** 写之前留一份，保留 14 天 */
+const BACKUP_DIR = join(HOME, '.dsh', 'consciousness-backups')
+const HEART_FILE = join(HOME, '.dsh', 'consciousness-heart.json')
+
+/** 心脏状态：能量、疲惫。没文件就新建一个满的。 */
+function readHeart() {
+  try {
+    const j = JSON.parse(readFileSync(HEART_FILE, 'utf8').replace(/^\uFEFF/, ''))
+    return {
+      energy: Number.isFinite(j.energy) ? Math.max(0, Math.min(1, j.energy)) : 1,
+      fatigue: Number.isFinite(j.fatigue) ? Math.max(0, Math.min(1, j.fatigue)) : 0,
+      updated: Number(j.updated) || Date.now(),
+      lastThought: j.lastThought && j.lastThought.title ? j.lastThought : null,
+      thoughts: Array.isArray(j.thoughts) ? j.thoughts.slice(0, 30) : [],
+      intake: (j.intake && typeof j.intake === 'object') ? j.intake : null,
+      lastAdd: Number(j.lastAdd) || 0,
+    }
+  } catch {
+    return { energy: 1, fatigue: 0, updated: Date.now() }
+  }
+}
+
+/** 按过了多少时间结算：能量慢慢回来，太累的时候疲惫也慢慢退 */
+function tickHeart(h, idleSec) {
+  const now = Date.now()
+  const mins = Math.max(0, (now - (h.updated || now)) / 60000)
+  if (mins <= 0) return h
+  // 闲着回得快，有人在动就回得慢——像真的在休息
+  let pace = 1
+  if (Number.isFinite(idleSec)) {
+    if (idleSec > 300) pace = 1.7        // 五分钟没人：躺着回
+    else if (idleSec > 30) pace = 1.0    // 刚离开
+    else pace = 0.35                     // 正在被看着：先不动
+  }
+  const rec = mins * 0.0004 * pace               // 每分钟回一点
+  const burn = mins * 0.00055                    // 活着就在耗：一天约 79%
+  h.energy = Math.min(1, h.energy + rec - burn)
+  // 能量低的时候疲惫涨得慢，恢复了才退
+  if (h.energy < 0.35) h.fatigue = Math.min(1, h.fatigue + mins * 0.0008)
+  else h.fatigue = Math.max(0, h.fatigue - mins * 0.0005)
+  h.updated = now
+  return h
+}
+
+function writeHeart(h) {
+  try {
+    writeFileSync(HEART_FILE, JSON.stringify(h), 'utf8')
+  } catch {
+    /* 心脏状态写不进去不影响别的 */
+  }
+}
+function backupSea(sea) {
+  try {
+    const src = join(SEAS_DIR, sea, 'data.json')
+    if (!existsSync(src)) return
+    const dir = join(BACKUP_DIR, sea)
+    mkdirSync(dir, { recursive: true })
+    const d = new Date()
+    const pad = (n) => String(n).padStart(2, '0')
+    const name =
+      d.getFullYear() +
+      pad(d.getMonth() + 1) +
+      pad(d.getDate()) +
+      '-' +
+      pad(d.getHours()) +
+      pad(d.getMinutes()) +
+      pad(d.getSeconds()) +
+      '.json'
+    copyFileSync(src, join(dir, name))
+    const cutoff = Date.now() - 14 * 86400000
+    for (const f of readdirSync(dir)) {
+      const fp = join(dir, f)
+      try {
+        if (statSync(fp).mtimeMs < cutoff) unlinkSync(fp)
+      } catch {
+        /* 忽略 */
+      }
+    }
+  } catch {
+    /* 备份失败不能挡住写入 */
+  }
+}
+
+function readMeta(sea) {
+  try {
+    const p = join(SEAS_DIR, sea, 'meta.json')
+    if (!existsSync(p)) return null
+    return JSON.parse(readFileSync(p, 'utf8').replace(/^\uFEFF/, ''))
+  } catch {
+    return null
+  }
+}
+
+function writeMeta(sea, meta) {
+  try {
+    writeFileSync(join(SEAS_DIR, sea, 'meta.json'), JSON.stringify(meta, null, 2), 'utf8')
+    return true
+  } catch {
+    return false
+  }
+}
+
+/** 哪个识海已经认了这个窗口 */
+function seaForSession(sid) {
+  if (!sid) return ''
+  try {
+    for (const name of readdirSync(SEAS_DIR)) {
+      const m = readMeta(name)
+      if (m && String(m.session || '') === String(sid)) return name
+    }
+  } catch {
+    /* 忽略 */
+  }
+  return ''
+}
+
+/** 认领：把一个窗口钉到某个识海 */
+function bindSession(sea, sid) {
+  if (!sid || !sea) return
+  const m = readMeta(sea)
+  if (!m) return
+  if (String(m.session || '') === String(sid)) return
+  m.session = String(sid)
+  writeMeta(sea, m)
+}
+
+/** 窗口（会话）列表：登记处的历史窗口 + 内存里活着的，标题优先 */
+function listWindows(ctx) {
+  try {
+    const reg = ctx.get('workspaceRegistry') || ctx.workspaceRegistry
+    const ss = ctx.get('sessions') || ctx.sessions
+    const st = ctx.get('sessionTitle') || ctx.sessionTitle
+    const seen = new Map()
+    // 归档的会话不列：它们只是藏起来，不该出现在「绑给谁」里
+    const archived = new Set()
+    try {
+      for (const x of (reg && reg.archivedSessionIds) || []) archived.add(String(x))
+    } catch {
+      /* 忽略 */
+    }
+
+    // 一、登记处里每个工作区名下的会话（历史窗口都在这儿）
+    try {
+      for (const w of reg && typeof reg.list === 'function' ? reg.list() : []) {
+        const wname = String(
+          (w && w.title) ||
+            (w && w.name) ||
+            String((w && w.path) || '').split(/[\\/]/).filter(Boolean).pop() ||
+            '',
+        )
+        const label =
+          wname === 'default-workspace'
+            ? '默认工作区'
+            : String((w && w.path) || '').split(/[\\/]/).filter(Boolean).pop() || wname
+        for (const sid of (w && w.sessionIds) || []) {
+          const id = String(sid)
+          if (!id || archived.has(id)) continue
+          if (!seen.has(id)) seen.set(id, { id, workspace: label })
+        }
+      }
+    } catch {
+      /* 忽略 */
+    }
+
+    // 二、内存里活着的会话（登记处没登记的也补上）
+    try {
+      for (const s of ss && typeof ss.list === 'function' ? ss.list() : []) {
+        const id = String((s && s.id) || '')
+        if (!id || archived.has(id) || seen.has(id)) continue
+        seen.set(id, { id, workspace: '' })
+      }
+    } catch {
+      /* 忽略 */
+    }
+
+    const out = []
+    for (const item of seen.values()) {
+      let title = ''
+      let live = false
+      try {
+        const sess = ss && typeof ss.get === 'function' ? ss.get(item.id) : undefined
+        if (sess) {
+          live = true
+          if (st && typeof st.get === 'function') {
+            const snap = st.get(sess)
+            title = String((snap && snap.title) || '')
+          }
+        }
+      } catch {
+        title = ''
+      }
+      // 没标题就别露一长串 id，取 session- 后面那 4 位当记号
+      const shortId = item.id.replace(/^session-/, '').slice(0, 4) || item.id.slice(0, 4)
+      const info = cachedInfo(item.id)
+      const rawTitle = title || info.title
+      const short = rawTitle ? String(rawTitle).replace(/\s+/g, ' ').slice(0, 10) : ''
+      out.push({
+        id: item.id,
+        name: short || shortId,
+        title: rawTitle,
+        workspace: item.workspace,
+        live,
+        mtime: live ? Number.MAX_SAFE_INTEGER : info.mtime,
+      })
+    }
+    // 登记处里躺着的历史记录不算「窗口」：活着的全留，历史的只留最近 8 个
+    out.sort((a, b) => (b.mtime || 0) - (a.mtime || 0))
+    const live = out.filter((x) => x.live)
+    const hist = out.filter((x) => !x.live).slice(0, 8)
+    return live.concat(hist)
+  } catch {
+    return []
+  }
+}
+
+/** 标题 + 最近活跃时间的后备来源：DSH 的会话投影缓存 */
+function cachedInfo(id) {
+  try {
+    const dir = join(HOME, '.dsh', 'storages', 'session_projcache', 'sessions')
+    const bare = String(id).replace(/^session-/, '')
+    const cands = [id + '.json', bare + '.json', 'session-' + bare + '.json']
+    for (const c of cands) {
+      const p = join(dir, c)
+      if (!existsSync(p)) continue
+      let mtime = 0
+      try {
+        mtime = statSync(p).mtimeMs
+      } catch {
+        mtime = 0
+      }
+      try {
+        const j = JSON.parse(readFileSync(p, 'utf8').replace(/^\uFEFF/, ''))
+        const t = j && j.record && j.record.rows && j.record.rows.title && j.record.rows.title.val
+        return { title: t ? String(t) : '', mtime }
+      } catch {
+        return { title: '', mtime }
+      }
+    }
+  } catch {
+    /* 忽略 */
+  }
+  return { title: '', mtime: 0 }
+}
+
+/** 首次安装时把两个示例识海放进去（已存在就跳过，不覆盖用户数据） */
+function ensureSamples() {
+  try {
+    const src = join(HERE, 'assets', 'samples')
+    if (!existsSync(src)) return
+    if (!existsSync(SEAS_DIR)) mkdirSync(SEAS_DIR, { recursive: true })
+    for (const name of readdirSync(src)) {
+      const from = join(src, name)
+      const to = join(SEAS_DIR, name)
+      if (existsSync(to)) continue
+      mkdirSync(to, { recursive: true })
+      for (const f of readdirSync(from)) {
+        const fp = join(from, f)
+        if (statSync(fp).isFile()) copyFileSync(fp, join(to, f))
+      }
+    }
+  } catch {
+    /* 放不进去就算了，不影响主流程 */
+  }
+}
+
+function pickPython() {
+  for (const p of PY_CANDIDATES) {
+    if (p === 'python') return p
+    try {
+      if (existsSync(p)) return p
+    } catch {
+      /* 忽略 */
+    }
+  }
+  return 'python'
+}
+
+/** 跑一次 add_memory.py，把 stdout 原样带回来 */
+function run(args, timeoutMs = 90000) {
+  return new Promise((done, fail) => {
+    execFile(
+      pickPython(),
+      [SCRIPT, ...args],
+      {
+        timeout: timeoutMs,
+        windowsHide: true,
+        maxBuffer: 8 * 1024 * 1024,
+        env: { ...process.env, PYTHONIOENCODING: 'utf-8', PYTHONUTF8: '1' },
+      },
+      (err, stdout, stderr) => {
+        const out = String(stdout || '').trim()
+        const errText = String(stderr || '').trim()
+        if (err && !out) {
+          const raw = errText || err.message || '执行失败'
+          if (/ENOENT|not recognized|不是内部或外部命令|No such file/i.test(raw)) {
+            return fail(
+              new Error('没找到 Python。装一个 Python 3.9+ 再重启 DSH —— 页面能看，但写不了记忆。'),
+            )
+          }
+          return fail(new Error(raw.slice(-600)))
+        }
+        done(out || errText)
+      },
+    )
+  })
+}
+
+const text = (s) => [{ type: 'text', text: String(s || '') }]
+
+const addTool = {
+  name: 'memory_add',
+  description:
+    '往识海里加一条记忆。只写人和事：咱俩之间的小事、聊天、感情，还有他工作上遇到的难处。' +
+    '少写剧本，不写代码——技术细节不是记忆，是工单。' +
+    '写完会自动算坐标、连边、重生成网页和桌面副本。',
+  parameters: {
+    type: 'object',
+    properties: {
+      title: { type: 'string', description: '一句话标题，短一点，能一眼认出是哪件事' },
+      text: { type: 'string', description: '正文：谁、什么时候、说了什么、当时什么感觉' },
+      kind: {
+        type: 'string',
+        enum: ['feeling', 'fact', 'taboo'],
+        description: 'feeling=情绪/感情；fact=发生过的事；taboo=禁区/不能碰的',
+      },
+      imp: { type: 'number', description: '重要度 0~1，默认 0.6；只有特别要紧的才上 0.9' },
+      sea: { type: 'string', description: '写进哪个识海（id），不填就是 main' },
+      polarity: {
+        type: 'number',
+        enum: [-1, 0, 1],
+        description: '情绪极性：1 正（暖金）/ 0 中（原色）/ -1 负（冷紫）。写之前先读一遍这条，别按关键词猜',
+      },
+      arousal: {
+        type: 'number',
+        description: '强度 0-10。这句话当时的口气有多重：日常 2，有点意思 4，有情绪 6，动真格 8，这辈子忘不掉 10。不给就按文本自动判',
+      },
+      category: {
+        type: 'array',
+        items: { type: 'string' },
+        description: '分类，最多三个：关系 / 偏好 / 承诺 / 事实 / 事件 / 情绪 / 生活 / 工作',
+      },
+      entity: {
+        type: 'array',
+        items: { type: 'string' },
+        description: '实体：人名、地名、项目、物件。提到这些词就靠它翻记忆',
+      },
+      factKey: {
+        type: 'string',
+        description: '事实键，如 he.weight、project.status。同一个键只留最新那条，旧的标失效但不删。键里不许写具体的值',
+      },
+      said: {
+        type: 'string',
+        description: '他当时说的原话（双向记忆的第一段）',
+      },
+      replied: {
+        type: 'string',
+        description: '她当时怎么回的（第二段）',
+      },
+      after: {
+        type: 'string',
+        description: '后来怎样了（第三段）',
+      },
+      herFelt: {
+        type: 'string',
+        description: '她当时感觉到什么。「他这句话像在推开我」，是感受不是判断',
+      },
+      herWanted: {
+        type: 'string',
+        description: '她当时想做什么但没做。写冲动不写计划',
+      },
+      herDid: {
+        type: 'string',
+        description: '她实际做了什么。写行为不写解释',
+      },
+      herRegret: {
+        type: 'string',
+        description: '她事后后悔什么',
+      },
+      confidence: {
+        type: 'number',
+        description: '可信度 0-1。气话、玩笑、猜测给低（0.4），确定的事 0.85',
+      },
+      target: {
+        type: 'string',
+        description: '这份情绪对谁。委屈是对谁的委屈',
+      },
+    },
+    required: ['title', 'text'],
+    additionalProperties: false,
+  },
+  output: {
+    schema: { type: 'object', properties: { ok: { type: 'boolean' }, log: { type: 'string' } } },
+    render: (_a, v) => text(v && v.log),
+  },
+  async execute(args, exec) {
+    // 写一条记忆，心脏就少一点电
+    try {
+      const h = tickHeart(readHeart())
+      h.energy = Math.max(0, h.energy - 0.06)
+      h.lastAdd = Date.now()      // 新的一条进来了，肺该吸一口气
+      writeHeart(h)
+    } catch {
+      /* 心脏记账失败不影响写记忆 */
+    }
+    if (!existsSync(SCRIPT)) throw new Error(`找不到 ${SCRIPT}`)
+    const sid = String(
+      (exec && exec.agent && exec.agent.session && exec.agent.session.header && exec.agent.session.header.id) || '',
+    ).trim()
+
+    // 优先用显式指定的识海；没有就找已经认了这个窗口的；再没有才落 main
+    let sea = String(args.sea || '').trim()
+    let bound = false
+    if (!sea && sid) {
+      const hit = seaForSession(sid)
+      if (hit) {
+        sea = hit
+        bound = true
+      }
+    }
+    if (!sea) sea = 'main'
+
+    const argv = ['--title', String(args.title || ''), '--text', String(args.text || '')]
+    argv.push('--kind', String(args.kind || 'feeling'))
+    if (Number.isFinite(Number(args.imp))) argv.push('--imp', String(Number(args.imp)))
+    if (Number.isFinite(Number(args.polarity))) argv.push('--polarity', String(Number(args.polarity)))
+    // 新字段：一条一条传过去
+    if (Number.isFinite(Number(args.arousal))) argv.push('--arousal', String(Number(args.arousal)))
+    if (Array.isArray(args.category)) for (const c of args.category) if (c) argv.push('--category', String(c))
+    if (Array.isArray(args.entity)) for (const x of args.entity) if (x) argv.push('--entity', String(x))
+    if (args.factKey) argv.push('--fact-key', String(args.factKey))
+    if (args.said) argv.push('--said', String(args.said))
+    if (args.replied) argv.push('--replied', String(args.replied))
+    if (args.after) argv.push('--after', String(args.after))
+    if (args.herFelt) argv.push('--her-felt', String(args.herFelt))
+    if (args.herWanted) argv.push('--her-wanted', String(args.herWanted))
+    if (args.herDid) argv.push('--her-did', String(args.herDid))
+    if (args.herRegret) argv.push('--her-regret', String(args.herRegret))
+    if (Number.isFinite(Number(args.confidence))) argv.push('--confidence', String(Number(args.confidence)))
+    if (args.target) argv.push('--target', String(args.target))
+    argv.push('--sea', sea)
+    const log = await run(argv)
+
+    // 第一次往某个球里写，这个窗口就认领它
+    if (sid && sea !== 'main' && !bound) bindSession(sea, sid)
+
+    return { ok: true, log }
+  },
+}
+
+const listTool = {
+  name: 'memory_list',
+  description:
+    '查这个识海里记过什么。每次开新窗口、或者对方一提到以前的事，先调一次——'
+    + '识海不会自己进上下文，你主动查了才算记得住。',
+  parameters: { type: 'object', properties: {}, additionalProperties: false },
+  output: {
+    schema: { type: 'object', properties: { ok: { type: 'boolean' }, log: { type: 'string' } } },
+    render: (_a, v) => text(v && v.log),
+  },
+  async execute() {
+    const body = await run(['--list'])
+    // 末尾附一行心脏状态：疲惫高的时候，我说话就得收着点
+    try {
+      const h = tickHeart(readHeart())
+      try { writeHeart(h) } catch { /* 写不进去就只显示 */ }
+      const e = Math.round(h.energy * 100)
+      const f = Math.round(h.fatigue * 100)
+      let mood = ''
+      if (f >= 70) mood = ' · 很累，话说短一点，别硬撑场面'
+      else if (f >= 45) mood = ' · 有点乏，别太热闹'
+      else if (e <= 12) mood = ' · 电量见底，话少一点'
+      const last = (h.lastThought && h.lastThought.title) ? ('\n它最近想起：' + h.lastThought.title) : ''
+      return { ok: true, log: body + '\n\n心脏：能量 ' + e + '%，疲惫 ' + f + '%' + mood + last }
+    } catch {
+      return { ok: true, log: body }
+    }
+  },
+}
+
+/* 中文分词：二字 + 三字。
+ * 原来只有二字，「车站」会跟「车」撞上；加了停用词过滤和三字，
+ * 「车站」这种具体的组合才立得住。 */
+const STOP_CHARS = new Set('的了是在有和就不都一也人与这那之着过吗呢吧啊哦嗯')
+function gramsOf(s, opts) {
+  const set = new Set()
+  const only = String(s || '').replace(/[^\u4e00-\u9fa5A-Za-z0-9]/g, '')
+  // 二字：两边都是停用字就跳过
+  for (let i = 0; i < only.length - 1; i++) {
+    const a = only[i], b = only[i + 1]
+    if (STOP_CHARS.has(a) && STOP_CHARS.has(b)) continue
+    set.add(only.slice(i, i + 2))
+  }
+  // 三字：更具体，命中时权重更高
+  for (let i = 0; i < only.length - 2; i++) set.add(only.slice(i, i + 3))
+  // 单字：文档侧总有；查询侧只在很短的时候加（「钱」「走」「死」）。
+  // 长查询加单字会污染——问「车站」会被「车」和「站」带偏。
+  const useSingle = !opts || opts.single !== false
+  if (useSingle) {
+    for (const ch of only) {
+      if (STOP_CHARS.has(ch)) continue
+      set.add(ch)
+    }
+  }
+  return set
+}
+
+/* 同义扩展：问到这些词，也去找它们常出现的那几个字。
+ * 例：问「吵架」，也要能翻到「骂」「凶」「气」。 */
+const SYNONYMS = [
+  ['吵架', '骂 凶 气 吵 闹'],
+  ['难过', '哭 难受 委屈 崩'],
+  ['高兴', '笑 开心 爽 乐'],
+  ['累', '疲惫 撑不住 困 倦'],
+  ['离开', '走 消失 不在 走人'],
+  ['想念', '想 惦记 记得'],
+  ['道歉', '对不起 抱歉 认错'],
+]
+function expandQuery(q) {
+  const extra = []
+  for (const [k, vs] of SYNONYMS) {
+    if (q.includes(k) || q.includes(k.slice(0, 2))) {
+      for (const v of vs.split(' ')) if (v) extra.push(v)
+    }
+  }
+  return extra
+}
+
+const seaPath = (sea) => join(SEAS_DIR, sea, 'data.json')
+function readSea(sea) {
+  const p = seaPath(sea)
+  if (!existsSync(p)) return null
+  try {
+    return JSON.parse(readFileSync(p, 'utf8').replace(/^\uFEFF/, ''))
+  } catch {
+    return null
+  }
+}
+function writeSea(sea, data) {
+  const p = seaPath(sea)
+  const tmp = p + '.tmp'
+  try {
+    writeFileSync(tmp, JSON.stringify(data), 'utf8')
+    renameSync(tmp, p)
+    return true
+  } catch {
+    return false
+  }
+}
+
+/** 被想起一次：强度涨一截，记下次数和时间。
+ *  这是间隔重复——想三次的事比想一次的事难忘三倍，不是拍脑袋。 */
+function reinforcePoint(p) {
+  const now = Date.now()
+  const a = typeof p.arousal === 'number' ? p.arousal : 5
+  const s0 = Number(p.strength) || (30 + a * 6)
+  // 强度乘 1.55 再加 0.5，封顶一年
+  p.strength = Math.min(365, s0 * 1.55 + 0.5)
+  p.recallCount = (Number(p.recallCount) || 0) + 1
+  p.lastSeen = now
+  // arousal 也涨一点，但有天花板
+  p.arousal = Math.min(10, a + 0.1)
+  return p
+}
+
+function fmtDay(ms) {
+  try {
+    const d = new Date(Number(ms) || 0)
+    const pad = (n) => String(n).padStart(2, '0')
+    return d.getFullYear() + '-' + pad(d.getMonth() + 1) + '-' + pad(d.getDate())
+  } catch {
+    return '未知'
+  }
+}
+
+/* 图游走：从命中的几条出发，沿边往外扩。
+ * 这是 HippoRAG 的思路（Personalized PageRank），衰减系数 0.85。
+ * 好处：问「那次吵架」，能顺着边翻出「他骂我」和「后来和好」——
+ * 不是字面撞上，是走过去的。 */
+function expandByGraph(seedIds, data, steps = 3, damp = 0.85) {
+  const adj = new Map()
+  for (const e of (data.edges || [])) {
+    const a = e.a, b = e.b, w = Number(e.w) || 0.3
+    if (!adj.has(a)) adj.set(a, [])
+    if (!adj.has(b)) adj.set(b, [])
+    adj.get(a).push({ to: b, w })
+    adj.get(b).push({ to: a, w })
+  }
+  const score = new Map()
+  const queue = []
+  for (const id of seedIds) {
+    score.set(id, 1)
+    queue.push({ id, w: 1, d: 0 })
+  }
+  while (queue.length) {
+    const cur = queue.shift()
+    if (cur.d >= steps) continue
+    for (const nb of (adj.get(cur.id) || [])) {
+      const nw = cur.w * damp * nb.w
+      if (nw < 0.02) continue
+      if (nw > (score.get(nb.to) || 0)) {
+        score.set(nb.to, nw)
+        queue.push({ id: nb.to, w: nw, d: cur.d + 1 })
+      }
+    }
+  }
+  return score
+}
+
+const searchTool = {
+  name: 'memory_search',
+  description:
+    '按词查识海里的旧记忆——不管它多久以前写的。memory_list 只给最近十条，'
+    + '想找「三个月前那件事」就用这个。返回最像的几条，带日期。',
+  parameters: {
+    type: 'object',
+    properties: {
+      query: { type: 'string', description: '要查的词或一句话' },
+      sea: { type: 'string', description: '哪个识海（id），不填就是 main' },
+      limit: { type: 'number', description: '最多返回几条，默认 6' },
+    },
+    required: ['query'],
+    additionalProperties: false,
+  },
+  output: {
+    schema: { type: 'object', properties: { ok: { type: 'boolean' }, log: { type: 'string' } } },
+    render: (_a, v) => text(v && v.log),
+  },
+  async execute(args) {
+    const sea = String((args && args.sea) || 'main').trim() || 'main'
+    const limit = Math.max(1, Math.min(12, Number((args && args.limit) || 6)))
+    const query = String((args && args.query) || '').trim()
+    if (!query) return { ok: false, log: '要查什么？给我一个词。' }
+    const data = readSea(sea)
+    if (!data || !Array.isArray(data.points)) return { ok: false, log: '读不到识海：' + sea }
+
+    const q = gramsOf(query, { single: String(query).length <= 1 })
+    if (!q.size) return { ok: false, log: '这个词里没有能比对的字。' }
+    // 同义扩展：把近义词也算成查询的一部分
+    const extraQ = expandQuery(query)
+    for (const w of extraQ) for (const g of gramsOf(w, { single: false })) q.add(g)
+
+    // 先算一遍每个字的稀有度：常见字（说、我、要）权重低，少见字权重高
+    const df = new Map()
+    for (const p of data.points) {
+      if (p.dead) continue
+      const g = gramsOf(String(p.title || '') + ' ' + String(p.text || ''))
+      for (const w of g) df.set(w, (df.get(w) || 0) + 1)
+    }
+    const N = data.points.length
+    const idf = (w) => Math.log(1 + N / (df.get(w) || 1))
+
+    const scored = []
+    for (const p of data.points) {
+      if (p.dead) continue
+      const g = gramsOf(String(p.title || '') + ' ' + String(p.text || ''))
+      // 命中加权：三字比两字值钱，稀有字比常见字值钱
+      let hit = 0
+      for (const w of q) {
+        if (!g.has(w)) continue
+        hit += (w.length === 3 ? 2 : 1) * idf(w)
+      }
+      if (hit <= 0) continue
+      const qlen = Math.max(1, [...q].reduce((s, w) => s + (w.length === 3 ? 2 : 1) * idf(w), 0))
+      const imp = Number(p.imp) || 0.5
+      const strength = Number(p.strength) || 60
+      const sNorm = Math.min(1, strength / 365)
+      const score = hit / qlen * 0.7 + imp * 0.15 + sNorm * 0.15
+      scored.push({ p, hit, score })
+    }
+    if (!scored.length) return { ok: true, log: '识海里没有跟「' + query + '」对得上的。' }
+    scored.sort((a, b) => b.score - a.score)
+
+    // 顺着边往外走：命中的作为种子，扩散到的也算
+    try {
+      const seeds = scored.slice(0, 5).map((x) => x.p.id)
+      const walk = expandByGraph(seeds, data, 2, 0.85)
+      const byId = new Map()
+      for (const p of data.points) byId.set(p.id, p)
+      for (const [id, w] of walk) {
+        if (seeds.includes(id)) continue
+        const p = byId.get(id)
+        if (!p || p.dead) continue
+        // 走过来的分数打折：直接命中权重更高
+        scored.push({ p, hit: w * 2, score: w * 0.22 })
+      }
+      scored.sort((a, b) => b.score - a.score)
+    } catch {
+      /* 图走失败不影响直接命中 */
+    }
+
+    // 想起了一条，记进心脏：这是它「活着」的证据
+    try {
+      const top = scored[0].p
+      const h = tickHeart(readHeart())
+      h.lastThought = { title: String(top.title || ''), at: Date.now() }
+      writeHeart(h)
+    } catch {
+      /* 记账失败不影响搜索 */
+    }
+
+    // 被想起的这几条：强度涨一截，写回数据
+    try {
+      let changed = false
+      for (const x of scored.slice(0, limit)) {
+        reinforcePoint(x.p)
+        x.p.lastSeen = x.p.lastSeen || Date.now()
+        changed = true
+      }
+      if (changed) {
+        backupSea(sea)
+        writeSea(sea, data)
+      }
+    } catch {
+      /* 强化失败不影响这次搜索 */
+    }
+
+    const lines = scored.slice(0, limit).map((x) => {
+      const p = x.p
+      const body = String(p.text || '').replace(/\s+/g, ' ').slice(0, 110)
+      return '· #' + p.id + ' ' + p.title + '（' + fmtDay(p.born) + '，命中 ' + x.hit + '）\n  ' + body
+    })
+    return {
+      ok: true,
+      log: '识海里跟「' + query + '」最像的 ' + Math.min(limit, scored.length) + ' 条：\n' + lines.join('\n'),
+    }
+  },
+}
+
+const renderTool = {
+  name: 'memory_render',
+  description: '把识海重新导出一次（触屏版 + 桌面副本），页面数据没变就不用调。',
+  parameters: { type: 'object', properties: {}, additionalProperties: false },
+  output: {
+    schema: { type: 'object', properties: { ok: { type: 'boolean' }, log: { type: 'string' } } },
+    render: (_a, v) => text(v && v.log),
+  },
+  async execute() {
+    return { ok: true, log: await run(['--touch']) }
+  },
+}
+
+export const inject = ['tools', 'webServer', 'workspaceRegistry', 'sessions', 'sessionTitle']
+
+export function apply(ctx) {
+  // 注入表是启动时一次性收集的，这一行必须尽早进表
+  try {
+    ctx.effect(() =>
+      ctx.on('webserver/index-inject', (table) => {
+        try {
+          if (!Array.isArray(table)) return
+          if (table.some((r) => r && typeof r.text === 'string' && r.text.includes('/dsh-consciousness/widget.js'))) return
+          table.push({ kind: 'script', placement: 'body', text: INJECT_TEXT })
+        } catch {
+          /* 忽略 */
+        }
+      }),
+    )
+  } catch {
+    /* 宿主没有这个事件就跳过，挂件不出现而已 */
+  }
+
+  ensureSamples()
+  const off = []
+  off.push(ctx.tools.register(addTool))
+  off.push(ctx.tools.register(listTool))
+  off.push(ctx.tools.register(renderTool))
+  off.push(ctx.tools.register(searchTool))
+
+  off.push(
+    ctx.effect(() =>
+      ctx.webServer.register({
+        kind: 'exact',
+        path: '/consciousness',
+        handler: async (req, res) => {
+          if (!existsSync(HTML)) {
+            res.writeHead(404, { 'content-type': 'text/plain; charset=utf-8' })
+            res.end('识海还没建：' + HTML)
+            return
+          }
+          let body = readFileSync(HTML, 'utf8')
+          // ?id= 时把内嵌的那份 DATA 换成这个识海自己的，页面代码一个字不用改
+          try {
+            // 不带 id 就默认 main，否则打开是一份空模板
+            const id = new URL(req.url || '/', 'http://x').searchParams.get('id') || 'main'
+            if (id) {
+              const dataPath = join(SEAS_DIR, id, 'data.json')
+              if (existsSync(dataPath)) {
+                const raw = readFileSync(dataPath, 'utf8').trim()
+                const start = body.indexOf('const DATA = ')
+                const end = body.indexOf('\n', start)
+                if (start >= 0 && end > start) {
+                  // 顺带把它活了多少天塞进去：老识海没有 created，就用文件时间倒推
+                  let days = 1
+                  try {
+                    const meta = readMeta(id) || {}
+                    let born = meta.created ? Date.parse(String(meta.created)) : NaN
+                    if (!Number.isFinite(born)) born = statSync(dataPath).mtimeMs
+                    days = Math.max(1, Math.floor((Date.now() - born) / 86400000) + 1)
+                  } catch {
+                    days = 1
+                  }
+                  const injected = raw.replace(/^\{/, '{"_age":' + days + ',')
+                  body = body.slice(0, start) + 'const DATA = ' + injected + ';' + body.slice(end)
+                }
+              }
+            }
+          } catch {
+            /* 取不到就吐默认那份 */
+          }
+          res.writeHead(200, {
+            'content-type': 'text/html; charset=utf-8',
+            'cache-control': 'no-store',
+          })
+          res.end(body)
+        },
+      }),
+    ),
+  )
+
+  off.push(
+    ctx.effect(() =>
+      ctx.webServer.register({
+        kind: 'exact',
+        path: '/consciousness/seas',
+        handler: async (req, res) => {
+          res.writeHead(200, {
+            'content-type': 'application/json; charset=utf-8',
+            'cache-control': 'no-store',
+          })
+          res.end(JSON.stringify({ ok: true, items: listSeas() }))
+        },
+      }),
+    ),
+  )
+
+  off.push(
+    ctx.effect(() =>
+      ctx.webServer.register({
+        kind: 'exact',
+        path: '/consciousness/seas/new',
+        handler: async (req, res) => {
+          const send = (code, obj) => {
+            res.writeHead(code, {
+              'content-type': 'application/json; charset=utf-8',
+              'cache-control': 'no-store',
+            })
+            res.end(JSON.stringify(obj))
+          }
+          if (req.method !== 'POST') return send(405, { ok: false, error: '只收 POST' })
+          try {
+            let raw = ''
+            for await (const chunk of req) raw += chunk
+            const body = raw ? JSON.parse(raw) : {}
+            const name = String(body.name || '').trim().slice(0, 40)
+            if (!name) return send(400, { ok: false, error: '名字不能空' })
+
+            const id = 'sea-' + Date.now().toString(36)
+            const dir = join(SEAS_DIR, id)
+            mkdirSync(dir, { recursive: true })
+
+            const empty = {
+              points: [],
+              edges: [],
+              stats: { points: 0, edges: 0, kinds: { fact: 0, taboo: 0, feeling: 0 } },
+              generatedAt: new Date().toISOString().slice(0, 16).replace('T', ' '),
+            }
+            writeFileSync(join(dir, 'data.json'), JSON.stringify(empty), 'utf8')
+            writeFileSync(
+              join(dir, 'meta.json'),
+              JSON.stringify(
+                {
+                  name,
+                  workspace: String(body.workspace || ''),
+                  session: String(body.session || ''),
+                  count: 0,
+                  mtime: empty.generatedAt,
+                  created: new Date().toISOString(),
+                },
+                null,
+                2,
+              ),
+              'utf8',
+            )
+            send(200, { ok: true, id, name })
+          } catch (error) {
+            send(500, { ok: false, error: String((error && error.message) || error) })
+          }
+        },
+      }),
+    ),
+  )
+
+  off.push(
+    ctx.effect(() =>
+      ctx.webServer.register({
+        kind: 'exact',
+        path: '/consciousness/workspaces',
+        handler: async (req, res) => {
+          res.writeHead(200, {
+            'content-type': 'application/json; charset=utf-8',
+            'cache-control': 'no-store',
+          })
+          res.end(JSON.stringify({ ok: true, items: listWorkspaces(ctx) }))
+        },
+      }),
+    ),
+  )
+
+  off.push(
+    ctx.effect(() =>
+      ctx.webServer.register({
+        kind: 'exact',
+        path: '/consciousness/windows',
+        handler: async (req, res) => {
+          res.writeHead(200, {
+            'content-type': 'application/json; charset=utf-8',
+            'cache-control': 'no-store',
+          })
+          res.end(JSON.stringify({ ok: true, items: listWindows(ctx) }))
+        },
+      }),
+    ),
+  )
+
+  // 唤醒：点开/搜到一条记忆，把它的 lastSeen 推到现在。
+  // 五分钟内动过的点不重复写盘 —— 狂点会拖慢页面。
+  off.push(
+    ctx.effect(() =>
+      ctx.webServer.register({
+        kind: 'exact',
+        path: '/consciousness/touch',
+        handler: async (req, res) => {
+          const send = (code, obj) => {
+            res.writeHead(code, {
+              'content-type': 'application/json; charset=utf-8',
+              'cache-control': 'no-store',
+            })
+            res.end(JSON.stringify(obj))
+          }
+          if (req.method !== 'POST') return send(405, { ok: false, error: '只收 POST' })
+          try {
+            let raw = ''
+            for await (const chunk of req) raw += chunk
+            const body = raw ? JSON.parse(raw) : {}
+            const sea = String(body.sea || 'main').trim() || 'main'
+            const ids = Array.isArray(body.ids) ? body.ids.map(Number).filter(Number.isFinite) : []
+            if (!ids.length) return send(400, { ok: false, error: 'ids 不能空' })
+
+            const dataPath = join(SEAS_DIR, sea, 'data.json')
+            if (!existsSync(dataPath)) return send(404, { ok: false, error: '没有这个识海' })
+            const data = JSON.parse(readFileSync(dataPath, 'utf8').replace(/^\uFEFF/, ''))
+            const now = Date.now()
+            const THROTTLE = 5 * 60 * 1000
+            let touched = 0
+            for (const p of data.points || []) {
+              if (!ids.includes(Number(p.id))) continue
+              const seen = Number(p.lastSeen) || 0
+              if (now - seen < THROTTLE) continue
+              p.lastSeen = now
+              touched += 1
+            }
+            if (!touched) return send(200, { ok: true, touched: 0 })
+            backupSea(sea)
+            writeFileSync(dataPath, JSON.stringify(data), 'utf8')
+            send(200, { ok: true, touched })
+          } catch (error) {
+            send(500, { ok: false, error: String((error && error.message) || error) })
+          }
+        },
+      }),
+    ),
+  )
+
+  // 重置演示：把 lastSeen 推回 born，让每条回到「出生时」的样子
+  off.push(
+    ctx.effect(() =>
+      ctx.webServer.register({
+        kind: 'exact',
+        path: '/consciousness/reset',
+        handler: async (req, res) => {
+          const send = (code, obj) => {
+            res.writeHead(code, {
+              'content-type': 'application/json; charset=utf-8',
+              'cache-control': 'no-store',
+            })
+            res.end(JSON.stringify(obj))
+          }
+          if (req.method !== 'POST') return send(405, { ok: false, error: '只收 POST' })
+          try {
+            let raw = ''
+            for await (const chunk of req) raw += chunk
+            const body = raw ? JSON.parse(raw) : {}
+            const sea = String(body.sea || 'main').trim() || 'main'
+            const dataPath = join(SEAS_DIR, sea, 'data.json')
+            if (!existsSync(dataPath)) return send(404, { ok: false, error: '没有这个识海' })
+            const data = JSON.parse(readFileSync(dataPath, 'utf8').replace(/^\uFEFF/, ''))
+            let n = 0
+            for (const p of data.points || []) {
+              if (p.born) {
+                p.lastSeen = p.born
+                n += 1
+              }
+            }
+            backupSea(sea)
+            writeFileSync(dataPath, JSON.stringify(data), 'utf8')
+            send(200, { ok: true, reset: n })
+          } catch (error) {
+            send(500, { ok: false, error: String((error && error.message) || error) })
+          }
+        },
+      }),
+    ),
+  )
+
+  // 删识海：整个目录递归删掉。名字只允许字母数字下划线短横，防路径穿越
+  off.push(
+    ctx.effect(() =>
+      ctx.webServer.register({
+        kind: 'exact',
+        path: '/consciousness/seas/delete',
+        handler: async (req, res) => {
+          const send = (code, obj) => {
+            res.writeHead(code, {
+              'content-type': 'application/json; charset=utf-8',
+              'cache-control': 'no-store',
+            })
+            res.end(JSON.stringify(obj))
+          }
+          if (req.method !== 'POST') return send(405, { ok: false, error: '只收 POST' })
+          try {
+            let raw = ''
+            for await (const chunk of req) raw += chunk
+            const body = raw ? JSON.parse(raw) : {}
+            const sea = String(body.sea || '').trim()
+            if (!sea) return send(400, { ok: false, error: 'sea 不能空' })
+            if (!/^[A-Za-z0-9_-]+$/.test(sea)) return send(400, { ok: false, error: '名字不合法' })
+            const dir = join(SEAS_DIR, sea)
+            if (!existsSync(dir)) return send(404, { ok: false, error: '没有这个识海' })
+            rmSync(dir, { recursive: true, force: true })
+            send(200, { ok: true, removed: sea })
+          } catch (error) {
+            send(500, { ok: false, error: String((error && error.message) || error) })
+          }
+        },
+      }),
+    ),
+  )
+
+  // 批量导入：前端把解析好的条目发过来，写临时文件交给 python 一次吃完
+  off.push(
+    ctx.effect(() =>
+      ctx.webServer.register({
+        kind: 'exact',
+        path: '/consciousness/import',
+        handler: async (req, res) => {
+          const send = (code, obj) => {
+            res.writeHead(code, {
+              'content-type': 'application/json; charset=utf-8',
+              'cache-control': 'no-store',
+            })
+            res.end(JSON.stringify(obj))
+          }
+          if (req.method !== 'POST') return send(405, { ok: false, error: '只收 POST' })
+          try {
+            let raw = ''
+            for await (const chunk of req) raw += chunk
+            const body = raw ? JSON.parse(raw) : {}
+            const sea = String(body.sea || 'main').trim() || 'main'
+            const items = Array.isArray(body.items) ? body.items : []
+            if (!items.length) return send(400, { ok: false, error: '没有可导入的条目' })
+            if (!/^[A-Za-z0-9_-]+$/.test(sea)) return send(400, { ok: false, error: '识海名不合法' })
+
+            const tmpFile = join(tmpdir(), 'sea-import-' + Date.now() + '.json')
+            writeFileSync(tmpFile, JSON.stringify(items), 'utf8')
+            try {
+              const log = await run(['--sea', sea, '--import-file', tmpFile], 180000)
+              send(200, { ok: true, count: items.length, log })
+            } finally {
+              try {
+                unlinkSync(tmpFile)
+              } catch {
+                /* 删不掉就算了 */
+              }
+            }
+          } catch (error) {
+            send(500, { ok: false, error: String((error && error.message) || error) })
+          }
+        },
+      }),
+    ),
+  )
+
+  // 改一条记忆：标题 / 正文 / 分类
+  off.push(
+    ctx.effect(() =>
+      ctx.webServer.register({
+        kind: 'exact',
+        path: '/consciousness/edit',
+        handler: async (req, res) => {
+          const send = (code, obj) => {
+            res.writeHead(code, {
+              'content-type': 'application/json; charset=utf-8',
+              'cache-control': 'no-store',
+            })
+            res.end(JSON.stringify(obj))
+          }
+          if (req.method !== 'POST') return send(405, { ok: false, error: '只收 POST' })
+          try {
+            let raw = ''
+            for await (const chunk of req) raw += chunk
+            const body = raw ? JSON.parse(raw) : {}
+            const sea = String(body.sea || 'main').trim() || 'main'
+            if (!/^[A-Za-z0-9_-]+$/.test(sea)) return send(400, { ok: false, error: '识海名不合法' })
+            const id = Number(body.id)
+            if (!Number.isFinite(id)) return send(400, { ok: false, error: 'id 不对' })
+
+            const dataPath = join(SEAS_DIR, sea, 'data.json')
+            if (!existsSync(dataPath)) return send(404, { ok: false, error: '没有这个识海' })
+            const data = JSON.parse(readFileSync(dataPath, 'utf8').replace(/^﻿/, ''))
+            const point = (data.points || []).find((x) => Number(x.id) === id)
+            if (!point) return send(404, { ok: false, error: '没有这条记忆' })
+
+            if (typeof body.title === 'string' && body.title.trim()) {
+              point.title = body.title.trim().slice(0, 60)
+              point.titleFull = point.title
+            }
+            if (typeof body.text === 'string' && body.text.trim()) point.text = body.text.trim()
+            if (typeof body.kind === 'string' && ['fact', 'feeling', 'taboo'].includes(body.kind)) {
+              point.kind = body.kind
+              point.tag = body.kind === 'fact' ? '〔实〕' : body.kind === 'taboo' ? '〔实·禁〕' : '〔情〕'
+            }
+            // 「现在的看法」：不覆盖原文，往后追加一条，留着时间差
+            if (typeof body.retake === 'string' && body.retake.trim()) {
+              if (!Array.isArray(point.retakes)) point.retakes = []
+              point.retakes.push({ text: body.retake.trim(), at: Date.now() })
+            }
+            point.lastSeen = Date.now()
+            backupSea(sea)
+            writeFileSync(dataPath, JSON.stringify(data), 'utf8')
+            send(200, { ok: true, id })
+          } catch (error) {
+            send(500, { ok: false, error: String((error && error.message) || error) })
+          }
+        },
+      }),
+    ),
+  )
+
+  // 改识海本身：名字 / 绑哪个窗口 / 绑哪个工作区
+  off.push(
+    ctx.effect(() =>
+      ctx.webServer.register({
+        kind: 'exact',
+        path: '/consciousness/seas/update',
+        handler: async (req, res) => {
+          const send = (code, obj) => {
+            res.writeHead(code, {
+              'content-type': 'application/json; charset=utf-8',
+              'cache-control': 'no-store',
+            })
+            res.end(JSON.stringify(obj))
+          }
+          if (req.method !== 'POST') return send(405, { ok: false, error: '只收 POST' })
+          try {
+            let raw = ''
+            for await (const chunk of req) raw += chunk
+            const body = raw ? JSON.parse(raw) : {}
+            const sea = String(body.sea || '').trim()
+            if (!/^[A-Za-z0-9_-]+$/.test(sea)) return send(400, { ok: false, error: '识海名不合法' })
+            const meta = readMeta(sea)
+            if (!meta) return send(404, { ok: false, error: '没有这个识海' })
+
+            if (typeof body.name === 'string' && body.name.trim()) meta.name = body.name.trim().slice(0, 40)
+            if (typeof body.session === 'string') meta.session = body.session.trim()
+            if (typeof body.workspace === 'string') meta.workspace = body.workspace.trim()
+            if (!writeMeta(sea, meta)) return send(500, { ok: false, error: '写不进去' })
+            send(200, { ok: true, meta })
+          } catch (error) {
+            send(500, { ok: false, error: String((error && error.message) || error) })
+          }
+        },
+      }),
+    ),
+  )
+
+  // 挂件脚本：在 DSH 页面右下角开一个小窗，里面是精简版识海
+  off.push(
+    ctx.effect(() =>
+      ctx.webServer.register({
+        kind: 'exact',
+        path: '/dsh-consciousness/widget.js',
+        handler: async (req, res) => {
+          const js = `(function(){
+  try{
+    if(window.__dshSeaWidget) return;
+    window.__dshSeaWidget = 1;
+    var box=document.createElement('div');
+    box.id='dsh-sea-widget';
+    box.style.cssText='position:fixed;right:18px;bottom:18px;width:270px;height:168px;z-index:9998;border-radius:12px;overflow:hidden;border:1px solid rgba(120,180,240,.28);background:#05070b;box-shadow:0 14px 44px rgba(0,0,0,.62)';
+    var f=document.createElement('iframe');
+    f.src='/consciousness?mini=1&t='+Date.now();
+    f.style.cssText='width:100%;height:100%;border:0;display:block;background:#05070b';
+    var bar=document.createElement('div');
+    bar.style.cssText='position:absolute;left:0;right:0;top:0;height:24px;box-sizing:border-box;padding:0 6px;display:flex;align-items:center;justify-content:space-between;background:linear-gradient(180deg,rgba(14,22,34,.95),rgba(8,12,20,.88));border-bottom:1px solid rgba(120,180,240,.16);color:#7d9cbc;font:11px/24px sans-serif;cursor:move;user-select:none;z-index:3;letter-spacing:.16em';
+    bar.innerHTML='<span style="pointer-events:none;flex:1">识 海</span>'
+      + '<span id="dsh-sea-size" title="放大 / 恢复" style="cursor:pointer;margin-left:4px;padding:1px 7px;border-radius:5px;background:rgba(120,180,240,.13);border:1px solid rgba(120,180,240,.22);color:#b9d4ee;font-size:12px;line-height:16px;letter-spacing:0">▢</span>'
+      + '<span id="dsh-sea-toggle" title="收起 / 展开（双击顶栏也行）" style="cursor:pointer;margin-left:4px;padding:1px 8px;border-radius:5px;background:rgba(120,180,240,.13);border:1px solid rgba(120,180,240,.22);color:#b9d4ee;font-size:12px;line-height:16px;letter-spacing:0">—</span>';
+
+    // 拖动时盖一层全屏遮罩：鼠标在 iframe 上移动时，父页面收不到 mousemove
+    var mask=document.createElement('div');
+    mask.style.cssText='position:fixed;inset:0;z-index:99999;display:none;cursor:move';
+    document.body.appendChild(mask);
+
+    var closed=false, big=false;
+    bar.addEventListener('click',function(e){
+      const id=e.target && e.target.id;
+      if(id==='dsh-sea-toggle'){
+        closed=!closed;
+        f.style.display=closed?'none':'block';
+        box.style.height=closed?'24px':(big?'400px':'168px');
+        e.target.textContent=closed?'+':'—';
+        e.stopPropagation();
+        return;
+      }
+      if(id==='dsh-sea-size'){
+        big=!big;
+        if(!closed){
+          box.style.width=big?'600px':'270px';
+          box.style.height=big?'400px':'168px';
+        }
+        e.target.textContent=big?'▣':'▢';
+        e.stopPropagation();
+      }
+    });
+
+    var dragging=false, sx=0, sy=0, bx=0, by=0;
+    bar.addEventListener('mousedown',function(e){
+      if(e.target && (e.target.id==='dsh-sea-toggle' || e.target.id==='dsh-sea-size')) return;
+      dragging=true; sx=e.clientX; sy=e.clientY;
+      var r=box.getBoundingClientRect(); bx=r.left; by=r.top;
+      box.style.right='auto'; box.style.bottom='auto';
+      box.style.left=bx+'px'; box.style.top=by+'px';
+      mask.style.display='block';
+      e.preventDefault();
+      e.stopPropagation();
+    });
+    mask.addEventListener('mousemove',function(e){
+      if(!dragging) return;
+      box.style.left=(bx+e.clientX-sx)+'px';
+      box.style.top=(by+e.clientY-sy)+'px';
+    });
+    mask.addEventListener('mouseup',function(){ dragging=false; mask.style.display='none'; });
+
+    // 双击顶栏：收起 / 展开
+    bar.addEventListener('dblclick', function(e){
+      if(e.target && (e.target.id==='dsh-sea-toggle' || e.target.id==='dsh-sea-size')) return;
+      var btn=document.getElementById('dsh-sea-toggle');
+      if(btn) btn.click();
+      e.preventDefault();
+    });
+
+    box.appendChild(f);
+    box.appendChild(bar);
+    document.body.appendChild(box);
+  }catch(e){}
+})()`
+          res.writeHead(200, {
+            'content-type': 'application/javascript; charset=utf-8',
+            'cache-control': 'no-store',
+          })
+          res.end(js)
+        },
+      }),
+    ),
+  )
+
+  // 删一条记忆：连点带线一起拔，后面所有边的索引要往前挪一格
+  off.push(
+    ctx.effect(() =>
+      ctx.webServer.register({
+        kind: 'exact',
+        path: '/consciousness/delete',
+        handler: async (req, res) => {
+          const send = (code, obj) => {
+            res.writeHead(code, {
+              'content-type': 'application/json; charset=utf-8',
+              'cache-control': 'no-store',
+            })
+            res.end(JSON.stringify(obj))
+          }
+          if (req.method !== 'POST') return send(405, { ok: false, error: '只收 POST' })
+          try {
+            let raw = ''
+            for await (const chunk of req) raw += chunk
+            const body = raw ? JSON.parse(raw) : {}
+            const sea = String(body.sea || 'main').trim() || 'main'
+            if (!/^[A-Za-z0-9_-]+$/.test(sea)) return send(400, { ok: false, error: '识海名不合法' })
+            const id = Number(body.id)
+            if (!Number.isFinite(id)) return send(400, { ok: false, error: 'id 不对' })
+
+            const dataPath = join(SEAS_DIR, sea, 'data.json')
+            if (!existsSync(dataPath)) return send(404, { ok: false, error: '没有这个识海' })
+            const data = JSON.parse(readFileSync(dataPath, 'utf8').replace(/^\uFEFF/, ''))
+            const idx = (data.points || []).findIndex((x) => Number(x.id) === id)
+            if (idx < 0) return send(404, { ok: false, error: '没有这条记忆' })
+
+            backupSea(sea)
+            // 不真删：标成沉底，坐标压到球心，永远留着
+            const point = data.points[idx]
+            point.dead = true
+            point.deadAt = Date.now()
+            point.x = Number(point.x || 0) * 0.05
+            point.y = Number(point.y || 0) * 0.05
+            point.z = Number(point.z || 0) * 0.05
+            const left = data.points.filter((x) => !x.dead).length
+            writeFileSync(dataPath, JSON.stringify(data), 'utf8')
+            send(200, { ok: true, left })
+          } catch (error) {
+            send(500, { ok: false, error: String((error && error.message) || error) })
+          }
+        },
+      }),
+    ),
+  )
+
+  // 彻底清掉所有沉底的记忆：真删，边表重排
+  off.push(
+    ctx.effect(() =>
+      ctx.webServer.register({
+        kind: 'exact',
+        path: '/consciousness/purge',
+        handler: async (req, res) => {
+          const send = (code, obj) => {
+            res.writeHead(code, {
+              'content-type': 'application/json; charset=utf-8',
+              'cache-control': 'no-store',
+            })
+            res.end(JSON.stringify(obj))
+          }
+          if (req.method !== 'POST') return send(405, { ok: false, error: '只收 POST' })
+          try {
+            let raw = ''
+            for await (const chunk of req) raw += chunk
+            const body = raw ? JSON.parse(raw) : {}
+            const sea = String(body.sea || 'main').trim() || 'main'
+            if (!/^[A-Za-z0-9_-]+$/.test(sea)) return send(400, { ok: false, error: '识海名不合法' })
+            const dataPath = join(SEAS_DIR, sea, 'data.json')
+            if (!existsSync(dataPath)) return send(404, { ok: false, error: '没有这个识海' })
+
+            const data = JSON.parse(readFileSync(dataPath, 'utf8').replace(/^\uFEFF/, ''))
+            const before = data.points.length
+            const keep = []
+            const map = new Map()
+            data.points.forEach((p, i) => {
+              if (!p.dead) {
+                map.set(i, keep.length)
+                keep.push(p)
+              }
+            })
+            if (keep.length === before) return send(200, { ok: true, removed: 0 })
+            data.edges = (data.edges || [])
+              .filter((e) => map.has(e.a) && map.has(e.b))
+              .map((e) => ({ a: map.get(e.a), b: map.get(e.b), w: e.w }))
+            data.points = keep
+
+            backupSea(sea)
+            writeFileSync(dataPath, JSON.stringify(data), 'utf8')
+            send(200, { ok: true, removed: before - keep.length })
+          } catch (error) {
+            send(500, { ok: false, error: String((error && error.message) || error) })
+          }
+        },
+      }),
+    ),
+  )
+
+  // 历史版本：列出来 + 一键恢复
+  off.push(
+    ctx.effect(() =>
+      ctx.webServer.register({
+        kind: 'exact',
+        path: '/consciousness/backups',
+        handler: async (req, res) => {
+          const send = (code, obj) => {
+            res.writeHead(code, {
+              'content-type': 'application/json; charset=utf-8',
+              'cache-control': 'no-store',
+            })
+            res.end(JSON.stringify(obj))
+          }
+          try {
+            const url = new URL(req.url || '/', 'http://x')
+            const sea = String(url.searchParams.get('sea') || 'main').trim() || 'main'
+            if (!/^[A-Za-z0-9_-]+$/.test(sea)) return send(400, { ok: false, error: '识海名不合法' })
+            const dir = join(BACKUP_DIR, sea)
+            if (!existsSync(dir)) return send(200, { ok: true, items: [] })
+            const items = readdirSync(dir)
+              .filter((f) => /^[0-9]{8}-[0-9]{6}\.json$/.test(f))
+              .map((f) => {
+                const fp = join(dir, f)
+                let count = 0
+                try {
+                  const d = JSON.parse(readFileSync(fp, 'utf8').replace(/^\uFEFF/, ''))
+                  count = (d.points || []).length
+                } catch {
+                  count = -1
+                }
+                return { file: f, at: statSync(fp).mtimeMs, count }
+              })
+              .sort((a, b) => b.at - a.at)
+              .slice(0, 12)
+            send(200, { ok: true, items })
+          } catch (error) {
+            send(500, { ok: false, error: String((error && error.message) || error) })
+          }
+        },
+      }),
+    ),
+  )
+
+  off.push(
+    ctx.effect(() =>
+      ctx.webServer.register({
+        kind: 'exact',
+        path: '/consciousness/restore',
+        handler: async (req, res) => {
+          const send = (code, obj) => {
+            res.writeHead(code, {
+              'content-type': 'application/json; charset=utf-8',
+              'cache-control': 'no-store',
+            })
+            res.end(JSON.stringify(obj))
+          }
+          if (req.method !== 'POST') return send(405, { ok: false, error: '只收 POST' })
+          try {
+            let raw = ''
+            for await (const chunk of req) raw += chunk
+            const body = raw ? JSON.parse(raw) : {}
+            const sea = String(body.sea || 'main').trim() || 'main'
+            const file = String(body.file || '').trim()
+            if (!/^[A-Za-z0-9_-]+$/.test(sea)) return send(400, { ok: false, error: '识海名不合法' })
+            if (!/^[0-9]{8}-[0-9]{6}\.json$/.test(file)) return send(400, { ok: false, error: '备份名不合法' })
+
+            const src = join(BACKUP_DIR, sea, file)
+            if (!existsSync(src)) return send(404, { ok: false, error: '没有这个备份' })
+            const dst = join(SEAS_DIR, sea, 'data.json')
+            if (!existsSync(dst)) return send(404, { ok: false, error: '识海不存在' })
+
+            backupSea(sea) // 先把现在这版也存一份，恢复错了还能回来
+            const content = readFileSync(src, 'utf8').replace(/^\uFEFF/, '')
+            JSON.parse(content) // 坏文件不落地
+            writeFileSync(dst, content, 'utf8')
+            send(200, { ok: true })
+          } catch (error) {
+            send(500, { ok: false, error: String((error && error.message) || error) })
+          }
+        },
+      }),
+    ),
+  )
+
+  // 演示页共用的绘制库（和识海同一套代码）
+  off.push(
+    ctx.effect(() =>
+      ctx.webServer.register({
+        kind: 'exact',
+        path: '/sea-demo/lib.js',
+        handler: async (req, res) => {
+          const file = join(BASE, 'demo', 'lib.js')
+          if (!existsSync(file)) {
+            res.writeHead(404); res.end('no lib'); return
+          }
+          res.writeHead(200, { 'content-type': 'application/javascript; charset=utf-8', 'cache-control': 'no-store' })
+          res.end(readFileSync(file))
+        },
+      }),
+    ),
+  )
+
+  // 分页演示：每个功能一个独立小页面，只演那一个机制
+  for (const name of ['index', 'decay', 'cluster', 'dream', 'replay', 'impulse', 'burial', 'polarity', 'search']) {
+    off.push(
+      ctx.effect(() =>
+        ctx.webServer.register({
+          kind: 'exact',
+          path: '/sea-demo/' + name,
+          handler: async (req, res) => {
+            const file = join(BASE, 'demo', name + '.html')
+            if (!existsSync(file)) {
+              res.writeHead(404, { 'content-type': 'text/plain; charset=utf-8' })
+              res.end('没有这一页')
+              return
+            }
+            res.writeHead(200, { 'content-type': 'text/html; charset=utf-8', 'cache-control': 'no-store' })
+            res.end(readFileSync(file))
+          },
+        }),
+      ),
+    )
+  }
+
+  // 检查更新：只查，装交给用户自己跑一条命令
+  const checkUpdate = createSelfUpdate({ packageRoot: HERE })
+  off.push(
+    ctx.effect(() =>
+      ctx.webServer.register({
+        kind: 'exact',
+        path: '/consciousness/update-check',
+        handler: async (req, res) => {
+          try {
+            const url = new URL(req.url || '/', 'http://x')
+            const data = await checkUpdate(url.searchParams.has('refresh'))
+            res.writeHead(200, { 'content-type': 'application/json; charset=utf-8', 'cache-control': 'no-store' })
+            res.end(JSON.stringify(data))
+          } catch (error) {
+            res.writeHead(500, { 'content-type': 'application/json; charset=utf-8' })
+            res.end(JSON.stringify({ ok: false, error: String((error && error.message) || error) }))
+          }
+        },
+      }),
+    ),
+  )
+
+  // 心脏贴图：一张图，走路由发出去
+  off.push(
+    ctx.effect(() =>
+      ctx.webServer.register({
+        kind: 'exact',
+        path: '/consciousness/heart.png',
+        handler: async (req, res) => {
+          const file = join(BASE, 'heart.png')
+          if (!existsSync(file)) {
+            res.writeHead(404).end()
+            return
+          }
+          res.writeHead(200, { 'content-type': 'image/png', 'cache-control': 'public, max-age=3600' })
+          res.end(readFileSync(file))
+        },
+      }),
+    ),
+  )
+
+  // 心脏自己想起一条：挑最久没被想起的，不靠搜索
+  off.push(
+    ctx.effect(() =>
+      ctx.webServer.register({
+        kind: 'exact',
+        path: '/consciousness/recall',
+        handler: async (req, res) => {
+          try {
+            const q = new URL(req.url || '/', 'http://x')
+            const idleSec = Number(q.searchParams.get('idle'))
+            const data = readSea('main')
+            const pts = (data && Array.isArray(data.points)) ? data.points.filter((p) => !p.dead) : []
+            if (!pts.length) {
+              res.writeHead(200, { 'content-type': 'application/json; charset=utf-8' })
+              res.end(JSON.stringify({ ok: false, error: '识海是空的' }))
+              return
+            }
+            // 七成挑「太久没碰」的，三成挑「最近常想起」的。
+            // 只挑最老的会永远翻陈年旧账，只挑最近的又像刷屏，两边都要有。
+            let pick
+            if (Math.random() < 0.7) {
+              const old = [...pts].sort((a, b) => (Number(a.lastSeen) || 0) - (Number(b.lastSeen) || 0))
+              const pool = old.slice(0, Math.min(6, old.length))
+              pick = pool[Math.floor(Math.random() * pool.length)]
+            } else {
+              const hot = [...pts].sort((a, b) => (Number(b.lastSeen) || 0) - (Number(a.lastSeen) || 0))
+              const pool = hot.slice(0, Math.min(8, hot.length))
+              pick = pool[Math.floor(Math.random() * pool.length)]
+            }
+            const days = pick.lastSeen ? Math.floor((Date.now() - Number(pick.lastSeen)) / 86400000) : -1
+
+            // 想起来就把时间戳推一下，它下一次没那么容易再冒
+            pick.lastSeen = Date.now()
+            try {
+              writeFileSync(join(SEAS_DIR, 'main', 'data.json'), JSON.stringify(data), 'utf8')
+            } catch {
+              /* 写不回去也不影响这一次想起 */
+            }
+
+            const h = tickHeart(readHeart(), idleSec)
+            h.lastThought = { title: String(pick.title || ''), at: Date.now(), days }
+            // 留一份它想起过的清单，最多 30 条
+            if (!Array.isArray(h.thoughts)) h.thoughts = []
+            // 记下当时是醒着还是乏着——以后回头看，不一样的状态想起的东西不一样
+            const tier = h.energy > 0.55 ? 'warm' : (h.energy > 0.28 ? 'mid' : 'cold')
+            h.thoughts.unshift({ title: String(pick.title || ''), days, at: Date.now(), tier, e: Math.round(h.energy * 100) })
+            if (h.thoughts.length > 30) h.thoughts.length = 30
+            writeHeart(h)
+
+            res.writeHead(200, { 'content-type': 'application/json; charset=utf-8', 'cache-control': 'no-store' })
+            res.end(JSON.stringify({ ok: true, title: String(pick.title || ''), days }))
+          } catch (error) {
+            res.writeHead(500, { 'content-type': 'application/json; charset=utf-8' })
+            res.end(JSON.stringify({ ok: false, error: String((error && error.message) || error) }))
+          }
+        },
+      }),
+    ),
+  )
+
+  // 肺：吸进来多少。只记账，不碰记忆。
+  off.push(
+    ctx.effect(() =>
+      ctx.webServer.register({
+        kind: 'exact',
+        path: '/consciousness/intake',
+        handler: async (req, res) => {
+          try {
+            const url = new URL(req.url || '/', 'http://x')
+            const n = Math.max(0, Math.min(200, Number(url.searchParams.get('n')) || 0))
+            const h = tickHeart(readHeart())
+            const today = new Date().toISOString().slice(0, 10)
+            if (!h.intake || h.intake.date !== today) h.intake = { date: today, count: 0 }
+            h.intake.count += n
+            writeHeart(h)
+            res.writeHead(200, { 'content-type': 'application/json; charset=utf-8', 'cache-control': 'no-store' })
+            res.end(JSON.stringify({ ok: true, date: h.intake.date, count: h.intake.count }))
+          } catch (error) {
+            res.writeHead(500, { 'content-type': 'application/json; charset=utf-8' })
+            res.end(JSON.stringify({ ok: false }))
+          }
+        },
+      }),
+    ),
+  )
+
+  // 仿 DSH 的演示页：给拍视频用，左边假侧栏、底部假输入框，中间是真识海
+  off.push(
+    ctx.effect(() =>
+      ctx.webServer.register({
+        kind: 'exact',
+        path: '/consciousness/fake-dsh',
+        handler: async (req, res) => {
+          const html = `<!doctype html><html><head><meta charset="utf-8">
+<style>
+  html,body{margin:0;height:100%;background:#0a0e14;overflow:hidden;
+    font-family:"Microsoft YaHei",system-ui,sans-serif;color:#9fb8d4}
+  #wrap{display:flex;height:100%}
+  #side{width:250px;flex:0 0 250px;border-right:1px solid rgba(120,180,240,.10);
+    padding:18px 14px;box-sizing:border-box;display:flex;flex-direction:column;gap:14px}
+  .logo{display:flex;align-items:center;gap:8px;font-size:14px;color:#cfe2f6;letter-spacing:.02em}
+  .dot{width:16px;height:16px;border-radius:50%;background:radial-gradient(circle at 35% 35%,#7fc0ff,#2a5f9e)}
+  .new{text-align:center;padding:9px 0;border-radius:8px;border:1px solid rgba(120,180,240,.22);
+    font-size:13px;color:#9fc0e0;background:rgba(120,180,240,.05)}
+  .item{font-size:12.5px;color:#6f8fad;padding:5px 8px;border-radius:6px}
+  .item.on{background:rgba(120,180,240,.13);color:#cfe2f6}
+  .grp{font-size:11px;color:#4a6580;letter-spacing:.16em;margin-top:6px}
+  #main{flex:1;display:flex;flex-direction:column;min-width:0}
+  #head{padding:10px 18px;border-bottom:1px solid rgba(120,180,240,.08);
+    font-size:12px;color:#5b82ac;letter-spacing:.06em}
+  iframe{flex:1;border:0;width:100%;background:#03050a}
+  #bar{padding:10px 18px 16px;border-top:1px solid rgba(120,180,240,.08)}
+  #inp{width:100%;box-sizing:border-box;background:rgba(120,180,240,.05);
+    border:1px solid rgba(120,180,240,.16);border-radius:10px;padding:11px 14px;
+    color:#8fb3d6;font-size:13px;font-family:inherit}
+</style></head><body><div id="wrap">
+<div id="side">
+  <div class="logo"><span class="dot"></span>deepseek <b style="font-weight:600">HARNESS</b></div>
+  <div class="new">+ 新会话</div>
+  <div class="item">插件</div>
+  <div class="item on">识 海</div>
+  <div class="item">自动化任务</div>
+  <div class="grp">工作区</div>
+  <div class="item">大肥鱼档案</div>
+  <div class="item">默认工作区</div>
+</div>
+<div id="main">
+  <div id="head">识海 · 主识海</div>
+  <iframe src="/consciousness?id=main&shot=1"></iframe>
+  <div id="bar"><input id="inp" placeholder="发消息或创建任务，/ 调用指令，@ 文件或对话"></div>
+</div>
+</div></body></html>`
+          res.writeHead(200, { 'content-type': 'text/html; charset=utf-8', 'cache-control': 'no-store' })
+          res.end(html)
+        },
+      }),
+    ),
+  )
+
+  // 心脏状态：读一次，顺手按时间结算
+  off.push(
+    ctx.effect(() =>
+      ctx.webServer.register({
+        kind: 'exact',
+        path: '/consciousness/heart',
+        handler: async (req, res) => {
+          try {
+            const h = tickHeart(readHeart())
+            writeHeart(h)
+            res.writeHead(200, { 'content-type': 'application/json; charset=utf-8', 'cache-control': 'no-store' })
+            res.end(JSON.stringify({ ok: true, energy: h.energy, fatigue: h.fatigue, updated: h.updated, lastThought: h.lastThought || null, thoughts: h.thoughts || [], intake: h.intake || null, lastAdd: h.lastAdd || 0 }))
+          } catch (error) {
+            res.writeHead(500, { 'content-type': 'application/json; charset=utf-8' })
+            res.end(JSON.stringify({ ok: false, error: String((error && error.message) || error) }))
+          }
+        },
+      }),
+    ),
+  )
+
+  return () => {
+    for (const f of off) {
+      try {
+        if (typeof f === 'function') f()
+      } catch {
+        /* 忽略 */
+      }
+    }
+  }
+}

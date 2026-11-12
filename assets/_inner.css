@@ -1,0 +1,67 @@
+/* ===== 内观浮层（跟识海同一套金色和线条） ===== */
+#innerView{position:fixed;inset:0;z-index:40;display:none;
+  background:
+    radial-gradient(1200px 700px at 50% 12%, rgba(200,178,130,.10), transparent 62%),
+    radial-gradient(900px 600px at 50% 100%, rgba(120,180,240,.06), transparent 60%),
+    rgba(3,6,11,.97);
+  backdrop-filter:blur(6px);overflow:auto}
+#innerView.on{display:block}
+#innerView .iv-wrap{max-width:720px;margin:0 auto;padding:34px 22px 90px}
+#innerView .iv-head{display:flex;align-items:flex-end;gap:12px;margin-bottom:6px}
+#innerView .iv-head h2{margin:0;font-size:21px;font-weight:400;letter-spacing:.24em;color:#e8dcc2}
+#innerView .iv-head .sub{font-size:10.5px;letter-spacing:.2em;color:#5d6d82;padding-bottom:3px}
+#innerView .iv-x{margin-left:auto;cursor:pointer;color:#5b82ac;font-size:20px;line-height:1;
+  padding:0 4px}
+#innerView .iv-x:hover{color:#e6eef8}
+#innerView .iv-hint{font-size:11px;color:#5d6d82;margin:0 0 22px;letter-spacing:.04em}
+
+#innerView .iv-card{position:relative;border:1px solid rgba(200,178,130,.14);border-radius:14px;
+  background:linear-gradient(180deg,rgba(10,16,26,.92),rgba(6,10,17,.92));
+  box-shadow:0 18px 50px rgba(0,0,0,.5), inset 0 1px 0 rgba(255,255,255,.02);
+  padding:18px 20px 16px;margin-bottom:14px}
+#innerView .iv-card:before{content:'';position:absolute;left:18px;right:18px;top:0;height:1px;
+  background:linear-gradient(90deg,transparent,rgba(200,178,130,.55),transparent)}
+#innerView .iv-t{font-size:10.5px;letter-spacing:.2em;color:#7a8798;margin:0 0 12px}
+
+#innerView .iv-now{font-size:19px;line-height:1.55;color:#dbe3ee;margin-bottom:16px;
+  letter-spacing:.02em}
+#innerView .iv-now em{font-style:normal;color:#e8cf9a}
+
+#innerView .iv-bars{display:grid;grid-template-columns:repeat(4,1fr);gap:12px 16px}
+#innerView .iv-bar{font-size:10.5px;color:#6f7d90;letter-spacing:.06em}
+#innerView .iv-bar .r{display:flex;justify-content:space-between;margin-bottom:5px}
+#innerView .iv-bar .r b{font-weight:400;color:#9fb0c6}
+#innerView .iv-tr{height:3px;background:rgba(255,255,255,.05);border-radius:2px;overflow:hidden}
+#innerView .iv-fi{height:100%;border-radius:2px;background:linear-gradient(90deg,#3a4658,#7f93ad);
+  transition:width .6s cubic-bezier(.2,.7,.2,1)}
+#innerView .iv-bar.warm .iv-fi{background:linear-gradient(90deg,#5a4a32,#e0c48a)}
+
+#innerView .iv-pre{display:flex;gap:12px;padding:9px 0;border-bottom:1px dashed rgba(200,178,130,.10)}
+#innerView .iv-pre:last-child{border-bottom:0}
+#innerView .iv-pre .k{flex:0 0 58px;font-size:10.5px;color:#7a8798;padding-top:3px;letter-spacing:.08em}
+#innerView .iv-pre .x{flex:1;font-size:13.5px;line-height:1.6;color:#cfd8e6}
+#innerView .iv-pre .w{flex:0 0 34px;text-align:right;font-size:10.5px;color:#8a7350}
+
+#innerView .iv-th{display:flex;gap:12px;margin-bottom:13px}
+#innerView .iv-th .w{flex:0 0 68px;font-size:10.5px;color:#5d6d82;padding-top:4px}
+#innerView .iv-th .b{flex:1}
+#innerView .iv-th .q{font-family:Georgia,"Kaiti SC","STKaiti",serif;font-style:italic;
+  font-size:14.5px;line-height:1.75;color:#e4ebf4}
+#innerView .iv-th .m{font-size:10.5px;color:#6f7d90;margin-top:5px;letter-spacing:.05em}
+#innerView .iv-dot{display:inline-block;width:5px;height:5px;border-radius:50%;margin-right:5px;
+  vertical-align:1px}
+
+#innerView .iv-empty{font-size:12px;color:#5d6d82;padding:4px 0;line-height:1.7}
+#innerView .iv-line{width:100%;height:70px;display:block}
+#innerView .iv-trend{font-size:11px;color:#7a8798;margin-top:8px;letter-spacing:.04em}
+
+#innerView .iv-row{display:flex;align-items:center;gap:14px;flex-wrap:wrap}
+#innerView .iv-seg{display:flex;border:1px solid rgba(200,178,130,.18);border-radius:10px;
+  overflow:hidden;background:rgba(255,255,255,.02)}
+#innerView .iv-seg button{appearance:none;border:0;background:transparent;color:#7a8798;
+  font-size:12px;padding:9px 17px;cursor:pointer;letter-spacing:.1em;font-family:inherit}
+#innerView .iv-seg button.on{background:rgba(200,178,130,.14);color:#e8cf9a}
+#innerView .iv-say{font-size:11px;color:#6f7d90;line-height:1.6;flex:1;min-width:180px}
+
+#innerView .iv-foot{font-size:10.5px;color:#3f4b5b;line-height:1.8;margin-top:20px;
+  letter-spacing:.04em}

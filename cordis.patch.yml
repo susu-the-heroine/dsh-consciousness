@@ -1,0 +1,6 @@
+# dsh-consciousness —— DSH bundle patch
+- insert:
+    - id: consciousness
+      name: dsh-consciousness2
+      config:
+        enabled: true

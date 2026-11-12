@@ -1,0 +1,60 @@
+<!doctype html>
+<html lang="zh-CN"><head><meta charset="utf-8"><title>葬礼</title>
+<style>
+  html,body{margin:0;height:100%;background:#03050a;overflow:hidden;font-family:"Microsoft YaHei",sans-serif}
+  canvas{display:block}
+  #h{position:fixed;left:44px;top:38px;z-index:2;pointer-events:none}
+  #h h1{margin:0;font-size:26px;color:#c8b282;font-weight:600;letter-spacing:.1em}
+  #h p{margin:8px 0 0;font-size:13px;color:#5b82ac}
+</style></head>
+<body>
+<canvas id="c"></canvas>
+<div id="h"><h1>葬礼</h1><p>删掉的那条不会消失，它沉到最底下，变成一颗够不着的点。</p></div>
+<script src="/sea-demo/lib.js"></script>
+<script>
+const cv=document.getElementById('c'),ctx=cv.getContext('2d');
+const dpr=2;
+let W=0,H=0;
+function resize(){W=innerWidth;H=innerHeight;cv.width=W*dpr;cv.height=H*dpr;
+  cv.style.width=W+'px';cv.style.height=H+'px';ctx.setTransform(dpr,0,0,dpr,0,0);}
+addEventListener('resize',resize);resize();
+
+const SIZE=26;
+const v=vectorize(SEA_COLOR.feeling, SIZE, 777, 'feeling');
+
+function frame(ts){
+  if(!frame.t0) frame.t0=ts;
+  const t=((ts-frame.t0)/1000)%14;
+  ctx.clearRect(0,0,W,H);
+  const cx=W/2, cy=H*0.46;
+  const R=Math.min(W,H)*0.24;
+
+  let st=1, drop=0;
+  if(t<2) st=1;
+  else if(t<5){ st=1-(t-2)/3*0.8; }
+  else if(t<8){ st=0.2; drop=Math.min(1,(t-5)/3); }
+  else { st=0.1; drop=1; }
+
+  const startY=cy-R*0.8;
+  const endY=cy+R*0.34;
+  const y=startY+(endY-startY)*drop;
+  const k=Math.min(W,H)/900*1.35;
+
+  drawNeuron(ctx,cx,y,k,v,{st:st, alpha:Math.max(0.14,st), aura:'#8f7fc4', dead:drop>0.98});
+
+  ctx.textAlign='center';
+  ctx.font='15px "Microsoft YaHei",sans-serif';
+  ctx.fillStyle='rgba(200,220,244,.85)';
+  const msg = t<5 ? '还亮着' : (t<8 ? '正在往下沉' : '还在，只是够不着了');
+  ctx.fillText(msg, cx, H-96);
+  if(drop>0.9){
+    ctx.font='12px "Microsoft YaHei",sans-serif';
+    ctx.fillStyle='rgba(110,140,172,.8)';
+    ctx.fillText('数据还留在文件里，搜索也够不到它', cx, H-72);
+  }
+
+  requestAnimationFrame(frame);
+}
+setTimeout(function(){requestAnimationFrame(frame);}, 2500);
+</script>
+</body></html>

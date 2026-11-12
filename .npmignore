@@ -1,0 +1,11 @@
+﻿*.bak*
+*.oldcode
+*.crashed*
+*.tgz
+_backups/
+node_modules/
+__pycache__/
+*.pyc
+assets/demo/
+安装卡.docx
+*.docx

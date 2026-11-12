@@ -1,0 +1,68 @@
+<!doctype html>
+<html lang="zh-CN"><head><meta charset="utf-8"><title>衰减</title>
+<style>
+  html,body{margin:0;height:100%;background:#03050a;overflow:hidden;font-family:"Microsoft YaHei",sans-serif}
+  canvas{display:block}
+  #h{position:fixed;left:44px;top:38px;z-index:2;pointer-events:none}
+  #h h1{margin:0;font-size:26px;color:#c8b282;font-weight:600;letter-spacing:.1em}
+  #h p{margin:8px 0 0;font-size:13px;color:#5b82ac;letter-spacing:.05em}
+</style></head>
+<body>
+<canvas id="c"></canvas>
+<div id="h"><h1>衰减</h1><p>越久没被碰过，越暗。不删，只是越来越难想起。</p></div>
+<script src="/sea-demo/lib.js"></script>
+<script>
+const cv=document.getElementById('c'),ctx=cv.getContext('2d');
+const dpr=2;   // 强制两倍超采样，录出来边缘更锐
+let W=0,H=0;
+function resize(){W=innerWidth;H=innerHeight;cv.width=W*dpr;cv.height=H*dpr;
+  cv.style.width=W+'px';cv.style.height=H+'px';ctx.setTransform(dpr,0,0,dpr,0,0);}
+addEventListener('resize',resize);resize();
+
+const SIZE=26;
+// 同一颗记忆的三个时间点：种类、种子都一样，只有强度不同
+const NODES=[
+  {label:'今天',    sub:'还在用，亮着', st:1.00, kind:'feeling', pol:'#e0b070', seed:101},
+  {label:'30 天前', sub:'光晕收了',     st:0.42, kind:'feeling', pol:'#e0b070', seed:101},
+  {label:'90 天前', sub:'只剩一个点',   st:0.16, kind:'feeling', pol:'#e0b070', seed:101},
+];
+for(const n of NODES) n.v = vectorize(SEA_COLOR[n.kind], SIZE, n.seed, n.kind);
+
+function frame(ts){
+  ctx.clearRect(0,0,W,H);
+  const cy=H*0.44;
+  const gap=Math.min(W*0.26, 320);
+  const k=Math.min(W,H)/900*1.5;
+
+  for(let i=0;i<NODES.length;i++){
+    const n=NODES[i];
+    const x=W/2+(i-1)*gap;
+    const breath=1+0.02*Math.sin(ts/700+i);
+    drawNeuron(ctx,x,cy,k*breath,n.v,{st:n.st, alpha:Math.max(0.12,n.st), aura:n.pol});
+
+    ctx.textAlign='center';
+    ctx.font='15px "Microsoft YaHei",sans-serif';
+    ctx.fillStyle='rgba(200,222,244,'+(0.35+0.6*n.st)+')';
+    ctx.fillText(n.label, x, cy+SIZE*k*3.2);
+    ctx.font='11px "Microsoft YaHei",sans-serif';
+    ctx.fillStyle='rgba(110,140,172,'+(0.4+0.5*n.st)+')';
+    ctx.fillText(n.sub, x, cy+SIZE*k*3.2+20);
+  }
+
+  const y0=H-72, ww=Math.min(W*0.36,520), x0=W/2-ww/2, x1=x0+ww;
+  const grad=ctx.createLinearGradient(x0,0,x1,0);
+  grad.addColorStop(0,'rgba(224,176,112,.7)');
+  grad.addColorStop(1,'rgba(224,176,112,.03)');
+  ctx.strokeStyle=grad; ctx.lineWidth=2;
+  ctx.beginPath(); ctx.moveTo(x0,y0); ctx.lineTo(x1,y0); ctx.stroke();
+  ctx.font='11px "Microsoft YaHei",sans-serif'; ctx.textAlign='left';
+  ctx.fillStyle='rgba(91,130,172,.8)';
+  ctx.fillText('现在',x0-2,y0+18);
+  ctx.textAlign='right';
+  ctx.fillText('越久',x1+2,y0+18);
+
+  requestAnimationFrame(frame);
+}
+setTimeout(function(){requestAnimationFrame(frame);}, 2500);
+</script>
+</body></html>
