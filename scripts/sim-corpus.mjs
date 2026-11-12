@@ -160,7 +160,7 @@ console.log('结果：' + out)
 // 闭环：把结论写进工厂，不用人手动抄。
 // 工厂不在就当没这回事，别报错——别人机器上没这个目录。
 try {
-  const FACTORY = 'C:\\Users\\Administrator\\Desktop\\识海工厂_2026-11-07'
+  const FACTORY = process.env.SHIOHAI_FACTORY || 'C:\\Users\\Administrator\\Desktop\\识海工厂_2026-11-07'
   if (existsSync(FACTORY)) {
     const md = [
       '# 仿真结果（自动写，别手改）',
