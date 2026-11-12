@@ -114,7 +114,7 @@ console.log('结果已落盘：' + join(OUT, 'last.json'))
 
 // 结论也写进工厂：真库的结果单独一页，跟沙箱那份分开，别互相覆盖。
 try {
-  const FACTORY = 'C:\\Users\\Administrator\\Desktop\\识海工厂_2026-11-07'
+  const FACTORY = process.env.SHIOHAI_FACTORY || 'C:\\Users\\Administrator\\Desktop\\识海工厂_2026-11-07'
   if (existsSync(FACTORY)) {
     const md = [
       '# 仿真结果 · 真库（自动写，别手改）',
