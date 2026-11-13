@@ -9,9 +9,9 @@
   "license": "PolyForm-Noncommercial-1.0.0",
   "repository": {
     "type": "git",
-    "url": "https://gitee.com/susu-the-heroine/dsh-consciousness.git"
+    "url": "git+https://github.com/susu-the-heroine/dsh-consciousness.git"
   },
-  "homepage": "https://gitee.com/susu-the-heroine/dsh-consciousness#readme",
+  "homepage": "https://github.com/susu-the-heroine/dsh-consciousness#readme",
   "main": "index.js",
   "type": "module",
   "files": [
@@ -58,5 +58,8 @@
     "forgetting-curve",
     "忆",
     "识海"
-  ]
+  ],
+  "bugs": {
+    "url": "https://github.com/susu-the-heroine/dsh-consciousness/issues"
+  }
 }
