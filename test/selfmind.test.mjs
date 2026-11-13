@@ -41,11 +41,15 @@ const a = S.addThought({ text: '今天想通了一点点：慢比快难。', ori
 ok(a.ok, '第一条写得进去', a.reason)
 ok(a.thought.id > 0 && a.thought.archived === false, '写进来的带着编号、还没归档')
 
-const b = S.addThought({ text: '这句很短。', origin: 'assoc' }, Date.now())
+// 额度只算 review 和 model；这条改用 model，才能把「三条」凑满。
+// 原来用 assoc，永远凑不满，那条断言其实一直没在测东西。
+const b = S.addThought({ text: '这句很短。', origin: 'model' }, Date.now())
 const c = S.addThought({ text: '第三条。', origin: 'model' }, Date.now())
 ok(b.ok && c.ok, '一天写三条：可以')
 
-const d = S.addThought({ text: '第四条。', origin: 'assoc' }, Date.now())
+// 额度只算「自己想」和「复盘」；assoc（联想）不占额度——这是设计，不是 bug。
+// 原来这里用 assoc 去撞，撞的是不存在的那道墙。
+const d = S.addThought({ text: '第四条。', origin: 'model' }, Date.now())
 ok(!d.ok && d.reason.includes('够了'), '第四条被挡住（一天最多三条）', d.reason)
 
 // 重复的不能写
