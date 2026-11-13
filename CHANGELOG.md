@@ -1,5 +1,11 @@
 # 变更记录
 
+## 0.4.1（2026-11-13）
+
+- **修 memory_count 调不动**：它调 `scripts/count.mjs`，但 `package.json` 的 files 里没有 scripts，发版时这个文件没进包。0.3.7 起一直如此，不是新坏。现在把 `scripts/count.mjs` 加进包。
+- `memory_count` 的报错改成能看出病因：文件缺失时直接说「少了 scripts/count.mjs」，不再只回一句「数不动」。
+
+
 ## 0.4.0（2026-11-12）
 
 - **向量搬进本地**：量化 bge-small-zh 模型 + WASM 推理引擎打进包，Node 里直接算。不装 Python、不装 torch、不联网。
