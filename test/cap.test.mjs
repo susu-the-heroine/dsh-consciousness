@@ -16,7 +16,9 @@ function ok(cond, name, detail) {
 console.log('\n体积上限：')
 
 // 正常情况：不超就不动
-const small = ['【识海 · 记忆上下文】', '【她这会儿】挺生气', '一句话']
+// 必保块后来加了「规矩·不许忘」（2026-11-11，cql 被压没一次之后）。
+// 样本要跟上，否则这条断言测的是旧世界。
+const small = ['【识海 · 记忆上下文】', '【她这会儿】挺生气', '【规矩·不许忘】', '一句话']
 const r1 = capParts(small)
 ok(!r1.truncated, '没超 → 不截')
 ok(r1.parts.length === small.length, '段落一个不少')
