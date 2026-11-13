@@ -1,6 +1,6 @@
 {
   "name": "dsh-consciousness2",
-  "version": "0.4.0",
+  "version": "0.4.1",
   "description": "识海：给 AI 用的长期记忆球，可写可看",
   "author": {
     "name": "苏苏侠",
@@ -27,7 +27,8 @@
     "LICENSE",
     "LICENSE.md",
     "COPYING",
-    "lib"
+    "lib",
+    "scripts/count.mjs"
   ],
   "dsh": {
     "bundle": {
