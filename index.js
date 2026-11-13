@@ -69,7 +69,7 @@ import { thinkTool } from './lib/tools-think.js'
 import {
   text, addTool, listTool, searchTool, analogyTool, storyTool, sedimentTool,
   rhythmTool, traceTool, askTool, archiveTool, renderTool, judgeTool, dateTool,
-  countTool, synthTool, exportTool,
+  countTool, synthTool, exportTool, importTool,
   promiseTool, seaTool,
 } from './lib/tools.js'
 import { tickOnce } from './lib/tick.js'
@@ -440,6 +440,7 @@ function _applyInner(ctx) {
   off.push((function(){ try { return ctx.tools.register(renderTool) } catch(e) { try { audit('boot-tool-fail', { tool: 'renderTool', err: String(e && e.message) }) } catch {} return () => {} } })())
 off.push((function(){ try { return ctx.tools.register(countTool) } catch(e) { try { audit('boot-tool-count-fail', { tool: 'countTool', err: String(e && e.message) }) } catch {} return () => {} } })())
   off.push((function(){ try { return ctx.tools.register(synthTool) } catch(e) { try { audit('boot-tool-fail', { tool: 'synthTool', err: String(e && e.message) }) } catch {} } })())
+  off.push((function(){ try { return ctx.tools.register(importTool) } catch(e) { try { audit('boot-tool-fail', { tool: 'importTool', err: String((e && e.message) || e) }) } catch {} return () => {} } })())
   off.push((function(){ try { return ctx.tools.register(exportTool) } catch(e) { try { audit('boot-tool-fail', { tool: 'exportTool', err: String((e && e.message) || e) }) } catch {} return () => {} } })())
   off.push((function(){ try { return ctx.tools.register(searchTool) } catch(e) { try { audit('boot-tool-fail', { tool: 'searchTool', err: String(e && e.message) }) } catch {} return () => {} } })())
     off.push((function(){ try { return ctx.tools.register(analogyTool) } catch(e) { try { audit('boot-tool-fail', { tool: 'analogyTool', err: String(e && e.message) }) } catch {} return () => {} } })())
