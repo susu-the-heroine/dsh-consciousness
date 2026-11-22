@@ -6,7 +6,7 @@
  *
  * 跑法：node scripts/backfill-alias.mjs [sea] [别名json] [--apply]
  */
-import { readFileSync } from 'node:fs'
+import { readFileSync, existsSync } from 'node:fs'
 import { homedir } from 'node:os'
 import { join, dirname } from 'node:path'
 import { fileURLToPath } from 'node:url'
@@ -20,6 +20,14 @@ const apply = process.argv.includes('--apply')
 
 const S = await import('file:///' + join(HERE, '..', 'lib', 'store-js.js').replace(/\\/g, '/') + '?v=' + Date.now())
 const map = JSON.parse(readFileSync(mapPath, 'utf8').replace(/^\uFEFF/, ''))
+// 2026-11-21：锁那一步会先 mkdir 这个海的目录。海名打错时，它就在真库里
+// 造一个空壳海（今晚我自己踩过：多出一个空的 t1、一个空的 nosuchsea）。
+// 先看真文件在不在，不在就别碰目录。
+const dataFile = join(homedir(), '.dsh', 'consciousness-seas', sea, 'data.json')
+if (!existsSync(dataFile)) {
+  console.log('没有这个海：' + sea)
+  process.exit(2)
+}
 const lock = S.lockSea(sea)
 if (!lock.ok) { console.log('拿不到锁:', lock.err); process.exit(1) }
 try {

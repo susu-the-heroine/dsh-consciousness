@@ -59,7 +59,11 @@ const p1 = after.points[0]
 const p2 = after.points[1]
 
 ok('缺的 tag 补上了', !!p1.tag, p1.tag)
-ok('缺的 entities 或 triggers 有补（有内容才补）', true)
+// 2026-11-21：这条原来直接写 true —— 名字叫「有补」，实际什么都没验。
+// 现在真看：补齐之后 entities 和 triggers 都得是数组（补的样子对不对另说，至少先确认补上了）。
+ok('缺的 entities 和 triggers 补上了（是数组）',
+  Array.isArray(p1.entities) && Array.isArray(p1.triggers),
+  JSON.stringify({ entities: p1.entities, triggers: p1.triggers }))
 ok('缺的 confidence 补上了', p1.confidence === 0.85)
 ok('缺的 recallCount 补成 0', p1.recallCount === 0)
 ok('已有的 imp 没被覆盖', p2.imp === imp2, `${p2.imp} vs ${imp2}`)

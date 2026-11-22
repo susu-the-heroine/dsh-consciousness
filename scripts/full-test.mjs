@@ -21,7 +21,13 @@ import { homedir } from 'node:os'
 
 const DATA = join(homedir(), '.dsh', 'consciousness-seas', 'sandbox', 'data.json')
 const OUT = join(homedir(), '.dsh', 'full-tests.jsonl')
-const sea = existsSync(DATA) ? JSON.parse(readFileSync(DATA, 'utf8')) : { points: [] }
+// 2026-11-21：没有沙箱海时它不吭声，照跑二十问、全记成「没捞到」——
+// 看着像检索坏了，其实是没库。先自查一句再开工。
+if (!existsSync(DATA)) {
+  console.log('没有沙箱海：' + DATA + '（先建一个沙箱海再跑这份测试）')
+  process.exit(2)
+}
+const sea = JSON.parse(readFileSync(DATA, 'utf8').replace(/^\uFEFF/, ''))
 const pts = (sea.points || []).filter((p) => !p.dead)
 
 const PROBES = [

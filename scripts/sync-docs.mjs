@@ -11,7 +11,7 @@
  *   node scripts/sync-docs.mjs          扫一遍，写索引
  *   node scripts/sync-docs.mjs --show   扫完打印前十条
  */
-import { readFileSync, writeFileSync, readdirSync, statSync, existsSync } from 'node:fs'
+import { readFileSync, writeFileSync, readdirSync, statSync, existsSync, mkdirSync } from 'node:fs'
 import { join, basename, relative } from 'node:path'
 import { homedir } from 'node:os'
 import { createHash } from 'node:crypto'
@@ -81,6 +81,9 @@ for (const root of ROOTS) {
   }
 }
 
+// 2026-11-21：新机器上还没 .dsh 目录时，这一步直接 ENOENT 崩——实测在空家目录里跑，
+// 前面扫得好好的，最后写索引时崩掉。做给别人用的东西，别指望人家目录先存在。
+mkdirSync(join(HOME, '.dsh'), { recursive: true })
 writeFileSync(OUT, JSON.stringify({ at: Date.now(), count: Object.keys(next).length, items: next }, null, 0), 'utf8')
 
 console.log(`登记 ${Object.keys(next).length} 份，变动 ${changed.length} 份 → ${OUT}`)

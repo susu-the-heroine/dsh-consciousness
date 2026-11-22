@@ -61,7 +61,16 @@ function collect() {
       if (line.length < 24 || line.length > 200) continue
       if (!/[「“]/.test(line)) continue
       if (/^\|/.test(line) || /^#{1,6}\s/.test(line)) continue
-      out.push(line)
+      // 2026-11-21：原文是 markdown，行首常带「- 」和引号。原样搬进来，
+      // 标题变成「- 「oi」「在不在」」，探针从句子中间硬切八个字，切出「」「在吗」——找」这种不是话的东西。
+      // 进种子前先剥掉列表符号和首尾引号。
+      const cleaned = line
+        .replace(/^[-*+]\s*/, '')
+        .replace(/^[「“\"'\s]+/, '')
+        .replace(/[」”\"'\s]+$/, '')
+        .trim()
+      if (cleaned.length < 12) continue
+      out.push(cleaned)
     }
   }
   return out
@@ -91,8 +100,12 @@ export const AGENTS30 = TOPICS.map(([topic, re], i) => {
   // 探测：拿一句真话里的六个字去问，期望翻回这一条
   const probes = pool.slice(0, 2).map((line) => {
     const t = line.slice(0, 16)
-    const mid = line.slice(Math.max(0, Math.floor(line.length / 3)), Math.floor(line.length / 3) + 8)
-    return { q: mid || t, expect: t }
+    // 2026-11-21：原来从句子左边三分之一处硬切八个字，切出来常是标点和破折号。
+    // 改成挑一段连续的汉字/字母/数字（六到八字），那才有话的样子。
+    const runs = [...line.matchAll(/[\u4e00-\u9fa5A-Za-z0-9]{4,}/g)].map((m) => m[0])
+    const best = runs.sort((x, y) => y.length - x.length)[0] || ''
+    const q = best.length >= 6 ? best.slice(0, 8) : (best || t)
+    return { q, expect: t }
   })
   return {
     name: String(i + 1).padStart(2, '0') + ' ' + topic + ' · ' + PERSONAS[i % PERSONAS.length],

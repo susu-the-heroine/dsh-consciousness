@@ -104,3 +104,6 @@ const sample = points.find((p) => p.id) || points[0]
 const back = db.prepare('SELECT * FROM points WHERE id = ?').get(Number(sample.id))
 const same = back && back.title === String(sample.title || '') && back.text === String(sample.text || '')
 console.log(`抽检 #${sample.id} 逐字段一致: ${same ? '是' : '否'}`)
+// 2026-11-21：原来抽检不一致也算跑完，退出码照旧零——一份「只导入、验一致」的脚本，
+// 验出不一致还报成功，等于白验。改成不一致就带非零退出码，让调用方看得见。
+if (!same) process.exitCode = 1

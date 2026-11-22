@@ -25,13 +25,25 @@ const FILE = join(homedir(), '.dsh', 'consciousness-pins.json')
 const CAP = 15
 
 function load() {
+  // 2026-11-21：文件坏了以前也当「一颗都没有」，接着 --add 就把坏文件覆盖成只剩新钉——
+  // 旧的钉子一条不剩，而且不吭声。钉子又是「错一次就完」的那类东西，丢不起。
+  // 现在分开说：没文件是没文件，读不动是读不动，读不动就不许写。
+  if (!existsSync(FILE)) return { pins: [] }
   try {
-    if (!existsSync(FILE)) return { pins: [] }
     const j = JSON.parse(readFileSync(FILE, 'utf8').replace(/^\uFEFF/, ''))
     return { pins: Array.isArray(j.pins) ? j.pins : [] }
-  } catch {
-    return { pins: [] }
+  } catch (e) {
+    return { pins: [], broken: String((e && e.message) || e).slice(0, 80) }
   }
+}
+
+/** 读不动就别往下走：只读的动作可以继续（会显示空），写的动作一律拦下。 */
+function stopIfBroken(o) {
+  if (!o.broken) return
+  console.log('钉子文件读不动：' + o.broken)
+  console.log('文件在：' + FILE)
+  console.log('先把它修好或挪走再加——我不拿一个空名单去覆盖它。')
+  process.exit(3)
 }
 
 function save(o) {
@@ -51,6 +63,7 @@ if (has('--add')) {
     process.exit(1)
   }
   const o = load()
+  stopIfBroken(o)
   const exists = o.pins.find((x) => Number(x.id) === id)
   if (exists) {
     exists.why = why
@@ -70,6 +83,7 @@ if (has('--add')) {
   const i = argv.indexOf('--remove')
   const id = Number(argv[i + 1])
   const o = load()
+  stopIfBroken(o)
   const n = o.pins.length
   o.pins = o.pins.filter((x) => Number(x.id) !== id)
   save(o)

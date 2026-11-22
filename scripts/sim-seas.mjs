@@ -16,8 +16,12 @@ import { mkdirSync, rmSync, writeFileSync, existsSync } from 'node:fs'
 import { spawn } from 'node:child_process'
 import { homedir, tmpdir } from 'node:os'
 import { join } from 'node:path'
+import { fileURLToPath } from 'node:url'
 
-const NODE = process.execPath
+// 2026-11-21：在插件里跑的时候 process.execPath 是桌面那个 exe，不是 node。
+// 拿它去起子进程，起出来的是本体、不是脚本，五个智能体全会报「没跑出结果」。
+// 跟 test-mutate 里那处同源：不在 node 里就找环境变量，再不行退回 PATH 上的 node。
+const NODE = /node(\.exe)?$/i.test(process.execPath) ? process.execPath : (process.env.DSH_NODE || 'node')
 const BASE = new URL('../', import.meta.url).href
 
 const PROFILES = [
@@ -167,7 +171,10 @@ for (const p of PROFILES) {
   const home = join(tmpRoot, p.name.replace(/[^\w]/g, '_'))
   mkdirSync(join(home, '.dsh'), { recursive: true })
   const env = { ...process.env, USERPROFILE: home, HOME: home }
-  const child = spawn(NODE, [new URL('./_sea-one.mjs', import.meta.url).pathname.replace(/^\//, ''), JSON.stringify(p)], {
+  // 2026-11-21：这里原来拿网址里的路径、再手削掉开头那个斜杠当文件名用。
+  // 在 Windows 上碰巧对（削掉后是 C:/…），在别处就削成了相对路径；路径带空格或中文还会被转成百分号编码。
+  // 改成正规的文件地址转路径。
+  const child = spawn(NODE, [fileURLToPath(new URL('./_sea-one.mjs', import.meta.url)), JSON.stringify(p)], {
     env,
     stdio: ['ignore', 'pipe', 'pipe'],
   })
@@ -212,6 +219,8 @@ L.push('')
 L.push('合计：通过 ' + tp + ' · 失败 ' + tf)
 
 const out = join(homedir(), 'Desktop', '多智能体识海.md')
+// 2026-11-21：桌面目录不存在会直接报错，五个智能体跑完白费。
+mkdirSync(join(homedir(), 'Desktop'), { recursive: true })
 writeFileSync(out, L.join('\n'), 'utf8')
 writeFileSync(join(homedir(), 'Desktop', '多智能体识海.json'), JSON.stringify({ profiles: PROFILES, results }, null, 1), 'utf8')
 

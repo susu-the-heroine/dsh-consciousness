@@ -35,12 +35,15 @@ function idsOf(res) {
 
 let pos = 0, h1 = 0, h3 = 0, h10 = 0
 let neg = 0, negWeak = 0
+// 2026-11-21：检索抛错原来是当「没命中」算的——库里、向量服务出问题时，
+// 报出来的是一份看着正常的低分，人不会知道这轮根本没跑成。先记数。
+let threw = 0
 const misses = []
 const t0 = Date.now()
 
 for (const c of cases) {
   let res = null
-  try { res = await tool.execute({ query: c.q, limit: LIMIT }) } catch (e) { res = { log: '' } }
+  try { res = await tool.execute({ query: c.q, limit: LIMIT }) } catch (e) { res = { log: '' }; threw++ }
   const ids = idsOf(res)
   const txt = String((res && res.log) || '')
   if (c.want == null) {
@@ -64,6 +67,7 @@ console.log(`头名    ${h1}/${pos}  ${pct(h1, pos)}`)
 console.log(`前三    ${h3}/${pos}  ${pct(h3, pos)}`)
 console.log(`前十    ${h10}/${pos}  ${pct(h10, pos)}`)
 console.log(`反例被判"凑出来的"  ${negWeak}/${neg}  ${pct(negWeak, neg)}`)
+if (threw) console.log(`抛错 ${threw} 条（这些被当成没命中算进上面了——这轮的数不能当准）`)
 console.log('')
 console.log('没进头名（前几条）：')
 for (const m of misses.slice(0, 8)) console.log(`  ${m.q} → 想要 #${m.want}，排 ${m.at}`)
@@ -72,3 +76,4 @@ const outFile = join(HERE, 'data', 'rank-baseline.json')
 writeFileSync(outFile, JSON.stringify({ at: new Date().toISOString(), set: setPath, limit: LIMIT, pos, h1, h3, h10, neg, negWeak, misses }, null, 1), 'utf8')
 console.log('')
 console.log('已存:', outFile)
+if (threw) process.exit(1)

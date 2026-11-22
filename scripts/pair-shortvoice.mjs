@@ -63,6 +63,9 @@ for (const t of neg) {
 
 const KEYS = Object.keys(feats('测试')).filter((k) => k !== '_n')
 let pairs = 0
+// 2026-11-21：原来负例均值一律除以「配对×3」，可同长度负例有时只有一两条，
+// 除数照旧是 3——所有负例均值被压低，于是每个特征都显得「他更爱用」。改成按实际取了几条除。
+let negCount = 0
 const sumHis = {}
 const sumNeg = {}
 for (const k of KEYS) { sumHis[k] = 0; sumNeg[k] = 0 }
@@ -80,6 +83,7 @@ for (const p of uniqHis) {
     const fn = feats(n)
     for (const k of KEYS) sumNeg[k] += fn[k]
   }
+  negCount += take.length
   pairs++
 }
 
@@ -89,7 +93,7 @@ const pos = {}
 const negm = {}
 for (const k of KEYS) {
   pos[k] = sumHis[k] / (pairs || 1)
-  negm[k] = sumNeg[k] / (pairs * 3 || 1)
+  negm[k] = sumNeg[k] / (negCount || 1)
 }
 
 console.log('\n特征        他      同长度负例    差')
@@ -128,5 +132,6 @@ for (let i = 0; i < hisScore.length; i += 3) {
     else if (hisScore[i] === negScore[j]) greater += 0.5
   }
 }
+console.log('\n配上的负例共 ' + negCount + ' 条（平均每对 ' + (negCount / (pairs || 1)).toFixed(2) + ' 条）')
 console.log('\n他 均分 ' + mean(hisScore).toFixed(3) + '｜同长度负例 均分 ' + mean(negScore).toFixed(3))
 console.log('AUC = ' + (greater / cmp).toFixed(3) + '（0.5 = 瞎猜，1.0 = 完美分开，0.7 以上算能用）')

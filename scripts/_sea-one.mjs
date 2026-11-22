@@ -122,9 +122,13 @@ if (real) {
 /** 六、冲突 */
 const con = C.findConflicts(mems)
 const shouldConflict = (profile.expectConflicts || 0) > 0
-ok(con.length >= (profile.expectConflicts || 0),
-  shouldConflict ? '该报的冲突报出来了' : '没有冲突时不乱报',
-  '实际 ' + con.length)
+// 2026-11-21：期望零冲突时，原来判的是「实际 >= 0」——恒真，乱报也绿。
+// 现造两条同事实键都活着的记忆试过：它照样打勾。改成零就要求真的零。
+if (shouldConflict) {
+  ok(con.length >= profile.expectConflicts, '该报的冲突报出来了', '实际 ' + con.length)
+} else {
+  ok(con.length === 0, '没有冲突时不乱报', '实际 ' + con.length)
+}
 
 /** 七、私有池 */
 const before = S.listThoughts(50, true).length

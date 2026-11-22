@@ -45,15 +45,23 @@ const unanswerable = [
 let hurt = 0
 let caught = 0
 const bad = []
+const leaked = []
 for (const [q, t] of answerable) {
   if (shapeMissing(q, t)) { hurt++; bad.push('误伤：' + q + '（认成 ' + JSON.stringify(answerShape(q, t)) + '）') }
 }
 for (const [q, t] of unanswerable) {
   if (shapeMissing(q, t)) caught++
+  else leaked.push(q + '  ← 该挡没挡；认成 ' + JSON.stringify(answerShape(q, t)))
 }
 
 console.log('能答上的', answerable.length, '条 → 误伤', hurt, '条（必须为 0）')
 console.log('答不上的', unanswerable.length, '条 → 挡住', caught, '条')
+
+// 没挡住的也要看得见：挡漏不是"没事"，是这条规则还认不出来的问法。
+if (leaked.length) {
+  console.log('\n该挡没挡的（挡漏，不是错，但要记着）：')
+  for (const l of leaked) console.log('  ' + l)
+}
 
 if (hurt > 0) {
   console.log('\n逐条看：')

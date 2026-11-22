@@ -13,7 +13,7 @@
  * 输出：~/.dsh/记忆/_双向语料.jsonl
  * 跑法：node scripts/make-pairs.mjs
  */
-import { readFileSync, writeFileSync, existsSync, mkdirSync } from 'node:fs'
+import { readFileSync, writeFileSync, existsSync, mkdirSync, copyFileSync } from 'node:fs'
 import { homedir } from 'node:os'
 import { join } from 'node:path'
 
@@ -56,6 +56,19 @@ for (const p of pts) {
 }
 
 mkdirSync(join(homedir(), '.dsh', '记忆'), { recursive: true })
+// 2026-11-21：这个文件是写在他真档案目录里的（_双向语料.jsonl，现在九十三行）。
+// 原来一声不响就整份盖掉：拼不出任何一对的时候，也照样盖成空文件。
+// 现在：一对都没有就不写；真要写，先把旧的那份挪成带时间的备份。
+if (!pairs.length) {
+  console.log('一对都拼不出来（记忆里的引号原话和她的反应没凑上），不写文件。')
+  console.log('  记忆 ' + pts.length + ' 条 · 旧文件没动：' + OUT)
+  process.exit(3)
+}
+if (existsSync(OUT)) {
+  const stamp = new Date().toISOString().replace(/[:.]/g, '-')
+  const old = OUT + '.bak-' + stamp
+  try { copyFileSync(OUT, old); console.log('旧的那份已备份：' + old) } catch (e) { console.log('备份失败，先不写：' + String(e && e.message || e)) ; process.exit(4) }
+}
 writeFileSync(OUT, pairs.map((x) => JSON.stringify(x)).join('\n') + '\n', 'utf8')
 
 const score = (texts) => {

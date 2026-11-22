@@ -52,7 +52,13 @@ layer('数据层')
     }
     let r = null
     for (let k = 0; k < 4; k++) {
-      r = await T.addTool.execute(args, {})
+      // 2026-11-21：写入口抛错时（拿不到锁、拒写之类），原来会把整份跑挂掉——
+      // 一个人因为一条写失败就整份没结果，后面十几层全白跑。这里接住，记一条失败继续走。
+      try {
+        r = await T.addTool.execute(args, {})
+      } catch (e) {
+        r = { ok: false, log: String((e && e.message) || e) }
+      }
       if (r && r.ok) break
       // 撞上写锁就等一下再试（并发写同一进程时会出现）
       await new Promise((res) => setTimeout(res, 300))
@@ -162,11 +168,14 @@ layer('证据层')
 
   // 篡改一行，链该断
   const { readFileSync, writeFileSync, existsSync, readdirSync } = await import('node:fs')
+  const { join: pjoin } = await import('node:path')
   const dir = E.rawDir(SEA)
   let f = null
   if (existsSync(dir)) {
     const files = readdirSync(dir).filter((x) => x.endsWith('.jsonl') || x.endsWith('.ndjson') || x.includes('raw'))
-    if (files.length) f = dir + '\\' + files[0]
+    // 2026-11-21：这里原来是手拼反斜杠——换到非 Windows 上这条路就断了，
+    // 而它后面那句「给了原话却没落盘」会红得莫名其妙。改用系统自带的拼法。
+    if (files.length) f = pjoin(dir, files[0])
   }
   const anySaid = (store.readSea(SEA).points || []).some((p) => p.said && String(p.said).trim())
   if (anySaid) ok(!!f, '给了原话 → 原话链落盘了', dir)

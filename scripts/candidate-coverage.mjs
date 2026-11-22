@@ -21,10 +21,20 @@ const M = await import('file:///' + join(HERE, '..', 'lib', 'sqlite-mirror.js').
 const V = await import('file:///' + join(HERE, '..', 'lib', 'vectors.js').replace(/\\/g, '/') + '?v=' + Date.now())
 const E = await import('file:///' + join(HERE, '..', 'lib', 'embed-onnx.js').replace(/\\/g, '/') + '?v=' + Date.now())
 
-const vecs = JSON.parse(readFileSync(join(dir, 'vectors.json'), 'utf8').replace(/^\uFEFF/, ''))
+// 2026-11-21：海名打错或镜像还没建时，原来直接吐栈（实测跑一个不存在的海就是这样）。
+// 先说清缺哪份，再退。
+const vecFile = join(dir, 'vectors.json')
+const dbFile = join(dir, 'memory.db')
+if (!existsSync(vecFile) || !existsSync(dbFile)) {
+  console.log('这个海缺文件：' + sea)
+  if (!existsSync(vecFile)) console.log('  缺向量：' + vecFile)
+  if (!existsSync(dbFile)) console.log('  缺镜像库：' + dbFile + '（先跑一次镜像同步）')
+  process.exit(2)
+}
+const vecs = JSON.parse(readFileSync(vecFile, 'utf8').replace(/^\uFEFF/, ''))
 const ids = Object.keys(vecs).map(Number)
 const { DatabaseSync } = createRequire(import.meta.url)('node:sqlite')
-const db = new DatabaseSync(join(dir, 'memory.db'), { readOnly: true })
+const db = new DatabaseSync(dbFile, { readOnly: true })
 
 const set = JSON.parse(readFileSync(join(HERE, 'data', 'recall-set-v2.json'), 'utf8').replace(/^\uFEFF/, ''))
 const cases = (set.cases || []).filter((c) => c && c.q && c.want != null)

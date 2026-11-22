@@ -11,7 +11,7 @@
  *
  * 规矩：只填空，不覆盖；不加 --apply 一律不写盘。
  */
-import { readFileSync } from 'node:fs'
+import { readFileSync, existsSync } from 'node:fs'
 import { join, dirname } from 'node:path'
 import { fileURLToPath } from 'node:url'
 
@@ -36,7 +36,19 @@ if (args.includes('--scan')) {
   console.log('补什么：', JSON.stringify(r.stat))
 } else if (get('--import')) {
   const f = get('--import')
-  const list = JSON.parse(readFileSync(f, 'utf8').replace(/^\uFEFF/, ''))
+  // 2026-11-21：文件不存在时直接甩一段读文件的栈出来（实测退出码一、前几行全是
+  // node:fs 内部），看不出是"路径写错了"。先看一眼在不在，说人话。
+  if (!existsSync(f)) {
+    console.log('找不到这个文件：' + f)
+    console.log('相对路径按当前目录算，拿不准就写全路径。')
+    process.exit(2)
+  }
+  let list
+  try { list = JSON.parse(readFileSync(f, 'utf8').replace(/^\uFEFF/, '')) } catch (e) {
+    console.log('这个文件不是能读的 JSON：' + f)
+    console.log(String((e && e.message) || e).slice(0, 120))
+    process.exit(2)
+  }
   const arr = Array.isArray(list) ? list : (list.points || [])
   const r = M.importPoints(sea, arr, { dedupe: true, apply })
   if (!r.ok) { console.log('失败：', r.err); process.exit(1) }

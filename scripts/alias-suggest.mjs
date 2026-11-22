@@ -12,7 +12,7 @@
  *
  * 生成的是候选，不是定稿；规则抽出来的问法有时很笨，所以要人看一眼。
  */
-import { writeFileSync } from 'node:fs'
+import { mkdirSync, writeFileSync } from 'node:fs'
 import { homedir } from 'node:os'
 import { join, dirname } from 'node:path'
 import { fileURLToPath } from 'node:url'
@@ -79,6 +79,10 @@ try {
   else S.unlockSea(lock)
 
   const outFile = join(HERE, 'data', `alias-suggest-${sea}.json`)
+  // 2026-11-21：审阅稿目录不在就直接写，会 ENOENT 抛错（实测：把 data 目录挪走再跑，退出码 1）。
+  // 更要紧的是顺序：加 --apply 时库已经写回完了，再在这里抛错，人看到「出错」会以为没改，其实改了。
+  // 先建目录，让这一步不再成为最后那个雷。
+  mkdirSync(join(HERE, 'data'), { recursive: true })
   writeFileSync(outFile, JSON.stringify(rows, null, 1), 'utf8')
   console.log(`海 ${sea} · 没别名 ${missing.length} 条 · 出了 ${rows.length} 条候选`)
   console.log('审阅稿:', outFile)

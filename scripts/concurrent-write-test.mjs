@@ -1,3 +1,4 @@
+import { NODE as _nodeBin } from './_node-bin.mjs'
 /**
  * 并发写入压测
  * ============
@@ -47,7 +48,7 @@ const env = { ...process.env, USERPROFILE: home, HOME: home, WORKER_M: String(M)
 const runs = []
 for (let t = 0; t < N; t++) {
   runs.push(new Promise((resolve) => {
-    const c = spawn(process.execPath, [SELF, '--worker', String(t)], { env, windowsHide: true })
+    const c = spawn(_nodeBin, [SELF, '--worker', String(t)], { env, windowsHide: true })
     let err = ''
     c.stderr.on('data', (d) => { err += String(d) })
     c.on('close', (code) => resolve({ t, code, err }))

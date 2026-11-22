@@ -71,4 +71,6 @@ const t5 = Date.now()
 const r = W.writeOne('main', { title: '一万条之后再加一条', text: '在这堆里再写一条，看它慢不慢。', kind: 'fact' })
 console.log(`在这个规模上再写一条：${Date.now() - t5} ms · ${r.ok ? '成功' : '失败 ' + r.err}`)
 
-rmSync(home, { recursive: true, force: true })
+// 2026-11-21：清理没兜住。写库那边句柄还没放时，Windows 删目录报拒绝——
+// 四样数全打完了，退出码还是被这行变成一，看着像整套挂了。实测五百条跑完就是 EPERM。
+try { rmSync(home, { recursive: true, force: true }) } catch { console.log('临时目录没删掉（有句柄占着？），留着：' + home) }

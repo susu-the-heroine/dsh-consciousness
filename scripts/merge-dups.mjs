@@ -26,6 +26,13 @@ if (!lock.ok) { console.log('拿不到锁:', lock.err); process.exit(1) }
 
 try {
   const data = S.readSea(sea)
+  // 2026-11-21：海不存在时 readSea 返回 null，下一行就崩成一句 TypeError。
+  // 实测跑一个不存在的海名就是这样——看不出是「名字打错」还是「库坏了」。
+  if (!data) {
+    try { S.unlockSea(lock) } catch {}
+    console.log('没有这个海：' + sea)
+    process.exit(2)
+  }
   const byId = new Map((data.points || []).map((p) => [Number(p.id), p]))
   const report = []
 
@@ -52,7 +59,17 @@ try {
   }
 
   if (apply) {
-    try { S.backupSea(sea) } catch (e) { console.log('备份失败:', String(e && e.message)) }
+    // 2026-11-21：备份失败原来只打一行就照样写。实测把备份目录弄坏再跑，它照写不误，
+    // 末尾还报「已合并并备份」——这是要标死条目的操作，没有回滚点就不该动。
+    let bak = null
+    try { bak = S.backupSea(sea) } catch (e) {
+      console.log('备份失败:', String(e && e.message))
+    }
+    if (!bak) {
+      try { S.unlockSea(lock) } catch {}
+      console.log('没有备份成功，这次一条都不改。先把备份目录修好再来。')
+      process.exit(2)
+    }
     S.writeSea(sea, data, lock)
   } else {
     S.unlockSea(lock)

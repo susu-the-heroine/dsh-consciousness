@@ -1,0 +1,107 @@
+**
+ * 閲嶆帓
+ * ====
+ *
+ * 妫€绱㈠嚭鏉ョ殑鍊欓€夊凡缁忔帓杩囦竴娆★紝杩欓噷鍐嶆帓涓€娆°€傜洰鏍囧彧鏈変竴涓細
+ * 鎶娿€屽儚浣嗕笉瀵广€嶇殑鍘嬩笅鍘伙紝鎶娿€岀‘瀹炲浣嗘帓浣庝簡銆嶇殑鎶笂鏉ャ€?
+ *
+ * 涓轰粈涔堜笉鐢ㄦā鍨嬶細鏈満娌¤閲嶆帓妯″瀷锛屼笅杞借鍑犱釜 G锛岃浜嗚繕寰楀悆 CPU銆?
+ * 鍏堢敤瑙勫垯鎶婅兘绠楃殑绠楀噯鈥斺€旇繖涓€鐗堜笉瑙ｅ喅璇箟锛屽彧瑙ｅ喅鎺掑簭銆?
+ *
+ * 寮€鍏筹細楂樻。浠ヤ笂鎵嶈窇锛坙ow 妗ｅ氨鏄鐪侊紝鍒负鎺掑簭澶氳姳鍔涙皵锛夈€?
+ * 2026-11-11 娣卞銆?
+ */
+import { qualityRank } from './quality.js'
+
+/** 鍘绘帀鏍囩偣鍜岀┖鐧斤紝鍙暀瀛?*/
+export function flat(s) {
+  return String(s || '').replace(/[\s\u3000锛屻€傘€侊紒锛燂紱锛?"''锛堬級()銆娿€嬄封€︹€擻-.,!?;:'"()銆愩€慮/g, '')
+}
+
+// 闂彞閲屽嚭鐜拌繖浜涳紝璇存槑浠栬鐨勬槸銆屽綋鏃堕偅鍙ヨ瘽銆嶏紝涓嶆槸姒傝堪
+const WANT_QUOTE = /鍘熻瘽|璇磋繃|鎬庝箞璇寸殑|閭ｅ彞|鍜嬭鐨剕浠€涔堣姘?
+// 闂彞閲屽嚭鐜拌繖浜涳紝璇存槑浠栧湪闂煇涓€澶?
+const WANT_DAY = /閭ｅぉ|鏄ㄥぉ|鍓嶅ぉ|褰撴椂|閭ｄ細鍎縷涓婃|閭ｅ勾/
+
+const pts = (s) => [...String(s || '')]
+
+/**
+ * 缁欎竴鎵瑰€欓€夐噸鏂版帓銆?
+ * @param {Array} scored  [{p, score, why, ...}]
+ * @param {string} query  鍘熼棶鍙?
+ * @returns {Array} 鏂版暟缁勶紝涓嶆敼鍘熷璞￠噷鐨勪笢瑗匡紙鍙姞 why锛?
+ */
+export function rerank(scored, query) {
+  const list = Array.isArray(scored) ? scored.slice() : []
+  if (!list.length) return list
+  // 浣庢。涓嶈窇锛氫綆妗ｇ殑璁捐鐩爣灏辨槸鐪?
+  if (qualityRank() < 2) return list
+
+  const qf = flat(query)
+  const wantQuote = WANT_QUOTE.test(String(query || ''))
+  const wantDay = WANT_DAY.test(String(query || ''))
+  const qChars = new Set(pts(qf))
+  const now = Date.now()
+
+  // 鍙噸鎺掑ご閮細鏈€缁堝彧鍑哄崄鏉′互鍐咃紝缁欎袱鍗冩潯閫愭潯绠楁爣棰樺崰姣旀槸鐧界儳 CPU锛?026-11-18 澶滐級
+  const TOPN = Math.max(20, Number(process.env.C2_RERANK_TOPN) || 60)
+  const _head = list.slice(0, TOPN).map((x, i) => (x.__i === undefined ? ((x.__i = i), x) : x))
+  const _tail = list.slice(TOPN)
+  const scoredList = _head.map((x, i) => {
+    const p = x.p || {}
+    let add = 0
+    const why = []
+
+    // 涓€銆佹暣鍙ュ瓧闈㈠懡涓細杩欐潯鏈€纭紝鐩存帴鎶埌鏈€鍓?
+    const hay = flat(p.title) + flat(p.text)
+    if (qf.length >= 6 && hay.includes(qf)) {
+      add += 0.3
+      why.push('鏁村彞')
+    }
+
+    // 浜屻€佹爣棰樺懡涓殑瀛楁暟鍗犳瘮锛氭爣棰樺寰椾笂锛屾瘮姝ｆ枃閲岃弓鍒颁竴涓瘝鏇村彲淇?
+    const tf = flat(p.title)
+    if (tf && qf.length >= 4) {
+      let hitN = 0
+      for (const ch of qChars) if (tf.includes(ch)) hitN++
+      const ratio = hitN / Math.max(1, qChars.size)
+      if (ratio >= 0.5) {
+        add += 0.12 * ratio
+        why.push('鏍囬' + ratio.toFixed(2))
+      }
+    }
+
+    // 涓夈€佷粬瑕佸師璇濓紝灏辩粰甯﹀璇濈殑閭ｅ嚑鏉?
+    if (wantQuote) {
+      const hasQuote = /[銆屻€?"']/.test(String(p.text || ''))
+      if (hasQuote) { add += 0.15; why.push('甯﹀師璇?) }
+    }
+
+    // 鍥涖€佷粬闂?閭ｅぉ"锛岃繎鏈熺殑浜嬫洿鍙兘鏄粬瑕佺殑閭ｅぉ
+    if (wantDay) {
+      const t = Number(p.born) || Number(p.lastSeen) || 0
+      if (t) {
+        const days = (now - t) / 86400000
+        if (days <= 3) { add += 0.12; why.push('杩戜笁澶?) }
+        else if (days <= 30) { add += 0.05; why.push('鏈湀') }
+      }
+    }
+
+    // 鍚堟垚鏉℃槸浜屾墜鐨勶細瀹冪敱鍒殑璁板繂鎷煎嚭鏉ワ紝涓嶈鍘嬭繃閭ｄ簺鍘熸潵鐨勪竴鏉℃潯銆?
+    // 瀹炴祴锛氶棶銆屾绱㈣繖鏉℃€庝箞淇殑銆嶏紝鍚堟垚閭ｆ潯椤舵帀浜嗗師浠躲€?026-11-11 娣卞銆?
+    if (/^銆斿悎鎴愩€晐^\[鍚堟垚\]/.test(String(p.title || ''))) {
+      add -= 0.12
+      why.push('鍚堟垚闄嶆潈')
+    }
+
+    if (add) {
+      x.score = Number(x.score || 0) + add
+      x.why = Array.isArray(x.why) ? [...x.why, '閲嶆帓+' + add.toFixed(2)] : ['閲嶆帓+' + add.toFixed(2)]
+    }
+    return { x, i, s: Number(x.score) || 0 }
+  })
+
+  // 鍒嗘暟楂樼殑鍦ㄥ墠锛涘悓鍒嗕繚鎸佸師椤哄簭锛堢ǔ瀹氭€ф瘮闅忔満濂斤級
+  scoredList.sort((a, b) => (b.s - a.s) || (a.i - b.i))
+  return scoredList.map((o) => o.x)
+}

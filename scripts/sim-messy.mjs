@@ -113,7 +113,9 @@ function mess(text, level) {
     ops.push('表情')
   }
   if (rnd() < 0.12) {
-    t = t.replace(/[\u4e00-\u9fa5]{1,4}/, (w) => w.toUpperCase() === w ? w : 'AI')
+    // 2026-11-21：原来是把中文词换成它自己的大写——中文的大写就是它自己，判断恒真，
+    // 这个动作从来没改过任何字，可标题里一直写着「夹英文」在测。改成真塞一个英文词。
+    t = t + ' ' + pick(['OK', 'fine', 'lol', 'GMod', 'pls'])
     ops.push('夹英文')
   }
   return t.slice(0, 120)

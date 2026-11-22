@@ -39,10 +39,12 @@ $profile = "$env:USERPROFILE\.dsh\profiles\desktop"
 **2. 改 profile 的 package.json**——两处，缺一不可：
 
 ```powershell
+# 名字从包里读，别手抄——包名改成 dsh-consciousness2 之后，手抄的全是废的
+$name = (Get-Content "$plugin\package.json" -Raw | ConvertFrom-Json).name
 $pkg = Get-Content "$profile\package.json" -Raw | ConvertFrom-Json
-$pkg.dependencies | Add-Member -NotePropertyName 'dsh-consciousness' -NotePropertyValue "link:$plugin" -Force
-if ($pkg.dsh.profile.bundles -notcontains 'dsh-consciousness') {
-  $pkg.dsh.profile.bundles += 'dsh-consciousness'
+$pkg.dependencies | Add-Member -NotePropertyName $name -NotePropertyValue "link:$plugin" -Force
+if ($pkg.dsh.profile.bundles -notcontains $name) {
+  $pkg.dsh.profile.bundles += $name
 }
 $pkg | ConvertTo-Json -Depth 20 | Set-Content "$profile\package.json" -Encoding utf8
 ```
@@ -79,8 +81,8 @@ $pnpm = "$env:USERPROFILE\.dsh\dsh-runtimes\dsh-primary-runtime\dependencies\pnp
 ```powershell
 $profile = "$env:USERPROFILE\.dsh\profiles\desktop"
 $pkg = Get-Content "$profile\package.json" -Raw | ConvertFrom-Json
-$pkg.dependencies.PSObject.Properties.Remove('dsh-consciousness')
-$pkg.dsh.profile.bundles = @($pkg.dsh.profile.bundles | Where-Object { $_ -ne 'dsh-consciousness' })
+$pkg.dependencies.PSObject.Properties.Remove($name)
+$pkg.dsh.profile.bundles = @($pkg.dsh.profile.bundles | Where-Object { $_ -ne $name })
 $pkg | ConvertTo-Json -Depth 20 | Set-Content "$profile\package.json" -Encoding utf8
 ```
 
@@ -116,11 +118,11 @@ $pkg | ConvertTo-Json -Depth 20 | Set-Content "$profile\package.json" -Encoding 
 - **自己会动**：放着别动，会有光扫过去、会按时间重放一段往事、会拉一条紫的梦线又散掉
 - **心跳**：左下 24 格，最近 24 小时每小时写了几条
 - **导入／导出／快照**：旧对话粘进来就能变成记忆；整个识海能导出成文本，也能存成一个别人打开就能看的网页
-- **改／删／恢复**：每条能改能删（删是沉底，不是消失），每次写入前自动留一份，14 天内的版本能一键回到
+- **改／删／恢复**：每条能改能删（删是沉底，不是消失），每次写入前自动留一份，最近一百份能一键回到（同一分钟只留一份）
 
 ## 它怎么记住东西
 
-识海不会自己进上下文。**每开一个新窗口，先跟它说一句「查一下识海」**，它才会去翻。
+每轮它会自动递几条最像的记忆进上下文；要翻旧账、按时间看、确认某件事写过没有，再跟它说一句「查一下识海」。
 装了之后可以在你自己的 AGENTS.md 里写一条硬规矩，让它每次开窗口第一件事就查——比每次手动说管用。
 
 ---
@@ -176,3 +178,20 @@ $pkg | ConvertTo-Json -Depth 20 | Set-Content "$profile\package.json" -Encoding 
 - 想更准可以自己换 fp32 模型（多 90 MB，实测头名只差两句，不划算，默认不给）
 - 卸载/删掉 `assets/embed` 也不影响记忆：只是检索少"换个说法也能翻到"这一层
 
+## 没有 npm / 想直接发给别人
+
+用发布好的两个 tgz（代码包 + 模型包），解到插件的 `node_modules/dsh-consciousness2/`，
+再在 profile 的 `dsh.profile.bundles` 里加上 `dsh-consciousness2`，重启。
+
+完整步骤（含 PowerShell 命令、验证、卸载、隐私说明）在
+[docs/安装-离线包.md](docs/安装-离线包.md)。
+
+> **自检脚本只在源码包（tgz）里有。**
+> npm 包里只带运行必需文件（`index.js`、`client.js`、`lib`、`assets`、说明），不含 `scripts/` 与 `test/`——
+> 那是为了不让包变胖、也不把开发用的语料带出去。
+> 所以：从 npm 装的人，验证以 DSH 界面能不能用为准；想跑 `scripts/health-all.mjs` 这类自检，
+> 用 `识海发版` 里的 tgz（见 `docs/安装-离线包.md`）。
+
+## 要发版
+
+照 [docs/发版清单.md](docs/发版清单.md) 从上往下做，一步都别省。

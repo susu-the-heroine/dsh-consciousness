@@ -9,6 +9,11 @@ $home    = $env:USERPROFILE
 $profile = Join-Path $home '.dsh\profiles\desktop'
 $pkgPath = Join-Path $profile 'package.json'
 
+# 插件名从 package.json 里读，别写死——包名从 dsh-consciousness 改成 dsh-consciousness2 那次，
+# 写死的名字会让装完的 profile 指向一个不存在的依赖，重启也不出现图标。2026-11-15 修。
+$pluginName = (Get-Content (Join-Path $plugin 'package.json') -Raw | ConvertFrom-Json).name
+if (-not $pluginName) { Write-Host '读不出插件名（package.json 坏了？）' -ForegroundColor Red; exit 1 }
+
 Write-Host ''
 Write-Host '识海 · 安装' -ForegroundColor Cyan
 Write-Host "插件目录：$plugin"
@@ -18,18 +23,18 @@ if (-not (Test-Path $pkgPath)) {
   exit 1
 }
 
-# ---------- 0. 先看 Python（没有的话提前说，别等按了才报错） ----------
+# ---------- 0. 不需要 Python ----------
+# 0.4 版起，拆文件、算权重、搬向量、写库全在 Node 里做；装完就能写记忆。
+# 只有一种情况要 Python：把 0.3 时代的老库（add_memory.py）迁过来。没有也不影响安装。
 $pyPath = 'C:\AI-DDSP\env310\Scripts\python.exe'
 if (-not (Test-Path $pyPath)) {
   $cmd = Get-Command python -ErrorAction SilentlyContinue
   if ($cmd) { $pyPath = $cmd.Source } else { $pyPath = $null }
 }
 if ($pyPath) {
-  Write-Host "Python：$pyPath" -ForegroundColor Green
+  Write-Host "Python（可选，只给迁旧库用）：$pyPath" -ForegroundColor DarkGray
 } else {
-  Write-Host '警告：没找到 Python。' -ForegroundColor Yellow
-  Write-Host '      插件照样能装，页面也能看，但写不了记忆（按写入会报错）。' -ForegroundColor Yellow
-  Write-Host '      想正常用，先装 Python 3.9+，再跑一次这个脚本。' -ForegroundColor Yellow
+  Write-Host '没装 Python —— 没事，写记忆用不上它。' -ForegroundColor DarkGray
 }
 
 # ---------- 1. 改 package.json ----------
@@ -40,15 +45,15 @@ $pkg = Get-Content $pkgPath -Raw | ConvertFrom-Json
 if (-not $pkg.dependencies) {
   $pkg | Add-Member -NotePropertyName dependencies -NotePropertyValue ([pscustomobject]@{}) -Force
 }
-$pkg.dependencies | Add-Member -NotePropertyName 'dsh-consciousness' -NotePropertyValue "link:$plugin" -Force
+$pkg.dependencies | Add-Member -NotePropertyName $pluginName -NotePropertyValue "link:$plugin" -Force
 
 if (-not $pkg.dsh) {
   Write-Host '这个 profile 没有 dsh.profile 配置，不像是标准安装。' -ForegroundColor Red
   exit 1
 }
 $bundles = @($pkg.dsh.profile.bundles)
-if ($bundles -notcontains 'dsh-consciousness') {
-  $pkg.dsh.profile.bundles = @($bundles + 'dsh-consciousness')
+if ($bundles -notcontains $pluginName) {
+  $pkg.dsh.profile.bundles = @($bundles + $pluginName)
 }
 
 $pkg | ConvertTo-Json -Depth 20 | Set-Content $pkgPath -Encoding utf8
@@ -74,5 +79,5 @@ if (-not (Test-Path $node) -or -not (Test-Path $pnpm)) {
 }
 
 Write-Host ''
-Write-Host '装好了。现在重启 DSH，左侧会多一个「识」字。' -ForegroundColor Green
+Write-Host "装好了（$pluginName）。现在重启 DSH，左侧会多一个「识」字。" -ForegroundColor Green
 Write-Host ''

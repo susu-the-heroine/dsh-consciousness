@@ -90,7 +90,16 @@ for (const f of files) {
 
 const data = { version: 1, points, edges: [] }
 mkdirSync(OUT, { recursive: true })
-writeFileSync(join(OUT, 'data.json'), JSON.stringify(data), 'utf8')
+// 2026-11-21：这一步原来直接盖 —— 目标目录里已经有一份 data.json 也照盖不误。
+// 头里写着「绝不碰真实识海」，可代码里一个闸都没有。今晚我自己就因为一个变量写错把真库盖过一次，
+// 所以这条必须堵：目标已有库、又没带 --force，就拒绝，别自作主张。
+const target = join(OUT, 'data.json')
+if (existsSync(target) && !args.includes('--force')) {
+  console.error('目标里已经有 data.json：' + target)
+  console.error('不覆盖。确认要盖，就加 --force；建议先把它挪走或备份。')
+  process.exit(3)
+}
+writeFileSync(target, JSON.stringify(data), 'utf8')
 
 const out = { files: files.length, imported: points.length, skipped: skipped.length, skippedList: skipped.slice(0, 10) }
 if (args.includes('--json')) console.log(JSON.stringify(out))

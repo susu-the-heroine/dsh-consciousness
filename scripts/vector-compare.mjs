@@ -18,7 +18,14 @@ const qfile = process.argv[3] || join(tmpdir(), 'bge-qvecs.json')
 const E = await import('file:///' + join(HERE, '..', 'lib', 'embed-js.js').replace(/\\/g, '/') + '?v=' + Date.now())
 
 const dir = join(homedir(), '.dsh', 'consciousness-seas', sea)
-const data = JSON.parse(readFileSync(join(dir, 'data.json'), 'utf8').replace(/^\uFEFF/, ''))
+// 2026-11-21：这里直接读库，没有就崩成一段栈。先说清楚缺哪个文件、再退。
+const dataPath = join(dir, 'data.json')
+if (!existsSync(dataPath)) {
+  console.log('读不到这个海：' + dataPath)
+  console.log('这份对照要拿同一批问句比两套库内向量，没有库就没得比。')
+  process.exit(2)
+}
+const data = JSON.parse(readFileSync(dataPath, 'utf8').replace(/^\uFEFF/, ''))
 const points = (data.points || []).filter((p) => !p.dead)
 const oldVecs = existsSync(join(dir, 'vectors.json'))
   ? JSON.parse(readFileSync(join(dir, 'vectors.json'), 'utf8').replace(/^\uFEFF/, ''))

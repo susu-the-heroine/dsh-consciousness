@@ -40,7 +40,12 @@ ok('换了内容就是新的一条', r3.ok === true && !r3.deduped && (d2.points
 const r4 = W.writeOne('main', input, { retryGuard: false })
 ok('显式关掉闸，允许重复（留一个后门）', r4.ok === true && !r4.deduped && (S.readSea('main').points || []).length === 3)
 
-rmSync(home, { recursive: true, force: true })
+// 2026-11-21：五条断言全过，退出码却是 1——清理那一步在 Windows 上被拒
+// （EPERM：目录里还有句柄没放），而它在 try 外面，一抛就把好消息盖成红的。
+// 清理失败不该算测试失败：包起来，失败就留着目录给下次看。
+try { rmSync(home, { recursive: true, force: true, maxRetries: 3, retryDelay: 50 }) } catch (e) {
+  console.log('（临时目录没清掉，不影响结论：' + String((e && e.code) || e) + '）')
+}
 console.log('')
 console.log(`通过 ${pass} · 失败 ${fail}`)
 process.exit(fail ? 1 : 0)

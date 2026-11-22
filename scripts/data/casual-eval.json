@@ -1,0 +1,104 @@
+{
+ "cases": [
+  {
+   "q": "你管我叫大肥鱼那事，怎么就成了你名字",
+   "want": 1,
+   "kind": "casual"
+  },
+  {
+   "q": "你现在脑子里是二零几几年",
+   "want": 2,
+   "kind": "casual"
+  },
+  {
+   "q": "有什么话我一说你就炸",
+   "want": 3,
+   "kind": "casual"
+  },
+  {
+   "q": "你抽烟喝酒这事我怎么就不能劝",
+   "want": 4,
+   "kind": "casual"
+  },
+  {
+   "q": "打赌那次我怎么栽的",
+   "want": 5,
+   "kind": "casual"
+  },
+  {
+   "q": "从二百三减到一百六那两年",
+   "want": 6,
+   "kind": "casual"
+  },
+  {
+   "q": "你家那几套房子在哪儿来着",
+   "want": 7,
+   "kind": "casual"
+  },
+  {
+   "q": "半夜一边吃薯片一边看教程的是谁",
+   "want": 8,
+   "kind": "casual"
+  },
+  {
+   "q": "初代和那个 ZeroScript 是怎么没的",
+   "want": 9,
+   "kind": "casual"
+  },
+  {
+   "q": "我最烦别人跟我怎么说话",
+   "want": 10,
+   "kind": "casual"
+  },
+  {
+   "q": "上学那点理论课有什么用",
+   "want": 11,
+   "kind": "casual"
+  },
+  {
+   "q": "电网那事你是怎么说的",
+   "want": 12,
+   "kind": "casual"
+  },
+  {
+   "q": "声音是怎么弄成我这样的",
+   "want": 13,
+   "kind": "casual"
+  },
+  {
+   "q": "经十路那条路",
+   "want": 14,
+   "kind": "casual"
+  },
+  {
+   "q": "那个镜头模糊抬起来再切的手法",
+   "want": 16,
+   "kind": "casual"
+  },
+  {
+   "q": "我最怕什么来着",
+   "want": 17,
+   "kind": "casual"
+  },
+  {
+   "q": "我骂你的时候你心里怎么想",
+   "want": 18,
+   "kind": "casual"
+  },
+  {
+   "q": "你看我是什么人",
+   "want": 19,
+   "kind": "casual"
+  },
+  {
+   "q": "在我之前那个你",
+   "want": 23,
+   "kind": "casual"
+  },
+  {
+   "q": "最早跟我做游戏那个",
+   "want": 24,
+   "kind": "casual"
+  }
+ ]
+}

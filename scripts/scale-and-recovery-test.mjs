@@ -7,7 +7,7 @@
  *
  * 跑法：node scripts/scale-and-recovery-test.mjs [条数]
  */
-import { copyFileSync, existsSync, mkdtempSync, readFileSync, readdirSync, rmSync, writeFileSync } from 'node:fs'
+import { copyFileSync, existsSync, mkdtempSync, readFileSync, readdirSync, rmSync, statSync, writeFileSync } from 'node:fs'
 import { tmpdir } from 'node:os'
 import { join, dirname } from 'node:path'
 import { fileURLToPath } from 'node:url'
@@ -61,7 +61,13 @@ ok('读库不慢（< 500ms）', readMs < 500, Math.round(readMs) + 'ms')
 
 // ── 二、坏库恢复
 const bakDir = join(home, '.dsh', 'consciousness-backups', 'main')
-const baks = existsSync(bakDir) ? readdirSync(bakDir).sort() : []
+// 2026-11-21：原来按文件名排序取「最新」——可备份撞名时会加 -2、-3 后缀，
+// 而 '-' 的字符序在 '.' 前面，同一秒里带后缀的反而排在基础名前面。
+// 五十条在同秒内写完时，「最后一份」实际是那一秒的第一份：里面只有一条。
+// 实测救回一条就是这么来的。改成按修改时间取最新。
+const baks = existsSync(bakDir)
+  ? readdirSync(bakDir).map((f) => ({ f, m: statSync(join(bakDir, f)).mtimeMs })).sort((x, y) => x.m - y.m).map((x) => x.f)
+  : []
 ok('备份攒下了', baks.length > 0, '份数 ' + baks.length)
 
 // 弄坏：截掉一半
@@ -80,7 +86,11 @@ ok('用备份能救回来', !!revived && (revived.points || []).length > 0, '救
 writeFileSync(dataFile, '', 'utf8')
 ok('空文件读出来是 null', S.readSea('main') === null)
 
-rmSync(home, { recursive: true, force: true })
+// 2026-11-21：清理没兜住。写库那边还开着句柄时，Windows 删这个目录报 EPERM，
+// 前面所有断言都过了，退出码还是被这最后一行变成 1 —— 看着像整套挂了。
+try { rmSync(home, { recursive: true, force: true }) } catch (e) {
+  console.log('临时目录没删掉（有句柄占着？），留着：' + home)
+}
 console.log('')
 console.log(`通过 ${pass} · 失败 ${fail}`)
 process.exit(fail ? 1 : 0)

@@ -3,7 +3,7 @@
 import { readFileSync } from 'node:fs'
 import { think } from '../lib/thinkops.js'
 
-const data = JSON.parse(readFileSync(process.env.USERPROFILE + '/.dsh/consciousness-seas/main/data.json', 'utf8'))
+const data = JSON.parse(readFileSync(process.env.USERPROFILE + '/.dsh/consciousness-seas/main/data.json', 'utf8').replace(/^\uFEFF/, ''))
 const pts = (data.points || []).filter((p) => p && !p.dead && !p.archived)
 const byId = new Map(pts.map((p) => [String(p.id), p]))
 const entsOf = (p) => (Array.isArray(p && p.entities) ? p.entities : [])

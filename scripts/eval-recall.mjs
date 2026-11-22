@@ -27,6 +27,20 @@ const vecs = V.loadVectors(sea)
 
 console.log(`海 ${sea} · 记忆 ${pts.length} 条 · 向量 ${vecs.size} 条 · 问句 ${cases.length} 条`)
 
+// 2026-11-21：没有向量的条目在这儿等于隐形——上面排法拿空向量去比，分是零，
+// 永远进不了前十，却不报错。实测主库二百二十六条里五条没向量，这个数得说出来，
+// 不然「命中@10 九成」会被误读成「全都排得动」。
+// 2026-11-21 自纠：头一版把「已归档」也算成「没向量」，报出五条永远排不上——
+// 那五条本来就是归档的，不该参与排名，这么写是冤枉。拆开算：
+const archived = pts.filter((p) => p.archived || p.validUntil).map((p) => p.id)
+const noVec = pts.filter((p) => !p.archived && !p.validUntil && !vecs.get(p.id)).map((p) => p.id)
+if (archived.length) console.log(`已归档/已失效 ${archived.length} 条，本来就不参与排名`)
+if (noVec.length) {
+  const wantNoVec = cases.filter((c) => noVec.includes(Number(c.want))).map((c) => c.want)
+  console.log(`在册却没有向量的 ${noVec.length} 条（永远排不上）：${noVec.slice(0, 10).map((i) => '#' + i).join(' ')}`)
+  if (wantNoVec.length) console.log(`其中 ${wantNoVec.length} 条正是标准答案：${wantNoVec.map((i) => '#' + i).join(' ')}——这几道必挂，不是排序问题`)
+}
+
 const t0 = Date.now()
 const qvecs = {}
 for (const c of cases) qvecs[c.q] = await E.embedLocal(c.q)

@@ -18,7 +18,7 @@ const { join } = await import('node:path')
 const REAL_TITLES = (() => {
   try {
     const f = join(homedir(), '.dsh', 'consciousness-seas', 'main', 'data.json')
-    const d = JSON.parse(readFileSync(f, 'utf8'))
+    const d = JSON.parse(readFileSync(f, 'utf8').replace(/^\uFEFF/, ''))
     return (d.points || [])
       .filter((p) => !p.dead && p.title)
       .map((p) => String(p.title).replace(/[\s，。！？、：；""''（）]/g, ''))
@@ -47,6 +47,14 @@ let pass = 0
 let fail = 0
 const ok = (c, name, d) => { if (c) { pass++; console.log('  ✓ ' + name) } else { fail++; console.log('  ✗ ' + name + (d ? '  → ' + d : '')) } }
 
+// 2026-11-21：读不到主库时，标题表是空的——逐条查漏就变成了「一条都不查」，
+// 十句全绿、退出码零。实测在空家目录里跑就是这样：全过，可它什么都没验。
+// 没有语料就别报绿。
+if (!REAL_TITLES.length) {
+  console.log('主识海里读不到任何标题（库不在？），这层查漏没有语料可查——不报绿。')
+  console.log('  找的是：~/.dsh/consciousness-seas/main/data.json')
+  process.exit(2)
+}
 console.log('\n主识海真实标题', REAL_TITLES.length, '条，逐条查漏：')
 for (const q of PROBES) {
   let inj = ''

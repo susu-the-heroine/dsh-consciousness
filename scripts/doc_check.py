@@ -1,4 +1,4 @@
-﻿"""文档结构自检（按《文档撰写规范》能自动查的那几条）。
+"""文档结构自检（按《文档撰写规范》能自动查的那几条）。
 
 跑法：python scripts/doc_check.py [docx 路径]
 """
@@ -10,14 +10,31 @@ from docx import Document
 
 sys.stdout.reconfigure(encoding="utf-8", errors="replace")
 
-CN = {"一": 1, "二": 2, "三": 3, "四": 4, "五": 5, "六": 6, "七": 7, "八": 8, "九": 9, "十": 10}
+CN = {"一": 1, "二": 2, "三": 3, "四": 4, "五": 5, "六": 6, "七": 7, "八": 8, "九": 9, "十": 10, "零": 0, "〇": 0}
 
 
 def cn2num(s):
-    """九十一 → 91，八十三 → 83，十 → 10，二十三 → 23"""
+    """九十一 → 91，一百零一 → 101，一百八十六 → 186，十 → 10"""
     s = (s or "").strip()
     if not s:
         return -1
+    if "百" in s:
+        head, _, rest = s.partition("百")
+        hundreds = CN.get(head, 1) if head else 1
+        rest = rest.lstrip("零〇")
+        if not rest:
+            return hundreds * 100
+        if "十" in rest:
+            l2, _, r2 = rest.partition("十")
+            tens = CN.get(l2, 1) if l2 else 1
+            ones = CN.get(r2, 0) if r2 else 0
+            return hundreds * 100 + tens * 10 + ones
+        n = 0
+        for ch in rest:
+            if ch not in CN:
+                return -1
+            n = n * 10 + CN[ch]
+        return hundreds * 100 + n
     if "十" in s:
         left, _, right = s.partition("十")
         tens = CN.get(left, 1) if left else 1

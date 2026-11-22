@@ -112,6 +112,7 @@ h1{margin:0 0 6px;font-size:20px;font-weight:500;letter-spacing:.34em;color:#f0e
     <button class="tab on" data-p="handoff">交接卡</button>
     <button class="tab" data-p="sediment">沉淀</button>
     <button class="tab" data-p="rhythm">作息</button>
+    <button class="tab" data-p="index">索引</button>
   </div>
 
   <!-- 交接卡 -->
@@ -132,6 +133,19 @@ h1{margin:0 0 6px;font-size:20px;font-weight:500;letter-spacing:.34em;color:#f0e
     <div class="card">
       <h3>该沉淀的<span class="n">同一件事，不同日子出现 3 次以上</span></h3>
       <div id="sedimentList"><div class="empty">在读……</div></div>
+    </div>
+  </div>
+
+  <!-- 索引 -->
+  <div class="panel" id="p-index">
+    <div class="card">
+      <h3>近似索引<span class="n">覆盖率 / 陈旧 / 队列 / 延迟</span></h3>
+      <div id="indexBody"><div class="empty">在读……</div></div>
+      <div class="bar">
+        <span class="s" id="indexStat"></span>
+        <button class="btn" id="indexRun">补一批</button>
+        <button class="btn" id="indexRefresh">重读</button>
+      </div>
     </div>
   </div>
 
@@ -277,11 +291,81 @@ function loadRhythm(){
     .catch(e => { box.innerHTML = '<div class="empty">读不出来：' + esc(e && e.message || '未知') + '</div>' });
 }
 
+/* ---------- 索引 ---------- */
+function loadIndex(){
+  const box = document.getElementById('indexBody');
+  fetch('/consciousness/vectors?action=health&sea=' + encodeURIComponent(SEA), { cache:'no-store' })
+    .then(readJson)
+    .then(j => {
+      if(!j || !j.ok){ box.innerHTML = '<div class="empty">读不出来：' + esc((j && j.error) || '未知') + '</div>'; return }
+      const h = j.health || j;
+      const cov = Number(h.coverage || 0);
+      const stale = Number(h.stale_rate || 0);
+      const queued = Number(h.queued || h.queue || 0);
+      const p95 = Number(h.p95_ms || 0);
+      const bytes = Number(h.bytes || 0);
+      const bin = Number(h.bin_bytes || 0);
+      const kb = n => (n / 1024).toFixed(n > 1048576 ? 0 : 1);
+      const color = cov >= 98 ? '#7fd6a4' : (cov >= 90 ? '#e8c267' : '#e07a7a');
+      box.innerHTML =
+        '<div style="font-size:26px;color:' + color + ';font-variant-numeric:tabular-nums">' + cov.toFixed(1) + '%</div>'
+        + '<div style="font-size:10px;letter-spacing:.18em;color:#3f6386;margin-bottom:10px">覆盖（已有近似的活记忆）</div>'
+        + '<div style="height:6px;background:#0d1622;border-radius:3px;overflow:hidden;margin-bottom:12px">'
+        + '<i style="display:block;height:100%;width:' + Math.max(1, Math.min(100, cov)) + '%;background:' + color + '"></i></div>'
+        + '<div style="font-size:11px;color:#9dbcd8;line-height:1.9">'
+        + '陈旧 ' + stale.toFixed(1) + '% · 队列 ' + queued + ' 条 · p95 ' + p95 + 'ms<br>'
+        + '体积 ' + kb(bytes + bin) + 'KB' + (bin ? '（二进制 ' + kb(bin) + 'KB）' : '')
+        + (h.model ? ' · 模型 ' + esc(h.model) + ' ' + Number(h.dim || '') + ' 维' : '')
+        + '</div>'
+        + (queued ? '<div style="font-size:10px;color:#e8c267;margin-top:8px">还有 ' + queued + ' 条没补，开窗口后会自动补。</div>' : '')
+        + (cov < 100 ? '<div style="font-size:10px;color:#3f6386;margin-top:6px">补齐进度 ' + cov.toFixed(1) + '%，缺的多是刚写的。</div>' : '');
+      document.getElementById('indexStat').textContent = '模型 ' + (h.model || '—');
+      loadHistory();
+    })
+    .catch(e => { box.innerHTML = '<div class="empty">读不出来：' + esc(e && e.message || '未知') + '</div>' });
+}
+
+function loadHistory(){
+  const box = document.getElementById('indexBody');
+  fetch('/consciousness/vectors?action=history&sea=' + encodeURIComponent(SEA), { cache:'no-store' })
+    .then(readJson)
+    .then(j => {
+      if(!j || !j.ok) return;
+      const al = j.alerts || [];
+      const wk = j.weekly;
+      let html = '';
+      if(al.length){
+        html += '<div style="margin-top:10px;font-size:11px;color:#e07a7a">'
+          + al.map(x => '· ' + esc(x.text)).join('<br>') + '</div>';
+      } else {
+        html += '<div style="margin-top:10px;font-size:11px;color:#7fd6a4">体检正常：覆盖、队列、延迟都在线内。</div>';
+      }
+      if(wk && wk.at){
+        const when = new Date(wk.at).toISOString().slice(0,10);
+        html += '<div style="margin-top:6px;font-size:10px;color:#3f6386">上次周检 ' + when
+          + '：' + wk.seas + ' 个海 · ' + wk.points + ' 条 · 最差覆盖 ' + Number(wk.worstCoverage).toFixed(1) + '%</div>';
+      }
+      box.insertAdjacentHTML('beforeend', html);
+    })
+    .catch(() => {});
+}
+
+document.getElementById('indexRefresh').addEventListener('click', loadIndex);
+document.getElementById('indexRun').addEventListener('click', function(){
+  const b = this; b.disabled = true; b.textContent = '补着……';
+  fetch('/consciousness/vectors?action=run&sea=' + encodeURIComponent(SEA), { cache:'no-store' })
+    .then(readJson)
+    .then(j => { toast(j && j.ok ? ('补了 ' + ((j.result && (j.result.filled ?? j.result)) || 0) + ' 条') : '没补成'); })
+    .catch(e => toast('没补成：' + (e && e.message || '未知')))
+    .then(() => { b.disabled = false; b.textContent = '补一批'; loadIndex(); });
+});
+
 /* ---------- 路由 ---------- */
 function load(which){
   if(which === 'handoff') loadHandoff();
   else if(which === 'sediment') loadSediment();
   else if(which === 'rhythm') loadRhythm();
+  else if(which === 'index') loadIndex();
 }
 
 document.getElementById('back').addEventListener('click', function(){
@@ -291,6 +375,23 @@ document.getElementById('back').addEventListener('click', function(){
 
 // 默认开交接卡
 loadHandoff();
+</script>
+<script>
+// 慢查询清单（2026-11-19）：门槛以上的问句摆出来，不用另开页面
+(async () => {
+  try {
+    const r = await fetch('/consciousness/slow-data')
+    const j = await r.json()
+    const rows = (j.recent || j.items || []).slice(0, 10)
+    const box = document.createElement('section')
+    box.id = 'slow-panel'
+    box.style.cssText = 'margin:24px auto;max-width:720px;font:13px/1.7 ui-monospace,monospace;color:#9fe'
+    box.innerHTML = '<h3 style="margin:0 0 8px">慢查询（门槛 ' + (j.threshold || '?') + 'ms）</h3>'
+      + (rows.length ? rows.map((x) => '<div>· ' + Math.round(x.ms || 0) + 'ms · ' + String(x.q || '') + '</div>').join('')
+        : '<div>这会儿没有超过门槛的问句。</div>')
+    document.body.appendChild(box)
+  } catch {}
+})()
 </script>
 </body>
 </html>

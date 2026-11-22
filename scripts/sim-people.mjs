@@ -55,7 +55,16 @@ const only = process.argv[2]
 async function hit(port, text, sid) {
   // 每个场景独立会话：共用一个 sid 时，前一个场景的情绪会带进下一个（2026-11-08 假红就是这来的）
   const url = `${BASE}/consciousness/${port}?text=${encodeURIComponent(text)}${port === 'sim' ? `&persist=0&sid=${sid}` : ''}`
-  const r = await fetch(url)
+  // 2026-11-21：服务没起来、或端口不对时，fetch 直接抛，整份脚本吐一段栈。
+  // 实测服务没开时跑一遍，退出码一、全是 RemoteException——看不出是「没开服务」还是「判据不过」。
+  let r
+  try {
+    r = await fetch(url)
+  } catch (e) {
+    console.log('连不上 ' + BASE + ' ——先把 DSH 起来，或者用 DSH_PORT 指对端口。')
+    console.log('  原因：' + String((e && e.message) || e).slice(0, 120))
+    process.exit(2)
+  }
   const j = await r.json()
   return String(j.inject || '')
 }

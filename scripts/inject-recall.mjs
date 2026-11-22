@@ -40,6 +40,9 @@ function overlap(src, dst) {
 }
 
 const rows = []
+// 2026-11-21：说话太短（两字组合一个都没有）时，overlap 返回 null，成对被丢掉——
+// 丢了多少没人知道，平均重合容易被"其实没算"和"算了但很低"混在一起。先记个数，最后打出来。
+let skippedEmpty = 0
 for (const f of readdirSync(DIR).filter((n) => /^t\d+\.jsonl$/.test(n))) {
   const list = []
   for (const line of readFileSync(join(DIR, f), 'utf8').split('\n')) {
@@ -59,22 +62,25 @@ for (const f of readdirSync(DIR).filter((n) => /^t\d+\.jsonl$/.test(n))) {
     if (t1 && t2) {
       const v = overlap(t1.him, t2.inj)
       if (v !== null) rows.push({ file: f, u, kind: '回指(2看1)', v })
+      else skippedEmpty++
     }
     if (t4 && t5) {
       const v = overlap(t4.him, t5.inj)
       if (v !== null) rows.push({ file: f, u, kind: '改口(5看4)', v })
+      else skippedEmpty++
     }
     if (t1 && t6) {
       const v = overlap(t1.him, t6.inj)
       if (v !== null) rows.push({ file: f, u, kind: '记性(6看1)', v })
+      else skippedEmpty++
     }
   }
 }
 
-if (!rows.length) { console.log('没有可算的成对轮次'); process.exit(0) }
+if (!rows.length) { console.log('没有可算的成对轮次（跳过 ' + skippedEmpty + ' 对：他那句太短，切不出两字组合）'); process.exit(0) }
 
 const kinds = [...new Set(rows.map((r) => r.kind))]
-console.log(`算了 ${rows.length} 对｜文件 ${new Set(rows.map((r) => r.file)).size} 份`)
+console.log(`算了 ${rows.length} 对｜文件 ${new Set(rows.map((r) => r.file)).size} 份` + (skippedEmpty ? `｜另有 ${skippedEmpty} 对没算（他那句太短）` : ''))
 for (const k of kinds) {
   const xs = rows.filter((r) => r.kind === k).map((r) => r.v)
   const avg = xs.reduce((a, b) => a + b, 0) / xs.length

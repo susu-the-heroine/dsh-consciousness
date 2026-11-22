@@ -89,7 +89,10 @@ for (let d = 0; d <= maxDay; d += 1) {
   for (const p of pool) {
     if (rawDecayOf(p, t) < 0.18) today.push(p)
   }
-  for (const p of today.slice(0, 1)) archived.add(p.id)
+  // 2026-11-21：真归档是先按裸衰减从低到高排、再收最想不起来的那条。
+  // 这里原来直接拿 today 的第一条，而 today 是先塞相对腿、再塞绝对腿，顺序不是「最淡优先」——
+  // 两条腿同时有货时，仿真会沉掉一条真系统不会先沉的东西。
+  for (const p of today.sort((x, y) => rawDecayOf(x, t) - rawDecayOf(y, t)).slice(0, 1)) archived.add(p.id)
 
   while (cursor < days.length && days[cursor] <= d) {
     const dd = days[cursor]

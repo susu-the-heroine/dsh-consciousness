@@ -53,6 +53,14 @@ const pick = []
 const step = Math.max(1, Math.floor(lines.length / N))
 for (let i = 0; i < lines.length && pick.length < N; i += step) pick.push(lines[i])
 
+// 2026-11-21：语料一条都没有时，下面会拿 pick.length 当除数，印出「平均长度 NaN」，
+// 还照旧报「一条问题都没有」——没测到被说成没问题。空语料直接说清并退出。
+if (!pick.length) {
+  console.log('语料是空的：' + join(homedir(), '.dsh', '记忆', '_外人语料.jsonl'))
+  console.log('没得撞。先跑 fetch-voices 之类把语料抓下来。')
+  process.exit(0)
+}
+
 const sea = store.readSea('main')
 const sid = 'sim-external'
 

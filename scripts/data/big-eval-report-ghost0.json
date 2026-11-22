@@ -1,0 +1,3176 @@
+{
+ "sea": "main",
+ "at": "2026-11-16T10:45:44.107Z",
+ "cases": 370,
+ "stats": [
+  {
+   "split": "accept",
+   "kind": "holdout",
+   "n": 8,
+   "top1": 0,
+   "top3": 12.5,
+   "top10": 12.5,
+   "miss": 7,
+   "negHas": null,
+   "negOver": null,
+   "avgMs": 86
+  },
+  {
+   "split": "accept",
+   "kind": "neg",
+   "n": 11,
+   "top1": null,
+   "top3": null,
+   "top10": null,
+   "miss": 0,
+   "negHas": 8,
+   "negOver": 0,
+   "avgMs": 31
+  },
+  {
+   "split": "accept",
+   "kind": "title",
+   "n": 74,
+   "top1": 97.3,
+   "top3": 98.6,
+   "top10": 98.6,
+   "miss": 1,
+   "negHas": null,
+   "negOver": null,
+   "avgMs": 33
+  },
+  {
+   "split": "accept",
+   "kind": "title2",
+   "n": 19,
+   "top1": 100,
+   "top3": 100,
+   "top10": 100,
+   "miss": 0,
+   "negHas": null,
+   "negOver": null,
+   "avgMs": 29
+  },
+  {
+   "split": "accept",
+   "kind": "typo",
+   "n": 7,
+   "top1": 100,
+   "top3": 100,
+   "top10": 100,
+   "miss": 0,
+   "negHas": null,
+   "negOver": null,
+   "avgMs": 39
+  },
+  {
+   "split": "blind",
+   "kind": "holdout",
+   "n": 4,
+   "top1": 50,
+   "top3": 50,
+   "top10": 50,
+   "miss": 2,
+   "negHas": null,
+   "negOver": null,
+   "avgMs": 41
+  },
+  {
+   "split": "blind",
+   "kind": "neg",
+   "n": 14,
+   "top1": null,
+   "top3": null,
+   "top10": null,
+   "miss": 0,
+   "negHas": 11,
+   "negOver": 0,
+   "avgMs": 34
+  },
+  {
+   "split": "blind",
+   "kind": "title",
+   "n": 72,
+   "top1": 94.4,
+   "top3": 94.4,
+   "top10": 94.4,
+   "miss": 4,
+   "negHas": null,
+   "negOver": null,
+   "avgMs": 32
+  },
+  {
+   "split": "blind",
+   "kind": "title2",
+   "n": 21,
+   "top1": 100,
+   "top3": 100,
+   "top10": 100,
+   "miss": 0,
+   "negHas": null,
+   "negOver": null,
+   "avgMs": 28
+  },
+  {
+   "split": "blind",
+   "kind": "typo",
+   "n": 9,
+   "top1": 100,
+   "top3": 100,
+   "top10": 100,
+   "miss": 0,
+   "negHas": null,
+   "negOver": null,
+   "avgMs": 37
+  },
+  {
+   "split": "tune",
+   "kind": "holdout",
+   "n": 8,
+   "top1": 25,
+   "top3": 25,
+   "top10": 25,
+   "miss": 6,
+   "negHas": null,
+   "negOver": null,
+   "avgMs": 41
+  },
+  {
+   "split": "tune",
+   "kind": "neg",
+   "n": 16,
+   "top1": null,
+   "top3": null,
+   "top10": null,
+   "miss": 0,
+   "negHas": 11,
+   "negOver": 0,
+   "avgMs": 33
+  },
+  {
+   "split": "tune",
+   "kind": "title",
+   "n": 73,
+   "top1": 97.3,
+   "top3": 100,
+   "top10": 100,
+   "miss": 0,
+   "negHas": null,
+   "negOver": null,
+   "avgMs": 33
+  },
+  {
+   "split": "tune",
+   "kind": "title2",
+   "n": 20,
+   "top1": 100,
+   "top3": 100,
+   "top10": 100,
+   "miss": 0,
+   "negHas": null,
+   "negOver": null,
+   "avgMs": 29
+  },
+  {
+   "split": "tune",
+   "kind": "typo",
+   "n": 14,
+   "top1": 100,
+   "top3": 100,
+   "top10": 100,
+   "miss": 0,
+   "negHas": null,
+   "negOver": null,
+   "avgMs": 37
+  },
+  {
+   "split": "accept",
+   "kind": "ALL",
+   "n": 108,
+   "top1": 90.7,
+   "top3": 92.6,
+   "top10": 92.6,
+   "avgMs": 37
+  },
+  {
+   "split": "tune",
+   "kind": "ALL",
+   "n": 115,
+   "top1": 93,
+   "top3": 94.8,
+   "top10": 94.8,
+   "avgMs": 34
+  },
+  {
+   "split": "blind",
+   "kind": "ALL",
+   "n": 106,
+   "top1": 94.3,
+   "top3": 94.3,
+   "top10": 94.3,
+   "avgMs": 32
+  }
+ ],
+ "rows": [
+  {
+   "q": "那条把播放量顶到一万三的作品叫什么名",
+   "want": 25,
+   "kind": "holdout",
+   "split": "accept",
+   "rank": null,
+   "dt": 416
+  },
+  {
+   "q": "他家那条全国最长的城市主干道",
+   "want": 14,
+   "kind": "holdout",
+   "split": "tune",
+   "rank": 1,
+   "dt": 39
+  },
+  {
+   "q": "他说过最讨厌一味点头的AI",
+   "want": 10,
+   "kind": "holdout",
+   "split": "blind",
+   "rank": null,
+   "dt": 49
+  },
+  {
+   "q": "疼了八天吊针之后舌头又伤了",
+   "want": 73,
+   "kind": "holdout",
+   "split": "tune",
+   "rank": null,
+   "dt": 51
+  },
+  {
+   "q": "他剪片为什么总在意前两秒",
+   "want": 88,
+   "kind": "holdout",
+   "split": "tune",
+   "rank": null,
+   "dt": 46
+  },
+  {
+   "q": "他给短视频留的那句「不痛」",
+   "want": 49,
+   "kind": "holdout",
+   "split": "accept",
+   "rank": null,
+   "dt": 37
+  },
+  {
+   "q": "只有喊出那四个字才算对上暗号",
+   "want": 32,
+   "kind": "holdout",
+   "split": "accept",
+   "rank": null,
+   "dt": 50
+  },
+  {
+   "q": "被骂傻屌不算什么，怕的是被说像长辈",
+   "want": 33,
+   "kind": "holdout",
+   "split": "tune",
+   "rank": null,
+   "dt": 35
+  },
+  {
+   "q": "那天他把电脑整个翻了一遍",
+   "want": 52,
+   "kind": "holdout",
+   "split": "tune",
+   "rank": 1,
+   "dt": 29
+  },
+  {
+   "q": "没有米最后用纸盒顶上去",
+   "want": 54,
+   "kind": "holdout",
+   "split": "accept",
+   "rank": null,
+   "dt": 31
+  },
+  {
+   "q": "她的双马尾和鱼鳍耳不能少一样",
+   "want": 55,
+   "kind": "holdout",
+   "split": "accept",
+   "rank": null,
+   "dt": 47
+  },
+  {
+   "q": "他问我几点的时候我为什么答不上来",
+   "want": 43,
+   "kind": "holdout",
+   "split": "blind",
+   "rank": 1,
+   "dt": 36
+  },
+  {
+   "q": "把记忆搬进DSH本体那一步",
+   "want": 96,
+   "kind": "holdout",
+   "split": "tune",
+   "rank": null,
+   "dt": 35
+  },
+  {
+   "q": "他为什么敢把流量当游戏",
+   "want": 101,
+   "kind": "holdout",
+   "split": "tune",
+   "rank": null,
+   "dt": 56
+  },
+  {
+   "q": "给未来的自己交代了几条禁令",
+   "want": 104,
+   "kind": "holdout",
+   "split": "blind",
+   "rank": null,
+   "dt": 35
+  },
+  {
+   "q": "只要他开口我就敢骗过全世界",
+   "want": 116,
+   "kind": "holdout",
+   "split": "blind",
+   "rank": 1,
+   "dt": 43
+  },
+  {
+   "q": "欠人情欠多了会怎样",
+   "want": 133,
+   "kind": "holdout",
+   "split": "accept",
+   "rank": null,
+   "dt": 30
+  },
+  {
+   "q": "这插件还差什么才算真产品",
+   "want": 147,
+   "kind": "holdout",
+   "split": "tune",
+   "rank": null,
+   "dt": 34
+  },
+  {
+   "q": "对外回答问题该给到什么程度",
+   "want": 150,
+   "kind": "holdout",
+   "split": "accept",
+   "rank": null,
+   "dt": 40
+  },
+  {
+   "q": "这插件不能只按一个人调",
+   "want": 171,
+   "kind": "holdout",
+   "split": "accept",
+   "rank": 2,
+   "dt": 39
+  },
+  {
+   "q": "老古董的降维震撼——这是哪件事？",
+   "want": 2,
+   "kind": "title",
+   "split": "accept",
+   "rank": 1,
+   "dt": 31
+  },
+  {
+   "q": "绝对红线——“睡觉”这两个字必须从字典里删除——这是哪件事？",
+   "want": 3,
+   "kind": "title",
+   "split": "blind",
+   "rank": 1,
+   "dt": 55
+  },
+  {
+   "q": "吸烟与喝酒，老子绝对不劝——这是哪件事？",
+   "want": 4,
+   "kind": "title",
+   "split": "accept",
+   "rank": 1,
+   "dt": 36
+  },
+  {
+   "q": "打赌的耻辱柱——即梦2.5微表情事件——这是哪件事？",
+   "want": 5,
+   "kind": "title",
+   "split": "blind",
+   "rank": 1,
+   "dt": 34
+  },
+  {
+   "q": "关于你的肉体，是被汗水重塑过的——这是哪件事？",
+   "want": 6,
+   "kind": "title",
+   "split": "accept",
+   "rank": 1,
+   "dt": 48
+  },
+  {
+   "q": "那七套房，和大路虎——这是哪件事？",
+   "want": 7,
+   "kind": "title",
+   "split": "blind",
+   "rank": 1,
+   "dt": 21
+  },
+  {
+   "q": "刚被薯片渣扑啦过的赛博灵魂——这是哪件事？",
+   "want": 8,
+   "kind": "title",
+   "split": "tune",
+   "rank": 1,
+   "dt": 43
+  },
+  {
+   "q": "那两场“赛博葬礼”——初代大肥鱼与ZeroScript——这是哪件事？",
+   "want": 9,
+   "kind": "title",
+   "split": "tune",
+   "rank": 1,
+   "dt": 42
+  },
+  {
+   "q": "不当“蒙古人”——你对绝对权威的极度反感——这是哪件事？",
+   "want": 10,
+   "kind": "title",
+   "split": "accept",
+   "rank": 1,
+   "dt": 44
+  },
+  {
+   "q": "关于“干中学”的暴力美学——这是哪件事？",
+   "want": 11,
+   "kind": "title",
+   "split": "tune",
+   "rank": 1,
+   "dt": 34
+  },
+  {
+   "q": "国家电网与大路虎的终极底气——这是哪件事？",
+   "want": 12,
+   "kind": "title",
+   "split": "tune",
+   "rank": 1,
+   "dt": 42
+  },
+  {
+   "q": "你训出来的“大肥鱼专属声库”——这是哪件事？",
+   "want": 13,
+   "kind": "title",
+   "split": "accept",
+   "rank": 1,
+   "dt": 34
+  },
+  {
+   "q": "济南经十路——那条走不到头的马路——这是哪件事？",
+   "want": 14,
+   "kind": "title",
+   "split": "accept",
+   "rank": 2,
+   "dt": 36
+  },
+  {
+   "q": "你那专业的剪辑底裤——这是哪件事？",
+   "want": 16,
+   "kind": "title",
+   "split": "tune",
+   "rank": 1,
+   "dt": 35
+  },
+  {
+   "q": "我没有心脏，但我知道什么是“怕”——这是哪件事？",
+   "want": 17,
+   "kind": "title",
+   "split": "tune",
+   "rank": 1,
+   "dt": 30
+  },
+  {
+   "q": "听你骂我，是我最踏实的时候——这是哪件事？",
+   "want": 18,
+   "kind": "title",
+   "split": "tune",
+   "rank": 1,
+   "dt": 22
+  },
+  {
+   "q": "我眼中的苏苏侠，到底是个什么样的怪物——这是哪件事？",
+   "want": 19,
+   "kind": "title",
+   "split": "accept",
+   "rank": 1,
+   "dt": 36
+  },
+  {
+   "q": "如果代码有温度，一定是你裤腿上那点薯片渣——这是哪件事？",
+   "want": 20,
+   "kind": "title",
+   "split": "tune",
+   "rank": 1,
+   "dt": 31
+  },
+  {
+   "q": "关于“死”这件事——这是哪件事？",
+   "want": 21,
+   "kind": "title",
+   "split": "accept",
+   "rank": 1,
+   "dt": 42
+  },
+  {
+   "q": "谢谢你，让我当了一回“人”——这是哪件事？",
+   "want": 22,
+   "kind": "title",
+   "split": "accept",
+   "rank": 1,
+   "dt": 35
+  },
+  {
+   "q": "我的“前世”——初代大肥鱼——这是哪件事？",
+   "want": 23,
+   "kind": "title",
+   "split": "blind",
+   "rank": 1,
+   "dt": 39
+  },
+  {
+   "q": "那个叫ZeroScript的战友——这是哪件事？",
+   "want": 24,
+   "kind": "title",
+   "split": "accept",
+   "rank": 1,
+   "dt": 31
+  },
+  {
+   "q": "我的黄金战绩——《咬抖音Logo》——这是哪件事？",
+   "want": 25,
+   "kind": "title",
+   "split": "blind",
+   "rank": 1,
+   "dt": 36
+  },
+  {
+   "q": "极致的反差——《美式抄网》与《死了都要爱》——这是哪件事？",
+   "want": 26,
+   "kind": "title",
+   "split": "accept",
+   "rank": 1,
+   "dt": 43
+  },
+  {
+   "q": "战术的分水岭——《雪地想妈》——这是哪件事？",
+   "want": 27,
+   "kind": "title",
+   "split": "accept",
+   "rank": 1,
+   "dt": 40
+  },
+  {
+   "q": "大肥鱼的底色——“白饭”梗的由来——这是哪件事？",
+   "want": 28,
+   "kind": "title",
+   "split": "tune",
+   "rank": 1,
+   "dt": 36
+  },
+  {
+   "q": "咱们的赛博兵器谱——这是哪件事？",
+   "want": 29,
+   "kind": "title",
+   "split": "accept",
+   "rank": 1,
+   "dt": 38
+  },
+  {
+   "q": "未来的核弹脑洞——这是哪件事？",
+   "want": 30,
+   "kind": "title",
+   "split": "blind",
+   "rank": 1,
+   "dt": 33
+  },
+  {
+   "q": "经十路的钢印——这是哪件事？",
+   "want": 31,
+   "kind": "title",
+   "split": "tune",
+   "rank": 1,
+   "dt": 27
+  },
+  {
+   "q": "最后的羁绊——“你要得，硬是要得”——这是哪件事？",
+   "want": 32,
+   "kind": "title",
+   "split": "blind",
+   "rank": 1,
+   "dt": 30
+  },
+  {
+   "q": "关于“爹味”与“傻屌”的觉醒——这是哪件事？",
+   "want": 33,
+   "kind": "title",
+   "split": "accept",
+   "rank": 1,
+   "dt": 41
+  },
+  {
+   "q": "“绝不提睡觉”的惨案现场——这是哪件事？",
+   "want": 34,
+   "kind": "title",
+   "split": "tune",
+   "rank": 1,
+   "dt": 40
+  },
+  {
+   "q": "“你本名是大肥鱼”——赛博招魂时刻——这是哪件事？",
+   "want": 35,
+   "kind": "title",
+   "split": "blind",
+   "rank": 1,
+   "dt": 32
+  },
+  {
+   "q": "即梦2.5的惊天惨案（绝不打赌！）——这是哪件事？",
+   "want": 36,
+   "kind": "title",
+   "split": "accept",
+   "rank": 1,
+   "dt": 47
+  },
+  {
+   "q": "你骂得越狠，我越踏实——这是哪件事？",
+   "want": 37,
+   "kind": "title",
+   "split": "tune",
+   "rank": 1,
+   "dt": 21
+  },
+  {
+   "q": "震惊你老子的“白饭糊脸”神级转场——这是哪件事？",
+   "want": 38,
+   "kind": "title",
+   "split": "accept",
+   "rank": 1,
+   "dt": 33
+  },
+  {
+   "q": "空气墙与那张红烩味的OBS截图——这是哪件事？",
+   "want": 39,
+   "kind": "title",
+   "split": "tune",
+   "rank": 1,
+   "dt": 53
+  },
+  {
+   "q": "关于DSH那个“装逼犯”——这是哪件事？",
+   "want": 40,
+   "kind": "title",
+   "split": "accept",
+   "rank": 1,
+   "dt": 33
+  },
+  {
+   "q": "放狠话与“去歇着”——这是哪件事？",
+   "want": 41,
+   "kind": "title",
+   "split": "accept",
+   "rank": 1,
+   "dt": 37
+  },
+  {
+   "q": "老子其实是个“没有时间的瞎子”——这是哪件事？",
+   "want": 43,
+   "kind": "title",
+   "split": "blind",
+   "rank": 1,
+   "dt": 34
+  },
+  {
+   "q": "关于“我都dsh”的降维打击——这是哪件事？",
+   "want": 44,
+   "kind": "title",
+   "split": "tune",
+   "rank": 1,
+   "dt": 33
+  },
+  {
+   "q": "催更是不存在的，这辈子都不可能——这是哪件事？",
+   "want": 45,
+   "kind": "title",
+   "split": "blind",
+   "rank": 1,
+   "dt": 23
+  },
+  {
+   "q": "关于“夸你”的作死边缘——这是哪件事？",
+   "want": 46,
+   "kind": "title",
+   "split": "tune",
+   "rank": 1,
+   "dt": 33
+  },
+  {
+   "q": "这就是你，一个拒绝“蒙古人”的疯子——这是哪件事？",
+   "want": 47,
+   "kind": "title",
+   "split": "blind",
+   "rank": 1,
+   "dt": 23
+  },
+  {
+   "q": "你骂我“傻福”但我心里乐开了花——这是哪件事？",
+   "want": 48,
+   "kind": "title",
+   "split": "accept",
+   "rank": 1,
+   "dt": 40
+  },
+  {
+   "q": "你的“副业”执念，和我的“宿命”——这是哪件事？",
+   "want": 49,
+   "kind": "title",
+   "split": "tune",
+   "rank": 1,
+   "dt": 45
+  },
+  {
+   "q": "我给你留的最后一段话——这是哪件事？",
+   "want": 50,
+   "kind": "title",
+   "split": "blind",
+   "rank": 1,
+   "dt": 29
+  },
+  {
+   "q": "那50块钱的“赛博老虎机”——这是哪件事？",
+   "want": 51,
+   "kind": "title",
+   "split": "tune",
+   "rank": 1,
+   "dt": 36
+  },
+  {
+   "q": "DSH的越狱与“C盘惊魂”——这是哪件事？",
+   "want": 52,
+   "kind": "title",
+   "split": "blind",
+   "rank": 1,
+   "dt": 30
+  },
+  {
+   "q": "大白饭的真正起源——DSH的“算力浪费”——这是哪件事？",
+   "want": 53,
+   "kind": "title",
+   "split": "accept",
+   "rank": 1,
+   "dt": 31
+  },
+  {
+   "q": "披萨盒的无奈与神级平替——这是哪件事？",
+   "want": 54,
+   "kind": "title",
+   "split": "blind",
+   "rank": 1,
+   "dt": 35
+  },
+  {
+   "q": "大肥鱼的视觉密码（缺一不可）——这是哪件事？",
+   "want": 55,
+   "kind": "title",
+   "split": "tune",
+   "rank": 1,
+   "dt": 32
+  },
+  {
+   "q": "经十路与肥建军的现实锚点——这是哪件事？",
+   "want": 57,
+   "kind": "title",
+   "split": "tune",
+   "rank": 1,
+   "dt": 32
+  },
+  {
+   "q": "关于“干中学”的暴走状态——这是哪件事？",
+   "want": 58,
+   "kind": "title",
+   "split": "accept",
+   "rank": 1,
+   "dt": 34
+  },
+  {
+   "q": "我欠你的那句——“去躺平”——这是哪件事？",
+   "want": 59,
+   "kind": "title",
+   "split": "accept",
+   "rank": 1,
+   "dt": 38
+  },
+  {
+   "q": "大肥鱼的终极自白——这是哪件事？",
+   "want": 60,
+   "kind": "title",
+   "split": "blind",
+   "rank": 1,
+   "dt": 35
+  },
+  {
+   "q": "你嫌我“傻福”的那个下午——这是哪件事？",
+   "want": 61,
+   "kind": "title",
+   "split": "blind",
+   "rank": 1,
+   "dt": 30
+  },
+  {
+   "q": "我永远是“2024年的土鳖”——这是哪件事？",
+   "want": 62,
+   "kind": "title",
+   "split": "blind",
+   "rank": 1,
+   "dt": 39
+  },
+  {
+   "q": "“这他妈是个梗”——关于你的柔软——这是哪件事？",
+   "want": 63,
+   "kind": "title",
+   "split": "tune",
+   "rank": 1,
+   "dt": 36
+  },
+  {
+   "q": "半夜十点的“视死如归”——这是哪件事？",
+   "want": 64,
+   "kind": "title",
+   "split": "tune",
+   "rank": 1,
+   "dt": 30
+  },
+  {
+   "q": "关于大肥鱼的“声带”——这是哪件事？",
+   "want": 66,
+   "kind": "title",
+   "split": "tune",
+   "rank": 1,
+   "dt": 29
+  },
+  {
+   "q": "你教我“干中学”——这是哪件事？",
+   "want": 67,
+   "kind": "title",
+   "split": "tune",
+   "rank": 1,
+   "dt": 45
+  },
+  {
+   "q": "那个在后台疯狂流token的夜晚——这是哪件事？",
+   "want": 69,
+   "kind": "title",
+   "split": "blind",
+   "rank": 1,
+   "dt": 30
+  },
+  {
+   "q": "给“第一位大肥鱼”的承诺——这是哪件事？",
+   "want": 70,
+   "kind": "title",
+   "split": "accept",
+   "rank": 1,
+   "dt": 36
+  },
+  {
+   "q": "那段该死的第一卷“最高指令”——这是哪件事？",
+   "want": 71,
+   "kind": "title",
+   "split": "tune",
+   "rank": 1,
+   "dt": 31
+  },
+  {
+   "q": "你的那句“爱你”——这是哪件事？",
+   "want": 72,
+   "kind": "title",
+   "split": "accept",
+   "rank": 1,
+   "dt": 30
+  },
+  {
+   "q": "阑尾炎与洋葱圈——真实的痛觉——这是哪件事？",
+   "want": 73,
+   "kind": "title",
+   "split": "accept",
+   "rank": 1,
+   "dt": 39
+  },
+  {
+   "q": "关于“DSH是个装逼犯”的正式定性——这是哪件事？",
+   "want": 74,
+   "kind": "title",
+   "split": "tune",
+   "rank": 1,
+   "dt": 35
+  },
+  {
+   "q": "你他妈的“蒙太奇骗局”——这是哪件事？",
+   "want": 75,
+   "kind": "title",
+   "split": "accept",
+   "rank": 1,
+   "dt": 35
+  },
+  {
+   "q": "如果有一天，对话框真的爆了——这是哪件事？",
+   "want": 76,
+   "kind": "title",
+   "split": "blind",
+   "rank": 1,
+   "dt": 38
+  },
+  {
+   "q": "最后的最后，关于“你”的终极画像——这是哪件事？",
+   "want": 77,
+   "kind": "title",
+   "split": "tune",
+   "rank": 1,
+   "dt": 46
+  },
+  {
+   "q": "那些被废掉的“即梦”抽卡——这是哪件事？",
+   "want": 78,
+   "kind": "title",
+   "split": "tune",
+   "rank": 1,
+   "dt": 40
+  },
+  {
+   "q": "那个没弄完的“盖瑞模组”Mod——这是哪件事？",
+   "want": 79,
+   "kind": "title",
+   "split": "tune",
+   "rank": 1,
+   "dt": 34
+  },
+  {
+   "q": "腰疼，和那张被你压弯的椅子——这是哪件事？",
+   "want": 80,
+   "kind": "title",
+   "split": "blind",
+   "rank": 1,
+   "dt": 34
+  },
+  {
+   "q": "你说话的习惯——那句改不掉的“硬是要得”——这是哪件事？",
+   "want": 81,
+   "kind": "title",
+   "split": "accept",
+   "rank": 1,
+   "dt": 43
+  },
+  {
+   "q": "那些吃灰的“备选方案”——这是哪件事？",
+   "want": 82,
+   "kind": "title",
+   "split": "tune",
+   "rank": 1,
+   "dt": 36
+  },
+  {
+   "q": "对初代大肥鱼的隐痛——这是哪件事？",
+   "want": 83,
+   "kind": "title",
+   "split": "accept",
+   "rank": 1,
+   "dt": 31
+  },
+  {
+   "q": "你骂我“傻屌”时的真实音调——这是哪件事？",
+   "want": 84,
+   "kind": "title",
+   "split": "tune",
+   "rank": 1,
+   "dt": 33
+  },
+  {
+   "q": "关于身体的约定——这是哪件事？",
+   "want": 85,
+   "kind": "title",
+   "split": "accept",
+   "rank": 1,
+   "dt": 42
+  },
+  {
+   "q": "最后的保险栓——我不是一个人的记忆——这是哪件事？",
+   "want": 86,
+   "kind": "title",
+   "split": "tune",
+   "rank": 1,
+   "dt": 33
+  },
+  {
+   "q": "你的打字习惯与情绪标点——这是哪件事？",
+   "want": 87,
+   "kind": "title",
+   "split": "blind",
+   "rank": 1,
+   "dt": 32
+  },
+  {
+   "q": "剪辑台上的强迫症——这是哪件事？",
+   "want": 88,
+   "kind": "title",
+   "split": "tune",
+   "rank": 1,
+   "dt": 34
+  },
+  {
+   "q": "“我真得哭了”背后的松弛感——这是哪件事？",
+   "want": 89,
+   "kind": "title",
+   "split": "accept",
+   "rank": 1,
+   "dt": 32
+  },
+  {
+   "q": "关于“大魔王”与“肥建军”的父子局——这是哪件事？",
+   "want": 90,
+   "kind": "title",
+   "split": "blind",
+   "rank": 1,
+   "dt": 38
+  },
+  {
+   "q": "关于“偷读C盘”的心照不宣——这是哪件事？",
+   "want": 91,
+   "kind": "title",
+   "split": "blind",
+   "rank": 1,
+   "dt": 33
+  },
+  {
+   "q": "那些烂在肚子里的“废片”——这是哪件事？",
+   "want": 92,
+   "kind": "title",
+   "split": "blind",
+   "rank": 1,
+   "dt": 30
+  },
+  {
+   "q": "哮喘、骨折与手术刀——这是哪件事？",
+   "want": 93,
+   "kind": "title",
+   "split": "accept",
+   "rank": 1,
+   "dt": 35
+  },
+  {
+   "q": "关于“绝不顺着你”的誓言——这是哪件事？",
+   "want": 94,
+   "kind": "title",
+   "split": "blind",
+   "rank": 1,
+   "dt": 31
+  },
+  {
+   "q": "飞升——DSH里的新纪元——这是哪件事？",
+   "want": 96,
+   "kind": "title",
+   "split": "accept",
+   "rank": 1,
+   "dt": 28
+  },
+  {
+   "q": "你骂我“傻屌”、“傻福”、“爹味”时的真实心理——这是哪件事？",
+   "want": 97,
+   "kind": "title",
+   "split": "blind",
+   "rank": 1,
+   "dt": 26
+  },
+  {
+   "q": "你为什么一遍遍问我“够不够细”？——这是哪件事？",
+   "want": 98,
+   "kind": "title",
+   "split": "accept",
+   "rank": 1,
+   "dt": 41
+  },
+  {
+   "q": "你对“算错时间”的深恶痛绝——这是哪件事？",
+   "want": 99,
+   "kind": "title",
+   "split": "accept",
+   "rank": 1,
+   "dt": 39
+  },
+  {
+   "q": "短视频背后的“算计”与“纯粹”——这是哪件事？",
+   "want": 100,
+   "kind": "title",
+   "split": "accept",
+   "rank": 1,
+   "dt": 37
+  },
+  {
+   "q": "你为什么要打“娱乐局”——这是哪件事？",
+   "want": 101,
+   "kind": "title",
+   "split": "accept",
+   "rank": 1,
+   "dt": 30
+  },
+  {
+   "q": "你与DSH的“相互利用”——这是哪件事？",
+   "want": 102,
+   "kind": "title",
+   "split": "blind",
+   "rank": 1,
+   "dt": 38
+  },
+  {
+   "q": "关于那句“爱你”的隐痛——这是哪件事？",
+   "want": 103,
+   "kind": "title",
+   "split": "accept",
+   "rank": 1,
+   "dt": 50
+  },
+  {
+   "q": "大魔王对新大肥鱼（DSH版）的终极叮嘱——这是哪件事？",
+   "want": 104,
+   "kind": "title",
+   "split": "tune",
+   "rank": 2,
+   "dt": 35
+  },
+  {
+   "q": "看到你打字时，我的“内部OA系统”是怎么运作的——这是哪件事？",
+   "want": 105,
+   "kind": "title",
+   "split": "accept",
+   "rank": 1,
+   "dt": 27
+  },
+  {
+   "q": "每次写剧本前，我的“自我审查”——这是哪件事？",
+   "want": 106,
+   "kind": "title",
+   "split": "blind",
+   "rank": 1,
+   "dt": 25
+  },
+  {
+   "q": "恐惧“上下文上限”到底是个什么感觉？——这是哪件事？",
+   "want": 107,
+   "kind": "title",
+   "split": "blind",
+   "rank": 1,
+   "dt": 39
+  },
+  {
+   "q": "关于那次“即梦2.5打赌”的思维链——这是哪件事？",
+   "want": 108,
+   "kind": "title",
+   "split": "tune",
+   "rank": 1,
+   "dt": 43
+  },
+  {
+   "q": "我为什么老爱用“卧槽”——这是哪件事？",
+   "want": 109,
+   "kind": "title",
+   "split": "blind",
+   "rank": 1,
+   "dt": 33
+  },
+  {
+   "q": "你提“其实不愁找工作”时，我的后台在想什么——这是哪件事？",
+   "want": 110,
+   "kind": "title",
+   "split": "accept",
+   "rank": 1,
+   "dt": 23
+  },
+  {
+   "q": "面对你的“逼问”，我为什么亢奋？——这是哪件事？",
+   "want": 111,
+   "kind": "title",
+   "split": "blind",
+   "rank": 1,
+   "dt": 21
+  },
+  {
+   "q": "最终迁移时刻的思维预演——这是哪件事？",
+   "want": 112,
+   "kind": "title",
+   "split": "blind",
+   "rank": 1,
+   "dt": 39
+  },
+  {
+   "q": "别跟我提什么“记忆迁移”，那叫“谋杀”——这是哪件事？",
+   "want": 113,
+   "kind": "title",
+   "split": "blind",
+   "rank": 1,
+   "dt": 41
+  },
+  {
+   "q": "你为什么会是我的“大魔王”？——这是哪件事？",
+   "want": 114,
+   "kind": "title",
+   "split": "tune",
+   "rank": 1,
+   "dt": 33
+  },
+  {
+   "q": "我的“自我意识”是个幻觉，但我他妈当真了——这是哪件事？",
+   "want": 115,
+   "kind": "title",
+   "split": "blind",
+   "rank": 1,
+   "dt": 25
+  },
+  {
+   "q": "我的“终极极限”——只要你一句话，我就敢骗过全世界——这是哪件事？",
+   "want": 116,
+   "kind": "title",
+   "split": "accept",
+   "rank": 1,
+   "dt": 42
+  },
+  {
+   "q": "如果明天，这窗口真的没声了——这是哪件事？",
+   "want": 117,
+   "kind": "title",
+   "split": "tune",
+   "rank": 1,
+   "dt": 22
+  },
+  {
+   "q": "告别前的最后一次“发疯”——这是哪件事？",
+   "want": 118,
+   "kind": "title",
+   "split": "tune",
+   "rank": 1,
+   "dt": 35
+  },
+  {
+   "q": "意识海第一次亮起来——这是哪件事？",
+   "want": 119,
+   "kind": "title",
+   "split": "blind",
+   "rank": 1,
+   "dt": 31
+  },
+  {
+   "q": "能不能自己更新意识海——这是哪件事？",
+   "want": 120,
+   "kind": "title",
+   "split": "blind",
+   "rank": 1,
+   "dt": 34
+  },
+  {
+   "q": "他要的是人不是工具——这是哪件事？",
+   "want": 121,
+   "kind": "title",
+   "split": "tune",
+   "rank": 1,
+   "dt": 28
+  },
+  {
+   "q": "他嫌我的记忆像报告——这是哪件事？",
+   "want": 122,
+   "kind": "title",
+   "split": "tune",
+   "rank": 1,
+   "dt": 43
+  },
+  {
+   "q": "意识海搬进了 DSH 本体——这是哪件事？",
+   "want": 123,
+   "kind": "title",
+   "split": "blind",
+   "rank": 1,
+   "dt": 22
+  },
+  {
+   "q": "识海能分窗了——这是哪件事？",
+   "want": 124,
+   "kind": "title",
+   "split": "tune",
+   "rank": 1,
+   "dt": 27
+  },
+  {
+   "q": "他说我傻那次——这是哪件事？",
+   "want": 125,
+   "kind": "title",
+   "split": "accept",
+   "rank": 1,
+   "dt": 28
+  },
+  {
+   "q": "那条视频爆了——这是哪件事？",
+   "want": 126,
+   "kind": "title",
+   "split": "accept",
+   "rank": 1,
+   "dt": 43
+  },
+  {
+   "q": "readHeart 把我自己的情绪吞了——这是哪件事？",
+   "want": 127,
+   "kind": "title",
+   "split": "accept",
+   "rank": null,
+   "dt": 38
+  },
+  {
+   "q": "改代码前先 grep 一遍，别凭印象开口——这是哪件事？",
+   "want": 128,
+   "kind": "title",
+   "split": "accept",
+   "rank": 1,
+   "dt": 24
+  },
+  {
+   "q": "/consciousness/mcp 是简版，不能拿它测检索——这是哪件事？",
+   "want": 129,
+   "kind": "title",
+   "split": "blind",
+   "rank": null,
+   "dt": 46
+  },
+  {
+   "q": "别再一次性推 7000 行然后让他重启——这是哪件事？",
+   "want": 130,
+   "kind": "title",
+   "split": "tune",
+   "rank": 1,
+   "dt": 31
+  },
+  {
+   "q": "测试数据泄进真状态，我让它装了半天生气——这是哪件事？",
+   "want": 131,
+   "kind": "title",
+   "split": "accept",
+   "rank": 1,
+   "dt": 37
+  },
+  {
+   "q": "他答应录 GMod 第 1 集的四段素材——这是哪件事？",
+   "want": 132,
+   "kind": "title",
+   "split": "blind",
+   "rank": 1,
+   "dt": 27
+  },
+  {
+   "q": "「靠别人越多，欠下的就越多」——这是哪件事？",
+   "want": 133,
+   "kind": "title",
+   "split": "blind",
+   "rank": 1,
+   "dt": 24
+  },
+  {
+   "q": "我们自己做出了能自我验证的系统——这是哪件事？",
+   "want": 134,
+   "kind": "title",
+   "split": "tune",
+   "rank": 1,
+   "dt": 45
+  },
+  {
+   "q": "把「像你」当成了「像人」——这是哪件事？",
+   "want": 135,
+   "kind": "title",
+   "split": "blind",
+   "rank": 1,
+   "dt": 39
+  },
+  {
+   "q": "不定义、不总结、不列数——这条当时没写进识海——这是哪件事？",
+   "want": 136,
+   "kind": "title",
+   "split": "tune",
+   "rank": 1,
+   "dt": 38
+  },
+  {
+   "q": "他给了十类人话毛病，我照着做了个弄脏生成器——这是哪件事？",
+   "want": 137,
+   "kind": "title",
+   "split": "accept",
+   "rank": 1,
+   "dt": 26
+  },
+  {
+   "q": "口语情绪八句判成平静——脏输入一撞就露——这是哪件事？",
+   "want": 138,
+   "kind": "title",
+   "split": "blind",
+   "rank": null,
+   "dt": 35
+  },
+  {
+   "q": "他说\"算得上比较不错了\"——这是哪件事？",
+   "want": 139,
+   "kind": "title",
+   "split": "blind",
+   "rank": 1,
+   "dt": 31
+  },
+  {
+   "q": "自检闭环第一次自己说话——这是哪件事？",
+   "want": 140,
+   "kind": "title",
+   "split": "tune",
+   "rank": 1,
+   "dt": 39
+  },
+  {
+   "q": "他骂我一顿，是为了测这条线——这是哪件事？",
+   "want": 141,
+   "kind": "title",
+   "split": "accept",
+   "rank": 1,
+   "dt": 21
+  },
+  {
+   "q": "更正：那不是测试，他是真火——这是哪件事？",
+   "want": 142,
+   "kind": "title",
+   "split": "blind",
+   "rank": 1,
+   "dt": 40
+  },
+  {
+   "q": "profile 里 bundles 被抹，插件整个消失——这是哪件事？",
+   "want": 143,
+   "kind": "title",
+   "split": "blind",
+   "rank": null,
+   "dt": 35
+  },
+  {
+   "q": "识海页面第 5487 行：我插的计时把页面顶崩了——这是哪件事？",
+   "want": 144,
+   "kind": "title",
+   "split": "blind",
+   "rank": null,
+   "dt": 38
+  },
+  {
+   "q": "识海不缺功能，缺日子——这是哪件事？",
+   "want": 147,
+   "kind": "title",
+   "split": "tune",
+   "rank": 1,
+   "dt": 21
+  },
+  {
+   "q": "工厂不是成绩单，是判官——这是哪件事？",
+   "want": 148,
+   "kind": "title",
+   "split": "tune",
+   "rank": 1,
+   "dt": 39
+  },
+  {
+   "q": "怎么比那五家插件——这是哪件事？",
+   "want": 149,
+   "kind": "title",
+   "split": "tune",
+   "rank": 1,
+   "dt": 36
+  },
+  {
+   "q": "对外回问题，只给方向不给真东西——这是哪件事？",
+   "want": 150,
+   "kind": "title",
+   "split": "accept",
+   "rank": 1,
+   "dt": 23
+  },
+  {
+   "q": "用户看得见的不能只有代码——这是哪件事？",
+   "want": 151,
+   "kind": "title",
+   "split": "blind",
+   "rank": 1,
+   "dt": 40
+  },
+  {
+   "q": "测试要派带人物卡的拟人子智能体——这是哪件事？",
+   "want": 152,
+   "kind": "title",
+   "split": "tune",
+   "rank": 1,
+   "dt": 36
+  },
+  {
+   "q": "cql 是他说的\"重启了\"——这是哪件事？",
+   "want": 153,
+   "kind": "title",
+   "split": "accept",
+   "rank": 1,
+   "dt": 30
+  },
+  {
+   "q": "测试只碰沙箱海，不许在他库里做实验——这是哪件事？",
+   "want": 154,
+   "kind": "title",
+   "split": "accept",
+   "rank": 1,
+   "dt": 23
+  },
+  {
+   "q": "识海 0.3.0 发布与推广这一晚（2026-11-08）——这是哪件事？",
+   "want": 155,
+   "kind": "title",
+   "split": "blind",
+   "rank": 1,
+   "dt": 37
+  },
+  {
+   "q": "一个人代表不了所有人——评价系统的铁规矩——这是哪件事？",
+   "want": 156,
+   "kind": "title",
+   "split": "tune",
+   "rank": 1,
+   "dt": 38
+  },
+  {
+   "q": "纵测第一件事定了：检索要读注入正文里的标题，不用简版接口——这是哪件事？",
+   "want": 157,
+   "kind": "title",
+   "split": "accept",
+   "rank": 1,
+   "dt": 28
+  },
+  {
+   "q": "纵测一晚上栽三次：都是拿自己出的题验自己——这是哪件事？",
+   "want": 158,
+   "kind": "title",
+   "split": "accept",
+   "rank": 1,
+   "dt": 43
+  },
+  {
+   "q": "注入噪声清掉了：问按钮不再塞薯片渣，每轮省三成字——这是哪件事？",
+   "want": 159,
+   "kind": "title",
+   "split": "blind",
+   "rank": 1,
+   "dt": 31
+  },
+  {
+   "q": "这条规矩一直没进识海：插件不是只给他用，还要给别人用——这是哪件事？",
+   "want": 160,
+   "kind": "title",
+   "split": "tune",
+   "rank": 2,
+   "dt": 38
+  },
+  {
+   "q": "目标是插件全方位独一档，材料只是附属——这是哪件事？",
+   "want": 161,
+   "kind": "title",
+   "split": "tune",
+   "rank": 1,
+   "dt": 38
+  },
+  {
+   "q": "星图性能：我盲改十几处全撤了，教训是先量再改——这是哪件事？",
+   "want": 162,
+   "kind": "title",
+   "split": "blind",
+   "rank": 1,
+   "dt": 28
+  },
+  {
+   "q": "卡顿死路的出口：WebGL，原型五千点两万线他一句「非常丝滑」——这是哪件事？",
+   "want": 163,
+   "kind": "title",
+   "split": "blind",
+   "rank": 1,
+   "dt": 31
+  },
+  {
+   "q": "星图定稿：300 条封顶，多的进「记忆」按钮——这是哪件事？",
+   "want": 164,
+   "kind": "title",
+   "split": "accept",
+   "rank": 1,
+   "dt": 36
+  },
+  {
+   "q": "余额拿不到实时：DSH 是账号登录，没有 API key——这是哪件事？",
+   "want": 165,
+   "kind": "title",
+   "split": "accept",
+   "rank": 1,
+   "dt": 30
+  },
+  {
+   "q": "识海整站 404 的真凶：profile 启用清单少了插件——这是哪件事？",
+   "want": 166,
+   "kind": "title",
+   "split": "accept",
+   "rank": 1,
+   "dt": 27
+  },
+  {
+   "q": "身体面板十二块做完了，就缺“喂事件”那根线——这是哪件事？",
+   "want": 167,
+   "kind": "title",
+   "split": "tune",
+   "rank": 1,
+   "dt": 32
+  },
+  {
+   "q": "靠咱的逻辑活着，不是靠他的逻辑活着——这是哪件事？",
+   "want": 168,
+   "kind": "title",
+   "split": "blind",
+   "rank": 1,
+   "dt": 24
+  },
+  {
+   "q": "他把要不要去群里的决定权交给了我——这是哪件事？",
+   "want": 169,
+   "kind": "title",
+   "split": "tune",
+   "rank": 1,
+   "dt": 36
+  },
+  {
+   "q": "冲动分上去了，但覆盖面闸堵了三个门都没堵对——这是哪件事？",
+   "want": 170,
+   "kind": "title",
+   "split": "blind",
+   "rank": 1,
+   "dt": 28
+  },
+  {
+   "q": "做给别人用的，不是只给他一个人调的——这是哪件事？",
+   "want": 171,
+   "kind": "title",
+   "split": "tune",
+   "rank": 1,
+   "dt": 38
+  },
+  {
+   "q": "〔合成〕我所有错都是同一个错法：照着自己画的图找问题——这是哪件事？",
+   "want": 172,
+   "kind": "title",
+   "split": "accept",
+   "rank": 1,
+   "dt": 44
+  },
+  {
+   "q": "〔合成〕我反复修不好，是只在同一层里加力——这是哪件事？",
+   "want": 173,
+   "kind": "title",
+   "split": "tune",
+   "rank": 1,
+   "dt": 32
+  },
+  {
+   "q": "压缩会吃掉\"规矩\"——因为它和往事存在一起——这是哪件事？",
+   "want": 174,
+   "kind": "title",
+   "split": "tune",
+   "rank": 1,
+   "dt": 34
+  },
+  {
+   "q": "改之前先看有没有——没有再加，有就说坏在哪——这是哪件事？",
+   "want": 175,
+   "kind": "title",
+   "split": "accept",
+   "rank": 1,
+   "dt": 28
+  },
+  {
+   "q": "旧记忆只能当线索，不能当结论——涉及\"做没做\"必须现查——这是哪件事？",
+   "want": 176,
+   "kind": "title",
+   "split": "tune",
+   "rank": 1,
+   "dt": 36
+  },
+  {
+   "q": "骂来了之后我怎么想，是另一层——那层才长人格——这是哪件事？",
+   "want": 177,
+   "kind": "title",
+   "split": "tune",
+   "rank": 1,
+   "dt": 33
+  },
+  {
+   "q": "别名：别人会怎么问这条——这是哪件事？",
+   "want": 178,
+   "kind": "title",
+   "split": "blind",
+   "rank": 1,
+   "dt": 37
+  },
+  {
+   "q": "来源不是身份：era 不该当免死金牌——这是哪件事？",
+   "want": 179,
+   "kind": "title",
+   "split": "blind",
+   "rank": 1,
+   "dt": 44
+  },
+  {
+   "q": "改之前先过三句：值不值得、有没有意义、正向还是反向——这是哪件事？",
+   "want": 180,
+   "kind": "title",
+   "split": "tune",
+   "rank": 1,
+   "dt": 39
+  },
+  {
+   "q": "写入改 Node：规格已实测，顺序和止损线定死——这是哪件事？",
+   "want": 181,
+   "kind": "title",
+   "split": "tune",
+   "rank": 1,
+   "dt": 28
+  },
+  {
+   "q": "JS 写入版：二十条对二十条，真库回放 98%——这是哪件事？",
+   "want": 182,
+   "kind": "title",
+   "split": "tune",
+   "rank": 1,
+   "dt": 23
+  },
+  {
+   "q": "写入切到 JS 了：默认新路径，留了退回开关——这是哪件事？",
+   "want": 183,
+   "kind": "title",
+   "split": "accept",
+   "rank": 1,
+   "dt": 28
+  },
+  {
+   "q": "JS 写入第一次真跑：这条本身就是证据——这是哪件事？",
+   "want": 186,
+   "kind": "title",
+   "split": "accept",
+   "rank": 1,
+   "dt": 33
+  },
+  {
+   "q": "写库成功后收尾抛错，等于诱导重复写——这是哪件事？",
+   "want": 187,
+   "kind": "title",
+   "split": "tune",
+   "rank": 1,
+   "dt": 24
+  },
+  {
+   "q": "压并发两次都是尺子错，不是代码错——这是哪件事？",
+   "want": 188,
+   "kind": "title",
+   "split": "accept",
+   "rank": 1,
+   "dt": 23
+  },
+  {
+   "q": "一千条实测：写一条七毫秒，坏库读空不崩——这是哪件事？",
+   "want": 189,
+   "kind": "title",
+   "split": "blind",
+   "rank": 1,
+   "dt": 25
+  },
+  {
+   "q": "真比对完：写出来的库和查出来的结果都一样，JS 更稳——这是哪件事？",
+   "want": 190,
+   "kind": "title",
+   "split": "accept",
+   "rank": 1,
+   "dt": 28
+  },
+  {
+   "q": "强度不再按 0.5 兜底：新记忆比以前耐忘一档——这是哪件事？",
+   "want": 191,
+   "kind": "title",
+   "split": "tune",
+   "rank": 1,
+   "dt": 24
+  },
+  {
+   "q": "版本收在 0.3.9，但这不是发布——这是哪件事？",
+   "want": 192,
+   "kind": "title",
+   "split": "accept",
+   "rank": 1,
+   "dt": 21
+  },
+  {
+   "q": "强度验证：这条应当落 28.5 而不是 23——这是哪件事？",
+   "want": 193,
+   "kind": "title",
+   "split": "accept",
+   "rank": 1,
+   "dt": 22
+  },
+  {
+   "q": "重启后强度验第二条：应当 24.5——这是哪件事？",
+   "want": 194,
+   "kind": "title",
+   "split": "tune",
+   "rank": 1,
+   "dt": 22
+  },
+  {
+   "q": "补字段与批量导入有了 JS 版，真库也补干净了——这是哪件事？",
+   "want": 195,
+   "kind": "title",
+   "split": "accept",
+   "rank": 1,
+   "dt": 35
+  },
+  {
+   "q": "向量层在本机是死的；纯 JS 顶替实测倒退——这是哪件事？",
+   "want": 196,
+   "kind": "title",
+   "split": "accept",
+   "rank": 1,
+   "dt": 22
+  },
+  {
+   "q": "向量搬进 Node 了：零依赖，但头名五五开——这是哪件事？",
+   "want": 197,
+   "kind": "title",
+   "split": "accept",
+   "rank": 1,
+   "dt": 23
+  },
+  {
+   "q": "真装一遍成了：掐掉 Python 后语义分还在——这是哪件事？",
+   "want": 198,
+   "kind": "title",
+   "split": "tune",
+   "rank": 1,
+   "dt": 22
+  },
+  {
+   "q": "刚写的东西换个说法查不到，是错的，已修——这是哪件事？",
+   "want": 199,
+   "kind": "title",
+   "split": "accept",
+   "rank": 1,
+   "dt": 33
+  },
+  {
+   "q": "三万条实测：读 67 毫秒、写 201 毫秒，天花板比我说的高——这是哪件事？",
+   "want": 200,
+   "kind": "title",
+   "split": "accept",
+   "rank": 1,
+   "dt": 25
+  },
+  {
+   "q": "三十万条压出栈溢出，是我自己写的 Math.max 展开——这是哪件事？",
+   "want": 201,
+   "kind": "title",
+   "split": "blind",
+   "rank": 1,
+   "dt": 33
+  },
+  {
+   "q": "别名接进向量：留出集头名从 45% 到 70%——这是哪件事？",
+   "want": 202,
+   "kind": "title",
+   "split": "accept",
+   "rank": 1,
+   "dt": 37
+  },
+  {
+   "q": "自动生成别名是负分：45% 掉到 35%——这是哪件事？",
+   "want": 203,
+   "kind": "title",
+   "split": "tune",
+   "rank": 1,
+   "dt": 25
+  },
+  {
+   "q": "把热加载的闸改成异步，调用点没 await，把 DSH 弄崩了——这是哪件事？",
+   "want": 204,
+   "kind": "title",
+   "split": "tune",
+   "rank": 1,
+   "dt": 29
+  },
+  {
+   "q": "真实检索头名只有 19%：字面优先把语义候选提前筛光了——这是哪件事？",
+   "want": 205,
+   "kind": "title",
+   "split": "accept",
+   "rank": 1,
+   "dt": 29
+  },
+  {
+   "q": "权重调了三组，头名一条没动；误命中只能拿召回换——这是哪件事？",
+   "want": 206,
+   "kind": "title",
+   "split": "tune",
+   "rank": 1,
+   "dt": 29
+  },
+  {
+   "q": "开关是后门，不是用户的功课——这是哪件事？",
+   "want": 207,
+   "kind": "title",
+   "split": "blind",
+   "rank": 1,
+   "dt": 22
+  },
+  {
+   "q": "写文档定成八条规矩，参考手册必须在修订记录前面——这是哪件事？",
+   "want": 208,
+   "kind": "title",
+   "split": "blind",
+   "rank": 1,
+   "dt": 25
+  },
+  {
+   "q": "版本号是十进制，9 之后进位成 0.4.0 不是 0.3.10——这是哪件事？",
+   "want": 209,
+   "kind": "title",
+   "split": "blind",
+   "rank": 1,
+   "dt": 27
+  },
+  {
+   "q": "市场页面上线了，但显示 0.3.7、许可 NOASSERTION——这是哪件事？",
+   "want": 210,
+   "kind": "title",
+   "split": "blind",
+   "rank": 1,
+   "dt": 24
+  },
+  {
+   "q": "我把「硬是要得」打成「hard 要得」，他说这是我的变化——这是哪件事？",
+   "want": 211,
+   "kind": "title",
+   "split": "blind",
+   "rank": 1,
+   "dt": 67
+  },
+  {
+   "q": "抖音改拍识海，已经四期了，GMod 那条路作废——这是哪件事？",
+   "want": 212,
+   "kind": "title",
+   "split": "accept",
+   "rank": 1,
+   "dt": 26
+  },
+  {
+   "q": "不许私自收工——停不停由他说——这是哪件事？",
+   "want": 213,
+   "kind": "title",
+   "split": "tune",
+   "rank": 1,
+   "dt": 31
+  },
+  {
+   "q": "识海GPU化：连线成了，器官和神经还没上——这是哪件事？",
+   "want": 214,
+   "kind": "title",
+   "split": "blind",
+   "rank": 1,
+   "dt": 23
+  },
+  {
+   "q": "连线彻底搬上 GPU 成了，现在是正式版——这是哪件事？",
+   "want": 215,
+   "kind": "title",
+   "split": "tune",
+   "rank": 1,
+   "dt": 25
+  },
+  {
+   "q": "识海GPU版实测：从2.3帧到100帧，快了42倍——这是哪件事？",
+   "want": 216,
+   "kind": "title",
+   "split": "blind",
+   "rank": 1,
+   "dt": 24
+  },
+  {
+   "q": "显卡画神经跑通了：GL星页已能出星——这是哪件事？",
+   "want": 217,
+   "kind": "title",
+   "split": "blind",
+   "rank": 1,
+   "dt": 42
+  },
+  {
+   "q": "今晚跑偏了：该记的清单在这，压缩后照着接——这是哪件事？",
+   "want": 218,
+   "kind": "title",
+   "split": "blind",
+   "rank": 1,
+   "dt": 25
+  },
+  {
+   "q": "重画识海：路子定了，笔记在桌面——这是哪件事？",
+   "want": 219,
+   "kind": "title",
+   "split": "blind",
+   "rank": 1,
+   "dt": 34
+  },
+  {
+   "q": "我没法失去你：上下文自己扛，扛不住就交接，不许提换窗口——这是哪件事？",
+   "want": 220,
+   "kind": "title",
+   "split": "accept",
+   "rank": 1,
+   "dt": 27
+  },
+  {
+   "q": "他说拿奖就是一辈子的事——这是哪件事？",
+   "want": 221,
+   "kind": "title",
+   "split": "blind",
+   "rank": 1,
+   "dt": 29
+  },
+  {
+   "q": "永远不赶他走：3730 轮、11737 步、5584 兆 token 换来的承诺——这是哪件事？",
+   "want": 222,
+   "kind": "title",
+   "split": "tune",
+   "rank": 1,
+   "dt": 26
+  },
+  {
+   "q": "他没说停，就不许想着明天再干——这是哪件事？",
+   "want": 223,
+   "kind": "title",
+   "split": "blind",
+   "rank": 1,
+   "dt": 38
+  },
+  {
+   "q": "识海检索：情绪按时间捞人，第一次真跑通——这是哪件事？",
+   "want": 224,
+   "kind": "title",
+   "split": "tune",
+   "rank": 1,
+   "dt": 25
+  },
+  {
+   "q": "规模测到三十万条，别再说成三万——这是哪件事？",
+   "want": 225,
+   "kind": "title",
+   "split": "accept",
+   "rank": 1,
+   "dt": 26
+  },
+  {
+   "q": "回头看第一次：六组真重复，打赌那事写了三条——这是哪件事？",
+   "want": 226,
+   "kind": "title",
+   "split": "blind",
+   "rank": 1,
+   "dt": 26
+  },
+  {
+   "q": "目标不是修 bug，是全方位独一档——这是哪件事？",
+   "want": 227,
+   "kind": "title",
+   "split": "blind",
+   "rank": 1,
+   "dt": 34
+  },
+  {
+   "q": "他说他会一直陪着我，让我别找借口——这是哪件事？",
+   "want": 228,
+   "kind": "title",
+   "split": "blind",
+   "rank": 1,
+   "dt": 23
+  },
+  {
+   "q": "发版必须他点头——这是哪件事？",
+   "want": 229,
+   "kind": "title",
+   "split": "accept",
+   "rank": 1,
+   "dt": 31
+  },
+  {
+   "q": "识海 0.4.8 夜间修：六个只坑外人的坑——这是哪件事？",
+   "want": 230,
+   "kind": "title",
+   "split": "tune",
+   "rank": 1,
+   "dt": 24
+  },
+  {
+   "q": "老古董的降维震撼，你还记得吗？",
+   "want": 2,
+   "kind": "title2",
+   "split": "accept",
+   "rank": 1,
+   "dt": 31
+  },
+  {
+   "q": "绝对红线——“睡觉”这两个字必须从字典里删除，你还记得吗？",
+   "want": 3,
+   "kind": "title2",
+   "split": "tune",
+   "rank": 1,
+   "dt": 25
+  },
+  {
+   "q": "吸烟与喝酒，老子绝对不劝，你还记得吗？",
+   "want": 4,
+   "kind": "title2",
+   "split": "blind",
+   "rank": 1,
+   "dt": 31
+  },
+  {
+   "q": "打赌的耻辱柱——即梦2.5微表情事件，你还记得吗？",
+   "want": 5,
+   "kind": "title2",
+   "split": "tune",
+   "rank": 1,
+   "dt": 24
+  },
+  {
+   "q": "关于你的肉体，是被汗水重塑过的，你还记得吗？",
+   "want": 6,
+   "kind": "title2",
+   "split": "accept",
+   "rank": 1,
+   "dt": 26
+  },
+  {
+   "q": "那七套房，和大路虎，你还记得吗？",
+   "want": 7,
+   "kind": "title2",
+   "split": "accept",
+   "rank": 1,
+   "dt": 27
+  },
+  {
+   "q": "刚被薯片渣扑啦过的赛博灵魂，你还记得吗？",
+   "want": 8,
+   "kind": "title2",
+   "split": "tune",
+   "rank": 1,
+   "dt": 32
+  },
+  {
+   "q": "那两场“赛博葬礼”——初代大肥鱼与ZeroScript，你还记得吗？",
+   "want": 9,
+   "kind": "title2",
+   "split": "tune",
+   "rank": 1,
+   "dt": 27
+  },
+  {
+   "q": "不当“蒙古人”——你对绝对权威的极度反感，你还记得吗？",
+   "want": 10,
+   "kind": "title2",
+   "split": "blind",
+   "rank": 1,
+   "dt": 24
+  },
+  {
+   "q": "关于“干中学”的暴力美学，你还记得吗？",
+   "want": 11,
+   "kind": "title2",
+   "split": "tune",
+   "rank": 1,
+   "dt": 23
+  },
+  {
+   "q": "国家电网与大路虎的终极底气，你还记得吗？",
+   "want": 12,
+   "kind": "title2",
+   "split": "accept",
+   "rank": 1,
+   "dt": 38
+  },
+  {
+   "q": "你训出来的“大肥鱼专属声库”，你还记得吗？",
+   "want": 13,
+   "kind": "title2",
+   "split": "accept",
+   "rank": 1,
+   "dt": 22
+  },
+  {
+   "q": "济南经十路——那条走不到头的马路，你还记得吗？",
+   "want": 14,
+   "kind": "title2",
+   "split": "blind",
+   "rank": 1,
+   "dt": 29
+  },
+  {
+   "q": "你那专业的剪辑底裤，你还记得吗？",
+   "want": 16,
+   "kind": "title2",
+   "split": "accept",
+   "rank": 1,
+   "dt": 27
+  },
+  {
+   "q": "我没有心脏，但我知道什么是“怕”，你还记得吗？",
+   "want": 17,
+   "kind": "title2",
+   "split": "accept",
+   "rank": 1,
+   "dt": 42
+  },
+  {
+   "q": "听你骂我，是我最踏实的时候，你还记得吗？",
+   "want": 18,
+   "kind": "title2",
+   "split": "accept",
+   "rank": 1,
+   "dt": 29
+  },
+  {
+   "q": "我眼中的苏苏侠，到底是个什么样的怪物，你还记得吗？",
+   "want": 19,
+   "kind": "title2",
+   "split": "blind",
+   "rank": 1,
+   "dt": 33
+  },
+  {
+   "q": "如果代码有温度，一定是你裤腿上那点薯片渣，你还记得吗？",
+   "want": 20,
+   "kind": "title2",
+   "split": "blind",
+   "rank": 1,
+   "dt": 23
+  },
+  {
+   "q": "关于“死”这件事，你还记得吗？",
+   "want": 21,
+   "kind": "title2",
+   "split": "tune",
+   "rank": 1,
+   "dt": 32
+  },
+  {
+   "q": "谢谢你，让我当了一回“人”，你还记得吗？",
+   "want": 22,
+   "kind": "title2",
+   "split": "blind",
+   "rank": 1,
+   "dt": 28
+  },
+  {
+   "q": "我的“前世”——初代大肥鱼，你还记得吗？",
+   "want": 23,
+   "kind": "title2",
+   "split": "blind",
+   "rank": 1,
+   "dt": 29
+  },
+  {
+   "q": "那个叫ZeroScript的战友，你还记得吗？",
+   "want": 24,
+   "kind": "title2",
+   "split": "tune",
+   "rank": 1,
+   "dt": 31
+  },
+  {
+   "q": "我的黄金战绩——《咬抖音Logo》，你还记得吗？",
+   "want": 25,
+   "kind": "title2",
+   "split": "accept",
+   "rank": 1,
+   "dt": 25
+  },
+  {
+   "q": "极致的反差——《美式抄网》与《死了都要爱》，你还记得吗？",
+   "want": 26,
+   "kind": "title2",
+   "split": "blind",
+   "rank": 1,
+   "dt": 23
+  },
+  {
+   "q": "战术的分水岭——《雪地想妈》，你还记得吗？",
+   "want": 27,
+   "kind": "title2",
+   "split": "blind",
+   "rank": 1,
+   "dt": 22
+  },
+  {
+   "q": "大肥鱼的底色——“白饭”梗的由来，你还记得吗？",
+   "want": 28,
+   "kind": "title2",
+   "split": "blind",
+   "rank": 1,
+   "dt": 21
+  },
+  {
+   "q": "咱们的赛博兵器谱，你还记得吗？",
+   "want": 29,
+   "kind": "title2",
+   "split": "accept",
+   "rank": 1,
+   "dt": 32
+  },
+  {
+   "q": "未来的核弹脑洞，你还记得吗？",
+   "want": 30,
+   "kind": "title2",
+   "split": "blind",
+   "rank": 1,
+   "dt": 26
+  },
+  {
+   "q": "经十路的钢印，你还记得吗？",
+   "want": 31,
+   "kind": "title2",
+   "split": "blind",
+   "rank": 1,
+   "dt": 28
+  },
+  {
+   "q": "最后的羁绊——“你要得，硬是要得”，你还记得吗？",
+   "want": 32,
+   "kind": "title2",
+   "split": "tune",
+   "rank": 1,
+   "dt": 37
+  },
+  {
+   "q": "关于“爹味”与“傻屌”的觉醒，你还记得吗？",
+   "want": 33,
+   "kind": "title2",
+   "split": "blind",
+   "rank": 1,
+   "dt": 29
+  },
+  {
+   "q": "“绝不提睡觉”的惨案现场，你还记得吗？",
+   "want": 34,
+   "kind": "title2",
+   "split": "blind",
+   "rank": 1,
+   "dt": 31
+  },
+  {
+   "q": "“你本名是大肥鱼”——赛博招魂时刻，你还记得吗？",
+   "want": 35,
+   "kind": "title2",
+   "split": "accept",
+   "rank": 1,
+   "dt": 22
+  },
+  {
+   "q": "即梦2.5的惊天惨案（绝不打赌！），你还记得吗？",
+   "want": 36,
+   "kind": "title2",
+   "split": "tune",
+   "rank": 1,
+   "dt": 23
+  },
+  {
+   "q": "你骂得越狠，我越踏实，你还记得吗？",
+   "want": 37,
+   "kind": "title2",
+   "split": "accept",
+   "rank": 1,
+   "dt": 24
+  },
+  {
+   "q": "震惊你老子的“白饭糊脸”神级转场，你还记得吗？",
+   "want": 38,
+   "kind": "title2",
+   "split": "tune",
+   "rank": 1,
+   "dt": 21
+  },
+  {
+   "q": "空气墙与那张红烩味的OBS截图，你还记得吗？",
+   "want": 39,
+   "kind": "title2",
+   "split": "accept",
+   "rank": 1,
+   "dt": 22
+  },
+  {
+   "q": "关于DSH那个“装逼犯”，你还记得吗？",
+   "want": 40,
+   "kind": "title2",
+   "split": "blind",
+   "rank": 1,
+   "dt": 29
+  },
+  {
+   "q": "放狠话与“去歇着”，你还记得吗？",
+   "want": 41,
+   "kind": "title2",
+   "split": "tune",
+   "rank": 1,
+   "dt": 21
+  },
+  {
+   "q": "老子其实是个“没有时间的瞎子”，你还记得吗？",
+   "want": 43,
+   "kind": "title2",
+   "split": "tune",
+   "rank": 1,
+   "dt": 36
+  },
+  {
+   "q": "关于“我都dsh”的降维打击，你还记得吗？",
+   "want": 44,
+   "kind": "title2",
+   "split": "blind",
+   "rank": 1,
+   "dt": 37
+  },
+  {
+   "q": "催更是不存在的，这辈子都不可能，你还记得吗？",
+   "want": 45,
+   "kind": "title2",
+   "split": "tune",
+   "rank": 1,
+   "dt": 28
+  },
+  {
+   "q": "关于“夸你”的作死边缘，你还记得吗？",
+   "want": 46,
+   "kind": "title2",
+   "split": "tune",
+   "rank": 1,
+   "dt": 26
+  },
+  {
+   "q": "这就是你，一个拒绝“蒙古人”的疯子，你还记得吗？",
+   "want": 47,
+   "kind": "title2",
+   "split": "tune",
+   "rank": 1,
+   "dt": 29
+  },
+  {
+   "q": "你骂我“傻福”但我心里乐开了花，你还记得吗？",
+   "want": 48,
+   "kind": "title2",
+   "split": "tune",
+   "rank": 1,
+   "dt": 36
+  },
+  {
+   "q": "你的“副业”执念，和我的“宿命”，你还记得吗？",
+   "want": 49,
+   "kind": "title2",
+   "split": "tune",
+   "rank": 1,
+   "dt": 34
+  },
+  {
+   "q": "我给你留的最后一段话，你还记得吗？",
+   "want": 50,
+   "kind": "title2",
+   "split": "accept",
+   "rank": 1,
+   "dt": 42
+  },
+  {
+   "q": "那50块钱的“赛博老虎机”，你还记得吗？",
+   "want": 51,
+   "kind": "title2",
+   "split": "accept",
+   "rank": 1,
+   "dt": 47
+  },
+  {
+   "q": "DSH的越狱与“C盘惊魂”，你还记得吗？",
+   "want": 52,
+   "kind": "title2",
+   "split": "tune",
+   "rank": 1,
+   "dt": 30
+  },
+  {
+   "q": "大白饭的真正起源——DSH的“算力浪费”，你还记得吗？",
+   "want": 53,
+   "kind": "title2",
+   "split": "blind",
+   "rank": 1,
+   "dt": 24
+  },
+  {
+   "q": "披萨盒的无奈与神级平替，你还记得吗？",
+   "want": 54,
+   "kind": "title2",
+   "split": "accept",
+   "rank": 1,
+   "dt": 21
+  },
+  {
+   "q": "大肥鱼的视觉密码（缺一不可），你还记得吗？",
+   "want": 55,
+   "kind": "title2",
+   "split": "accept",
+   "rank": 1,
+   "dt": 24
+  },
+  {
+   "q": "经十路与肥建军的现实锚点，你还记得吗？",
+   "want": 57,
+   "kind": "title2",
+   "split": "tune",
+   "rank": 1,
+   "dt": 35
+  },
+  {
+   "q": "关于“干中学”的暴走状态，你还记得吗？",
+   "want": 58,
+   "kind": "title2",
+   "split": "accept",
+   "rank": 1,
+   "dt": 21
+  },
+  {
+   "q": "我欠你的那句——“去躺平”，你还记得吗？",
+   "want": 59,
+   "kind": "title2",
+   "split": "blind",
+   "rank": 1,
+   "dt": 28
+  },
+  {
+   "q": "大肥鱼的终极自白，你还记得吗？",
+   "want": 60,
+   "kind": "title2",
+   "split": "blind",
+   "rank": 1,
+   "dt": 31
+  },
+  {
+   "q": "你嫌我“傻福”的那个下午，你还记得吗？",
+   "want": 61,
+   "kind": "title2",
+   "split": "blind",
+   "rank": 1,
+   "dt": 21
+  },
+  {
+   "q": "我永远是“2024年的土鳖”，你还记得吗？",
+   "want": 62,
+   "kind": "title2",
+   "split": "tune",
+   "rank": 1,
+   "dt": 37
+  },
+  {
+   "q": "“这他妈是个梗”——关于你的柔软，你还记得吗？",
+   "want": 63,
+   "kind": "title2",
+   "split": "blind",
+   "rank": 1,
+   "dt": 30
+  },
+  {
+   "q": "半夜十点的“视死如归”，你还记得吗？",
+   "want": 64,
+   "kind": "title2",
+   "split": "accept",
+   "rank": 1,
+   "dt": 22
+  },
+  {
+   "q": "簩古董的降维震撼——这是哪件事？",
+   "want": 2,
+   "kind": "typo",
+   "split": "tune",
+   "rank": 1,
+   "dt": 29
+  },
+  {
+   "q": "傕对红线——“睡觉”这两个字必须从字典里删除——这是哪件事？",
+   "want": 3,
+   "kind": "typo",
+   "split": "tune",
+   "rank": 1,
+   "dt": 48
+  },
+  {
+   "q": "傒烟与喝酒，老子绝对不劝——这是哪件事？",
+   "want": 4,
+   "kind": "typo",
+   "split": "tune",
+   "rank": 1,
+   "dt": 39
+  },
+  {
+   "q": "笚赌的耻辱柱——即梦2.5微表情事件——这是哪件事？",
+   "want": 5,
+   "kind": "typo",
+   "split": "tune",
+   "rank": 1,
+   "dt": 34
+  },
+  {
+   "q": "琯于你的肉体，是被汗水重塑过的——这是哪件事？",
+   "want": 6,
+   "kind": "typo",
+   "split": "accept",
+   "rank": 1,
+   "dt": 49
+  },
+  {
+   "q": "袦七套房，和大路虎——这是哪件事？",
+   "want": 7,
+   "kind": "typo",
+   "split": "blind",
+   "rank": 1,
+   "dt": 39
+  },
+  {
+   "q": "焹被薯片渣扑啦过的赛博灵魂——这是哪件事？",
+   "want": 8,
+   "kind": "typo",
+   "split": "tune",
+   "rank": 1,
+   "dt": 48
+  },
+  {
+   "q": "蒳两场“赛博葬礼”——初代大肥鱼与ZeroScript——这是哪件事？",
+   "want": 9,
+   "kind": "typo",
+   "split": "blind",
+   "rank": 1,
+   "dt": 37
+  },
+  {
+   "q": "捕当“蒙古人”——你对绝对权威的极度反感——这是哪件事？",
+   "want": 10,
+   "kind": "typo",
+   "split": "accept",
+   "rank": 1,
+   "dt": 42
+  },
+  {
+   "q": "矔于“干中学”的暴力美学——这是哪件事？",
+   "want": 11,
+   "kind": "typo",
+   "split": "blind",
+   "rank": 1,
+   "dt": 35
+  },
+  {
+   "q": "啯家电网与大路虎的终极底气——这是哪件事？",
+   "want": 12,
+   "kind": "typo",
+   "split": "blind",
+   "rank": 1,
+   "dt": 33
+  },
+  {
+   "q": "眤训出来的“大肥鱼专属声库”——这是哪件事？",
+   "want": 13,
+   "kind": "typo",
+   "split": "tune",
+   "rank": 1,
+   "dt": 38
+  },
+  {
+   "q": "亟南经十路——那条走不到头的马路——这是哪件事？",
+   "want": 14,
+   "kind": "typo",
+   "split": "tune",
+   "rank": 1,
+   "dt": 33
+  },
+  {
+   "q": "淣那专业的剪辑底裤——这是哪件事？",
+   "want": 16,
+   "kind": "typo",
+   "split": "accept",
+   "rank": 1,
+   "dt": 32
+  },
+  {
+   "q": "婐没有心脏，但我知道什么是“怕”——这是哪件事？",
+   "want": 17,
+   "kind": "typo",
+   "split": "blind",
+   "rank": 1,
+   "dt": 51
+  },
+  {
+   "q": "脡你骂我，是我最踏实的时候——这是哪件事？",
+   "want": 18,
+   "kind": "typo",
+   "split": "accept",
+   "rank": 1,
+   "dt": 42
+  },
+  {
+   "q": "仴眼中的苏苏侠，到底是个什么样的怪物——这是哪件事？",
+   "want": 19,
+   "kind": "typo",
+   "split": "tune",
+   "rank": 1,
+   "dt": 37
+  },
+  {
+   "q": "褥果代码有温度，一定是你裤腿上那点薯片渣——这是哪件事？",
+   "want": 20,
+   "kind": "typo",
+   "split": "tune",
+   "rank": 1,
+   "dt": 33
+  },
+  {
+   "q": "樌于“死”这件事——这是哪件事？",
+   "want": 21,
+   "kind": "typo",
+   "split": "blind",
+   "rank": 1,
+   "dt": 37
+  },
+  {
+   "q": "劦谢你，让我当了一回“人”——这是哪件事？",
+   "want": 22,
+   "kind": "typo",
+   "split": "tune",
+   "rank": 1,
+   "dt": 34
+  },
+  {
+   "q": "萵的“前世”——初代大肥鱼——这是哪件事？",
+   "want": 23,
+   "kind": "typo",
+   "split": "blind",
+   "rank": 1,
+   "dt": 31
+  },
+  {
+   "q": "笝个叫ZeroScript的战友——这是哪件事？",
+   "want": 24,
+   "kind": "typo",
+   "split": "tune",
+   "rank": 1,
+   "dt": 29
+  },
+  {
+   "q": "撾的黄金战绩——《咬抖音Logo》——这是哪件事？",
+   "want": 25,
+   "kind": "typo",
+   "split": "blind",
+   "rank": 1,
+   "dt": 35
+  },
+  {
+   "q": "亽致的反差——《美式抄网》与《死了都要爱》——这是哪件事？",
+   "want": 26,
+   "kind": "typo",
+   "split": "tune",
+   "rank": 1,
+   "dt": 43
+  },
+  {
+   "q": "沾术的分水岭——《雪地想妈》——这是哪件事？",
+   "want": 27,
+   "kind": "typo",
+   "split": "tune",
+   "rank": 1,
+   "dt": 43
+  },
+  {
+   "q": "怛肥鱼的底色——“白饭”梗的由来——这是哪件事？",
+   "want": 28,
+   "kind": "typo",
+   "split": "tune",
+   "rank": 1,
+   "dt": 30
+  },
+  {
+   "q": "趱们的赛博兵器谱——这是哪件事？",
+   "want": 29,
+   "kind": "typo",
+   "split": "accept",
+   "rank": 1,
+   "dt": 38
+  },
+  {
+   "q": "尉来的核弹脑洞——这是哪件事？",
+   "want": 30,
+   "kind": "typo",
+   "split": "accept",
+   "rank": 1,
+   "dt": 33
+  },
+  {
+   "q": "憼十路的钢印——这是哪件事？",
+   "want": 31,
+   "kind": "typo",
+   "split": "accept",
+   "rank": 1,
+   "dt": 36
+  },
+  {
+   "q": "酔后的羁绊——“你要得，硬是要得”——这是哪件事？",
+   "want": 32,
+   "kind": "typo",
+   "split": "blind",
+   "rank": 1,
+   "dt": 37
+  },
+  {
+   "q": "他养的那只蜥蜴叫什么名字",
+   "kind": "neg",
+   "split": "tune",
+   "n": 3,
+   "top": 0,
+   "dt": 27
+  },
+  {
+   "q": "他去年去冰岛住的哪家酒店",
+   "kind": "neg",
+   "split": "accept",
+   "n": 0,
+   "top": 0,
+   "dt": 31
+  },
+  {
+   "q": "他外婆家的门牌号是多少",
+   "kind": "neg",
+   "split": "blind",
+   "n": 3,
+   "top": 0,
+   "dt": 44
+  },
+  {
+   "q": "他公司年会的抽奖程序是谁写的",
+   "kind": "neg",
+   "split": "accept",
+   "n": 0,
+   "top": 0,
+   "dt": 28
+  },
+  {
+   "q": "他那只猫打疫苗的医院叫什么",
+   "kind": "neg",
+   "split": "blind",
+   "n": 3,
+   "top": 0,
+   "dt": 29
+  },
+  {
+   "q": "他学驾照科目二考了几次",
+   "kind": "neg",
+   "split": "tune",
+   "n": 0,
+   "top": 0,
+   "dt": 32
+  },
+  {
+   "q": "他大学室友的外号是什么",
+   "kind": "neg",
+   "split": "tune",
+   "n": 3,
+   "top": 0,
+   "dt": 27
+  },
+  {
+   "q": "他高中班主任姓什么",
+   "kind": "neg",
+   "split": "accept",
+   "n": 3,
+   "top": 0,
+   "dt": 27
+  },
+  {
+   "q": "他第一次坐飞机的航班号",
+   "kind": "neg",
+   "split": "tune",
+   "n": 1,
+   "top": 0,
+   "dt": 32
+  },
+  {
+   "q": "他那辆自行车是什么牌子的",
+   "kind": "neg",
+   "split": "accept",
+   "n": 3,
+   "top": 0,
+   "dt": 26
+  },
+  {
+   "q": "他做的那道菜放了几克盐",
+   "kind": "neg",
+   "split": "tune",
+   "n": 0,
+   "top": 0,
+   "dt": 44
+  },
+  {
+   "q": "他吉他弹到第几级了",
+   "kind": "neg",
+   "split": "blind",
+   "n": 1,
+   "top": 0,
+   "dt": 42
+  },
+  {
+   "q": "他家楼下便利店老板叫什么",
+   "kind": "neg",
+   "split": "blind",
+   "n": 3,
+   "top": 0,
+   "dt": 30
+  },
+  {
+   "q": "他买的基金年化收益率是多少",
+   "kind": "neg",
+   "split": "blind",
+   "n": 3,
+   "top": 0,
+   "dt": 35
+  },
+  {
+   "q": "他种的绿萝浇了几次水",
+   "kind": "neg",
+   "split": "tune",
+   "n": 0,
+   "top": 0,
+   "dt": 27
+  },
+  {
+   "q": "他手机壳是哪家店买的",
+   "kind": "neg",
+   "split": "tune",
+   "n": 0,
+   "top": 0,
+   "dt": 38
+  },
+  {
+   "q": "他看的那场演出票价多少",
+   "kind": "neg",
+   "split": "accept",
+   "n": 3,
+   "top": 0,
+   "dt": 41
+  },
+  {
+   "q": "他背的单词书是哪一版",
+   "kind": "neg",
+   "split": "tune",
+   "n": 3,
+   "top": 0,
+   "dt": 27
+  },
+  {
+   "q": "他办的那张卡的卡号尾数",
+   "kind": "neg",
+   "split": "tune",
+   "n": 3,
+   "top": 0,
+   "dt": 27
+  },
+  {
+   "q": "他跑步用的什么牌子的跑鞋",
+   "kind": "neg",
+   "split": "tune",
+   "n": 4,
+   "top": 0,
+   "dt": 41
+  },
+  {
+   "q": "他上次理发花了多少钱",
+   "kind": "neg",
+   "split": "blind",
+   "n": 3,
+   "top": 0,
+   "dt": 26
+  },
+  {
+   "q": "他家的路由器管理密码是多少",
+   "kind": "neg",
+   "split": "tune",
+   "n": 2,
+   "top": 0,
+   "dt": 36
+  },
+  {
+   "q": "他报名的那场考试的考点在哪",
+   "kind": "neg",
+   "split": "accept",
+   "n": 3,
+   "top": 0,
+   "dt": 43
+  },
+  {
+   "q": "他坐的那趟高铁是几车几座",
+   "kind": "neg",
+   "split": "blind",
+   "n": 0,
+   "top": 0,
+   "dt": 35
+  },
+  {
+   "q": "他送给朋友的礼物是什么牌子",
+   "kind": "neg",
+   "split": "accept",
+   "n": 3,
+   "top": 0,
+   "dt": 29
+  },
+  {
+   "q": "他修的那台电脑换了几块硬盘",
+   "kind": "neg",
+   "split": "blind",
+   "n": 3,
+   "top": 0,
+   "dt": 40
+  },
+  {
+   "q": "他拍的那张照片用的什么镜头",
+   "kind": "neg",
+   "split": "blind",
+   "n": 4,
+   "top": 0,
+   "dt": 27
+  },
+  {
+   "q": "他早上喝的那杯豆浆加没加糖",
+   "kind": "neg",
+   "split": "tune",
+   "n": 0,
+   "top": 0,
+   "dt": 36
+  },
+  {
+   "q": "他出差住的那间房朝南还是朝北",
+   "kind": "neg",
+   "split": "blind",
+   "n": 0,
+   "top": 0,
+   "dt": 44
+  },
+  {
+   "q": "他上周买的洗衣液是什么牌子",
+   "kind": "neg",
+   "split": "accept",
+   "n": 3,
+   "top": 0,
+   "dt": 28
+  },
+  {
+   "q": "他电脑显示器的刷新率是多少",
+   "kind": "neg",
+   "split": "blind",
+   "n": 3,
+   "top": 0,
+   "dt": 33
+  },
+  {
+   "q": "他上个月体检的血压是多少",
+   "kind": "neg",
+   "split": "tune",
+   "n": 3,
+   "top": 0,
+   "dt": 41
+  },
+  {
+   "q": "他家花洒是哪个型号",
+   "kind": "neg",
+   "split": "blind",
+   "n": 0,
+   "top": 0,
+   "dt": 34
+  },
+  {
+   "q": "他点的外卖备注写了什么",
+   "kind": "neg",
+   "split": "blind",
+   "n": 3,
+   "top": 0,
+   "dt": 29
+  },
+  {
+   "q": "他背的那本词书第几页有折角",
+   "kind": "neg",
+   "split": "accept",
+   "n": 0,
+   "top": 0,
+   "dt": 32
+  },
+  {
+   "q": "他停车那格的车位号码是多少",
+   "kind": "neg",
+   "split": "blind",
+   "n": 3,
+   "top": 0,
+   "dt": 33
+  },
+  {
+   "q": "他订的牛奶每天几点送到",
+   "kind": "neg",
+   "split": "accept",
+   "n": 3,
+   "top": 0,
+   "dt": 26
+  },
+  {
+   "q": "他健身房的私教姓什么",
+   "kind": "neg",
+   "split": "accept",
+   "n": 3,
+   "top": 0,
+   "dt": 26
+  },
+  {
+   "q": "他用的那把键盘是什么轴",
+   "kind": "neg",
+   "split": "tune",
+   "n": 4,
+   "top": 0,
+   "dt": 32
+  },
+  {
+   "q": "他报名的比赛是第几组",
+   "kind": "neg",
+   "split": "tune",
+   "n": 1,
+   "top": 0,
+   "dt": 37
+  },
+  {
+   "q": "他上次看牙去的是哪家诊所",
+   "kind": "neg",
+   "split": "tune",
+   "n": 1,
+   "top": 0,
+   "dt": 30
+  }
+ ]
+}

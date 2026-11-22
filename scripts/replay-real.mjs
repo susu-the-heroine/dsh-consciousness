@@ -22,6 +22,12 @@ const d = JSON.parse(readFileSync(SEA, 'utf8').replace(/^\uFEFF/, ''))
 const all = (d.points || []).filter((p) => !p.dead && p.era === 'dsh')
 const n = Number(process.argv[2] || 0) || all.length
 const sample = all.slice(-n)
+// 2026-11-21：新库、或全是导入的旧格式时，能回放的条目是零。
+// 原来直接往下算，最后报「没过（NaN% < 90%）」——拿一个算不出来的数判红，比不判还糟。
+if (!sample.length) {
+  console.log('没有可回放的条目（只回放当前写入路径产出的，era=dsh）。库里有 ' + (d.points || []).length + ' 条，其中 era=dsh 的 ' + all.length + ' 条。')
+  process.exit(2)
+}
 
 // 这些字段天生复现不了：id、坐标、时间、来源编号、手改过的
 // 只比“写进去就不再动”的字段。
@@ -43,6 +49,8 @@ for (const p of sample) {
   const js = buildPoint({
     title: p.titleFull || p.title,
     text: p.text,
+    // 真写的时候日期是给进来的；回放不给，就会把它标成「估的」，比出来全是假差（2026-11-19）
+    born: p.born,
     kind: p.kind,
     imp: p.imp,
     arousal: p.arousal,
@@ -74,3 +82,8 @@ if (stat.size) {
 } else {
   console.log('没有字段对不上。')
 }
+
+// 地板：全字段一致率低于九成就算红（2026-11-19）
+const _rate = same / sample.length
+console.log(_rate >= 0.9 ? '回放地板：过（九成）' : `回放地板：没过（${Math.round(_rate * 100)}% < 90%）`)
+process.exit(_rate >= 0.9 ? 0 : 1)

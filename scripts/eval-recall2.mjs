@@ -62,7 +62,9 @@ for (const c of cases) {
 }
 
 console.log(`海 ${sea} · 记忆 ${pts.length} · 正向 ${pos} · 反例 ${negScores.length} · 建向量 ${(buildMs / 1000).toFixed(1)}s`)
-console.log(`%s`, useAlias ? '（向量含别名）' : '（向量只用标题+正文）')
+// 2026-11-21：跟上一份一样的毛病——标签看的是 --alias，真正决定的是 --no-alias，
+// 于是默认跑明明含别名，标签却写「只用标题+正文」。两行字能让 A/B 的结论整个反过来。
+console.log('%s', noAlias ? '（向量只用标题+正文）' : '（向量含别名）')
 console.log('')
 console.log(`命中@1  ${h1}/${pos}  (${((h1 / pos) * 100).toFixed(0)}%)`)
 console.log(`命中@3  ${h3}/${pos}  (${((h3 / pos) * 100).toFixed(0)}%)`)

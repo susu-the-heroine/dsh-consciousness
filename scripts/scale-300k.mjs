@@ -59,12 +59,23 @@ for (let i = 0; i < sampleTexts.length; i += 8) {
   for (const v of vs) sampleVecs.push(v)
 }
 const sampleMs = Date.now() - t2
-const perPoint = sampleMs / SAMPLE
-console.log(`真算 ${SAMPLE} 条向量：${(sampleMs / 1000).toFixed(1)} 秒（${perPoint.toFixed(1)} ms/条）→ 三十万条全算要 ${((perPoint * N) / 60000).toFixed(0)} 分钟`)
+// 2026-11-21：分母写死成两千。条数比两千少的时候（比如拿八百条试跑），
+// 实际只算八百条，却按两千条去除——每条的耗时被报成四分之一，推算出来的总时长跟着错。
+// 改用实际算出来的条数；万一少算（某批没回来），也先把话说清再算。
+const computed = sampleVecs.length
+if (!computed) {
+  console.log('一条向量都没算出来（向量引擎没起来？），这份压测没法继续。')
+  process.exit(2)
+}
+if (computed < samplePts.length) {
+  console.log('注意：要算 ' + samplePts.length + ' 条，实际只回来 ' + computed + ' 条——后面的每轮耗时按实际条数算，别按名义条数。')
+}
+const perPoint = sampleMs / computed
+console.log(`真算 ${computed} 条向量：${(sampleMs / 1000).toFixed(1)} 秒（${perPoint.toFixed(1)} ms/条）→ ${N} 条全算要 ${((perPoint * N) / 60000).toFixed(1)} 分钟`)
 
 const t3 = Date.now()
 const vecs = new Array(N)
-for (let i = 0; i < N; i++) vecs[i] = sampleVecs[i % SAMPLE]
+for (let i = 0; i < N; i++) vecs[i] = sampleVecs[i % computed]
 console.log(`铺满 ${N} 条向量（复用）：${Date.now() - t3} ms · RSS ${(process.memoryUsage().rss / 1048576).toFixed(0)} MB`)
 
 const t4 = Date.now()
@@ -83,4 +94,8 @@ const t6 = Date.now()
 const r = W.writeOne('main', { title: '三十万之后再写一条', text: '在这个规模上再写一条，看连边要多久。', kind: 'fact' })
 console.log(`三十万条时再写一条：${Date.now() - t6} ms · ${r.ok ? '成功' : '失败 ' + r.err}`)
 
-rmSync(home, { recursive: true, force: true })
+// 2026-11-21：清理这一步没兜住。向量库那边还开着文件句柄时，Windows 上删目录会报 EBUSY/EPERM，
+// 整份跑完、数都打出来了，最后一步却把退出码变成 1——看着像失败。删不掉就留着，说一声。
+try { rmSync(home, { recursive: true, force: true }) } catch (e) {
+  console.log('临时目录没删掉（有句柄占着？）：' + home + ' · ' + String((e && e.message) || e).slice(0, 80))
+}

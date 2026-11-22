@@ -11,10 +11,13 @@
  */
 import { readFileSync } from 'node:fs'
 import { homedir } from 'node:os'
-import { join } from 'node:path'
+import { join, dirname } from 'node:path'
+import { fileURLToPath } from 'node:url'
 
-const E = await import('file:///C:/Users/Administrator/.dsh/plugin-src/dsh-consciousness/lib/embed-onnx.js')
-const V = await import('file:///C:/Users/Administrator/.dsh/plugin-src/dsh-consciousness/lib/vectors.js')
+// 2026-11-21：写死的本机绝对路径第六处（两行）。改成按本文件位置算。
+const _LIB = 'file:///' + join(dirname(fileURLToPath(import.meta.url)), '..', 'lib').replace(/\\/g, '/')
+const E = await import(_LIB + '/embed-onnx.js')
+const V = await import(_LIB + '/vectors.js')
 
 const dir = join(homedir(), '.dsh', 'consciousness-seas', 'main')
 const data = JSON.parse(readFileSync(join(dir, 'data.json'), 'utf8').replace(/^\uFEFF/, ''))

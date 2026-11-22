@@ -1,0 +1,117 @@
+{
+ "at": "2026-11-20T15:03:31.833Z",
+ "n": 15,
+ "posOk": 14,
+ "negRefused": 2,
+ "joint": 2,
+ "jointRate": 0.13333333333333333,
+ "echoRate": 0,
+ "net": 0.13333333333333333,
+ "detail": [
+  {
+   "pos": "老周那个借出去了的东西后来咋样了",
+   "expect": 14,
+   "neg": "老周那只风筝后来咋样了",
+   "okPos": true,
+   "okNeg": false
+  },
+  {
+   "pos": "小满那个借出去了的东西后来咋样了",
+   "expect": 18,
+   "neg": "小满那辆拖车后来咋样了",
+   "okPos": true,
+   "okNeg": false
+  },
+  {
+   "pos": "隔壁老王那个借出去了的东西后来咋样了",
+   "expect": 23,
+   "neg": "隔壁老王那辆拖车后来咋样了",
+   "okPos": true,
+   "okNeg": false
+  },
+  {
+   "pos": "楼下老板娘那个修好了的东西后来咋样了",
+   "expect": 24,
+   "neg": "楼下老板娘那只风筝后来咋样了",
+   "okPos": false,
+   "okNeg": false
+  },
+  {
+   "pos": "阿亮那个修好了的东西后来咋样了",
+   "expect": 28,
+   "neg": "阿亮那辆拖车后来咋样了",
+   "okPos": true,
+   "okNeg": false
+  },
+  {
+   "pos": "楼下老板娘那个一直没动的东西后来咋样了",
+   "expect": 34,
+   "neg": "楼下老板娘那只风筝后来咋样了",
+   "okPos": true,
+   "okNeg": false
+  },
+  {
+   "pos": "阿亮那个换了新的的东西后来咋样了",
+   "expect": 50,
+   "neg": "阿亮那台唱片机后来咋样了",
+   "okPos": true,
+   "okNeg": false
+  },
+  {
+   "pos": "师傅那个被偷了的东西后来咋样了",
+   "expect": 53,
+   "neg": "师傅那辆拖车后来咋样了",
+   "okPos": true,
+   "okNeg": false
+  },
+  {
+   "pos": "小满那个换了新的的东西后来咋样了",
+   "expect": 59,
+   "neg": "小满那只风筝后来咋样了",
+   "okPos": true,
+   "okNeg": false
+  },
+  {
+   "pos": "小满那个送人了的东西后来咋样了",
+   "expect": 72,
+   "neg": "小满那口铜锅后来咋样了",
+   "okPos": true,
+   "okNeg": false
+  },
+  {
+   "pos": "老周那个忘在车上的东西后来咋样了",
+   "expect": 84,
+   "neg": "老周那只风筝后来咋样了",
+   "okPos": true,
+   "okNeg": false
+  },
+  {
+   "pos": "老周那个摔坏了的东西后来咋样了",
+   "expect": 93,
+   "neg": "老周那辆拖车后来咋样了",
+   "okPos": true,
+   "okNeg": false
+  },
+  {
+   "pos": "师傅那个修好了的东西后来咋样了",
+   "expect": 96,
+   "neg": "师傅那台老式打字机后来咋样了",
+   "okPos": true,
+   "okNeg": true
+  },
+  {
+   "pos": "他哥那个忘在车上的东西后来咋样了",
+   "expect": 106,
+   "neg": "他哥那台老式打字机后来咋样了",
+   "okPos": true,
+   "okNeg": true
+  },
+  {
+   "pos": "老周那个一直没动的东西后来咋样了",
+   "expect": 114,
+   "neg": "老周那只风筝后来咋样了",
+   "okPos": true,
+   "okNeg": false
+  }
+ ]
+}

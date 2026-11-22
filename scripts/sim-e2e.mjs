@@ -9,16 +9,25 @@
  *
  * 跑法：node scripts/sim-e2e.mjs [基地址]
  */
-import { existsSync, rmSync } from 'node:fs'
-import { homedir } from 'node:os'
-import { join } from 'node:path'
+import { existsSync, mkdtempSync, mkdirSync, rmSync } from 'node:fs'
+import { homedir, tmpdir } from 'node:os'
+import { join, dirname } from 'node:path'
+import { fileURLToPath } from 'node:url'
+
+// 2026-11-21：这份原来在**真库**里建两个测试海，跑完按名字整个删掉——
+// 用户真有同名海就没了。改成先造临时家目录再引库；跑完连临时家一起清。
+const _tmpHome = mkdtempSync(join(tmpdir(), 'c2-e2e-'))
+process.env.USERPROFILE = _tmpHome
+process.env.HOME = _tmpHome
+mkdirSync(join(_tmpHome, '.dsh'), { recursive: true })
 
 const BASE = process.argv[2] || 'http://127.0.0.1:54495'
 const SEA = 'e2etest'
 const SEA2 = 'e2etest2'
 const seaDir = (s) => join(homedir(), '.dsh', 'consciousness-seas', s)
 
-const base = 'file:///C:/Users/Administrator/.dsh/plugin-src/dsh-consciousness/'
+// 路径也不再写死本机：按本文件位置算。
+const base = 'file:///' + join(dirname(fileURLToPath(import.meta.url)), '..').replace(/\\/g, '/') + '/'
 const store = await import(base + 'lib/store.js')
 const T = await import(base + 'lib/tools.js')
 
@@ -28,9 +37,17 @@ function ok(cond, name, detail) {
   if (cond) { pass++; console.log('  ✓ ' + name) }
   else { fail++; console.log('  ✗ ' + name + (detail ? '  → ' + detail : '')) }
 }
+// 2026-11-21：服务没起时这里以前直接把 fetch 的异常抛出去——满屏堆栈，看不出是「没起服务」。
+// 现在连不上就记一次、返回空壳，让每一条检查自己报红，末了给一句人话。
+let connFailed = 0
 const get = async (p) => {
-  const r = await fetch(BASE + p)
-  return { status: r.status, body: await r.text() }
+  try {
+    const r = await fetch(BASE + p)
+    return { status: r.status, body: await r.text() }
+  } catch (e) {
+    connFailed++
+    return { status: 0, body: '', err: String((e && e.message) || e) }
+  }
 }
 
 for (const s of [SEA, SEA2]) {
@@ -83,6 +100,8 @@ for (const s of [SEA, SEA2]) {
   try { if (existsSync(seaDir(s))) rmSync(seaDir(s), { recursive: true, force: true }) } catch {}
 }
 ok(!existsSync(seaDir(SEA)) && !existsSync(seaDir(SEA2)), '测试海清干净')
+try { if (existsSync(_tmpHome)) rmSync(_tmpHome, { recursive: true, force: true }) } catch {}
 
+if (connFailed) console.log('\n有 ' + connFailed + ' 次请求没连上 ' + BASE + '——先把服务起起来再跑；页面与内观那几项必然全挂。')
 console.log('\n通过 ' + pass + ' · 失败 ' + fail)
 process.exit(fail ? 1 : 0)

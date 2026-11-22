@@ -58,9 +58,14 @@ function extractDialogue(text) {
 }
 
 const all = existsSync(OUT) ? readFileSync(OUT, 'utf8').split('\n').filter(Boolean) : []
-// 上一次把旁白当对白抓了 9382 条，先清掉重来
+// 上一次把旁白当对白抓了 9382 条，要清掉重来——但只能清一次。
+// 2026-11-21：原来是无条件把所有「剧本」行都扔掉，于是每跑一次就把上一次抓的全抹掉，
+// 只留下这一次扫到的那几十个剧本，永远攒不起来。改成只清没有 v2 标记的旧行，新抓的带标记留下。
 const existed = all.filter((l) => {
-  try { return JSON.parse(l).domain !== '剧本' } catch { return false }
+  try {
+    const o = JSON.parse(l)
+    return o.domain !== '剧本' || o.v2 === true
+  } catch { return false }
 })
 const purged = all.length - existed.length
 if (purged) console.log('清掉上次误抓的', purged, '条')
@@ -89,7 +94,7 @@ for (const f of files) {
     for (const t of lines) {
       if (seen.has(t)) continue
       seen.add(t)
-      fresh.push({ text: t, from: 'script', domain: '剧本', src: f.path.split('/').pop() })
+      fresh.push({ text: t, from: 'script', domain: '剧本', v2: true, src: f.path.split('/').pop() })
       added++
     }
     console.log('  ' + String(f.path).slice(0, 46).padEnd(46) + ' 对白 ' + String(lines.length).padStart(4) + '｜新增 ' + added)

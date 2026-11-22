@@ -42,6 +42,22 @@ const SKIP = new Set(['x', 'y', 'z', 'born', 'lastSeen', 'validFrom', 'validUnti
 const PY = process.env.DSH_TEST_PY
 const SCRIPT = join(HERE, '..', 'assets', 'add_memory.py')
 
+// 2026-11-21：不给路径就直接拿 undefined 去起进程，报的是 ERR_INVALID_ARG_TYPE，
+// 一句「没设环境变量」都看不出来。先自己看一遍，缺什么说什么。
+if (!PY) {
+  console.log('没设 DSH_TEST_PY——这个对照要拿 Python 那一版写入跑一遍，得先告诉我在哪：')
+  console.log('  set DSH_TEST_PY=C:\\...\\python.exe')
+  process.exit(2)
+}
+if (!existsSync(PY)) {
+  console.log('DSH_TEST_PY 指的那个文件不存在：' + PY)
+  process.exit(2)
+}
+if (!existsSync(SCRIPT)) {
+  console.log('缺对照脚本：' + SCRIPT)
+  process.exit(2)
+}
+
 function runPython(home, c) {
   const args = [SCRIPT, '--title', c.title, '--text', c.text, '--kind', c.kind]
   if (c.arousal != null) args.push('--arousal', String(c.arousal))
@@ -113,5 +129,12 @@ console.log(`边一致：Python 独有 ${onlyA.length} 条 · JS 独有 ${onlyB.
 if (onlyA.length) console.log('  Python 独有样例:', onlyA.slice(0, 4))
 if (onlyB.length) console.log('  JS 独有样例:', onlyB.slice(0, 4))
 
-rmSync(homePy, { recursive: true, force: true })
-rmSync(homeJs, { recursive: true, force: true })
+// 2026-11-21：这两个临时目录刚写完就删，Windows 上句柄常常还没放——删不掉会抛错，
+// 而这个错落在最后一行，等于「比完了、数也对了，退出码却是一」。删不掉就不删，说一声。
+for (const home of [homePy, homeJs]) {
+  let done = false
+  for (let i = 0; i < 3 && !done; i++) {
+    try { rmSync(home, { recursive: true, force: true }); done = true } catch { done = false }
+  }
+  if (!done) console.log('临时目录没删掉（句柄占着），在：' + home)
+}

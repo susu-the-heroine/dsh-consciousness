@@ -78,6 +78,14 @@ for (let i = 0; i < N; i++) {
     if (!pool.length) continue
     lines.push(pool[Math.floor(r() * pool.length)])
   }
+  // 2026-11-21：分到的那个桶可能是空的（语料里没有脏字、没有长句），空池子抽不出句子，
+  // 结果这个人照样写进产物、台词是空的。实测：一份全是短句的语料，造 12 个人，9 个空台词。
+  // 改成：空了就从整份可用句里兜，兜不出来（整份都没句）就干脆不写这个人。
+  let uniq = [...new Set(lines)]
+  if (!uniq.length) {
+    if (!clean.length) continue
+    uniq = clean.slice(0, 3)
+  }
   people.push({
     id: 'q' + (i + 1),
     age: AGES[Math.floor(r() * AGES.length)],
@@ -85,7 +93,7 @@ for (let i = 0; i < N; i++) {
     home: HOMES[Math.floor(r() * HOMES.length)],
     style: main.name,
     flaws: [FLAWS[Math.floor(r() * FLAWS.length)], FLAWS[Math.floor(r() * FLAWS.length)]],
-    lines: [...new Set(lines)],
+    lines: uniq,
   })
 }
 

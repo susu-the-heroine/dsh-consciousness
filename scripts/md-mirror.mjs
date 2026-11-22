@@ -35,7 +35,11 @@ const pad = (n) => String(n).padStart(4, '0')
 
 if (existsSync(outDir)) {
   // 只清我们自己生成的 .md，别动别人放进去的东西
-  for (const f of readdirSync(outDir)) if (f.endsWith('.md')) rmSync(join(outDir, f))
+  // 2026-11-21：原来说的是这句，做的是「凡 .md 全删」——实测往目录里放一份「我的笔记.md」，
+  // 跑一次导出就没了。现在只认我们自己那个命名（四位编号加短横开头）才删。
+  for (const f of readdirSync(outDir)) {
+    if (/^\d{4}-.*\.md$/.test(f)) rmSync(join(outDir, f))
+  }
 } else mkdirSync(outDir, { recursive: true })
 
 let n = 0

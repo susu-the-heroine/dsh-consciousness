@@ -193,7 +193,8 @@ console.log('面板：' + (R.panel.error ? '抓取失败 ' + R.panel.error : '�
 {
   const d = R.decay || {}
   if (d.error) console.log('衰减：' + d.error)
-  else console.log('衰减：真库 ' + d.total + ' 条，一年后还亮 ' + d.bright + ' · 变暗 '
-    + d.faint + ' · 归档 ' + d.gone + ' · 一直不淡 ' + d.eternal)
+  // 2026-11-21：原来「一直不淡」跟「还亮」并排印，读起来像四桶互不重叠；实测 213+12+0+72=297 > 总数 225——它本来就在「还亮」里面。改成括号注明。
+  else console.log('衰减：真库 ' + d.total + ' 条，一年后还亮 ' + d.bright + '（其中一直不淡 ' + d.eternal + '）· 变暗 '
+      + d.faint + ' · 归档 ' + d.gone)
 }
 console.log('结果：' + join(OUT, 'thickness.json'))

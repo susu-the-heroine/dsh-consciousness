@@ -1,3 +1,4 @@
+import { NODE as _nodeBin } from './_node-bin.mjs'
 /**
  * 时间加速：把一年的曲线在十秒里跑出来
  * ================================
@@ -18,13 +19,17 @@
 import { mkdirSync, rmSync, writeFileSync } from 'node:fs'
 import { spawn } from 'node:child_process'
 import { homedir, tmpdir } from 'node:os'
-import { join } from 'node:path'
+import { join, dirname } from 'node:path'
+import { fileURLToPath } from 'node:url'
 
-const NODE = process.execPath
+const NODE = _nodeBin
 const DAYS = Number(process.argv[2]) || 400
 
+// 2026-11-21：子进程里那段代码原来是写死的本机绝对路径。改成从本文件位置算好再拼进去。
+const _LIBBASE = 'file:///' + join(dirname(fileURLToPath(import.meta.url)), '..').replace(/\\/g, '/') + '/'
+
 const CHILD = `
-const BASE = 'file:///C:/Users/Administrator/.dsh/plugin-src/dsh-consciousness/'
+const BASE = ${JSON.stringify(_LIBBASE)}
 const { timeframe } = {}
 const A = await import(BASE + 'lib/absence.js')
 const ML = await import(BASE + 'lib/moodline.js')

@@ -1,0 +1,29 @@
+{
+  "version": 1,
+  "trainedAt": "2026-11-18T11:20:38.466Z",
+  "features": [
+    "overlap",
+    "cosine",
+    "titleHas",
+    "aliasHas",
+    "entityHit",
+    "freshness",
+    "lenRatio"
+  ],
+  "w": [
+    2.377748484323854,
+    0.2640639948257736,
+    0,
+    0,
+    0,
+    -0.709596268616216,
+    -0.6962738475007569
+  ],
+  "b": -1.2831148213016283,
+  "metrics": {
+    "base_top1": 94.39,
+    "model_top1": 97.82,
+    "cv_top1": 97.82,
+    "n": 321
+  }
+}

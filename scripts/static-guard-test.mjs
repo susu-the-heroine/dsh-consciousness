@@ -39,8 +39,11 @@ const ok = (name, cond, detail = '') => {
 {
   const t = read('tools.js')
   const i = t.indexOf('收尾再怎么错')
-  const seg = i > 0 ? t.slice(i, i + 900) : ''
-  ok('收尾有 try/catch 兜底', seg.includes('try {') && seg.includes('catch (e9)'), '没找到兜底')
+  // 2026-11-21：原来只看注释往后固定 900 字。实测这段长到 918 字，代码明明有兜底，
+  // 守卫却报红——尺子自己量错了，比不量更糟。改成从注释找到下一个 catch (e9) 为止。
+  const j = i >= 0 ? t.indexOf('catch (e9)', i) : -1
+  const seg = i >= 0 && j > i ? t.slice(i, j) : ''
+  ok('收尾有 try/catch 兜底', seg.includes('try {') && j > i, j > i ? '' : '注释后面找不到 catch (e9)')
 }
 
 // 4. 写入库要有重试闸和已持锁版本

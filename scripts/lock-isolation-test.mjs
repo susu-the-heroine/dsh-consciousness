@@ -1,8 +1,10 @@
+import { NODE as _nodeBin } from './_node-bin.mjs'
 /**
  * 锁的隔离测试
  * ============
  *
- * 不谈写入，只测一把锁：六个进程各抢二十次，每次拿住 20 毫秒。
+ * 不谈写入，只测一把锁：六个进程各抢二十次，每次拿住 100 毫秒。
+ * （原文写的是 20 毫秒，那是旧值；下面 HOLD 早改成 100，因为 Windows 时钟精度约 15.6 毫秒，20 毫秒测不准。2026-11-21 对齐）
  * 关键看：有没有两个进程同时"持锁"（时间窗重叠）。
  *
  * 跑法：node scripts/lock-isolation-test.mjs
@@ -46,7 +48,7 @@ writeEmpty(log)
 const runs = []
 for (let t = 0; t < N; t++) {
   runs.push(new Promise((resolve) => {
-    const c = spawn(process.execPath, [SELF, '--worker', String(t)], { env, windowsHide: true })
+    const c = spawn(_nodeBin, [SELF, '--worker', String(t)], { env, windowsHide: true })
     let err = ''
     c.stderr.on('data', (d) => { err += String(d) })
     c.on('close', (code) => resolve({ t, code, err }))

@@ -166,7 +166,9 @@ export function createSelfUpdate({ packageRoot }) {
       latest,
       newer: cmp > 0,
       repo: repoUrl,
-      command: 'dsh plugin update dsh-consciousness',
+      // 2026-11-21：这里原来写死了旧包名 dsh-consciousness，而包里叫 dsh-consciousness2。
+      // 线上源那条分支用的是真包名，回落仓库这条却印了个查不到的名字——两条路给了两句不同的话。
+      command: 'dsh plugin update ' + (name || 'dsh-consciousness2'),
     }
     cache = { at: now, data }
     return data

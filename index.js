@@ -1,14 +1,13 @@
 /**
  * dsh-consciousness —— 识海
  *
- * 干三件事：
- *   1. 注册工具 memory_add / memory_list / memory_render，直接调 记忆海\add_memory.py
- *      （逻辑只有一份，别的地方改了这里自动跟着走）
- *   2. 开一条路由 /consciousness，在 DSH 这个端口上把识海页面吐出来
- *   3. 数据仍然只有一份：记忆海\意识海.html
+ * 干三件事：2026-11-20 逐行核对，头注释还是老黄历，按现在的实现改准。
+ *   1. 注册工具 memory_add / memory_list / memory_render 等——写入早在 11-12 就搬到 Node 了，
+ *      不再调 记忆海\add_memory.py，坐标、连边、去重都在 lib/ 里。
+ *   2. 开一条路由 /consciousness，在 DSH 这个端口上把识海页面吐出来。
+ *   3. 数据按海各一份：~/.dsh/consciousness-seas/<海名>/data.json（老版本单文件时代已过去）。
  *
- * 为什么走子进程：加记忆要算坐标、连边、去重、重生成触屏版和桌面副本，
- * 这套逻辑已经用 python 写好了，JS 再抄一遍早晚走样。
+ * Python 只还在两处帮忙：查词典/分词这类资产、以及可选的向量服务（本地模型在时也不起）。
  */
 import { execFile } from 'node:child_process'
 import { createSelfUpdate } from './selfupdate.mjs'
@@ -65,6 +64,7 @@ import { lockPath, acquireWriteLock } from './lib/lock.js'
 import { seaForSession, bindSession, seaOfSession } from './lib/session.js'
 import { readRoles, writeRoles, roleOfSea, readLinks, writeLinks, bridgedMemories } from './lib/roles.js'
 import { confirmTool, doubtTool } from './lib/tools-uncertain.js'
+import { annotateTool } from './lib/tools-evolve.js'
 import { thinkTool } from './lib/tools-think.js'
 import {
   text, addTool, listTool, searchTool, analogyTool, storyTool, sedimentTool,
@@ -116,6 +116,11 @@ async function ensureEmbedService() {
     return false
   }
 }
+
+// 2026-11-20：这个变量原来只在 113 行赋值、全文件没有任何声明——ESM 是严格模式，
+// 给未声明的名字赋值直接抛 ReferenceError，被 ensureEmbedService 的 catch 吞掉，
+// 函数于是回了 false（python 服务其实已经起来了）。补上声明。
+let _embedProc = null
 
 /* ---------- 审计日志 ----------
  * 每次写入、检索、删除都留一行。出问题能查，风险文档要求可重建。
@@ -237,6 +242,45 @@ let _seaOfSidAt = 0
 export const inject = ['tools', 'webServer', 'workspaceRegistry', 'sessions', 'sessionTitle',
                         'agents', 'systemPrompt']
 
+/* 体检计时器：每天存一次快照，每周出一份汇总。关掉：C2_NO_MONITOR=1 */
+async function scheduleHealthMonitor() {
+  try {
+    if (String(process.env.C2_NO_MONITOR || '') === '1') return
+    const M = await import('./lib/monitor.js')
+    const S = await import('./lib/store.js')
+    const V = await import('./lib/vectors.js')
+    const P = await import('./lib/paths.js')
+    const { readdirSync } = await import('node:fs')
+    const once = async () => {
+      try {
+        for (const sea of readdirSync(P.SEAS_DIR)) {
+          try {
+            const d = S.readSea(sea)
+            if (!d) continue
+            const h = V.vectorHealth(sea, d)
+            M.recordSnapshot(sea, h)
+          } catch {}
+        }
+      } catch {}
+    }
+    setTimeout(once, 20000)
+    // 2026-11-20：跟注入那边一样，定时器不 unref 会拽住进程（自测、脚本都退不出去）。
+    const _t1 = setInterval(once, 3 * 3600 * 1000)
+    if (_t1 && typeof _t1.unref === 'function') _t1.unref()
+    const weekly = async () => {
+      try {
+        const last = M.weeklyReport_()
+        const prev = Array.isArray(last) && last.length ? last[last.length - 1] : null
+        if (prev && Date.now() - Number(prev.at || 0) < 6 * 86400000) return
+        await M.weeklyReport()
+      } catch {}
+    }
+    setTimeout(weekly, 60000)
+    const _t2 = setInterval(weekly, 12 * 3600 * 1000)
+    if (_t2 && typeof _t2.unref === 'function') _t2.unref()
+  } catch {}
+}
+
 export function apply(ctx) {
   // 加载期间的错，DSH 是静默吞掉的（插件直接消失，界面上一片干净）。
   // 这里包一层，把真实的错写盘，不然永远不知道死在哪。
@@ -304,10 +348,42 @@ function _applyInner(ctx) {
     } catch (e) {
       try { audit('inject-mount', { ok: true, probeErr: String(e && e.message) }) } catch {}
     }
-    mountAutoInject(ctx)
+    try { scheduleHealthMonitor() } catch {}
+  mountAutoInject(ctx)
   } catch (e) {
     try { audit('inject-mount-err', { err: String(e && e.message), stack: String(e && e.stack).slice(0, 300) }) } catch {}
   }
+
+  // 空闲补向量：老条目一条条补太慢，开窗口后自己在后台补齐。
+  // 2026-11-18 用户反馈：两百多条要一百多次搜索才追平，新条目压着老条目。
+  // 这里不阻塞启动（延后 6 秒），也不无限跑（每条海给 20 秒预算）。
+  try {
+    if (String(process.env.C2_NO_VECTOR_BACKFILL || '') !== '1') {
+      const t = setTimeout(async () => {
+        try {
+          const { readdirSync } = await import('node:fs')
+          const { SEAS_DIR } = await import('./lib/paths.js')
+          const { readSea } = await import('./lib/store.js')
+          const { backfillVectors, vectorGap } = await import('./lib/vectors.js')
+          let seas = []
+          try {
+            seas = readdirSync(SEAS_DIR, { withFileTypes: true })
+              .filter((d) => d.isDirectory()).map((d) => d.name)
+          } catch {}
+          for (const sea of seas) {
+            try {
+              const data = readSea(sea)
+              if (!data) continue
+              const g = vectorGap(sea, data)
+              if (!g.need) continue
+              await backfillVectors(sea, data, { batch: 20, budgetMs: 20000 })
+            } catch {}
+          }
+        } catch {}
+      }, 6000)
+      try { t.unref && t.unref() } catch {}
+    }
+  } catch {}
 
   // 注入表是启动时一次性收集的，这一行必须尽早进表
   try {
@@ -391,7 +467,12 @@ function _applyInner(ctx) {
         _tickBusy = false
       } catch {}
     }
-    const _t1 = setTimeout(() => { _tick(); setInterval(_tick, 20 * 60 * 1000) }, 90 * 1000)
+    const _t1 = setTimeout(() => {
+      _tick()
+      // 2026-11-20：这个内层定时器没 unref——九十秒一过就又把进程钉住，前面补的那些白补。
+      const _tickTimer = setInterval(_tick, 20 * 60 * 1000)
+      if (_tickTimer && typeof _tickTimer.unref === 'function') _tickTimer.unref()
+    }, 90 * 1000)
     try { _t1.unref && _t1.unref() } catch {}
 
     // 档案同步：开机 3 分钟扫一次，之后每 20 分钟一次。
@@ -405,8 +486,12 @@ function _applyInner(ctx) {
           const path = await import('node:path')
           const url = await import('node:url')
           const here = path.dirname(url.fileURLToPath(import.meta.url))
+          const _script = path.join(here, 'scripts', 'sync-docs.mjs')
+          // 2026-11-21：打包白名单里只收了 scripts/count.mjs，这个同步脚本没进去——
+          // 装上的包每二十分钟空跑一次、每次记一条失败审计。没这个文件就干脆不跑。
+          if (!existsSync(_script)) return
           await new Promise((resolve, reject) => {
-            execFile(process.execPath, [path.join(here, 'scripts', 'sync-docs.mjs')],
+            execFile(process.execPath, [_script],
               { timeout: 30000 }, (e) => (e ? reject(e) : resolve()))
           })
         } catch (e) {
@@ -456,12 +541,33 @@ off.push((function(){ try { return ctx.tools.register(countTool) } catch(e) { tr
       off.push((function(){ try { return ctx.tools.register(confirmTool) } catch(e) { try { audit('boot-tool-fail', { tool: 'confirmTool', err: String(e && e.message) }) } catch {} return () => {} } })())
       off.push((function(){ try { return ctx.tools.register(thinkTool) } catch(e) { try { audit('boot-tool-fail', { tool: 'thinkTool', err: String(e && e.message) }) } catch {} return () => {} } })())
       off.push((function(){ try { return ctx.tools.register(doubtTool) } catch(e) { try { audit('boot-tool-fail', { tool: 'doubtTool', err: String(e && e.message) }) } catch {} return () => {} } })())
+off.push((function(){ try { return ctx.tools.register(annotateTool) } catch(e) { try { audit('boot-tool-fail', { tool: 'annotateTool', err: String((e && e.message) || e) }) } catch(e2) {} return () => {} } })())
   try { audit('boot-3-tools-ok', { n: off.length }) } catch {}
   try { audit('boot-4-before-routes', { hasWS: !!(ctx.webServer && ctx.webServer.register) }) } catch {}
 
 
   // 路由全部搬去 lib/routes.js 了，这里只收返回值
   for (const f of mountRoutes(ctx)) off.push(f)
+
+  // 开机预热：先把索引和向量建起来，第一句问别吃那一百多毫秒（2026-11-19）
+  // 实测冷首问 253ms：字面 95（头一次建表）、向量 106（头一次载模型）；第二问 24ms。
+  try {
+    if (String(process.env.C2_NO_WARM || '') !== '1') {
+      const timer = setTimeout(() => {
+        Promise.all([import('./lib/store.js'), import('./lib/vectors.js')])
+          .then(([S, V]) => {
+            const data = S.readSea('main')
+            if (!data) return
+            try { V.getIndex('main', data) } catch {}
+            try { V.loadVectors('main') } catch {}
+            // 模型也要先跑一次，不然第一问还要等一百毫秒（2026-11-19）
+            try { V.embedQuery('预热') } catch {}
+          })
+          .catch(() => {})
+      }, 2500)
+      if (timer.unref) timer.unref()
+    }
+  } catch {}
 
   return () => {
     for (const f of off) {

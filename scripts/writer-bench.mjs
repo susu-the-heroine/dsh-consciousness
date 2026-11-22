@@ -103,6 +103,11 @@ function diff(a, b) {
 }
 
 const only = Number((process.argv.find((x) => x.startsWith('--only=')) || '').split('=')[1] || 0)
+// 2026-11-21：越界以前直接崩在 c.title 上，报的是「读取未定义」。现在先查有没有这一条。
+if (only && !CASES[only - 1]) {
+  console.log(`没有第 ${only} 条（这份比对台一共 ${CASES.length} 条）`)
+  process.exit(1)
+}
 const list = only ? [CASES[only - 1]] : CASES
 let same = 0
 let differ = []

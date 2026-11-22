@@ -30,8 +30,11 @@ console.log('挑最小的', files.length, '个文件：', files.map((f) => (f.si
 
 const all = existsSync(OUT) ? readFileSync(OUT, 'utf8').split('\n').filter(Boolean) : []
 // 上一次把 GBK 当 UTF-8 读，进了 137 条乱码，清掉重来
+// 2026-11-21：这里只该清「上次抓坏的网文行」。实测发现：解析不了的行也被一起丢掉，
+// 等于拿这个脚本跑一次，别人（或别的脚本）写进这份文件的行会被悄悄吃掉。
+// 改成：解析不了的照原样留着；只有明确是网文域的才清。
 const existed = all.filter((l) => {
-  try { const o = JSON.parse(l); return o.domain !== '网文' } catch { return false }
+  try { const o = JSON.parse(l); return o.domain !== '网文' } catch { return true }
 })
 if (all.length !== existed.length) console.log('清掉上次乱码', all.length - existed.length, '条')
 const seen = new Set()
@@ -70,6 +73,14 @@ for (const f of files) {
 }
 
 mkdirSync(join(homedir(), '.dsh', '记忆'), { recursive: true })
+// 2026-11-21：这份文件写在他真档案目录里，原来一声不响整份盖掉。写前先留一份带时间的。
+if (existsSync(OUT)) {
+  const stamp = new Date().toISOString().replace(/[:.]/g, '-')
+  try { writeFileSync(OUT + '.bak-' + stamp, readFileSync(OUT, 'utf8'), 'utf8') } catch (e) {
+    console.log('旧的那份备份失败，先不写：' + String((e && e.message) || e))
+    process.exit(4)
+  }
+}
 writeFileSync(OUT, existed.concat(fresh.map((x) => JSON.stringify(x))).join('\n') + '\n', 'utf8')
 console.log('\n新增短句', fresh.length, '条｜库里总共', existed.length + fresh.length)
 console.log('样例：')

@@ -6,7 +6,17 @@
  *
  * 跑法：node scripts/writer-verify.mjs
  */
+import { existsSync, readFileSync } from 'node:fs'
+import { join, dirname } from 'node:path'
+import { homedir } from 'node:os'
+import { fileURLToPath } from 'node:url'
 import { buildPoint, findDuplicate, mergeInto, extractEntities, extractTriggers, findConflict, sim, applyConflict } from '../lib/writer-js.js'
+
+// 2026-11-21：下面那条「实体认得名单里的名字」用了 join / homedir / HERE / existsSync / readFileSync，
+// 可这几样全没引进来——一求值就 ReferenceError，被外层 catch 吞掉，seedName 永远是空，
+// 断言于是走了「这台机器没有名单，跳过」那条真值分支：机器上明明有名单，它照样打勾。
+// 也就是说这条守卫从来没守过什么。补上引用，让它真去读名单。
+const HERE = dirname(fileURLToPath(import.meta.url))
 
 let pass = 0
 let fail = 0
@@ -68,7 +78,20 @@ function ok(name, cond, detail = '') {
 // ── 5. 实体：认得名单里的名字，也抽大写英文
 {
   const e1 = extractEntities('我叫大肥鱼，用 GMod 剪片')
-  ok('实体认得名单里的名字', e1.includes('大肥鱼'), JSON.stringify(e1))
+  // 名单是按人配的：他机器上 ~/.dsh/entities.txt 里有「大肥鱼」，别人的机器上没有。
+  // 断言不能绑死一个人的名字——那是"一个人代表不了所有人"的反面教材。
+  // 改成：从实际的名单里取第一个名字（哪台机器取哪台），取不到就跳过。
+  let seedName = ''
+  try {
+    for (const f of [join(homedir(), '.dsh', 'entities.txt'), join(HERE, '..', 'assets', 'entities.txt')]) {
+      if (!existsSync(f)) continue
+      const lines = readFileSync(f, 'utf8').replace(/^\uFEFF/, '').split(/\r?\n/).map((x) => x.trim())
+      const n = lines.find((x) => x && !x.startsWith('#'))
+      if (n) { seedName = n; break }
+    }
+  } catch {}
+  ok('实体认得名单里的名字', seedName ? extractEntities(seedName + ' 那边的事').includes(seedName) : true,
+    seedName ? JSON.stringify(extractEntities(seedName + ' 那边的事')) : '（这台机器没有名单，跳过）')
   ok('实体抽大写英文', e1.includes('GMod'), JSON.stringify(e1))
   ok('实体最多六个', extractEntities('A B C D E F G H').length <= 6)
 }

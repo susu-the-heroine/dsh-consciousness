@@ -29,8 +29,11 @@ const all = await C.candidatesFor(sea, q, { n: 60, min: 20 })
 ok('合起来够二十条', Array.isArray(all) && all.length >= 20, 'len=' + all.length)
 ok('合起来没有重复', all.length === new Set(all).size)
 
+// 2026-11-21：这条原来叫「没内容时返回空（要整库兜底）」，可断言只查了「是个数组」——
+// 名字说空，测的是不炸。实测「嗯」拿到六十条，压根不是空。名字照实改，
+// 要不要真返回空是设计问题，另记一笔，别在这儿假装测过了。
 const none = await C.candidatesFor(sea, '嗯', { n: 60, min: 20 })
-ok('没内容时返回空（要整库兜底）', Array.isArray(none), 'len=' + (none && none.length))
+ok('短问句也给数组、不炸（实测不是空：六十条）', Array.isArray(none), 'len=' + (none && none.length))
 
 const weird = await C.candidatesFor(sea, '闃胯厱闅欒瓨', { n: 60, min: 20 })
 ok('怪词不炸', Array.isArray(weird))

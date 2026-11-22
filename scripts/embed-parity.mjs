@@ -19,7 +19,15 @@ const E = await import('file:///' + join(HERE, '..', 'lib', 'embed-onnx.js').rep
 const J = await import('file:///' + join(HERE, '..', 'lib', 'embed-js.js').replace(/\\/g, '/') + '?v=' + Date.now())
 
 if (!existsSync(qfile)) { console.log('没有问句向量文件：' + qfile); process.exit(1) }
-const ref = JSON.parse(readFileSync(qfile, 'utf8'))
+// 2026-11-21：这份文件常被人用记事本或 PowerShell 存出来，开头带一个字节序标记；
+// 直接 JSON.parse 会崩在第一个字符上（实测就是这么崩的）。先剥掉。
+const ref = JSON.parse(readFileSync(qfile, 'utf8').replace(/^\uFEFF/, ''))
+// 空表也会「通过 0 失败 0」然后退零——外面看像对上了，其实一道都没比。
+if (!Object.keys(ref).length) {
+  console.log('这份问句向量是空的：' + qfile)
+  console.log('里面要有一批「问句 → 参考向量」的对照，才能验本地算得对不对。')
+  process.exit(2)
+}
 
 const cos = (a, b) => {
   let s = 0

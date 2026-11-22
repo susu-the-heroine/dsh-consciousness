@@ -6,36 +6,38 @@
  * 逐个补 catch 补不完，所以换个方向——从外面敲一遍，看它答不答。
  *
  * 用法：node scripts/health.mjs [http://127.0.0.1:端口]
- * 输出：每一项 通过/失败，最后一行给
-  // 向量层：health 只说"服务活着"，不证明能算。这里真算一次。
-  // 2026-11-12：这台机器上 DSH 自带 Python 没装 torch，/embed 直接 500，
-  // 而 /health 一直是 ok——探针只报"活着"，等于替它撒谎。
-  try {
-    const r = await fetch('http://127.0.0.1:8931/embed', {
-      method: 'POST',
-      headers: { 'Content-Type': 'application/json' },
-      body: JSON.stringify({ text: '探针' }),
-      signal: AbortSignal.timeout(15000),
-    })
-    if (r.ok) {
-      const j = await r.json()
-      const dim = (j.v || j.vs?.[0] || []).length
-      ok('向量层', `能算 · ${dim} 维`)
-    } else {
-      const body = await r.text().catch(() => '')
-      fail('向量层', `服务在但不给算（HTTP ${r.status}）${body.slice(0, 80)}`)
-    }
-  } catch (e) {
-    fail('向量层', `连不上（未启动？）${String(e && e.message).slice(0, 60)}`)
-  }
-
-结论。
+ * 输出：每一项 通过/失败，最后一行给结论。
  */
 import { readFileSync, existsSync } from 'node:fs'
 import { homedir } from 'node:os'
 import { join } from 'node:path'
 
-const base = process.argv[2] || 'http://127.0.0.1:60634'
+// 端口每次重启都会变，写死就会误报一堆"失败"。
+// 不给参数时自己找：扫本机在监听的端口，哪个答得上 /consciousness/inner-data 就用哪个。
+async function autoBase() {
+  const { execFileSync } = await import('node:child_process')
+  let ports = []
+  try {
+    const out = execFileSync('netstat', ['-ano'], { encoding: 'utf8', timeout: 8000 })
+    for (const line of out.split('\n')) {
+      const m = line.match(/127\.0\.0\.1:(\d+)\s+\S+\s+LISTENING/i)
+      if (m) ports.push(Number(m[1]))
+    }
+  } catch {}
+  ports = [...new Set(ports)].slice(0, 40)
+  for (const p0 of ports) {
+    try {
+      const r = await fetch('http://127.0.0.1:' + p0 + '/consciousness/inner-data', { signal: AbortSignal.timeout(700) })
+      if (!r.ok) continue
+      // 只看状态码会认错人：本机别的服务也会回 200。按字段认。
+      const j = await r.json().catch(() => null)
+      if (j && j.moodline !== undefined && j.dims !== undefined) return 'http://127.0.0.1:' + p0
+    } catch {}
+  }
+  return null
+}
+const arg = process.argv[2]
+const base = arg && !arg.startsWith('--') ? arg : (await autoBase()) || 'http://127.0.0.1:60634'
 const D = join(homedir(), '.dsh')
 let pass = 0
 let fail = 0
@@ -49,6 +51,13 @@ function no(name, why) {
   fail++
   bad.push(name + '：' + why)
   console.log('  失败  ' + name + '  ' + why)
+}
+// 2026-11-21：跳过以前直接算通过——向量服务没起也报「10 项全过」，这正是这份文件开头骂的那件事：
+// 探针替它撒谎。跳过就单独记一笔，不进通过数。
+let skips = 0
+function skip(name, why) {
+  skips++
+  console.log('  跳过  ' + name + '  ' + why)
 }
 
 async function get(path) {
@@ -100,7 +109,7 @@ for (const [name, file] of [
 
 // 四、规矩栏该有的东西还在（新规矩不许被截掉）
 try {
-  const j = JSON.parse(readFileSync(join(D, 'consciousness-seas', 'main', 'data.json'), 'utf8'))
+  const j = JSON.parse(readFileSync(join(D, 'consciousness-seas', 'main', 'data.json'), 'utf8').replace(/^\uFEFF/, ''))
   const rules = (j.points || []).filter((p) => p.rule === true && !p.dead)
   const newest = rules.sort((a, b) => (b.id || 0) - (a.id || 0))[0]
   if (!rules.length) no('规矩', '一条都没有')
@@ -117,7 +126,38 @@ try {
   else ok('内观重复', '只有一份')
 } catch { /* 没有就是好事 */ }
 
+// 六、向量层：前面那些只证明"服务活着"，不证明能算。这里真算一次。
+// 2026-11-21：这一段原来整块贴在文件开头的注释里——二十年没跑过，探针只报"活着"，等于替它撒谎。
+// 2026-11-12 欠的账：那台机器上 /embed 直接 500，/health 却一直 ok。
+{
+  const _base = process.env.DSH_EMBED_URL || 'http://127.0.0.1:8931'
+  try {
+    const r = await fetch(_base + '/embed', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({ text: '探针' }),
+      signal: AbortSignal.timeout(15000),
+    })
+    if (r.ok) {
+      const j = await r.json()
+      const dim = (j.v || (j.vs && j.vs[0]) || []).length
+      ok('向量层', '能算 · ' + dim + ' 维')
+    } else {
+      const body = await r.text().catch(() => '')
+      no('向量层', '服务在但不给算（HTTP ' + r.status + '）' + body.slice(0, 80))
+    }
+  } catch (e) {
+    // 连不上 = 这个服务没起，属于机器状态，不是「探针撒谎」。记通过并写明，别判红。
+    // 真正要抓的是下一条：服务活着、却算不出来。
+    skip('向量层', '未启动（' + String((e && e.message) || e).slice(0, 40) + '）')
+  }
+}
+
 console.log('')
-console.log(fail === 0 ? '结论：' + pass + ' 项全过' : '结论：' + pass + ' 过 / ' + fail + ' 失败')
+console.log(
+  fail === 0
+    ? '结论：' + pass + ' 项全过' + (skips ? ' · ' + skips + ' 项跳过（没验到）' : '')
+    : '结论：' + pass + ' 过 / ' + fail + ' 失败' + (skips ? ' · ' + skips + ' 项跳过' : '')
+)
 for (const b of bad) console.log('  待查：' + b)
 process.exit(fail === 0 ? 0 : 1)

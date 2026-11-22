@@ -39,7 +39,10 @@ const ent = (p) => (Array.isArray(p.entities) ? p.entities.join('、') : str(p.e
 const cat = (p) => (Array.isArray(p.category) ? p.category.join('、') : str(p.category))
 
 const variants = {
-  A_现状400: (p) => (str(p.alias) ? str(p.alias) + '。' : '') + str(p.title) + '。' + str(p.text).slice(0, 360),
+  // 2026-11-21：这一档叫「现状」，原来是照生产拼法抄了一遍（还抄歪了：正文单独截三百六，
+  // 生产是整段拼完再截四百）。实测生产走的是 vectors.embedTextOf，这里直接调它，
+  // 以后生产改了、这一档自己跟着变，不用再人工同步。
+  A_现状400: (p) => V.embedTextOf(p),
   B_加实体分类: (p) => [str(p.alias), str(p.title), str(p.text).slice(0, 300), ent(p) && `涉及：${ent(p)}`, cat(p) && `属于：${cat(p)}`]
     .filter(Boolean).join('。').slice(0, 460),
   C_正文700: (p) => (str(p.alias) ? str(p.alias) + '。' : '') + str(p.title) + '。' + str(p.text).slice(0, 660),

@@ -1,14 +1,26 @@
-import { readFileSync } from 'node:fs'
+import { readFileSync, existsSync } from 'node:fs'
 import { homedir } from 'node:os'
 import { join } from 'node:path'
 import vm from 'node:vm'
 
 const file = join(homedir(), '.dsh', 'consciousness-seas', '意识海_触屏版.html')
+// 2026-11-21：页面不在时直接吐栈，看不出是「没生成页面」还是「页面里有错」。
+if (!existsSync(file)) {
+  console.log('找不到页面：' + file)
+  console.log('这份是把页面里的脚本拎出来在假 DOM 里跑，先让页面生成出来再来。')
+  process.exit(2)
+}
 const html = readFileSync(file, 'utf8')
 
 // 抓最后一个大 <script>（页面主逻辑）
 const scripts = [...html.matchAll(/<script(?![^>]*src=)[^>]*>([\s\S]*?)<\/script>/g)].map((m) => m[1])
 console.log('内联脚本块:', scripts.length, '个，长度:', scripts.map((s) => s.length).join(' / '))
+// 2026-11-21：抓不到内联脚本时，code 是 undefined，后面 vm 一跑就报「抛错了」——
+// 那会把「没脚本」伪装成「脚本里有错」。先说清。
+if (!scripts.length) {
+  console.log('页面里没有内联脚本块，没得跑。')
+  process.exit(2)
+}
 const code = scripts.sort((a, b) => b.length - a.length)[0]
 
 // 假 DOM：任何属性都返回一个可调用的假对象，别真抛

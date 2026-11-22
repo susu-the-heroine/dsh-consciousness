@@ -9,10 +9,16 @@
  * 跑法：node scripts/test-shape-other-sea.mjs
  * 跑完自己清掉那个临时识海，不留垃圾。
  */
-import { mkdirSync, writeFileSync, rmSync, existsSync } from 'node:fs'
+import { mkdirSync, writeFileSync, rmSync, existsSync, mkdtempSync } from 'node:fs'
 import { join, dirname } from 'node:path'
 import { fileURLToPath } from 'node:url'
-import { homedir } from 'node:os'
+import { homedir, tmpdir } from 'node:os'
+
+// 整个测试搬进临时家目录：以前它写到真实 .dsh 里，
+// 检索日志被灌了 996 行「__shape_test_other_sea__」，把人的真日志埋了（2026-11-15 发现）。
+const TMP_HOME = mkdtempSync(join(tmpdir(), 'c2-shape-'))
+process.env.USERPROFILE = TMP_HOME
+process.env.HOME = TMP_HOME
 
 const SEA = '__shape_test_other_sea__'
 const DIR = join(homedir(), '.dsh', 'consciousness-seas', SEA)
@@ -82,15 +88,27 @@ try {
   const T = await import('file:///' + join(here, '..', 'lib', 'tools.js').replace(/\\/g, '/') + '?v=' + Date.now())
   for (const [q, want] of cases) {
     let log = ''
-    try { const r = await T.searchTool.execute({ query: q, limit: 5, sea: SEA }); log = String(r.log || '') } catch {}
-    const got = /凑出来的/.test(log) ? 'miss' : 'hit'
+    let threw = false
+    // 2026-11-21：原来这里把异常吞成空串，空串里当然找不到「凑出来的」，
+    // 于是一次都没答上的搜索会被记成「答上了」——出错变成通过。
+    // 现在异常直接算错，并且把错因打出来。
+    try {
+      const r = await T.searchTool.execute({ query: q, limit: 5, sea: SEA })
+      log = String(r.log || '')
+    } catch (e) {
+      threw = true
+      log = '（搜索抛错：' + String((e && e.message) || e) + '）'
+    }
+    // 措辞可能换：凑出来的 / 没记住 / 没有跟……对得上，都算没答应
+    const got = threw ? 'error' : (/凑出来的|没记住|没记过|记糊了|没有跟/.test(log) ? 'miss' : 'hit')
     const ok = got === want
-    if (!ok) bad++
+    if (!ok) bad += 1   // 2026-11-19：这条以前只打印不计数，判红那句永远不成立
     console.log((ok ? '✓' : '✗') + ' 「' + q + '」 期望 ' + want + ' 实际 ' + got)
   }
   console.log('\n错的 ' + bad + ' / ' + cases.length)
 } finally {
   clean()
+  try { rmSync(TMP_HOME, { recursive: true, force: true }) } catch {}
 }
 
 if (bad > 0) process.exit(1)

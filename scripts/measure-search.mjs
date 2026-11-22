@@ -11,7 +11,7 @@ import { homedir } from 'node:os'
 import { join } from 'node:path'
 
 const D = join(homedir(), '.dsh')
-const sea = JSON.parse(readFileSync(join(D, 'consciousness-seas', 'main', 'data.json'), 'utf8'))
+const sea = JSON.parse(readFileSync(join(D, 'consciousness-seas', 'main', 'data.json'), 'utf8').replace(/^\uFEFF/, ''))
 const pts = (sea.points || []).filter((p) => !p.dead && !p.archived)
 
 const mod = await import('file:///' + join(D, 'plugin-src', 'dsh-consciousness', 'lib', 'tools.js').replace(/\\/g, '/'))
@@ -21,8 +21,14 @@ if (!tool || !tool.execute) {
   process.exit(2)
 }
 
-// 挑 12 条：标题至少 8 个字，避免太泛
-const sample = pts.filter((p) => [...String(p.title || '')].length >= 8).slice(-12)
+// 挑 12 条：标题至少 8 个字，避免太泛。
+// 2026-11-21：同一标题会被抽到两次（实测「不许拿上下文当停工理由」出现两遍），
+// 十二题里其实有重复；按标题去重，别让一百分里掺着重复计分。
+const seenTitle = new Set()
+const sample = pts
+  .filter((p) => [...String(p.title || '')].length >= 8)
+  .filter((p) => { const t = String(p.title); if (seenTitle.has(t)) return false; seenTitle.add(t); return true })
+  .slice(-12)
 let hit = 0
 const rows = []
 for (const p of sample) {
@@ -46,4 +52,7 @@ for (const p of sample) {
 const rate = sample.length ? +(hit / sample.length).toFixed(2) : null
 console.log('')
 console.log('命中 ' + hit + '/' + sample.length + '（' + (rate != null ? rate * 100 : '—') + '%）')
+// 2026-11-21：这个百分比的天花板是它自己——问句是从目标标题里抠出来的词，等于拿答案问问题。
+// 它只能证明「索引里有这条、字面能撞上」，不能当检索命中率报。写清楚，别让一百 percent 骗人。
+console.log('注意：问句取自目标标题本身，这是「能不能被字面找回来」的上限，不是检索命中率。')
 writeFileSync(join(D, 'consciousness-sim', 'search-hit.json'), JSON.stringify({ at: Date.now(), n: sample.length, hit, rate, rows }, null, 1), 'utf8')

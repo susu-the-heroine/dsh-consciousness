@@ -1,3 +1,4 @@
+import { NODE as _nodeBin } from './_node-bin.mjs'
 /**
  * 八个智能体，每个跑完整八层
  * =========================
@@ -10,8 +11,9 @@ import { mkdirSync, rmSync, writeFileSync } from 'node:fs'
 import { spawn } from 'node:child_process'
 import { homedir, tmpdir } from 'node:os'
 import { join } from 'node:path'
+import { fileURLToPath } from 'node:url'
 
-const NODE = process.execPath
+const NODE = _nodeBin
 const CONC = Number(process.argv[2]) || 6
 
 // 第二参数传 seeded 就用真语料长出来的角色，否则用手写的三十份
@@ -36,7 +38,8 @@ async function runBatch(list) {
       return { ...m, text: txt + '，这件事她一直记着' }
     })
     const arg = JSON.stringify({ name: p.name, persona: p.persona, memories: fixedMems, probes: p.probes, thought: p.thought })
-    const child = spawn(NODE, [new URL('./_whole-one.mjs', import.meta.url).pathname.replace(/^\//, ''), arg], {
+    // 2026-11-21：跟多海那份一个毛病——取网址里的路径再手削斜杠，换台机器就成相对路径。
+    const child = spawn(NODE, [fileURLToPath(new URL('./_whole-one.mjs', import.meta.url)), arg], {
       env: { ...process.env, USERPROFILE: home, HOME: home },
       stdio: ['ignore', 'pipe', 'pipe'],
     })

@@ -24,7 +24,10 @@ const html = readFileSync(SRC, 'utf8')
 
 function inject(style, note) {
   const tag = `<style id="layout-variant">/* ${note} */\n${style}\n</style>\n</head>`
-  return html.replace('</head>', tag)
+  const out = html.replace('</head>', tag)
+  // 2026-11-21：源里没有 </head> 时，替换什么都没做，却照样往下写——
+  // 实测写出三份 0 KB 的桌面文件，还报「成功」。这正是 11-08 那次「版式全毁」的同一类事故。
+  return { out, ok: out !== html }
 }
 
 const MOBILE = `
@@ -65,8 +68,15 @@ const out = [
   ['意识海_真实版.html', inject(REAL, '真实版 · 2026-11-08 重做'), '真实版'],
 ]
 
-for (const [name, body, label] of out) {
+const failed = out.filter(([, r]) => !r.ok)
+if (failed.length) {
+  console.log('触屏版里找不到 </head>，样式插不进去——这次一份都不写，别拿空文件盖掉桌面上那三份好的。')
+  console.log('  源文件：' + SRC)
+  process.exit(2)
+}
+
+for (const [name, r, label] of out) {
   const p = join(DESK, name)
-  writeFileSync(p, body, 'utf8')
-  console.log(`${label} → ${p}（${Math.round(body.length / 1024)} KB）`)
+  writeFileSync(p, r.out, 'utf8')
+  console.log(`${label} → ${p}（${Math.round(r.out.length / 1024)} KB）`)
 }

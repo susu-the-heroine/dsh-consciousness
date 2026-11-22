@@ -11,15 +11,23 @@
  *
  * 跑法：node scripts/sim-person-full.mjs [基地址]
  */
-import { readFileSync, existsSync, rmSync } from 'node:fs'
-import { homedir } from 'node:os'
-import { join } from 'node:path'
+import { readFileSync, existsSync, mkdtempSync, mkdirSync, rmSync } from 'node:fs'
+import { homedir, tmpdir } from 'node:os'
+import { join, dirname } from 'node:path'
+import { fileURLToPath } from 'node:url'
+
+// 2026-11-21：同 sim-e2e 那两处毛病——真库里建 talktest 海、跑完按名字删；库路径写死本机。
+// 一起改成临时家目录 + 按本文件位置算。
+const _tmpHome = mkdtempSync(join(tmpdir(), 'c2-pfull-'))
+process.env.USERPROFILE = _tmpHome
+process.env.HOME = _tmpHome
+mkdirSync(join(_tmpHome, '.dsh'), { recursive: true })
 
 const BASE = process.argv[2] || 'http://127.0.0.1:50740'
 const SEA = 'talktest'
 const seaDir = join(homedir(), '.dsh', 'consciousness-seas', SEA)
 
-const base = 'file:///C:/Users/Administrator/.dsh/plugin-src/dsh-consciousness/'
+const base = 'file:///' + join(dirname(fileURLToPath(import.meta.url)), '..').replace(/\\/g, '/') + '/'
 const store = await import(base + 'lib/store.js')
 const T = await import(base + 'lib/tools.js')
 
@@ -29,6 +37,17 @@ store.writeSea(SEA, { version: 1, points: [], edges: [], createdAt: Date.now() }
 const get = async (p) => {
   const r = await fetch(BASE + p)
   return { status: r.status, body: await r.text() }
+}
+
+// 2026-11-21：没起服务的时候，原来会甩一整段连接被拒的堆栈——看不出是「服务没起」还是「代码坏了」。
+// 先探一下，探不通就一句话说清，退出码给二，跟「跑失败」区分开。
+try {
+  await get('/consciousness/inner-data')
+} catch (e) {
+  console.log('没连上服务：' + BASE + '（' + String((e && e.message) || e).slice(0, 60) + '）')
+  console.log('先把插件服务起起来，或者把地址当参数传进来：node scripts/sim-person-full.mjs http://127.0.0.1:端口')
+  try { if (existsSync(_tmpHome)) rmSync(_tmpHome, { recursive: true, force: true }) } catch {}
+  process.exit(2)
 }
 
 // 五个"人"，每人二十句，带上下文顺序（不是抽句子）
@@ -133,6 +152,7 @@ const pageOk = page.status === 200 && page.body.includes('第5句')
 if (!pageOk) { pageFail++; problems.push({ kind: '页面里没有', detail: 'HTTP ' + page.status }) }
 
 try { if (existsSync(seaDir)) rmSync(seaDir, { recursive: true, force: true }) } catch {}
+try { if (existsSync(_tmpHome)) rmSync(_tmpHome, { recursive: true, force: true }) } catch {}
 
 console.log('\n一百轮对话（5 人 × 20 句）')
 console.log('  轮数', rounds, '｜写入', wrote, '条')

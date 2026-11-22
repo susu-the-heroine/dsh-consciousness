@@ -74,6 +74,19 @@ const topOf = (d) => Object.entries(d || {}).sort((a, b) => b[1] - a[1]).slice(0
 
 const result = {}
 
+// 2026-11-21：这段以前没有兜底。中途抛错（比如管线里的函数对某一句出错）就直接退，
+// 他那颗真心脏停在「刚重置过」的状态，备份还躺在旁边没人还原——等于模拟一下把他的情绪清了。
+let _restored = false
+const restoreHeart = () => {
+  if (_restored) return
+  _restored = true
+  try {
+    if (existsSync(BAK)) { copyFileSync(BAK, HEART); rmSync(BAK) }
+  } catch {}
+}
+process.on('exit', restoreHeart)
+process.on('uncaughtException', (e) => { console.log('中途炸了：' + (e && e.message)); restoreHeart(); process.exit(3) })
+
 for (const pk of WHICH) {
   resetHeart()
   const rows = []
@@ -94,9 +107,7 @@ for (const pk of WHICH) {
   result[pk] = rows
 }
 
-try {
-  if (existsSync(BAK)) { copyFileSync(BAK, HEART); rmSync(BAK) }
-} catch {}
+restoreHeart()
 
 const L = []
 L.push('# 第三层：同一句话，不同底子')

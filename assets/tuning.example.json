@@ -1,0 +1,13 @@
+{
+  "vecMin": 0.4,
+  "textIdf": 1,
+  "textW": 1,
+  "minScore": 0,
+  "relSlots": 3,
+  "relatedLift": 0,
+  "recallGapMin": 12,
+  "dupMin": 0.86,
+  "titleBoost": 3,
+  "entBoost": 5,
+  "synonym": {}
+}

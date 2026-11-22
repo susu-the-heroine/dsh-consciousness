@@ -62,5 +62,10 @@ if (total.length) {
   const lh = total.filter((r) => (r.prevHit || []).length > 0).length
   console.log(`\n同一批对话的日志口径：${lh}/${total.length} = ${(lh / total.length * 100).toFixed(1)}%`)
   console.log(`差 ${(rate - lh / total.length * 100).toFixed(1)} 个点——这就是关键词口径低估的量。`)
+} else {
+  // 2026-11-21：日志那一臂没数据时，原来只留几行「日志 0/0」就收场，
+  // 上面那句「两个都报」等于没做到，还容易让人把缺的数看成零。说白了。
+  console.log('\n注入日志里没有这批线的记录（每行都写着 0/0），第二口径这次报不出来。')
+  console.log('上面那个百分比只有复核一臂，别当成「两臂一致」。')
 }
 console.log('\n报数规矩：两个都报，不许只报好看的那个。')

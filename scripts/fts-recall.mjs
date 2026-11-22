@@ -15,7 +15,10 @@ import { fileURLToPath } from 'node:url'
 
 const HERE = dirname(fileURLToPath(import.meta.url))
 const sea = process.argv[2] && !process.argv[2].startsWith('--') ? process.argv[2] : 'main'
-const Ns = [50, 100, 200, 500]
+// 2026-11-21：用法那行写着能传 N，可这里压根没读它——实测传 100 跟不传一模一样。
+// 传了就用传的那个，没传才跑这套默认档。
+const argN = Number(process.argv[3])
+const Ns = Number.isFinite(argN) && argN > 0 ? [Math.round(argN)] : [50, 100, 200, 500]
 
 const M = await import('file:///' + join(HERE, '..', 'lib', 'sqlite-mirror.js').replace(/\\/g, '/') + '?v=' + Date.now())
 const { DatabaseSync } = createRequire(import.meta.url)('node:sqlite')
@@ -52,5 +55,6 @@ for (const c of cases) {
 
 console.log(`海 ${sea} · 题 ${cases.length} · 索引候选里含答案的比例：`)
 for (const n of Ns) console.log(`  前 ${n} 条：${hits.get(n)}/${cases.length}（${((hits.get(n) / cases.length) * 100).toFixed(0)}%）`)
-console.log(`  一个都没进（哪怕前 500）：${none} 道`)
+// 传了 N 之后这句还写死「前 500」就成了假话，跟着最大那一档走。
+console.log(`  一个都没进（哪怕前 ${Math.max(...Ns)}）：${none} 道`)
 db.close()

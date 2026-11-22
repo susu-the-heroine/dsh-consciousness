@@ -16,6 +16,9 @@ const HERE = dirname(fileURLToPath(import.meta.url))
 const sea = process.argv[2] || 'main'
 const qfile = process.argv[3] || join(tmpdir(), 'bge-qvecs.json')
 const E = await import('file:///' + join(HERE, '..', 'lib', 'embed-onnx.js').replace(/\\/g, '/') + '?v=' + Date.now())
+// 2026-11-21：本地那一臂原来自己拼「标题 + 正文」，生产是「别名 + 标题 + 正文」再整段截四百。
+// 少了别名、截法也不同，比的就不是同一件事——这不是「谁准」，是「谁拼得不一样」。
+const V = await import('file:///' + join(HERE, '..', 'lib', 'vectors.js').replace(/\\/g, '/') + '?v=' + Date.now())
 
 const dir = join(homedir(), '.dsh', 'consciousness-seas', sea)
 const data = JSON.parse(readFileSync(join(dir, 'data.json'), 'utf8').replace(/^\uFEFF/, ''))
@@ -36,14 +39,12 @@ console.log('本地算全库向量…')
 const t0 = Date.now()
 const local = {}
 for (const p of points) {
-  local[String(p.id)] = await E.embedLocal(String(p.title || '') + ' ' + String(p.text || ''))
+  local[String(p.id)] = await E.embedLocal(V.embedTextOf(p))
 }
 console.log(`算完 ${points.length} 条，耗时 ${((Date.now() - t0) / 1000).toFixed(1)} 秒`)
 
-const top3 = (get) => points
-  .map((p) => ({ id: p.id, s: cos(get(p), null) }))
-  .sort((a, b) => b.s - a.s)
-  .slice(0, 3)
+// 2026-11-21：这里原先有个 top3 辅助函数，拿「向量」跟 null 算余弦、恒为零，
+// 而且全程没人调用——一段跑不通又没用的死代码。删掉，别留着骗下一次的我。
 
 let same = 0
 let n = 0

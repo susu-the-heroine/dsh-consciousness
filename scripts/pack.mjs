@@ -1,3 +1,4 @@
+import { NODE as _nodeBin } from './_node-bin.mjs'
 /**
  * 打发行包：白名单装，不整目录打。
  *
@@ -22,7 +23,7 @@ const VER = String(pkg.version || '0.0.0')
 
 // 防回归：先把本机路径扫一遍，命中就不许打包
 try {
-  execFileSync(process.execPath, [join(ROOT, 'scripts', 'check_personal_paths.mjs')], { stdio: 'inherit' })
+  execFileSync(_nodeBin, [join(ROOT, 'scripts', 'check_personal_paths.mjs')], { stdio: 'inherit' })
 } catch (e) {
   if (e && e.status === 1) {
     console.error('打包中止：发现硬编码本机路径')

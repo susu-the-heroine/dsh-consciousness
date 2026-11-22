@@ -2,7 +2,8 @@
  * 批量模拟 · 第一层（不需要模型）
  * ============================
  *
- * 造九百句"他"的话，一句一句**真的推进她一次**（走 lib/inject 那条真路），
+ * 造两百多句"他"的话（现数是二百六十三句，跑的时候自己数），
+ * 一句一句**真的推进她一次**（走 lib/inject 那条真路），
  * 每一句都记下：情绪、强度、八维、注入长度、有没有块丢了。
  * 然后按规则判"这一句她的反应对不对"，不对的全列出来。
  *
@@ -11,7 +12,7 @@
  *
  * 跑法：node scripts/sim-battery.mjs
  */
-import { existsSync, readFileSync, writeFileSync, copyFileSync, rmSync } from 'node:fs'
+import { existsSync, readFileSync, writeFileSync, copyFileSync, rmSync, mkdirSync } from 'node:fs'
 import { homedir } from 'node:os'
 import { join } from 'node:path'
 
@@ -138,8 +139,29 @@ if (typeof push !== 'function') {
   process.exit(1)
 }
 
-// 备份心脏，跑完还原——测试数据不许留在真状态里
-if (existsSync(HEART)) copyFileSync(HEART, BAK)
+// 备份心脏，跑完还原——测试数据不许留在真状态里。
+// 2026-11-21：光靠 try/finally 兜不住「进程被直接掐掉」——那时 finally 根本不跑，
+// 真心就停在跑了一半的状态。所以先备份，再把还原挂到退出、中断、未捕获异常三道口子上，
+// 而且只跑一次。另加一条：旁边已经有一份备份（上次崩了留下的）就别覆盖，那可能才是干净的。
+if (existsSync(HEART) && !existsSync(BAK)) copyFileSync(HEART, BAK)
+let restored = false
+function restoreHeart() {
+  if (restored) return
+  restored = true
+  try {
+    if (existsSync(BAK)) {
+      copyFileSync(BAK, HEART)
+      rmSync(BAK)
+    }
+  } catch {}
+}
+process.on('exit', restoreHeart)
+process.on('SIGINT', () => { restoreHeart(); process.exit(130) })
+process.on('uncaughtException', (e) => {
+  console.error('跑的时候炸了：' + String((e && e.message) || e))
+  restoreHeart()
+  process.exit(3)
+})
 
 const snap = () => {
   const h = defaultMood(readHeart())
@@ -161,29 +183,27 @@ const dist = (a, b) => {
 const battery = buildBattery()
 const rows = []
 
-for (const item of battery) {
-  const before = snap()
-  const inj = String(push('battery', item.text) || '')
-  const after = snap()
-  rows.push({
-    ...item,
-    before,
-    after,
-    move: Number(dist(before.dims, after.dims).toFixed(4)),
-    switched: before.mood !== after.mood,
-    injLen: inj.length,
-    missMoodBlock: !inj.includes('【她这会儿】'),
-    overCap: inj.length > 2200,
-  })
-}
-
-// 还原心脏
+// 2026-11-21：原来还原写在循环后面——中间任何一句抛错，真心脏就留在被改过的状态里，
+// 备份也还躺在旁边没人管。改成无论成败都还原。
 try {
-  if (existsSync(BAK)) {
-    copyFileSync(BAK, HEART)
-    rmSync(BAK)
+  for (const item of battery) {
+    const before = snap()
+    const inj = String(push('battery', item.text) || '')
+    const after = snap()
+    rows.push({
+      ...item,
+      before,
+      after,
+      move: Number(dist(before.dims, after.dims).toFixed(4)),
+      switched: before.mood !== after.mood,
+      injLen: inj.length,
+      missMoodBlock: !inj.includes('【她这会儿】'),
+      overCap: inj.length > 2200,
+    })
   }
-} catch {}
+} finally {
+  restoreHeart()
+}
 
 /** ---------------- 判：哪种反应算不对 ---------------- */
 
@@ -257,6 +277,9 @@ L.push('这一层只看"数值反应对不对"，不看"话说得像不像人"�
 L.push('像不像人要靠第二层：角色扮演对聊 + 裁判。')
 
 const outMd = join(homedir(), 'Desktop', '批量模拟_第一层.md')
+// 2026-11-21：沙箱里实测炸在这里——桌面目录不存在就直接 ENOENT，九百句白跑。
+// 写之前先把目录铺好。
+mkdirSync(join(homedir(), 'Desktop'), { recursive: true })
 writeFileSync(outMd, L.join('\n'), 'utf8')
 writeFileSync(join(homedir(), 'Desktop', '批量模拟_第一层.json'), JSON.stringify({ rows, problems }, null, 1), 'utf8')
 

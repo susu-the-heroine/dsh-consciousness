@@ -8,7 +8,7 @@
  *   node scripts/log-today.mjs "跑完一轮，两处红，改完复跑全绿"
  *   node scripts/log-today.mjs --title "2026-11-08 上午" "大段正文"
  */
-import { readFileSync, writeFileSync, existsSync } from 'node:fs'
+import { readFileSync, writeFileSync, existsSync, copyFileSync } from 'node:fs'
 import { join } from 'node:path'
 import { homedir } from 'node:os'
 
@@ -35,8 +35,19 @@ const d = new Date()
 const pad = (n) => String(n).padStart(2, '0')
 const stamp = `${d.getFullYear()}-${pad(d.getMonth() + 1)}-${pad(d.getDate())} ${pad(d.getHours())}:${pad(d.getMinutes())}`
 
-let text = existsSync(FILE) ? readFileSync(FILE, 'utf8') : '# 识海 · 今天做了什么\n'
+// 2026-11-21：原来整份覆盖写。这份档案是逐日攒的，写到一半崩了就是整份没；
+// 写之前先留一份上一版，写失败也别甩栈——说人话。
+const had = existsSync(FILE)
+let text = had ? readFileSync(FILE, 'utf8') : '# 识海 · 今天做了什么\n'
+if (had) { try { copyFileSync(FILE, FILE + '.bak') } catch {} }
 if (title) text = text.trimEnd() + `\n\n### ${title}（${stamp}）\n\n`
 text = text.trimEnd() + '\n\n' + `- ${stamp}　${body}` + '\n'
-writeFileSync(FILE, text, 'utf8')
+try {
+  writeFileSync(FILE, text, 'utf8')
+} catch (e) {
+  console.log('这份档案写不进去：' + FILE)
+  console.log(String((e && e.message) || e).slice(0, 120))
+  console.log('上一版在同一个目录、后缀 .bak，没丢。')
+  process.exit(2)
+}
 console.log(`记了：${title ? title + ' · ' : ''}${stamp}　${body}`)

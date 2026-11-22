@@ -28,7 +28,6 @@ function walk(dir, acc = []) {
 }
 
 let toolNames = new Set()
-let routePaths = new Set()
 let routeRegister = 0
 for (const f of walk(ROOT)) {
   let t = ''
@@ -47,7 +46,7 @@ if (existsSync(seaDir)) {
     if (!existsSync(p)) continue
     seas++
     try {
-      const d = JSON.parse(readFileSync(p, 'utf8'))
+      const d = JSON.parse(readFileSync(p, 'utf8').replace(/^\uFEFF/, ''))
       const pts = d.points || []
       points += pts.length
       alive += pts.filter((x) => !x.dead && !x.archived).length

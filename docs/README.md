@@ -6,7 +6,7 @@
 > revised facts are handled, how mood affects ordering, what was measured (latency,
 > recall, throughput at large scale), the failure modes found during development, and the
 > limits that remain. Written for whoever has to maintain it after me. The full text is in
-> Chinese; the install command is `dsh plugin --profile web add dsh-consciousness2`.
+> Chinese; the install command is `dsh plugin --profile desktop add dsh-consciousness2`.
 >
 > 全文中文。下面起是正文。
 

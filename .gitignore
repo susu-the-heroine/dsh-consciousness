@@ -8,3 +8,8 @@ memory.db
 assets/embed/*.onnx
 assets/embed/*.wasm
 assets/background.mp4
+consciousness-seas/
+_local-backups/
+*.bak-*
+*.tgz
+package.json.bak-*

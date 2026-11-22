@@ -1,7 +1,7 @@
 {
   "name": "dsh-consciousness2",
-  "version": "0.4.1",
-  "description": "识海：给 AI 用的长期记忆球，可写可看",
+  "version": "0.5.0",
+  "description": "零依赖的长期记忆：四万六千行、六十四项能力，22.9 MB 向量模型在包里。记事、记情绪、也记你怎么说话",
   "author": {
     "name": "苏苏侠",
     "url": "https://gitee.com/susu-the-heroine"
@@ -20,15 +20,38 @@
     "cordis.patch.yml",
     "selfupdate.mjs",
     "README.md",
+    "README.en.md",
     "INSTALL.md",
     "install.ps1",
-    "安装卡.docx",
+    "CHANGELOG.md",
     "assets",
     "LICENSE",
     "LICENSE.md",
     "COPYING",
     "lib",
-    "scripts/count.mjs"
+    "scripts/count.mjs",
+    "docs/安装-离线包.md",
+    "docs/自己验一遍.md",
+    "docs/项目说明.md",
+    "docs/发版清单.md",
+    "docs/上手-第一小时.md",
+    "docs/自查-检索不灵.md",
+    "docs/检索实测.md",
+    "docs/基准-竞品对比.md",
+    "bin",
+    "docs/README.en.md",
+    "docs/接口-本机HTTP.md",
+    "bin/sea-check.mjs",
+    "docs/自检-人味.md",
+    "docs/人味-通用30问.md",
+    "docs/装完怎么自己验.md",
+    "docs/人味-通用30问-生活版.md",
+    "lib/styleharvest.js",
+    "lib/style-store.js",
+    "lib/style-tick.js",
+    "lib/style-breaker.js",
+    "lib/self-note.js",
+    "lib/self-draft.js"
   ],
   "dsh": {
     "bundle": {
@@ -61,5 +84,9 @@
   ],
   "bugs": {
     "url": "https://github.com/susu-the-heroine/dsh-consciousness/issues"
+  },
+  "bin": {
+    "sea-api": "bin/sea-api.mjs",
+    "sea-check": "bin/sea-check.mjs"
   }
 }

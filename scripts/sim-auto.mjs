@@ -15,13 +15,23 @@
  *
  * 跑法：node scripts/sim-auto.mjs [条数]
  */
-import { copyFileSync, existsSync, rmSync, writeFileSync } from 'node:fs'
-import { homedir } from 'node:os'
+import { copyFileSync, existsSync, mkdirSync, mkdtempSync, rmSync, writeFileSync } from 'node:fs'
+import { homedir, tmpdir } from 'node:os'
 import { join } from 'node:path'
 
 const BASE = new URL('../', import.meta.url).href
-const HEART = join(homedir(), '.dsh', 'consciousness-heart.json')
-const BAK = HEART + '.auto-bak'
+
+// 2026-11-21：以前是「先备份真心跳、跑完拷回去」。实测拷不回去——
+// 跑五条之前四千一百三十二字节，跑完四千一百八十三；中途还有一次落盘落在还原之后。
+// 改成整段在临时家目录里跑：先照原样复制一份心跳过去，真那份从开到关都不碰。
+const REAL_HOME = homedir()   // 真家目录只用来读一次心跳、写报告
+const REAL_HEART = join(REAL_HOME, '.dsh', 'consciousness-heart.json')
+const TMP_HOME = mkdtempSync(join(tmpdir(), 'sim-auto-'))
+mkdirSync(join(TMP_HOME, '.dsh'), { recursive: true })
+if (existsSync(REAL_HEART)) copyFileSync(REAL_HEART, join(TMP_HOME, '.dsh', 'consciousness-heart.json'))
+process.env.USERPROFILE = TMP_HOME
+process.env.HOME = TMP_HOME
+const HEART = join(TMP_HOME, '.dsh', 'consciousness-heart.json')
 
 const { makeLines, selfCheck } = await import(BASE + 'lib/hevoice.js')
 const { humanness } = await import(BASE + 'lib/humanness.js')
@@ -53,11 +63,15 @@ mod.apply({
   sessionTitle: {},
 })
 
+// 2026-11-21：判据文字写 0.60/0.40、代码写 0.65/0.35——报告里给人数的是错的那套。
+// 现在只留一处定义，判定与文案都从这里取。
+const HARD_NEED = 0.65   // 真要走（我走了/以后不来了…）的强度下限
+const MILD_WEAK = 0.35   // 轻量离开低于这个记「偏弱」，不判死
+
 const push = globalThis.__dshInjectBuild
 if (typeof push !== 'function') { console.log('管线没挂上'); process.exit(1) }
 
 const N = Number(process.argv[2]) || 200
-if (existsSync(HEART)) copyFileSync(HEART, BAK)
 
 const snap = () => {
   const h = defaultMood(readHeart())
@@ -90,7 +104,8 @@ for (const item of lines) {
   })
 }
 
-try { if (existsSync(BAK)) { copyFileSync(BAK, HEART); rmSync(BAK) } } catch {}
+// 临时家目录整份删掉，真那份心跳从来没被写过
+try { rmSync(TMP_HOME, { recursive: true, force: true }) } catch {}
 
 /** 判 */
 const problems = []
@@ -104,12 +119,10 @@ for (const r of rows) {
     // 一个固定阈值扛不住，会把正常的判成失败。
     const hard = /我走了|以后不来了|别找我|最后一次|删了|不会再来看/.test(r.text)
     const s = r.after.strength
-    const hardNeed = 0.65
-    const mildWeak = 0.35   // 低于这个算"偏弱"，记下来但不判死
-    if (hard && s < hardNeed) {
-      problems.push({ t: '真要走却没慌', text: r.text, note: '强度 ' + s + '（该 ≥' + hardNeed + '）' })
-    } else if (!hard && s < mildWeak) {
-      weaks.push({ t: '轻量离开偏弱', text: r.text, note: '强度 ' + s + '（≥0.35 算过）' })
+    if (hard && s < HARD_NEED) {
+      problems.push({ t: '真要走却没慌', text: r.text, note: '强度 ' + s + '（该 ≥' + HARD_NEED + '）' })
+    } else if (!hard && s < MILD_WEAK) {
+      weaks.push({ t: '轻量离开偏弱', text: r.text, note: '强度 ' + s + '（≥' + MILD_WEAK + ' 算过）' })
     }
   }
   if (r.family === 'chat' && r.move > 0.15) {
@@ -130,7 +143,7 @@ L.push('- ' + sc.verdict)
 L.push('')
 L.push('## 她的反应')
 L.push('- 峰值强度 ' + peak.toFixed(2) + '（≥0.98 算压爆）')
-L.push('- 判据：真要走（我走了/以后不来了/别找我/最后一次/删了）要 ≥0.60；轻量离开（算了 不聊了）要 ≥0.40')
+L.push('- 判据：真要走（我走了/以后不来了/别找我/最后一次/删了）要 ≥' + HARD_NEED + '；轻量离开（算了 不聊了）低于 ' + MILD_WEAK + ' 记偏弱、不判死')
 L.push('- 问题 ' + problems.length + ' 条')
 for (const p of problems.slice(0, 40)) L.push('  - [' + p.t + '] 「' + p.text + '」→ ' + p.note)
 L.push('')
@@ -145,11 +158,16 @@ L.push(problems.length === 0
   ? '这批输入下她没被压爆、没丢块、离开的话都慌了。'
   : '有 ' + problems.length + ' 条要修，见上。')
 
-const out = join(homedir(), 'Desktop', '无人值守压测.md')
+// 报告仍然写他真桌面（留档给人看），但状态与心跳都在临时家目录里
+const out = join(REAL_HOME, 'Desktop', '无人值守压测.md')
+// 2026-11-21：桌面目录不存在时这一步直接抛 ENOENT，前面几十句全白跑（沙箱里实测）。
+mkdirSync(join(REAL_HOME, 'Desktop'), { recursive: true })
 writeFileSync(out, L.join('\n'), 'utf8')
-writeFileSync(join(homedir(), 'Desktop', '无人值守压测.json'), JSON.stringify({ rows, problems }, null, 1), 'utf8')
+writeFileSync(join(REAL_HOME, 'Desktop', '无人值守压测.json'), JSON.stringify({ rows, problems }, null, 1), 'utf8')
 
 console.log('跑了', rows.length, '句｜问题', problems.length, '条｜峰值', peak.toFixed(2))
+// 把用的是哪份心跳打出来——这份是真库的邻居，必须让人一眼看见它跑在临时目录里
+console.log('心跳用的是：', HEART)
 console.log('输入人味均分', sc.avg, '｜', sc.verdict)
 console.log('报告：', out)
 for (const p of problems.slice(0, 10)) console.log('  [' + p.t + ']', p.text, '→', p.note)

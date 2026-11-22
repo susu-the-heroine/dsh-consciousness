@@ -101,6 +101,9 @@ for (const g of GROUPS) {
 console.log('要打', rows.length, '句')
 
 const bad = []
+// 2026-11-21：请求失败被算进「不符」，于是服务没起时会报「不符 100%」——
+// 看着像判断口全错，其实是没连上。分开数。
+let errN = 0
 let done = 0
 for (const r of rows) {
   const q = encodeURIComponent(r.text)
@@ -110,13 +113,17 @@ for (const r of rows) {
     const got = judgeOf(j && j.judge && j.judge.react && j.judge.react.key)
     if (got !== r.want) bad.push({ said: r.text, want: r.want, got, key: j?.judge?.react?.key })
   } catch (e) {
+    errN++
     bad.push({ said: r.text, want: r.want, got: '请求失败' })
   }
   done++
   if (done % 40 === 0) console.log('  已打', done)
 }
 
-console.log('\n不符', bad.length, '/', rows.length, '＝', ((bad.length / rows.length) * 100).toFixed(1) + '%')
+const judged = rows.length - errN
+const wrong = bad.length - errN
+console.log('\n不符', wrong, '/', judged, '＝', ((judged ? (wrong / judged) * 100 : 0)).toFixed(1) + '%')
+if (errN) console.log('另有', errN, '句请求失败（服务没起或端口不对，这', errN, '句不算判断错）')
 const byWant = {}
 for (const b of bad) {
   const k = b.want + '→' + b.got

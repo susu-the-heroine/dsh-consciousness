@@ -47,7 +47,9 @@ console.log('写盘:', okWrite ? '成功' : '失败')
 for (const id of [1, 4, 14]) {
   const p = data.points.find((x) => Number(x.id) === id)
   if (!p) continue
-  console.log('  #' + id, p.title.slice(0, 18),
+  // 2026-11-21：没标题的条目在抽查处直接崩，而且是在写盘之后崩——
+  // 外面只看到一段栈，看不出「到底写没写」。缺标题的照实印空。
+  console.log('  #' + id, String(p.title || '(没标题)').slice(0, 18),
     '| source=' + p.source,
     '| conf=' + Number(p.confidence).toFixed(2),
     '| 要标吗=' + (U.shouldMark(p) ? '是' : '否'))

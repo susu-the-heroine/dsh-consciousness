@@ -7,7 +7,11 @@
  *
  * 只出候选，不合并。合并要人点头。
  *
- * 跑法：node scripts/find-duplicates.mjs [sea] [--apply]
+ * 跑法：node scripts/find-duplicates.mjs [sea]
+ *
+ * 2026-11-21：原来用法那行写着 [--apply]，可脚本里根本没有这个开关——
+ * 实测带着它跑，库还是二百二十六条，一条没合。它会让人以为「加了就会合」，
+ * 白等一场。合并是另一支（merge-dups.mjs），这里只写候选清单。
  */
 import { readFileSync, writeFileSync } from 'node:fs'
 import { homedir } from 'node:os'

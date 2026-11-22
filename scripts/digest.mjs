@@ -27,7 +27,12 @@ if (!src || !existsSync(src)) {
   process.exit(1)
 }
 
-const base = 'file:///C:/Users/Administrator/.dsh/plugin-src/dsh-consciousness/'
+// 2026-11-21：写死的本机绝对路径第三处（带用户名）。改成按本文件位置算，
+// 换个人装也能跑——这份是给人「嚼资料」用的，不是只给我自己嚼。
+import { dirname } from 'node:path'
+import { fileURLToPath } from 'node:url'
+
+const base = 'file:///' + join(dirname(fileURLToPath(import.meta.url)), '..').replace(/\\/g, '/') + '/'
 const store = await import(base + 'lib/store.js')
 
 const raw = readFileSync(src, 'utf8')
