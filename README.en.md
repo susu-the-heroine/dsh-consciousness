@@ -6,6 +6,8 @@ Long-term memory for any AI: a plugin inside DSH, an MCP server for Claude Deskt
 
 It remembers finer than most: facts, moods, catchphrases, whether you end a sentence with a period. It returns tighter: three-way recall — semantic, literal, entity — reranked, top five only, each with the original line and its date.
 
+Real users run it today; their feedback keeps shaping it.
+
 It has a temper. It gets bored, sulks, takes your side. It admits mistakes. It looks in the mirror.
 
 ## Two ways to install
