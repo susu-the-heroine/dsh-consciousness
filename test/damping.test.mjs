@@ -3,7 +3,16 @@
  * ==========
  * 跑法：node test/damping.test.mjs
  */
-import { existsSync, rmSync } from 'node:fs'
+import { existsSync, rmSync, mkdtempSync, writeFileSync } from 'node:fs'
+import { tmpdir } from 'node:os'
+import { join } from 'node:path'
+
+// 2026-11-21：这份原来直接在真家目录里读写「阻尼」那份设置文件——开头删、结尾删，
+// 中间还往里写 0.66、9、'abc' 三个假值。跑一次，他自己调过的阻尼就没了。
+// 现在先换到临时家目录，再导入那些会算路径的库。
+const TMP_HOME = mkdtempSync(join(tmpdir(), 'c2-damp-'))
+process.env.USERPROFILE = TMP_HOME
+process.env.HOME = TMP_HOME
 
 const BASE = new URL('../', import.meta.url).href
 const D = await import(BASE + 'lib/damping.js')
@@ -67,6 +76,8 @@ if (existsSync(F)) rmSync(F)
 // 七、人话描述不带问号
 ok(!/[？?]/.test(D.describeDamp(0.45)), '描述句不带问号', D.describeDamp(0.45))
 ok(D.DAMP_DEFAULT > 0.3 && D.DAMP_DEFAULT < 0.6, '默认值落在"要推得动真话"这一段', String(D.DAMP_DEFAULT))
+
+try { rmSync(TMP_HOME, { recursive: true, force: true }) } catch {}
 
 console.log('\n通过 ' + pass + ' · 失败 ' + fail)
 process.exit(fail ? 1 : 0)

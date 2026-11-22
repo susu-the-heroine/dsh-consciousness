@@ -1,0 +1,1452 @@
+ORIGINAL RESEARCH
+published: 12 March 2015
+doi: 10.3389/fpsyg.2015.00250
+Edited by:
+Marcela Pena, Catholic University of
+Chile, Chile
+Reviewed by:
+Pilar Prieto, Institució Catalana de
+Recerca i Estudis Avançats –
+Universitat Pompeu Fabra, Spain
+Asli Ozyurek, Radboud University
+Nijmegen, Netherlands
+*Correspondence:
+Kobin H. Kendrick, Language and
+Cognition Department, Max Planck
+Institute for Psycholinguistics,
+Wundtlaan 1, Nijmegen 6525 XD,
+Netherlands
+kobin.kendrick@mpi.nl
+Specialty section:
+This article was submitted to
+Language Sciences, a section of the
+journal Frontiers in Psychology
+Received: 16 October 2014
+Accepted: 18 February 2015
+Published: 12 March 2015
+Citation:
+Kendrick KH (2015) The intersection
+of turn-taking and repair: the timing of
+other-initiations of repair in
+conversation.
+Front. Psychol. 6:250.
+doi: 10.3389/fpsyg.2015.00250
+The intersection of turn-taking and
+repair: the timing of other-initiations
+of repair in conversation
+Kobin H. Kendrick *
+Language and Cognition Department, Max Planck Institute for Psycholinguistics, Nijmegen, Netherlands
+The transitions between turns at talk in conversation tend to occur quickly, with only a
+slight gap of ∼100–300 ms between them. This estimate of central tendency, however,
+hides a wealth of complex variation, as a number of factors, such as the type of
+turns involved, have been shown to inﬂuence the timing of turn transitions. This article
+considers one speciﬁc type of turn that does not conform to the statistical trend,
+namely turns that deal with troubles of speaking, hearing, and understanding, known as
+other-initiations of repair (OIR). The results of a quantitative analysis of 169 OIRs in face-
+to-face conversation reveal that the most frequent cases occur after gaps of ∼700 ms.
+Furthermore, OIRs that locate a source of trouble in a prior turn speciﬁcally tend to
+occur after shorter gaps than those that do not, and those that correct errors in a prior
+turn, while rare, tend to occur without delay. An analysis of the transitions before OIRs,
+using methods of conversation analysis, suggests that speakers use the extra time (i) to
+search for a late recognition of the problematic turn, (ii) to provide an opportunity for the
+speaker of the problematic turn to resolve the trouble independently, and (iii) to produce
+visual signals, such as facial gestures. In light of these results, it is argued that OIRs take
+priority over other turns at talk in conversation and therefore are not subject to the same
+rules and constraints that motivate fast turn transitions in general.
+Keywords: conversation analysis, turn-taking, timing, delay, other-initiated repair, self-repair, preference
+Introduction
+In conversation opportunities to participate are organized by a system of turn-taking (Sacksetal.,
+1974). The rules and constraints of the turn-taking system conspire to minimize the duration of
+transitions between turns. But not all transitions are in fact minimal. The transitions before turns
+that deal with troubles of speaking, hearing, and understanding, known as other-initiations of
+repair (OIRs; e.g., “what?,” “who?,” “what’d you mean?”), have been reported by Schegloﬀetal.
+(1977) to be longer than those before other turns. How much longer, however, remains an open
+question.Theﬁrstgoalofthisinvestigationisthereforetoverifyandreﬁnethisobservationthough
+aquantitativeanalysisofthetimingofOIR,usingresponsestopolarquestionasapointofcompar-
+ison. Schegloﬀetal.(1977) argue that next speakers withhold OIRs to provide an opportunity for
+current speakers to resolve the trouble via self-repair. Whether this exhausts the possible explana-
+tions for delay before OIR is unclear, however. The second goal of the investigation is therefore to
+lookinsidethetransition spacesbeforeOIRs,usingconversation-analytic methodstodiscoverand
+describewhatspeakersusethemtoaccomplish.Asbackground tothis,Ibeginwithadiscussionof
+thetiming ofturn-taking ingeneralandthetiming ofOIRmorespeciﬁcally.
+Frontiers in Psychology | www.frontiersin.org 1 March 2015 | Volume 6 | Article 250
+Kendrick Timing of other-initiations of repair
+The Timing of Turn-Taking
+Previousresearchonthetimingofturn-takinghasshownthatthe
+transitions between turns in conversation most frequently occur
+with only minimal gaps and overlaps. First documented system-
+atically in a series of meticulous conversation-analytic studies
+(Jeﬀerson, 1973, 1983a,b, 1984, 1986; Sacksetal., 1974), the tim-
+ing of transitions between turns has subsequently been investi-
+gatedprimarilythroughquantitativemethods.Ingeneral,quanti-
+tativestudieshavetakenoneoftwoapproaches,eitherexamining
+all transitions within a corpus, irrespective of turn type (e.g.,
+WilsonandZimmerman, 1986; HeldnerandEdlund, 2010), or
+analyzing just one type of transition, that between questions and
+answers (e.g., Stiversetal., 2009; Kendrick andTorreira, 2014).
+A comparison between the timing of transitions between ques-
+tions and answer and that of a random sample of transitions in
+a corpus of Dutch conversation revealed no statistically signiﬁ-
+cant diﬀerence (Stiversetal.,2009). Thissuggests thatthe timing
+of question–answer sequences can be used as a proxy for a typ-
+ical turn transition in conversation. The results of these studies
+generally converge, indicating that the most frequent transitions
+between turns occur with a slight gap (cf. Jeﬀerson, 1984, p. 18),
+ontheorderof100–300ms.
+This estimate of central tendency has clear implications for
+psycholinguistic models of turn-taking. As Levinson (2013)
+points out, psycholinguistic research has shown that speakers
+require aminimum of 600 msto plan evenasingle word (e.g., in
+apicture-namingtask;IndefreyandLevelt,2004;Indefrey,2011).
+Thus the average gap between turns does not provide enough
+time for a speaker to prepare evena simple next turn. Therefore,
+Levinsonargues,nextspeakers mustanticipate the endsofturns,
+andbegintoplanthenextturnwellbeforethecurrentoneiscom-
+plete,infullagreementwithargumentsbySacksetal.(1974)and
+Schegloﬀ(1987).
+But an estimate of central tendency is by deﬁnition a simpli-
+ﬁcation, a single value that ideally represents a more complex
+distribution. Research has also examined sources of complex
+and systematic variation in the timing of turn-taking, especially
+in question–answer sequences. The language and culture of the
+speakers, the deployment of gaze, and the type and modality
+of the response all have been shown to inﬂuence the timing of
+responses to polar questions (Stiversetal., 2009). Question type
+is also relevant; responses to polar questions are generally faster
+than responsestocontent questions (Strömbergsson etal.,2013).
+Studiesthatexplorevariationinthetimingofturntransitions are
+important because they reminds us of the diversity of turn types
+andhenceturn transitions in conversation.
+The Timing of Other-Initiations
+At least one type of turn that does not conform to global gener-
+alizations about the timing of turn-taking has been identiﬁed in
+theconversation-analytic literature.Turnsthatdealwithtroubles
+of hearing or understanding prior turns (e.g., “what?,” “who?,”
+“what’d you mean?”), referred to as OIRs, have been reported
+to be systematically withheld (Schegloﬀetal., 1977). The transi-
+tion between the turn that contains the trouble (e.g., an error or
+a word the next speaker does not understand), referred to as the
+trouble-source turn, and the other-initiation of repair has been
+observedtobelongerthanotherturntransitions (Schegloﬀetal.,
+1977;Robinson,2006).
+Based on a systematic qualitative analysis, Schegloﬀetal.
+(1977, p. 374) observed that OIRs “regularly are withheld” by
+speakers and therefore “occur after a slight gap.” Although the
+report includes numerous cases of OIRs that occur after a slight
+gap(andmanythatdonot),itleavesbasicquestionsunanswered,
+suchasthefrequencywithwhichspeakerswithholdOIRsandthe
+durations of thegapsthat precedethem.
+A second report of the phenomenon, made in passing
+by Robinson (2006, p. 153), contains more detailed informa-
+tion. Based on 32 cases of OIR in telephone conversations,
+Robinson observed that the median delay was between 0.1 and
+0.2s.Thisﬁndingisnotconclusive,however,fortworeasons.
+The ﬁrst concerns the method of timing. Rather than mea-
+sure the duration of gaps and pauses objectively (e.g., using
+a computer), conversation analysts typically employ a relative
+method of timing, one that reﬂects the analyst’s perception
+of time (HepburnandBolden, 2013), a method that has been
+shown to overestimate objectively measured time systematically
+(Roberts andRobinson, 2004;Kendrick andTorreira, 2014).The
+second issue is the lack of an explicit comparison between the
+timing of OIRs and the timing of other turns in the same con-
+versations. To conclude that OIRs are delayed systematically,
+one must establish not only that gaps before them are long,
+but more importantly that they are longer than gaps before
+other turns. Thus while Robinson’s ﬁnding supports the claim
+by Schegloﬀetal. (1977), the frequency with which speakers do
+or do not withhold OIRs and the precise timing of the gaps that
+precede themremainopenquestions.
+The Practices of Other-Initiation
+The observation of systematic variation in the timing of turn
+types(e.g.,responses toquestions, noted above)points to further
+questions. Is variation in the timing of OIRs also systematic? Do
+diﬀerent types of OIRs, like diﬀerent types of responses to ques-
+tions, tendtooccur after relativelyshorter orlonger transitions?
+The inventory of OIR practices in English is relatively well
+described (see Schegloﬀetal., 1977; Benjamin, 2013; Kitzinger,
+2013; Kendrick, inpress). A basic distinction is made between
+OIRs that pinpoint a speciﬁc source of trouble in a prior turn
+and those that do not. Open OIRs such as “what?” or “sorry?”
+indicate that the speaker has encountered a trouble but do not
+specify a particular source (Drew, 1997). In contrast, OIRs that
+repeat all or part of a prior turn (e.g., “they’re what?”) or request
+category-speciﬁc information (e.g., “who?”), among other pos-
+sibilities, speciﬁcally locate the source of the trouble. According
+to Schegloﬀetal. (1977), there is a preference for more speciﬁc
+(‘stronger’) over less speciﬁc (‘weaker’) OIRs, such that speakers
+should, for example,use a speciﬁc OIR over an open OIR if pos-
+sible (cf. Svennevig, 2008). This raises the question of whether
+the timing of open and speciﬁc OIRs diﬀers systematically and
+whether it provides evidence for or against the preference for
+speciﬁcity.
+A further distinction is whether an OIR constitutes a cor-
+rection or not (Schegloﬀetal., 1977; Jeﬀerson, 1987). An OIR
+can proﬀer a replacement of a trouble source as a candidate
+Frontiers in Psychology | www.frontiersin.org 2 March 2015 | Volume 6 | Article 250
+Kendrick Timing of other-initiations of repair
+solution to a trouble of hearing or understanding (e.g., A: “she
+got so mad.” B: “Pam’s mother?” A: “Mm hm.”). Or it can
+assert a replacement as correction of an error (e.g., A: “she’s
+eating the Butterworth diet.” B: “Butterﬁeld
+.” A: “Butterﬁeld.”).
+Correction by someone other than the speaker of the error,
+known as other-correction, has been argued to be a dispreferred
+alternativetoself-correction. Schegloﬀetal.(1977)observedthat
+other-corrections tended to exhibit special marking and special
+positioning (e.g., the qualiﬁcation of epistemic stance or delay
+within a turn or sequence) that revealed them to be dispreferred
+actions. But counter-examples to this generalization are not
+uncommon (see, e.g., Jeﬀerson, 1987,p.87),andarecentsurvey
+of other-correction in Finnish failed to identify special markings
+ofthetypethatSchegloﬀetal.described(HaakanaandKurhila,
+2009). What, then, of the timing of other-corrections? Are the
+transitions before other-corrections longer than other turns, as
+their putative statusasdispreferred actions predicts?
+The Motivations for Delay Before
+Other-Initiations
+A ﬁnal set of questions concerns the motivations for and conse-
+quences of delay before OIR. Conversation analysts have argued
+that the timing of OIRs has a socio-interactional basis. A possi-
+blenextspeakerwhoencountersaproblematicturnwithholdsan
+OIR in order to provide the current speaker with an opportunity
+to resolve the trouble on his or her own (Schegloﬀetal., 1977).
+If a next speaker does not understand a question, for example,
+he or she might not immediately reply with “what’d you mean?”
+but might ﬁrst wait for a moment to give the current speaker
+an opportunity to repair the question independently, using prac-
+tices of self-initiated repair. In this way, the self-initiation of
+repair takes precedence over the other-initiation of repair, one
+aspect of a principle known as the preference for self-correction
+(Schegloﬀetal., 1977). The timing of the transition between a
+trouble-source turn and an other-initiation of repair is thus seen
+as a locus for the management of basic social relations, between
+selfandother.
+But a priori one might propose complementary or alternative
+explanations for the phenomenon of delay before OIR. The pri-
+vate processes that speakers necessarily engage in to hear and
+understand a turn at talk occur in real time and, just like other
+actions, take time to complete. The high frequency of transitions
+with minimal gaps suggests that these processes veryoften occur
+quickly. Butmight theynottakelongerundercertainconditions,
+say,whena nextspeakerhasfailedtohear,orunderstand a prior
+turn? Is the delay before an OIR for the beneﬁt of the speaker of
+the trouble, to provide an opportunity for self-initiated repair, or
+is it (also) for the beneﬁt of the recipient of the trouble, to allow
+asearchforandapossiblerecoveryofahearingandunderstand-
+ing of the turn that may permit the sequence to move forward
+without repair?
+One might also look to the embodied actions of the partici-
+pants for an explanation. The private processes that participants
+engage in surely take time to complete, but so too do the physi-
+cal actions they perform. A withdrawal of gaze from the speaker
+of a trouble-source turn, a rotation of the head and body to
+face a trouble-source speaker, a meaningful deployment of facial
+musclesinto a gesture ofpuzzlement—embodied actions suchas
+these all take time to produce. Through the ﬁlter of a text tran-
+script, a silence between turns at talk, whether long, or short,
+can look like an absence of action. But the long tradition of mul-
+timodal conversation analysis (Goodwin, 1980, 1981; Schegloﬀ,
+1998; Lerner, 2003; Mondada, 2006, 2007; Rossano, 2012;inter
+alia) has shown that action does not necessarily end with a turn
+attalk.What,then,dospeakers do inthetransition spacesbefore
+OIR?
+The Current Investigation
+The current investigation combines conversation-analytic and
+quantitativemethodstoaddressthefollowingquestionsaboutthe
+timing ofOIR.
+(1) Are the transition spaces before OIRs systematically longer
+than those before other turn types, such as answers to ques-
+tions?
+(2) Are the transition spaces before some types of OIRs system-
+atically longer thanthose beforeother types?
+(3) What are the motivations for the expansion of transition
+spaces before OIRs? That is, what do speakers use the extra
+timetoaccomplish?
+The investigation uses conversation analysis to identify and
+analyze OIRs and question–answer sequences, as well as to dis-
+cover and describe a number of uses that speakers have for
+the expanded transition spaces before OIRs. The measurements
+of transition spaces and the comparisons of the distributions
+aredonequantitatively.AttheendofthearticleIreturnto
+the questions of the motivations for and consequences of delay
+beforeOIRsandconsidertherelationshipbetweenrepairandthe
+turn-taking system.
+Materials and Methods
+Data
+Thedatafortheinvestigationcamefromvideo-recordingsofnat-
+urallyoccurringEnglishconversationbetweenfriendsandfamily
+members engagedin a variety of activities (e.g., chatting, playing
+games,preparingfood,eatingdinner).Thecorpusconsistedof19
+recordings, with atotal duration of9h and20min, andincluded
+native speakers of English from the U.S., Canada, and the U.K.
+Informed consent wasobtained from allparticipants.
+Identiﬁcation of OIR
+All cases of OIR were systematically identiﬁed in the corpus,
+using the methods of conversation analysis and drawing on
+previous research on OIR (Schegloﬀetal., 1977; Jeﬀerson,
+1987; Schegloﬀ, 1992; Robinson, 2006; Egbert etal., 2009;
+Robinson andKevoe-Feldman, 2010; BenjaminandWalker,
+2013). OIRs were distinguished from formally similar practices
+that do not initiate repair as an action (see Schegloﬀ, 1997,for
+examples). It is well known that the practices of OIR can be
+used to display surprise or ritualized disbelief (Selting, 1988;
+Wilkinson andKitzinger, 2006).Inthecaseofrepeatsofa
+Frontiers in Psychology | www.frontiersin.org 3 March 2015 | Volume 6 | Article 250
+Kendrick Timing of other-initiations of repair
+trouble source, a clear boundary between such cases and those
+that additionally or alternatively display surprise or disbelief has
+notyetbeenidentiﬁedintheliterature.Suchcasesweretherefore
+included in the investigation. The types of OIRs identiﬁed
+in the corpus are given in Table 1 along with examples (for
+a more detailed report of the distribution of OIR in English
+conversation, seeKendrick, inpress). A total of 222 cases of OIR
+wereidentiﬁed,for anaveragerateof oneevery2.5min.
+Open and Speciﬁc OIRs
+Other-initiations of repair diﬀer in the speciﬁcity with which
+they locate the source oftrouble inthe prior talk (Schegloﬀetal.,
+1977).OpenOIRsindicatethatthespeakerhasencounteredtrou-
+ble with the prior talk but they do not specify a particular source
+(e.g., “what?”; seeDrew, 1997; Benjamin, 2013). In contrast, spe-
+ciﬁc OIRs locate a particular component in the prior talk as the
+trouble source (e.g., “who?” or “she did what?”). The practices
+listed Table 1,otherthanthosedesignatedasopen,wereanalyzed
+asspeciﬁc.
+Candidate Repair Solutions and
+Other-Corrections
+Other-initiations of repair that include possible solutions to the
+trouble diﬀer in whether the solution is oﬀered as a candidate
+replacement of the trouble source or asserted as a correction
+of the trouble source. These two alternatives are illustrated in
+Extract (1)andExtract (2), respectively.
+(1) Virginia
+1 Wes: ◦Here you go◦
+2 Bet: (But) she[: got so: ma:d.
+3 Vir: [◦ Thank you◦
+4 (3.2)
+5 Mom: -> Pam’s mother?
+6 Bet: Mm: hm
+(2) RCE09
+1 Ben: She’s ea(h)ting the Butterwo(h)rth
+2 di[e(h)t.
+3 Jam: -> [Bu(h)tterfie
+(h)ld.
+4 (0.9)
+5 Ben: Butterfield.
+In Extract (1) the other-initiation of repair “Pam’s mother?”
+(line 5) is a candidate solution to the speaker’s trouble with the
+reference “she” (line 2). The candidate is produced with rising
+intonation, which qualiﬁes the speaker’s epistemic stance. The
+speaker thereby oﬀers this as a possible, but not deﬁnitive, solu-
+tion to the trouble. In contrast, the other-initiation of repair in
+Extract (2) is produced with falling intonation and an accent
+on the third syllable, through which the speaker asserts it as a
+correction of the trouble source. The cases also diﬀer in the epis-
+temic status (Heritage, 2012)ofthespeakers.InExtract(1),the
+mother has only indirect knowledge of the event reported in the
+trouble-source turn,whereasthespeaker inExtract (2) hasdirect
+knowledgeof thecorrect name.
+This practice of other-correction has also been examined by
+Jeﬀerson (1987) under the rubric of ‘exposed correction,’ an
+exampleofwhich occurs inExtract (3).
+(3) Jefferson (1987:87)
+1 Pat: the Black Muslims are certainly more
+2 provocative than the Black M
+uslims
+3 ever were.
+4 Jo: -> The Black Pan
+thers.
+5 Pat: The Black Pan
+thers.
+To be analyzed as an other-correction, the OIR had to (i)
+include a possible replacement for the trouble source, (ii) use
+prosodic resources (an accented syllable and ﬁnal falling into-
+nation) to assert the replacement as deﬁnitive; and (iii) make
+self-correction (not conﬁrmation) conditionally relevant as a
+response.
+OIRs in and After Next Position
+Although the majority of OIRs occur directly after the turn
+at talk containing the trouble source, a minority of cases
+occur after this next-turn position (Schegloﬀ, 2000; Wong,
+2000; Bolden, 2009; Benjamin, 2012). A distinction between
+these two positions is crucial for the present investigation
+because only OIRs in next position to the turn-constructional
+unit (TCU; Sacksetal., 1974) that contains the trouble-source
+result in a transition that consist of a gap or overlap,
+without intervening talk. The OIR in Extract (4) illustrates this
+point.
+(4) RCE01 09:56
+1 Liz: I don’t- (0.8) I don’t know whether to
+2 get a maxi dress for my birthday.
+3 (0.5)
+4 Liz: I’ve got one and it[’s k- just
+TABLE 1 | Frequency and proportion of other-initiations of repair in a contiguous next position to trouble-source turn-constructional units (TCUs).
+Type Example Frequency Proportion %
+Open what?, huh?, pardon?, what’s that?, among others 53 31.0
+Interrogative words who?, when?, where?, and what with falling intonation 11 6.4
+Repeats + interrogative word A: A plastic bag if you could. B: Awhat?A: Plastic bag. 19 11.1
+Full repeats A: And we have things to ﬁnish. B: We have things to ﬁnish? A: That we started earlier. 95.3
+Partial repeats A: We could start a little school together. B: Little school? A: Yeah, like Angel was gonna do. 20 11.7
+Candidate understandings A: Nan’s birthday on Sunday. B: Norms? A: No, Shirley. 42 24.6
+Corrections A: Transforming Investments B: Transl a
+ ting Investments. Sorry. A: Transl a
+ ting Investments. 12 7.0
+Other I don’t know who that person is, who’s the guy, among others 5 2.9
+Frontiers in Psychology | www.frontiersin.org 4 March 2015 | Volume 6 | Article 250
+Kendrick Timing of other-initiations of repair
+5 Cha: -> [What’s maxi.=Long?
+6 Liz: Really long, yeah.
+The other-initiation “What’s maxi.=Long?” (line 5) does not
+occur directly after the TCU that contains the trouble source
+“maxi” (line 2), but rather occurs after the speaker of the trou-
+ble source extends herturn with anadditional TCU(line 4). The
+duration oftimebetweenthe endof thetrouble-source TCU and
+the beginning of the OIR does not constitute a inter-turn gap
+because it includes intervening talk which aﬀects the timing of
+the OIR.
+All cases of OIR were therefore analyzed for position, fol-
+lowing Schegloﬀ (2000), with the requirement that the OIR
+be in a contiguous next position to the TCU containing the
+trouble source. The boundaries of TCUs were identiﬁed as
+points of syntactic, intonational, and pragmatic completion
+(Ford andThompson,1996).Atotalof51cases(23%ofallcases)
+did not occur in next position under this deﬁnition and were
+excludedfrom the analysisoftiming.
+Identiﬁcation of Polar Questions
+In addition toOIRs, responses topolar questions were alsoiden-
+tiﬁed in the corpus for comparison. For each recording, a num-
+ber of polar questions equal to the number of other-initiations
+was identiﬁed, starting at the beginning of the recording. For
+example, if 10 other-initiations were identiﬁed in a recording,
+the ﬁrst 10 polar question sequences were then taken from the
+same recording. Polar questions were deﬁned functionally to
+include both syntactic questions (i.e., those with verb inversion)
+and epistemic questions (i.e., statements about information in
+the recipient’s epistemic domain, so-called B-event statements;
+LabovandFanshel,1977).
+Measurements and Statistics
+The duration of turn transitions were measured from the
+end of the TCU containing the trouble source to the begin-
+ning of the other-initiation of repair, excluding audible in-
+breaths. Measurements were made manually in ELAN 4.3.3
+(Wittenburg etal., 2006) by listening to the audio recording and
+inspecting the waveform. Two extreme outliers with gap dura-
+tions greater than 3000 ms were excluded from the quantita-
+tive analysis, resulting in a ﬁnal set of 169 cases. Because the
+distributions of gap durations were found to deviate substan-
+tially from a normal distribution (with skewness and kurtosis
+values of more than twice their respective standard errors), non-
+parametric signiﬁcance tests were used. All statistical tests were
+performed in R 2.14.0 (R DevelopmentCoreTeam, 2013)with
+the wilcox_test() function in the coin package (Hothorn etal.,
+2006).
+Results
+The Timing of Other-Initiations of Repair
+The timing of an other-initiation of repair is the duration of the
+transition space, measured in milliseconds, between the end of
+the trouble-source TCU and beginning of the OIR (see Materials
+and Methods). In Extract (5), the OIR at line 4 occurs after a
+gap of 514 ms. Hereafter the transition spaces before OIRs are
+reported in milliseconds in all transcripts, whereas others are
+given as 10ths of seconds, the standard convention in conversa-
+tionanalysis.
+(5) Virginia
+1 Bet: They said that Phillips got um (0.5) knee:
+2 wa:lking dru::nk at the reception.
+3-> (514 ms)
+4 Mom: Who:?
+5 Bet: Phillips,
+The density plots in this section present the durations of
+the transitions between trouble-source TCUs and OIRs along
+the x-axis. Positive values constitute gaps and negative values
+are overlaps. The density curves represents estimates of the fre-
+quency of cases with a given transition time. The peak of the
+curve corresponds to an estimate of the mode of the distribu-
+tion.
+A comparison between the timing of OIRs and responses
+to polar questions is presented ﬁrst (see OIRs and Responses
+to Polar Questions), after which two comparisons within OIR
+types are presented: open versus speciﬁc (see Open and Speciﬁc
+OIRs) and corrections versus non-corrections (see Corrections
+andNon-Corrections).
+OIRs and Responses to Polar Questions
+Figure 1 presents a density plot of the gap durations for OIRs
+(n = 169) and responses to polar questions (PRs; n = 169). An
+inspectionofthetwodistributionsrevealsthatOIRstendtooccur
+after signiﬁcantly longer gaps that PRs. The mode gap duration
+forOIRsis ∼700ms,whereasthemodeforPRsisroughly300ms.
+A Wilcoxon Mann–Whitney Rank Sum Test conﬁrms that the
+distribution of OIRs tends to have larger values than that of PRs
+(Z = 6.5228, p < 0.001, r = 0.5). Additional descriptive statistics
+aregivenin Table 2.
+TheanalysisofthetimingofOIRsingeneralsupportsthecon-
+clusion that OIRs systematically occur after long gaps. The most
+frequent OIRs do not occur within the same timing window the
+most frequent PRs, between 0 and 500 ms, but few OIRs occur
+after1500ms.Indeed,ifoneassumesthatthetimingofPRsserves
+as a good proxy for a normal turn transition, as has been argued
+(Stivers etal., 2009),thentheanalysissuggeststhatinthisdata
+OIRstypicallyoccurafter400–500msofdelaybeyondthe300ms
+duration of anormaltransition space.
+Open and Speciﬁc OIRs
+Thedensityplot in Figure 2 shows the distributions of gapdura-
+tions for open (n = 53) and speciﬁc OIRs (n = 116) in next
+position. The density curves indicate that the most frequent gap
+duration for open OIRs is between 700 and 800 ms, in contrast
+to approximately 400 ms for speciﬁc OIRs. A Wilcoxon Mann–
+WhitneyRankSumTestindicatesthatthetwodistributionsdiﬀer
+signiﬁcantly (Z = 1.97, p < 0.05, r = 0.15). These results suggest
+that on averagespeakers of open OIRs delay ∼300–400 ms more
+than speakers ofspeciﬁc OIRs.
+Frontiers in Psychology | www.frontiersin.org 5 March 2015 | Volume 6 | Article 250
+Kendrick Timing of other-initiations of repair
+FIGURE 1 | Gap durations (in milliseconds) for other-initiations of repair (OIRs) and responses to polar questions.
+TABLE 2 | Descriptive statistics (mean, standard deviation, and median in
+milliseconds) for gap durations by type.
+Mean (SD) Median N
+Responses to polar questions 397 (475) 339 169
+All OIRs 760 (532) 721 169
+Speciﬁc OIRs 726 (568) 633 116
+Open OIRs 835 (439) 787 53
+Corrections 412 (422) 274 12
+Non-corrections 787 (530) 744 157
+Corrections and Non-Corrections
+The frequency of other-corrections in the corpus was low, with
+only 14 cases in total and only 12 cases in next position to
+the trouble-source TCU (see Materials and Methods). Figure 3
+presents a density plot for the gap durations of other-corrections
+(n = 12)andallotherOIRs(n = 157)innextposition.Aninspec-
+tionofthedensityplotrevealsthat,although thenumberofcases
+in the collection is small, other-corrections tend to occur ear-
+lier than OIRs in general. The most frequent gap duration for
+other-corrections isbetween200and300mswhereasotherOIRs
+most frequently occur after ∼700–800 ms. A Wilcoxon Mann–
+Whitney Rank Sum Test indicates that other-corrections tend to
+haveshortergapdurations(Z =−2.64, p < 0.01, r = 0.20).These
+results suggest that in contrast to the bulk of other-initiations,
+other-corrections do not occur after signiﬁcant delay and in fact
+occur within a similar temporal window as responses to polar
+questions.
+What do Speakers Use the Transition
+Spaces Before OIRs to Accomplish?
+The analysis of the timing of OIRs revealed that the most fre-
+quentcasesoccuraftergapsof ∼700ms,incontrastto300msfor
+responsestopolarquestions.Thisobservationraisesthequestion
+of what participants use this extra time to accomplish. A qualita-
+tive analysis of the transition spaces before OIRs points to three
+possible answers. The speaker of an OIR, before its production,
+can:
+(1) perform a search for late recognition of the trouble-source
+turn,
+(2) provide anopportunity for the speaker of the trouble-source
+turntoself-initiate repair, and
+(3) produce visual signals, such as facial gestures, that display a
+lack of recognition and thereby occasion—if not initiate—
+self-repair.
+As the analyses in this section make clear, these possibilities
+arenot necessarilymutuallyexclusive.
+Searching for Late Recognition
+In order to produce a relevant next turn, a next speaker must
+hear, and understand the current turn. The fact that next turns
+frequently take only 100–300 ms to initiate suggests that the
+procedure next speakers engage in to recognize the current
+turn’s meaning and action typically occurs quickly, enabling
+a minimization of gaps between turns (Levinson, 2013). But
+recognition does not always occur so quickly and can in fact
+come late, even after a next speaker displays a lack of recog-
+nition. This can be seen in the following cases, in which the
+recognition of a prior turn occurs after the next speaker initiates
+repair.
+(6) RCE06
+1 Alex: Did you like buy some lemonade earlier,
+2 (937 ms)
+3 Rob: -> Buy some what,=<lemona
+de,
+4 Alex: (Yeah)
+5 Rob: Yeah yeah yeah.
+Frontiers in Psychology | www.frontiersin.org 6 March 2015 | Volume 6 | Article 250
+Kendrick Timing of other-initiations of repair
+FIGURE 2 | Gap durations (in milliseconds) for open and speciﬁc OIRs.
+FIGURE 3 | Gap durations (in milliseconds) for corrections and all other OIRs (non-corrections).
+(7) Virginia
+1 Wes: (Now) you taught ’er howda dance, didn’ you?
+2 (1236 ms)
+3 Vir: -> Huh? [ (.) [Yeah.
+4 Wes: [Weren[’t you teachin’ er’ some new
+5 steps the other day?
+6 Vir: Y:eah.
+In the ﬁrst case, Rob apparently fails to hear a word in Alex’s
+question,evidencedbyhisOIR(“buysomewhat,”),whichlocates
+“lemonade”asatroublesourceandmakesrepetition ofthisword
+byAlexconditionallyrelevant.ButbeforeAlexresponds,Robini-
+tiatesself-repair,producingtheverywordheclaimed,byvirtueof
+hisOIR,nottohaveheard.Thewordisproducedwithaprosodic
+practice known as a left push, noted by the “<”inthetranscript,
+Frontiers in Psychology | www.frontiersin.org 7 March 2015 | Volume 6 | Article 250
+Kendrick Timing of other-initiations of repair
+through which the speaker interdicts the relevance of transition
+at the completion of a prior TCU (cf. LocalandWalker, 2004).
+Here the left-push is hearable as a ‘last millisecond’ eﬀort to get
+the word into the turn before the other responds. In the second
+case,VirginiaapparentlyfailstohearWes’squestionandinitiates
+repair with “Huh?.”Then,a momentlater,after a micro pause of
+140ms,sheanswersthequestioninoverlapwithWes’sself-repair,
+claimingineﬀecttohaveheardthequestion,atleastwellenough
+to conﬁrm it. These cases suggest that in addition to a proce-
+durethatresultsin‘immediate’recognitionofacurrentturn,next
+speakers also have available a procedure that can result in ‘late’
+recognition.
+Although a search for late recognition is primarily a pri-
+vate process, observable behaviors, such a momentary with-
+drawal of gaze in the transition space, may reﬂect this pro-
+cess and thereby render it public. Psycholinguistic research has
+shown that speakers often avert their gaze when asked questions
+and that this in turn facilitates remembering and speech plan-
+ning (Glenberg etal., 1998; Doherty-SneddonandPhelps, 2005;
+Markson andPaterson,2009).Thusthewithdrawalofgazeinthe
+transitionspacebeforearelevantnextturnmaybeapublicexpo-
+nent of a private search for recognition, as is arguably the case
+in the next extract. Here, after Heather initiates a new sequence,
+assessing a taxi driver that she evidently hired the night before,
+Kelly looks away from Heather in an expanded transition space,
+apparently engagedin asearch for recognition.
+(8) RCE28
+1 Hea: That taxi driver last night was really
+2 friendly.
+3-> (1346 ms) ((see Figure 4))
+4 Kel: What?
+5 (0.6)
+6 Hea: My taxi driver was really friendly.
+7 (0.4)
+8 Kel: O
+H, yea
+[h.
+9 Hea: [yesterday.
+10 (1.5)
+11 Kel: I was like she took a while.
+The reference to the taxi driver in Heather’s turn includes
+a demonstrative (“that taxi driver”), signaling to Kelly that she
+should be able to recognize the reference (Himmelmann, 1996).
+At the completion of Heather’s turn, Kelly averts her gaze from
+Heather and holds this position for ∼1100 ms (see Figure 4).
+The timing of Kelly’s look away coincides with the recognizable
+completion of Heather’s turn and thereby shows that Kelly has
+heard the turn, at least well enough to identify a transition rel-
+evance place (Sacksetal., 1974;cf.HollerandKendrick, 2015).
+The look away also shows that Kelly has begun to act at just
+theplacewhereanactionbyherisrelevant.Inthisway,the
+withdrawal of gaze at a transition relevance place can be seen
+as preparatory to an incipient response. In this case, however,
+Kelly does not produce a relevant response, but rather returns
+her gaze to Heather and initiates repair. One plausible account
+of this behavior is that the withdrawal of gaze reﬂects a search
+forrecognition, onethatevidentlyfails.Asearchforlaterecogni-
+tion is thus one possible use that a next speaker can make of an
+FIGURE 4 | Kelly looks away at the completion of the trouble-source
+turn and holds this position for ∼1100 ms (top). She then returns her
+gaze to Heather for ∼250 ms before she produces the OIR (bottom).
+expanded transition space, one which, if successful, may obviate
+theneedforrepair.
+Providing an Opportunity for Self-Initiated Repair
+An expansion of the transition space, whether the result of
+a search for recognition or not, has as an interactional aﬀor-
+dance the provision of an opportunity for the current speaker
+to self-initiate repair and thereby potentially resolve the trou-
+ble (Schegloﬀetal., 1977). Indeed, the absence of a response
+within a normal transition space can occasion a self-initiation
+of repair by the current speaker, as can be seen in the following
+extract.
+Frontiers in Psychology | www.frontiersin.org 8 March 2015 | Volume 6 | Article 250
+Kendrick Timing of other-initiations of repair
+(9) Monopoly Boys
+1 Rick: You have th:e thing I need for the mono:
+poly.
+2 (540 ms)
+3 Rick: -> Over ther
+e. ((points))
+4 (438 ms)
+5 Rick: -> The red
+s.
+6 Luke: O
+h, ye
+ah.
+In the course of a game of Monopoly, Rick notices that Luke
+has “th:e thing” (i.e., a speciﬁc property) that he needs in order
+to have a monopoly in the game (i.e., to own all the proper-
+ties of a speciﬁc color). At the word “thing” Luke can be seen
+to begin a visual search of his properties (a set of cards on the
+side of the game board) that continues into the transition space
+after Rick’s turn. Rather than wait for Luke either to resolve the
+reference himself or to initiate repair (e.g., with “what” or “what
+thing”), Rich addsanincrement to his turn, which, together with
+a deictic pointing gesture, speciﬁes the area in Luke’s visual ﬁeld
+he should search and thereby assists him in the resolution of
+the problematic reference. After this, too, fails to secure recog-
+nition from Luke, Rick again initiates self-repair, replacing “th:e
+thing” with “the red
+s” (i.e., the red colored properties), a form of
+indexical repair that speakers can employ to pursue a response
+(Boldenetal.,2012).With this, Lukeisapparently ableto resolve
+the problematic reference and registers this change of state pub-
+licly with“o
+h” (Heritage,1984)andconﬁrms Rick’snoticing with
+“ye
+ah.”
+Here,then, the self-initiation of repair by the current speaker
+is an alternative to the other-initiation of repair by next speaker.
+Luke uses the transition spaces that emerge in the course of
+Rick’s turn to search for recognition, a search that, in this case,
+is publicly observable. Before the search comes to an end, either
+in late recognition or failure (i.e., an other-initiation of repair),
+Rick uses the transition spaces as opportunities to self-initiate
+repair.Thepracticesthatcurrentandnextspeakersemployreveal
+complementary orientations to their accountability for the intel-
+ligibility of the current turn (Garﬁnkel, 1967). Luke does not
+initiate repair immediately; he withholds other-initiation to ﬁrst
+search for recognition independently. In this way, he holds him-
+selfaccountable for therecognition ofthecurrent turn. Likewise,
+Rick does not wait for Luke to initiate a repair procedure; he
+self-initiates repair atthe ﬁrst sign that the recipient has failed to
+recognize his turn (i.e., the expansion of the transition space and
+thevisiblesearch).Insodoing,heorientstohisaccountabilityfor
+the intelligibility ofhis own conduct.
+Ifthecurrentspeakerpassesontheopportunity toself-initiate
+repair provided by an expansion of the transition space, the
+necessity to ﬁnd a resolution of the trouble falls to the next
+speaker.Thatis,ifthecurrentspeakerdoesnotinitiateself-repair,
+the next speaker may resort to OIR, as Rich does in the next
+extract.
+(10) Coffee Chat (simplified)
+1 Rich: ((clears throat))
+2 (2.0)
+3 Rich: WE[:LL,
+4 Tom: [That’s in: building A
+?
+5 (1286) ((see Figure 5))
+6 Rich: -> Par
+don?
+FIGURE 5 | Rich, on the left, looks down during the trouble-source turn
+(top). He then turns to look at Tom after the trouble-source turn is complete
+and holds his gaze on Tom for ∼800 ms before he produces an OIR (bottom).
+7 Tom: Wha
+t bui
+lding are you in?
+8 Rich: Yeah:
+ I’m on the second floor A
+ building.
+After a lapse in the conversation, in which Rich can be seen
+to inspect his empty coﬀee cup, a possible warrant to leave the
+table, Rich produces what can be heard as a preliminary to his
+departure from the interaction (“WE:LL,” at line 4). In overlap
+with this, Tom poses a question to Rich that continues on the
+topic of the talk from before the lapse (i.e., who lives in the same
+building as Rich in a retirement community). During the ques-
+tion,Richlooksdownandforward. ∼300msafterTom’squestion
+comes to completion, Rich turns his head to the left to direct his
+gaze atTom (see Figure 5). He maintains this position, gazing at
+Tom,for roughly 800msbeforehe produces anOIR(“Par
+don?”,
+line7).
+Frontiers in Psychology | www.frontiersin.org 9 March 2015 | Volume 6 | Article 250
+Kendrick Timing of other-initiations of repair
+While the entire duration of the transition space before the
+OIR constitutes an opportunity in which Tom could self-initiate
+repair (e.g., by repeating his question), the roughly 800 ms
+that Rich holds his gaze on Tom arguably constitutes a space
+in which Tom should self-initiate repair. Heath (1984, p. 253)
+has argued that gaze, as a display of recipiency, is “sequen-
+tially implicative” and “declares an interest in having some
+particular action occur in immediate juxtaposition with the dis-
+play.” In line with this, Rossano (2006)andStiversandRossano
+(2010) have argued that participants use gaze to signal the rel-
+evance of a response. The withdrawal of gaze, in contrast, has
+been associated with an absence of sequential implicativeness,
+both at possible sequence completion (Rossano, 2012)andin
+wordsearches(Goodwin andGoodwin,1986).Thusalthoughthe
+current speaker has an opportunity to self-initiate repair and
+although the deployment of gaze by next speaker arguably dis-
+plays an expectation that the current speaker should act, the
+current speaker here passes on the opportunity to self-initiate
+repair.Theinitiationoftherepairprocedurethenfallstothenext
+speaker.
+Producing Visual Signals
+An expansion of the transition space before the production of
+an OIR also provides space for, and can be the result of, a next
+speaker’s production of visual signals and other visible bodily
+actions. It has been shown that head movements, such as a lat-
+eral tilt or forward extension of the head, can serve to occasion
+self-repair(SeoandKoshik,2010)andthatparticularbodymove-
+ments frequently occur in repair sequences (Rasmussen, 2013;
+Li, 2014; Floydetal., in press). In addition, facial gestures, like
+raising or furrowing one’s eyebrows, can be preliminaries to ver-
+bal OIRs. In the following extract, after Abbie turns to gaze at
+Maureen, she raises her eyebrows and holds this position for
+∼260msbeforesheinitiates repairwith “Hm:?”
+(11) Game Night
+1 Abbie: Apparently she’s a really spiritual person
+2 with a lot of spirituality and stuff like
+3 ↑this..hh
+4 Maureen: M.A.?
+5 (714) ((see Figure 6))
+6 Abbie: -> Hm:?
+7 Terry: Mm:hm[:,
+8 Maureen: [Is it M.A.?
+9 Abbie: Mm:.
+The trouble source that Abbie’s OIR locates is itself an OIR
+which locates the reference to “she” at line 1 as a trouble source
+and oﬀers the initials “M.A.”as a candidate replacement. Abbie’s
+conduct in the transition space – directing her gaze to Maureen,
+raising her eyebrows, and holding for a beat – not only provides
+an opportunity for the self-initiation of repair but also consti-
+tutes a visible and accountable signal, in the form of a facial
+gesture, that displays a lack of recognition and a state of recipi-
+ency. (Note that Abbie’s open OIR “hm:?” lacks the “astonished”
+prosody associated with open OIRs that signal surprise; Selting,
+1988.) In this case, the visual signal does not itself elicit a self-
+repair; the next speaker goes on to produce a verbal OIR. But
+FIGURE 6 | Abbie, in the middle, looks down during the trouble-source
+turn (top) and then raises her eyebrows and turns to look at Maureen.
+She holds this position for a beat (∼260 ms) before she produces an OIR
+(bottom).
+elsewhere such visual signals can prompt a current speaker to
+self-repair his orher talkwithout averbalOIR.
+In the next extract, Heather self-repairs a place reference in
+heranswertoKelly’squestionafterKellyproducesafacialgesture
+that displays a lack of recognition. The question that Kelly asks
+Heather concerns the amount of time that a friend of Heather’s
+haslivedin speciﬁc regions of England.
+(12) RCE28
+1 Kel: It’s o
+ver ten years, that’s pretty much all::
+2 Hea: Yeah he went to my infant school and he went
+3 to:: St. Jo:se:ph which is like the school in
+4 hhh (0.8) well I think it- (.) counts as
+5 Mer
+row.
+Frontiers in Psychology | www.frontiersin.org 10 March 2015 | Volume 6 | Article 250
+Kendrick Timing of other-initiations of repair
+6-> (1350 ms) ((see Figure 7))
+7 Hea: or like Guildford.=But it’s [still Surrey.
+8 (0.2) [((Kelly nods))
+9 Kel: (Okay)
+After some initial trouble with the place reference, Heather
+oﬀers“Merrow”asthenameofaplacewherethefriendhaslived.
+In a position in which acceptance of the answer is relevant (e.g.,
+a sequence-closing third, see Schegloﬀ, 2007), a gap of ∼840 ms
+emerges, at which point Kelly produces a facial gesture – raising
+her eyebrows and pulling down the corners of her mouth – dis-
+playingalackofrecognition (see Figure 7).Kellyholdsthisfacial
+gesturefor ∼510ms,untilHeatherself-repairstheplacereference
+FIGURE 7 | After Heather’s answer to Kelly’s question is complete,
+Kelly gazes at Heather and holds this position for ∼840 ms (top). She
+then raises her eyebrows, pulls down the corners of her mouth, and holds this
+facial gesture for ∼510 ms (bottom), until Heather produces a self-repair.
+from “Merrow” to “Guildford,” a nearby town. The reference to
+“Guildford” is apparently recognizable to Kelly, who begins to
+nod shortly thereafter, and after Heather oﬀers “Surrey” as the
+name of the county where both places reside, Kelly accepts the
+answer as adequate and brings the sequence to a close (line 9).
+This case demonstrates that a facial gesture by a possible next
+speaker can be suﬃcient to occasion self-repair. The production
+of a visual signal within the transition space before an OIR, such
+as in Extract (11), could therefore bea practice for the resolution
+of atrouble,onethat mayobviatethe needfor averbalOIR1.
+Discussion
+The Motivations for and Consequences of
+Delay Before Other-Initiations of Repair
+The quantitative analysis of the timing of OIRs in conversa-
+tion conﬁrms the observation that OIRs tend to occur after
+expanded transition spaces. Indeed, if one assumes that the tim-
+ing of responses to polar questions can serve as a proxy for a
+normal turn transition, as others have done (Stiversetal., 2009),
+thentheresultssuggestthatother-initiations typically occurafter
+400–500 ms of delay beyond the 300 ms duration of a normal
+transition space. But why should this be so? The explanation put
+forward by Schegloﬀetal. (1977), discussed previously, is that
+next speakers who encounter troubles of speaking, hearing, or
+understanding regularly withhold OIR to provide an opportu-
+nity for self-initiations of repair. The nature of this explanation
+is unclear, however. Is this an explanation of a personal motiva-
+tionforthedelay?Thatis,doesanextspeakerwithholdanOIR in
+order to create an opportunity for the current speaker to resolve
+the trouble? Or is this an explanation of a public consequence
+of the delay, one that leaves the question of motivation unan-
+swered? In principle, a delay before an OIR is an opportunity for
+aself-initiation of repair, whateveritscause.
+Theanalysisofwhatspeakersusethetransitionspacesbefore
+OIRs to accomplish suggests that providing an opportunity for
+self-initiation of repair does not exhaust the set of possible
+motivesfordelay.Althoughinsomecasesonecanarguethatsuch
+a motive may lie behind the observed delay (see Providing an
+Opportunity for Self-InitiatedRepair), others point toalternative
+explanations. The fact that next speakers who initiate repair do,
+onoccasion,recoverall,orpartofthetroublesourceafteranOIR
+demonstrates that ‘late’ recognition is possible. Together with
+observationsofsubtlevisiblebodilyactions,suchasgazeaversion
+inanexpandedtransitionspace,thequalitativeevidencesuggests
+that next speakers who fail to hear or understand the trouble-
+source turn can engage in a search for this late recognition (see
+1AnexaminationofvisualsignalsthatprecedeopenOIRs–whichhavethelongest
+transition spaces on average and are therefore the most pertinent to the question
+– revealed relevant visible bodily actions such as those described in this section
+in 26.4% of cases (n = 14). However, the corpus is not well suited to a quanti-
+tative analysis of visible bodily actions. In some cases, the relevant participant is
+oﬀ-camera or his or her face cannot be seen due to the angle of the camera, and
+in many cases, the participant’s eyescannot be seenwellenough to measure his or
+her gaze. A corpus speciﬁcally designed for the temporal analysis of gaze and ges-
+ture (e.g., Hollerand Kendrick, 2015) is needed to analyze the visual signals that
+precedeOIRsquantitatively.
+Frontiers in Psychology | www.frontiersin.org 11 March 2015 | Volume 6 | Article 250
+Kendrick Timing of other-initiations of repair
+Searching for Late Recognition). The motivation for the delay
+in such cases is not to provide an opportunity for self-initiation
+of repair, but more proximally to resolve the trouble indepen-
+dently, without recourse to an OIR that exposes the trouble and
+stops the progressivity of the sequence. The evidence also sug-
+gests that the visual signals such as facial gestures can precede
+verbal OIRs. These and other visible bodily actions, including
+reorientations of the head and torso, take time to produce and
+can cause a delay – measured in milliseconds of silence – before
+an OIR. Here,too, the motivation for the delay does not directly
+concern the self-initiation of repair.
+Butregardlessofthemotivation,theconsequence isthe same:
+an expanded transition space before an OIR can be a covert
+signal of trouble and can provide an opportunity for the cur-
+rent speaker to self-initiate repair. Although one can interpret
+Schegloﬀetal.’s (1977) explanation as an account of a personal
+motive, their commitment to uncovering abstract properties and
+principles of interactional systems suggests that their target was
+not the individual and his or her motives, but rather an orderli-
+nessthat transcends such personal concerns. While the results of
+the investigation are compatible with their explanation, research
+on the timing of the self-initiation of repair, in particular so-
+called transition space repairs, is necessary to conﬁrm it. The
+model that Schegloﬀetal. (1977). propose predicts that transi-
+tionspacerepairsshouldoccurearlierinthetransitionspacethan
+other-initiations. If so, it would provide evidence for a system in
+which the temporal window for self-initiation precedes that for
+other-initiation.
+Although the results of the investigation are of primary rele-
+vance to modelsof turn-taking andrepair in conversation analy-
+sis, they may also be of interest to psycholinguists, for whom the
+timing of turn-taking presents a puzzle. Given that experimen-
+tal research hasshown that speakers need atleast 600 ms to plan
+even a simple word (IndefreyandLevelt, 2004; Indefrey, 2011),
+processesoflanguageproductioninconversationmustbeginwell
+before the current turn ends (Levinson, 2013). Psycholinguists
+havethusbeguntoinvestigatethecognitiveprocessesthatenable
+the minimization of gaps between turns (MagyarianddeRuiter,
+2012; Magyarietal., 2014; Sjerps andMeyer, 2015). The results
+of the current investigation, however, remind us that estimates
+of central tendency hide a wealth of complex variation, as a
+number of factors, such as the type of turns involved, inﬂu-
+ence the timing of transitions. To psycholinguists, the 700 ms
+of silence that precedes OIRs might be taken to reﬂect a cog-
+nitive process – comprehension gone awry. Indeed, the search
+for late recognition, as I have called it, may be just such a pro-
+cess.Butinface-to-faceconversation, thecoreecological nicheof
+language (Schegloﬀ, 2006), the line between cognitive processes
+and socio-interactional ones is blurred. Visible bodily actions,
+such as an aversion of gaze or a facial gesture, can render oth-
+erwiseprivateprocessespublic,atwhichpointtheymayfeedinto
+socio-interactional ones. Even timing alone – a recognition that
+aspeakerhasnotproducedaturnwhenitwasdue–canocca-
+sion actions such as self-repair. In this way, the private and the
+public are woven together in an interactional system, and it is
+within such a system that the silence that precedes OIRs must be
+understood.
+The Preferences for Self-Correction and
+Speciﬁcity
+Thepropertiesandprinciples oftherepairsystem,Schegloﬀetal.
+(1977) argued, maximize opportunities of self-initiated repair,
+which come early, and often, and minimize opportunities for
+other-initiated repair, which aswehaveseentendto come late in
+the transition space. This institutionalized bias in the repair sys-
+temisknownasthepreferenceforself-correction. Asevidenceof
+this,Schegloﬀetal.(1977,p.379).claimedthatother-corrections
+exhibit special marking and special positioning (e.g., the quali-
+ﬁcation of epistemic stance or delay within a turn or sequence)
+that orient to a dispreferred status. With respect to the position
+of other-corrections within a turn, however, the current investi-
+gation ﬁnds no evidence for an orientation to dispreference. The
+results of the analysis, while based on a small sample, show that
+the other-corrections in the corpus tend to occur without delay,
+most frequently after 200–300 ms. This suggests that speakers
+do not withhold other-corrections to provide an opportunity for
+self-correction. Moreover, the claim that other-corrections typ-
+ically include qualiﬁcations or modulations of epistemic stance
+hasalsorecentlybeencalledintoquestion(HaakanaandKurhila,
+2009). Taken together, these ﬁndings cast doubt on the status of
+other-correction asadispreferredaction andsuggestthat further
+investigation, basedonalargersample ofcases,iswarranted.
+The relevance of these results to the preference for self-
+correction itselfislessclear.Other-corrections arerelativelyrare.
+The entire corpus contains 222 other-initiations, including those
+that occur after next position; only 6% (n = 14) of these are
+other-corrections. This suggests that many opportunities that
+speakers may have had to issue a correction simply were not
+taken.Moreover,other-corrections appeartoberestrictedtospe-
+ciﬁc types of trouble sources. Of the 14 cases of other-correction,
+nine locate proper names, or numbers as trouble sources and
+three target mispronunciations or malapropisms (e.g., “antioxi-
+dities” rather than antioxidants). In contrast, other practices for
+other-initiation do not appear to be restricted in this way. Thus
+although other-corrections may not be constructed as dispre-
+ferred actions (i.e., with delay or qualiﬁcation), a restriction of
+other-corrections to speciﬁc contexts may nonetheless be evi-
+denceofasystematicbiasagainsttheiruse.
+In addition to the preference for self-correction,
+Schegloﬀetal. (1977) also argue for a preference for speci-
+ﬁcity in the selection of OIR practices, such that more speciﬁc
+(or‘stronger’) other-initiations arepreferredoverlessspeciﬁc (or
+‘weaker’) ones (cf. ClarkandSchaefer, 1987). Two pieces of evi-
+dence are given to support this claim. First, if an other-initiation
+is subject to self-repair within the same turn, the self-repair
+occurs from a less to a more speciﬁc format, but not the inverse.
+Second, if more than one other-initiation is needed to resolve
+the trouble, speakers use increasingly speciﬁc practices. The
+current investigation adds two additional pieces of evidence
+for a preference for speciﬁcity. Third, speciﬁc other-initiations
+are more frequent than open other-initiations (only 31% are
+open, see Table 2;cf.Kendrick, in press). And fourth, speciﬁc
+other-initiations tendtooccur earlierinthetransition spacethan
+open other-initiations, in line with the tendency for dispreferred
+alternativestobedelayed.
+Frontiers in Psychology | www.frontiersin.org 12 March 2015 | Volume 6 | Article 250
+Kendrick Timing of other-initiations of repair
+TheobservationthatsometypesofOIRsoccurafterlessdelay
+thanothersalsoopensupnewavenuesforfutureresearch.Within
+the diversity ofspeciﬁc OIRs, forexample,onemaydiscoversys-
+tematic variation. The precise timing of an OIR could indicate
+a particular epistemic stance, such as whether the OIR signals a
+trouble of hearing or understanding per se,orwhetheritdisplays
+aspeaker’ssurprise or disbelief(seeIdentiﬁcation ofOIR).
+The Intersection of Turn-Taking and Repair
+The model of turn-taking that Sacksetal. (1974) proposed
+accounts for the minimization of gaps in conversation through a
+setofrulesandconstraints thatmotivatefasttransitions between
+turns. Given that OIRs are themselves turns at talk, the obser-
+vation that OIRs tend to occur after relatively long gaps would
+therefore appear to undermine this model. In this section – an
+exploration of the intersection of turn-taking and repair – I ﬁrst
+outlineaseriesofsystemicconstraintsonthetimingofnextturns
+andthenarguethatOIRssupersedethem,anargumentﬁrstmade
+bySacksetal.(1974)andSchegloﬀetal.(1977),butonlypartially
+articulated intheir work.
+Tobegin,considertheinitialboundaryofthetransitionspace.
+The turn-taking system includes a constraint against more than
+one speakeratatime,and while more thanone speakerata time
+is common, it is an unstable state, one which quickly resolves
+back to a single speaker (Schegloﬀ, 2000). This accounts for the
+observationthatnextturnstendtostartupatornearpossible
+completions of prior turns, where transition can occur without
+(or with minimal)violation of theconstraint, notsooner.
+Atthe ﬁnal boundary ofthe transition space,there are atleast
+three constraints in operation, two of which are rooted in the
+rulesforturnallocation,whichprovideamotivationforfasttran-
+sitions(Sacksetal.,1974).Roughly,ifnoonehasbeenselectedto
+speak next (e.g., by an addressed question), a speaker may self-
+selecttotakeaturn.Ifmorethanonespeakerself-selects,theﬁrst
+to start has rights to the turn and the second starter should cede
+the turn to the ﬁrst. These rules establish a motivation for next
+speakerstostartupearlyandtherebyminimizesthegapsbetween
+turns.
+If no one self-selects, however, the current speaker may con-
+tinue his or her turn. The possibility that such a continuation
+may be imminent also provides for the minimization of gaps, as
+next speakers aim to begin before this occurs. Although the time
+course of this rule is unknown, a computational corpus study of
+Dutch telephone conversations by Boschetal. (2005) provides
+a useful estimate. The duration of silences between utterances
+withinaturnwasfoundtobegreaterthanthedurationofsilences
+between turns, with mean durations of 520 and 380 ms, respec-
+tively. This is compatible with a model of turn-taking in which
+an opportunity for self-selection by next speaker temporally pre-
+cedes that for continuation by current speaker. The expanded
+transition spaces before OIRs are therefore the result of a con-
+nivance:thenextspeakerpassestheopportunity(orobligation,in
+thecaseofcurrent-selects-next)tospeak,andthecurrentspeaker,
+the onewho produced thetrouble source,passestheopportunity
+to continue the turn. At ∼700 ms, the average other-initiation
+of repair occurs after the absence of a continuation by the cur-
+rent speaker would be recognizable. Indeed, there is evidence
+that 700 ms may in fact be a generic threshold in conversation
+(Kendrick andTorreira, 2012, 2014; Roberts andFrancis, 2013),
+perhapsfor this veryreason.
+A third constraint at the ﬁnal boundary of the transition
+space is grounded not in the rules for turn allocation but in
+the potential for silences in conversation to become meaning-
+ful, as signals of interactional trouble (Jeﬀerson, 1986, 1983a;
+Pomerantz,1984;Schegloﬀ,1988;interalia).Inanadjacency-pair
+sequence, to cite but one context, even a slight delay beyond a
+normal transition increases the likelihood that the second pair
+part will have a dispreferred turn format, and a long delay, on
+the order of 700–800 ms, is a reliable signal that a dispreferred
+response is imminent (Kendrick andTorreira, 2014). The semi-
+otics of silence is therefore an additional basis for a constraint
+on the timing of next turns, one that, like the rules for turn allo-
+cation, creates a bias toward fast transitions and the attendant
+minimization ofgaps.
+Given the existence of systemic constrains on the timing of
+next turns and the observation that OIR occur after signiﬁcantly
+longergapsthanotherturns,onesolutiontothisapparentpuzzle
+naturally presents itself: OIRs may trump the rules of the turn-
+taking system. Indeed, this appears to be the tack taken, though
+onlypartiallyarticulated,bySacksetal.(1974)andSchegloﬀetal.
+(1977).ThetimingofOIR,theyargued,reveals“theindependent
+status of the repair organization, whose operation may super-
+sedeotherwise operativeaspects oftheturn-taking organization”
+(Schegloﬀetal., 1977, p. 374). Although they do not elaborate
+this point, they do provide one additional example. In a dis-
+cussion of second-starter supersession (i.e., methods whereby
+a second speaker to self-select may win the turn), Sacksetal.
+(1974,p. 720)observethat “whenaself-selector’s turn-beginning
+reveals his turn’s talk to be prospectively addressed to a prob-
+lem of understanding [a] prior utterance, he may by virtue
+of that get the turn, even though at the turn-transfer another
+started before him.” In other words, a second speaker to self-
+select takes priority if he or she produces an other-initiation of
+repair. This, then, is evidence that participants in conversation
+orient to resolving troubles of hearing and understanding as a
+“priority activity” (Sacks etal., 1974, p. 720), one which takes
+precedenceoverrulesoftheturn-takingsystemthatmotivatefast
+turn transitions.
+Aconsequenceofthepriority ofOIR,onewhichtomyknowl-
+edge has not previously been registered, is that OIRs may freely
+start up in overlap with a post-trouble-source turn or TCU, and
+need not employ the practices for overlap competition described
+by Schegloﬀ (2000), such as increases in volume, speech rate, or
+pitch.Ineachofthecasesbelow,anOIRstartsupinoverlapwith
+a turn or TCU that intervenes between it and the trouble-source
+TCU. Although the OIR is not designed as competitive, in each
+case the speaker of the prior turn or TCU drops out, ceding the
+turn tothe speakeroftheOIR.
+(13) KC-4:2 (Sacks et al., 1974, p. 720)
+1 R: Hey::, the place looks different.
+2 F: Yea::hh.
+3K: -> Ya have to see ou[r new-
+4D: -> [It does?
+5 R: Oh yeah
+Frontiers in Psychology | www.frontiersin.org 13 March 2015 | Volume 6 | Article 250
+Kendrick Timing of other-initiations of repair
+(14) WG 4-13-nh (Benjamin, 2013, p. 188)
+1 Hal: he may be victimized on it
+2 (0.6)
+3 Hal: -> I’m not sure he’s ma[king]
+4 Nix: -> [you ] mean by his lawyer
+5 Nix: [hhhhhhhhh]
+6 Hal: [yeah or] (.) somebody else
+(15) CallHome 6079 (Benjamin, 2013, p. 119)
+1 A: it was [so: nice] it was so nice =
+2 B: [hhhhh @ ]
+3A: = that they came I can’t even tell you
+4 like.hhhh like (0.6) just seeing them
+5 like I was performing to them
+6 (.)
+7-> like I was sm[iling at th]em like
+8B: -> [to who. ]
+9 A: .hhhh Juliette, Sam: and (.) and Tara
+ThefactthatOIRswintheturnwithout theneedforcompeti-
+tionand,moreover,thattrouble-sourcespeakersrespondtoOIRs
+with no delay is further evidence that repair is a priority activity
+inconversation (seealsoExtract 4).
+Thedataabovealsoillustrateyetanotherintersection between
+turn-taking and repair. As noted previously, the imminent pos-
+sibility that a current speaker may continue his or her turn if
+no one self-selects builds a motivation for fast transitions into
+the turn-taking system. Note, however, that the OIRs in Extracts
+(14) and(15) occur inoverlapwith acontinuation bythecurrent
+speaker (at the ﬁrst arrowed lines). This demonstrates that OIRs
+supersede not only ﬁrst-starters in self-selection, but alsocontin-
+uationsbycurrentspeakers.Thewindowofopportunity forOIRs
+is thus larger than for other next turns, which are subject to con-
+straints on turn allocation and overlap that OIRs appear to out
+rank.
+This is not to say that the timing of OIR is without con-
+straint. The organization of repair imposes certain constraints
+on the timing of OIRs vis-à-vis the selection of OIR practices
+(seeRobinson,2014).AnopenOIRlocatesatrouble-sourceTCU
+exclusively via adjacency and is therefore positionally restricted.
+IfanextspeakerfailstohearorunderstandaTCUwellenoughto
+employ a speciﬁc OIR practice, then the window of opportunity
+to use an open OIR has an outer bound: the possible completion
+of a subsequent TCU that intervenes betweenthe trouble-source
+TCUandtheopenOIR.Inotherwords,theopportunityspacefor
+open OIR is a one-TCU interval (Robinson, 2014). But does this
+constraint, which operates for open OIRs, establish a motivation
+forfastturntransitions?Itprovidesanouterboundforthetiming
+ofopenOIRs,butgiventhatanopenOIRcaninprincipleoccur
+in overlap with a subsequent TCU (before its possible comple-
+tion)andtakepriority, itwouldnotsystematicallymotivateafast
+transitionontheorderof100–300msbetweenthetrouble-source
+TCUandtheOIR.
+What, then, of the potential for silences to be meaningful,
+as signals of interactional trouble? Might this provide a moti-
+vation for fast transitions? The answer becomes clear once one
+registers that OIRs are themselves signals of interactional trou-
+ble. Although a covert signal of trouble like silence will be at
+cross-purposes with some incipient actions (e.g., agreement), it
+can also point in the same direction as an incipient action (e.g.,
+rejection), in which case it is interactionally advantageous. An
+expanded transition space can indicate that a next speaker has
+encountered trouble, but it also provides an opportunity for the
+resolution of the trouble. There is reason tobelievethat speakers
+do not avoid this covert signal (e.g., by initiating repair quickly),
+but rather exploit it. As a motivation for fast turn transfers, the
+potential for silences in conversation to be meaningful signals of
+interactional trouble is thus context-sensitive, operating only for
+nextturnsnotthemselvesdesignedassignalsoftrouble.
+In sum, the rules and constraints of the turn-taking system
+that motivate fast transitions –concerning overlapmanagement,
+turn allocation, and the semiotics of silence – neither rule nor
+constrain the timing of OIRs. The priority given, at the intersec-
+tion of turn-taking and repair, to the resolution of troubles in
+hearing and understanding provides a systemic explanation for
+the observation that transitions before OIRs tend to be longer
+than those before other next turns, for which the rules and
+constraints oftheturn-taking systemremainoperative.
+Acknowledgments
+I would like to thank Jeﬀ Robinson, Trevor Benjamin, and Steve
+Levinson for useful comments on earlier versions of this article,
+as well as Francisco Torreira, from whom I have learned a great
+deal. This research was made possible by the ﬁnancial support
+of the Language and Cognition Department at the Max Planck
+Institute for Psycholinguistics.
+References
+Benjamin, T. (2012). When problems pass us by: using ‘You Mean’ to help
+locate the source of trouble. Res. Lang. Soc. Interact. 45, 82–109. doi:
+10.1080/08351813.2012.646742
+Benjamin,T.(2013). Signaling Trouble: On the Linguistic Design of Other-Initiation
+of Repair in English Conversation.Ph.D.Dissertation,UniversityofGroningen,
+TheNetherlands.
+Benjamin, T., and Walker, T. (2013). Managing problems of acceptabil-
+ity through high rise-fall repetitions. Discourse Process. 50, 107–138. doi:
+10.1080/0163853X.2012.739143
+Bolden, G. B. (2009). “Implementing delayed actions,” in Conversation Analysis:
+Comparative Perspectives, ed. J. Sidnell (Cambridge: Cambridge University
+Press),326–353.doi:10.1017/CBO9780511635670.012
+Bolden, G. B., Mandelbaum, J., and Wilkinson, S. (2012). Pursuing a response
+by repairing an indexical reference. Res. Lang. Soc. Interact. 45, 137–155. doi:
+10.1080/08351813.2012.673380
+Bosch, L.-T., Oostdijk, N., and Boves, L. (2005). On temporal aspects of
+turn taking in conversational dialogues. Speech Commun. 47, 80–86. doi:
+10.1016/j.specom.2005.05.009
+Clark, H.H.,and Schaefer,E. F.(1987).Collaborating oncontributions to conver-
+sations. Lang. Cogn. Process. 2,19–41.doi:10.1080/01690968708406350
+Doherty-Sneddon, G., and Phelps, F. G. (2005). Gaze aversion: a response to
+cognitive or social diﬃculty? Mem. Cogn. 33, 727–733. doi: 10.3758/BF031
+95338
+Drew, P. (1997). ‘Open’ class repair initiators in response to sequential sources
+of troubles in conversation. J. Pragmat. 28, 69–101. doi: 10.1016/S0378-
+2166(97)89759-7
+Frontiers in Psychology | www.frontiersin.org 14 March 2015 | Volume 6 | Article 250
+Kendrick Timing of other-initiations of repair
+Egbert, M., Golato, A., and Robinson, J. D. (2009). “Repairing reference,” in
+Conversation Analysis: Comparative Perspectives, ed. J. Sidnell (Cambridge:
+Cambridge University Press), 104–132. doi: 10.1017/CBO97805116356
+70.005
+Floyd, S., Manrique, E., Rossi, G., and Torreira, F. (in press). The timing of visual
+bodily behavior in repair sequences: evidence from three languages. Discourse
+Process. doi:10.1080/0163853X.2014.992680
+Ford,C.E.,and Thompson,S.A.(1996).“Interactional unitsinconversation:syn-
+tactic, intonational, and pragmatic resources for the management of turns,” in
+Interaction and Grammar,edsE.Ochs,E.A.Schegloﬀ,andS.A.Thompson
+(Cambridge:CambridgeUniversityPress),134–184.
+Garﬁnkel, H.(1967). Studies in Ethnomethodology. Englewood Cliﬀs,NJ: Prentice-
+Hall.
+Glenberg, A. M., Schroeder, J. L., and Robertson, D. A. (1998). Averting the
+gaze disengages the environment and facilitates remembering. Mem. Cogn. 26,
+651–658.doi:10.3758/BF03211385
+Goodwin, C. (1980). Restarts, pauses, and the achievement of a state of
+mutual gaze at turn-beginning. Sociol. Inq. 50, 272–302. doi: 10.1111/j.1475-
+682X.1980.tb00023.x
+Goodwin, C. (1981). Conversational Organization: Interaction between Speakers
+and Hearers.NewYork:Academic Press.
+Goodwin, M. H., and Goodwin, C. (1986). Gesture and coparticipation in the
+activity ofsearching foraword. Semiotica 62,51–76.
+Haakana, M., and Kurhila, S. (2009). “Other-correction in everyday interaction:
+somecomparativeaspects,” in Talk in interaction: Comparative Dimensions,eds
+M.Haakana,M.Laakso,andJ.Lindström(Helsinki:FinnishLiteratureSociety),
+152–179.
+Heath,C.(1984).“Talkandrecipiency:sequentialorganizationinspeechandbody
+movement,” in Structures of Social Action: Studies in Conversation Analysis,
+eds J. M. Atkinson and J. Heritage (Cambridge: Cambridge University Press),
+247–265.
+Heldner, M., and Edlund, J. (2010). Pauses, gaps and overlaps in conversations. J.
+Phon. 38,555–568.doi:10.1016/j.wocn.2010.08.002
+Hepburn, A., and Bolden, G. B. (2013). “The conversation analytic approach to
+transcription,” in The Handbook of Conversation Analysis, eds J. Sidnelland T.
+Stivers(Malden,MA:BlackwellPublishingLtd).
+Heritage, J. (1984). “A change-of-state token and aspects of its sequential place-
+ment,” in Structures of Social Action: Studies in Conversation Analysis,edsJ.M.
+Atkinsonand J.Heritage(Cambridge:CambridgeUniversityPress),299–345.
+Heritage, J. (2012). Epistemics in action: action formation and territories of
+knowledge. Res. Lang. Soc. Interact. 45, 1–29. doi: 10.1080/08351813.2012.
+646684
+Himmelmann, N. P. (1996). “Demonstratives in narrative discourse: a taxonomy
+of universal uses,” in Studies in Anaphora, ed. B. A. Fox (Amsterdam: John
+Benjamins PublishingCompany),205–254.
+Holler, J., and Kendrick, K. H. (2015). Unaddressed participants’ gaze in
+multi-person interaction: optimizing recipiency. Front. Lang. Sci. 6:98. doi:
+10.3389/fpsyg.2015.00098
+Hothorn, T., Hornik, K., van de Wiel, M. A., and Zeileis, A. (2006).
+A Lego system for conditional inference. Am. Stat. 60, 257–263. doi:
+10.1198/000313006X118430
+Indefrey, P. (2011). The spatial and temporal signatures of word production
+components: a critical update. Front. Psychol. 2:255. doi: 10.3389/fpsyg.2011.
+00255
+Indefrey, P., and Levelt, W. J. M. (2004). The spatial and temporal sig-
+natures of word production components. Cognition 92, 101–144. doi:
+10.1016/j.cognition.2002.06.001
+Jeﬀerson, G. (1973). A case of precision timing in ordinary conversation: over-
+lapped tag-positioned address terms in closing sequences. Semiotica 9, 47–96.
+doi:10.1515/semi.1973.9.1.47
+Jeﬀerson, G. (1983a). Notes on a possible metric which provides for a ‘Standard
+Maximum’silenceofapproximatelyonesecondinconversation. Tilburg Papers
+Lang. Lit. 42,1–83.
+Jeﬀerson, G. (1983b). On a failed hypothesis: ‘Conjunctionals’ as overlap-
+vulnerable. Tilburg Papers Lang. Lit. 28,1–33.
+Jeﬀerson, G. (1984). “Notes on some orderlinesses of overlap onset,” in Discourse
+Analysis and Natural Rhetoric, eds V. D’Urso and P. Leonardi (Padua: Cleup
+Editore),11–38.
+Jeﬀerson, G. (1986). Notes on ‘Latency’ in overlap onset. Hum. Stud. 9, 153–183.
+doi:10.1007/BF00148125
+Jeﬀerson, G. (1987). “On exposed and embedded correction in conversation,”
+in Talk and Social Organization, eds G. Button and J. R. E. Lee (Clevedon:
+MultilingualMatters),86–100.
+Kendrick, K. H. (in press). Other-initiated repair in English. Open Linguist.1,
+164–190.doi:10.2478/opli-2014-0009
+Kendrick, K. H., and Torreira, F. (2012). The timing and construction of prefer-
+ence: a quantitative study. Paper presented at the Discourse, Communication,
+and Conversation Conference,Loughborough University,Loughborough.
+Kendrick, K. H., and Torreira, F. (2014). The timing and construc-
+tion of preference: a quantitative study. Discourse Process. doi:
+10.1080/0163853X.2014.955997
+Kitzinger, C. (2013). “Repair,” in The Handbook of Conversation Analysis,eds
+J. Sidnell and T. Stivers (Malden: Blackwell Publishing Ltd), 229–256. doi:
+10.1080/0163853X.2014.955997
+Labov, W., and Fanshel, D. (1977). Therapeutic Discourse: Psychotherapy as
+Conversation.NewYork:Academic Press.
+Lerner, G. H. (2003). Selecting next speaker: the context-sensitive oper-
+ation of a context-free organization. Lang. Soc. 32, 177–201. doi:
+10.1017/S004740450332202X
+Levinson, S. C. (2013). “Action formation and ascription,” in The Handbook of
+Conversation Analysis, eds J. Sidnell and T. Stivers (Malden, MA: Wiley–
+BlackwellPublishingLtd),101–130.
+Li, X. (2014). Leaning and recipient intervening questions in Mandarin conversa-
+tion. J. Pragmat. 67,34–60.doi:10.1016/j.pragma.2014.03.011
+Local, J., and Walker, G. (2004). Abrupt-joins as a resource for the pro-
+duction of multi-unit, multi-action turns. J. Pragmat. 36, 1375–1403. doi:
+10.1016/j.pragma.2004.04.006
+Magyari,L.,Bastiaansen,M.C.M.,deRuiter,J.P.,andLevinson,S.C.(2014).Early
+anticipationliesbehindthespeedofresponseinconversation. J. Cogn. Neurosci.
+26,2530–2539.doi:10.1162/jocn_a_00673
+Magyari, L., and de Ruiter, J. P. (2012). Prediction of turn-ends based on
+anticipation of upcoming words. Front. Psychol. 3:376. 10.3389/fpsyg.2012.
+00376
+Markson, L., and Paterson,K. B. (2009).Eﬀects of Gaze-aversion on visual-spatial
+imagination. Br.J.Psychol.100,553–563.doi:10.1348/000712608X371762
+Mondada, L. (2006). Participants’ online analysis and multimodal practices: pro-
+jecting the end of the turn and the closing of the sequence. Discourse Stud. 8,
+117–129.doi:10.1177/1461445606059561
+Mondada, L. (2007). Multimodal resources for turn-taking pointing and the
+emergence of possible next speakers. Discourse Stud. 9, 194–225. doi:
+10.1177/1461445607075346
+Pomerantz, A. (1984).“Agreeing and disagreeing with assessments:some features
+of preferred/dispreferred turn shapes,” in Structures of Social Action: Studies
+in Conversation Analysis, eds J. M. Atkinson and J. Heritage (Cambridge:
+CambridgeUniversityPress),57–101.
+RDevelopmentCoreTeam.(2013). R: A Language and Environment for Statistical
+Computing. Vienna: R Foundation for Statistical Computing. Available at:
+http://www.r-project.org/
+Rasmussen, G. (2013). Inclined to better understanding—the coordination of
+talk and ‘leaning forward’ in doing repair. J. Pragmat. 65, 30–45. doi:
+10.1016/j.pragma.2013.10.001
+Roberts, F., and Francis, A. L. (2013). Identifying a temporal threshold of toler-
+ance for silent gaps after requests. J. Acoust. Soc. Am. 133, EL471–EL477. doi:
+10.1121/1.4802900
+Roberts, F., and Robinson, J. D. (2004). Interobserver agreement on ﬁrst-stage
+conversation analytic transcription. Hum. Commun. Res. 30, 376–410. doi:
+10.1111/j.1468-2958.2004.tb00737.x
+Robinson, J. D. (2006). Managing trouble responsibility and relation-
+ships during conversational repair. Commun. Monogr. 73, 137–161. doi:
+10.1080/03637750600581206
+Robinson, J. D. (2014). What ‘What?’ tells us about how conversational-
+ists manage intersubjectivity. Res. Lang. Soc. Interact. 47, 109–129. doi:
+10.1080/08351813.2014.900214
+Robinson, J., and Kevoe-Feldman, K. (2010). Using full repeats to initiate
+repair on others’ questions. Res. Lang. Soc. Interact. 43, 232–259. doi:
+10.1080/08351813.2010.497990
+Frontiers in Psychology | www.frontiersin.org 15 March 2015 | Volume 6 | Article 250
+Kendrick Timing of other-initiations of repair
+Rossano, F. (2006). When the eyes meet: using gaze to mobilize response. Paper
+Presented at the International Conference on Conversation Analysis,Helsinki.
+Rossano, F. (2012). Gaze Behavior in Face-to-Face Interaction.Ph.D.thesis,
+RadboudUniversity,Nijmegen.
+Sacks, H., Schegloﬀ, E. A., and Jeﬀerson,G. (1974). A simplest systematics for the
+organization ofturn-taking for conversation. Language (Baltim) 50,696–735.
+Schegloﬀ, E. A. (1987). “Recycled turn beginnings: a precise repair mechanism in
+conversation’s turn-taking oragnisation,” in Talk and Social Organisation,eds
+G.ButtonandJ.R.E.Lee(Phiadelphia:MultilingualMatters),70–93.
+Schegloﬀ, E. A. (1988). On an actual virtual servo-mechanism for guessing
+bad news: a single case conjecture. Soc. Probl. 35, 442–457. doi: 10.2307/
+800596
+Schegloﬀ, E. A. (1992). Repair after next turn: the last structurally provided
+defense of intersubjectivity in conversation. Am.J.Soc.97, 1295–1345. doi:
+10.1086/229903
+Schegloﬀ, E. A. (1997). Practices and actions: boundary cases of other-initiated
+repair. Discourse Process. 23,499–545.doi:10.1080/01638539709545001
+Schegloﬀ,E.A.(1998).Bodytorque. Soc. Res. (N. Y.) 65,535–596.
+Schegloﬀ, E. A. (2000). When ‘Others’ initiate repair. Appl. Linguist. 21, 205–243.
+doi:10.1093/applin/21.2.205
+Schegloﬀ, E. A. (2006). “Interaction: the infrastructure for social institutions, the
+natural ecological niche for language, and the arena in which culture is situ-
+ated,” in Roots of Human Sociality: Culture, Cognition and Interaction,edsN.J.
+EnﬁeldandS.C.Levinson(Oxford:BergPublishers),70–96.
+Schegloﬀ, E. A. (2007). Sequence Organization in Interaction: A Primer
+in Conversation Analysis. Cambridge: Cambridge University Press. doi:
+10.1017/CBO9780511791208
+Schegloﬀ, E. A., Jeﬀerson, G., and Sacks, H. (1977). The preference for self-
+correction in the organization of repair in conversation. Language (Baltim) 53,
+361–382.
+Selting, M. (1988). The role of intonation in the organization of repair and
+problem handling sequences in conversation. J. Pragmat. 12, 293–322. doi:
+10.1016/0378-2166(88)90035-5
+Seo, M.-S., and Koshik, I. (2010). A conversation analytic study of gestures that
+engenderrepairinESLconversationaltutoring. J. Pragmat. 42,2219–2239.doi:
+10.1016/j.pragma.2010.01.021
+Sjerps, M. J., and Meyer, A. S. (2015). Variation in dual-task performance reveals
+late initiation of speech planning in turn-taking. Cognition 136, 304–324. doi:
+10.1016/j.cognition.2014.10.008
+Stivers, T., Enﬁelda, N. J., Browna, P., Englertb, C., Hayashic, M., Heinemann,
+T., et al. (2009). Universals and cultural variation in turn-taking in conversa-
+tion. Proc.Natl.Acad.Sci.U.S.A.106, 10587–10592. doi: 10.1073/pnas.09036
+16106
+Stivers, T., and Rossano, F. (2010). Mobilizing response. Res. Lang. Soc. Interact.
+43,3–31.doi:10.1080/08351810903471258
+Strömbergsson, S., Hjalmarsson, A., Edlund, J., and House, D. (2013). “Timing
+responses to question S in dialogue,” in Proceedings of Interspeech 2013, (Lyon:
+International SpeechCommunication Association),2584–2588.
+Svennevig,J.(2008).Tryingthe easiestsolutionﬁrstinother-initiationofrepair. J.
+Pragmat. 40,333–348.doi:10.1016/j.pragma.2007.11.007
+Wilkinson, S., and Kitzinger, C. (2006). Surprise as an interactional achieve-
+ment: reaction tokens in conversation. Soc. Psychol. Q. 69, 150–182. doi:
+10.1177/019027250606900203
+Wilson, T., and Zimmerman, D. (1986). The structure of silence between
+turns in two-party conversation. Discourse Process. 9, 375–390. doi:
+10.1080/01638538609544649
+Wittenburg, P., Brugman, H., Russel, A., Klassmann, A., and Sloetjes, H. (2006).
+ELAN: A Professional Framework for Multimodality Research (2006).Available
+at:http://tla.mpi.nl/tools/tla-tools/elan/
+Wong, J. (2000). Delayed next turn repair initiation in native/non-native speaker
+Englishconversation. Appl. Linguist. 21,244–267.doi:10.1093/applin/21.2.244
+Conﬂict of Interest Statement: The author declares that the research was con-
+ducted in the absence of any commercial or ﬁnancial relationships that could be
+construed as apotentialconﬂict ofinterest.
+Copyright c© 2015 Kendrick. This is an open-access article distributed under the
+terms of the Creative Commons Attribution License (CC BY). The use, distribution or
+reproduction in other forums is permitted, provided the original author(s) or licensor
+are credited and that the original publication in this journal is cited, in accordance
+with accepted academic practice. No use, distribution or reproduction is permitted
+which does not comply with these terms.
+Frontiers in Psychology | www.frontiersin.org 16 March 2015 | Volume 6 | Article 250

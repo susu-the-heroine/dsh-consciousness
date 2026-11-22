@@ -182,7 +182,11 @@ check('keywords 与 README 头', () => {
   if (!kw.some((k) => k === 'dsh' || k === 'dsh-plugin' || k === 'deepseek-harness')) {
     return 'package.json 的 keywords 里没有 dsh 系词'
   }
-  if (!/long-term memory/i.test(String(pkg.description || ''))) return 'description 里没有可检索的英文词'
+  // 2026-11-22：简介改成了纯中文（他要的），英文检索词挪到 keywords 上。
+  // 只要 keywords 里有英文长词，就还能被英文搜到，别拿简介当唯一入口。
+  const _kwEn = kw.some((k) => /long-term|memory|dsh-plugin/i.test(String(k)))
+  const _descEn = /long-term memory/i.test(String(pkg.description || ''))
+  if (!_kwEn && !_descEn) return 'description 和 keywords 里都没有可检索的英文词'
   const rm = readFileSync(join(ROOT, 'README.md'), 'utf8')
   const head = rm.split('\n').slice(0, 8).join('\n')
   if (!head.includes('给 DSH 用的长期记忆')) return 'README 头没写"给 DSH 用的长期记忆"'
@@ -215,7 +219,8 @@ check('注入失败不许静默', () => {
 check('revision CAS 在位', () => {
   // 2026-11-15 清单第 5 件：编辑接口必须带 expectedRevision 冲突检查 + rev 自增。
   const src = readFileSync(join(ROOT, 'lib', 'routes.js'), 'utf8')
-  if (!src.includes('revision 冲突')) return '编辑接口没有 expectedRevision 冲突检查'
+  if (!src.includes('expectedRevision')) return '没有 expectedRevision 参数'
+  if (!src.includes('send(409, { ok: false') || !src.includes('currentRev')) return '冲突没回 409 或没给 currentRev'
   if (!src.includes("point.rev = Number(point.rev || 0) + 1")) return '编辑接口没有 rev 自增'
   if (!src.includes('rev: Number(point.rev || 0)')) return '回执没带新 rev'
   return true
@@ -310,7 +315,9 @@ check('读实体：先读 entities，单数只许当兜底', () => {
 // 5. 写入回执必须提醒"没写别名"
 check('写库回执带别名提醒', () => {
   const t = readFileSync(join(ROOT, 'lib/tools.js'), 'utf8')
-  return t.includes('这条没写别名') ? true : 'tools.js 里找不到那句提醒'
+  const hasHint = t.includes('这条我只会按你的原话认')
+    const hasGuard = t.includes("String(args.alias || '').trim() ? ''")
+    return (hasHint && hasGuard) ? true : 'tools.js 里找不到没写别名的提醒'
 })
 
 // 6. 稀有词表不能建在循环里（一万条会退化成平方）

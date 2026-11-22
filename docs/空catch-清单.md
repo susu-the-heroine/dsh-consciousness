@@ -1,0 +1,673 @@
+# 空 catch 清单（catch 了什么都不做）
+
+> 2026-11-21 凌晨扫的：lib/ 下所有「catch 后面直接空块」的写法，按写库、读库、时间、路径分类。
+> 这一份只是立册，不是判危结论；已修的会标「已修」。
+
+合计 595 处：写库 58 · 读库 33 · 时间 42 · 路径 17 · 其他 445
+
+## 写库（58 处）
+
+- `embed-js.js:98` —— try { mkdirSync(dirname(f), { recursive: true }) } catch {}
+- `inject.js:1576` —— try { unlinkSync(_hp) } catch {}
+- `inject.js:1580` —— try { unlinkSync(_hp) } catch {}
+- `inject.js:1597` —— try { renameSync(_logPath, _logPath + '.1') } catch {}
+- `inject.js:1646` —— writeFileSync(_sp, JSON.stringify({ shown: _map }), 'utf8')
+- `inject.js:1700` —— try { writeFileSync(_toldPath, JSON.stringify({ at: Date.now() }), 'ut
+- `inject.js:1797` —— appendBounded(_hitLog, _line + '\n')
+- `lock.js:38` —— try { unlinkSync(lp) } catch {}
+- `lock.js:61` —— if (Number(cur.pid) === process.pid) unlinkSync(lp)
+- `lock.js:65` —— if (Number(cur.pid) === process.pid) unlinkSync(lp)
+- `logfile.js:27` —— try { writeFileSync(file + '.1', body, 'utf8') } catch {}
+- `mirror-export.js:100` —— writeFileSync(join(outDir, '_edges.json'), JSON.stringify(keep), 'utf8
+- `mirror-import.js:140` —— copyFileSync(targetFile, bak)
+- `monitor.js:135` —— renameSync(tmp, p)
+- `routes.js:3001` —— try { writeSea(sea, data) } finally { try { _lk3 && _lk3.release && _l
+- `routes.js:3119` —— writeFileSync(_snap.p, JSON.stringify(hh), 'utf8')
+- `routes.js:3128` —— if (_snap && !_keep) writeFileSync(_snap.p, _snap.body, 'utf8')
+- `slowlog.js:54` —— writeFileSync(FILE, lines.slice(-MAX_LINES).join('\n') + '\n')
+- `sqlite-mirror.js:44` —— try { mkdirSync(join(p, '..'), { recursive: true }) } catch {}
+- `statefile.js:44` —— if (Date.now() - st.mtimeMs > STALE_MS) { unlinkSync(lock); continue }
+- `statefile.js:57` —— if (held) { try { unlinkSync(lock) } catch {} }
+- `store-js.js:89` —— if (staleC) { try { unlinkSync(path) } catch {}; continue }
+- `store-js.js:97` —— try { unlinkSync(tmp) } catch {}
+- `store-js.js:110` —— try { unlinkSync(tmp) } catch {}
+- `store-js.js:113` —— try { unlinkSync(tmp) } catch {}
+- `store-js.js:120` —— try { unlinkSync(tmp) } catch {}
+- `store-js.js:123` —— try { unlinkSync(tmp) } catch {}
+- `store-js.js:143` —— try { unlinkSync(path) } catch {}
+- `store-js.js:160` —— try { unlinkSync(lock.path) } catch {}
+- `store-js.js:303` —— writeFileSync(metaPath, JSON.stringify(meta, null, 2), 'utf8')
+- `store-js.js:306` —— try { unlinkSync(tmp) } catch {}
+- `store.js:120` —— try { mirrorReplaceAll(sea, points, (data && data.edges) // []) } catc
+- `store.js:170` —— try { linkSync(lk, lockPath) } finally { try { unlinkSync(lk) } catch 
+- `store.js:179` —— unlinkSync(lockPath)
+- `store.js:199` —— try { unlinkSync(lockPath) } catch {}
+- `store.js:202` —— try { unlinkSync(lockPath) } catch {}
+- `store.js:228` —— if (held) { try { unlinkSync(lockPath) } catch {} }
+- `store.js:232` —— if (held) { try { unlinkSync(lockPath) } catch {} }
+- `store.js:258` —— if (held) { try { unlinkSync(lockPath) } catch {} }
+- `store.js:290` —— try { linkSync(lk, lp) } finally { try { unlinkSync(lk) } catch {} }
+- `store.js:317` —— try { unlinkSync(lp) } catch {}
+- `store.js:351` —— try { copyFileSync(p, join(dir, base + tag)) } catch {}
+- `store.js:353` —— try { copyFileSync(p, join(dir, base + tag)) } catch {}
+- `store.js:374` —— try { unlinkSync(join(dir, f)) } catch {}
+- `store.js:382` —— try { unlinkSync(join(dir, f)) } catch {}
+- `store.js:384` —— try { unlinkSync(join(dir, f)) } catch {}
+- `suppress.js:51` —— renameSync(tmp, SPOKEN_FILE)
+- `synth.js:165` —— try { withLock(CACHE_FILE, () => { writeFileSync(CACHE_FILE, JSON.stri
+- `thinkauto.js:41` —— try { withLock(FILE, () => { writeFileSync(FILE, JSON.stringify({ at: 
+- `thinkauto.js:135` —— try { writeFileSync(META_FILE, JSON.stringify(g), 'utf8') } catch {}
+- `tools.js:574` —— try { _fs9.mkdirSync(_dir, { recursive: true }) } catch {}
+- `tools.js:798` —— try { fs.mkdirSync(dir, { recursive: true }) } catch {}
+- `tools.js:1453` —— try { fs3.mkdirSync(_ddir, { recursive: true }) } catch {}
+- `tools.js:1472` —— try { fs2.mkdirSync(_ddir2, { recursive: true }) } catch {}
+- `tools.js:1475` —— fs2.writeFileSync(join(_ddir2, 'last-scores.json'), JSON.stringify({ q
+- `tools.js:2742` —— try { writeFileSync(_contactFile, JSON.stringify({ at: _r.at }), 'utf8
+- `tools.js:2744` —— try { writeFileSync(_contactFile, JSON.stringify({ at: _r.at }), 'utf8
+- `tools.js:3380` —— try { copyFileSync(src, join(desk, name)); n++ } catch {}
+
+## 读库（33 处）
+
+- `bodycost.js:99` —— if (existsSync(LEDGER)) L = { ...L, ...JSON.parse(readFileSync(LEDGER,
+- `embed-onnx.js:160` —— _ort.env.wasm.wasmBinary = readFileSync(wasmName)
+- `feedback.js:50` —— try { const o = JSON.parse(l); if (o && o.q) out.push(o) } catch {}
+- `feedback.js:109` —— try { bytes = existsSync(p) ? statSync(p).size : 0 } catch {}
+- `gate.js:79` —— if (fs.existsSync(f)) v = { ...v, ...JSON.parse(fs.readFileSync(f, 'ut
+- `inject.js:282` —— try { seen = JSON.parse(readFileSync(file, 'utf8')) // { sids: [] } } 
+- `inject.js:653` —— try { _prevTalk = JSON.parse(readFileSync(hp, 'utf8').replace(/^\uFEFF
+- `inject.js:1595` —— try { _big = statSync(_logPath).size > 8 * 1024 * 1024 } catch {}
+- `inject.js:1636` —— try { _map = JSON.parse(readFileSync(_sp, 'utf8').replace(/^\uFEFF/, '
+- `inject.js:1697` —— try { _toldAt = Number(JSON.parse(readFileSync(_toldPath, 'utf8')).at)
+- `live.js:81` —— if (existsSync(FILE)) copyFileSync(FILE, FILE + '.bak')
+- `lock.js:26` —— try { info = JSON.parse(readFileSync(lp, 'utf8')) } catch {}
+- `lock.js:54` —— try { got = JSON.parse(readFileSync(lp, 'utf8')) } catch {}
+- `log.js:28` —— try { if (existsSync(from)) renameSync(from, to) } catch {}
+- `log.js:31` —— try { if (existsSync(from)) renameSync(from, to) } catch {}
+- `monitor.js:127` —— try { list = JSON.parse(readFileSync(p, 'utf8')) } catch {}
+- `routes.js:3034` —— try { if (existsSync(c)) { py = c; break } } catch {}
+- `routes.js:3106` —— if (existsSync(_p)) _snap = { p: _p, body: readFileSync(_p, 'utf8') }
+- `routes.js:3343` —— if (existsSync(hp)) h = JSON.parse(readFileSync(hp, 'utf8').replace(/^
+- `session.js:69` —— try { _cacheMtime = statSync(BINDINGS).mtimeMs } catch {}
+- `sqlite-mirror.js:60` —— db.exec("CREATE VIRTUAL TABLE IF NOT EXISTS points_fts USING fts5(gram
+- `sqlite-mirror.js:146` —— try { out.push(JSON.parse(row.raw)) } catch {}
+- `sqlite-mirror.js:148` —— try { out.push(JSON.parse(row.raw)) } catch {}
+- `statefile.js:52` —— try { audit('statefile-lock-timeout', { file: String(file).slice(-80),
+- `store-js.js:88` —— } catch { try { staleC = Date.now() - statSync(path).mtimeMs > LOCK_TT
+- `store-js.js:140` —— try { stale = Date.now() - statSync(path).mtimeMs > LOCK_TTL_MS } catc
+- `store-js.js:183` —— try { if (statSync(fp).isFile() && statSync(fp).mtimeMs < cutoff) unli
+- `store.js:295` —— if (Date.now() - statSync(lp).mtimeMs > 60000) { unlinkSync(lp); conti
+- `thinkauto.js:161` —— const st = statSync(f)
+- `tools.js:820` —— if (fs.existsSync(f)) v = { ...v, ...JSON.parse(fs.readFileSync(f, 'ut
+- `tools.js:2177` —— try { const _st = await import('./store.js'); const _full = _st.readSe
+- `tools.js:2514` —— if (existsSync(_contactFile)) _lastContactAt = Number(JSON.parse(readF
+- `tools.js:3665` —— try { n = (JSON.parse(readFileSync(f, 'utf8')).points // []).filter((p
+
+## 时间（42 处）
+
+- `compaction.js:45` —— try { audit('rules-assert-shrunk', { where: tag, was: last, now }) } c
+- `compaction.js:54` —— try { audit('compaction-seen', { sid: String(sid // '').slice(0, 24), 
+- `inject.js:232` —— if (_last && (now - _last) < _gap * 60000) return null
+- `inject.js:236` —— try { markSpoken(pick, now) } catch {}
+- `inject.js:386` —— else when = new Date(b).getMonth() + 1 + ' 月份'
+- `inject.js:450` —— try { HOT_TEXT = await import(new URL('./hottext.js?v=' + Date.now(), 
+- `inject.js:457` —— if (_hotTimer && typeof _hotTimer.unref === 'function') _hotTimer.unre
+- `inject.js:499` —— at: Date.now(),
+- `inject.js:606` —— h0.absence = { hours: Number(_hrs.toFixed(1)), yearning: _y, estrangem
+- `inject.js:638` —— recordDims(_d8, Date.now())
+- `inject.js:1141` —— at: Date.now(),
+- `inject.js:1961` —— _lastKind.set(sid, { kind: _kind, text: _t2, at: Date.now() })
+- `inject.js:1962` —— _lastKind.set(sid, { kind: _kind, text: _t2, at: Date.now() })
+- `inject.js:2110` —— if (memTimer && typeof memTimer.unref === 'function') memTimer.unref()
+- `inject.js:2129` —— if (archTimer && typeof archTimer.unref === 'function') archTimer.unre
+- `inject.js:2145` —— try { audit('auto-recall-timer', { firstMin: 3, everyMin: 20 }) } catc
+- `inject.js:2146` —— try { audit('auto-recall-timer', { firstMin: 3, everyMin: 20 }) } catc
+- `mirror-import.js:157` —— mtime: new Date().toISOString().slice(0, 16).replace('T', ' '),
+- `routes.js:2827` —— if (m && m.text && Date.now() - Number(m.at // 0) < 5 * 60 * 1000) ret
+- `routes.js:2834` —— if (m && Number.isFinite(m.pct) && Date.now() - Number(m.at // 0) < 5 
+- `searchpool.js:28` —— try { clearTimeout(p.timer) } catch {}
+- `searchpool.js:82` —— settle(id, (x) => { try { x.reject(new Error('pool timeout ' + TIMEOUT
+- `searchpool.js:84` —— try { p.timer.unref && p.timer.unref() } catch {}
+- `store-js.js:224` —— _mirrorTimers.set(sea, t)
+- `store-js.js:257` —— try { audit('write-corrupt-blocked', { sea, nowN }) } catch {}
+- `store-js.js:263` —— try { audit('write-shrink-blocked', { sea, prevN, nowN }) } catch {}
+- `store.js:124` —— _mirrorTimers.set(sea, t)
+- `store.js:203` —— if (i === 59) { try { audit('write-lock-timeout', { sea }) } catch {} 
+- `store.js:227` —— try { audit('write-sea-shrink-blocked-locked', { sea, prevN: _prevN2, 
+- `store.js:300` —— try { audit('mutate-lock-timeout', { sea }) } catch {}
+- `store.js:457` —— try { writeMeta(sid, { name: String(name // sid), createdAt: Date.now(
+- `thinkauto.js:103` —— try { markThought(now) } catch {}
+- `tools.js:60` —— JSON.stringify({ t: Date.now(), sea: String(sea // 'main'), q: String(
+- `tools.js:802` —— q: String(query // '').slice(0, 40), where, at: Date.now(), ...(extra 
+- `tools.js:1353` —— if (_matched.length && _matched.every((w) => TIME.has(w))) { _dropCoun
+- `tools.js:1621` —— _RARE.set(_rareKey, { at: Date.now(), df: _rareDf, maxG: _rareMaxG })
+- `tools.js:2369` —— if (!_any) { try { noteSlow({ ms: Date.now() - _slowT0, sea, q: query,
+- `tools.js:2372` —— if (!_any) { try { noteSlow({ ms: Date.now() - _slowT0, sea, q: query,
+- `tools.js:2406` —— _nowNote = '（此刻 ' + d.getFullYear() + '-' + z(d.getMonth() + 1) + '-' 
+- `vecstore.js:78` —— idx.blob = { n: buf.length, h: createHash('sha1').update(buf).digest('
+- `vectors.js:286` —— try { noteVectorLatency(Date.now() - _t0) } catch {}
+- `vectors.js:597` —— try { audit('vector-backfill', { sea, filled, left, rounds, ms: Date.n
+
+## 路径（17 处）
+
+- `inject.js:438` —— line += '\n     后来补一句' + (day ? '（' + day + '）' : '') + '：' + [...Stri
+- `inject.js:1396` —— parts.push(_lines.join('\n'))
+- `routes.js:1680` —— try { rmSync(join(SEAS_DIR, d), { recursive: true, force: true }); n++
+- `tools.js:610` —— Promise.resolve(run(['--touch'])).then(() => copyDesktop()).catch(() =
+- `tools.js:698` —— conflictNote = '\n（跟 #' + hits.map((h) => h.id).join('、#') + ' 有点像在说反话
+- `tools.js:1059` —— try { await _markPath(query, 'short-literal', { n: hit0.length }) } ca
+- `tools.js:1072` —— }).join('\n'),
+- `tools.js:1218` —— if (add.length) _expand = _rawQ + ' ' + add.join(' ')
+- `tools.js:1420` —— why.push('词[' + _sw.join('/') + ']必[' + mustWord + ']')
+- `tools.js:1501` —— try { if (process.env.C2_TRACE === '1') console.error('[trace] top=' +
+- `tools.js:1502` —— try { if (process.env.C2_TRACE === '1') console.error('[trace] top=' +
+- `tools.js:1941` —— try { await _markPath(query, 'semantic-fallback', { id: _sem && _sem.p
+- `tools.js:2394` —— try { if (process.env.C2_TRACE === '1') console.error('[trace] out has
+- `tools.js:2479` —— if (ws.length) whyTxt = ' 〔' + ws.join(' · ') + '〕'
+- `tools.js:2494` —— noteTxt = '\n  后来补一句' + (day ? '（' + day + '）' : '') + '：' + [...Strin
+- `tools.js:2749` —— const _topWhy = scored[0] && Array.isArray(scored[0].why) ? scored[0].
+- `voicecheck.js:162` —— console.log('能追到：' + (t.length ? t.map((x) => '#' + x.id + '（重合 ' + x.
+
+## 其他（445 处）
+
+- `activity.js:60` —— try { closeSync(_fd) } catch {}
+- `affinity.js:62` —— try { const lv = Number(readLive().affinityMax); if (Number.isFinite(l
+- `affinity.js:66` —— if (Number.isFinite(env) && env > 0) cap = env
+- `ann.js:45` —— centroids: box.centroids.map((c) => Array.from(c)),
+- `banter-learn.js:34` —— writeJsonAtomic(FILE, o)
+- `body.js:83` —— writeJsonAtomic(FILE, s)
+- `candidates.js:81` —— for (const [, db] of _dbs) { try { db && db.close() } catch {} }
+- `compaction.js:41` —— try { audit('rules-assert-missing', { where: tag, was: last }) } catch
+- `compaction.js:59` —— try { audit('host-' + String(kind // 'error'), { err: String((err && e
+- `dynamics.js:34` —— if (Number.isFinite(it) && it >= IMPACT_INTENSITY) return true
+- `embed-onnx.js:255` —— if (nat && nat.length === list.length) return nat
+- `evidence.js:51` —— if (s) out.push(s)
+- `evidence.js:62` —— if (j && j.hash) return String(j.hash)
+- `feedback.js:82` —— if (o && o.q && String(o.sea // 'main') === want) return String(o.q)
+- `feedback.js:95` —— if (o && o.k === 'search' && (o.q // o.query)) return String(o.q // o.
+- `feedback.js:97` —— if (o && o.k === 'search' && (o.q // o.query)) return String(o.q // o.
+- `gate.js:157` —— try { for (const x of kept0) { if (Array.isArray(x.why)) x.why.push('语
+- `inject.js:13` —— if (n && n.length <= 12) return n
+- `inject.js:101` —— '}catch(e){}})()'
+- `inject.js:148` —— if (_rest.length) pts = _rest
+- `inject.js:191` —— _mood = { polarity: Number(_hh.polarity) // 0, arousal: Number(_hh.aro
+- `inject.js:204` —— const _a = Math.max(0, Math.min(1, (Number(_x.arousal) // 0) / 10))
+- `inject.js:209` —— else { try { audit('suppressed', { id: _p.id, reason: _d.reason }) } c
+- `inject.js:212` —— try { if (_kept.length !== _before) audit('suppress-count', { before: 
+- `inject.js:214` —— try { audit('suppress-fail', { err: String((e && e.message) // e).slic
+- `inject.js:242` —— try { backupSea(_sea) } catch {}
+- `inject.js:246` —— } catch { try { audit('recall-write-threw', { id: Number(pick.id) // 0
+- `inject.js:261` —— try { audit('auto-recall', { title: String(pick.title // '').slice(0, 
+- `inject.js:264` —— try { audit('auto-recall-err', { err: String((e && e.message) // e).sl
+- `inject.js:292` —— writeJsonAtomic(file, seen)
+- `inject.js:297` —— try { audit('inject-emptyhint-fail', { err: String((e && e.message) //
+- `inject.js:398` —— else if (days >= 7 && days < 60) when = '大概' + Math.round(days / 7) + 
+- `inject.js:404` —— if (contentConfidenceOf(p) < 0.5) contentNote = '（这条内容我不太确定）'
+- `inject.js:445` —— try { globalThis.__dshInjectBuild = (sid, q) => buildText(sid // 'sim'
+- `inject.js:515` —— h0.mix[k] = (Number(h0.mix[k]) // 0) * 0.6
+- `inject.js:517` —— h0.mix[k] = (Number(h0.mix[k]) // 0) * 0.6
+- `inject.js:520` —— try { audit('mood-skip-numb', { q: String(query).slice(0, 16), i: _jud
+- `inject.js:541` —— if (nv < 0.02) delete h0.mix[k]
+- `inject.js:574` —— try { audit('mood-impact-force', { q: String(query).slice(0, 16) }) } 
+- `inject.js:576` —— try { if (_judged && !_judged.text) _judged.text = String(query // '')
+- `inject.js:594` —— try { _next = suppressDims(_next) } catch {}
+- `inject.js:595` —— try { _next = towardBase(_next, SELF_BASELINE, 0.02) } catch {}
+- `inject.js:619` —— mixKeys: Object.keys(h0.mix // {}),
+- `inject.js:621` —— try { audit('mood-nopush', { q: '' }) } catch {}
+- `inject.js:624` —— try { audit('mood-err', { err: String((e && e.message) // e) }) } catc
+- `inject.js:643` —— try { bindSession('main', sid); bound = 'main' } catch {}
+- `inject.js:668` —— try { audit('absence-applied', _hA.absence) } catch {}
+- `inject.js:670` —— try { audit('absence-applied', _hA.absence) } catch {}
+- `inject.js:683` —— toneText = describeDims(dims)
+- `inject.js:693` —— if (th && th.title) doing = String(th.title).slice(0, 60)
+- `inject.js:708` —— writeJsonAtomic(hp, out)
+- `inject.js:710` —— writeJsonAtomic(hp, out)
+- `inject.js:737` —— try { if (dropped.length) globalThis.__dshDedupLast = dropped } catch 
+- `inject.js:802` —— if (recent.length >= _lim) break
+- `inject.js:849` —— try { _entCanon = buildEntityCanon(alive, data && data.entityAliases) 
+- `inject.js:911` —— if (v !== name && v.length >= 2 && query.includes(v)) { _vhit = true; 
+- `inject.js:976` —— if (_p3) sim = _rareOk(_p3, sim)
+- `inject.js:1016` —— Number(x.p.recallCount) // 0,
+- `inject.js:1040` —— if (_emCand.length) related = _emCand
+- `inject.js:1129` —— try { writeHeart(h0) } catch {}
+- `inject.js:1131` —— try { writeHeart(h0) } catch {}
+- `inject.js:1148` —— if (fl) head = '【她这会儿】' + fl + '（85%）'
+- `inject.js:1171` —— if (_dimLine && _dimLine !== '平') head += '，' + _dimLine
+- `inject.js:1183` —— try { _tone = toneForKey(k0, s, _temper) } catch {}
+- `inject.js:1199` —— rememberVerdict(sid, _b.banter ? 'banter' : (/傻/他妈/他吗/操/草/滚/废物/弱智/蠢/狗屎
+- `inject.js:1203` —— if (_r.allow) parts.push(swearLine(_r.why))
+- `inject.js:1232` —— _dimTxt = describeDims(projectDims((_hh && _hh.pad) // {}))
+- `inject.js:1244` —— _calm = _d ? (describeDims(_d) // '') : describeDims(projectDims((_h1 
+- `inject.js:1264` —— if (_st) parts.push('（他这句，我心里当：' + _st.label + '——' + _st.line + '）')
+- `inject.js:1278` —— parts.push('（他要是连着问同一件事，第二遍就直接给最短的那句答案，别绕回自己身上。他改了口，跟着新的走，别拿旧的安慰他。也别用“
+- `inject.js:1284` —— if (_w) parts.push(_w)
+- `inject.js:1294` —— parts.push('（允许打错字、允许说半句、允许倒装、允许突然停。别修得太整齐，别像稿子。）')
+- `inject.js:1295` —— parts.push('（允许打错字、允许说半句、允许倒装、允许突然停。别修得太整齐，别像稿子。）')
+- `inject.js:1318` —— parts.push('（这些是欠着的。他要是又提别的没兑现的，可以接一句；别一次全翻出来。）')
+- `inject.js:1332` —— parts.push('（不是新的开场，是接着上一次说。别复述这段，直接往下走。）')
+- `inject.js:1347` —— try { recordToday(_st) } catch {}
+- `inject.js:1352` —— if (trend) line += '（' + trend + '）'
+- `inject.js:1369` —— if (_neg) line += '｜最扎的一件：' + String(_neg.title).slice(0, 16)
+- `inject.js:1371` —— parts.push(line)
+- `inject.js:1405` —— try { _seenDays = (recentHistory(14) // []).length } catch {}
+- `inject.js:1457` —— parts.push('· ' + String(q.title // '').slice(0, 16) + '：' + String(q.
+- `inject.js:1458` —— parts.push('· ' + String(q.title // '').slice(0, 16) + '：' + String(q.
+- `inject.js:1471` —— parts.push('（别当哪条是准的。要用到的时候先问他一句。）')
+- `inject.js:1487` —— _asked = String(_prevTalk.said).slice(0, 60)
+- `inject.js:1500` —— try { markInjected(_pre[0]) } catch {}
+- `inject.js:1502` —— try { markInjected(_pre[0]) } catch {}
+- `inject.js:1513` —— parts.push('（跟这段对话无关。她可以走神提一句，也可以不说。）')
+- `inject.js:1528` —— parts.push('（只影响语气，不许说「你多久没来了」这种话。那是讨债。）')
+- `inject.js:1534` —— try { audit('inject-selfmode-fail', { err: String((e && e.message) // 
+- `inject.js:1554` —— try { audit('correct-hint', { n: _q.length }) } catch {}
+- `inject.js:1556` —— try { audit('correct-hint', { n: _q.length }) } catch {}
+- `inject.js:1608` —— recent: (recent // []).map((p) => Number(p && p.id ? p.id : p && p.see
+- `inject.js:1627` —— parts.push('· 该写成一句（60 字以内，第一人称，别解释）')
+- `inject.js:1658` —— if (_say) parts.push('· 他当时说的：「' + _say.slice(0, 40) + '」')
+- `inject.js:1663` —— parts.push('（不是他问的。这事儿是自己冒上来的。' +
+- `inject.js:1675` —— try { audit('inject-capped', { used: capped.used, dropped: capped.drop
+- `inject.js:1677` —— try { audit('inject-capped', { used: capped.used, dropped: capped.drop
+- `inject.js:1684` —— try { audit('dup-hint-shown', _hintInfo // {}) } catch {}
+- `inject.js:1686` —— try { audit('dup-hint-shown', _hintInfo // {}) } catch {}
+- `inject.js:1709` —— parts.push('（这些文档刚动过；要引用里面的数字，先翻原文，别凭印象。）')
+- `inject.js:1714` —— parts.unshift('（这轮四件必做：一、先接住他这句话本身，他说的鱼价、孩子、图纸是他自己的事，别拿我的旧事盖过去。二、他重复问同
+- `inject.js:1731` —— for (const _l of _ls.slice(-_n)) _extra.push(String(_l).slice(0, 400))
+- `inject.js:1739` —— if (_s) { _extra.push('【' + String((_h && _h.name) // '外部插件') + '】'); 
+- `inject.js:1743` —— for (const _e of _extra) parts.push(_e)
+- `inject.js:1772` —— _rows.push({ id: _p && _p.id, w: _pickWords((_p && (_p.title // '')) +
+- `inject.js:1779` —— _prev = readLastLine(_hitLog)
+- `inject.js:1816` —— try { audit('rules-reinjected', { why: chk.why, n: _lines2.length }) }
+- `inject.js:1822` —— try { audit('rules-assert-fail', { err: String((e && e.message) // e).
+- `inject.js:1836` —— mood: (function(){ try { return readHeart().mood // 'calm' } catch { r
+- `inject.js:1885` —— try { audit('reply-retry', { sid, kinds: _r.kinds }) } catch {}
+- `inject.js:1888` —— try { audit('reply-retry-fail', { sid, err: String((e && e.message) //
+- `inject.js:1892` —— try { audit('reply-retry-fail', { sid, err: String((e && e.message) //
+- `inject.js:1894` —— 
+- `inject.js:1904` —— noteCompaction(sid)
+- `inject.js:1906` —— noteCompaction(sid)
+- `inject.js:1908` —— agent.ctx.on('summary-error', (e) => { try { noteHostError('summary', 
+- `inject.js:1909` —— agent.ctx.on('summary-error', (e) => { try { noteHostError('summary', 
+- `inject.js:1911` —— agent.ctx.on('request-error', (e) => { try { noteHostError('request', 
+- `inject.js:1912` —— agent.ctx.on('request-error', (e) => { try { noteHostError('request', 
+- `inject.js:1921` —— try { audit('inbox-skip-self', { sid, kind: srcKind }) } catch {}
+- `inject.js:1924` —— try { audit('inbox-skip-self', { sid, kind: srcKind }) } catch {}
+- `inject.js:1944` —— try { audit('sarcasm', { txt: _t2.slice(0, 20) }) } catch {}
+- `inject.js:1948` —— try { audit('kind-override', { from: _kind, to: _finalKind }) } catch 
+- `inject.js:1956` —— try { audit('learn-word', { w: _r.learned, kind: _r.kind, from: _prev.
+- `inject.js:1970` —— if (_prev) observe(sid, _prev, String(txt))
+- `inject.js:1977` —— if (ref) lastRawRef.set(sid, ref)
+- `inject.js:1985` —— }).catch(() => {})
+- `inject.js:1997` —— try { audit('inject-no-systemPrompt', { sid: String(sid).slice(0, 24) 
+- `inject.js:2031` —— try { audit('inject-tick', { n: list.length, mounted: mounted.size, ti
+- `inject.js:2040` —— try { audit('inject-agent', { sid: String(sid).slice(0, 24), ok: true 
+- `inject.js:2042` —— try { audit('inject-agent-err', { sid: String(sid).slice(0, 24), err: 
+- `inject.js:2046` —— try { audit('inject-tick-err', { err: String(e && e.message), tick: _t
+- `inject.js:2082` —— const pr = pairOf(st)
+- `inject.js:2088` —— writeHeart(h)
+- `inject.js:2094` —— // 但 off 是 tick() 里的局部变量，清理器执行时取不到 —— 每轮抛一次
+- `inject.js:2095` —— // 但 off 是 tick() 里的局部变量，清理器执行时取不到 —— 每轮抛一次
+- `inject.js:2107` —— audit('mem-warn', { mb, delta: mb - _lastHeap })
+- `inject.js:2126` —— audit('archive-auto', { sea, n: moved.length })
+- `inject.js:2135` —— try { tryAutoRecall() } catch {}
+- `inject.js:2138` —— try { tryAutoRecall() } catch {}
+- `inject.js:2142` —— if (t2 && typeof t2.unref === 'function') t2.unref()
+- `inject.js:2155` —— try { audit('think-check', { ok: g.ok, why: g.why }) } catch {}
+- `inject.js:2158` —— try { audit('auto-think', { ok: !!r.ok, why: g.why, seed: r.thought ? 
+- `inject.js:2160` —— try { audit('auto-think', { ok: !!r.ok, why: g.why, seed: r.thought ? 
+- `inject.js:2164` —— try { if (t3 && typeof t3.unref === 'function') t3.unref() } catch {}
+- `inject.js:2172` —— try { audit('inject-interval', { kind: 'native', ok: true }) } catch {
+- `inject.js:2174` —— try { audit('inject-interval-err', { err: String(e && e.message) }) } 
+- `introversion.js:29` —— if (Number.isFinite(it)) w += Math.max(0, Math.min(1, it)) * 0.7
+- `live.js:61` —— if (Number.isFinite(v)) out[k] = sane(k, v)
+- `mirror-import.js:129` —— edges.push({ ...e, a, b })
+- `monitor.js:67` —— out.push(o)
+- `monitor.js:112` —— seas.push({ sea: name, total: h.total, coverage: h.coverage, stale: h.
+- `monitor.js:114` —— seas.push({ sea: name, total: h.total, coverage: h.coverage, stale: h.
+- `mood.js:214` —— 
+- `moodline.js:105` —— if (cur.series.length > 72) cur.series = cur.series.slice(-72)
+- `moodline.js:130` —— for (const k of keys) if (k < cutKey) delete line.days[k]
+- `pinyin.js:84` —— if (point) { try { _PYC.set(point, py) } catch {} }
+- `preoccupations.js:135` —— try { audit('preoccupations', { have: out.length, kept: ranked.length 
+- `prof.js:35` —— cur.marks[name] = Math.round(((cur.marks[name] // 0) + ms) * 100) / 10
+- `qbatch.js:24` —— if (CACHE.size > CACHE_MAX) CACHE.delete(CACHE.keys().next().value)
+- `quality.js:23` —— if (o && (o.quality === 'low' // o.quality === 'high' // o.quality ===
+- `replay.js:25` —— out.push(j)
+- `replay.js:76` —— if (r && Array.isArray(r.ids)) { got = r.ids.map(Number); ms = Number(
+- `replycheck.js:29` —— writeJsonAtomic(FILE, o)
+- `routes.js:84` —— try { audit('route-fail', { tag: tag // '', err: String((e && e.messag
+- `routes.js:229` —— try { todayChars += String(p.title // '').length + String(p.text // p.
+- `routes.js:238` —— try { heart = readHeart() // {} } catch {}
+- `routes.js:253` —— if (!moodText) { try { const d0 = dominant ? dominant(heart) : null; m
+- `routes.js:269` —— if (_txt) moodText = _txt
+- `routes.js:407` —— for (const d of bs.dims) m[d.key] = d.v
+- `routes.js:592` —— } finally { try { _lk && _lk.release && _lk.release() } catch {} }
+- `routes.js:639` —— } finally { try { _lk && _lk.release && _lk.release() } catch {} }
+- `routes.js:675` —— try { closeMirrorAll() } catch {}
+- `routes.js:690` —— try { rmSync(_trash, { recursive: true, force: true, maxRetries: 4, re
+- `routes.js:837` —— } finally { try { _lk && _lk.release && _lk.release() } catch {} }
+- `routes.js:909` —— try{ if(sessionStorage.getItem('dshSeaWidgetClosed')==='1') return; }c
+- `routes.js:931` —— try{ sessionStorage.setItem('dshSeaWidgetClosed','1'); }catch(_){}
+- `routes.js:932` —— try{ box.remove(); }catch(_){}
+- `routes.js:933` —— try{ mask.remove(); }catch(_){}
+- `routes.js:956` —— try{ sessionStorage.setItem('dshSeaWidgetClosed','1'); }catch(e){}
+- `routes.js:1003` —— }catch(e){}
+- `routes.js:1061` —— } finally { try { _lk && _lk.release && _lk.release() } catch {} }
+- `routes.js:1117` —— } finally { try { _lk && _lk.release && _lk.release() } catch {} }
+- `routes.js:1211` —— writeMeta(sea, m0)
+- `routes.js:1321` —— try { res.writeHead(500, { 'content-type': 'application/json; charset=
+- `routes.js:1322` —— try { res.end(JSON.stringify({ ok: false, err: String((e && e.message)
+- `routes.js:1342` —— try { res.writeHead(500, { 'content-type': 'application/json; charset=
+- `routes.js:1343` —— try { res.end(JSON.stringify({ ok: false, err: String((e && e.message)
+- `routes.js:1370` —— try { res.writeHead(500, { 'content-type': 'application/json; charset=
+- `routes.js:1371` —— try { res.end(JSON.stringify({ ok: false, err: String((e && e.message)
+- `routes.js:1397` —— try { res.writeHead(500, { 'content-type': 'application/json; charset=
+- `routes.js:1398` —— try { res.end(JSON.stringify({ ok: false, err: String((e && e.message)
+- `routes.js:1461` —— } finally { try { _lk && _lk.release && _lk.release() } catch {} }
+- `routes.js:2013` —— try { audit('vectors-get-mutate-blocked', { sea, action }) } catch {}
+- `routes.js:2110` —— } finally { try { _lk && _lk.release && _lk.release() } catch {} }
+- `routes.js:2128` —— } finally { try { _lk2 && _lk2.release && _lk2.release() } catch {} }
+- `routes.js:2182` —— res.end(JSON.stringify({ ok: false, error: String((e && e.message) // 
+- `routes.js:2213` —— res.end(JSON.stringify({ ok: false, error: String((e && e.message) // 
+- `routes.js:2258` —— res.end(JSON.stringify({ ok: false, error: String((e && e.message) // 
+- `routes.js:2481` —— moodStrength = Number(h.moodStrength) // 0
+- `routes.js:2587` —— bases.push({ sea: d.name, points: alive.length, edges: (data.edges // 
+- `routes.js:2695` —— 
+- `routes.js:2768` —— try { res.writeHead(500); res.end() } catch {}
+- `routes.js:2864` —— res.end(JSON.stringify({ ok: false, error: String((error && error.mess
+- `routes.js:3040` —— try { count = (all.listSeas() // []).length } catch {}
+- `routes.js:3045` —— points = d && Array.isArray(d.points) ? d.points.length : 0
+- `routes.js:3094` —— globalThis.__dshNoRot = u.searchParams.get('norot') === '1'
+- `routes.js:3146` —— res.end(JSON.stringify({ ok: false, error: String((e && e.message) // 
+- `routes.js:3185` —— res.end(JSON.stringify({ ok: false, error: String((e && e.message) // 
+- `routes.js:3228` —— thoughts = thoughts.concat(raw).sort((a, b) => (Number(b.born) // 0) -
+- `routes.js:3270` —— res.end(JSON.stringify({ ok: false, error: String((e && e.message) // 
+- `routes.js:3300` —— res.end(JSON.stringify({ ok: false, error: String((e && e.message) // 
+- `routes.js:3362` —— res.end(JSON.stringify({ ok: false, error: String((e && e.message) // 
+- `routes.js:3394` —— res.end(JSON.stringify({ ok: false, error: String((e && e.message) // 
+- `routes.js:3418` —— res.end(JSON.stringify({ ok: false, error: String((e && e.message) // 
+- `searchpool.js:33` —— try { p.rec.w.unref && p.rec.w.unref() } catch {}
+- `searchpool.js:55` —— if (p.rec === rec) settle(id, (x) => { try { x.reject(new Error('worke
+- `searchpool.js:80` —— try { rec.w.ref && rec.w.ref() } catch {}
+- `selfmind.js:68` —— try { audit('self-write-err', { err: String((e && e.message) // e).sli
+- `selfmind.js:165` —— try { audit('thought-flat', { score: thought.flatScore, why: String(v.
+- `selfmind.js:167` —— try { audit('thought-flat', { score: thought.flatScore, why: String(v.
+- `selfmind.js:181` —— try { audit('self-thought', { id: thought.id, origin: thought.origin, 
+- `selfmode.js:101` —— try { audit('selfmode-level', { from: before, to: level }) } catch {}
+- `selfmode.js:180` —— try { audit('selfmode-trip', { reason: m.trippedReason }) } catch {}
+- `selfmode.js:188` —— try { audit('selfmode-trip', { reason: m.trippedReason }) } catch {}
+- `selfmode.js:194` —— try { audit('selfmode-write-fail', { level: m.level, tokens: m.tokensT
+- `session.js:56` —— if (!v // Number(v.at // 0) < cut) delete obj.bySid[sid]
+- `session.js:85` —— if (m && String(m.session // '') === String(sid)) return name
+- `session.js:126` —— writeMeta(sea, m)
+- `shortvoice.js:66` —— if (w) learned = scoreWith(w, t)
+- `sqlite-mirror.js:94` —— .run(id, gramsOf(String(p.title // '') + String(p.alias // '') + Strin
+- `sqlite-mirror.js:109` —— try { db.exec('DELETE FROM points_fts') } catch {}
+- `sqlite-mirror.js:124` —— try { _dbs.get(sea) && _dbs.get(sea).exec('ROLLBACK') } catch {}
+- `sqlite-mirror.js:165` —— if (r) out.push(r)
+- `sqlite-mirror.js:170` —— for (const [, db] of _dbs) { try { db.close() } catch {} }
+- `statefile.js:20` —— Atomics.wait(new Int32Array(sab), 0, 0, ms)
+- `store-js.js:216` —— try { audit('mirror-deferred-failed', { sea, err: String(mr.err // '没写
+- `store-js.js:219` —— try { audit('mirror-deferred-failed', { sea, err: String((e && e.messa
+- `store-js.js:258` —— try { unlockSea(lock) } catch {}
+- `store-js.js:267` —— try { unlockSea(lock) } catch {}
+- `store-js.js:271` —— try { unlockSea(lock) } catch {}
+- `store.js:70` —— try { audit('read-sea-badname', { sea: String(sea).slice(0, 40) }) } c
+- `store.js:81` —— if (data && Array.isArray(data.points)) for (const _p of data.points) 
+- `store.js:84` —— try { audit('read-sea-version-too-new', { sea, v, current: CURRENT_SCH
+- `store.js:142` —— if (!opt.noDup && data && Array.isArray(data.points)) flagDuplicates(d
+- `store.js:145` —— try { audit('write-sea-badname', { sea: String(sea).slice(0, 40) }) } 
+- `store.js:190` —— try { audit('write-lock-holder-dead', { sea, pid: _pid }) } catch {}
+- `store.js:198` —— try { audit('write-lock-self-stale', { sea }) } catch {}
+- `store.js:209` —— } catch (e0) { if (!e0 // e0.code !== 'SKIP_LOCK') { try { audit('writ
+- `store.js:215` —— try { audit('write-sea-lock-refused', { sea }) } catch {}
+- `store.js:242` —— try { audit('backup-before-write-failed', { sea, err: String(_bk.err /
+- `store.js:262` —— try { audit('write-sea-fail', { sea, err: String((e && e.message) // e
+- `store.js:279` —— try { audit('mutate-sea-badname', { sea: String(sea).slice(0, 40) }) }
+- `store.js:309` —— try { audit('mutate-sea-unreadable-refused', { sea }) } catch {}
+- `store.js:433` —— try { audit('ensure-sea-badname', { id: String(id).slice(0, 40) }) } c
+- `suppress.js:37` —— if (v > cut) m.set(k, v)
+- `synth.js:163` —— if (ok) return j.pairs
+- `temperament.js:41` —— if (o && VALID.includes(o.temperament)) v = o.temperament
+- `text.js:103` —— if (em) for (const w of em) if (w.length >= 2) set.add(w.toLowerCase()
+- `think.js:74` —— if (seed && seed.dims) dims = seed.dims
+- `think.js:116` —— const hm = humanness(clean)
+- `think.js:120` —— try { releaseThink(t) } catch {}
+- `think.js:126` —— try { touchThought(r.thought.id, t) } catch {}
+- `thinkauto.js:84` —— if (plan && plan.ok) prompt = plan.prompt
+- `thinkauto.js:171` —— pending = alive.some((p) => /缺/还没/待/下一步/差/.test(String(p.text // '')))
+- `tick.js:152` —— 
+- `tick.js:166` —— 
+- `tools-evolve.js:87` —— try { unlockSea(lock) } catch {}
+- `tools-evolve.js:100` —— try { unlockSea(lock) } catch {}
+- `tools-think.js:59` —— try { audit('memory-think-plan', { seed: p.seed ? p.seed.id : 0 }) } c
+- `tools-think.js:67` —— try { audit('memory-think-done', { id: r.thought && r.thought.id, flat
+- `tools-uncertain.js:58` —— try { audit('memory-confirm', { sea, id, before, after: p.confidence }
+- `tools-uncertain.js:66` —— try { _lock.release() } catch {}
+- `tools-uncertain.js:105` —— try { audit('memory-doubt', { sea, id, before, why: why.slice(0, 40) }
+- `tools-uncertain.js:112` —— try { _lock.release() } catch {}
+- `tools.js:46` —— if (ok === false) { try { audit('write-refused', { tag: String(tag // 
+- `tools.js:49` —— try { audit('write-failed', { tag: String(tag // ''), sea, err: String
+- `tools.js:228` —— if (ref) args.evidence = ref
+- `tools.js:235` —— try { ensureSea(_lockSea) } catch {}
+- `tools.js:249` —— try { _lock && _lock.release && _lock.release() } catch {}
+- `tools.js:256` —— 
+- `tools.js:280` —— if (recentP && recentP.entities && recentP.entities[0]) {
+- `tools.js:326` —— if (args.evidence.quote) argv.push('--ev-quote', String(args.evidence.
+- `tools.js:352` —— process.env.DSH_SEA_ALIAS = args.alias.trim().slice(0, 60)
+- `tools.js:399` —— if (s > _cbest) { _cbest = s; _cid = Number(id) }
+- `tools.js:405` —— if (_jbest >= 0.8 // _cbest >= 0.92) {
+- `tools.js:458` —— } catch {}          } catch (e9) {
+- `tools.js:502` —— newTitle: String(args.title // '').slice(0, 30),
+- `tools.js:506` —— 
+- `tools.js:507` —— 
+- `tools.js:517` —— if (_aliasBak === null) delete process.env.DSH_SEA_ALIAS
+- `tools.js:533` —— try { backupSea(sea) } catch {}
+- `tools.js:535` —— try { audit('postflag', { id: _maxId, rule: args.rule === true, open: 
+- `tools.js:540` —— try { audit('postflag-fail', { err: String((e && e.message) // e) }) }
+- `tools.js:582` —— try { audit('writer-shadow-fail', { err: String((e && e.message) // e)
+- `tools.js:599` —— if (_d && Array.isArray(_d.points)) await syncVectors(sea, _d, 20)
+- `tools.js:619` —— if (/拒绝写入/没写进去/.test(_log)) {
+- `tools.js:644` —— try { audit('memory-flat', { id: newest.id, voice: vc.score, human: hm
+- `tools.js:646` —— try { audit('memory-flat', { id: newest.id, voice: vc.score, human: hm
+- `tools.js:652` —— voiceNote = '\n（质量：具体物 ' + vc.score.toFixed(2) + '、人味 ' + hm.score.toF
+- `tools.js:693` —— try { audit('memory-conflict', { id: newest.id, with: hits.map((h) => 
+- `tools.js:703` —— try { _lock.release() } catch {}
+- `tools.js:748` —— 
+- `tools.js:1000` —— try { if (args && args.query) { const _FB = await import('./feedback.j
+- `tools.js:1001` —— try { begin() } catch {}
+- `tools.js:1013` —— if (Number.isFinite(_n)) limit = Math.max(1, Math.min(12, _n))
+- `tools.js:1015` —— try { if (qualityRank() < 2) limit = Math.max(1, Math.min(limit, 4)) }
+- `tools.js:1024` —— if (_q2 && _q2 !== query) { query = _q2; _referent = _q2 }
+- `tools.js:1035` —— if (_core && _core !== query && [..._core].length >= 4) query = _core
+- `tools.js:1054` —— try { backupSea(sea) } catch {}
+- `tools.js:1055` —— try { writeChecked(sea, d0, 'tool-d0') } catch {}
+- `tools.js:1056` —— try { audit('mark-closed', { n: _closed, q: query.slice(0, 24), via: '
+- `tools.js:1058` —— try { audit('mark-closed', { n: _closed, q: query.slice(0, 24), via: '
+- `tools.js:1090` —— asOfLabel = fmtDay(ms)
+- `tools.js:1146` —— try { audit('typo-char-dropped', { n: _ghost.length }) } catch {}
+- `tools.js:1150` —— try { audit('typo-char-dropped', { n: _ghost.length }) } catch {}
+- `tools.js:1165` —— if (Number.isFinite(_a)) _moodArousal = Math.max(0, Math.min(1, _a)) *
+- `tools.js:1177` —— data.points.push({ ...p, _bridged: true })
+- `tools.js:1182` —— try { const _FB = await import('./feedback.js'); _FB.rememberQuery(sea
+- `tools.js:1224` —— if (/^[A-Za-z][A-Za-z0-9_-]*$/.test(w)) q.add(w.toLowerCase())
+- `tools.js:1230` —— try { const _parts = splitQuery(query); if (_parts.length > 1) addPart
+- `tools.js:1232` —— try { for (const _nf of numberForms(query)) for (const _g of gramsOf(_
+- `tools.js:1252` —— for (const x of _ids2) if (!_set.has(x)) { _ids.push(x); _set.add(x) }
+- `tools.js:1265` —— edges: (data.edges // []).filter((e) => _set.has(Number(e.from)) && _s
+- `tools.js:1277` —— if (s.size && s.size < data.points.length * 0.8) _lexCand = s
+- `tools.js:1302` —— if (c > 0 && c < bestC) { bestC = c; mustWord = wq }
+- `tools.js:1399` —— else if (rd < 0.5) rel *= 0.8
+- `tools.js:1425` —— if (!_neutral) { try { score *= rankWeight(p) } catch {} }
+- `tools.js:1444` —— try { mark('lexical') } catch {}
+- `tools.js:1458` —— JSON.stringify({ q: query, qWords: (typeof qWords !== 'undefined' ? qW
+- `tools.js:1510` —— try { mark('rare') } catch {}
+- `tools.js:1554` —— try { audit('search-entity-alias-fail', { err: String((e && e.message)
+- `tools.js:1557` —— scored.sort((a, b) => b.score - a.score)
+- `tools.js:1563` —— try { mark('embed') } catch {}
+- `tools.js:1565` —— try { if (process.env.C2_TRACE === '1') console.error('[trace] vec-blo
+- `tools.js:1572` —— try { if (process.env.C2_TRACE === '1') console.error('[trace] disk=' 
+- `tools.js:1588` —— }        if (!vmap) vmap = loadVectors(sea)
+- `tools.js:1589` —— try { mark('vload') } catch {}
+- `tools.js:1591` —— try { mark('cfg') } catch {}
+- `tools.js:1646` —— if (_c2 && _c2.size && _c2.size < vmap.size * 0.9) _vecCand = _c2
+- `tools.js:1647` —— try { mark('sem1') } catch {}
+- `tools.js:1650` —— try { for (const _w of expandQuery(query)) for (const _g of gramsOf(_w
+- `tools.js:1652` —— try { _intentOp = (process.env.C2_INTENT2 === '0' ? classifyIntent(que
+- `tools.js:1697` —— if (_intentOp && /成了/跑通/定了/记一/踩坑/实测/修好/搬上/接进/上线/.test(String(p.title /
+- `tools.js:1702` —— try { mark('sem2') } catch {}
+- `tools.js:1704` —— try { mark('sem2') } catch {}
+- `tools.js:1711` —— if (eh.down) vectorNote = '\n（语义层这会儿没连上，只按字面找的。可能漏掉意思相近但用词不同的那些。）'
+- `tools.js:1771` —— if (_res.length) { for (const _r of _res) { _r.why = ['直扫救回']; if (!sc
+- `tools.js:1803` —— limit, results: [], src: String((args && args.src) // 'tool'), note: '
+- `tools.js:1809` —— try { withImpulse(scored) } catch {}
+- `tools.js:1815` —— try { mark('graph') } catch {}
+- `tools.js:1836` —— if (mustWord && !s2.includes(mustWord)) continue
+- `tools.js:1869` —— if (mustWord && !s3.includes(mustWord)) continue
+- `tools.js:1875` —— scored.sort((a, b) => b.score - a.score)
+- `tools.js:1914` —— if (!_n) vectorNote += '\n（语义索引这会儿没建起来——这条暂时只能按字面查到，等向量服务回来会自动补。）'
+- `tools.js:1929` —— try { if ((!_kept // !_kept.length) && scored.length && scored.length 
+- `tools.js:1930` —— try { if (process.env.C2_TRACE === '1') console.error('[trace] gate ha
+- `tools.js:1931` —— try { mark('gate') } catch {}
+- `tools.js:1940` —— try { _sem.why = Array.isArray(_sem.why) ? _sem.why.concat(['语义保底']) :
+- `tools.js:1949` —— try { mark('rescue') } catch {}
+- `tools.js:1954` —— for (const _r of _res) { _r.why = ['直扫救回'] }
+- `tools.js:1957` —— try { if (scored.length !== _before) audit('search-word-gate', { sea, 
+- `tools.js:1959` —— try { audit('search-gate-fail', { err: String((e && e.message) // e).s
+- `tools.js:1972` —— return (Number(b.score) // 0) - (Number(a.score) // 0)
+- `tools.js:1990` —— try { audit('mark-closed', { n: _closed, q: String(query // '').slice(
+- `tools.js:1992` —— try { audit('mark-closed', { n: _closed, q: String(query // '').slice(
+- `tools.js:2010` —— try { audit('mark-open', { id: target.id, q: String(query // '').slice
+- `tools.js:2013` —— try { audit('mark-open', { id: target.id, q: String(query // '').slice
+- `tools.js:2018` —— try { backupSea(sea) } catch {}
+- `tools.js:2019` —— try { writeChecked(sea, data, 'tool-main') } catch {}
+- `tools.js:2046` —— const cb = wb.includes('去标点字面') ? 1 : 0
+- `tools.js:2068` —— scored.sort((a, b) => ((Number(b.score) // 0) + (bonus.get(b) // 0)) -
+- `tools.js:2101` —— try { audit('search-pinyin', { sea, q: String(query // '').slice(0, 24
+- `tools.js:2106` —— try { audit('search-pinyin-fail', { err: String((e && e.message) // e)
+- `tools.js:2127` —— scored.unshift({ p: _p2, hit: 1, rel: 1, score: 0.88, why: ['整句兜底'] })
+- `tools.js:2145` —— scored.push({ p: p3, hit: 1, rel: 0.5, score: isRule ? 0.95 : 0.9, why
+- `tools.js:2148` —— try { mark('vector') } catch {}
+- `tools.js:2149` —— try { mark('rerank') } catch {}
+- `tools.js:2155` —— if (f && f.p) _preTop = { id: Number(f.p.id), hit: Number(f.hit) // 0,
+- `tools.js:2156` —— try { scored = rerank(scored, query) } catch {}
+- `tools.js:2157` —— try { const RG = await import('./rerankguard.js'); scored = RG.applyRe
+- `tools.js:2159` —— try { const TN = await import('./tense.js'); scored = TN.applyTenseRan
+- `tools.js:2169` —— scored.sort((a, b) => b.score - a.score)
+- `tools.js:2180` —— try { if (process.env.C2_TRACE === '1') console.error('[trace] rel in,
+- `tools.js:2196` —— try { if (process.env.C2_TRACE === '1') console.error('[trace] rel nb=
+- `tools.js:2210` —— if (added) scored.sort((a, b) => b.score - a.score)
+- `tools.js:2244` —— return { ok: true, log: notRecorded(query), conf: 'none' }
+- `tools.js:2274` —— return { ok: true, log: notRecorded(query), conf: 'none' }
+- `tools.js:2286` —— scored.sort((a, b) => b.score - a.score)
+- `tools.js:2303` —— if (_at > 0) scored.unshift(scored.splice(_at, 1)[0])
+- `tools.js:2317` —— try { _qv = await embedQuery(query) } catch {}
+- `tools.js:2335` —— scored = _rows.map((r) => r.x).concat(_rest)
+- `tools.js:2339` —— try { recordMiss(sea, query, 'rerank-gate') } catch {}
+- `tools.js:2349` —— _verdictNote = VM.verdictNote(_vr.intent)
+- `tools.js:2351` —— try { finish() } catch {}
+- `tools.js:2356` —— noteSlow({ ms: _ms, sea, q: query, seg: _segs })
+- `tools.js:2391` —— if (String(process.env.C2_FAKE_GATE // '') === '1' && _cov < Number(tu
+- `tools.js:2463` —— if (_age !== null && _age > 30) _supNote += '（这条是 ' + _age + ' 天前的数，可能
+- `tools.js:2466` —— if (_age !== null && _age > 30) _supNote += '（这条是 ' + _age + ' 天前的数，可能
+- `tools.js:2481` —— try { markTxt = markText(p) } catch {}
+- `tools.js:2483` —— try { if (p.flat) markTxt += '〔这条当时写得泛〕' } catch {}
+- `tools.js:2503` —— shown: Math.min(limit, scored.length),
+- `tools.js:2535` —— try { audit('searchlog-fail', { err: String((e && e.message) // e) }) 
+- `tools.js:2586` —— scored.sort((a, b) => b.score - a.score)
+- `tools.js:2688` —— if (_ask === 'num' ? !_hasNum : !_hasName) { _shapeRefuse = true; _sha
+- `tools.js:2712` —— + (_why ? '。当时收它的理由：' + _why.slice(0, 30) : '')
+- `tools.js:2720` —— if (_rp.note) { _objNote = _rp.note; query = _rp.query }
+- `tools.js:2731` —— if (_ref) { noteRefusal(sea, query, 'gap'); return { ok: true, logId, 
+- `tools.js:2785` —— else return { ok: true, logId, log: notRecorded(query), conf: 'none' }
+- `tools.js:2800` —— _conf = _r0 >= Number(_T.confHigh ?? 0.8) ? 'high' : _r0 >= Number(_T.
+- `tools.js:2889` —— sea: String((args && args.sea) // 'main'),
+- `tools.js:3127` —— if (days.size >= 2) hints.push('这事他提过不止一次了，可以问「你最近老提起这个」')
+- `tools.js:3214` —— try { _lock.release() } catch {}
+- `tools.js:3435` —— .map((d) => d.name)
+- `tools.js:3598` —— if (!_n2) audit('vector-miss-after-write', { sea, kind: 'promise' })
+- `tools.js:3631` —— try { _lock && _lock.release && _lock.release() } catch {}
+- `tools.js:3667` —— try { const m = readMeta(name); if (m && m.name) title = m.name } catc
+- `tools.js:3670` —— out.push('· ' + title + '（' + name + '）' + n + ' 条')
+- `tools.js:3862` —— rr = { sea: r.sea, log: String((deep && deep.log) // '') }
+- `vecidx.js:229` —— map.set(Number(id), Float32Array.from(f))
+- `vecidx.js:253` —— if (fd >= 0) { try { closeSync(fd) } catch {} }
+- `vecstore.js:105` —— if (fd >= 0) { try { closeSync(fd) } catch {} }
+- `vecstore.js:122` —— map.set(Number(id), Float32Array.from(f))
+- `vecstore.js:178` —— try { writeShadow(sea, entries) } catch {}
+- `vecstore.js:251` —— try { audit('vec-migrate', { sea, n }) } catch {}
+- `vecstore.js:254` —— try { audit('vec-migrate-err', { sea, err: String((e && e.message) // 
+- `vectors.js:110` —— if (!v // !v.length) { try { VX.queueAdd(sea, [point.id]) } catch {} ;
+- `vectors.js:118` —— try { _VEC.delete(sea) } catch {}
+- `vectors.js:124` —— VX.queueDrop(sea, [point.id])
+- `vectors.js:217` —— try { audit('vector-write-err', { err: String((e && e.message) // e).s
+- `vectors.js:221` —— try { _VEC.delete(sea) } catch {}
+- `vectors.js:222` —— try { audit('vector-sync', { sea, added: done }) } catch {}
+- `vectors.js:232` —— .map((p) => ({ id: p.id, h: raw[String(p.id)].h, v: raw[String(p.id)].
+- `vectors.js:236` —— try { audit('vector-sync-err', { err: String((e && e.message) // e).sl
+- `vectors.js:243` —— try { _VEC.delete(sea) } catch {}
+- `vectors.js:244` —— try { _VEC_S.delete(sea) } catch {}
+- `vectors.js:284` —— if (obj && Array.isArray(obj.v) && obj.v.length) map.set(Number(id), F
+- `vectors.js:305` —— if (obj && Array.isArray(obj.sv) && obj.sv.length) map.set(Number(id),
+- `vectors.js:354` —— if (_QEMO.size > 128) _QEMO.delete(_QEMO.keys().next().value)
+- `vectors.js:390` —— try { audit('embed-down', { err: String(e && e.message).slice(0, 80) }
+- `vectors.js:593` —— try { opt.onProgress({ filled, remaining: vectorGap(sea, data).need })
+- `vectors.js:625` —— export function noteVectorLatency(ms) { try { VX.noteLatency(ms) } cat
+- `visitor.js:48` —— moodLine = '【她这会儿】' + labelOfSafe(parts[0][0]) + '（' + Math.round(part
+- `write-js.js:83` —— try { mirrorUpsert(sea, point) } catch {}
+- `writer-js.js:122` —— .map((x) => x.trim()).filter((x) => x && !x.startsWith('#'))
+
+
+## 下一班优先顺位（2026-11-21 凌晨排的，只排不改）
+
+排的原则：错的后果越大越靠前。写库那档里，凡是「写的是他攒下来的东西」的排前面；
+「写的是自己的账、丢了大不了重算」的排后面。以下都还没判、没撞、没改。
+
+1. `routes.js:3001` —— 写识海那一步外面挂着 `finally` 里的空 catch；路由层出错时的收尾全靠它，先撞「写失败但接口报成功」。
+2. `routes.js:3128` —— 测时间的接口跑完要把情绪文件改回去；改不回去，测试的假时间就留在真状态里（这事以前栽过）。
+3. `routes.js:3119` —— 同上，把情绪时间往前拨那一步。
+4. `store-js.js:89` —— 抢锁时删过期锁失败：删不掉就一直走重试，最后可能整次写入被跳过。
+5. `statefile.js:44` —— 同一类：过期锁删不掉还继续循环，靠超时兜底（超时本身有审计，这处略轻）。
+6. `logfile.js:27` —— 日志轮转：轮不掉就一路长（跟今晚修的检索日志是一对）。
+7. `inject.js:1646` —— 「忽然想起」的去重表：写失败就每轮重复同一条提示。
+8. `inject.js:1700` —— 「已经说过」的时间戳：写失败会重复提醒同一件事。
+9. `slowlog.js:54` —— 慢日志修剪写失败：文件一路长。
+10. `store-js.js:97 / 110 / 113 / 120 / 123 / 143` —— 一串删临时文件：删不掉只是留垃圾，最轻，最后再管。
+
+读库那档三十三处整体比写库轻（读失败多半退回默认值），但 `live.js`、`gate.js`、`bodycost.js` 那几处读的是配置和账本，
+读失败会悄悄用默认值——这一类的判法是「看默认值错得有多离谱」，下一班按这个思路过一遍。
+
+## 全部归类（2026-11-21 凌晨，按「错起来会怎样」分五类）
+
+合计 591 处。
+
+- 其他：387 处
+- 记账（失败只丢账）：118 处
+- 清理类（失败只留垃圾）：32 处
+- 读（失败会退默认值）：25 处
+- 写用户数据（失败会丢东西）：23 处
+- 建目录（失败会在后续报错）：6 处
+
+### 写用户数据那一类，逐条列出（23 处）
+
+- `inject.js:1651` —— writeFileSync(_sp, JSON.stringify({ shown: _map }), 'utf8')
+- `inject.js:1705` —— try { writeFileSync(_toldPath, JSON.stringify({ at: Date.now
+- `inject.js:1802` —— appendBounded(_hitLog, _line + '\n')
+- `log.js:28` —— try { if (existsSync(from)) renameSync(from, to) } catch {}
+- `log.js:31` —— try { if (existsSync(from)) renameSync(from, to) } catch {}
+- `logfile.js:27` —— try { writeFileSync(file + '.1', body, 'utf8') } catch {}
+- `mirror-import.js:140` —— copyFileSync(targetFile, bak)
+- `routes.js:3001` —— try { writeSea(sea, data) } finally { try { _lk3 && _lk3.rel
+- `routes.js:3119` —— writeFileSync(_snap.p, JSON.stringify(hh), 'utf8')
+- `routes.js:3128` —— if (_snap && !_keep) writeFileSync(_snap.p, _snap.body, 'utf
+- `slowlog.js:54` —— writeFileSync(FILE, lines.slice(-MAX_LINES).join('\n') + '\n
+- `store-js.js:303` —— writeFileSync(metaPath, JSON.stringify(meta, null, 2), 'utf8
+- `store.js:120` —— try { mirrorReplaceAll(sea, points, (data && data.edges) || 
+- `store.js:351` —— try { copyFileSync(p, join(dir, base + tag)) } catch {}
+- `store.js:353` —— try { copyFileSync(p, join(dir, base + tag)) } catch {}
+- `suppress.js:51` —— renameSync(tmp, SPOKEN_FILE)
+- `synth.js:165` —— try { withLock(CACHE_FILE, () => { writeFileSync(CACHE_FILE,
+- `thinkauto.js:41` —— try { withLock(FILE, () => { writeFileSync(FILE, JSON.string
+- `thinkauto.js:135` —— try { writeFileSync(META_FILE, JSON.stringify(g), 'utf8') } 
+- `tools.js:1475` —— fs2.writeFileSync(join(_ddir2, 'last-scores.json'), JSON.str
+- `tools.js:2742` —— try { writeFileSync(_contactFile, JSON.stringify({ at: _r.at
+- `tools.js:2744` —— try { writeFileSync(_contactFile, JSON.stringify({ at: _r.at
+- `tools.js:3380` —— try { copyFileSync(src, join(desk, name)); n++ } catch {}

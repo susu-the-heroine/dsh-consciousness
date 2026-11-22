@@ -1,0 +1,10 @@
+{
+ "title": "Identifying Hearing Difficulty Moments in Conversational Audio.",
+ "authors": "Collins J, Buzea A, Collier C, Rosen AB, Maclaren J, Lyon RF, Miles K, Carlile S.",
+ "year": "2026",
+ "journal": "Trends in hearing",
+ "doi": "10.1177/23312165261446379",
+ "pmid": "42023978",
+ "pmcid": "PMC13121483",
+ "abstract": "Individuals regularly experience <i>Hearing Difficulty Moments</i> in everyday conversation. Identifying Hearing Difficulty Moments has particular significance in the field of hearing assistive technology where timely interventions are key for real-time hearing assistance. In this article, we propose and compare machine learning solutions for the temporal detection of segments containing Hearing Difficulty Moments in conversational audio. We show that audio language models, through their multimodal reasoning capabilities, can achieve state-of-the-art results for this task, significantly outperforming a simple automatic speech recognition (ASR) hotword heuristic and a more conventional fine-tuning approach with Wav2Vec, an audio-only input architecture that is state-of-the-art for ASR."
+}

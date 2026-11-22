@@ -30,6 +30,12 @@ ok(!allowSwear('joy', 1).allow, '高兴不许骂')
 ok(!allowSwear('dejected', 0.5).allow, '有点蔫 0.5 → 还不许')
 ok(!allowSwear('tired', 0.9).allow, '累不等于崩')
 
+// 2026-11-21：上面九条只测了「认识的情绪」。认不出来的情绪、给不出强度的时候，
+// 到底开不开闸——一条没测。实测是关着（fail-closed），把这层钉进来，
+// 免得哪天改判断时顺手把它变成默认放行。
+ok(!allowSwear(undefined, 0.9).allow, '情绪认不出来 → 不许骂（宁可憋着）')
+ok(!allowSwear('angry', undefined).allow, '强度给不出 → 不许骂')
+
 // 开闸的话得说清为什么
 const line = swearLine('火了')
 ok(/允许骂/.test(line) && /火了/.test(line), '许可里说了原因', line)

@@ -86,8 +86,8 @@ const s1 = D.step(old1, next1, { baseline, rate: 0.05 })
 ok(Math.abs(sum(s1) - 1) < 0.01, 'step 之后仍然是合法状态')
 ok(D.drift(old1, s1) < 0.6, 'step 不会让一次普通输入就换个人')
 
-console.log('\n通过 ' + pass + ' · 失败 ' + fail)
-process.exit(fail ? 1 : 0)
+// 2026-11-21：这两句原来写在这里——先算完就退出，后面整块「离开的说法」永远跑不到。
+// 那两条断言从来没执行过，测试却一直报全过。挪到文件末尾。
 console.log('\n离开的说法（词表兜不住，靠句式）：')
 {
   const D = await import(BASE + 'lib/dynamics.js')
@@ -106,4 +106,7 @@ console.log('\n离开的说法（词表兜不住，靠句式）：')
   }
   ok(okAll, '日常话不被误判成离开')
 }
+
+console.log('\n通过 ' + pass + ' · 失败 ' + fail)
+process.exit(fail ? 1 : 0)
 

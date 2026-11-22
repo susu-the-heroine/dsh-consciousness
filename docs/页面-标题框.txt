@@ -1,0 +1,2 @@
+1605: + label('标题') + input('edTitle2', p.title, 32)
+1643: title: document.getElementById('edTitle2').value.trim(),

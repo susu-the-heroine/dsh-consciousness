@@ -9,11 +9,28 @@
  *
  * 跑法：node test/continuity.test.mjs
  */
-import { writeFileSync, mkdirSync, rmSync, existsSync } from 'node:fs'
+import { writeFileSync, mkdirSync, rmSync, existsSync, mkdtempSync, copyFileSync } from 'node:fs'
 import { join } from 'node:path'
-import { homedir } from 'node:os'
+import { homedir, tmpdir } from 'node:os'
 
-const HOME = process.env.USERPROFILE || homedir()
+// 2026-11-21：这份测试原来直接往真库的交接条上写假的，跑完还把它删掉——
+// 跑一次，你真正的「上次说到哪儿」就没了。跟前面几份一个病：没把自己关进沙箱。
+// 现在先建临时家目录，路径都按它算，跑完删干净。
+const REAL_HOME = homedir()
+const TMP_HOME = mkdtempSync(join(tmpdir(), 'c2-continuity-'))
+process.env.USERPROFILE = TMP_HOME
+process.env.HOME = TMP_HOME
+
+// 注入要读库才拼得出那几段；空沙箱里没有库，注入就是空的。
+// 所以把真库只读地拷一份进沙箱（拷，不是搬），交接条仍由测试自己写。
+try {
+  const srcData = join(REAL_HOME, '.dsh', 'consciousness-seas', 'main', 'data.json')
+  const dstDir = join(TMP_HOME, '.dsh', 'consciousness-seas', 'main')
+  mkdirSync(dstDir, { recursive: true })
+  if (existsSync(srcData)) copyFileSync(srcData, join(dstDir, 'data.json'))
+} catch {}
+
+const HOME = TMP_HOME
 const SEA_DIR = join(HOME, '.dsh', 'consciousness-seas', 'main')
 const HP = join(SEA_DIR, 'handoff.json')
 const BASE = new URL('../', import.meta.url).href
@@ -81,6 +98,7 @@ ok(c.includes('小时'), '时间单位会换算成小时')
 
 // 收尾：把测试写的交接条清掉，别污染真的
 try { if (existsSync(HP)) rmSync(HP) } catch {}
+try { rmSync(TMP_HOME, { recursive: true, force: true }) } catch {}
 
 console.log('\n通过 ' + pass + ' · 失败 ' + fail)
 process.exit(fail ? 1 : 0)

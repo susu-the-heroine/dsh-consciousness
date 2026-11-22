@@ -8,7 +8,18 @@
  *
  * 跑法：node test/hervoice.test.mjs
  */
-import { existsSync, readFileSync, writeFileSync, rmSync } from 'node:fs'
+import { existsSync, readFileSync, writeFileSync, rmSync, mkdtempSync, mkdirSync } from 'node:fs'
+import { tmpdir } from 'node:os'
+import { join } from 'node:path'
+
+// 2026-11-21：这份虽然在结尾会把真画像写回去，可中间那几步是在真文件上做的——
+// 删掉、换成假的、再学五十句。中途一抛错（或者被人掐掉），他真画像就变成这份假的了。
+// 备份只在内存里，进程没了就一起没。现在直接换到临时家目录，真文件一个字都不碰。
+const TMP_HOME = mkdtempSync(join(tmpdir(), 'c2-hervoice-'))
+process.env.USERPROFILE = TMP_HOME
+process.env.HOME = TMP_HOME
+// 空家目录里没有 .dsh，写画像那步会 ENOENT。先建出来——这台机器上有，新机器上未必有。
+mkdirSync(join(TMP_HOME, '.dsh'), { recursive: true })
 
 const BASE = new URL('../', import.meta.url).href
 const H = await import(BASE + 'lib/hervoice.js')
@@ -64,9 +75,8 @@ ok(Math.abs(after - before) < 0.5, '挪得慢，不是推倒重来', after)
 const prof = JSON.parse(readFileSync(FILE, 'utf8'))
 ok(!!prof.updatedAt, '画像带更新时间戳')
 
-// 还原
-if (backup) writeFileSync(FILE, backup, 'utf8')
-else if (existsSync(FILE)) rmSync(FILE)
+// 收尾：临时家目录一起删掉（真画像从来没被碰过，不用还原）
+try { rmSync(TMP_HOME, { recursive: true, force: true }) } catch {}
 
 console.log('\n通过 ' + pass + ' · 失败 ' + fail)
 process.exit(fail ? 1 : 0)

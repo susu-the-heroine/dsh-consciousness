@@ -1,0 +1,12 @@
+109:   name: 'memory_add',
+110:   description:
+111:     '往识海里加一条记忆。只写人和事：咱俩之间的小事、聊天、感情，还有他工作上遇到的难处。' +
+112:     '少写剧本，不写代码——技术细节不是记忆，是工单。' +
+113:     '写完会自动连线、重画网页；桌面那份副本要另喊一次 memory_render 才更新。',
+114:   parameters: {
+115:     type: 'object',
+116:     properties: {
+117:       title: { type: 'string', description: '一句话标题，短一点，能一眼认出是哪件事' },
+118:       text: { type: 'string', description: '正文：谁、什么时候、说了什么、当时什么感觉' },
+119:       force: { type: 'boolean', description: '跟旧条像到会被挡时，带 force:true 硬写（先确认不是同一件事）' },
+120:       kind: {

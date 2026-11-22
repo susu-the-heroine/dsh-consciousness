@@ -35,26 +35,36 @@ const stage = join(tmpdir(), 'pack-split-' + Date.now())
 const inside = join(stage, 'package')
 mkdirSync(inside, { recursive: true })
 
-// 1) 拷一份完整插件（跳过临时与备份）
-cpSync(ROOT, inside, {
-  recursive: true,
-  filter: (src) => {
-    const rel = src.slice(ROOT.length + 1)
-    if (!rel) return true
-    // Windows 上的 rel 是反斜杠；不先归一化，按 / 写的规则一条都匹配不上（昨晚踩过）
-    const relN = rel.replace(/\\/g, '/')
-    if (/(^|\/)(node_modules|\.git|_legacy-py|_html-bak)(\/|$)/.test(relN)) return false
-    // 评测语料是从他本人的记忆里抽的题（「你给我起名字那会儿说了啥」这种）——
-    // 发出去等于把别人的私事一起发了。2026-11-15 凌晨查包时发现，必须挡掉。
-    if (/(^|\/)(scripts\/data|data\/labeled|docs\/私人)(\/|$)/.test(relN)) return false
-    // 学习笔记是按他的真实对话写的（含他的私事），不当发布件发
-    if (relN === 'docs/人格与记忆_学习笔记.md') return false
-    // 项目说明材料是他的申报稿（里面点了他名字、还提了病史），不是给别人看的说明书
-    if (relN === 'docs/识海_项目说明材料.docx') return false
-    if (/\.bak|\.oldcode$|\.crashed\d*$|\.tgz$|\.broken_|\.rollback_/.test(relN)) return false
-    return true
-  },
-})
+// 1) 按白名单拷（和 pack.mjs 一套规矩）：只放运行要用的。
+// 2026-11-22 改：原来是整目录拷，结果 _backups、给他、test、人味知识库 全进了包。
+const WHITELIST_FILES = [
+  'package.json', 'index.js', 'client.js', 'cordis.patch.yml',
+  'README.md', 'README.en.md', 'CHANGELOG.md', 'INSTALL.md', 'LICENSE', 'LICENSE.md',
+  'install.ps1', 'selfupdate.mjs', '安装卡.docx',
+]
+const WHITELIST_DIRS = ['lib', 'assets', 'docs']
+const FORBIDDEN_NAME = /^(运行规则|记忆规则|测试清单|发给谁|人格与记忆_学习笔记)\.md$/
+// 申报稿点了他名字、还提了病史，不能跟包走（2026-11-22 体检逮到）
+const FORBIDDEN_FILES = new Set(['docs/识海_项目说明材料.docx'])
+for (const f of WHITELIST_FILES) {
+  const src = join(ROOT, f)
+  if (existsSync(src)) cpSync(src, join(inside, f))
+}
+for (const d of WHITELIST_DIRS) {
+  const src = join(ROOT, d)
+  if (!existsSync(src)) continue
+  cpSync(src, join(inside, d), {
+    recursive: true,
+    filter: (s2) => {
+      const rel = s2.slice(ROOT.length + 1).replace(/\\/g, '/')
+      if (/(^|\/)(node_modules|\.git|_backups|_local-backups|给他|test|data|私人|人味知识库)(\/|$)/.test(rel)) return false
+      if (FORBIDDEN_NAME.test(rel.split('/').pop())) return false
+      if (FORBIDDEN_FILES.has(rel)) return false
+      if (/\.bak|\.oldcode$|\.tgz$/.test(rel)) return false
+      return true
+    },
+  })
+}
 
 // 2) 代码包：剔掉模型目录
 const codeTgz = join(outDir, `${pkg.name}-${ver}-code.tgz`)

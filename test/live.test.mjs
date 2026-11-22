@@ -3,7 +3,17 @@
  * ========================
  * 跑法：node test/live.test.mjs
  */
-import { existsSync, rmSync } from 'node:fs'
+import { existsSync, rmSync, mkdtempSync, mkdirSync } from 'node:fs'
+import { tmpdir } from 'node:os'
+import { join } from 'node:path'
+
+// 2026-11-21：这份原来直接在真家目录里删、写、再删那份热参数文件。
+// 我今晚在没关沙箱的情况下先跑了一遍——他 19:38 改过的那份就这样没了（十八字节，回不来）。
+// 现在先换到临时家目录，再导入会算路径的库。
+const TMP_HOME = mkdtempSync(join(tmpdir(), 'c2-live-'))
+process.env.USERPROFILE = TMP_HOME
+process.env.HOME = TMP_HOME
+mkdirSync(join(TMP_HOME, '.dsh'), { recursive: true })
 
 const BASE = new URL('../', import.meta.url).href
 const L = await import(BASE + 'lib/live.js')
@@ -62,7 +72,7 @@ for (const k of Object.keys(L.DEFAULTS)) {
   ok(Number.isFinite(L.sane(k, -999)), 'sane(' + k + ') 给得出数')
 }
 
-if (existsSync(F)) rmSync(F)
+try { rmSync(TMP_HOME, { recursive: true, force: true }) } catch {}
 
 console.log('\n通过 ' + pass + ' · 失败 ' + fail)
 process.exit(fail ? 1 : 0)

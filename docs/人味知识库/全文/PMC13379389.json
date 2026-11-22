@@ -1,0 +1,10 @@
+{
+ "title": "Repetitive neuronal activation regulates cellular maturation state via nuclear reprogramming.",
+ "authors": "Murano T, Hagihara H, Tajinda K, Takao K, Takamiya Y, Katoh K, Robison AJ, Matsumoto M, Namihira M, Miyakawa T.",
+ "year": "2026",
+ "journal": "Nature communications",
+ "doi": "10.1038/s41467-026-74202-w",
+ "pmid": "42469214",
+ "pmcid": "PMC13379389",
+ "abstract": "Neural stimulation, such as electroconvulsive therapy (ECT) and repetitive transcranial magnetic stimulation (rTMS), is highly effective clinical intervention for a broad spectrum of psychiatric disorders, including depression and schizophrenia. However, their mechanism of action at the cellular level remains poorly understood. Here, we model ECT with repeated optogenetic neuronal stimulation in the mouse dentate gyrus, and observe ECT-relevant behavioral changes, including decreased depression-like behavior and increased locomotor activity. At the cellular level, we identify dematuration to a long-term stable state, persisting for more than one month, defined by changes in nuclear structure, gene expression patterns resembling the G<sub>2</sub>/M phase of the cell cycle, and altered neural coding of navigational information. Moreover, knockout of the G<sub>2</sub>/M master regulator Cyclin B attenuates some of behavioral and cellular effects. These findings demonstrate that chronically-repeated brain stimulation triggers plasticity of the cellular state, revealing a form of stimulus-regulated nuclear reprogramming with potential clinical utility."
+}

@@ -1,0 +1,101 @@
+# 空 catch · 「写」那一类逐条判（2026-11-21）
+
+> 2026-11-21 复量：全库空 catch 从 599 涨到 601（写 45、读 29、记账 123、时间 28、别的 376）。
+> 涨的两处是这一天新写的代码带出来的，不是旧账。这份单子按当时的 46 条写，如今 45 条——少的那一条是我删掉的一处重复写法。
+
+规则：只统计会写盘的 catch（写/删/改名的动作在同一处或上两行里）。
+
+共 46 处。
+
+- `inject.js:1576` — 抢锁的临时链——判轻（失败会走超时审计）
+  - `try { unlinkSync(_hp) } catch {}`
+- `inject.js:1601` — 审计自身的 catch——不算问题
+  - `try { audit('pick-log-rotate-failed', { err: String((e && e.code) || e).slice(0, 40) }) } catch {}`
+- `inject.js:1651` — 其余——判轻
+  - `} catch {}`
+- `inject.js:1689` — 审计自身的 catch——不算问题
+  - `try { audit('dup-hint-shown', _hintInfo || {}) } catch {}`
+- `inject.js:1705` — 记「已报过」时间戳——写失败只会重复报同一条档案变动，判轻
+  - `try { writeFileSync(_toldPath, JSON.stringify({ at: Date.now() }), 'utf8') } catch {}`
+- `lock.js:38` — 清临时文件/锁——判轻
+  - `try { unlinkSync(lp) } catch {}`
+- `lock.js:61` — 其余——判轻
+  - `} catch {}`
+- `log.js:28` — 其余——判轻
+  - `try { if (existsSync(from)) renameSync(from, to) } catch {}`
+- `logfile.js:27` — 日志轮转的 .1 备份——主文件照样截断、照样有上限，判轻
+  - `try { writeFileSync(file + '.1', body, 'utf8') } catch {}`
+- `mirror-import.js:140` — 其余——判轻
+  - `} catch {}`
+- `routes.js:690` — 删目录——已改成失败点名
+  - `try { rmSync(_trash, { recursive: true, force: true, maxRetries: 4, retryDelay: 150 }) } catch {}`
+- `routes.js:3136` — 其余——判轻
+  - `} catch {}`
+- `routes.js:3145` — 其余——判轻
+  - `} catch {}`
+- `slowlog.js:54` — 其余——判轻
+  - `} catch {}`
+- `statefile.js:44` — 其余——判轻
+  - `} catch {}`
+- `statefile.js:57` — 清临时文件/锁——判轻
+  - `if (held) { try { unlinkSync(lock) } catch {} }`
+- `store-js.js:89` — 清临时文件/锁——判轻
+  - `if (staleC) { try { unlinkSync(path) } catch {}; continue }`
+- `store-js.js:97` — 清临时文件/锁——判轻
+  - `try { unlinkSync(tmp) } catch {}`
+- `store-js.js:110` — 清临时文件/锁——判轻
+  - `try { unlinkSync(tmp) } catch {}`
+- `store-js.js:113` — 清临时文件/锁——判轻
+  - `try { unlinkSync(tmp) } catch {}`
+- `store-js.js:120` — 清临时文件/锁——判轻
+  - `try { unlinkSync(tmp) } catch {}`
+- `store-js.js:123` — 清临时文件/锁——判轻
+  - `try { unlinkSync(tmp) } catch {}`
+- `store-js.js:143` — 清临时文件/锁——判轻
+  - `try { unlinkSync(path) } catch {}`
+- `store-js.js:160` — 清临时文件/锁——判轻
+  - `try { unlinkSync(lock.path) } catch {}`
+- `store-js.js:183` — 抢锁的临时链——判轻（失败会走超时审计）
+  - `try { if (statSync(fp).isFile() && statSync(fp).mtimeMs < cutoff) unlinkSync(fp) } catch {}`
+- `store-js.js:334` — 其余——判轻
+  - `} catch {}`
+- `store-js.js:337` — 清临时文件/锁——判轻
+  - `try { unlinkSync(tmp) } catch {}`
+- `store.js:227` — 抢锁的临时链——判轻（失败会走超时审计）
+  - `try { linkSync(lk, lockPath) } finally { try { unlinkSync(lk) } catch {} }`
+- `store.js:351` — 抢锁的临时链——判轻（失败会走超时审计）
+  - `try { linkSync(lk, lp) } finally { try { unlinkSync(lk) } catch {} }`
+- `store.js:356` — 其余——判轻
+  - `} catch {}`
+- `store.js:378` — 清临时文件/锁——判轻
+  - `try { unlinkSync(lp) } catch {}`
+- `store.js:415` — 审计自身的 catch——不算问题
+  - `try { audit('backup-vectors-copy-failed', { sea, file: suffix, err: String((e && e.code) || e).slice`
+- `store.js:439` — 抢锁的临时链——判轻（失败会走超时审计）
+  - `try { unlinkSync(join(dir, f)) } catch {}`
+- `store.js:447` — 抢锁的临时链——判轻（失败会走超时审计）
+  - `try { unlinkSync(join(dir, f)) } catch {}`
+- `store.js:449` — 其余——判轻
+  - `} catch {}`
+- `suppress.js:51` — 其余——判轻
+  - `} catch {}`
+- `synth.js:165` — 摘要缓存——写失败只是下次重算，判轻
+  - `try { withLock(CACHE_FILE, () => { writeFileSync(CACHE_FILE, JSON.stringify({ at: now, n, pairs }), `
+- `thinkauto.js:41` — 念头池——写失败那条线会被重复挑，噪，判轻
+  - `try { withLock(FILE, () => { writeFileSync(FILE, JSON.stringify({ at: Date.now(), items: items.slice`
+- `thinkauto.js:135` — 「该不该想」的闸——写失败可能多问一次，判轻
+  - `try { writeFileSync(META_FILE, JSON.stringify(g), 'utf8') } catch {}`
+- `tools.js:1475` — 其余——判轻
+  - `} catch {}`
+- `tools.js:2742` — 上次联系时间——写失败只影响追问节奏，判轻
+  - `try { writeFileSync(_contactFile, JSON.stringify({ at: _r.at }), 'utf8') } catch {}`
+- `tools.js:2744` — 其余——判轻
+  - `} catch {}`
+- `tools.js:3380` — 复制——看调用方，判轻
+  - `try { copyFileSync(src, join(desk, name)); n++ } catch {}`
+- `vecstore.js:178` — 其余——判轻
+  - `try { writeShadow(sea, entries) } catch {}`
+- `vectors.js:118` — 其余——判轻
+  - `try { _VEC.delete(sea) } catch {}`
+- `vectors.js:217` — 审计自身的 catch——不算问题
+  - `try { audit('vector-write-err', { err: String((e && e.message) || e).slice(0, 80) }) } catch {}`

@@ -1,0 +1,3 @@
+工作台.html:312 [向量] <div style="font-size:10px;letter-spacing:.18em;color:#3f6386;margin-bottom:10px
+意识海.html:846 [向量] 识海跑多快多准：低=只有字面，高=加向量，满=加图游走
+意识海.html:1440 [向量] 字面 + 向量 + 实体，注入 5 条核心。

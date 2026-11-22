@@ -1,0 +1,38 @@
+1074: fetch('/consciousness/clean-samples?dry=1', { method:'POST', cache:'no-store' })
+1081: return fetch('/consciousness/clean-samples', { method:'POST', cache:'no-store' })
+1133: fetch('/consciousness/heart', { cache:'no-store' })
+1466: fetch('/consciousness/quality', { cache: 'no-store' })
+1477: fetch('/consciousness/quality?set=' + next, { cache: 'no-store' })
+1624: fetch('/consciousness/evidence?sea=' + encodeURIComponent(sid) + '&id=' + encodeURIComponent(evA.getAttribute('data-ev')), { cache
+1650: fetch('/consciousness/edit', {
+1710: fetch('/consciousness/mcp?action=sea_search&sea=' + encodeURIComponent(sid)
+2123: fetch('/consciousness/touch',{
+2405: fetch('/consciousness/recall?idle='+idle,{cache:'no-store'})
+2417: fetch('/consciousness/heart',{cache:'no-store'})
+2466: fetch('/consciousness/heart',{cache:'no-store'})
+2504: fetch('/consciousness/heart',{cache:'no-store'}).then(function(r){return r.json();}).then(function(j){
+3453: fetch('/consciousness/intake?n='+(n||8),{cache:'no-store'})
+3606: fetch('/consciousness/intake?n='+(n||8),{cache:'no-store'})
+4835: fetch('/consciousness/windows',{cache:'no-store'})
+4858: return fetch('/consciousness/workspaces',{cache:'no-store'})
+4883: fetch('/consciousness/seas/new',{
+4912: fetch('/consciousness/seas/delete',{
+4935: fetch('/consciousness/seas',{cache:'no-store'})
+4953: fetch('/consciousness/reset',{
+5001: fetch('/consciousness?id='+encodeURIComponent(SEA_ID),{cache:'no-store'})
+5076: fetch('/consciousness/backups?sea='+encodeURIComponent(it.id),{cache:'no-store'})
+5094: fetch('/consciousness/restore',{
+5112: fetch('/consciousness/update-check?refresh=1',{cache:'no-store'})
+5134: fetch('/consciousness/purge',{
+5143: fetch('/consciousness/windows',{cache:'no-store'})
+5167: fetch('/consciousness/delete',{
+5190: fetch('/consciousness/edit',{
+5204: fetch('/consciousness/seas/update',{
+5250: fetch('/consciousness/import',{
+5518: fetch('/consciousness/inner-data', {cache:'no-store'})
+5590: fetch('/consciousness/inner/mood?level=' + lv, {cache:'no-store'})
+5674: fetch('/consciousness/health').then(r => r.json()).then(j => {
+5705: fetch('/consciousness/spontaneous', { cache: 'no-store' })
+5711: fetch('/consciousness/spontaneous?set=next', { cache: 'no-store' })
+6110: fetch('/consciousness/body-data?id='+encodeURIComponent(sea), {cache:'no-store'})
+6628: fetch('/consciousness/inner-data?sea=' + encodeURIComponent(id), { cache: 'no-store' })

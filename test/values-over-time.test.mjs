@@ -12,6 +12,9 @@
  */
 const BASE = new URL('../', import.meta.url).href
 const { applyMood } = await import(BASE + 'lib/mood.js')
+// 2026-11-21：头里承诺了三件事——怨气、情绪、记忆强度；前两件有测试，第三件根本没测。
+// 补上：强度随时间该往下掉，只验方向不锁具体值。
+const { decayOf } = await import(BASE + 'lib/decay.js')
 
 let pass = 0
 let fail = 0
@@ -56,6 +59,18 @@ console.log('\n数值随时间：')
   const o = Number((old.mix || {}).angry) || 0
   ok(f > 0, '刚攒的火还在', f.toFixed(3))
   ok(o < f, '隔六小时的火比刚攒的小', o.toFixed(3))
+}
+
+// 四、记忆强度：隔周、隔月都该掉
+{
+  const DAY = 24 * HOUR
+  const mkP = (daysAgo) => ({ id: 1, title: 't', text: 'x', strength: 30, born: Date.now() - daysAgo * DAY, recallCount: 0 })
+  const fresh = decayOf(mkP(0))
+  const week = decayOf(mkP(7))
+  const month = decayOf(mkP(30))
+  ok(fresh > week, '隔一周，强度比新的低', fresh.toFixed(3) + ' → ' + week.toFixed(3))
+  ok(week > month, '隔一月，比一周更低', week.toFixed(3) + ' → ' + month.toFixed(3))
+  ok(month > 0 && month < 1, '掉是掉，不会掉成零或负数', month.toFixed(3))
 }
 
 console.log('\n通过 ' + pass + ' · 失败 ' + fail)

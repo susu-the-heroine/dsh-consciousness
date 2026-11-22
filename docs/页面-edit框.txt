@@ -1,0 +1,57 @@
+1585:         + (p.archived ? '<br><span style="color:#8090a0">已归档</span>' : '')
+1586:         + (function(){
+1587:             try {
+1588:               const r = p.evidenceRef;
+1589:               if (r && r.file) {
+1590:                 return '<br><span style="color:#7fa8cc">原文</span> '
+1591:                   + String(r.file).replace(/</g,'&lt;') + ' 第 ' + (r.line || '?') + ' 行'
+1592:                   + '　<a href="#" data-ev="' + p.id + '" style="color:#5fbfd8;text-decoration:none;'
+1593:                   + 'border-bottom:1px solid rgba(95,191,216,.3)">点开</a>';
+1594:               }
+1595:               return '';
+1596:             } catch(e) { return ''; }
+1597:           })()
+1598:         + '</div>';
+1599:     }
+1600: 
+1601:     box.innerHTML =
+1602:       '<div style="color:#e2ecf8;font-size:14px;margin-bottom:4px">#' + p.id + ' 改这条</div>'
+1603:       + '<div style="color:#5d7a96;font-size:10.5px">' + (p.layer || 'experience') + ' · arousal ' + (p.arousal || 5) + '/10 · ' + emo + '</div>'
+1604:       + traceHtml
+1605:       + label('标题') + input('edTitle2', p.title, 32)
+1606:       + label('正文') + input('edText2', p.text, 110)
+1607:       + label('她当时的感觉') + input('edFelt2', hs.felt, 44)
+1608:       + label('她的后悔') + input('edRegret2', hs.regret, 44)
+1609:       + label('重要度 0-1') + '<input id="edImp2" type="number" step="0.05" min="0" max="1" value="' + (p.imp || 0.6) + '" style="width:100px;background:
+1610:       + label('强度 0-10') + '<input id="edArousal2" type="number" step="1" min="1" max="10" value="' + (p.arousal || 5) + '" style="width:100px;backgro
+1611:       + '<div style="margin-top:16px;display:flex;gap:10px;justify-content:flex-end">'
+1612:       + '<button id="edCancel" style="background:transparent;border:1px solid rgba(120,180,240,.25);color:#8fa8c0;border-radius:8px;padding:7px 16px;c
+1613:       + '<button id="edSave" style="background:linear-gradient(180deg,#1a7f9e,#12657f);border:none;color:#eaf9ff;border-radius:8px;padding:7px 18px;cu
+1614:       + '</div>';
+1615: 
+1616:     document.body.appendChild(box);
+1617: 
+1618:     // 原文出处：点开取 raw 里那一行
+1619:     try {
+1620:       const evA = box.querySelector('[data-ev]');
+1621:       if(evA) evA.addEventListener('click', function(e2){
+1622:         e2.preventDefault();
+1623:         const sid = (typeof SEA_ID !== 'undefined' ? SEA_ID : 'main');
+1624:         fetch('/consciousness/evidence?sea=' + encodeURIComponent(sid) + '&id=' + encodeURIComponent(evA.getAttribute('data-ev')), { cache:'no-store' 
+1625:           .then(function(r){ if(!r.ok) throw new Error('HTTP ' + r.status); return r.text(); })
+1626:           .then(function(txt){ return txt ? JSON.parse(txt) : null; })
+1627:           .then(function(j){
+1628:             if(!j || !j.ok) { alert('取不到原文'); return; }
+1629:             let msg = j.hasRaw
+1630:               ? ('原文（' + j.raw.file + ' 第 ' + j.raw.line + ' 行）\n\n' + j.raw.text)
+1631:               : ('这一条的原文还没落盘。\n\n证据副本：\n' + (j.evidenceCopy || '（空）'));
+1632:             alert(msg);
+1633:           })
+1634:           .catch(function(err){ alert('取不到原文：' + (err && err.message || '未知')); });
+1635:       });
+1636:     } catch(e) {}
+1637: 
+1638:     document.getElementById('edCancel').onclick = () => box.remove();
+1639:     document.getElementById('edSave').onclick = () => {
+1640:       const body = {
+1641:         sea: (typeof SEA_ID !== 'undefined' ? SEA_ID : 'main'),

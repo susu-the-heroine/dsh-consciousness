@@ -1,0 +1,40 @@
+1640:       const body = {
+1641:         sea: (typeof SEA_ID !== 'undefined' ? SEA_ID : 'main'),
+1642:         id: p.id,
+1643:         title: document.getElementById('edTitle2').value.trim(),
+1644:         text: document.getElementById('edText2').value.trim(),
+1645:         herFelt: document.getElementById('edFelt2').value.trim(),
+1646:         herRegret: document.getElementById('edRegret2').value.trim(),
+1647:         imp: Number(document.getElementById('edImp2').value),
+1648:         arousal: Number(document.getElementById('edArousal2').value),
+1649:       };
+1650:       fetch('/consciousness/edit', {
+1651:         method: 'POST',
+1652:         headers: { 'content-type': 'application/json' },
+1653:         body: JSON.stringify(body),
+1654:       }).then(r => r.json()).then(j => {
+1655:         if(j && j.ok){ box.remove(); location.reload(); }
+1656:         else { alert('没存上：' + (j && j.error || '未知')); }
+1657:       }).catch(e => alert('没存上：' + e.message));
+1658:     };
+1659:   }catch(e){ console.warn('编辑框失败', e); }
+1660: }
+1661: 
+1662: /* ---------- 检索涟漪 ----------
+1663:  * 在那条输入框里打字时，命中的记忆在球上依次亮起来。
+1664:  * 不是等结果回来才亮，是一边打一边亮——像脑子里有东西被搅动。
+1665:  */
+1666: let _hlSet = new Set();
+1667: let _hlAt = 0;
+1668: 
+1669: function bindSearchGlow(){
+1670:   const inp = document.getElementById('q');
+1671:   if(!inp || inp._glowBound) return;
+1672:   inp._glowBound = true;
+1673:   let timer = 0;
+1674:   inp.addEventListener('input', function(){
+1675:     clearTimeout(timer);
+1676:     timer = setTimeout(function(){
+1677:       const q = String(inp.value || '').trim();
+1678:       if(q.length < 2){ _hlSet = new Set(); return; }
+1679:       const now = Date.now();

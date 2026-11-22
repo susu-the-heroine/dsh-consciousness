@@ -1,0 +1,10 @@
+{
+ "title": "sc-ChromAging: A Single-Cell Chromatin Accessibility-based Clock Decodes Cell-Type-Specific Epigenetic Aging Trajectories.",
+ "authors": "Wei X, Dong Y, Lai H, Shi J.",
+ "year": "2026",
+ "journal": "npj aging",
+ "doi": "10.1038/s41514-026-00398-2",
+ "pmid": "42106399",
+ "pmcid": "PMC13376647",
+ "abstract": "sc-ChromAging, a chromatin accessibility-based aging clock, was developed using single-cell ATAC-seq from 401 Chinese individuals. It identified CD4⁺ naive T cells as the most accurate predictors of age. This clock linked immune aging with pathways in inflammation, infection, and tumor susceptibility, and connecting chromatin changes to plasma metabolites like triacylglycerols."
+}

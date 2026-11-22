@@ -1,0 +1,206 @@
+# Predicting pregnancy outcomes in IVF cycles: a systematic review and diagnostic meta- analysis of artificial intelligence in embryo assessment.
+
+- 作者：Mina A, Younesi M, Doohandeh T, Darzi S, Ardehjani NA, Sheibani S, Hosseinirad H, Valizadeh R.
+- 出处：Contraception and reproductive medicine 2025
+- DOI：10.1186/s40834-025-00400-4
+- PMCID：PMC12476623
+
+3341 conrepmed Contraception and Reproductive Medicine Contracept Reprod Med BMC PMC12476623 12476623 12476623 41016945 10.1186/s40834-025-00400-4 Predicting pregnancy outcomes in IVF cycles: a systematic review and diagnostic meta- analysis of artificial intelligence in embryo assessment Mina Ataei 1 Younesi Masumeh 2 Doohandeh Tahereh 3 Darzi Soheila 4 Ardehjani Negar Ajabi 5 Sheibani Samaneh 3 ✉ # Hosseinirad Hossein 6 ✉ # Valizadeh Rohollah 7 1 Department of Obstetrics and Gynecology, Research Center, School of Medical Sciences, Social Determinants of Health, Alborz University of Medical Sciences, Karaj, Iran 2 Avicenna Infertility Clinic, Avicenna Research Institute, ACECR, Tehran, Iran 3 Department of Obstetrics and Gynecology, Preventive Gynecology Reproductive Medicine, School of Medicine, Shahid Beheshti University of Medical Sciences, Arabi Ave, Daneshjoo Blvd, Velenjak, Tehran Iran 4 Department of Obstetrics and Gynecology, Nikan hospital, Shahid Beheshti University of Medical Sciences, Tehran, Iran 5 Department of Anatomy, School of Medicine, Tehran University of Medical Sciences, Tehran, Iran 6 Department of Obstetrics, Gynecology and Women’s Health, University of Missouri, Columbia, MO USA 7 Urmia University of Medical Sciences, Urmia, Iran ✉ 
+Corresponding author.
+ # 
+Contributed equally.
+ 28 9 2025 10 59 59 29 9 2025 © The Author(s) 2025 Open Access This article is licensed under a Creative Commons Attribution-NonCommercial-NoDerivatives 4.0 International License, which permits any non-commercial use, sharing, distribution and reproduction in any medium or format, as long as you give appropriate credit to the original author(s) and the source, provide a link to the Creative Commons licence, and indicate if you modified the licensed material. You do not have permission under this licence to share adapted material derived from this article or parts of it. The images or other third party material in this article are included in the article’s Creative Commons licence, unless indicated otherwise in a credit line to the material. If material is not included in the article’s Creative Commons licence and your intended use is not permitted by statutory regulation or exceeds the permitted use, you will need to obtain permission directly from the copyright holder. To view a copy of this licence, visit http://creativecommons.org/licenses/by-nc-nd/4.0/ . 
+## Abstract
+
+## Introduction
+
+Embryo selection remains a key challenge in in vitro fertilization (IVF), as many morphologically “normal” embryos fail to implant. Artificial intelligence (AI) offers a promising tool for improving embryo assessment by providing more objective and accurate predictions of pregnancy outcomes. This study aims to systematically review and conduct a diagnostic meta-analysis to evaluate the effectiveness of AI-based tools in embryo selection for predicting pregnancy outcomes in IVF.
+
+## Methods
+
+We conducted a systematic review following PRISMA guidelines, searching Web of Science, Scopus, and PubMed. Original research articles evaluating AI’s diagnostic accuracy in embryo selection were included, while duplicates, non-peer-reviewed papers, abstracts, and conference proceedings were excluded. Data on sample sizes, AI tools, and diagnostic metrics were extracted, with quality assessed using the QUADAS-2 tool.
+
+## Results
+
+AI-based embryo selection methods showed strong diagnostic performance, with pooled sensitivity of 0.69 and specificity of 0.62 in predicting implantation success. The positive likelihood ratio was 1.84 and the negative likelihood ratio was 0.5. The area under the curve reached 0.7, indicating high overall accuracy. The Life Whisperer AI model achieved 64.3% accuracy in predicting clinical pregnancy, while the FiTTE system, which integrates blastocyst images with clinical data, improved prediction accuracy to 65.2% with an AUC of 0.7.
+
+## Conclusion
+
+AI offers a promising advancement in embryo selection for IVF, with the potential to enhance clinical outcomes and improve decision-making. Future studies should focus on refining these models to achieve the ultimate goal of a healthy live birth by developing more sophisticated algorithms and validating them with larger, diverse datasets.
+
+ Keywords: In vitro fertilization (IVF), Embryo assessment, Pregnancy, Artificial intelligence (AI), Diagnostic accuracy
+ status released display-pdf yes is-olf no is-manuscript no is-preprint no is-journal-matter no is-scanned no is-retracted no 
+Received 2024 Sep 13; Accepted 2025 Aug 30; Collection date 2025.
+
+## Introduction
+
+In vitro fertilization (IVF) stands as a pivotal intervention in the treatment of infertility, involving a complex series of procedures designed to achieve successful pregnancy. This process includes ovarian stimulation to produce multiple oocytes, retrieval of these oocytes, fertilization in vitro, and subsequent embryo culture under meticulously controlled conditions for a period ranging from 1 to 5 days [ 1 ]. Despite notable advancements in IVF technology and techniques, the overall success rates remain modest, with average live birth rates hovering around 30% per embryo transfer [ 2 ]. Consequently, optimizing the embryo selection process is essential for enhancing the efficacy of IVF treatments and improving success rates.
+
+Traditionally, the selection of embryos for transfer has been based on a range of morphological parameters assessed at specific developmental stages. These include the appearance of pronuclei, early cleavage patterns, multinucleation, and characteristics of the zona pellucida [ 3 ]. While these morphological assessments provide valuable insights, they offer only a limited perspective on embryo viability. Recent advancements have introduced time-lapse imaging technology, which facilitates continuous, real-time monitoring of embryo development [ 4 ]. This innovation allows for the detection of subtle morphological changes and critical developmental milestones with precise time-stamping, leading to the development of advanced embryo selection models based on morphokinetic parameters [ 5 ]. These models have demonstrated promise in predicting key outcomes such as blastocyst formation, genetic status, and live birth rates [ 6 ].
+
+Despite the benefits of time-lapse monitoring and morphokinetic models, significant challenges remain in managing embryo selection within the busy environment of a clinical laboratory [ 7 ]. To address these issues, automatic scoring systems have been developed to assess embryo morphology and morphokinetics more efficiently. Early systems utilized traditional computer vision techniques, but recent advancements have incorporated sophisticated artificial intelligence (AI) technologies, including artificial neural networks (ANNs), deep learning, and machine learning algorithms [ 8 ]. These AI-driven approaches offer advanced decision support by ranking embryos and predicting their suitability for transfer or cryopreservation, thereby reducing the reliance on subjective human judgment [ 9 ].
+
+The combination of AI into IVF practices presents the potential to significantly enhance the accuracy and reliability of embryo selection, minimizing subjectivity and providing more objective assessments of embryo viability [ 10 ]. However, the rapid evolution of AI technology introduces challenges, including the need for standardized performance metrics and concerns regarding the generalizability and precision of different models [ 11 ]. These challenges are partly attributable to the requirements for high-quality data and large sample sizes, which can be addressed by leveraging discarded embryos for model training and validation [ 12 ].
+
+The adoption of AI in IVF is rapidly advancing, with numerous studies investigating the effectiveness of various AI systems. For example, models like Tran’s IVY have demonstrated exceptional predictive accuracy, while others, such as Geller’s AI model, have shown varying performance when compared to traditional methods. This variability underscores the necessity for a comprehensive evaluation of AI’s predictive capabilities in IVF [ 13 , 14 ]. To address this need, our study conducts a systematic review and diagnostic meta-analysis to strictly assess the specificity and sensitivity of AI in identifying embryos with the highest implantation potential. By synthesizing data from multiple sources, our analysis aims to provide a thorough understanding of AI’s strengths and limitations in improving IVF success rates, ultimately guiding future research in this rapidly evolving field.
+
+Compared to previous reviews such as those by Salih et al. (2023) and Sfakianoudis et al. (2022), our study offers a distinct contribution by conducting a diagnostic meta-analysis, which quantitatively synthesizes sensitivity, specificity, likelihood ratios, and AUC [ 15 , 16 ]. These metrics provide a more clinically relevant understanding of AI’s utility in embryo selection. In contrast, earlier reviews primarily offered narrative assessments or qualitative comparisons between AI tools and traditional embryologist evaluations. For instance, Salih et al. provided a broad overview of AI applications in IVF, but without offering pooled diagnostic metrics. Similarly, Sfakianoudis et al. discussed AI’s potential impact but did not systematically evaluate diagnostic performance [ 15 , 17 ]. Our study bridges this gap by presenting objective, pooled estimates, thereby enabling direct benchmarking of AI performance and facilitating more informed clinical decision-making.
+
+## Methods and materials
+
+## Design
+
+This systematic review and diagnostic meta-analysis was conducted in accordance with the PRISMA guidelines for diagnostic test accuracy reviews [ 18 ].
+
+## Search strategy
+
+To identify all relevant studies evaluating the diagnostic accuracy of AI in IVF, we performed a comprehensive search across four major databases: PubMed, Scopus, Web of Science, and Google Scholar. Our search strategy followed the Cochrane Handbook for Systematic Reviews of Diagnostic Test Accuracy [ 19 ]. The search terms included: Artificial intelligence (AI), Machine learning (ML), Deep learning, Generative artificial intelligence (AI), Language model, Transformer deep neural network, Artificial neural network (ANN), Convolutional neural network (CNN), Computer vision, Supervised learning, Unsupervised learning, Supervised, Unsupervised, Recurrent neural network, Long short-term model, Linear regression, Logistic regression, Decision tree, k-nearest neighbors (k-NN), Support vector machine (SVM), Random forest, k-means, Generative adversarial network (GAN), Large language model (LLM), Proprietary algorithm, Lasso regression Model, light gradient boosting machine, True positive rate (TPR), Positive predicted value (PPV), Embryologists, Female, Fertility, Infertility, Sperm, Oocyte, Cumulus-oocyte complexes (COC), Immature oocyte, Mature oocyte, Germinal vesicle (GV) oocyte, Metaphase II (MII) oocyte, Metaphase I (MI) oocyte, Assisted reproductive biology (ART), In vitro fertilization (IVF), Intracytoplasmic sperm injection (ICSI), Culture, Embryo culture, Fertilization, Zygote, Pronuclear, Pronucleus, Two-pronuclear zygote (2PN), One-pronuclear zygote (2PN), Three-pronuclear zygote (2PN), Multinucleation, Cleavage, Embryo, Grading, Embryo Gading, Day-3 Embryo, Day-5 Embryo, Morphology, Blastomere, Cell symmetry, Symmetry, Vacuoles, Fragmentation, Blastocoel cavity, Blastocoel expansion, Inner cell mass (ICM), Trophectoderm, Morula, Early blastocyst, Blastocyst, Morphological assessment, Cleavage stage evaluation, Blastocyst grading, Hatching, Cytogenetic, Embryo biopsy, Genetic screening, Preimplantation genetic diagnosis (PGD), Preimplantation genetic testing (PGT), Pre-implantation genetic testing for aneuploidy (PGT-A), Ploidy, Aneuploidies, Polyploidy, Metabolomic, Embryo scope, Time-lapse imaging, Time-lapse microscopy, Morphokinetics, Embryo monitoring, Cell cycle timing, Kinetic parameters, Developmental milestones, Non-invasive, Non-invasive embryo selection, Viability, Omics, Embryo selection, Embryo quality, Implantation, Transfer, Embryo transfer, Single embryo transfer, Clinical outcomes, Implantation rate, Pregnancy, Clinical pregnancy, Clinical pregnancy rate, Implantation Failure, Recurrent implantation failure (RIF), Miscarriage, Abortion, Live birth, and Live birth rate.
+
+## Study selection
+
+We included original research articles that evaluated the diagnostic accuracy of artificial intelligence (AI) in assessing embryos to predict pregnancy-related outcomes. Studies were eligible if they used image-based or clinical data inputs and reported diagnostic metrics such as sensitivity, specificity, or AUC. We excluded duplicate records, non-peer-reviewed articles, reviews, abstracts, conference proceedings, and book chapters. Eligible AI models included those using methods such as convolutional neural networks (CNNs), support vector machines (SVMs), and ensemble techniques. We considered models trained using supervised learning methods and validated either through internal cross-validation, external datasets, or prospective evaluation.
+
+## Data extraction
+
+We extracted all relevant available data consisting of sample size, country, year, true positives (TP), true negatives (TN), false positives (FP), and false negatives (FN), design, used AI tool, outcome, AUC, sensitivity (SEN), specificity (SP), accuracy, precision, PPV, and NPV.
+
+## Search strategy syntax
+
+The search strategies and syntax were tailored for each database as follows:
+
+## PubMed (Results: 822)
+
+((Artificial intelligence [Title/Abstract] OR Machine learning [Title/Abstract] OR Light gradient boosting machine [Title/Abstract] )) AND ((Blastocyst[Title/Abstract] OR Preimplantation genetic [Title/Abstract] OR Ploidy[Title/Abstract] OR Zygote [Title/Abstract] OR Fertilization[Title/Abstract] OR Embryo [Title/Abstract] OR In vitro fertilization [Title/Abstract] OR Assisted reproductive biology [Title/Abstract] OR Oocyte [Title/Abstract] OR Sperm [Title/Abstract] OR Infertility [Title/Abstract] OR Fertility [Title/Abstract]))
+
+ https://pubmed.ncbi.nlm.nih.gov/?term=%28%28Artificial+intelligence+%5BTitle/Abstract%5D+OR+Machine+learning+%5BTitle/Abstract%5D+OR+Light+gradient+boosting+machine+%5BTitle/Abstract%5D+%29%29+AND+%28%28Blastocyst%5BTitle/Abstract%5D+OR+Preimplantation+genetic+%5BTitle/Abstract%5D+OR+Ploidy%5BTitle/Abstract%5D+OR+Zygote++%5BTitle/Abstract%5D+OR+Fertilization%5BTitle/Abstract%5D+OR+Embryo++%5BTitle/Abstract%5D+OR+In+vitro+fertilization+%5BTitle/Abstract%5D+OR+Assisted+reproductive+biology+%5BTitle/Abstract%5D+OR+Oocyte+%5BTitle/Abstract%5D+OR+Sperm+%5BTitle/Abstract%5D+OR+Infertility+%5BTitle/Abstract%5D+OR+Fertility+%5BTitle/Abstract%5D%29%29 .
+
+## Scopus (Results: 756)
+
+Query string: (TITLE-ABS ( " Artificial intelligence " ) OR TITLE-ABS ( " Machine learning " )) AND ( TITLE-ABS ( " embryo” ) OR TITLE-ABS ( " sperm " ) OR TITLE-ABS ( " Zygote " ) OR TITLE-ABS ( " In vitro fertilization " ) OR TITLE-ABS ( " Assisted reproductive biology " ) OR TITLE-ABS ( " Oocyte " )).
+
+ https://www.scopus.com/results/results.uri?sort=plf-f%26src=s%26sid=31c0c9612b4fe13cc45badbaddccc396%26sot=a%26sdt=a%26sl=290%26s=%28TITLE-ABS+%28+%22+Artificial+intelligence+%22+%29+OR+TITLE-ABS+%28+%22+Machine+learning+%22+%29%29+AND+%28+TITLE-ABS+%28+%22+embryo%22+%29+OR+TITLE-ABS+%28+%22+sperm+%22+%29+OR+TITLE-ABS+%28+%22+Zygote+%22+%29+OR+TITLE-ABS+%28+%22+In+vitro+fertilization+%22+%29+OR+TITLE-ABS+%28+%22+Assisted+reproductive+biology+%22+%29+OR+TITLE-ABS+%28+%22+Oocyte+%22+%29%29%26origin=searchadvanced%26editSaveSearch=%26txGid=f889e55fee157e61f32b5300d51f87c0%26sessionSearchId=31c0c9612b4fe13cc45badbaddccc396%26limit=10 .
+
+## Web of science (Results: 272)
+
+((TI=(Artificial intelligence OR Machine learning )) AND ((TI=( sperm OR embryo OR In vitro fertilization OR Oocyte))))
+
+ https://www.webofscience.com/wos/woscc/summary/1205a51d-6eb2-433e-b71e-1143ee4723ec-f62b6c2f/relevance/1 .
+
+## Risk of bias assessment
+
+We assessed the methodological quality of the selected studies through the revised Quality Assessment of Diagnostic Accuracy Studies (QUADAS- 2) tool, recommended by the Cochrane collaboration for the risk of bias and applicability concerns [ 20 ] in which “Patient Selection”, “Details of used index test”, “Details of used standard test”, and “how to follow the samples and perform the procedures” were assessed. Each of the four items was categorized as high, low, or unclear, and disagreements were resolved by a third reviewer (RV).
+
+## Statistical issues
+
+We used the MIDAS module in STATA/SE 11.2 to perform all analyses related to diagnostic test accuracy [ 21 ]. From each study, we extracted true positive (TP), false positive (FP), false negative (FN), and true negative (TN) values to calculate key diagnostic metrics, including sensitivity, specificity, positive likelihood ratio (PLR), negative likelihood ratio (NLR), and diagnostic odds ratio (DOR). Pooled estimates and their 95% confidence intervals were calculated using a bivariate random-effects regression model and the hierarchical summary receiver operating characteristic (HSROC) model, which jointly analyze sensitivity and specificity while accounting for between-study heterogeneity [ 22 , 23 ]. These models were implemented through MIDAS, which allows integrated bivariate and HSROC analyses within STATA.
+
+Results were visualized using coupled forest plots for sensitivity, specificity, and likelihood ratios, as well as an HSROC curve to illustrate overall test performance. Study heterogeneity was evaluated using Cochran’s Q test and the I² statistic. Potential publication bias was assessed through Deek’s funnel plot asymmetry test. Where possible, we extracted details on the development of AI tools from the original studies, including their training-validation processes (e.g., cross-validation, external validation) and the types of algorithms used (e.g., CNNs, SVMs, ensemble methods), to provide further context for interpreting diagnostic performance.
+
+## Results
+
+A total of 1,850 records were identified through database searches (PubMed = 822, Scopus = 756, Web of Science = 272). After removing 878 duplicates, 972 articles were screened. Of these, 80 abstracts were reviewed, and 29 full-text articles were assessed for eligibility. Twenty-three were excluded for not reporting diagnostic 2 × 2 data, leaving six studies for final inclusion in the meta-analysis (Table 1 ). The PRISMA flowchart summarizing the study selection process is shown in Fig.  1 .
+
+ Fig. 1 
+PRISMA flowchart for the meta-analysis
+
+The forest plots in Fig.  2 display the sensitivity and specificity estimates from each study. The pooled sensitivity across studies was 0.69, and the pooled specificity was 0.62. These findings suggest that AI models have good potential to distinguish between embryos likely and unlikely to result in successful implantation. These values correspond to a Diagnostic Odds Ratio (DOR) of 3.69, suggesting moderate-to-strong overall discriminatory power of AI-based assessment tools in IVF.
+ Fig. 2 
+Coupled forest plots displaying the pooled sensitivity and specificity estimates of artificial intelligence (AI) tools in predicting pregnancy-related outcomes in in vitro fertilization (IVF) cycles
+
+We presented the likelihood ratios (LRs) in Fig.  3 , which illustrate the diagnostic value of AI-based embryo selection. The positive likelihood ratio (LR positive) is defined as the probability of a positive test result in patients with the outcome (pregnancy) divided by the probability of the same result in those without the outcome. In our analysis, the LR positive was 1.84, indicating that embryos identified as viable by AI models are approximately 2 times more likely to lead to a pregnancy compared to embryos that are not. The negative likelihood ratio (LR negative) was 0.5, suggesting that a negative result moderately reduces the probability of successful implantation. These findings support the moderate diagnostic utility of AI tools in embryo assessment.
+ Fig. 3 
+Coupled forest plots presenting the pooled estimates of positive and negative likelihood ratios for artificial intelligence (AI) tools in assessing pregnancy-related outcomes in IVF cycles
+
+The hierarchical summary receiver operating characteristic (HSROC) curve for the diagnostic accuracy of AI tools is presented in Fig.  4 . The area under the curve (AUC) was 0.7 with a 95% confidence interval ranging from 0.66 to 0.74. This value indicates a high level of diagnostic accuracy for AI-based methods in assessing pregnancy-related outcomes in IVF settings.
+ Fig. 4 
+Hierarchical summary receiver operating characteristic (HSROC) curve illustrating the overall diagnostic accuracy of artificial intelligence (AI) tools in predicting pregnancy-related outcomes in IVF cycles
+
+We evaluated potential publication bias using Deek’s funnel plot, as shown in Fig.  5 . The Deek asymmetry test produced a p -value greater than 0.1, which indicates that there was no evidence of publication bias in the included studies [ 39 ].
+ Fig. 5 
+Deeks’ funnel plot for assessing publication bias among studies evaluating the diagnostic performance of artificial intelligence (AI) tools in predicting pregnancy-related outcomes
+
+Table  2 provides a summary of key pooled diagnostic metrics with interpretation, offering a concise overview of AI tools’ performance in predicting IVF pregnancy outcomes.
+
+## Discussion
+
+In this systematic review and diagnostic meta-analysis, we assessed the effectiveness of AI tools in predicting pregnancy outcomes in in vitro fertilization (IVF). Data from six eligible studies showed that AI-based embryo selection offers promising diagnostic performance, with a pooled sensitivity of 0.69 and specificity of 0.62. These values indicate that AI can reliably distinguish embryos with higher chances of implantation. The positive and negative likelihood ratios were 1.84 and 0.50, respectively, and the pooled Diagnostic Odds Ratio (DOR) was 3.69, reflecting moderate-to-strong discriminatory power. An overall Area Under the Curve (AUC) of 0.7 further supports the diagnostic accuracy of AI systems. These findings suggest that integrating AI into embryo selection may improve IVF success rates by enabling more accurate, consistent, and objective assessments.
+
+Selecting the ideal embryo from a set of viable candidates is a major challenge in IVF [ 40 ]. The goal is to achieve the highest live birth rates and minimize the risk of multiple pregnancies by choosing one or two embryos with the greatest implantation potential [ 41 ]. This selection process is currently manual, relying on trained embryologists who use optical light microscopes to assess embryo morphology [ 42 ]. Traditional methods are subjective and can vary significantly between embryologists. The introduction of AI represents a transformative shift in reproductive medicine. AI’s non-invasive capabilities have sparked significant advancements in IVF, aiming to refine embryo selection by identifying the embryos with the highest likelihood of successful implantation [ 43 ]. Furthermore, AI promises to automate various IVF procedures, such as assessing gamete quality, selecting sperm during intracytoplasmic sperm injection (ICSI), and developing enhanced stimulation protocols [ 16 ]. This shift from subjective morphological evaluations to more objective, data-driven methods mark a significant advancement in the field.
+
+AI models, such as the Life Whisperer AI evaluated by VerMilyea et al., have demonstrated substantial progress in embryo assessment. The Life Whisperer model, which analyzed data from 8,886 embryos, achieved an overall accuracy rate of 64.3% in predicting embryo viability using images from conventional optical light microscopes. The model showed sensitivity and specificity rates of 70.1% and 60.5%, respectively, indicating robust performance in predicting embryo viability [ 31 ]. This model’s ability to provide a reliable confidence score for pregnancy prediction enhances its clinical utility. However, despite encouraging results, the current accuracy still falls short of achieving consistently perfect predictions in embryo selection.
+
+In contrast, recent research has aimed to overcome limitations in current AI algorithms, which often fail to integrate embryonic traits with maternal factors. Enatsu et al.‘s development of the Fertility Image Testing Through Embryo (FiTTE) system represents a notable advancement. FiTTE combines ensemble modeling with a comprehensive dataset of 19,342 static blastocyst images and clinical information, such as age, hormone levels, pregnancy history, and endometrial thickness. This approach achieved a 62.7% improvement in prediction accuracy over traditional methods, with an AUC of 0.71 compared to 0.62 for the Gardner grading system [ 26 ]. This improvement underscores the potential of integrating diverse data sources to enhance embryo selection and increase the likelihood of successful pregnancy outcomes.
+
+Further advancements in AI include the development of models that predict miscarriage risk by analyzing time-lapse recordings of embryo development. Amitai et al.’s research utilized a dataset of 314 morphological, morphokinetic, and dynamic parameters, identifying six key features that offer robust predictive power for miscarriage risk [ 35 ]. Their model achieved an AUC of 68%, comparable to other established algorithms. Similarly, Uyar et al.’s evaluation of embryo implantation potential through various classifiers demonstrated improved performance, particularly for predicting multiple embryo implantations [ 36 ]. These studies illustrate the growing capability of AI to address both implantation potential and miscarriage risk, offering more comprehensive tools for embryo assessment.
+
+Time-lapse monitoring has emerged as a non-invasive method for embryo assessment, offering valuable insights into morphokinetic characteristics associated with implantation, blastocyst formation, and aneuploidy. For instance, the NICS-Timelapse model achieved an AUC of 0.94 and an accuracy of 0.88 in predicting blastocyst euploidy, indicating its effectiveness in predicting clinical pregnancy and live birth rates [ 27 ]. This non-invasive approach complements other AI advancements by providing real-time analysis of embryo development, which is crucial for optimizing embryo selection.
+
+The development of semi-automatic grading systems and deep learning models further highlights AI’s role in assessing embryo quality. Filho et al. created a semi-automatic grading system with accuracy rates ranging from 67 to 92% [ 44 ]. Similarly, Khosravi et al. and Kragh et al. developed AI models that classify blastocyst images based on Gardner’s scale [ 43 , 45 ]. Khosravi et al.’s STORK model achieved a remarkable 97.5% accuracy, though this high accuracy may be attributed to its focus on classifying extreme grades of embryos [ 43 ]. In contrast, Kragh et al.’s model demonstrated 71.9% accuracy in evaluating the inner cell mass (ICM) and 76.4% accuracy in assessing the trophectoderm, with AUCs of 0.66 and 0.64, respectively [ 45 ]. These findings suggest that while some AI models perform well in grading embryos, their predictive power for pregnancy outcomes may still be limited compared to the expertise of human embryologists. However, the development of AI models continues to advance, as evidenced by Tran et al.‘s creation of the deep learning model IVY, which achieved an impressive AUC of 0.93 in predicting the likelihood of detecting a fetal heartbeat from time-lapse recordings [ 13 ]. This substantial improvement highlights AI’s growing capability to not only automate and standardize traditional grading procedures but also to enhance predictive accuracy in reproductive medicine.
+
+Building on this trend, recent advances have explored the use of AI in analyzing early-stage cytoplasmic dynamics and proteomic data. Coticchio et al. proposed that AI-driven analysis of early-stage cytoplasmic dynamics could offer a novel approach for predicting embryo viability, achieving an accuracy of 82.6% in forecasting blastocyst development [ 25 ]. Moreover, integrating morphological grading with proteomic data has shown promise in estimating live birth probability with an accuracy of 72.7% [ 24 ]. These innovative approaches reflect a broader trend towards leveraging AI to enhance embryo selection through a combination of morphological and molecular data. Complementing these efforts, Blank et al. used clinical records to predict ongoing pregnancy after single blastocyst transfer and found that the random forest algorithm outperformed logistic regression based on AUC [ 34 ]. Additionally, Wen et al. developed two machine learning models using XGBoost to detect multiple pregnancies, demonstrating superior performance in predicting outcomes and reducing the risk of multiple pregnancies [ 32 ]. Collectively, these advancements underscore a growing recognition of AI’s role in refining reproductive technologies and improving patient outcomes through increasingly sophisticated predictive models.
+
+These technological advancements demonstrate strong diagnostic potential, but their true value lies in successful combination into real-world IVF settings. AI-based tools can improve the consistency of embryo selection and reduce reliance on subjective human judgment. In clinical practice, this may lead to more standardized, efficient workflows and better patient outcomes. However, several challenges must be addressed before widespread adoption. These include the need for rigorous clinical validation across diverse patient populations, seamless integration of AI systems into existing laboratory workflows, and training for embryologists and clinicians to understand and trust AI-generated insights. Additionally, cost-effectiveness and regulatory approval are important considerations for broader implementation. Addressing these practical factors is essential to transition AI from research innovation to routine clinical utility.
+
+While our meta-analysis shows encouraging diagnostic performance of AI-based embryo assessment tools, it is important to acknowledge the significant heterogeneity among the included studies. This variability likely stems from differences in patient populations, clinical protocols, imaging platforms, and AI algorithm design and training. Such inconsistencies can affect the comparability of results and may limit the reliability of pooled estimates. Moreover, the relatively small number of studies included restricts the ability to perform subgroup analyses that could further clarify the effectiveness of specific AI models across different settings.
+
+Collectively, to enhance the evidence base and support clinical adoption, future studies should be designed as prospective, multicenter, and blinded investigations. They should use standardized definitions for outcomes and apply consistent data collection methods across different clinical settings. Additionally, external validation of AI tools in diverse patient populations and real-world IVF workflows is crucial to ensure their reliability and generalizability. Adhering to these methodological standards will help future research more effectively demonstrate the clinical value of AI in embryo selection and support its adoption into routine fertility care.
+
+## Conclusion
+
+This systematic review and meta-analysis demonstrate that AI holds strong potential to enhance embryo selection in IVF. With a pooled sensitivity of 0.69, specificity of 0.62, AUC of 0.70, and a DOR of 3.69, AI tools show promising diagnostic performance in predicting pregnancy outcomes. However, current models are limited by their narrow data inputs and lack of integration of factors such as genetic, proteomic, and maternal health information. Future research should focus on developing more sophisticated algorithms that incorporate diverse data types, including time-lapse imaging, to better predict embryo viability and long-term clinical outcomes.
+
+## Acknowledgements
+
+Not applicable.
+
+## Author contributions
+
+MA, MY, TD, and SD contributed to the study concept and design. SD, NAA, and SS performed data screening. RV and HH conducted the data analysis. All authors contributed to drafting the manuscript. MA, SS, and HH reviewed and revised the final version of the manuscript.
+
+## Funding
+
+This research did not receive any specific grant from funding agencies in the public, commercial, or not-for-profit sectors.
+
+## Data availability
+
+No datasets were generated or analysed during the current study.
+
+## Declarations
+
+## Ethical approval and consent to participate
+
+Not applicable.
+
+## Consent for publication
+
+Not applicable.
+
+## Competing interests
+
+The authors declare no competing interests.
+
+## Ethical guidelines
+
+We complied with all the ethical guidelines.
+
+## Footnotes
+
+ Publisher’s note 
+
+Springer Nature remains neutral with regard to jurisdictional claims in published maps and institutional affiliations.
+
+Samaneh Sheibani and Hossein Hosseinirad contributed equally to this work.
+
+## Contributor Information
+
+Samaneh Sheibani, Email: samane.sheibani@yahoo.com.
+
+Hossein Hosseinirad, Email: shfcn@umsystem.edu.
+
+## References
+
+## Associated Data
+
+## Data Availability Statement
+
+No datasets were generated or analysed during the current study.

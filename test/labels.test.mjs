@@ -6,7 +6,7 @@
  * 光补一次不够，得让"漏名字"这件事自己冒出来。
  *
  * 这份文件把所有可能出现的心情词都过一遍：
- *   51 词表（emotion-lexicon）、8 维、6 个老状态、外加急救表里的
+ *   51 词表（emotion-lexicon）、8 维、5 个老状态、外加急救表里的
  * 任何一个没有中文名、或者名字里带英文，直接失败。
  *
  * 跑法：node test/labels.test.mjs
@@ -44,7 +44,7 @@ const DIMS = ['calm', 'lonely', 'wistful', 'flutter', 'unreconciled', 'weary', '
 const dimMissing = DIMS.filter((d) => !new RegExp('\\b' + d + '\\s*:').test(injectSrc))
 ok(dimMissing.length === 0, '八维都有中文名', dimMissing.join(','))
 
-// 三、六个老状态词也有
+// 三、五个老状态词也有（2026-11-21：这里原来写「六个」，下面只列了五个——照实改成五个）
 const MOODS = ['holding', 'happy', 'low', 'irritated', 'tired']
 const moodMissing = MOODS.filter((m) => !new RegExp('\\b' + m + '\\s*:').test(injectSrc))
 ok(moodMissing.length === 0, '老状态词都有中文名', moodMissing.join(','))

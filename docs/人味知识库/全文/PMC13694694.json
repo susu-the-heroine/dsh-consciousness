@@ -1,0 +1,10 @@
+{
+ "title": "Generalizable neural decoding for clinically scalable brain-computer interfaces.",
+ "authors": "Gu Y, Yin H, Wang Y, Woon YQ, Wang Y, Teng M, Lu C, Lu Z, Chen J.",
+ "year": "2026",
+ "journal": "npj biomedical innovations",
+ "doi": "10.1038/s44385-026-00119-0",
+ "pmid": "42919847",
+ "pmcid": "PMC13694694",
+ "abstract": "Brain-computer interfaces promise restored communication and movement, yet accuracy achieved under development rarely survives new sessions, users, tasks, or hardware. Generalization, not peak performance, determines clinical scalability. Here we examine generalizable neural decoding from development to deployment, organized by the domain held out at evaluation, target-data access, adaptation strategy, and the clinical conditions under which performance persists, identifying benchmarking standards, prospective validation, and hardware-algorithm co-design as prerequisites for durable benefit."
+}

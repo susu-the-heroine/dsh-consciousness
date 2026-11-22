@@ -1,0 +1,780 @@
+
+<!DOCTYPE article
+  PUBLIC "-//NLM//DTD JATS (Z39.96) Journal Archiving and Interchange DTD with MathML3 v1.4 20241031//EN" "JATS-archivearticle1-4-mathml3.dtd">
+<article id="bjso70029" xml:lang="en" article-type="research-article" dtd-version="1.4"><?da-xref-anchor-style autodetect?><processing-meta base-tagset="archiving" mathml-version="3.0" table-model="xhtml" tagset-family="jats"><restricted-by>pmc</restricted-by></processing-meta><front><journal-meta><journal-id journal-id-type="nlm-ta">Br J Soc Psychol</journal-id><journal-id journal-id-type="iso-abbrev">Br J Soc Psychol</journal-id><journal-id journal-id-type="pmc-domain-id">379</journal-id><journal-id journal-id-type="pmc-domain">blackwellopen</journal-id><journal-id journal-id-type="nlm-id">8105534</journal-id><journal-id journal-id-type="publisher-id">BJSO</journal-id><journal-title-group><journal-title>The British Journal of Social Psychology</journal-title></journal-title-group><issn pub-type="ppub">0144-6665</issn><issn pub-type="epub">2044-8309</issn><?publisher_abbrev blackwell?><custom-meta-group><custom-meta><meta-name>pmc-is-collection-domain</meta-name><meta-value>yes</meta-value></custom-meta><custom-meta><meta-name>pmc-collection-title</meta-name><meta-value>Wiley Open Access Collection</meta-value></custom-meta></custom-meta-group></journal-meta><article-meta><article-id pub-id-type="pmcid">PMC12703064</article-id><article-id pub-id-type="pmcid-ver">PMC12703064.1</article-id><article-id pub-id-type="pmcaid">12703064</article-id><article-id pub-id-type="pmcaiid">12703064</article-id><article-id pub-id-type="pmid">41392420</article-id><article-id pub-id-type="doi">10.1111/bjso.70029</article-id><article-id pub-id-type="publisher-id">BJSO70029</article-id><article-id pub-id-type="other">BJSO-2025-0484.R1</article-id><article-version article-version-type="pmc-version">1</article-version><article-categories><subj-group subj-group-type="article-subject-classification"><subject>No, I am not eligible and/or I do not want my manuscript to be considered</subject></subj-group><subj-group subj-group-type="article-subject-classification"><subject>Discursive Psychology</subject></subj-group><subj-group subj-group-type="article-subject-classification"><subject>Eating</subject></subj-group><subj-group subj-group-type="article-subject-classification"><subject>Family Mealtime</subject></subj-group><subj-group subj-group-type="article-subject-classification"><subject>Food Refusal</subject></subj-group><subj-group subj-group-type="article-subject-classification"><subject>Reluctant Compliance</subject></subj-group><subj-group subj-group-type="article-subject-classification"><subject>Resistance</subject></subj-group><subj-group subj-group-type="article-subject-classification"><subject>Social Influence</subject></subj-group><subj-group subj-group-type="overline"><subject>Article</subject></subj-group><subj-group subj-group-type="heading"><subject>Article</subject></subj-group></article-categories><title-group><article-title>Resisting eating during a family mealtime: The moral and identity work of food refusal</article-title><alt-title alt-title-type="right-running-head">Resisting eating during a family mealtime</alt-title><alt-title alt-title-type="left-running-head">Wiggins and Humă</alt-title></title-group><contrib-group><contrib id="bjso70029-cr-0001" contrib-type="author" corresp="yes"><name name-style="western"><surname>Wiggins</surname><given-names initials="S">Sally</given-names></name><contrib-id contrib-id-type="orcid" authenticated="false">https://orcid.org/0000-0002-3307-0748</contrib-id><xref rid="bjso70029-aff-0001" ref-type="aff">
+<sup>1</sup>
+</xref><address><email>sally.wiggins.young@liu.se</email></address></contrib><contrib id="bjso70029-cr-0002" contrib-type="author"><name name-style="western"><surname>Humă</surname><given-names initials="B">Bogdana</given-names></name><xref rid="bjso70029-aff-0002" ref-type="aff">
+<sup>2</sup>
+</xref></contrib></contrib-group><aff id="bjso70029-aff-0001">
+<label>
+<sup>1</sup>
+</label>
+<named-content content-type="organisation-division">Department of Behavioural Sciences and Learning</named-content>
+<institution>Linköping University</institution>
+<city>Linköping</city>
+<country country="SE">Sweden</country>
+</aff><aff id="bjso70029-aff-0002">
+<label>
+<sup>2</sup>
+</label>
+<named-content content-type="organisation-division">Faculty of Social Sciences and Humanities</named-content>
+<institution>Vrije Universiteit Amsterdam</institution>
+<city>Amsterdam</city>
+<country country="NL">Netherlands</country>
+</aff><author-notes><corresp id="correspondenceTo">
+<label>*</label>
+<bold>Correspondence</bold>
+<break/>
+Sally Wiggins, Department of Behavioural Science and Learning, Linköping University, Campus Valla, Linköping, 58 183, Sweden.<break/>
+Email: <email>sally.wiggins.young@liu.se</email>
+<break/>
+</corresp></author-notes><pub-date pub-type="epub"><day>14</day><month>12</month><year>2025</year></pub-date><pub-date pub-type="ppub"><month>1</month><year>2026</year></pub-date><volume>65</volume><issue seq="140">1</issue><issue-id pub-id-type="pmc-issue-id">502447</issue-id><issue-id pub-id-type="doi">10.1111/bjso.v65.1</issue-id><elocation-id>e70029</elocation-id><history>
+<date date-type="received"><day>01</day><month>9</month><year>2025</year></date>
+<date date-type="accepted"><day>19</day><month>11</month><year>2025</year></date>
+</history><pub-history><event event-type="pmc-release"><date><day>15</day><month>12</month><year>2025</year></date></event><event event-type="pmc-live"><date><day>16</day><month>12</month><year>2025</year></date></event><event event-type="pmc-last-change"><date iso-8601-date="2025-12-16 06:25:12.547"><day>16</day><month>12</month><year>2025</year></date></event></pub-history><permissions><copyright-statement content-type="article-copyright">© 2025 The Author(s). <italic toggle="yes">British Journal of Social Psychology</italic> published by John Wiley &amp; Sons Ltd on behalf of British Psychological Society.</copyright-statement><license><ali:license_ref xmlns:ali="http://www.niso.org/schemas/ali/1.0/" specific-use="textmining" content-type="ccbyncndlicense">https://creativecommons.org/licenses/by-nc-nd/4.0/</ali:license_ref><license-p>This is an open access article under the terms of the <ext-link xmlns:xlink="http://www.w3.org/1999/xlink" ext-link-type="uri" xlink:href="https://creativecommons.org/licenses/by-nc-nd/4.0/">http://creativecommons.org/licenses/by-nc-nd/4.0/</ext-link> License, which permits use and distribution in any medium, provided the original work is properly cited, the use is non‐commercial and no modifications or adaptations are made.</license-p></license></permissions><self-uri xmlns:xlink="http://www.w3.org/1999/xlink" content-type="pmc-pdf" xlink:href="BJSO-65-0.pdf"><?pdf-name BJSO-65-0.pdf?><?pdf-size 1303093?><?pdf-md5 c4de2a002af1267fac2bdae803373012?><?pdf-image-server-status NEVER_LOAD?><?pdf-cloudpmc-urn urn:app:fd95/12703064/c4de2a002af1/BJSO-65-0.pdf?></self-uri><self-uri xmlns:xlink="http://www.w3.org/1999/xlink" content-type="pdf" xlink:href="file:BJSO-65-0.pdf"/><abstract><title>Abstract</title><p>Recent developments within social influence research have demonstrated how resistance is temporally and sequentially accomplished within social interaction. The everyday morality of trying to get another person to do something against their will has, however, not been fully explored. Using the example of a sequence from a family mealtime, this paper illustrates how a concept typically understood as an individual concern – food refusal – can be reframed as a social phenomenon involving the delicate management of local identities and moral responsibilities. The study uses a single case analysis of a video‐recorded interaction from a UK family mealtime. Using discursive psychology and conversation analysis, we demonstrate that food refusal can be examined as interactional resistance, with different forms of resistance embedded within diverging action trajectories. The analysis illustrates an instance of ‘reluctant compliance’, involving a complex configuration of complying with a directive while simultaneously displaying unwillingness to do so. Finally, we highlight that dealing with resistance within the family mealtime involves the management of local identities and the moral sensitivity of claiming deontic authority over another person's food consumption. The analysis has implications not only for research on resistance and food refusal but also for the everyday accomplishment of social influence within families.</p></abstract><kwd-group kwd-group-type="author-generated"><kwd id="bjso70029-kwd-0001">discursive psychology</kwd><kwd id="bjso70029-kwd-0002">eating</kwd><kwd id="bjso70029-kwd-0003">family mealtime</kwd><kwd id="bjso70029-kwd-0004">food refusal</kwd><kwd id="bjso70029-kwd-0005">reluctant compliance</kwd><kwd id="bjso70029-kwd-0006">resistance</kwd><kwd id="bjso70029-kwd-0007">social influence</kwd></kwd-group><funding-group><award-group id="funding-0001"><funding-source>
+<institution-wrap><institution>Riksbankens Jubileumsfond</institution><institution-id institution-id-type="doi">10.13039/501100004472</institution-id></institution-wrap>
+</funding-source></award-group></funding-group><counts><fig-count count="7"/><table-count count="0"/><page-count count="20"/><word-count count="11900"/></counts><custom-meta-group><custom-meta><meta-name>pmc-status-qastatus</meta-name><meta-value>0</meta-value></custom-meta><custom-meta><meta-name>pmc-status-live</meta-name><meta-value>yes</meta-value></custom-meta><custom-meta><meta-name>pmc-status-embargo</meta-name><meta-value>no</meta-value></custom-meta><custom-meta><meta-name>pmc-status-released</meta-name><meta-value>yes</meta-value></custom-meta><custom-meta><meta-name>pmc-prop-open-access</meta-name><meta-value>yes</meta-value></custom-meta><custom-meta><meta-name>pmc-prop-olf</meta-name><meta-value>no</meta-value></custom-meta><custom-meta><meta-name>pmc-prop-manuscript</meta-name><meta-value>no</meta-value></custom-meta><custom-meta><meta-name>pmc-prop-legally-suppressed</meta-name><meta-value>no</meta-value></custom-meta><custom-meta><meta-name>pmc-prop-has-pdf</meta-name><meta-value>yes</meta-value></custom-meta><custom-meta><meta-name>pmc-prop-has-supplement</meta-name><meta-value>no</meta-value></custom-meta><custom-meta><meta-name>pmc-prop-pdf-only</meta-name><meta-value>no</meta-value></custom-meta><custom-meta><meta-name>pmc-prop-suppress-copyright</meta-name><meta-value>no</meta-value></custom-meta><custom-meta><meta-name>pmc-prop-is-real-version</meta-name><meta-value>no</meta-value></custom-meta><custom-meta><meta-name>pmc-prop-is-scanned-article</meta-name><meta-value>no</meta-value></custom-meta><custom-meta><meta-name>pmc-prop-preprint</meta-name><meta-value>no</meta-value></custom-meta><custom-meta><meta-name>pmc-prop-in-epmc</meta-name><meta-value>yes</meta-value></custom-meta><custom-meta><meta-name>pmc-license-ref</meta-name><meta-value>CC BY-NC-ND</meta-value></custom-meta><custom-meta><meta-name>source-schema-version-number</meta-name><meta-value>2.0</meta-value></custom-meta><custom-meta><meta-name>cover-date</meta-name><meta-value>January 2026</meta-value></custom-meta><custom-meta><meta-name>details-of-publishers-convertor</meta-name><meta-value>Converter:WILEY_ML3GV2_TO_JATSPMC version:6.6.6 mode:remove_FC converted:15.12.2025</meta-value></custom-meta></custom-meta-group></article-meta><notes><p content-type="self-citation">
+<mixed-citation publication-type="journal" id="BJSO70029-cit-2001">
+<string-name name-style="western">
+<surname>Wiggins</surname>, <given-names>S.</given-names>
+</string-name>, &amp; <string-name name-style="western">
+<surname>Humă</surname>, <given-names>B.</given-names>
+</string-name> (<year>2026</year>). <article-title>Resisting eating during a family mealtime: The moral and identity work of food refusal</article-title>. <source>British Journal of Social Psychology</source>, <volume>65</volume>, <elocation-id>e70029</elocation-id>. <pub-id pub-id-type="doi">10.1111/bjso.70029</pub-id>
+<pub-id pub-id-type="pmid">41392420</pub-id></mixed-citation>
+</p></notes></front><body id="bjso70029-body-0001"><sec id="bjso70029-sec-0001"><title>INTRODUCTION</title><p>Social psychology has a long history of studying social influence and behaviour change, with a particular focus on how successful attempts at influence are achieved. Much less attention has been paid, however, to how influence might be resisted (though see Gibson, <xref rid="bjso70029-bib-0031" ref-type="bibr">2013</xref>, <xref rid="bjso70029-bib-0032" ref-type="bibr">2019</xref>; Hollander, <xref rid="bjso70029-bib-0041" ref-type="bibr">2015</xref>). Furthermore, a substantial proportion of existing research typically involves individuals performing standardised researcher‐designed tasks in laboratory settings, stripped of the moral complexities associated with trying to get another person to do something in everyday life (though see Kaposi, <xref rid="bjso70029-bib-0047" ref-type="bibr">2017</xref>). Research that does examine social influence in naturalistic settings has, however, revealed the subtle interactional processes that underpin behaviour change and its resistance in real‐life social settings. For instance, family interaction involves the delicate moral work of socializing children (Hepburn, <xref rid="bjso70029-bib-0037" ref-type="bibr">2020b</xref>) while managing one's identity as a ‘good’ parent, particularly during mealtimes when there can be intense negotiation of food consumption (Aronsson &amp; Gottzén, <xref rid="bjso70029-bib-0006" ref-type="bibr">2011</xref>; Paugh &amp; Izquierdo, <xref rid="bjso70029-bib-0066" ref-type="bibr">2009</xref>). Children's resistance to parental influence on their eating habits are thus particularly rich settings to examine social influence in everyday life, since they involve intricate social relationships and occur with regular frequency.</p><p>In this paper, we examine an instance of resistance toward eating a specific food item during a family dinner, tracking the ways in which resistance unfolds as a social interactional phenomenon. The analysis focuses on an extended sequence and reveals how resistance emerges and unfolds temporally and sequentially as parents and a child manage what, how, and how much is eaten. Ultimately, we argue that how parents get their children to eat is a matter not only of breaking down resistance, but also of the management of moral issues and local identities of the family members. The analysis has implications for academic work on resistance and food refusal, and the everyday accomplishment of social influence within families.</p><sec id="bjso70029-sec-0002"><title>Resisting in social interaction</title><p>In contrast to experimental studies in laboratory settings, the interactional approach to resistance has placed social influence firmly back into the realm of everyday social life. Informed by discursive psychological and conversation analytic work, this approach demonstrates how resistance can be understood as a practical accomplishment within social interaction, the result of a speaker temporarily or permanently suspending their cooperation with an interlocutor, usually in response to the latter's prior action (Humă et al., <xref rid="bjso70029-bib-0043" ref-type="bibr">2023</xref>). This emerging body of research has revealed <italic toggle="yes">that and how</italic> resistance is not necessarily a cognitive phenomenon (cf. Fransen, <xref rid="bjso70029-bib-0027" ref-type="bibr">2013</xref>; Fransen et al., <xref rid="bjso70029-bib-0028" ref-type="bibr">2015</xref>; for a comparative discussion of the interactional and cognitive approaches to resistance see Humă &amp; Stokoe, <xref rid="bjso70029-bib-0044" ref-type="bibr">2023</xref>), but instead emerges through talk and embodied conduct in interaction. Additionally, resisting cannot be reduced to a single behaviour, such as a verbal ‘no’ or headshake; it is accomplished through various linguistic and embodied resources, such as silence (Hollander, <xref rid="bjso70029-bib-0041" ref-type="bibr">2015</xref>; Koenig, <xref rid="bjso70029-bib-0052" ref-type="bibr">2011</xref>), laughter (Glenn, <xref rid="bjso70029-bib-0034" ref-type="bibr">2003</xref>; Zayts &amp; Schnurr, <xref rid="bjso70029-bib-0103" ref-type="bibr">2011</xref>) and delays of various kinds (Kent, <xref rid="bjso70029-bib-0050" ref-type="bibr">2012a</xref>), many of which are subtle and often overlooked by experimental studies of resistance. Together with other aspects of turn design and lexical choice, these features can be combined to achieve gradations of resistance. In other words, people can design their actions to be more or less uncooperative. A case in point is transformative answers to polar questions which, unlike type‐confirming answers (Raymond, <xref rid="bjso70029-bib-0070" ref-type="bibr">2003</xref>) push back against some presupposition or assumption embedded in the question. Stivers and Hayashi (<xref rid="bjso70029-bib-0086" ref-type="bibr">2010</xref>) distinguish between term‐transforming answers that operate on the questions' design, whereas agenda‐transforming answers also reframe the questions' agenda, thus embodying a higher degree of resistance. Interactional studies of resistance have also revealed its temporal and sequential characteristics; that is, how resistance develops over several turns and sequences of talk, and how it can escalate from covert/passive/implicit to overt/active/explicit (Clark et al., <xref rid="bjso70029-bib-0016" ref-type="bibr">1994</xref>; Hollander, <xref rid="bjso70029-bib-0041" ref-type="bibr">2015</xref>; Stivers, <xref rid="bjso70029-bib-0085" ref-type="bibr">2007</xref>). Studies of resistance using an interactional approach have therefore demonstrated how resistance unfolds ‘in the wild’, in situations where the required behaviour has real‐life consequences (Flint &amp; Rhys, <xref rid="bjso70029-bib-0026" ref-type="bibr">2023</xref>; Seymour‐Smith &amp; Kloess, <xref rid="bjso70029-bib-0080" ref-type="bibr">2021</xref>; Sikveland &amp; Stokoe, <xref rid="bjso70029-bib-0082" ref-type="bibr">2023</xref>).</p><p>While the interactional infrastructure of resistance has been thoroughly mapped out, somewhat less attention has been paid to untangling how resistance is intertwined with local identities and relationships between the individuals involved. Social actions such as directives embody a (deontic) entitlement to change others' behaviour (Antaki, <xref rid="bjso70029-bib-0002" ref-type="bibr">2023</xref>; Craven &amp; Potter, <xref rid="bjso70029-bib-0017" ref-type="bibr">2010</xref>; Stevanovic &amp; Peräkylä, <xref rid="bjso70029-bib-0084" ref-type="bibr">2012</xref>), while other actions can create opportunities for interlocutors to display autonomy or willingness to act of their own accord (Sikveland &amp; Stokoe, <xref rid="bjso70029-bib-0081" ref-type="bibr">2016</xref>). Family interactions, for instance, often engender displays of power imbalance (Flint &amp; Rhys, <xref rid="bjso70029-bib-0026" ref-type="bibr">2023</xref>), whereby parents display entitlement to tell children what (not) to do (e.g., Antaki &amp; Kent, <xref rid="bjso70029-bib-0003" ref-type="bibr">2012</xref>; Cekaite, <xref rid="bjso70029-bib-0013" ref-type="bibr">2010</xref>, <xref rid="bjso70029-bib-0014" ref-type="bibr">2015</xref>; Goodwin &amp; Cekaite, <xref rid="bjso70029-bib-0035" ref-type="bibr">2018</xref>). Any slight deviation from full and immediate compliance enables a child to show independence in how they respond to the directive (Kent, <xref rid="bjso70029-bib-0050" ref-type="bibr">2012a</xref>) and thus resist not just the course of action imposed by the parent, but also the identity of a submissive child. Building on this emerging body of work, the current paper further excavates how identities (and associated entitlements, rights, obligations etc.) become relevant in the interactional accomplishment of resistance, thus revealing orientations to the moral order of influencing and resisting.</p></sec><sec id="bjso70029-sec-0003"><title>Negotiating eating during family mealtimes</title><p>Family mealtimes as a setting in which children are socialised into various social and cultural practices has already been extensively researched, revealing the granularity of interactional processes of social influence (Arcidiacono &amp; Bova, <xref rid="bjso70029-bib-0004" ref-type="bibr">2015</xref>; Aronsson &amp; Gottzén, <xref rid="bjso70029-bib-0006" ref-type="bibr">2011</xref>; Caronia &amp; Colla, <xref rid="bjso70029-bib-0012" ref-type="bibr">2024</xref>; Hepburn, <xref rid="bjso70029-bib-0037" ref-type="bibr">2020b</xref>; Kremer‐Sadlik &amp; Morgenstern, <xref rid="bjso70029-bib-0053" ref-type="bibr">2022</xref>; Ochs &amp; Taylor, <xref rid="bjso70029-bib-0064" ref-type="bibr">1992</xref>; Paugh &amp; Izquierdo, <xref rid="bjso70029-bib-0066" ref-type="bibr">2009</xref>; Pontecorvo &amp; Fasulo, <xref rid="bjso70029-bib-0068" ref-type="bibr">1997</xref>; Waring, <xref rid="bjso70029-bib-0093" ref-type="bibr">2025</xref>). For instance, several studies have demonstrated that directives (or requests, see Pauletto et al., <xref rid="bjso70029-bib-0067" ref-type="bibr">2017</xref>) are carefully calibrated through verbal and embodied resources to fit with the contingencies of particular situations (Goodwin &amp; Cekaite, <xref rid="bjso70029-bib-0035" ref-type="bibr">2018</xref>; Waring, <xref rid="bjso70029-bib-0093" ref-type="bibr">2025</xref>) and how they invoke dimensions of entitlement and contingency (Curl &amp; Drew, <xref rid="bjso70029-bib-0018" ref-type="bibr">2008</xref>) such as ‘don't play with your food’ (Blum‐Kulka, <xref rid="bjso70029-bib-0009" ref-type="bibr">1990</xref>; Craven &amp; Potter, <xref rid="bjso70029-bib-0017" ref-type="bibr">2010</xref>; Kent, <xref rid="bjso70029-bib-0050" ref-type="bibr">2012a</xref>). Other research has focused on threats that require children to comply with certain conditions to avoid negative consequences (Hepburn &amp; Potter, <xref rid="bjso70029-bib-0038" ref-type="bibr">2011</xref>), rule invocations that are designedly impersonal and used when there is trouble in achieving compliance (Küttner et al., <xref rid="bjso70029-bib-0054" ref-type="bibr">2022</xref>), and shaming interrogatives that pursue behaviour change through publicly making the child's conduct accountable and problematic (Potter &amp; Hepburn, <xref rid="bjso70029-bib-0069" ref-type="bibr">2020</xref>).</p><p>While there has been acknowledgement of children's resistant moves within this literature (Craven &amp; Potter, <xref rid="bjso70029-bib-0017" ref-type="bibr">2010</xref>; Kent, <xref rid="bjso70029-bib-0050" ref-type="bibr">2012a</xref>, <xref rid="bjso70029-bib-0051" ref-type="bibr">2012b</xref>), research has mainly focused on what has been termed ‘interactional bargaining’ between parents and children (e.g., Paugh &amp; Izquierdo, <xref rid="bjso70029-bib-0066" ref-type="bibr">2009</xref>; Waring, <xref rid="bjso70029-bib-0093" ref-type="bibr">2025</xref>). It is Kent's (<xref rid="bjso70029-bib-0050" ref-type="bibr">2012a</xref>) paper on children's uses of ‘incipient compliance’ (actions that move toward compliance but do not fully enact it; Schegloff, <xref rid="bjso70029-bib-0079" ref-type="bibr">1989</xref>) that reveals some of the resources that can be used by young children to resist a trajectory of action proposed by parents. Incipient compliance positions the child as complying without necessarily following through: ‘doing a performance of compliance’ (Kent, <xref rid="bjso70029-bib-0050" ref-type="bibr">2012a</xref>, p. 718), thus buying children time to respond in other ways. What is missing, however, is a detailed examination of the interactional practices involved in children's resistance to parental influence, particularly with regard to the central activity for which parents are responsible: children's food consumption. It is when we consider another area of psychological research–food refusal–that it becomes apparent just how big a problem this can be.</p></sec><sec id="bjso70029-sec-0004"><title>Refusing food</title><p>The issue of refusing food has been examined in a parallel psychological literature, with ‘food refusal’ an umbrella term that refers to a range of situations in which food that is presented to the individual is not eaten, something that can be particularly prevalent during childhood (e.g., Dovey et al., <xref rid="bjso70029-bib-0019" ref-type="bibr">2008</xref>; Farrow &amp; Coulthard, <xref rid="bjso70029-bib-0025" ref-type="bibr">2012</xref>; Taquet et al., <xref rid="bjso70029-bib-0087" ref-type="bibr">2024</xref>). Food refusal can refer to specific behaviours such as turning the head away from food, or more pervasive eating habits that can be temporary or chronic such as those associated with eating disorders. The term includes concepts such as neophobia (a reluctance or refusal to eat once‐accepted foods; e.g., Dovey et al., <xref rid="bjso70029-bib-0019" ref-type="bibr">2008</xref>), ‘fussy’ or ‘picky’ eating (e.g., Mitchell et al., <xref rid="bjso70029-bib-0061" ref-type="bibr">2013</xref>; van der Horst, <xref rid="bjso70029-bib-0090" ref-type="bibr">2012</xref>), and food aversions and eating disorders (e.g., Bryant‐Waugh, <xref rid="bjso70029-bib-0011" ref-type="bibr">2020</xref>). What is common across this extensive body of literature, however, is a conceptualisation of food refusal primarily in terms of individual characteristics. Efforts tend to focus therefore on uncovering why and how food refusal behaviours are established, when they occur, and crucially, how they can be overcome. Food refusal has been treated, in short, as a problem anchored in children's behaviour and a problem that needs to be resolved.</p><p>Efforts to understand food refusal behaviours within this body of work have to a limited extent considered the social environment in which eating occurs (Lafraire et al., <xref rid="bjso70029-bib-0055" ref-type="bibr">2016</xref>) and the parental practices that might contribute to the development of such behaviours. Research uses various methods to identify causal factors, including parental self‐report scales and observation of feeding practices, though some research suggests that parental reports might not correlate with observational measures (Fries et al., <xref rid="bjso70029-bib-0029" ref-type="bibr">2019</xref>). Work that focuses specifically on interactional issues, such as parent–child dynamics, has however received limited attention (Russell &amp; Worsley, <xref rid="bjso70029-bib-0074" ref-type="bibr">2013</xref>) and many studies are restricted to experimental settings in which the complexities of everyday relationships are often lost. For instance, studies have investigated whether young children might be more likely to accept specific foods if they watch a peer eating the same food (e.g., Addessi et al., <xref rid="bjso70029-bib-0001" ref-type="bibr">2005</xref>; Salvy et al., <xref rid="bjso70029-bib-0077" ref-type="bibr">2008</xref>), but not what might happen in non‐experimental settings when a food is explicitly refused by a child.</p><p>Observational research has furthermore examined specific verbal and embodied behaviours of the child (‘disruptive behaviour’; Borrero et al., <xref rid="bjso70029-bib-0010" ref-type="bibr">2010</xref>) including pushing away food or utensils, turning the head, covering the mouth and vocalisations including ‘I don't like this’. Parental conduct is also coded in observational studies and includes overarching strategies, such as being authoritative, or specific practices that relate to single behaviours. Examples of specific practices include modelling behaviour (Addessi et al., <xref rid="bjso70029-bib-0001" ref-type="bibr">2005</xref>; Dovey et al., <xref rid="bjso70029-bib-0019" ref-type="bibr">2008</xref>), encouragement (e.g., Wardle et al., <xref rid="bjso70029-bib-0091" ref-type="bibr">2005</xref>) and using coaxing, threats, reprimands and praise to get children to eat certain foods (Borrero et al., <xref rid="bjso70029-bib-0010" ref-type="bibr">2010</xref>). What remains an issue is understanding how refusal becomes so resistant to change. The challenges of trying to identify causal relations between different factors have already been noted in the literature: ‘we do not know whether children's food rejections elicit more parental pressure, or whether parental pressure and restriction foster food rejections in children’ (Lafraire et al., <xref rid="bjso70029-bib-0055" ref-type="bibr">2016</xref>, p. 352). While observational research on children's food refusal has thus revealed some common practices that might alleviate refusal, understanding how refusal can be overcome or diffused remains an elusive problem.</p></sec><sec id="bjso70029-sec-0005"><title>Aim of the current paper</title><p>In this paper, we bring together these separate fields of research – interactional work on resistance, family negotiations and food refusal – to contextualise food refusal as a social phenomenon, by studying it in its natural environment. Building on insights from conversation analytic and discursive psychological research on resistance (see Humă et al., <xref rid="bjso70029-bib-0043" ref-type="bibr">2023</xref> for an overview) and on mealtime interactions (inter alia Aronsson &amp; Gottzén, <xref rid="bjso70029-bib-0006" ref-type="bibr">2011</xref>; Hepburn, <xref rid="bjso70029-bib-0036" ref-type="bibr">2020a</xref>; Kent, <xref rid="bjso70029-bib-0051" ref-type="bibr">2012b</xref>; van der Heijden, <xref rid="bjso70029-bib-0088" ref-type="bibr">2022</xref>; Waring, <xref rid="bjso70029-bib-0093" ref-type="bibr">2025</xref>; Wiggins, <xref rid="bjso70029-bib-0098" ref-type="bibr">2025</xref>), we explicate how food refusal is interactionally accomplished through a child's acts of resistance in response to various parental attempts to get him to consume a particular food. We treat resistance not as a behaviour originating from the child's putative food preferences or sensory reactions, but as a multimodal situated accomplishment, performed by the child and managed by Mum and Dad whose actions occasion and sustain the resistance. Finally, we bring to light the underexplored aspects of morality and the management of local identities as they feature in social influence within naturally occurring interactions (Gibson, <xref rid="bjso70029-bib-0032" ref-type="bibr">2019</xref>; Humă, <xref rid="bjso70029-bib-0042" ref-type="bibr">2023</xref>; Humă et al., <xref rid="bjso70029-bib-0045" ref-type="bibr">2021</xref>; Kaposi, <xref rid="bjso70029-bib-0047" ref-type="bibr">2017</xref>).</p></sec></sec><sec sec-type="methods" id="bjso70029-sec-0006"><title>METHOD</title><sec id="bjso70029-sec-0007"><title>Data and participants</title><p>The data extracts used in this paper are taken from an evening meal, recorded as part of a larger video corpus of family mealtimes in the UK. The family comprises Mum, Dad, and three children with the pseudonyms: Joseph (9 years), Samuel (7 years) and Emma (5 years). No other demographic data were taken, though both parents were in full‐time employment. The family was asked to record their mealtimes, using two small video cameras provided by the researcher, as often as possible over four weeks during the summer of 2011. The study was approved by the University of Strathclyde (Scotland) ethics board before participant recruitment. Full written consent was obtained from the parents for family members to be recorded for the study and for the anonymised video data and/or transcripts to be used in publications or presentations. The parents had full control over the video cameras, in terms of when and how recording took place, and the recorded material that was passed over to the researcher. This data extract comes from a dinner recorded two weeks into this family's recording of their mealtimes.</p></sec><sec id="bjso70029-sec-0008"><title>Analytic procedure</title><p>The full data extract was identified in the larger corpus through a search for instances involving food negotiations between parents and children, and specifically potential cases of food refusal; it had also been identified in a previous analysis related to disgust expressions (Wiggins &amp; Keevallik, <xref rid="bjso70029-bib-0100" ref-type="bibr">in press</xref>). A ‘negotiation’ was defined as a situation where participants demonstrate different goals in terms of what is to be eaten, including the practices identified in the literature above (e.g. directives, encouragements, threats). Searching for examples of food refusal was similarly treated cautiously. Rather than defining instances a priori as certain kinds of action, the searching process was inclusive for verbal and multimodal variations on what might be classed as refusal. Given the gradations of resistance noted previously, even an extended pause after a food offer could be treated as a refusal. Multiple examples were identified throughout the larger corpus, though the selected extract was particularly distinctive in terms of its duration (lasting just over 2 min 30 s) and in the range of discursive practices used by the parents and child during the interaction. Furthermore, it included an explicit statement by the child that he would ‘never eat’ the food on offer; its status as a suitable example of food refusal was thus much clearer. Single case analyses (Nishizaka, <xref rid="bjso70029-bib-0063" ref-type="bibr">2024</xref>) have been used effectively to illustrate extended sequences of family interaction involving resistance (Flint &amp; Rhys, <xref rid="bjso70029-bib-0026" ref-type="bibr">2023</xref>), argumentative discourse (Arcidiacono et al., <xref rid="bjso70029-bib-0005" ref-type="bibr">2022</xref>) and food disgust (Wiggins &amp; Keevallik, <xref rid="bjso70029-bib-0099" ref-type="bibr">2023</xref>) and the examination of a single interactional sequence here enables a focus on the progressivity and transformation of discursive practices related to food refusal.</p><p>The data extract was transcribed using DOTE software (McIlvenny et al., <xref rid="bjso70029-bib-0060" ref-type="bibr">2022</xref>) to incorporate embodied features of interaction such as eye gaze and hand movements (Mondada, <xref rid="bjso70029-bib-0062" ref-type="bibr">2018</xref>). Other features transcribed were intonation, overlap, length of pauses and non‐lexical vocalisations. The video recording and transcript were then analysed using discursive psychology (DP; Edwards &amp; Potter, <xref rid="bjso70029-bib-0023" ref-type="bibr">1992</xref>; Wiggins, <xref rid="bjso70029-bib-0096" ref-type="bibr">2017</xref>) and conversation analysis (CA; Schegloff, <xref rid="bjso70029-bib-0104" ref-type="bibr">2007</xref>), two approaches that share a treatment of language as social action and an orientation to the sequential build‐up of conversations. Particular attention was paid to resistance as a sequential phenomenon and to how food refusal was accomplished in interaction.</p></sec></sec><sec id="bjso70029-sec-0009"><title>ANALYSIS</title><p>The analysis examines the interactional unfolding of a sequence of ‘food refusal’ during a family dinner. Throughout the analysis, we propose three inter‐related arguments. First, that food refusal can be contextualised as primarily a social interactional phenomenon, since regardless of any underlying psychological or sensory issues, it involves the negotiation of food between two or more persons within a specific interactional context. A corollary of this is that refusal can be understood as a form of interactional resistance, involving multiple co‐present persons and actions, and as temporally unfolding across a sequence of social interaction. The second argument is that food refusal involves the management of speaker identities and relationships to one another, in terms of what one person might be expected to eat and who has the authority to ask another person to eat. This point has important implications for a range of research from categories to deontics, including the moral issue of getting someone to eat regardless of their volition. Finally, we offer an illustration of what we call reluctant compliance, a form of resistance that involves demonstrating, through various multimodal resources, a willingness to comply while simultaneously displaying an unwillingness to undertake the requested behaviour; in this case, eating green beans. These three points are presented as we analyse the full sequence, broken up into six segments (with the duration of each segment indicated in brackets).</p><sec id="bjso70029-sec-0010"><title>Establishing children as responsible for food as accountably uneaten</title><p>Identifying a starting point to a sequence featuring a food refusal is not a straightforward matter, since it suggests that there is a specific point in a mealtime when a food might not be eaten. The analytic focus begins, however, at the point at which Dad makes a statement about the remaining food on children's plates and thus makes it an accountable matter. All three children are at this point visibly chewing on pieces of garlic bread.</p><boxed-text position="float" content-type="Extract" id="bjso70029-fea-0001" orientation="portrait"><label>Extract 1</label><caption><title>(25 seconds)</title></caption><p>
+<boxed-text position="anchor" content-type="graphic" id="bjso70029-blkfxd-0001" orientation="portrait"><graphic xmlns:xlink="http://www.w3.org/1999/xlink" position="anchor" id="jats-graphic-1" orientation="portrait" xlink:href="BJSO-65-0-g003.jpg"><?image-name BJSO-65-0-g003.jpg?><?image-size 52818?><?image-md5 f452235cc6cc0b168492e2bd93bc13ab?><?image-image-server-status NEVER_LOAD?><?image-original-height 319?><?image-original-width 386?><?image-scaled-height 319?><?image-scaled-width 386?><?image-cloudpmc-urn urn:cdn:blobs/fd95/12703064/f452235cc6cc/BJSO-65-0-g003.jpg?></graphic></boxed-text>
+</p></boxed-text><p>The sequence begins with Dad's observation of what is visibly available to all (the food remaining on the plates), formulated as a gentle admonishment (Schegloff, <xref rid="bjso70029-bib-0078" ref-type="bibr">1988</xref>) while also framing eating as a competitive activity in which the children might be personally invested (lines 2–3). The mitigating ‘tonight’ moreover constructs this as a here‐and‐now situational problem rather than a dispositional issue (Edwards, <xref rid="bjso70029-bib-0021" ref-type="bibr">2006</xref>). It suggests that there might be a history of not eating green beans and that tonight's episode is just the latest in an ongoing competition about who has eaten what. Already, then, the food is not only problematised in that it has not yet been eaten but also in a way that ascribes the children's identities in terms of whether they are winning or losing in the bean‐eating competition. At this point in the interaction, there is neither an explicit request to eat nor a food refusal. Instead, food on the children's plates is constructed not only as food remaining but as food <italic toggle="yes">not yet eaten</italic> that will need to be consumed. Given that consumption is still in progress–each child is visibly chewing–there is no question that the meal has finished. In sum, Dad's noticing positions the children as morally accountable for not eating and opens up the interactional space for Samuel and Emma to account for the lack of consumption of the green beans.</p><p>Even though he has not been directly addressed, it is Joseph who responds to Dad's noticing. His response gets minimal engagement from both Mum and Dad (lines 6, 7, 8, 9, 13); instead, Dad tries to engage Samuel further. The food has thus been constructed as not yet eaten and, more importantly, not eaten <italic toggle="yes">by a specific child</italic>. Despite the original statement naming two children, it is only Samuel who is singled out as needing to account for the uneaten food. Specifically, it is the use of a subject‐side assessment (line 11: ‘you like your greens Samuel’) which invokes a categorical preference and thus a suggestion that Samuel is deviating from previous routine behaviours (Wiggins, <xref rid="bjso70029-bib-0098" ref-type="bibr">2025</xref>). Claiming epistemic rights over children's food likes has been evidenced in family mealtime interaction in the UK and the Netherlands (van der Heijden et al., <xref rid="bjso70029-bib-0089" ref-type="bibr">2021</xref>; Wiggins, <xref rid="bjso70029-bib-0095" ref-type="bibr">2014</xref>, <xref rid="bjso70029-bib-0097" ref-type="bibr">2023</xref>), and in this declarative form, it requires Samuel to confirm rather than affirm that he likes his greens (Heritage &amp; Raymond, <xref rid="bjso70029-bib-0039" ref-type="bibr">2012</xref>). Not only would this make a dispreferred ‘no’ response from Samuel more conspicuous, but it also invokes food likes as being a sufficient reason to eat the food (Waring, <xref rid="bjso70029-bib-0093" ref-type="bibr">2025</xref>). The repackaging of the food as the categorical ‘greens’ with marked ownership (‘your’) furthermore holds Samuel responsible for a food that – until that moment – was simply present on his plate. In sum, the opening sequence illustrates the interactional work involved not only in constructing food as accountably uneaten but in how various practices can be used to assign the responsibility for this to particular individuals. This work rests upon Dad's entitlement to comment on his son's eating and food likes, actions that everyone at the table treats as unaccountable and routine.</p></sec><sec id="bjso70029-sec-0012"><title>Pursuing alternative trajectories of action</title><p>Having initiated the pursuit of accountability, the interactional project changes rapidly toward a more explicit attempt to get Samuel to eat.</p><boxed-text position="float" content-type="Extract" id="bjso70029-fea-0002" orientation="portrait"><label>Extract 2</label><caption><title>(10 seconds)</title></caption><p>
+<boxed-text position="anchor" content-type="graphic" id="bjso70029-blkfxd-0002" orientation="portrait"><graphic xmlns:xlink="http://www.w3.org/1999/xlink" position="anchor" id="jats-graphic-3" orientation="portrait" xlink:href="BJSO-65-0-g007.jpg"><?image-name BJSO-65-0-g007.jpg?><?image-size 44023?><?image-md5 6747d1c69f7b9aa9f44b11b62c408862?><?image-image-server-status NEVER_LOAD?><?image-original-height 232?><?image-original-width 431?><?image-scaled-height 232?><?image-scaled-width 431?><?image-cloudpmc-urn urn:cdn:blobs/fd95/12703064/6747d1c69f7b/BJSO-65-0-g007.jpg?></graphic></boxed-text>
+</p></boxed-text><p>At the point at which Dad utters the directive (line 15), Sam is already engaged in the activity of eating garlic bread, which he was doing even at the start of the longer sequence (Extract <xref rid="bjso70029-fea-0001" ref-type="boxed-text">1</xref>, line 1). The directive thus makes compliance conditionally relevant and while the absence of a verbal response does not immediately signal a lack of compliance (Craven &amp; Potter, <xref rid="bjso70029-bib-0017" ref-type="bibr">2010</xref>), the silence on line 16 could be treated as a form of implicit resistance (Hollander, <xref rid="bjso70029-bib-0041" ref-type="bibr">2015</xref>). To comply with the directive means therefore that he must first cease his current activity: one action trajectory must be abandoned in order to follow the other (see Raymond et al., <xref rid="bjso70029-bib-0071" ref-type="bibr">2023</xref> on similar sequential standoffs). Samuel's reaching for more bread (line 17; Figure <xref rid="bjso70029-fig-0001" ref-type="fig">1</xref>), therefore, visibly demonstrates that he has remained on his current trajectory. In fact, it is only when Samuel reaches for another piece of garlic bread that Dad treats him as having defied the directive. The gesture in itself is not a refusal of the beans (and, indeed, it suggests a willingness to eat more food) and thus would be unlikely to be coded in observational studies of food refusal, but it is nonetheless treated by Dad as non‐compliance with his immediately prior request and thus a sanctionable behaviour. This is confirmed in line 19 when Dad articulates his interpretation of Samuel's behaviour. By examining this sequence as a temporally unfolding interaction therefore, it provides an alternative perspective on food refusal as the pursuit of different courses of action. In this example, Samuel neither verbally nor physically expresses a refusal to eat the green beans – and actually continues to eat his bread – but his specific behaviour of reaching for more bread <italic toggle="yes">at this point in the interaction</italic> is treated as violating Dad's directive and thus as a resistant move.</p><fig position="float" fig-type="FIGURE" id="bjso70029-fig-0001" orientation="portrait"><label>FIGURE 1</label><caption><p>Dad lifts Samuel's hand off bread.</p></caption><graphic xmlns:xlink="http://www.w3.org/1999/xlink" position="anchor" id="jats-graphic-5" orientation="portrait" xlink:href="BJSO-65-0-g004.jpg"><?image-name BJSO-65-0-g004.jpg?><?image-size 104412?><?image-md5 4e861557cec5f2f9b1340f8043600956?><?image-image-server-status LOAD_COMPLETED?><?image-original-height 599?><?image-original-width 1064?><?image-scaled-height 399?><?image-scaled-width 709?><?image-cloudpmc-urn urn:cdn:blobs/fd95/12703064/4e861557cec5/BJSO-65-0-g004.jpg?><?thumb-name BJSO-65-0-g004.gif?><?thumb-size 15572?><?thumb-md5 2c2a83e372bf9b84a4d99721c5c42825?><?thumb-image-server-status NEVER_LOAD?><?thumb-scaled-height 80?><?thumb-scaled-width 142?><?thumb-cloudpmc-urn urn:cdn:blobs/fd95/12703064/2c2a83e372bf/BJSO-65-0-g004.gif?></graphic></fig><p>It is worth considering Dad's directive (line 15) in more detail. The format of the turn (‘eat yer beans up’) is both high‐entitlement and low‐contingency: it not only asserts Dad's deontic authority to make requests (i.e. entitlement) about what Samuel should be eating but also the minimal effort apparently required by Samuel (i.e. low contingency) to perform the action (Craven &amp; Potter, <xref rid="bjso70029-bib-0017" ref-type="bibr">2010</xref>). Furthermore, the embedding and evolution of the directive within the trajectory of the interaction is important for the co‐construction of local identities (Goodwin &amp; Cekaite, <xref rid="bjso70029-bib-0035" ref-type="bibr">2018</xref>; Sacks, <xref rid="bjso70029-bib-0075" ref-type="bibr">1992</xref>, p. 330; Waring, <xref rid="bjso70029-bib-0093" ref-type="bibr">2025</xref>). Dad uses a series of laminated directives (Cekaite, <xref rid="bjso70029-bib-0014" ref-type="bibr">2015</xref>) comprising verbal as well as physical components to halt Samuel's current action trajectory over the course of three turns in talk (lines 15 to 19), each of which builds upon the last. In so doing, they construct Samuel as a child whose behaviour needs to be modified while simultaneously asserting Dad's deontic authority to be able to make those claims. Immediately following this interactional context, after what might be glossed as ‘passive’ (Heritage &amp; Sefi, <xref rid="bjso70029-bib-0040" ref-type="bibr">1992</xref>) or ‘implicit’ (Hollander, <xref rid="bjso70029-bib-0041" ref-type="bibr">2015</xref>) resistance, Samuel starts to prepare his departure from the table. This occurs over a series of embodied actions beginning with moves that prefigure table‐leaving such as wiping one's mouth with a napkin and starting to orient one's body away from the table. At the moment at which Dad issues the cajoling token ‘come on’ (Craven &amp; Potter, <xref rid="bjso70029-bib-0017" ref-type="bibr">2010</xref>, p. 428), Samuel momentarily halts his departure. Turning back to the table, he arranges his fork on his plate as if the meal is over, resumes the departure trajectory and leaves the table.</p></sec><sec id="bjso70029-sec-0014"><title>Managing local identities</title><p>The next sequence involves a different interactional project that needs to be completed before that of ‘getting Samuel to eat his beans’ can be resumed: getting Samuel back to the table.</p><boxed-text position="float" content-type="Extract" id="bjso70029-fea-0003" orientation="portrait"><label>Extract 3</label><caption><title>(30 seconds)</title></caption><p>
+<boxed-text position="anchor" content-type="graphic" id="bjso70029-blkfxd-0003" orientation="portrait"><graphic xmlns:xlink="http://www.w3.org/1999/xlink" position="anchor" id="jats-graphic-7" orientation="portrait" xlink:href="BJSO-65-0-g006.jpg"><?image-name BJSO-65-0-g006.jpg?><?image-size 62686?><?image-md5 c0679e021cc7c95de96422af4e28ab0b?><?image-image-server-status NEVER_LOAD?><?image-original-height 373?><?image-original-width 410?><?image-scaled-height 373?><?image-scaled-width 410?><?image-cloudpmc-urn urn:cdn:blobs/fd95/12703064/c0679e021cc7/BJSO-65-0-g006.jpg?></graphic></boxed-text>
+</p></boxed-text><p>The complexity of handling several action trajectories–returning to the table, eating beans, eating garlic bread–are clearly visible in Dad and Mum's alternative ways of handling the current situation. Dad's attempts escalate in a matter of seconds. He starts with an indirect prompt ‘scu:se me’ (line 21), which treats Samuel's behaviour as unacceptable (Kendrick, <xref rid="bjso70029-bib-0049" ref-type="bibr">2015</xref>) and thus in need of (self‐)remedy (Hepburn, <xref rid="bjso70029-bib-0037" ref-type="bibr">2020b</xref>). He then continues with an explicit directive aggravated by a turn final address term (Lerner, <xref rid="bjso70029-bib-0057" ref-type="bibr">2003</xref>; Rendle‐Short, <xref rid="bjso70029-bib-0073" ref-type="bibr">2007</xref>) ‘back to the table Samuel’ (line 25). After a considerable gap (5 seconds), with Samuel away from the table, Dad issues a threat (line 27) which introduces a punitive consequence formulated as an alternative to compliance (see Hepburn &amp; Potter, <xref rid="bjso70029-bib-0038" ref-type="bibr">2011</xref> on ‘if‐then’ threats). With each new turn, therefore, Dad constructs Samuel's behaviour as transgressive and non‐compliant. The situation has now progressed into something that constructs a naughty child who has displayed punishable behaviour. Samuel's possible courses of action are now drastically altered.</p><p>It is Mum's reformulation of the original directive (lines 29–30) that then offers an alternative way to navigate this moral landscape. Importantly, Mum's turn puts forward a solution that accommodates both Dad's project for Samuel to eat ‘some beans’ as well as Samuel's project to have another piece of garlic bread (cf. Raymond et al., <xref rid="bjso70029-bib-0071" ref-type="bibr">2023</xref> on resolving sequential standoffs), thus opening up the possibility of resolving the conflict and getting Samuel back to the table. Her request also invokes a collective identity (‘we just said’) in which Mum implicitly aligns with Dad's earlier directives while simultaneously reformulating them. This concession and it's repackaging also positions Mum and Dad as not being the kind of parent (‘nobody said’) that would prevent their child from having a desired food. This kind of mundane morality is a way in which children are socialised into cultural norms during family mealtimes (e.g., Aronsson &amp; Gottzén, <xref rid="bjso70029-bib-0006" ref-type="bibr">2011</xref>; Caronia &amp; Colla, <xref rid="bjso70029-bib-0012" ref-type="bibr">2024</xref>; Galatolo &amp; Caronia, <xref rid="bjso70029-bib-0030" ref-type="bibr">2018</xref>; Sterponi, <xref rid="bjso70029-bib-0083" ref-type="bibr">2009</xref>). Mum's turn thus not only works to navigate the struggle over individual choice and parental control around food consumption (Paugh &amp; Izquierdo, <xref rid="bjso70029-bib-0066" ref-type="bibr">2009</xref>), but also to situate herself and Dad as the kind of parents who are reasonable and attentive to their child's desires.</p><p>Samuel's first verbal contribution (lines 32–33) is then sequentially positioned within this new landscape, and it begins with a subject‐side food assessment (‘I didn't like those things’) before an extreme case formulation (‘I'll never eat them’). Despite these rather bold proclamations, Samuel utters them as he moves closer to the table, thus complying at least partially with the earlier directive. Their formulation, however, enables him to reclaim epistemic primacy over his food preferences (cf. Extract <xref rid="bjso70029-fea-0001" ref-type="boxed-text">1</xref>, line 11) with the more specific ‘those things’ and a way of asserting his own autonomy within this situation (Hepburn, <xref rid="bjso70029-bib-0037" ref-type="bibr">2020b</xref>; Waring, <xref rid="bjso70029-bib-0092" ref-type="bibr">2019</xref>, <xref rid="bjso70029-bib-0093" ref-type="bibr">2025</xref>). The interactional bargaining (Paugh &amp; Izquierdo, <xref rid="bjso70029-bib-0066" ref-type="bibr">2009</xref>; Waring, <xref rid="bjso70029-bib-0093" ref-type="bibr">2025</xref>) then follows a familiar narrative of specifying amounts of food to be eaten (Orrell‐Valente et al., <xref rid="bjso70029-bib-0065" ref-type="bibr">2007</xref>). Samuel himself clarifies the requirements of the task (‘that's all I need to do’, line 40) and as such implicitly accepts the challenge, while Dad's ‘you can do that’ (line 39, 41) confirms this by formulating the task as something that rests more on Samuel's capabilities than parental demands.</p></sec><sec id="bjso70029-sec-0016"><title>Initiating reluctant compliance</title><p>The next sequence features the initiation of what we call reluctant compliance: a performance of compliance with the requested action while simultaneously demonstrating that the person is doing this against their will.</p><boxed-text position="float" content-type="Extract" id="bjso70029-fea-0004" orientation="portrait"><label>Extract 4</label><caption><title>(15 seconds)</title></caption><p>
+<boxed-text position="anchor" content-type="graphic" id="bjso70029-blkfxd-0004" orientation="portrait"><graphic xmlns:xlink="http://www.w3.org/1999/xlink" position="anchor" id="jats-graphic-9" orientation="portrait" xlink:href="BJSO-65-0-g005.jpg"><?image-name BJSO-65-0-g005.jpg?><?image-size 58555?><?image-md5 d626e0861873f4f67b2afa078f12dedf?><?image-image-server-status NEVER_LOAD?><?image-original-height 364?><?image-original-width 422?><?image-scaled-height 364?><?image-scaled-width 422?><?image-cloudpmc-urn urn:cdn:blobs/fd95/12703064/d626e0861873/BJSO-65-0-g005.jpg?></graphic></boxed-text>
+</p></boxed-text><p>Having complied with the request to return to the table, the situation is not yet wholly resolved, with a series of intervening actions soon after Dad's implicit request to eat, ‘come on’, that further delay the eating. After a brief glance down at his plate (line 44), Samuel produces a disgust sound alongside a series of cut‐off words and non‐lexical vocalisations (line 45), while turning his head away with closed eyes and contorted mouth. While other emotional expressions such as crying have been shown to be a means through which responses to directives can be affectively upgraded (Cekaite &amp; Kvist Holm, <xref rid="bjso70029-bib-0015" ref-type="bibr">2017</xref>), disgust here provides a semantically appropriate response to the food situation and at a transitional moment when ingestion is imminent (Wiggins &amp; Keevallik, <xref rid="bjso70029-bib-0100" ref-type="bibr">in press</xref>). These multimodal expressions of disgust are also pertinent for the moral issues raised earlier. The particular configuration of his body and articulated sounds suggest something entirely subjective or private to Samuel (Keevallik et al., <xref rid="bjso70029-bib-0048" ref-type="bibr">2025</xref>), an experience that would be hard to challenge without claiming access to another person's bodily sensations. This makes it resistant to challenge and difficult to respond to (Wiggins, <xref rid="bjso70029-bib-0094" ref-type="bibr">2013</xref>): the parents would be stepping over epistemic and moral boundaries if they were to deny their child's experience of disgust (Jenkins &amp; Hepburn, <xref rid="bjso70029-bib-0046" ref-type="bibr">2015</xref>) unless they could establish that it was ‘faked’ and thus the transgression was conducted wilfully (Hepburn, <xref rid="bjso70029-bib-0036" ref-type="bibr">2020a</xref>). It is only when Samuel produces the lexical assessment ‘they're yucky’ (line 48) that Mum produces an immediate and direct counter‐assessment (line 50). Whereas the disgust sound blurs the boundaries between subject and object, the word ‘yucky’ is more clearly an object‐side assessment that makes a claim about the external world to which the other family members also have access (Edwards &amp; Potter, <xref rid="bjso70029-bib-0024" ref-type="bibr">2017</xref>; Wiggins, <xref rid="bjso70029-bib-0095" ref-type="bibr">2014</xref>; Wiggins &amp; Potter, <xref rid="bjso70029-bib-0101" ref-type="bibr">2003</xref>). It is at this point that Mum continues with an enactment of what the green beans might say about Samuel, and the conversation turns to discussions over who (or what) is yucky.</p><p>Unlike what has been described in the literature as ‘incipient compliant’ (Kent, <xref rid="bjso70029-bib-0050" ref-type="bibr">2012a</xref>) or ‘minimal compliant’ responses (Hepburn &amp; Potter, <xref rid="bjso70029-bib-0038" ref-type="bibr">2011</xref>) that include elements of children's autonomy as part of the responses to directives or threats, what happens here is the initiation of reluctant compliance that continues to unfold over subsequent extracts. It manages the dilemma of complying with the directive to eat while maintaining a consistent stance toward the food (‘never eat them’): thus it works in the service of preserving Samuel's identity as not only an autonomous eater but one who stays true to expressed food preferences. The disgust expressions become an embodied form of resistance that suggests an involuntary, visceral response that is beyond Samuel's control. The enactment of reluctant compliance thus not only works in the service of resisting the specific action trajectory but also to manage local identities of being the kind of person who is willing to, or attempting to, comply with the required behaviour while also demonstrating the bodily challenges that that demands.</p></sec><sec id="bjso70029-sec-0018"><title>Willingly or unwillingly eating the beans</title><p>The interaction has, since Extract <xref rid="bjso70029-fea-0002" ref-type="boxed-text">2</xref>, remained primarily focused on Samuel. As the conversation turns to the status of the food in this penultimate sequence, however, Emma is invoked by both Samuel and his parents as a resource for the ongoing negotiation.</p><boxed-text position="float" content-type="Extract" id="bjso70029-fea-0005" orientation="portrait"><label>Extract 5</label><caption><title>(25 seconds)</title></caption><p>
+<boxed-text position="anchor" content-type="graphic" id="bjso70029-blkfxd-0005" orientation="portrait"><graphic xmlns:xlink="http://www.w3.org/1999/xlink" position="anchor" id="jats-graphic-11" orientation="portrait" xlink:href="BJSO-65-0-g001.jpg"><?image-name BJSO-65-0-g001.jpg?><?image-size 74160?><?image-md5 d973a6cb9410a069ecb5daaccc7cf3e0?><?image-image-server-status NEVER_LOAD?><?image-original-height 487?><?image-original-width 395?><?image-scaled-height 487?><?image-scaled-width 395?><?image-cloudpmc-urn urn:cdn:blobs/fd95/12703064/d973a6cb9410/BJSO-65-0-g001.jpg?></graphic></boxed-text>
+</p></boxed-text><p>In addition to a further instance of reluctant compliance (extending over lines 66–68), what is important to note here is the way in which a sibling is recruited into the negotiations in a way that ultimately works in favour of the attempt to get Samuel to eat the green beans. It is Samuel, however, who first invokes Emma (lines 62–63) as he follows Mum's earlier enactment of the green beans' own disgust expressions. The use of the ventriloquism (also seen in Extract <xref rid="bjso70029-fea-0004" ref-type="boxed-text">4</xref>) voices the green beans as if they were speaking themselves and shifts the action trajectory to a playful framework (Bateman, <xref rid="bjso70029-bib-0007" ref-type="bibr">2018</xref>; Wiggins et al., <xref rid="bjso70029-bib-0102" ref-type="bibr">2024</xref>). It thus functions as a form of resistance through delaying the progressivity of the ‘eat up’ directive and instead pursues an alternative action trajectory. Both Dad and Mum align with this trajectory but instead use it as a means to pursue the discussion about the status of the food. Dad formulates Emma's consumption as not simply ingestion but as complicit in a positive assessment of the food (line 65) and a potential desire to have more (line 72), in a way that is designedly overhearable for Samuel (Levinson, <xref rid="bjso70029-bib-0058" ref-type="bibr">1988</xref>). It is worth reiterating that Emma does not speak during the entire sequence (all 6 extracts), in comparison to Joseph's early attempts (Extracts <xref rid="bjso70029-fea-0001" ref-type="boxed-text">1 and</xref>
+<xref rid="bjso70029-fea-0002" ref-type="boxed-text">2</xref>), and yet she is still invoked as part of the negotiations and neither is her conduct entirely above reproach (‘fork please Emma, fork’ line 66). The use of the playframe as a resistance strategy has, in this instance, failed, since Emma's involvement as a silent accomplice serves the parents' agenda (‘see‐ Emma's had two’, line 70) more than it does Samuel's.</p><p>It is only at this point, after over a minute of negotiations, that Samuel puts the green bean into his mouth and visibly chews (lines 74–78). The physical challenge of eating is clearly expressed in Samuel's various facial and bodily contortions, in marked contrast to Emma and Joseph, who ate their beans without such displays. Meanwhile, Dad's attention turns to Emma as he positively assesses the beans on her behalf (line 74), while she takes small bites off her fork. Dad playfully mimics her eating through a series of ‘chomp’ (line 78) and ‘nom’ (line 80) utterances that, as onomatopoeic expressions, are flexible enough to be repeated in a short series with varying speeds, and thus used to perform eating on behalf of another (Wiggins &amp; Keevallik, <xref rid="bjso70029-bib-0099" ref-type="bibr">2023</xref>). In this way, Dad claims access to her experience of chewing the beans as a basis for assessing it. The use of two object‐side assessments (lines 74 and 82) meanwhile orients to presumably factual characteristics of the food and provides an accountable basis for Emma's consumption (Waring, <xref rid="bjso70029-bib-0093" ref-type="bibr">2025</xref>). As such, they work further to make use of local identities to position the children in relation to one another. She has not been forced or coerced to consume the beans but instead is eating them willingly because they are ‘lovely’ and ‘good for her’.</p></sec><sec id="bjso70029-sec-0020"><title>Negotiating the final demands of the task</title><p>In the final sequence in Extract <xref rid="bjso70029-fea-0006" ref-type="boxed-text">6</xref>, Samuel continues to chew slowly with a similar strained performance as seen in Extract <xref rid="bjso70029-fea-0005" ref-type="boxed-text">5</xref>. There is one final disagreement between him and Dad over how many beans must be eaten, after which Joseph intervenes to move the meal to its next phase: dessert (‘pudding’, line 118).</p><boxed-text position="float" content-type="Extract" id="bjso70029-fea-0006" orientation="portrait"><label>Extract 6</label><caption><title>(33 seconds)</title></caption><p>
+<boxed-text position="anchor" content-type="graphic" id="bjso70029-blkfxd-0006" orientation="portrait"><graphic xmlns:xlink="http://www.w3.org/1999/xlink" position="anchor" id="jats-graphic-13" orientation="portrait" xlink:href="BJSO-65-0-g002.jpg"><?image-name BJSO-65-0-g002.jpg?><?image-size 80650?><?image-md5 9c93e5158d39967aa764db3c083673d7?><?image-image-server-status NEVER_LOAD?><?image-original-height 587?><?image-original-width 432?><?image-scaled-height 587?><?image-scaled-width 432?><?image-cloudpmc-urn urn:cdn:blobs/fd95/12703064/9c93e5158d39/BJSO-65-0-g002.jpg?></graphic></boxed-text>
+</p></boxed-text><p>The negotiation of the food is, at this stage, almost resolved. There is repetition of some of the discursive practices seen earlier–eating specific amounts, using phrases such as ‘come on’–though on this occasion Samuel also uses further bargaining turns (Paugh &amp; Izquierdo, <xref rid="bjso70029-bib-0066" ref-type="bibr">2009</xref>; Waring, <xref rid="bjso70029-bib-0093" ref-type="bibr">2025</xref>) to evidence the amount already eaten (lines 91, 104) while maintaining the embodied stance of reluctant compliance (lines 113, 116). The apparent basis for resistance, Samuel's sensory experience, is verbally summarised in line 86. Note the sophisticated design of the assessment ‘~I just don't like them~’ where the wobbly voice displays upset and the emotive assessment of the beans is now in the present tense (cf. Extract <xref rid="bjso70029-fea-0003" ref-type="boxed-text">3</xref>, line 32). The emphasiser ‘just’ strengthens the commitment to the assessment (Lee, <xref rid="bjso70029-bib-0056" ref-type="bibr">1987</xref>), while also suggesting that is beyond his control: that it is happening to him rather than something he sought out (Edwards, <xref rid="bjso70029-bib-0022" ref-type="bibr">2007</xref>). Instead of responding to or contradicting this food assessment (cf. van der Heijden et al., <xref rid="bjso70029-bib-0089" ref-type="bibr">2021</xref>; Wiggins, <xref rid="bjso70029-bib-0095" ref-type="bibr">2014</xref>), Dad asks a factual question to which the answer is already known (see Extract <xref rid="bjso70029-fea-0001" ref-type="boxed-text">1</xref> line 8): the beans are indeed already cold. Samuel's glance toward the food demonstrates a response which Dad treats as confirming (‘well you should have had them while they were warm’) and thus as supporting his earlier argument. The fault, it is implied, is not with the beans but with Samuel's tardiness in eating them.</p><p>Samuel's reiteration of his agreement to eat two green beans, not more, not less, sets off the final disagreement between him and Dad. As Samuel slowly stabs at a small bean, Dad comments that it counts only as half a bean. This occasions another display of resistance from Samuel: he puts down his fork and wrinkles his nose, closing his eyes and shaking his head in a display of disgust. Both Dad and Mum again intervene, albeit taking very different tacks. Dad doubles down with a cajoling token ‘come on’ and a directive (line 98), followed by a partial repeat of the directive (line 101), whereby he seeks to overcome Samuel's resistance. By contrast, Mum instructs Samuel to eat one larger bean currently on his plate, thus sidestepping his resistance and offering a compromise. Mum and Dad's turns occur in almost perfect overlap and project different action trajectories, which means that Samuel has to select which one he engages with. We see him responding to Dad by informing him he has already eaten half a bean. Dad treats this as a bargaining attempt and retorts that by eating another half, Samuel would have eaten one of the two beans he had agreed to eat. After the negotiation ends, Samuel picks up and eats the smaller piece of bean. As he is chewing, he closes his eyes and wrinkles his nose in a display of disgust accompanied by a quiet moan (line 116) uttered while looking at Dad. This elicits an admonishment from Dad ‘don't be da:ft Samuel’ followed by an assessment of the beans as ‘not so bad’. Taken together, they dismiss Samuel's protest as an exaggerated reaction. Soon after, the conversation shifts to talking about dessert and then to other family matters; with that, the green bean incident is brought to an end.</p></sec></sec><sec sec-type="discussion" id="bjso70029-sec-0022"><title>DISCUSSION</title><p>The analysis has demonstrated how food refusal can be contextualised as a social phenomenon and examined as interactional resistance that is not easily reducible to individual characteristics or isolated behaviours. The temporal unfolding of an extended sequence during a family mealtime has demonstrated the interactional nature of resistance that involves not only the management of local identities but also the delicate handling of moral issues related to requesting someone to eat against their will. Our analysis builds on existing research on the various ways in which parents endeavor to get their children to do something. In particular, we demonstrate how the trajectory of social actions throughout a longer sequence can be calibrated to adapt to the evolving contingencies of the situation (cf. Goodwin &amp; Cekaite, <xref rid="bjso70029-bib-0035" ref-type="bibr">2018</xref>). This calibration need not be on a linear progression from lesser to greater coercion (cf. research on escalation of conflict), instead there are fluctuating gradations intertwined with stance‐taking that situate interlocutors as certain kinds of person. Showing a willingness to comply while impeded by involuntary visceral states through the enactment of reluctant compliance, for instance, enables Samuel to concede to the parental action trajectory while maintaining his integrity as ‘not liking the beans’. The analysis therefore contributes to interactional studies of resistance by demonstrating an additional, embodied strategy that can be used to comply with others' action trajectories in a way that is congruent with immediately prior identity stances.</p><p>The examination of a longer sequence of interaction, in the form of single case analysis, was essential for illuminating the progressivity of the various practices that were involved in the sequence. If we were to isolate an example of food refusal, we would probably miss the details of the interaction that unfolds in Extract <xref rid="bjso70029-fea-0001" ref-type="boxed-text">1</xref>; it may not even be included in any observational analysis of food refusal behaviour. There is no request to eat, none of the ‘disruptive’ behaviours that might suggest that Samuel will not eat, and yet the sequence clearly indicates a move from food simply being ‘on the plate’ to something for which a child is held accountable. As noted by Hepburn (<xref rid="bjso70029-bib-0037" ref-type="bibr">2020b</xref>, p. 450), that parents might have a ‘preference for self‐direction’ in terms of modifying their conduct is also in evidence here. Space has been provided for Samuel (and Emma) to voluntarily perform the desired (but not explicitly specified) conduct: to consume the beans. This is particularly relevant for socializing children into becoming responsible eaters, who will need to independently make the right choices regarding food consumption.</p><p>The use of a single case study analysis, however, means that it was not possible to explore variation in resistance practices across other family mealtimes or eating situations. The depth enabled by a single case analysis thus comes at a cost of breadth. We therefore suggest that future research could develop this work by examining how and when reluctant compliance is used in other settings, whether it is restricted to children, and how the interactional configuration of this practice differs from other forms of resistance. Other analytical routes that might have been examined are the different discursive practices used by the parents in this case to negotiate with Samuel, since Mum and Dad took rather separate routes at times to achieve the same goal. Future research could examine, for instance, how variations in resistance might emerge within eating practices, explicating the ways in which the use of different discursive practices by parents and children is contingent on one another (cf. research into parenting strategies as noted in the introduction).</p><p>Respecifying food refusal as interactional resistance does not, however, imply that there may not be very specific individual characteristics or reasons why food may not be eaten. As noted in the introduction, food refusal is an umbrella term that can span a range of situations, some of which lead to chronic malnutrition and extremely challenging mealtimes. Taking a DP perspective, we remain agnostic about putative inner states, whether they refer to disgust or food dislikes, or to any psychological or sensory reasons why the food was not eaten. Similarly, we do not make any claims about the discursive practices used by family members that might be attributed to other categories involving age, gender, or cultural identity. The analysis is based on interactional rather than individual or cultural interpretations that would be difficult to defend in a single case analysis. We do, however, provide insights into how food refusals can be understood and, in some cases, avoided if we examine them as interactional sequences of action rather than individual behaviours. It might even be treated as a case of a ‘successful’ practice in that the target behaviour – eating two green beans – was accomplished. In the analysis, however, we demonstrate how this is an oversimplification of something that is much more subtle.</p><p>In line with other social psychological research that has begun to unpick the interactional threads of various forms of social influence (e.g., Gibson &amp; Smart, <xref rid="bjso70029-bib-0033" ref-type="bibr">2017</xref>; Reicher &amp; Haslam, <xref rid="bjso70029-bib-0072" ref-type="bibr">2006</xref>), so too does this paper demonstrate how an interactional perspective on eating resistance offers nuances that go beyond pitching individuals against one another. The issues raised in this paper are relevant not only for children's eating practices but also other settings in which eating requires physical assistance from another person and where food refusal might be a challenge. The findings here suggest that even while there may be diverse individual reasons why food is not consumed, food refusal as an interactional practice can be understood as, and modified in terms of, conflicting trajectories of action within social interaction.</p></sec><sec id="bjso70029-sec-0027"><title>AUTHOR CONTRIBUTIONS</title><p>
+<bold>Sally Wiggins:</bold> Conceptualization; funding acquisition; data curation; writing – original draft; writing – review and editing; formal analysis. <bold>Bogdana Humă:</bold> Conceptualization; writing – original draft; writing – review and editing; formal analysis.</p></sec><sec sec-type="COI-statement" id="bjso70029-sec-0026"><title>CONFLICT OF INTEREST STATEMENT</title><p>Neither of the authors has a no conflict of interest to disclose.</p></sec></body><back><ack id="bjso70029-sec-0025"><title>ACKNOWLEDGEMENTS</title><p>The authors would like to thank the family for recording their mealtimes and thus enabling research into everyday resistance practices. We are also grateful for financial support for the research from Riksbankens Jubilieumsfond (Sweden).</p></ack><sec sec-type="data-availability" id="bjso70029-sec-0024"><title>DATA AVAILABILITY STATEMENT</title><p>The data are confidential and cannot be publicly shared.</p></sec><ref-list content-type="cited-references" id="bjso70029-bibl-0001"><title>REFERENCES</title><ref id="bjso70029-bib-0001"><mixed-citation publication-type="journal" id="bjso70029-cit-0001">
+<string-name name-style="western">
+<surname>Addessi</surname>, <given-names>E.</given-names>
+</string-name>, <string-name name-style="western">
+<surname>Galloway</surname>, <given-names>A. T.</given-names>
+</string-name>, <string-name name-style="western">
+<surname>Visalberghi</surname>, <given-names>E.</given-names>
+</string-name>, &amp; <string-name name-style="western">
+<surname>Birch</surname>, <given-names>L. L.</given-names>
+</string-name> (<year>2005</year>). <article-title>Specific social influences on the acceptance of novel foods in 2–5‐year‐old children</article-title>. <source>Appetite</source>, <volume>45</volume>(<issue>3</issue>), <fpage>264</fpage>–<lpage>271</lpage>. <pub-id pub-id-type="doi">10.1016/j.appet.2005.07.007</pub-id>
+<pub-id pub-id-type="pmid">16239048</pub-id>
+</mixed-citation></ref><ref id="bjso70029-bib-0002"><mixed-citation publication-type="journal" id="bjso70029-cit-0002">
+<string-name name-style="western">
+<surname>Antaki</surname>, <given-names>C.</given-names>
+</string-name> (<year>2023</year>). <article-title>A gradient of more and less demanding impositions: Reflections on the special issue on resistance</article-title>. <source>Journal of Language and Social Psychology</source>, <volume>42</volume>(<issue>5–6</issue>), <fpage>679</fpage>–<lpage>687</lpage>. <pub-id pub-id-type="doi">10.1177/0261927X231185735</pub-id>
+</mixed-citation></ref><ref id="bjso70029-bib-0003"><mixed-citation publication-type="journal" id="bjso70029-cit-0003">
+<string-name name-style="western">
+<surname>Antaki</surname>, <given-names>C.</given-names>
+</string-name>, &amp; <string-name name-style="western">
+<surname>Kent</surname>, <given-names>A.</given-names>
+</string-name> (<year>2012</year>). <article-title>Telling people what to do (and, sometimes, why): Contingency, entitlement and explanation in staff requests to adults with intellectual impairments</article-title>. <source>Journal of Pragmatics</source>, <volume>44</volume>(<issue>6–7</issue>), <fpage>876</fpage>–<lpage>889</lpage>. <pub-id pub-id-type="doi">10.1016/J.PRAGMA.2012.03.014</pub-id>
+</mixed-citation></ref><ref id="bjso70029-bib-0004"><mixed-citation publication-type="journal" id="bjso70029-cit-0004">
+<string-name name-style="western">
+<surname>Arcidiacono</surname>, <given-names>F.</given-names>
+</string-name>, &amp; <string-name name-style="western">
+<surname>Bova</surname>, <given-names>A.</given-names>
+</string-name> (<year>2015</year>). <article-title>Activity‐bound and activity‐unbound arguments in response to parental eat‐directives at mealtimes: Differences and similarities in children of 3–5 and 6–9 years old</article-title>. <source>Learning, Culture and Social Interaction</source>, <volume>6</volume>, <fpage>40</fpage>–<lpage>55</lpage>. <pub-id pub-id-type="doi">10.1016/j.lcsi.2015.03.002</pub-id>
+</mixed-citation></ref><ref id="bjso70029-bib-0005"><mixed-citation publication-type="journal" id="bjso70029-cit-0005">
+<string-name name-style="western">
+<surname>Arcidiacono</surname>, <given-names>F.</given-names>
+</string-name>, <string-name name-style="western">
+<surname>Pontecorvo</surname>, <given-names>C.</given-names>
+</string-name>, &amp; <string-name name-style="western">
+<surname>Bova</surname>, <given-names>A.</given-names>
+</string-name> (<year>2022</year>). <article-title>‘But the vanilla is healthy!’ Children's expression of arguments to justify their non‐compliances in family conversation</article-title>. <source>Learning, Culture and Social Interaction</source>, <volume>34</volume>, <elocation-id>100630</elocation-id>. <pub-id pub-id-type="doi">10.1016/j.lcsi.2022.100630</pub-id>
+</mixed-citation></ref><ref id="bjso70029-bib-0006"><mixed-citation publication-type="journal" id="bjso70029-cit-0006">
+<string-name name-style="western">
+<surname>Aronsson</surname>, <given-names>K.</given-names>
+</string-name>, &amp; <string-name name-style="western">
+<surname>Gottzén</surname>, <given-names>L.</given-names>
+</string-name> (<year>2011</year>). <article-title>Generational positions at a family dinner: Food morality and social order</article-title>. <source>Language in Society</source>, <volume>40</volume>(<issue>4</issue>), <fpage>405</fpage>–<lpage>426</lpage>. <pub-id pub-id-type="doi">10.1017/S0047404511000455</pub-id>
+</mixed-citation></ref><ref id="bjso70029-bib-0007"><mixed-citation publication-type="journal" id="bjso70029-cit-0007">
+<string-name name-style="western">
+<surname>Bateman</surname>, <given-names>A.</given-names>
+</string-name> (<year>2018</year>). <article-title>Ventriloquism as early literacy practice: Making meaning in pretend play</article-title>. <source>Early Years</source>, <volume>38</volume>(<issue>1</issue>), <fpage>68</fpage>–<lpage>85</lpage>. <pub-id pub-id-type="doi">10.1080/09575146.2016.1254162</pub-id>
+</mixed-citation></ref><ref id="bjso70029-bib-0009"><mixed-citation publication-type="journal" id="bjso70029-cit-0009">
+<string-name name-style="western">
+<surname>Blum‐Kulka</surname>, <given-names>S.</given-names>
+</string-name> (<year>1990</year>). <article-title>You don't touch lettuce with your fingers: Parental politeness in family discourse</article-title>. <source>Journal of Pragmatics</source>, <volume>14</volume>(<issue>2</issue>), <fpage>259</fpage>–<lpage>288</lpage>. <pub-id pub-id-type="doi">10.1016/0378-2166(90)90083-P</pub-id>
+</mixed-citation></ref><ref id="bjso70029-bib-0010"><mixed-citation publication-type="journal" id="bjso70029-cit-0010">
+<string-name name-style="western">
+<surname>Borrero</surname>, <given-names>C. S. W.</given-names>
+</string-name>, <string-name name-style="western">
+<surname>Woods</surname>, <given-names>J. N.</given-names>
+</string-name>, <string-name name-style="western">
+<surname>Borrero</surname>, <given-names>J. C.</given-names>
+</string-name>, <string-name name-style="western">
+<surname>Masler</surname>, <given-names>E. A.</given-names>
+</string-name>, &amp; <string-name name-style="western">
+<surname>Lesser</surname>, <given-names>A. D.</given-names>
+</string-name> (<year>2010</year>). <article-title>Descriptive analyses of pediatric food refusal and acceptance</article-title>. <source>Journal of Applied Behavior Analysis</source>, <volume>43</volume>(<issue>1</issue>), <fpage>71</fpage>–<lpage>88</lpage>. <pub-id pub-id-type="doi">10.1901/jaba.2010.43-71</pub-id>
+<pub-id pub-id-type="pmid">20808496</pub-id>
+<pub-id pub-id-type="pmcid">PMC2831454</pub-id></mixed-citation></ref><ref id="bjso70029-bib-0011"><mixed-citation publication-type="journal" id="bjso70029-cit-0011">
+<string-name name-style="western">
+<surname>Bryant‐Waugh</surname>, <given-names>R.</given-names>
+</string-name> (<year>2020</year>). <article-title>Avoidant restrictive food intake disorder: In need of a dose of kindness?</article-title>
+<source>Clinical Child Psychology and Psychiatry</source>, <volume>25</volume>(<issue>3</issue>), <fpage>712</fpage>–<lpage>715</lpage>. <pub-id pub-id-type="doi">10.1177/1359104520929054</pub-id>
+<pub-id pub-id-type="pmid">32539535</pub-id>
+</mixed-citation></ref><ref id="bjso70029-bib-0012"><mixed-citation publication-type="journal" id="bjso70029-cit-0012">
+<string-name name-style="western">
+<surname>Caronia</surname>, <given-names>L.</given-names>
+</string-name>, &amp; <string-name name-style="western">
+<surname>Colla</surname>, <given-names>V.</given-names>
+</string-name> (<year>2024</year>). <article-title>Shaping a moral body in family dinner talk: Children's socialization to good manners concerning bodily conduct</article-title>. <source>Appetite</source>, <volume>199</volume>, <elocation-id>107502</elocation-id>. <pub-id pub-id-type="doi">10.1016/j.appet.2024.107502</pub-id>
+<pub-id pub-id-type="pmid">38777043</pub-id>
+</mixed-citation></ref><ref id="bjso70029-bib-0013"><mixed-citation publication-type="journal" id="bjso70029-cit-0013">
+<string-name name-style="western">
+<surname>Cekaite</surname>, <given-names>A.</given-names>
+</string-name> (<year>2010</year>). <article-title>Shepherding the child: Embodied directive sequences in parent–child interactions</article-title>. <source>Text &amp; Talk</source>, <volume>30</volume>(<issue>1</issue>), <fpage>1</fpage>–<lpage>25</lpage>. <pub-id pub-id-type="doi">10.1515/text.2010.001</pub-id>
+</mixed-citation></ref><ref id="bjso70029-bib-0014"><mixed-citation publication-type="journal" id="bjso70029-cit-0014">
+<string-name name-style="western">
+<surname>Cekaite</surname>, <given-names>A.</given-names>
+</string-name> (<year>2015</year>). <article-title>The coordination of talk and touch in adults' directives to children: Touch and social control</article-title>. <source>Research on Language and Social Interaction</source>, <volume>48</volume>(<issue>2</issue>), <fpage>152</fpage>–<lpage>175</lpage>. <pub-id pub-id-type="doi">10.1080/08351813.2015.1025501</pub-id>
+</mixed-citation></ref><ref id="bjso70029-bib-0015"><mixed-citation publication-type="journal" id="bjso70029-cit-0015">
+<string-name name-style="western">
+<surname>Cekaite</surname>, <given-names>A.</given-names>
+</string-name>, &amp; <string-name name-style="western">
+<surname>Kvist Holm</surname>, <given-names>M.</given-names>
+</string-name> (<year>2017</year>). <article-title>The comforting touch: Tactile intimacy and talk in managing children's distress</article-title>. <source>Research on Language and Social Interaction</source>, <volume>50</volume>(<issue>2</issue>), <fpage>109</fpage>–<lpage>127</lpage>. <pub-id pub-id-type="doi">10.1080/08351813.2017.1301293</pub-id>
+</mixed-citation></ref><ref id="bjso70029-bib-0016"><mixed-citation publication-type="journal" id="bjso70029-cit-0016">
+<string-name name-style="western">
+<surname>Clark</surname>, <given-names>C.</given-names>
+</string-name>, <string-name name-style="western">
+<surname>Drew</surname>, <given-names>P.</given-names>
+</string-name>, &amp; <string-name name-style="western">
+<surname>Pinch</surname>, <given-names>T.</given-names>
+</string-name> (<year>1994</year>). <article-title>Managing customer ‘objections’ during real‐life sales negotiations</article-title>. <source>Discourse &amp; Society</source>, <volume>5</volume>(<issue>4</issue>), <fpage>437</fpage>–<lpage>462</lpage>. <pub-id pub-id-type="doi">10.1177/0957926594005004002</pub-id>
+</mixed-citation></ref><ref id="bjso70029-bib-0017"><mixed-citation publication-type="journal" id="bjso70029-cit-0017">
+<string-name name-style="western">
+<surname>Craven</surname>, <given-names>A.</given-names>
+</string-name>, &amp; <string-name name-style="western">
+<surname>Potter</surname>, <given-names>J.</given-names>
+</string-name> (<year>2010</year>). <article-title>Directives: Entitlement and contingency in action</article-title>. <source>Discourse Studies</source>, <volume>12</volume>(<issue>4</issue>), <fpage>419</fpage>–<lpage>442</lpage>. <pub-id pub-id-type="doi">10.1177/1461445610370126</pub-id>
+</mixed-citation></ref><ref id="bjso70029-bib-0018"><mixed-citation publication-type="journal" id="bjso70029-cit-0018">
+<string-name name-style="western">
+<surname>Curl</surname>, <given-names>T. S.</given-names>
+</string-name>, &amp; <string-name name-style="western">
+<surname>Drew</surname>, <given-names>P.</given-names>
+</string-name> (<year>2008</year>). <article-title>Contingency and action: A comparison of two forms of requesting</article-title>. <source>Research on Language and Social Interaction</source>, <volume>41</volume>(<issue>2</issue>), <fpage>129</fpage>–<lpage>153</lpage>. <pub-id pub-id-type="doi">10.1080/08351810802028613</pub-id>
+</mixed-citation></ref><ref id="bjso70029-bib-0019"><mixed-citation publication-type="journal" id="bjso70029-cit-0019">
+<string-name name-style="western">
+<surname>Dovey</surname>, <given-names>T. M.</given-names>
+</string-name>, <string-name name-style="western">
+<surname>Staples</surname>, <given-names>P. A.</given-names>
+</string-name>, <string-name name-style="western">
+<surname>Gibson</surname>, <given-names>E. L.</given-names>
+</string-name>, &amp; <string-name name-style="western">
+<surname>Halford</surname>, <given-names>J. C. G.</given-names>
+</string-name> (<year>2008</year>). <article-title>Food neophobia and ‘picky/fussy’ eating in children: A review</article-title>. <source>Appetite</source>, <volume>50</volume>(<issue>2–3</issue>), <fpage>181</fpage>–<lpage>193</lpage>. <pub-id pub-id-type="doi">10.1016/j.appet.2007.09.009</pub-id>
+<pub-id pub-id-type="pmid">17997196</pub-id>
+</mixed-citation></ref><ref id="bjso70029-bib-0021"><mixed-citation publication-type="journal" id="bjso70029-cit-0021">
+<string-name name-style="western">
+<surname>Edwards</surname>, <given-names>D.</given-names>
+</string-name> (<year>2006</year>). <article-title>Facts, norms and dispositions: Practical uses of the modal verb would in police interrogations</article-title>. <source>Discourse Studies</source>, <volume>8</volume>(<issue>4</issue>), <fpage>475</fpage>–<lpage>501</lpage>. <pub-id pub-id-type="doi">10.1177/1461445606064830</pub-id>
+</mixed-citation></ref><ref id="bjso70029-bib-0022"><mixed-citation publication-type="book" id="bjso70029-cit-0022">
+<string-name name-style="western">
+<surname>Edwards</surname>, <given-names>D.</given-names>
+</string-name> (<year>2007</year>). <part-title>Managing subjectivity in talk</part-title>. In <person-group person-group-type="editor">
+<string-name name-style="western">
+<given-names>A.</given-names>
+<surname>Hepburn</surname>
+</string-name>
+</person-group> &amp; <person-group person-group-type="editor">
+<string-name name-style="western">
+<given-names>S.</given-names>
+<surname>Wiggins</surname>
+</string-name>
+</person-group> (Eds.), <source>Discursive research in practice: New approaches to psychology and interaction</source> (pp. <fpage>31</fpage>–<lpage>49</lpage>). <publisher-name>Cambridge University Press</publisher-name>.</mixed-citation></ref><ref id="bjso70029-bib-0023"><mixed-citation publication-type="book" id="bjso70029-cit-0023">
+<string-name name-style="western">
+<surname>Edwards</surname>, <given-names>D.</given-names>
+</string-name>, &amp; <string-name name-style="western">
+<surname>Potter</surname>, <given-names>J.</given-names>
+</string-name> (<year>1992</year>). <source>Discursive psychology</source>. <publisher-name>Sage</publisher-name>.</mixed-citation></ref><ref id="bjso70029-bib-0024"><mixed-citation publication-type="journal" id="bjso70029-cit-0024">
+<string-name name-style="western">
+<surname>Edwards</surname>, <given-names>D.</given-names>
+</string-name>, &amp; <string-name name-style="western">
+<surname>Potter</surname>, <given-names>J.</given-names>
+</string-name> (<year>2017</year>). <article-title>Some uses of subject‐side assessments</article-title>. <source>Discourse Studies</source>, <volume>19</volume>(<issue>5</issue>), <fpage>497</fpage>–<lpage>514</lpage>. <pub-id pub-id-type="doi">10.1177/1461445617715171</pub-id>
+</mixed-citation></ref><ref id="bjso70029-bib-0025"><mixed-citation publication-type="journal" id="bjso70029-cit-0025">
+<string-name name-style="western">
+<surname>Farrow</surname>, <given-names>C. V.</given-names>
+</string-name>, &amp; <string-name name-style="western">
+<surname>Coulthard</surname>, <given-names>H.</given-names>
+</string-name> (<year>2012</year>). <article-title>Relationships between sensory sensitivity, anxiety and selective eating in children</article-title>. <source>Appetite</source>, <volume>58</volume>(<issue>3</issue>), <fpage>842</fpage>–<lpage>846</lpage>. <pub-id pub-id-type="doi">10.1016/j.appet.2012.01.017</pub-id>
+<pub-id pub-id-type="pmid">22326881</pub-id>
+</mixed-citation></ref><ref id="bjso70029-bib-0026"><mixed-citation publication-type="journal" id="bjso70029-cit-0026">
+<string-name name-style="western">
+<surname>Flint</surname>, <given-names>N.</given-names>
+</string-name>, &amp; <string-name name-style="western">
+<surname>Rhys</surname>, <given-names>C. S.</given-names>
+</string-name> (<year>2023</year>). <article-title>Teenage resistance to a parental threat: Intercepting an action‐in‐progress as a form of resistance</article-title>. <source>Journal of Language and Social Psychology</source>, <volume>42</volume>(<issue>5–6</issue>), <fpage>610</fpage>–<lpage>629</lpage>. <pub-id pub-id-type="doi">10.1177/0261927X231185736</pub-id>
+</mixed-citation></ref><ref id="bjso70029-bib-0027"><mixed-citation publication-type="book" id="bjso70029-cit-0027">
+<string-name name-style="western">
+<surname>Fransen</surname>, <given-names>M. L.</given-names>
+</string-name> (<year>2013</year>). <part-title>Resisting persuasion</part-title>. In <source>Oxford bibliographies in communication</source>. <publisher-name>Oxford University Press</publisher-name>. <pub-id pub-id-type="doi">10.1093/OBO/9780199756841-0127</pub-id>
+</mixed-citation></ref><ref id="bjso70029-bib-0028"><mixed-citation publication-type="journal" id="bjso70029-cit-0028">
+<string-name name-style="western">
+<surname>Fransen</surname>, <given-names>M. L.</given-names>
+</string-name>, <string-name name-style="western">
+<surname>Smit</surname>, <given-names>E. G.</given-names>
+</string-name>, &amp; <string-name name-style="western">
+<surname>Verlegh</surname>, <given-names>P. W. J.</given-names>
+</string-name> (<year>2015</year>). <article-title>Strategies and motives for resistance to persuasion: An integrative framework</article-title>. <source>Frontiers in Psychology</source>, <volume>6</volume>, <elocation-id>1201</elocation-id>.<pub-id pub-id-type="pmid">26322006</pub-id>
+<pub-id pub-id-type="doi" assigning-authority="pmc">10.3389/fpsyg.2015.01201</pub-id><pub-id pub-id-type="pmcid">PMC4536373</pub-id></mixed-citation></ref><ref id="bjso70029-bib-0029"><mixed-citation publication-type="journal" id="bjso70029-cit-0029">
+<string-name name-style="western">
+<surname>Fries</surname>, <given-names>L. R.</given-names>
+</string-name>, <string-name name-style="western">
+<surname>van der Horst</surname>, <given-names>K.</given-names>
+</string-name>, <string-name name-style="western">
+<surname>Moding</surname>, <given-names>K. J.</given-names>
+</string-name>, <string-name name-style="western">
+<surname>Hughes</surname>, <given-names>S. O.</given-names>
+</string-name>, &amp; <string-name name-style="western">
+<surname>Johnson</surname>, <given-names>S. L.</given-names>
+</string-name> (<year>2019</year>). <article-title>Consistency between parent‐reported feeding practices and behavioral observation during toddler meals</article-title>. <source>Journal of Nutrition Education and Behavior</source>, <volume>51</volume>(<issue>10</issue>), <fpage>1159</fpage>–<lpage>1167</lpage>. <pub-id pub-id-type="doi">10.1016/j.jneb.2019.08.005</pub-id>
+<pub-id pub-id-type="pmid">31540865</pub-id>
+</mixed-citation></ref><ref id="bjso70029-bib-0030"><mixed-citation publication-type="journal" id="bjso70029-cit-0030">
+<string-name name-style="western">
+<surname>Galatolo</surname>, <given-names>R.</given-names>
+</string-name>, &amp; <string-name name-style="western">
+<surname>Caronia</surname>, <given-names>L.</given-names>
+</string-name> (<year>2018</year>). <article-title>Morality at dinnertime: The sense of the other as a practical accomplishment in family interaction</article-title>. <source>Discourse &amp; Society</source>, <volume>29</volume>(<issue>1</issue>), <fpage>43</fpage>–<lpage>62</lpage>. <pub-id pub-id-type="doi">10.1177/0957926517726110</pub-id>
+</mixed-citation></ref><ref id="bjso70029-bib-0031"><mixed-citation publication-type="journal" id="bjso70029-cit-0031">
+<string-name name-style="western">
+<surname>Gibson</surname>, <given-names>S.</given-names>
+</string-name> (<year>2013</year>). <article-title>Milgram's obedience experiments: A rhetorical analysis</article-title>. <source>British Journal of Social Psychology</source>, <volume>52</volume>(<issue>2</issue>), <fpage>290</fpage>–<lpage>309</lpage>. <pub-id pub-id-type="doi">10.1111/j.2044-8309.2011.02070.x</pub-id>
+<pub-id pub-id-type="pmid">22007756</pub-id>
+</mixed-citation></ref><ref id="bjso70029-bib-0032"><mixed-citation publication-type="book" id="bjso70029-cit-0032">
+<string-name name-style="western">
+<surname>Gibson</surname>, <given-names>S.</given-names>
+</string-name> (<year>2019</year>). <source>Arguing, obeying and defying: A rhetorical perspective on Stanley Milgram's obedience experiments</source>. <publisher-name>Cambridge University Press</publisher-name>.</mixed-citation></ref><ref id="bjso70029-bib-0033"><mixed-citation publication-type="book" id="bjso70029-cit-0033">
+<string-name name-style="western">
+<surname>Gibson</surname>, <given-names>S.</given-names>
+</string-name>, &amp; <string-name name-style="western">
+<surname>Smart</surname>, <given-names>C.</given-names>
+</string-name> (<year>2017</year>). <part-title>Social influence</part-title>. In <person-group person-group-type="editor">
+<string-name name-style="western">
+<given-names>B.</given-names>
+<surname>Gough</surname>
+</string-name>
+</person-group> (Ed.), <source>The Palgrave handbook of critical social psychology</source> (pp. <fpage>291</fpage>–<lpage>318</lpage>). <publisher-name>Palgrave Macmillan</publisher-name>.</mixed-citation></ref><ref id="bjso70029-bib-0034"><mixed-citation publication-type="book" id="bjso70029-cit-0034">
+<string-name name-style="western">
+<surname>Glenn</surname>, <given-names>P.</given-names>
+</string-name> (<year>2003</year>). <source>Laughter in interaction</source>. <publisher-name>Cambridge University Press</publisher-name>.</mixed-citation></ref><ref id="bjso70029-bib-0035"><mixed-citation publication-type="book" id="bjso70029-cit-0035">
+<string-name name-style="western">
+<surname>Goodwin</surname>, <given-names>M. H.</given-names>
+</string-name>, &amp; <string-name name-style="western">
+<surname>Cekaite</surname>, <given-names>A.</given-names>
+</string-name> (<year>2018</year>). <source>Embodied family choreography. Practices of control, care, and mundane creativity</source>. <publisher-name>Routledge</publisher-name>.</mixed-citation></ref><ref id="bjso70029-bib-0036"><mixed-citation publication-type="book" id="bjso70029-cit-0036">
+<string-name name-style="western">
+<surname>Hepburn</surname>, <given-names>A.</given-names>
+</string-name> (<year>2020a</year>). <part-title>Managing embodied misconduct: Burping and spitting in family mealtime interactions</part-title>. In <person-group person-group-type="editor">
+<string-name name-style="western">
+<given-names>S.</given-names>
+<surname>Wiggins</surname>
+</string-name>
+</person-group> &amp; <person-group person-group-type="editor">
+<string-name name-style="western">
+<given-names>K.</given-names>
+<surname>Osvaldsson Cromdal</surname>
+</string-name>
+</person-group> (Eds.), <source>Discursive psychology and embodiment</source> (pp. <fpage>57</fpage>–<lpage>80</lpage>). <publisher-name>Palgrave Macmillan</publisher-name>.</mixed-citation></ref><ref id="bjso70029-bib-0037"><mixed-citation publication-type="journal" id="bjso70029-cit-0037">
+<string-name name-style="western">
+<surname>Hepburn</surname>, <given-names>A.</given-names>
+</string-name> (<year>2020b</year>). <article-title>The preference for self‐direction as a resource for parents' socialisation practices</article-title>. <source>Qualitative Research in Psychology</source>, <volume>17</volume>(<issue>3</issue>), <fpage>450</fpage>–<lpage>468</lpage>. <pub-id pub-id-type="doi">10.1080/14780887.2019.1664679</pub-id>
+</mixed-citation></ref><ref id="bjso70029-bib-0038"><mixed-citation publication-type="journal" id="bjso70029-cit-0038">
+<string-name name-style="western">
+<surname>Hepburn</surname>, <given-names>A.</given-names>
+</string-name>, &amp; <string-name name-style="western">
+<surname>Potter</surname>, <given-names>J.</given-names>
+</string-name> (<year>2011</year>). <article-title>Threats: Power, family mealtimes, and social influence</article-title>. <source>British Journal of Social Psychology</source>, <volume>50</volume>(<issue>1</issue>), <fpage>99</fpage>–<lpage>120</lpage>. <pub-id pub-id-type="doi">10.1348/014466610X500791</pub-id>
+<pub-id pub-id-type="pmid">21366614</pub-id>
+</mixed-citation></ref><ref id="bjso70029-bib-0039"><mixed-citation publication-type="book" id="bjso70029-cit-0039">
+<string-name name-style="western">
+<surname>Heritage</surname>, <given-names>J.</given-names>
+</string-name>, &amp; <string-name name-style="western">
+<surname>Raymond</surname>, <given-names>G.</given-names>
+</string-name> (<year>2012</year>). <part-title>Navigating epistemic landscapes: Acquiescence, agency and resistance in responses to polar questions</part-title>. In <person-group person-group-type="editor">
+<string-name name-style="western">
+<given-names>J. P.</given-names>
+<surname>de Ruitier</surname>
+</string-name>
+</person-group> (Ed.), <source>Questions: Formal, functional and interactional perspectives</source> (pp. <fpage>179</fpage>–<lpage>192</lpage>). <publisher-name>Cambridge University Press</publisher-name>.</mixed-citation></ref><ref id="bjso70029-bib-0040"><mixed-citation publication-type="book" id="bjso70029-cit-0040">
+<string-name name-style="western">
+<surname>Heritage</surname>, <given-names>J.</given-names>
+</string-name>, &amp; <string-name name-style="western">
+<surname>Sefi</surname>, <given-names>S.</given-names>
+</string-name> (<year>1992</year>). <part-title>Dilemmas of advice: Aspects of the delivery and reception of advice in interactions between health visitors and first‐time mothers</part-title>. In <person-group person-group-type="editor">
+<string-name name-style="western">
+<given-names>P.</given-names>
+<surname>Drew</surname>
+</string-name>
+</person-group> &amp; <person-group person-group-type="editor">
+<string-name name-style="western">
+<given-names>J.</given-names>
+<surname>Heritage</surname>
+</string-name>
+</person-group> (Eds.), <source>Talk at work: Interaction in institutional settings</source> (pp. <fpage>359</fpage>–<lpage>417</lpage>). <publisher-name>Cambridge University Press</publisher-name>.</mixed-citation></ref><ref id="bjso70029-bib-0041"><mixed-citation publication-type="journal" id="bjso70029-cit-0041">
+<string-name name-style="western">
+<surname>Hollander</surname>, <given-names>M. M.</given-names>
+</string-name> (<year>2015</year>). <article-title>The repertoire of resistance: Non‐compliance with directives in Milgram's ‘obedience’ experiments</article-title>. <source>The British Journal of Social Psychology</source>, <volume>54</volume>(<issue>3</issue>), <fpage>425</fpage>–<lpage>444</lpage>. <pub-id pub-id-type="doi">10.1111/bjso.12099</pub-id>
+<pub-id pub-id-type="pmid">25571762</pub-id>
+</mixed-citation></ref><ref id="bjso70029-bib-0042"><mixed-citation publication-type="journal" id="bjso70029-cit-0042">
+<string-name name-style="western">
+<surname>Humă</surname>, <given-names>B.</given-names>
+</string-name> (<year>2023</year>). <article-title>Language and persuasion: A discursive psychological approach</article-title>. <source>Social and Personality Psychology Compass</source>, <volume>17</volume>(<issue>6</issue>), <elocation-id>e12755</elocation-id>. <pub-id pub-id-type="doi">10.1111/SPC3.12755</pub-id>
+</mixed-citation></ref><ref id="bjso70029-bib-0044"><mixed-citation publication-type="journal" id="bjso70029-cit-0044">
+<string-name name-style="western">
+<surname>Humă</surname>, <given-names>B.</given-names>
+</string-name>, &amp; <string-name name-style="western">
+<surname>Stokoe</surname>, <given-names>E.</given-names>
+</string-name> (<year>2023</year>). <article-title>Resistance in business‐to‐business ‘cold’ sales calls</article-title>. <source>Journal of Language and Social Psychology</source>, <volume>42</volume>(<issue>5–6</issue>), <fpage>630</fpage>–<lpage>652</lpage>. <pub-id pub-id-type="doi">10.1177/0261927X231185520</pub-id>
+</mixed-citation></ref><ref id="bjso70029-bib-0043"><mixed-citation publication-type="journal" id="bjso70029-cit-0043">
+<string-name name-style="western">
+<surname>Humă</surname>, <given-names>B.</given-names>
+</string-name>, <string-name name-style="western">
+<surname>Joyce</surname>, <given-names>J. B.</given-names>
+</string-name>, &amp; <string-name name-style="western">
+<surname>Raymond</surname>, <given-names>G.</given-names>
+</string-name> (<year>2023</year>). <article-title>What does ‘resistance’ actually look like? The respecification of resistance as an interactional accomplishment</article-title>. <source>Journal of Language and Social Psychology</source>, <volume>42</volume>(<issue>5–6</issue>), <fpage>497</fpage>–<lpage>522</lpage>. <pub-id pub-id-type="doi">10.1177/0261927X231185525</pub-id>
+</mixed-citation></ref><ref id="bjso70029-bib-0045"><mixed-citation publication-type="journal" id="bjso70029-cit-0045">
+<string-name name-style="western">
+<surname>Humă</surname>, <given-names>B.</given-names>
+</string-name>, <string-name name-style="western">
+<surname>Stokoe</surname>, <given-names>E.</given-names>
+</string-name>, &amp; <string-name name-style="western">
+<surname>Sikveland</surname>, <given-names>R. O.</given-names>
+</string-name> (<year>2021</year>). <article-title>Vocabularies of social influence: Managing the moral accountability of influencing another</article-title>. <source>British Journal of Social Psychology</source>, <volume>60</volume>(<issue>2</issue>), <fpage>319</fpage>–<lpage>339</lpage>. <pub-id pub-id-type="doi">10.1111/bjso.12409</pub-id>
+<pub-id pub-id-type="pmid">32772417</pub-id>
+</mixed-citation></ref><ref id="bjso70029-bib-0046"><mixed-citation publication-type="journal" id="bjso70029-cit-0046">
+<string-name name-style="western">
+<surname>Jenkins</surname>, <given-names>L.</given-names>
+</string-name>, &amp; <string-name name-style="western">
+<surname>Hepburn</surname>, <given-names>A.</given-names>
+</string-name> (<year>2015</year>). <article-title>Children's sensations as interactional phenomena: A conversation analysis of children's expressions of pain and discomfort</article-title>. <source>Qualitative Research in Psychology</source>, <volume>12</volume>, <fpage>472</fpage>–<lpage>491</lpage>. <pub-id pub-id-type="doi">10.1080/14780887.2015.1054534#.VYg_B_lVhBc</pub-id>
+</mixed-citation></ref><ref id="bjso70029-bib-0047"><mixed-citation publication-type="journal" id="bjso70029-cit-0047">
+<string-name name-style="western">
+<surname>Kaposi</surname>, <given-names>D.</given-names>
+</string-name> (<year>2017</year>). <article-title>The resistance experiments: Morality, authority and obedience in Stanley Milgram's account</article-title>. <source>Journal for the Theory of Social Behaviour</source>, <volume>47</volume>(<issue>4</issue>), <fpage>382</fpage>–<lpage>401</lpage>. <pub-id pub-id-type="doi">10.1111/jtsb.12137</pub-id>
+</mixed-citation></ref><ref id="bjso70029-bib-0048"><mixed-citation publication-type="journal" id="bjso70029-cit-0048">
+<string-name name-style="western">
+<surname>Keevallik</surname>, <given-names>L.</given-names>
+</string-name>, <string-name name-style="western">
+<surname>Hofstetter</surname>, <given-names>E.</given-names>
+</string-name>, <string-name name-style="western">
+<surname>Löfgren</surname>, <given-names>A.</given-names>
+</string-name>, &amp; <string-name name-style="western">
+<surname>Wiggins</surname>, <given-names>S.</given-names>
+</string-name> (<year>2025</year>). <article-title>Response cries and syntax</article-title>. <source>Journal of Pragmatics</source>, <volume>240</volume>, <fpage>91</fpage>–<lpage>108</lpage>. <pub-id pub-id-type="doi">10.1016/j.pragma.2025.02.012</pub-id>
+</mixed-citation></ref><ref id="bjso70029-bib-0049"><mixed-citation publication-type="journal" id="bjso70029-cit-0049">
+<string-name name-style="western">
+<surname>Kendrick</surname>, <given-names>K. H.</given-names>
+</string-name> (<year>2015</year>). <article-title>Other‐initiated repair in English</article-title>. <source>Open Linguistics</source>, <volume>1</volume>(<issue>1</issue>), <fpage>164</fpage>–<lpage>190</lpage>. <pub-id pub-id-type="doi">10.2478/OPLI-2014-0009/MACHINEREADABLECITATION/RIS</pub-id>
+</mixed-citation></ref><ref id="bjso70029-bib-0050"><mixed-citation publication-type="journal" id="bjso70029-cit-0050">
+<string-name name-style="western">
+<surname>Kent</surname>, <given-names>A.</given-names>
+</string-name> (<year>2012a</year>). <article-title>Compliance, resistance and incipient compliance when responding to directives</article-title>. <source>Discourse Studies</source>, <volume>14</volume>(<issue>6</issue>), <fpage>711</fpage>–<lpage>730</lpage>. <pub-id pub-id-type="doi">10.1177/1461445612457485</pub-id>
+</mixed-citation></ref><ref id="bjso70029-bib-0051"><mixed-citation publication-type="book" id="bjso70029-cit-0051">
+<string-name name-style="western">
+<surname>Kent</surname>, <given-names>A.</given-names>
+</string-name> (<year>2012b</year>). <part-title>Responding to directives: What can children do when a parent tells them what to do</part-title>. In <person-group person-group-type="editor">
+<string-name name-style="western">
+<given-names>S.</given-names>
+<surname>Danby</surname>
+</string-name>
+</person-group> &amp; <person-group person-group-type="editor">
+<string-name name-style="western">
+<given-names>M.</given-names>
+<surname>Theobald</surname>
+</string-name>
+</person-group> (Eds.), <source>Disputes in everyday life: Social and moral orders of children and young people sociological studies of children and youth</source> (pp. <fpage>57</fpage>–<lpage>84</lpage>). <publisher-name>Emerald Group Publishing Limited</publisher-name>.</mixed-citation></ref><ref id="bjso70029-bib-0052"><mixed-citation publication-type="journal" id="bjso70029-cit-0052">
+<string-name name-style="western">
+<surname>Koenig</surname>, <given-names>C. J.</given-names>
+</string-name> (<year>2011</year>). <article-title>Patient resistance as agency in treatment decisions</article-title>. <source>Social Science &amp; Medicine</source>, <volume>72</volume>(<issue>7</issue>), <fpage>1105</fpage>–<lpage>1114</lpage>. <pub-id pub-id-type="doi">10.1016/j.socscimed.2011.02.010</pub-id>
+<pub-id pub-id-type="pmid">21420214</pub-id>
+</mixed-citation></ref><ref id="bjso70029-bib-0053"><mixed-citation publication-type="journal" id="bjso70029-cit-0053">
+<string-name name-style="western">
+<surname>Kremer‐Sadlik</surname>, <given-names>T.</given-names>
+</string-name>, &amp; <string-name name-style="western">
+<surname>Morgenstern</surname>, <given-names>A.</given-names>
+</string-name> (<year>2022</year>). <article-title>The reflective eater: Socializing French children to eating fruits and vegetables</article-title>. <source>Appetite</source>, <volume>172</volume>, <elocation-id>105954</elocation-id>. <pub-id pub-id-type="doi">10.1016/j.appet.2022.105954</pub-id>
+<pub-id pub-id-type="pmid">35121055</pub-id>
+</mixed-citation></ref><ref id="bjso70029-bib-0054"><mixed-citation publication-type="journal" id="bjso70029-cit-0054">
+<string-name name-style="western">
+<surname>Küttner</surname>, <given-names>U. A.</given-names>
+</string-name>, <string-name name-style="western">
+<surname>Vatanen</surname>, <given-names>A.</given-names>
+</string-name>, &amp; <string-name name-style="western">
+<surname>Zinken</surname>, <given-names>J.</given-names>
+</string-name> (<year>2022</year>). <article-title>Invoking rules in everyday family interactions: A method for appealing to practical reason</article-title>. <source>Human Studies</source>, <volume>45</volume>(<issue>4</issue>), <fpage>793</fpage>–<lpage>823</lpage>. <pub-id pub-id-type="doi">10.1007/S10746-022-09648-0</pub-id>
+</mixed-citation></ref><ref id="bjso70029-bib-0055"><mixed-citation publication-type="journal" id="bjso70029-cit-0055">
+<string-name name-style="western">
+<surname>Lafraire</surname>, <given-names>J.</given-names>
+</string-name>, <string-name name-style="western">
+<surname>Rioux</surname>, <given-names>C.</given-names>
+</string-name>, <string-name name-style="western">
+<surname>Giboreau</surname>, <given-names>A.</given-names>
+</string-name>, &amp; <string-name name-style="western">
+<surname>Picard</surname>, <given-names>D.</given-names>
+</string-name> (<year>2016</year>). <article-title>Food rejections in children: Cognitive and social/environmental factors involved in food neophobia and picky/fussy eating behavior</article-title>. <source>Appetite</source>, <volume>96</volume>, <fpage>347</fpage>–<lpage>357</lpage>. <pub-id pub-id-type="doi">10.1016/j.appet.2015.09.008</pub-id>
+<pub-id pub-id-type="pmid">26391004</pub-id>
+</mixed-citation></ref><ref id="bjso70029-bib-0056"><mixed-citation publication-type="journal" id="bjso70029-cit-0056">
+<string-name name-style="western">
+<surname>Lee</surname>, <given-names>D.</given-names>
+</string-name> (<year>1987</year>). <article-title>The semantics of just</article-title>. <source>Journal of Pragmatics</source>, <volume>11</volume>(<issue>3</issue>), <fpage>377</fpage>–<lpage>398</lpage>. <pub-id pub-id-type="doi">10.1016/0378-2166(87)90138-X</pub-id>
+</mixed-citation></ref><ref id="bjso70029-bib-0057"><mixed-citation publication-type="journal" id="bjso70029-cit-0057">
+<string-name name-style="western">
+<surname>Lerner</surname>, <given-names>G. H.</given-names>
+</string-name> (<year>2003</year>). <article-title>Selecting next speaker: The context‐sensitive operation of a context‐free organization</article-title>. <source>Language in Society</source>, <volume>32</volume>(<issue>2</issue>), <fpage>177</fpage>–<lpage>201</lpage>. <pub-id pub-id-type="doi">10.1017/S004740450332202X</pub-id>
+</mixed-citation></ref><ref id="bjso70029-bib-0058"><mixed-citation publication-type="book" id="bjso70029-cit-0058">
+<string-name name-style="western">
+<surname>Levinson</surname>, <given-names>S. C.</given-names>
+</string-name> (<year>1988</year>). <part-title>Putting linguistics on a proper footing: Explorations in Goffman's concepts of participation</part-title>. In <person-group person-group-type="editor">
+<string-name name-style="western">
+<given-names>P.</given-names>
+<surname>Drew</surname>
+</string-name>
+</person-group> &amp; <person-group person-group-type="editor">
+<string-name name-style="western">
+<given-names>A.</given-names>
+<surname>Wootton</surname>
+</string-name>
+</person-group> (Eds.), <source>Erving Goffman. Exploring the interaction order</source> (pp. <fpage>161</fpage>–<lpage>227</lpage>). <publisher-name>Polity Press</publisher-name>.</mixed-citation></ref><ref id="bjso70029-bib-0060"><mixed-citation publication-type="book" id="bjso70029-cit-0060">
+<string-name name-style="western">
+<surname>McIlvenny</surname>, <given-names>P.</given-names>
+</string-name>, <string-name name-style="western">
+<surname>Davidsen</surname>, <given-names>J. G.</given-names>
+</string-name>, <string-name name-style="western">
+<surname>Kovács</surname>, <given-names>A. B.</given-names>
+</string-name>, &amp; <string-name name-style="western">
+<surname>Stein</surname>, <given-names>A.</given-names>
+</string-name> (<year>2022</year>). <source>DOTE: Distributed Open Transcription Environment [Computer software]</source>. <publisher-name>Github</publisher-name>. <ext-link xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="https://github.com/BigSoftVideo/DOTE/" ext-link-type="uri">https://github.com/BigSoftVideo/DOTE/</ext-link>
+</mixed-citation></ref><ref id="bjso70029-bib-0061"><mixed-citation publication-type="journal" id="bjso70029-cit-0061">
+<string-name name-style="western">
+<surname>Mitchell</surname>, <given-names>G. L.</given-names>
+</string-name>, <string-name name-style="western">
+<surname>Farrow</surname>, <given-names>C.</given-names>
+</string-name>, <string-name name-style="western">
+<surname>Haycraft</surname>, <given-names>E.</given-names>
+</string-name>, &amp; <string-name name-style="western">
+<surname>Meyer</surname>, <given-names>C.</given-names>
+</string-name> (<year>2013</year>). <article-title>Parental influences on children's eating behaviour and characteristics of successful parent‐focussed interventions</article-title>. <source>Appetite</source>, <volume>60</volume>(<issue>1</issue>), <fpage>85</fpage>–<lpage>94</lpage>. <pub-id pub-id-type="doi">10.1016/j.appet.2012.09.014</pub-id>
+<pub-id pub-id-type="pmid">23017468</pub-id>
+</mixed-citation></ref><ref id="bjso70029-bib-0062"><mixed-citation publication-type="journal" id="bjso70029-cit-0062">
+<string-name name-style="western">
+<surname>Mondada</surname>, <given-names>L.</given-names>
+</string-name> (<year>2018</year>). <article-title>Multiple temporalities of language and body in interaction: Challenges for transcribing multimodality</article-title>. <source>Research on Language and Social Interaction</source>, <volume>51</volume>(<issue>1</issue>), <fpage>85</fpage>–<lpage>106</lpage>. <pub-id pub-id-type="doi">10.1080/08351813.2018.1413878</pub-id>
+</mixed-citation></ref><ref id="bjso70029-bib-0063"><mixed-citation publication-type="book" id="bjso70029-cit-0063">
+<string-name name-style="western">
+<surname>Nishizaka</surname>, <given-names>A.</given-names>
+</string-name> (<year>2024</year>). <part-title>Single‐case analysis</part-title>. In <person-group person-group-type="editor">
+<string-name name-style="western">
+<given-names>J. D.</given-names>
+<surname>Robinson</surname>
+</string-name>
+</person-group>, <person-group person-group-type="editor">
+<string-name name-style="western">
+<given-names>R.</given-names>
+<surname>Clift</surname>
+</string-name>
+</person-group>, <person-group person-group-type="editor">
+<string-name name-style="western">
+<given-names>K. H.</given-names>
+<surname>Kendrick</surname>
+</string-name>
+</person-group>, &amp; <person-group person-group-type="editor">
+<string-name name-style="western">
+<given-names>C. W.</given-names>
+<surname>Raymond</surname>
+</string-name>
+</person-group> (Eds.), <source>The Cambridge handbook of methods in conversation analysis</source> (pp. <fpage>487</fpage>–<lpage>511</lpage>). <publisher-name>Cambridge University Press</publisher-name>.</mixed-citation></ref><ref id="bjso70029-bib-0064"><mixed-citation publication-type="journal" id="bjso70029-cit-0064">
+<string-name name-style="western">
+<surname>Ochs</surname>, <given-names>E.</given-names>
+</string-name>, &amp; <string-name name-style="western">
+<surname>Taylor</surname>, <given-names>C.</given-names>
+</string-name> (<year>1992</year>). <article-title>Family narrative as political activity</article-title>. <source>Discourse &amp; Society</source>, <volume>3</volume>(<issue>3</issue>), <fpage>301</fpage>–<lpage>340</lpage>. <pub-id pub-id-type="doi">10.1177/0957926592003003003</pub-id>
+</mixed-citation></ref><ref id="bjso70029-bib-0065"><mixed-citation publication-type="journal" id="bjso70029-cit-0065">
+<string-name name-style="western">
+<surname>Orrell‐Valente</surname>, <given-names>J. K.</given-names>
+</string-name>, <string-name name-style="western">
+<surname>Hill</surname>, <given-names>L. G.</given-names>
+</string-name>, <string-name name-style="western">
+<surname>Brechwald</surname>, <given-names>W. A.</given-names>
+</string-name>, <string-name name-style="western">
+<surname>Dodge</surname>, <given-names>K. A.</given-names>
+</string-name>, <string-name name-style="western">
+<surname>Pettit</surname>, <given-names>G. S.</given-names>
+</string-name>, &amp; <string-name name-style="western">
+<surname>Bates</surname>, <given-names>J. E.</given-names>
+</string-name> (<year>2007</year>). <article-title>‘Just three more bites’: An observational analysis of parents' socialization of children's eating at mealtime</article-title>. <source>Appetite</source>, <volume>48</volume>(<issue>1</issue>), <fpage>37</fpage>–<lpage>45</lpage>. <pub-id pub-id-type="doi">10.1016/j.appet.2006.06.006</pub-id>
+<pub-id pub-id-type="pmid">17000028</pub-id>
+<pub-id pub-id-type="pmcid">PMC2045650</pub-id></mixed-citation></ref><ref id="bjso70029-bib-0066"><mixed-citation publication-type="journal" id="bjso70029-cit-0066">
+<string-name name-style="western">
+<surname>Paugh</surname>, <given-names>A.</given-names>
+</string-name>, &amp; <string-name name-style="western">
+<surname>Izquierdo</surname>, <given-names>C.</given-names>
+</string-name> (<year>2009</year>). <article-title>Why is this a battle every night?: Negotiating food and eating in american dinnertime interaction</article-title>. <source>Journal of Linguistic Anthropology</source>, <volume>19</volume>(<issue>2</issue>), <fpage>185</fpage>–<lpage>204</lpage>. <pub-id pub-id-type="doi">10.1111/j.1548-1395.2009.01030.x</pub-id>
+</mixed-citation></ref><ref id="bjso70029-bib-0067"><mixed-citation publication-type="journal" id="bjso70029-cit-0067">
+<string-name name-style="western">
+<surname>Pauletto</surname>, <given-names>F.</given-names>
+</string-name>, <string-name name-style="western">
+<surname>Aronsson</surname>, <given-names>K.</given-names>
+</string-name>, &amp; <string-name name-style="western">
+<surname>Galeano</surname>, <given-names>G.</given-names>
+</string-name> (<year>2017</year>). <article-title>Endearment and address terms in family life: Children's and parents' requests in Italian and Swedish dinnertime interaction</article-title>. <source>Journal of Pragmatics</source>, <volume>109</volume>, <fpage>82</fpage>–<lpage>94</lpage>. <pub-id pub-id-type="doi">10.1016/j.pragma.2016.12.014</pub-id>
+</mixed-citation></ref><ref id="bjso70029-bib-0068"><mixed-citation publication-type="book" id="bjso70029-cit-0068">
+<string-name name-style="western">
+<surname>Pontecorvo</surname>, <given-names>C.</given-names>
+</string-name>, &amp; <string-name name-style="western">
+<surname>Fasulo</surname>, <given-names>A.</given-names>
+</string-name> (<year>1997</year>). <part-title>Learning to argue in family shared discourse: The reconstruction of past events</part-title>. In <person-group person-group-type="editor">
+<string-name name-style="western">
+<given-names>L. B.</given-names>
+<surname>Resnick</surname>
+</string-name>
+</person-group>, <person-group person-group-type="editor">
+<string-name name-style="western">
+<given-names>R.</given-names>
+<surname>Säljö</surname>
+</string-name>
+</person-group>, <person-group person-group-type="editor">
+<string-name name-style="western">
+<given-names>C.</given-names>
+<surname>Pontecorvo</surname>
+</string-name>
+</person-group>, &amp; <person-group person-group-type="editor">
+<string-name name-style="western">
+<given-names>B.</given-names>
+<surname>Burge</surname>
+</string-name>
+</person-group> (Eds.), <source>Discourse, tools and reasoning: Essays on situated cognition</source> (pp. <fpage>406</fpage>–<lpage>442</lpage>). <publisher-name>Springer</publisher-name>. <pub-id pub-id-type="doi">10.1007/978-3-662-03362-3_18</pub-id>
+</mixed-citation></ref><ref id="bjso70029-bib-0069"><mixed-citation publication-type="journal" id="bjso70029-cit-0069">
+<string-name name-style="western">
+<surname>Potter</surname>, <given-names>J.</given-names>
+</string-name>, &amp; <string-name name-style="western">
+<surname>Hepburn</surname>, <given-names>A.</given-names>
+</string-name> (<year>2020</year>). <article-title>Shaming interrogatives: Admonishments, the social psychology of emotion, and discursive practices of behaviour modification in family mealtimes</article-title>. <source>The British Journal of Social Psychology</source>, <volume>59</volume>, <fpage>347</fpage>–<lpage>364</lpage>. <pub-id pub-id-type="doi">10.1111/bjso.12346</pub-id>
+<pub-id pub-id-type="pmid">31721245</pub-id>
+<pub-id pub-id-type="pmcid">PMC7186827</pub-id></mixed-citation></ref><ref id="bjso70029-bib-0070"><mixed-citation publication-type="journal" id="bjso70029-cit-0070">
+<string-name name-style="western">
+<surname>Raymond</surname>, <given-names>G.</given-names>
+</string-name> (<year>2003</year>). <article-title>Grammar and social organization: Yes/no interrogatives and the structure of responding</article-title>. <source>American Sociological Review</source>, <volume>68</volume>(<issue>6</issue>), <fpage>939</fpage>–<lpage>967</lpage>.</mixed-citation></ref><ref id="bjso70029-bib-0071"><mixed-citation publication-type="journal" id="bjso70029-cit-0071">
+<string-name name-style="western">
+<surname>Raymond</surname>, <given-names>G.</given-names>
+</string-name>, <string-name name-style="western">
+<surname>Chen</surname>, <given-names>J.</given-names>
+</string-name>, &amp; <string-name name-style="western">
+<surname>Whitehead</surname>, <given-names>K. A.</given-names>
+</string-name> (<year>2023</year>). <article-title>Sequential standoffs in police encounters with the public</article-title>. <source>Journal of Language and Social Psychology</source>, <volume>42</volume>(<issue>5–6</issue>), <fpage>653</fpage>–<lpage>678</lpage>. <pub-id pub-id-type="doi">10.1177/0261927X231185529</pub-id>
+</mixed-citation></ref><ref id="bjso70029-bib-0072"><mixed-citation publication-type="journal" id="bjso70029-cit-0072">
+<string-name name-style="western">
+<surname>Reicher</surname>, <given-names>S.</given-names>
+</string-name>, &amp; <string-name name-style="western">
+<surname>Haslam</surname>, <given-names>S. A.</given-names>
+</string-name> (<year>2006</year>). <article-title>Rethinking the psychology of tyranny: The BBC prison study</article-title>. <source>British Journal of Social Psychology</source>, <volume>45</volume>(<issue>1</issue>), <fpage>1</fpage>–<lpage>40</lpage>. <pub-id pub-id-type="doi">10.1348/014466605X48998</pub-id>
+<pub-id pub-id-type="pmid">16573869</pub-id>
+</mixed-citation></ref><ref id="bjso70029-bib-0073"><mixed-citation publication-type="journal" id="bjso70029-cit-0073">
+<string-name name-style="western">
+<surname>Rendle‐Short</surname>, <given-names>J.</given-names>
+</string-name> (<year>2007</year>). <article-title>‘Catherine, you're wasting your time’: Address terms within the Australian political interview</article-title>. <source>Journal of Pragmatics</source>, <volume>39</volume>(<issue>9</issue>), <fpage>1503</fpage>–<lpage>1525</lpage>. <pub-id pub-id-type="doi">10.1016/J.PRAGMA.2007.02.006</pub-id>
+</mixed-citation></ref><ref id="bjso70029-bib-0074"><mixed-citation publication-type="journal" id="bjso70029-cit-0074">
+<string-name name-style="western">
+<surname>Russell</surname>, <given-names>C. G.</given-names>
+</string-name>, &amp; <string-name name-style="western">
+<surname>Worsley</surname>, <given-names>A.</given-names>
+</string-name> (<year>2013</year>). <article-title>Why don't they like that? And can I do anything about it? The nature and correlates of parents' attributions and self‐efficacy beliefs about preschool children's food preferences</article-title>. <source>Appetite</source>, <volume>66</volume>, <fpage>34</fpage>–<lpage>43</lpage>. <pub-id pub-id-type="doi">10.1016/j.appet.2013.02.020</pub-id>
+<pub-id pub-id-type="pmid">23474088</pub-id>
+</mixed-citation></ref><ref id="bjso70029-bib-0075"><mixed-citation publication-type="book" id="bjso70029-cit-0075">
+<string-name name-style="western">
+<surname>Sacks</surname>, <given-names>H.</given-names>
+</string-name> (<year>1992</year>). <source>Lectures on conversation. Volume 1</source>. <publisher-name>Blackwell</publisher-name>.</mixed-citation></ref><ref id="bjso70029-bib-0077"><mixed-citation publication-type="journal" id="bjso70029-cit-0077">
+<string-name name-style="western">
+<surname>Salvy</surname>, <given-names>S.‐J.</given-names>
+</string-name>, <string-name name-style="western">
+<surname>Vartanian</surname>, <given-names>L. R.</given-names>
+</string-name>, <string-name name-style="western">
+<surname>Coelho</surname>, <given-names>J. S.</given-names>
+</string-name>, <string-name name-style="western">
+<surname>Jarrin</surname>, <given-names>D.</given-names>
+</string-name>, &amp; <string-name name-style="western">
+<surname>Pliner</surname>, <given-names>P. P.</given-names>
+</string-name> (<year>2008</year>). <article-title>The role of familiarity on modeling of eating and food consumption in children</article-title>. <source>Appetite</source>, <volume>50</volume>(<issue>2</issue>), <fpage>514</fpage>–<lpage>518</lpage>. <pub-id pub-id-type="doi">10.1016/j.appet.2007.10.009</pub-id>
+<pub-id pub-id-type="pmid">18068854</pub-id>
+<pub-id pub-id-type="pmcid">PMC2276309</pub-id></mixed-citation></ref><ref id="bjso70029-bib-0078"><mixed-citation publication-type="book" id="bjso70029-cit-0078">
+<string-name name-style="western">
+<surname>Schegloff</surname>, <given-names>E. A.</given-names>
+</string-name> (<year>1988</year>). <part-title>Goffman and the analysis of conversation</part-title>. In <person-group person-group-type="editor">
+<string-name name-style="western">
+<given-names>P.</given-names>
+<surname>Drew</surname>
+</string-name>
+</person-group> &amp; <person-group person-group-type="editor">
+<string-name name-style="western">
+<given-names>A.</given-names>
+<surname>Wootton</surname>
+</string-name>
+</person-group> (Eds.), <source>Erving Goffman: Exploring the interaction order</source> (pp. <fpage>89</fpage>–<lpage>135</lpage>). <publisher-name>Polity Press</publisher-name>.</mixed-citation></ref><ref id="bjso70029-bib-0079"><mixed-citation publication-type="book" id="bjso70029-cit-0079">
+<string-name name-style="western">
+<surname>Schegloff</surname>, <given-names>E. A.</given-names>
+</string-name> (<year>1989</year>). <part-title>Reflections on language, development, and the interactional character of talk‐in‐interaction</part-title>. In <person-group person-group-type="editor">
+<string-name name-style="western">
+<given-names>M. H.</given-names>
+<surname>Bornstein</surname>
+</string-name>
+</person-group> &amp; <person-group person-group-type="editor">
+<string-name name-style="western">
+<given-names>J. S.</given-names>
+<surname>Bruner</surname>
+</string-name>
+</person-group> (Eds.), <source>Interaction in human development</source> (pp. <fpage>139</fpage>–<lpage>153</lpage>). <publisher-name>Lawrence Erlbaum Associates</publisher-name>.</mixed-citation></ref><ref id="bjso70029-bib-0104"><mixed-citation publication-type="book" id="bjso70029-cit-0104">
+<string-name name-style="western">
+<surname>Schegloff</surname>, <given-names>E. A.</given-names>
+</string-name> (<year>2007</year>). <source>Sequence organization in interaction: A primer in conversation analysis I (Vol. 1)</source>. <publisher-name>Cambridge University Press</publisher-name>.</mixed-citation></ref><ref id="bjso70029-bib-0080"><mixed-citation publication-type="journal" id="bjso70029-cit-0080">
+<string-name name-style="western">
+<surname>Seymour‐Smith</surname>, <given-names>S.</given-names>
+</string-name>, &amp; <string-name name-style="western">
+<surname>Kloess</surname>, <given-names>J. A.</given-names>
+</string-name> (<year>2021</year>). <article-title>A discursive analysis of compliance, resistance and escalation to threats in sexually exploitative interactions between offenders and male children</article-title>. <source>British Journal of Social Psychology</source>, <volume>60</volume>(<issue>3</issue>), <fpage>988</fpage>–<lpage>1011</lpage>. <pub-id pub-id-type="doi">10.1111/bjso.12437</pub-id>
+<pub-id pub-id-type="pmid">33480452</pub-id>
+</mixed-citation></ref><ref id="bjso70029-bib-0081"><mixed-citation publication-type="journal" id="bjso70029-cit-0081">
+<string-name name-style="western">
+<surname>Sikveland</surname>, <given-names>R. O.</given-names>
+</string-name>, &amp; <string-name name-style="western">
+<surname>Stokoe</surname>, <given-names>E.</given-names>
+</string-name> (<year>2016</year>). <article-title>Dealing with resistance in initial intake and inquiry calls to mediation: The power of ‘willing’</article-title>. <source>Conflict Resolution Quarterly</source>, <volume>33</volume>(<issue>3</issue>), <fpage>235</fpage>–<lpage>254</lpage>. <pub-id pub-id-type="doi">10.1002/crq.21157</pub-id>
+</mixed-citation></ref><ref id="bjso70029-bib-0082"><mixed-citation publication-type="journal" id="bjso70029-cit-0082">
+<string-name name-style="western">
+<surname>Sikveland</surname>, <given-names>R. O.</given-names>
+</string-name>, &amp; <string-name name-style="western">
+<surname>Stokoe</surname>, <given-names>E.</given-names>
+</string-name> (<year>2023</year>). <article-title>A cry for ‘help’? How crisis negotiators overcome suicidal people's resistance to offers of assistance</article-title>. <source>Journal of Language and Social Psychology</source>, <volume>42</volume>(<issue>5–6</issue>), <fpage>565</fpage>–<lpage>588</lpage>. <pub-id pub-id-type="doi">10.1177/0261927X231185734</pub-id>
+</mixed-citation></ref><ref id="bjso70029-bib-0083"><mixed-citation publication-type="journal" id="bjso70029-cit-0083">
+<string-name name-style="western">
+<surname>Sterponi</surname>, <given-names>L.</given-names>
+</string-name> (<year>2009</year>). <article-title>Accountability in family discourse: Socialization into norms and standards and negotiation of responsibility in Italian dinner conversations</article-title>. <source>Childhood</source>, <volume>16</volume>(<issue>4</issue>), <fpage>441</fpage>–<lpage>459</lpage>. <pub-id pub-id-type="doi">10.1177/0907568209343269</pub-id>
+</mixed-citation></ref><ref id="bjso70029-bib-0084"><mixed-citation publication-type="journal" id="bjso70029-cit-0084">
+<string-name name-style="western">
+<surname>Stevanovic</surname>, <given-names>M.</given-names>
+</string-name>, &amp; <string-name name-style="western">
+<surname>Peräkylä</surname>, <given-names>A.</given-names>
+</string-name> (<year>2012</year>). <article-title>Deontic authority in interaction: The right to announce, propose, and decide</article-title>. <source>Research on Language and Social Interaction</source>, <volume>45</volume>(<issue>3</issue>), <fpage>297</fpage>–<lpage>321</lpage>. <pub-id pub-id-type="doi">10.1080/08351813.2012.699260</pub-id>
+</mixed-citation></ref><ref id="bjso70029-bib-0085"><mixed-citation publication-type="book" id="bjso70029-cit-0085">
+<string-name name-style="western">
+<surname>Stivers</surname>, <given-names>T.</given-names>
+</string-name> (<year>2007</year>). <source>Prescribing under pressure: Patient‐physician conversations and antibiotics</source>. <publisher-name>Oxford University Press</publisher-name>.</mixed-citation></ref><ref id="bjso70029-bib-0086"><mixed-citation publication-type="journal" id="bjso70029-cit-0086">
+<string-name name-style="western">
+<surname>Stivers</surname>, <given-names>T.</given-names>
+</string-name>, &amp; <string-name name-style="western">
+<surname>Hayashi</surname>, <given-names>M.</given-names>
+</string-name> (<year>2010</year>). <article-title>Transformative answers: One way to resist a question's constraints</article-title>. <source>Language in Society</source>, <volume>39</volume>, <fpage>1</fpage>–<lpage>25</lpage>. <pub-id pub-id-type="doi">10.1017/S0047404509990637</pub-id>
+</mixed-citation></ref><ref id="bjso70029-bib-0087"><mixed-citation publication-type="journal" id="bjso70029-cit-0087">
+<string-name name-style="western">
+<surname>Taquet</surname>, <given-names>J.</given-names>
+</string-name>, <string-name name-style="western">
+<surname>Verbeken</surname>, <given-names>S.</given-names>
+</string-name>, &amp; <string-name name-style="western">
+<surname>Goossens</surname>, <given-names>L.</given-names>
+</string-name> (<year>2024</year>). <article-title>Examining the whole plate: The role of the family context in the understanding of children's food refusal behaviors</article-title>. <source>Eating Behaviors</source>, <volume>52</volume>, <elocation-id>101828</elocation-id>. <pub-id pub-id-type="doi">10.1016/j.eatbeh.2023.101828</pub-id>
+<pub-id pub-id-type="pmid">38006775</pub-id>
+</mixed-citation></ref><ref id="bjso70029-bib-0088"><mixed-citation publication-type="miscellaneous" id="bjso70029-cit-0088">
+<string-name name-style="western">
+<surname>van der Heijden</surname>, <given-names>A.</given-names>
+</string-name> (<year>2022</year>). <article-title>
+<italic toggle="yes">To like or not to like. On negotiating taste in children from families with a low socioeconomic position</italic> [PhD thesis, Wageningen University]</article-title>. <pub-id pub-id-type="doi">10.18174/566538</pub-id>
+<pub-id pub-id-type="pmid">34896168</pub-id></mixed-citation></ref><ref id="bjso70029-bib-0089"><mixed-citation publication-type="journal" id="bjso70029-cit-0089">
+<string-name name-style="western">
+<surname>van der Heijden</surname>, <given-names>A.</given-names>
+</string-name>, <string-name name-style="western">
+<surname>te Molder</surname>, <given-names>H.</given-names>
+</string-name>, <string-name name-style="western">
+<surname>Humă</surname>, <given-names>B.</given-names>
+</string-name>, &amp; <string-name name-style="western">
+<surname>Jager</surname>, <given-names>G.</given-names>
+</string-name> (<year>2021</year>). <article-title>To like or not to like: Negotiating food assessments of children from families with a low socioeconomic position</article-title>. <source>Appetite</source>, <volume>170</volume>, <elocation-id>105853</elocation-id>. <pub-id pub-id-type="doi">10.1016/J.APPET.2021.105853</pub-id>
+<pub-id pub-id-type="pmid">34896168</pub-id>
+</mixed-citation></ref><ref id="bjso70029-bib-0090"><mixed-citation publication-type="journal" id="bjso70029-cit-0090">
+<string-name name-style="western">
+<surname>van der Horst</surname>, <given-names>K.</given-names>
+</string-name> (<year>2012</year>). <article-title>Overcoming picky eating. Eating enjoyment as a central aspect of children's eating behaviors</article-title>. <source>Appetite</source>, <volume>58</volume>(<issue>2</issue>), <fpage>567</fpage>–<lpage>574</lpage>. <pub-id pub-id-type="doi">10.1016/j.appet.2011.12.019</pub-id>
+<pub-id pub-id-type="pmid">22245133</pub-id>
+</mixed-citation></ref><ref id="bjso70029-bib-0091"><mixed-citation publication-type="journal" id="bjso70029-cit-0091">
+<string-name name-style="western">
+<surname>Wardle</surname>, <given-names>J.</given-names>
+</string-name>, <string-name name-style="western">
+<surname>Carnell</surname>, <given-names>S.</given-names>
+</string-name>, &amp; <string-name name-style="western">
+<surname>Cooke</surname>, <given-names>L.</given-names>
+</string-name> (<year>2005</year>). <article-title>Parental control over feeding and children's fruit and vegetable intake: How are they related?</article-title>
+<source>Journal of the American Dietetic Association</source>, <volume>105</volume>(<issue>2</issue>), <fpage>227</fpage>–<lpage>232</lpage>. <pub-id pub-id-type="doi">10.1016/j.jada.2004.11.006</pub-id>
+<pub-id pub-id-type="pmid">15668680</pub-id>
+</mixed-citation></ref><ref id="bjso70029-bib-0092"><mixed-citation publication-type="journal" id="bjso70029-cit-0092">
+<string-name name-style="western">
+<surname>Waring</surname>, <given-names>H. Z.</given-names>
+</string-name> (<year>2019</year>). <article-title>Voicing control: A child resource for ‘growing a head taller’</article-title>. <source>Semiotica</source>, <volume>2019</volume>(<issue>231</issue>), <fpage>147</fpage>–<lpage>169</lpage>. <pub-id pub-id-type="doi">10.1515/sem-2018-0011</pub-id>
+</mixed-citation></ref><ref id="bjso70029-bib-0093"><mixed-citation publication-type="journal" id="bjso70029-cit-0093">
+<string-name name-style="western">
+<surname>Waring</surname>, <given-names>H. Z.</given-names>
+</string-name> (<year>2025</year>). <article-title>Invoking (dis)likes at the dinner table</article-title>. <source>Symbolic Interaction</source>. <pub-id pub-id-type="doi">10.1002/symb.1248</pub-id>
+</mixed-citation></ref><ref id="bjso70029-bib-0094"><mixed-citation publication-type="journal" id="bjso70029-cit-0094">
+<string-name name-style="western">
+<surname>Wiggins</surname>, <given-names>S.</given-names>
+</string-name> (<year>2013</year>). <article-title>The social life of ‘eugh’: Disgust as assessment in family mealtimes</article-title>. <source>British Journal of Social Psychology</source>, <volume>52</volume>(<issue>3</issue>), <fpage>489</fpage>–<lpage>509</lpage>. <pub-id pub-id-type="doi">10.1111/j.2044-8309.2012.02106.x</pub-id>
+<pub-id pub-id-type="pmid">22642481</pub-id>
+</mixed-citation></ref><ref id="bjso70029-bib-0095"><mixed-citation publication-type="journal" id="bjso70029-cit-0095">
+<string-name name-style="western">
+<surname>Wiggins</surname>, <given-names>S.</given-names>
+</string-name> (<year>2014</year>). <article-title>Adult and child use of love, like, don't like and hate during family mealtimes. Subjective category assessments as food preference talk</article-title>. <source>Appetite</source>, <volume>80</volume>, <fpage>7</fpage>–<lpage>15</lpage>. <pub-id pub-id-type="doi">10.1016/j.appet.2014.04.024</pub-id>
+<pub-id pub-id-type="pmid">24793063</pub-id>
+</mixed-citation></ref><ref id="bjso70029-bib-0096"><mixed-citation publication-type="book" id="bjso70029-cit-0096">
+<string-name name-style="western">
+<surname>Wiggins</surname>, <given-names>S.</given-names>
+</string-name> (<year>2017</year>). <source>Discursive psychology. Theory, method and applications</source>. <publisher-name>Sage</publisher-name>.</mixed-citation></ref><ref id="bjso70029-bib-0097"><mixed-citation publication-type="journal" id="bjso70029-cit-0097">
+<string-name name-style="western">
+<surname>Wiggins</surname>, <given-names>S.</given-names>
+</string-name> (<year>2023</year>). <article-title>How infant food likes become established as knowledge: Parental food assessments during infant mealtimes in the home</article-title>. <source>Appetite</source>, <volume>184</volume>, <elocation-id>106489</elocation-id>. <pub-id pub-id-type="doi">10.1016/j.appet.2023.106489</pub-id>
+<pub-id pub-id-type="pmid">36792035</pub-id>
+</mixed-citation></ref><ref id="bjso70029-bib-0098"><mixed-citation publication-type="journal" id="bjso70029-cit-0098">
+<string-name name-style="western">
+<surname>Wiggins</surname>, <given-names>S.</given-names>
+</string-name> (<year>2025</year>). <article-title>Sticky categories, discursive practices, and the potential for change: The case of children's food ‘likes’</article-title>. <source>Journal of Language and Social Psychology</source>, <volume>44</volume>(<issue>3–4</issue>), <fpage>319</fpage>–<lpage>342</lpage>. <pub-id pub-id-type="doi">10.1177/0261927X251315663</pub-id>
+</mixed-citation></ref><ref id="bjso70029-bib-0099"><mixed-citation publication-type="journal" id="bjso70029-cit-0099">
+<string-name name-style="western">
+<surname>Wiggins</surname>, <given-names>S.</given-names>
+</string-name>, &amp; <string-name name-style="western">
+<surname>Keevallik</surname>, <given-names>L.</given-names>
+</string-name> (<year>2023</year>). <article-title>Transformations of disgust in interaction: The intertwinement of face, sound, and the body</article-title>. <source>Social Interaction: Video‐Based Studies of Human Sociality</source>, <volume>6</volume>(<issue>2</issue>). <pub-id pub-id-type="doi">10.7146/si.v6i2.134841</pub-id>
+</mixed-citation></ref><ref id="bjso70029-bib-0100"><mixed-citation publication-type="journal" id="bjso70029-cit-0100">
+<string-name name-style="western">
+<surname>Wiggins</surname>, <given-names>S.</given-names>
+</string-name>, &amp; <string-name name-style="western">
+<surname>Keevallik</surname>, <given-names>L.</given-names>
+</string-name> (in press). <article-title>Disgust at the table: The sequential location and production of young children's food disgust expressions in the home and preschool</article-title>. <source>Research on Children and Social Interactions</source>.</mixed-citation></ref><ref id="bjso70029-bib-0101"><mixed-citation publication-type="journal" id="bjso70029-cit-0101">
+<string-name name-style="western">
+<surname>Wiggins</surname>, <given-names>S.</given-names>
+</string-name>, &amp; <string-name name-style="western">
+<surname>Potter</surname>, <given-names>J.</given-names>
+</string-name> (<year>2003</year>). <article-title>Attitudes and evaluative practices: Category vs. item and subjective vs. objective constructions in everyday food assessments</article-title>. <source>British Journal of Social Psychology</source>, <volume>42</volume>(<issue>4</issue>), <fpage>513</fpage>–<lpage>531</lpage>. <pub-id pub-id-type="doi">10.1348/014466603322595257</pub-id>
+<pub-id pub-id-type="pmid">14715115</pub-id>
+</mixed-citation></ref><ref id="bjso70029-bib-0102"><mixed-citation publication-type="journal" id="bjso70029-cit-0102">
+<string-name name-style="western">
+<surname>Wiggins</surname>, <given-names>S.</given-names>
+</string-name>, <string-name name-style="western">
+<surname>Willemsen</surname>, <given-names>A.</given-names>
+</string-name>, &amp; <string-name name-style="western">
+<surname>Cromdal</surname>, <given-names>J.</given-names>
+</string-name> (<year>2024</year>). <article-title>Eating prickly peas: Sharing play worlds during preschool meals</article-title>. <source>International Journal of Early Childhood</source>, <volume>56</volume>(<issue>3</issue>), <fpage>479</fpage>–<lpage>496</lpage>. <pub-id pub-id-type="doi">10.1007/s13158-023-00380-z</pub-id>
+</mixed-citation></ref><ref id="bjso70029-bib-0103"><mixed-citation publication-type="journal" id="bjso70029-cit-0103">
+<string-name name-style="western">
+<surname>Zayts</surname>, <given-names>O.</given-names>
+</string-name>, &amp; <string-name name-style="western">
+<surname>Schnurr</surname>, <given-names>S.</given-names>
+</string-name> (<year>2011</year>). <article-title>Laughter as medical providers' resource: Negotiating informed choice in prenatal genetic counseling</article-title>. <source>Research on Language and Social Interaction</source>, <volume>44</volume>(<issue>1</issue>), <fpage>1</fpage>–<lpage>20</lpage>. <pub-id pub-id-type="doi">10.1080/08351813.2011.544221</pub-id>
+</mixed-citation></ref></ref-list></back></article>

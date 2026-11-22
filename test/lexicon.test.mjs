@@ -32,11 +32,15 @@ const emptyDims = L.DIM_KEYS.filter((dk) => L.DIM_TO_KEYS[dk].length === 0)
 ok(emptyDims.length === 0, '每个维度都至少挂了一个底色词', emptyDims.join(','))
 
 // —— 不能一个词挂两个维度 ——
+// 2026-11-21：原来遍历对象的键去查重——对象的键本来就不会重复，这条永远绿，等于没测。
+// 真该查的是「同一张词各维底色调色板里出现了几次」：一个词挂到两个维度，才是地基出错。
 const dupes = []
-const seen = new Set()
-for (const [k] of Object.entries(L.KEY_TO_DIM)) {
-  if (seen.has(k)) dupes.push(k)
-  seen.add(k)
+{
+  const seen = new Map()
+  for (const dk of L.DIM_KEYS) {
+    for (const k of (L.DIM_TO_KEYS[dk] || [])) seen.set(k, (seen.get(k) || 0) + 1)
+  }
+  for (const [k, n] of seen) if (n > 1) dupes.push(k + '×' + n)
 }
 ok(dupes.length === 0, '没有词被挂到两个维度', dupes.join(','))
 

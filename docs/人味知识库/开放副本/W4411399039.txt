@@ -1,0 +1,770 @@
+I J A Z  A R A B I :  J o u r n a l  o f  A r a b i c  L e a r n i n g 
+D O I :  10.18860 /ijazarabi. V8i2.26630 
+I S S N ( p r i n t ) :  2 6 2 0 - 5 9 1 2  | I S S N ( o n l i n e ) : 2 6 2 0 - 5 9 4 7 
+e j o u r n a l . u i n - m a l a n g . a c . i d / i n d e x . p h p / i j a z a r a b i / i n d e x  | 1043 
+ 
+Vol. 8 No. 2 / June 2025  
+ 
+Copyright © 2024, This is an open access article under the CC BY-SA 4.0 license 
+(https://creativecommons.org/licenses/by-sa/4.0/) 
+ 
+Dispreferred Responses in Arabic Political TV Programmes 
+ 
+     Hakim Rosly1, Abdulrahman Alfahad*2 
+1,2Arabic Department/College of Humanities and Social Sciences, King Saud University 
+hakimrosly@gmail.com, abalfahad@ksu.edu.sa                      
+ 
+Abstract 
+Previous studies in Conversation Analysis (CA) have argued that the duration and 
+structure of preferred responses differ from that of dispreferred responding actions, as the 
+former is delivered more rapidly. Agreement responses, for instance, occur relatively 
+quickly and take a simple form. In contrast, disagreement responses are characteristically 
+delayed through audible breathing, silence, prefaced hesitations, appreciations, apologies, 
+or justifications. Nevertheless, the paper focuses on a specific interactional environment 
+where dispreferred responses are expressed directly and rapidly. It selects from a wealth 
+of data, consisting of 12 recorded and transcribed Arabic TV programs drawn from 4 
+different Arabic broadcast channels. Our result shows that disagreement responses tend 
+to be expressed explicitly and aggravatedly without alleviation or delay. The overall 
+difference in time is insignificant and is therefore unaligned with the fundamental insight 
+of preference organization in CA. The results can also be extended to understanding 
+Arabic interactions, where agreement or disagreement may occur, such as in Arabic 
+language classes, where students are expected to interact in Arabic. 
+Keywords: Analysis; Conversation; Dispreferred Actions; Disagreement; Preference; 
+Arabic TV; Politics. 
+ 
+INTRODUCTION 
+The notion of preference organization in CA considers disagreements, rejections, 
+and denials to be dispreferred actions, which are frequently delayed, hesitatingly 
+expressed, prefaced by partial agreement, appreciation, or apology, and/or softened 
+through mitigating devices (Pomerantz, 1984; Levinson, 1983; Schegloff, 2007). 
+Moreover, in classical studies, disagreement is considered one of the kinds of Face-
+Threatening Acts (FTA) that are largely destructive of social solidarity (Heritage, 1984). 
+This view of disagreement as an FTA and a dispreferred action is commonly held 
+by specialists in human communications (Brown and Levinson, 1987; Pomerantz, 1984). 
+Nonetheless, in certain contexts disagreement may not have the common features 
+described in the previous studies. The purpose of interaction, and specific topics in some 
+political and religious contexts, might challenge the common generalization regarding the 
+maximization of opportunities for constructive actions and the minimization of 
+destructive ones. Speakers have many communicative strategies for expressing their 
+views, such as increasing the use of interruptions and employing direct and aggravated 
+disagreements (Kotthoff, 1993). Preference organization has been examined in several 
+studies within a number of cultures and contexts, and this concept needs to be introduced 
+before we present our data, discussion and findings concerning disagreements in Arabic 
+political interactions.  
+The concept is essential in CA studies, which goes back to the early works of 
+Sacks and his colleagues (1973; 1974). Preference organization is a characteristic of turn 
+I J A Z  A R A B I :  J o u r n a l  o f  A r a b i c  L e a r n i n g 
+D O I :  10.18860 /ijazarabi. V8i2.26630 
+I S S N ( p r i n t ) :  2 6 2 0 - 5 9 1 2  | I S S N ( o n l i n e ) : 2 6 2 0 - 5 9 4 7 
+e j o u r n a l . u i n - m a l a n g . a c . i d / i n d e x . p h p / i j a z a r a b i / i n d e x  | 1044 
+ 
+Vol. 8 No. 2 / June 2025  
+ 
+Copyright © 2024, This is an open access article under the CC BY-SA 4.0 license 
+(https://creativecommons.org/licenses/by-sa/4.0/) 
+design, action organization and sequential organization of turn, with these actions being 
+termed ‘adjacency pairs’. Some basic types of adjacency pairs are: question-answer, 
+greeting-greeting, assessment-agreement and request-acceptance. The first turn of the two 
+is called the First Pair Part (FPP), while the second one is called the Second Pair Part 
+(SPP), with the latter often being divided into preferred and dispreferred social acts. The 
+preferred social action is expected to be the next action, while the dispreferred action is 
+an unexpected next action. When someone is invited by a friend to join certain activities, 
+the responding action could be acceptance or refusal. Similarly, other speech acts like 
+offers, requests, expressions of blame, compliments, suggestions and apologies may be 
+followed by acceptance or decline (Levinson, 1983; Paltridge, 2012). If a speaker claims 
+knowledge of that which he or she is assessing, the second part of the assessment will be 
+either immediate agreement or slow disagreement (Pomerantz and Heritage, 2012). 
+A number of researchers have identified a specific characteristic of preferred and 
+dispreferred responses. Preferred responses are produced significantly more quickly with 
+positive assessment, and are expressed without a gap. On the contrary, dispreferred 
+responses display the following types of reactions that delay the production of the relevant 
+response: Gaps, silence, prefatory particles such as ‘well’ or ‘uh’ and in-breaths. 
+Additionally, these may be prefaced by hesitations, hedging devices, partial agreements, 
+apologies, initial expressions of appreciations, requests for clarification, the use of a 
+‘yes...but’ clause, repair initiators, the introduction of side sequences instead of 
+disagreement, evasive statements, explanations, self-criticism and the inclusion of 
+beginnings such as ‘I don't think’ (Atkinson and Drew, 1979; Davidson, 1984; Heritage, 
+1984; Levinson, 1983; Pomerantz, 1984; Schegloff, 2007, Hutchby and Wooffitt, 2008). 
+Nevertheless, Pomerantz (1984) mentioned some cases where disagreements are 
+deployed quickly, such as compliment or accusation situations, as responses employed to 
+minimize self-praise or to deny guilt. This, however, is not the whole story, as preference 
+needs to be examined within the context of the interaction, as this may have an effect on 
+preference organization.  
+Based on Brown and Levinson’s (1987) notion of politeness, disagreement is an 
+FTA that needs to be redressed. Disagreement is perceived as an intrinsically dispreferred 
+activity that affects the involvement and solidarity between the speaker and the hearer 
+(Goffman, 2005; Leech, 2007; Wierzbicka, 1991). Unlike agreement, several researchers 
+see disagreement as a complex speech act, and it has been investigated within the 
+framework of several disciplines, like social psychological pragmatics (Muntigl and 
+Turnbull, 1998), conversation analysis (Kotthoff, 1993; Sacks, 1987) and discourse 
+analysis (Kakava, 2002; Schiffrin, 1984). Because of this high complexity “we may thus 
+talk of degrees of constructive or destructive disagreement in context rather than of 
+specifically face-threatening acts” (Sifianou, 2012: 1560). 
+The complexity of disagreements can be clarified if we take into consideration 
+interactional goals and other circumstances. Disagreement can be a face-enhancing 
+function that indicates the speaker’s interest, by virtue of its being an act of engagement 
+with the interaction, as opposed to showing indifference through the use of immediate 
+agreements or even being silent (Sifianou, 2012). The speaker may also disagree in order 
+to achieve his or her goal of becoming a skillful debater who is engaging in an intellectual 
+discussion (Hernandez-Flores, 2008). In problem-solving groups, conflicting reactions 
+increase micro-creativity by stimulating attention and group members’ ability to develop 
+their views from more perspectives (Chiu, 2008). Disagreements in these circumstances, 
+I J A Z  A R A B I :  J o u r n a l  o f  A r a b i c  L e a r n i n g 
+D O I :  10.18860 /ijazarabi. V8i2.26630 
+I S S N ( p r i n t ) :  2 6 2 0 - 5 9 1 2  | I S S N ( o n l i n e ) : 2 6 2 0 - 5 9 4 7 
+e j o u r n a l . u i n - m a l a n g . a c . i d / i n d e x . p h p / i j a z a r a b i / i n d e x  | 1045 
+ 
+Vol. 8 No. 2 / June 2025  
+ 
+Copyright © 2024, This is an open access article under the CC BY-SA 4.0 license 
+(https://creativecommons.org/licenses/by-sa/4.0/) 
+hence, become proper responses and “the production of disagreements is intimately 
+linked with a process of negotiation, opinion expressing and debate” (Georgakopoulu, 
+2001: 1898). According to some cultural views, disagreement in modern Greek culture 
+constitutes a social practice that is pervasive, preferred and allowed (Kakava, 2002). The 
+pervasiveness of argument in Jewish American society is common; it is a sign of intimacy 
+and does not ruin social cooperation (Schiffrin, 1984). In comparative observation 
+between Australian and North American cultures, Renwick (1980) found that Australians 
+are more accustomed to conflict and disagreement than North Americans. 
+Apart from cultural elements, relational histories, personal traits, speakers’ beliefs 
+and topics under discussion might lead to the emergence of disagreement in conversation 
+(Locher, 2004; Schiffrin, 1984; Sifianou, 2012). The interactional context in televised 
+programmes, characterized by controversial topics, different interactional goals, social 
+distance and relationships between speakers, seems to affect the practice and preference 
+of turn-taking in conversations (Zhu, 2019). The topics of debate and goals of interaction 
+influence interactants’ choice of communicative strategies, syntactic arrangement and 
+lexical items (Migdadi et. al, 2013). By analyzing a corpus of recordings of British 
+television and radio interviews which were broadcast between 1978 and 1985, Greatbatch 
+(1992) argued that the news interview turn-taking system has a pervasive influence over 
+the management of disagreements between interviewees. They rarely alleviate their 
+disagreements, and in his words: “... they pursue and frequently intensify their disputes 
+by moving out of their institutionalized footings and entering into direct, unmediated 
+disagreement” (p. 297). 
+In some contexts, maintaining disagreement is an interactional necessity in order 
+to preserve one’s positive face, and overt disputation and disagreement preference are 
+expected in debates (Patrona, 2006). TV discourse is one kind of institutionalized settings 
+influenced by these features: exaggeration, aggressiveness, repetition, implicature, 
+intertextuality, agonistic ability and metaphor (Chilton, 2004; Kenzhekanova, 2015; 
+Partington, 2003, Honda, 2002). These main characteristics are on constant display in 
+political TV shows, which makes these shows very interesting platforms for researchers 
+to explore a wealth of resources pertaining to various disagreement structures. The effect 
+of political topics, in particular, might challenge the position of agreement as a preferred 
+act. In controversial situations, such as news interviews with government leaders and 
+discussions of political topics with invited TV guests, disagreement and denial are more 
+likely to be preferred than agreement is. The level of aggressiveness, and the use of a 
+direct and unmitigated fashion of disagreement, are obviously preferred to maintaining 
+harmony among speakers (Clayman et. al, 2007, Clayman, 2022; Greatbatch, 1992; 
+Lerch, 2005). The issue of preference has been further discussed quantitatively in some 
+recent studies, which helps to show a wider picture of the issue. 
+Some of the statistical results are in alignment with long-standing research in CA, 
+which asserts that agreement actions are preferred over disagreement actions. Raymond 
+(2003) studied 325 instances of agreement-disagreement in terms of yes-no responses 
+within ten large corpora of naturally occurring British and American conversations. He 
+argued that the grammatical structure of yes-no questions embodies a preference for yes-
+responses. In other words, type-conforming responses are much more common than non-
+conforming responses. Raymond found that around 243 samples were type-conforming 
+answers, whereas merely 82 were nonconforming. By the same token,  El-Zouka  (2006) 
+investigated British and American TV conversations and found that the total number of 
+I J A Z  A R A B I :  J o u r n a l  o f  A r a b i c  L e a r n i n g 
+D O I :  10.18860 /ijazarabi. V8i2.26630 
+I S S N ( p r i n t ) :  2 6 2 0 - 5 9 1 2  | I S S N ( o n l i n e ) : 2 6 2 0 - 5 9 4 7 
+e j o u r n a l . u i n - m a l a n g . a c . i d / i n d e x . p h p / i j a z a r a b i / i n d e x  | 1046 
+ 
+Vol. 8 No. 2 / June 2025  
+ 
+Copyright © 2024, This is an open access article under the CC BY-SA 4.0 license 
+(https://creativecommons.org/licenses/by-sa/4.0/) 
+agreements concerning various economic, social and political issues exceeded that of 
+disagreements. The former appeared 402 times, while the latter appeared only 180 times. 
+Concannon et al. (2015) confirm the politeness hypothesis and the preference for 
+contiguity, finding that the percentage of agreement cases exceeded the percentage of 
+disagreement cases, and that the timing of disagreement responses was slower than that 
+of its counterpart. 
+With respect to the speed of agreement and disagreement responses, Rendle-Short 
+(2015) analyzed 329 mobile texting interactions, concluding that agreements were 
+preferred to be sent quickly, while rejection or disagreement responses were delayed. This 
+study showed that “31.7% of preferred responses were sent within 1 minute or less 
+compared to 9.8% dispreferred responses” (2015: 11). In other findings, by selecting a 
+larger corpus of 20 hours of videotapes of interactions between native English adults and 
+close friends, Robinson (2020) revealed that direct or simple disagreement answers (29%) 
+were not significantly less frequent than direct agreement answers (34%), yet direct 
+disagreement answers were delayed for a significantly longer time. Stivers et. al (2009: 
+10588) used a worldwide sample of ten languages drawn from traditional indigenous 
+communities as well as major world languages to examine confirmations, which are a 
+part of agreement responses. According to their results, confirmations were more 
+common than disconfirmations, with confirmation or agreement responses making up 
+70% to 89% of total responses. A majority of the languages tested, as argued in this study, 
+provided clear evidence for agreement preference: “confirmations are delivered faster 
+than disconfirmations in all languages, between 100 and 500 ms faster on average”. In a 
+similar vein, Stiver’s study (2010) has documented that responses in terms of providing 
+confirmation or a type-conforming answer such as agreement were more frequent. On the 
+other hand, a few researchers have revealed contrary results in some different contexts. 
+Lerch (2005) found in a quantitative study that disagreements were preferred in the case 
+of verbal conflicts. Kendrick and Torreira (2015) examined this issue in telephone 
+corpora, and found that the timing between preferred and dispreferred responses mostly 
+did not show any strong evidence that speakers delay dispreferred actions. 
+ The results from both sides show that this topic needs to be examined further, 
+especially in different contexts and cultures, as these might affect the systematics of 
+preference organization. There are still only a very few indirect studies that have been 
+conducted to examine disagreement in Arabic TV settings. Al-Ahmad and Wardat (2010) 
+carried out a study with the aim of analyzing disagreement strategies in selected Arabic 
+TV programmes, finding four types of disagreement that were identical to those presented 
+by the study of Muntigl and Turnbull (1998), namely: contradiction, challenge, 
+irrelevancy claim and counter-claim. Two other types of disagreement were also revealed, 
+which are: insulting expressions and religious expressions. In the study of Migdadi et al. 
+(2013), they concentrate on argumentative strategies in highly adversarial Arabic talk 
+shows like ‘The Opposite Direction’. Uncompromised disagreement was commonly 
+realized using several strategies, such as aggravated impoliteness, negative structure and 
+sarcastic questions. This study serves as an example of how opposition in controversial 
+discourse can be a preferred activity. Dealing with the same genre, Al-Dilaimy and Khalaf 
+(2014) studied opposition strategies employed by Arabic speakers, and concluded that 
+aggravation and directness were sanctioned in the TV discussions they studied. Impolite 
+interruptions were produced very frequently to show disagreement of views.  
+I J A Z  A R A B I :  J o u r n a l  o f  A r a b i c  L e a r n i n g 
+D O I :  10.18860 /ijazarabi. V8i2.26630 
+I S S N ( p r i n t ) :  2 6 2 0 - 5 9 1 2  | I S S N ( o n l i n e ) : 2 6 2 0 - 5 9 4 7 
+e j o u r n a l . u i n - m a l a n g . a c . i d / i n d e x . p h p / i j a z a r a b i / i n d e x  | 1047 
+ 
+Vol. 8 No. 2 / June 2025  
+ 
+Copyright © 2024, This is an open access article under the CC BY-SA 4.0 license 
+(https://creativecommons.org/licenses/by-sa/4.0/) 
+These Arabic studies dealt with different perspectives. Most of them have focused 
+on the strategies of assertiveness and disagreements using qualitative methods, while 
+analysis of agreement and disagreement actions using statistical comparisons in order to 
+prove which of these types is preferred is still scant in the literature. As stated earlier, 
+researchers have paid more attention to preference organization in English, and the 
+current article therefore attempts to fill the gap by examining this issue in a different 
+cultural context. The dataset, the selected Arabic TV programmes and their durations, as 
+well as the method we employ, are all explained in detail in the following section.    
+ 
+METHOD 
+The data contains a collection of 12 Arabic recorded TV programmes, selected 
+from 4 popular Arabic TV shows, namely Ḥadīth Al-Sā’ah (BBC Arabic), Nīrān Ṣadīqah 
+(Skynews Arabic), Ḥiwār Al-‘Arab (Al-Arabiyya) and Al-Niqāsh (France 24 Arabic). The 
+selected data comprise approximately 8hr and 46min of conversation, and were 
+transcribed according to the main transcript symbols developed by Jefferson (2004). 
+Transcribed Arabic conversations with English translations are provided in each excerpt 
+in our following analysis and discussion. The programmes chosen for the analysis were 
+broadcast from to 2011 to 2018, and dealt with political topics, mostly in Middle East 
+countries, including: Iraq, Libya, Iran, Syria, Egypt, Sudan, Palestine, Yemen and Gulf 
+states. The discussed topics touched upon controversial political issues, such as the Arab 
+Spring, street demonstrations, conflict between tribal-political parties, war between 
+governments, armed rebellions and democratic or military solutions for post-war 
+countries. All recorded versions with fully-indexed titles of discussions were retrieved 
+from the Arabic channels’ and YouTube websites. Although these programmes contain 
+discussions of controversial political topics, making them appropriate for describing 
+diverse responses of disagreements, we avoid programmes that have a hostile style which 
+encourages disagreements, such as ‘The Opposite Direction’ show. The nature of the 
+programmes we have selected tends to facilitate discussions and the expression of 
+different opinions by a number of guests.  
+The analysis of the data focuses on the description of direct, aggravated and 
+undelayed disagreement employed by Arabic speakers. Instances of language patterns 
+pertaining to disagreement in term of lexical and sentence construction will be presented 
+and analyzed, and then combined with a comparison of statistical findings to strengthen 
+the reliability of the results. To classify the responses, a basic response of disagreement 
+is “No” or other direct replies such as “I do not agree”, whereas agreement response can 
+be easily detected with a speaker’s answer using “Yes” or “I agree”. We also investigate 
+the disagreement and agreement responses carefully by making use of the framework 
+suggested by previous studies, i.e. (Blum-Kulka et al., 2002; Brown and Levinson, 1987; 
+Kuo, 1994; LoCastro, 1986; Muntigl and Turnbull, 1998; Pomerantz, 1984; Rees-Miller, 
+2000). Some agreement strategies, therefore, apart from “Yes” or “I agree”, are partial or 
+complete repetition of a prior utterance, elliptical expressions, appreciation of assessment 
+and stating of belief. For disagreement strategies, some of these are emphatic 
+contradictions, rhetorical questions, irrelevancy claims, counter claims, sarcasm and 
+negative remarks. 
+After considering these linguistic patterns, our research centers on analyzing the 
+linguistic features of agreement and disagreement, as well as the relative timing of 
+responses, as supportive proof of undelayed disagreements. All quick disagreement 
+I J A Z  A R A B I :  J o u r n a l  o f  A r a b i c  L e a r n i n g 
+D O I :  10.18860 /ijazarabi. V8i2.26630 
+I S S N ( p r i n t ) :  2 6 2 0 - 5 9 1 2  | I S S N ( o n l i n e ) : 2 6 2 0 - 5 9 4 7 
+e j o u r n a l . u i n - m a l a n g . a c . i d / i n d e x . p h p / i j a z a r a b i / i n d e x  | 1048 
+ 
+Vol. 8 No. 2 / June 2025  
+ 
+Copyright © 2024, This is an open access article under the CC BY-SA 4.0 license 
+(https://creativecommons.org/licenses/by-sa/4.0/) 
+responses selected in the present data were measured utilizing an online video editor 
+(ytcutter.com). Through this application, the time interval can be slowed down and 
+calculated in milliseconds for the response made by the speaker. Facial expressions like 
+eye or head movements are not taken into consideration. 
+ 
+RESULTS AND DISCUSSION 
+Before presenting some specific results of agreement/disagreement responses, the 
+general frequency of their occurrence is shown in Table 1. After calculating a variety of 
+turn formats, including single lexical items (e.g. ok, yes, no), positive/negative 
+assessments (e.g. I agree, we don’t agree, your word is not precise) and more complicated 
+sentences (e.g. sarcastic sentence, rhetorical questions), the result shows that there were 
+962 agreement responses used and repeated by Arab TV interactants, equal to 51.6%, 
+whereas disagreement responses were 902 (48.3%), as shown in the following table: 
+Table 1. Overall Result Of Agreement And Disagreement Responses 
+Response Types Frequency Percentage 
+Agreement responses 962 51.6% 
+Disagreement responses 902 48.3% 
+Total 1864 100% 
+The overall result of the 8h 46 min of conversations in selected Arabic TV talks 
+showed that comparison of the frequency of agreement and disagreement responses did 
+not reach statistical significance: agreement responses were slightly more common than 
+disagreement responses. 
+ 
+Aggravation  
+Similarly, a specific comparison between aggravated agreement and disagreement 
+responses also showed a close result. Both of these responding actions were undelayed 
+and expressed directly, as well as being emphasized with intensifying devices and certain 
+linguistic structures. Examples of these actions include intensifiers (eg, absolutely, 
+indeed) and the use of statements to challenge or mock other guests’ responses (e.g. I 
+challenge if .../ The person with his dignity says something like this, this is sad). The 
+following extract shows an example from our data where aggravated agreement occurs: 
+Excerpt 1 Ḥadīth Al-Sā’ah, BBC Arabic, 3/9/2015, Host: Hilal Makki, Guest: AbdalBari 
+Atwan 
+1     G Wa hunāka faṣāil Filiṣṭīniyyah haqīqiyyah tuqātil ‘ala al-ardh mathalan 
+1 There are real Palestinian factions fighting on the ground for example 
+2     H  Ghayru mumaththilah fī Al-Majlis 
+2 Not represented on the council 
+3 G    Ghayru mumaththilah fī Al-Majlis ‘ala al-iṭlāq 
+3 Not represented on the council absolutely  
+Excerpt 1 show that the agreement made by the Guest in line (3) towards the 
+previous statement is clear and emphasized by the following aspects: repetition of the 
+statement with high intonation and use of an intensifier (‘ala al-iṭlāq/absolutely).  
+Likewise, disagreements could be aggravated through the use of a variety of 
+linguistic devices. The following extract shows how the second guest used a challenging 
+statement for this purpose. 
+ 
+I J A Z  A R A B I :  J o u r n a l  o f  A r a b i c  L e a r n i n g 
+D O I :  10.18860 /ijazarabi. V8i2.26630 
+I S S N ( p r i n t ) :  2 6 2 0 - 5 9 1 2  | I S S N ( o n l i n e ) : 2 6 2 0 - 5 9 4 7 
+e j o u r n a l . u i n - m a l a n g . a c . i d / i n d e x . p h p / i j a z a r a b i / i n d e x  | 1049 
+ 
+Vol. 8 No. 2 / June 2025  
+ 
+Copyright © 2024, This is an open access article under the CC BY-SA 4.0 license 
+(https://creativecommons.org/licenses/by-sa/4.0/) 
+Excerpt 2   Al-Niqāsh, France24 Arabic, 24/7/2017, Guest 1: Nuah Al-Bijari, Guest 2: 
+Majid Shankali 
+1 G1… Min ghayri ma’qūl nushabbih Al-Quwwāt Al-Amrīkiyyah  
+1      … It’s unreasonable to analogize the American forces  
+2       bi Al-Quwwāt Al- ‘Irāqiyyah 
+2       with the Iraqi forces 
+3 G2  Awwalan anā mā shabbahtu ataḥaddā idzā kānat hunāk 
+3      Firstly I didn’t make an analogy I challenge if there is 
+4      ḥarb nadzīfah fī  kulli tārīkh idzā ra’ayti lī al-ḥarb nadzīfah  
+4      a clean war in the entire history if you show me the war that is 
+5      mi’ah bi Al-mi’ah anā asḥab kalāmī  
+5      one hundred percent clean I withdraw my words 
+ In this dialogue, Guest 2 responded to the previous criticism concerning an 
+analogy he had made between the American and Iraqi forces, both of which had 
+committed military violence during the war. His disagreement started by using negated 
+phrase (anā mā shabbahtu/I didn’t make an analogy), and it then was emphasized by a 
+long conditional challenging statement (I challenge if there is ...). Challenges are among 
+the upgraded disagreement strategies that are commonly used in conversation, where one 
+speaker demands that supporting evidence be provided for the other speaker’s claim 
+(Muntigl and Turnbull, 1998). The second guest then did not only express disagreement 
+with the other guest’s statement, but went further to show that the latter’s statement cannot 
+be true by challenging him to provide evidence. 
+Table 2. Aggravated Agreement And Disagreement Responses 
+Response Types Frequency Percentage 
+Aggravated agreements 253 26.2% 
+Aggravated disagreements 269 29.2% 
+The frequency of aggravated disagreements in our study is somewhat higher than 
+that of aggravated agreements (29.2%/26.2%). By comparing the aforementioned general 
+result (Table 1) with slightly high proportion of aggravated disagreement as shown by 
+Table 2, it can be concluded that the preference for disagreements and agreements is 
+somehow similar from this perspective.   
+ 
+Explicitness  
+More interestingly though, another specific comparison that we made between 
+agreements and disagreements is explicitness, and this revealed significant disparity. 
+Explicit agreements and disagreements refer to any direct and clear response that 
+indicates interactants’ acceptance or rejection of a prior utterance. We identified a number 
+of explicit types of agreement and disagreement actions used by Arabic guests. In any 
+language, the main linguistic patterns of explicit agreement and disagreement can be 
+identified from interactants’ use of lexical items and structures such as “Yes/yeah/no”, 
+“It’s true/this is wrong”, “I agree/disagree with you”, “I’m with you” etc. Simple 
+agreement response in our Arabic data was uttered in various dialects with words such as 
+“Aywah”, “Ī”, “Īh” and “Ṣaḥ”. On the other hand, the disagreement expressions used by 
+Arab guests were more various, including standard and colloquial Arabic Language; to 
+mention some of them: “lā” (no), “mush/mish/mā/mū” (not), “ghalaṭ” (wrong), “laysa 
+ṣaḥīḥan” (not true), “ghayr daqīq” (not precise), “ghayr ṣaḥīḥ” (not true), “bi al-’aks/  
+‘alā al-‘aks” (it’s the opposite), “mā nattafiq shay’ ma’ak” (we do not agree with you at 
+I J A Z  A R A B I :  J o u r n a l  o f  A r a b i c  L e a r n i n g 
+D O I :  10.18860 /ijazarabi. V8i2.26630 
+I S S N ( p r i n t ) :  2 6 2 0 - 5 9 1 2  | I S S N ( o n l i n e ) : 2 6 2 0 - 5 9 4 7 
+e j o u r n a l . u i n - m a l a n g . a c . i d / i n d e x . p h p / i j a z a r a b i / i n d e x  | 1050 
+ 
+Vol. 8 No. 2 / June 2025  
+ 
+Copyright © 2024, This is an open access article under the CC BY-SA 4.0 license 
+(https://creativecommons.org/licenses/by-sa/4.0/) 
+all), “naḥnu mukhtalifīn/niḥna ghayr muttafiqīn” (we disagree), “akhtalif ma’ak” (I 
+disagree with you).    
+The following two excerpts show some of the explicit agreement and 
+disagreement responses found in our data: excerpt 3 Al-Niqāsh, France24 Arabic, 
+4/10/2016, Guest 1: Salihah Shatiwi, Guest 2: Zaynah Al-Imrani 
+1  G1 Hujjirat madīnah kāmilah hujjirat Tawirgha’ madīnah kāmilah 
+1 An entire city was abandoned, Tawergha was abandoned, an entire city 
+2  G2 Attafiq ma’ak 
+2 I agree with you 
+Excerpt 3 relates to the effect of the war in Libya where the entire city of Tawergha 
+was abandoned. Guest 2 directly agreed with the other guest’s claim by using a very clear 
+agreement sentence in line 2 (Attafiq ma’ak/I agree with you). Likewise, an explicit 
+disagreement response expressed by Arab TV guests can be seen in Excerpt 4: 
+Excerpt 4 Nīrān Ṣadīqah, Skynews Arabic, 9/2/2016, Host 1: Abdulaziz Al-
+Khamis, Host 2: Fawwaz Jarjis 
+1  H1 Iẓan lāzim tufa’il al-muṣālaḥah bihayth tatakhallā ‘an asbāb al-azmah 
+1 Then you must activate reconciliation to eliminate the causes of the crisis 
+2  H2   ‘Abd Al-‘Azīz ‘Abd Al-‘Azīz mush muṣālaḥah  
+2 Abdulaziz Abdulaziz not reconciliation 
+3  H1 Lā lā 
+3 No no 
+In response to Guest 1’s prior statement (then you must activate reconciliation...), 
+Guest 2 disagrees instantly, using a negative particle in the colloquial Arabic form 
+(Mush/Not). Guest 1 keeps maintaining his oppositional stance by using the short 
+negative particle (Lā/No). The disagreements uttered by both interactants are direct and 
+produced without justification, and the reaction is considered to be an example of explicit 
+and straightforward rejection. 
+As indicated in Table 3, the proportion of explicit disagreements is significantly 
+greater than that of its counterpart: 
+Table 3. Explicit Agreement And Disagreement Responses 
+Response Types Frequency Percentage 
+Explicit agreements 122 12.6% 
+Explicit disagreements 386 42.7% 
+As shown in Table 3, the frequency of the occurrence of explicit disagreements is 
+386 times (42.7%), whereas explicit agreements occur only 122 times (12.6%). Regarding 
+this significant result with regard to explicit agreement and disagreement responses, one 
+might wonder about the reasons behind the large percentage of explicit disagreements. 
+The main possible explanation is that, in political TV shows that include controversial 
+topics and various opposing and competitive parties, guests might be under pressure from 
+their supporters and parties to display a clear stance and explicit disagreements with their 
+opponents. Not showing an agreement in this context might be more tolerable than letting 
+misinformation pass without a clear objection. This is in line with several studies which 
+show that direct disagreements and aggressiveness are more common in this kind of 
+interaction than are attempts to maintain closeness among speakers (Clayman et. al, 2007; 
+Greatbatch, 1992; Lerch, 2005). 
+ 
+ 
+I J A Z  A R A B I :  J o u r n a l  o f  A r a b i c  L e a r n i n g 
+D O I :  10.18860 /ijazarabi. V8i2.26630 
+I S S N ( p r i n t ) :  2 6 2 0 - 5 9 1 2  | I S S N ( o n l i n e ) : 2 6 2 0 - 5 9 4 7 
+e j o u r n a l . u i n - m a l a n g . a c . i d / i n d e x . p h p / i j a z a r a b i / i n d e x  | 1051 
+ 
+Vol. 8 No. 2 / June 2025  
+ 
+Copyright © 2024, This is an open access article under the CC BY-SA 4.0 license 
+(https://creativecommons.org/licenses/by-sa/4.0/) 
+Timing  
+Another aspect of looking at preference is to investigate how quickly these 
+agreement and disagreement responses are delivered. There are abundant samples of 
+undelayed responses in our dataset, the average time of which needs to be determined in 
+order to verify the fundamental insight of agreement inclination in human interaction, 
+which is commonly examined in CA literature. The following two excerpts are discussed 
+with the aim of verifying that disagreement responses, regardless of their direct or 
+upgraded forms, were employed by Arab interlocutors in a rapid manner. This is similar 
+to agreement responses or other face-saving acts, which tend to be expressed with no 
+hesitation.  
+Excerpt 5 Nīrān Ṣadīqah, Skynews Arabic, 9/2/2016, Guest 1: Ghassan Ibrahim, 
+Guest 2: Haytham Al-Sabahi 
+1   G1 Al-hal huwa haqīqatan an ya’tī shurafā’ Sūriyyūn min kulli al-aṭrāf 
+1 The solution is actually that honorable Syrians have to come from all sides 
+2 yaqulu da’ūnā nuzīl kull al-‘aqabāt 
+2 and say let’s remove all obstacles 
+3   G2 (0.2) Bimusā’adat Al-Wilāyāt Al-Muttaḥidah Al-Amrīkiyyah 
+3  (0.2) With the help of the United States of America 
+4   G1  (0.3) Lā lā bi al-musā’adat lā bi al-musā’adat lā Turkiyā wa lā Rūsiā  
+4 (0.3) No not with the help not with the help no Turkey no Russia  
+5 wa lā Amrīkā bi musā’adat bi musā’adat Al-Sūriyyīn 
+5 and no America with the help with the Syrian help 
+ This excerpt is part of a discussion about finding a solution to stop the war in 
+Syria. In response to G2’s prior statement in (line 3) “with the help of the United States 
+of America”, G1 disagrees in an instant (line 4) after approximately 300 milliseconds 
+(ms) by using the negative particle (no) several times to reject G2’s statement. The 
+disagreement produced is fast, direct and without justification. No intensifiers are used 
+except the particle “no”, which indicates that this reaction should be considered a 
+straightforward negative assessment.  
+The following excerpt shows one of the fastest disagreements produced in our 
+data, which was 100 ms. Excerpt (6), shown below, demonstrates how the interactants 
+produce explicit, fast and upgraded disagreements. Despite the fact that one of the 
+interactants uses a longer statement to express his opinion, a quick rejection phrase still 
+can be detected at the beginning of the following speaker’s turn, which using a strong, 
+repeated and rapid disagreement without providing a justification.  
+Excerpt 6  Nīrān Ṣadīqah, Skynews Arabic, 9/2/2016, Host 1: Fawwaz Jarjis,  
+Host 2: Abdulaziz Al-Khamis, Guest 1: Haytham Al-Sabahi. 
+1  H1 ...Anna al-ḍaghṭ Al-Amrīkī sawfa yu’addī ilā waḥdah al-dākhil Al-Īrānī  
+1 ...The American pressure will lead to the unity of the Iranian interior 
+2 wa waḥdah al-nukhbah wa bi al-fi’l- 
+2 and the unity of the Iranian elite and indeed 
+3  H2 (0.1) - Lā lā lā 
+3 (0.1) - No no no 
+4  H1 anā ashhad fi al-asābī’ al-akhīrah anna al-nukhbah Al- Īrāniyyah  
+4 I witness in recent weeks that the Iranian elite has  
+5 badaʾat tatawaḥḥad 
+5 begun to unite 
+I J A Z  A R A B I :  J o u r n a l  o f  A r a b i c  L e a r n i n g 
+D O I :  10.18860 /ijazarabi. V8i2.26630 
+I S S N ( p r i n t ) :  2 6 2 0 - 5 9 1 2  | I S S N ( o n l i n e ) : 2 6 2 0 - 5 9 4 7 
+e j o u r n a l . u i n - m a l a n g . a c . i d / i n d e x . p h p / i j a z a r a b i / i n d e x  | 1052 
+ 
+Vol. 8 No. 2 / June 2025  
+ 
+Copyright © 2024, This is an open access article under the CC BY-SA 4.0 license 
+(https://creativecommons.org/licenses/by-sa/4.0/) 
+Several lines omitted due to the speaker G1’s lengthy statement on the discussed issue 
+6 ... anna al-ḍughūṭ Al-Amrīkiyyah tu’addi tusā’id al-niẓām Al-Īrānī  
+6 ... The American pressure leads helps the Iranian regime 
+7 ‘alā imtiṣāṣ hādzihī al-ḍughūt al-dākhiliyyah  
+7  to absorb these internal pressures 
+8    G1 (0.1) Akhlatif anā anā akhtalif anā akhtalif ma’ak  
+8 (0.1) I disagree I I I disagree I disagree with you 
+ As shown in Excerpt 6, disagreement responses start with a clear negative particle 
+(Lā/No) in line 3. After 100 ms, the speaker H2 disagrees with a statement about a strong 
+likelihood for the unity of the interior Iranian elite that will rise as a result of the American 
+intervention. This oppositional stance did not affect H1, as he keeps maintaining his own 
+view and elaborates upon it with a lengthy comment. Likewise, another speaker, G1, does 
+not agree with H1’s clarification, and rejects it with an obvious disagreement expression, 
+and with the same rapidity. A clear disagreement sentence was used and repeated three 
+times in line 8: (Akhtalif...akhtalif...akhtalif/I disagree...I disagree...I disagree). Repetition 
+that takes place more than twice may be regarded as a useful linguistic tool for 
+emphasizing a disagreement response, regardless of the absence of auxiliary tools and 
+high intonation. In these two examples, the disagreement produced is fast, with only 100 
+ms. separating the assertions from the responses. 
+Table 4. Average Time Interval Of Explicit Agreement And Disagreement Responses* 
+Response Types  Average Time    Time Gap  
+Explicit agreements 
+Explicit disagreements  
+213.33 ms 
+233.33ms 
+ 
+ 
+ 20 ms/0.02 second           
+Table 4 demonstrates the average timing of responses for both agreements and 
+disagreements. The time interval between prior utterances and following speakers’ 
+agreements is 213.33 ms, while the average time interval for disagreement reactions is 
+233.33 ms. The difference is clearly insignificant (only 20 ms/0.02 second). In other 
+words, both types of response still occurred inside the range of one second, and this 
+duration is actually very fast. Therefore, preference for agreement cannot be generalized 
+to all settings, and long delays are not characteristic of dispreferred actions, such as 
+disagreement, in political TV discussions. One potential explanation of this refers to the 
+nature of political topics and TV conversations, as disputes are expected to be expressed 
+quickly and directly, and there is insufficient time to delay expression of an opposite 
+position to the opponent.  
+ 
+CONCLUSION 
+The long-standing general argument with regard to preference organization 
+suggests that speakers tend to produce responsive actions that are cooperative and 
+expressive of affiliation, making agreement and disagreement responses inequivalent. 
+Our results, however, revealed that each of these two kinds of responses were produced 
+similarly without hesitation and delay, with the timing of both responses occurring within 
+approximately one second on average.  
+This finding is not in line with some previous studies that indicated that 
+affirmation responses tend to occur faster than disaffirmations (Stivers et al.’s, 2009), that 
+normal rejections occur after 700 ms. (Kendrick and Toreira’s, 2015), or that 
+confirmations are more common than disconfirmations (Stivers, 2010, Raymond, 2003). 
+I J A Z  A R A B I :  J o u r n a l  o f  A r a b i c  L e a r n i n g 
+D O I :  10.18860 /ijazarabi. V8i2.26630 
+I S S N ( p r i n t ) :  2 6 2 0 - 5 9 1 2  | I S S N ( o n l i n e ) : 2 6 2 0 - 5 9 4 7 
+e j o u r n a l . u i n - m a l a n g . a c . i d / i n d e x . p h p / i j a z a r a b i / i n d e x  | 1053 
+ 
+Vol. 8 No. 2 / June 2025  
+ 
+Copyright © 2024, This is an open access article under the CC BY-SA 4.0 license 
+(https://creativecommons.org/licenses/by-sa/4.0/) 
+It is, however, in line with other studies that dealt with dispute contexts like controversial 
+political TV interaction. In terms of the general frequency of agreement and disagreement 
+responses, our results have revealed a slight difference between the two types 
+(51.6%/48.3%), and thus align with Robinson’s study (2020), which showed that 
+disaffirmation answers (i.e. disagreements) were not significantly less frequent than 
+affirmation answers. Lerch’s (2015) study, also, showed that disagreement is more likely 
+to be more frequent than agreement, and our data showed that the percentage of explicit 
+disagreements exceeded significantly the proportion of explicit agreements 
+(42.7%/12.6%).  
+Disagreement acts in the Arabic data we used are preferred to the same degree as 
+agreement, or even more, which challenges the basic perception of human tendency 
+towards affiliation in interaction. Face-threatening acts can be quick and preferred acts 
+when a conversation is carried out in a confrontational setting, such as political TV 
+discussions. The current study, however, was conducted only for the effect of political 
+context on the realization of the speech act of agreement and disagreement. Further 
+studies on agreement and disagreement might investigate other social or contextual 
+factors, such as gender, age, level of formality, power relations of the interlocutors or 
+other contextual and external factors that may impact the use of agreement and 
+disagreement strategies in Arabic language. Data obtained from various contexts, such as 
+classroom interactions or Arabic language learning, can also be valuable for 
+understanding how interactions are managed within Arabic culture. Findings from such 
+studies would be more valid, reliable, and generalizable. 
+ 
+ACKNOWLEDGMENT 
+The authors would like to thank Deanship of Scientific Research in King Saud University 
+for funding and supporting this research. 
+ 
+ 
+REFERENCES 
+Al-Ahmad, Sayyah and Wardat, Mahmud. 2010. “Disagreement in Arabic Discourse as 
+Exhibited in Unscripted Televised Debates.” King Saud University Journal of 
+Arts 22, no.2: 17-31. 
+Al-Dilaimy, Hazim and Khalaf, Abed. 2014. “A Pragmatic Analysis of Impolite 
+Interruptions of Selected Debates in The Opposite Direction of Al-Jazeera 
+Channel.” American Journal of Educational Research 3, no. 12: 1570-1578. 
+Atkinson, Max and  Drew, Paul. 1979. Order in Court: The Organisation of Verbal 
+Interaction in Judicial Settings.  (London: Macmillan). 
+Blum-Kulka, Shoshana, Blondheim, Menahem and Hacohen, Gonen. 2002. “Tradition of 
+Dispute: From Negotiations of Talmudic Texts to the Arena of Political 
+Discourse in The Media.” Journal of Pragmatics 34, no.10-11: 1569-1594. 
+Brown, Penelope and Levinson, Stephen. 1987. Politeness: Some Universals in Language 
+Usage. (United Kingdom: Cambridge University Press). 
+Chilton, Paul. 2004. Analysing Political Discourse: Theory and Practice. (London: 
+Routledge). 
+Chiu, Ming. 2008. “Effects of Argumentation on Group Micro-Creativity: Statistical 
+Discourse Analyses of Algebra Students’ Collaborative Problem Solving.” 
+Contemporary Educational Psychology, 33, no. 3: 382-402.  
+I J A Z  A R A B I :  J o u r n a l  o f  A r a b i c  L e a r n i n g 
+D O I :  10.18860 /ijazarabi. V8i2.26630 
+I S S N ( p r i n t ) :  2 6 2 0 - 5 9 1 2  | I S S N ( o n l i n e ) : 2 6 2 0 - 5 9 4 7 
+e j o u r n a l . u i n - m a l a n g . a c . i d / i n d e x . p h p / i j a z a r a b i / i n d e x  | 1054 
+ 
+Vol. 8 No. 2 / June 2025  
+ 
+Copyright © 2024, This is an open access article under the CC BY-SA 4.0 license 
+(https://creativecommons.org/licenses/by-sa/4.0/) 
+Clayman, Steven, Heritage, John, Elliott, Marc and McDonald, Laurie. 2007. “When 
+Does The Watchdog Bark? Conditions of Aggressive Questioning in 
+Presidential News Conferences.” American Sociological Review, 72, no.1: 23-
+41. 
+Clayman, Steven. 2022. “Sequence and Solidarity.” In: Shane R. Thye, ed., Group 
+Cohesion, Trust and Solidarity, 19: 229-253. 
+Concannon, Shauna, Healey, Patrick and Purver, Matthew. 2015. “Shifting Opinions: An 
+Experiment on Agreement and Disagreement in Dialogue.” Paper presented at 
+the Proceedings of the 19th Workshop on the Semantics and Pragmatics of 
+Dialogue. Gothenburg: University of Gothenburg, August 24-26, 2015: 15-23. 
+Davidson, Judy. 1984. “Subsequent Versions of Invitations, Offers, Requests and 
+Proposals Dealing with Potential or Actual Rejection.” In: J. Maxwell Atkinson, 
+ed., Structures of Social Action: Studies in Conversation Analysis: 102–128. 
+El-Zouka, Miranda. 2006. “Agreement and Disagreement Strategies in Television Talk 
+Shows.” Majallah Al-Adab Wa Al-Ulum Al-Insaniyyah 59, no. 1: 1-53.  
+Georgakopoulou, Alexandra. 2001. “Arguing About the Future: On Indirect 
+Disagreements in Conversations.” Journal of Pragmatics 33, no. 12: 1881-
+1900. 
+Goffman, Erving. 2005.  Interaction Ritual: Essays on Face-to-Face Behaviour. (New 
+Jersey: Transaction Publishers). 
+Greatbatch, David. 1992. “On the Management of Disagreement between News 
+Interviewees”. In: P. Drew, ed., Talk at Work. (Cambridge: Cambridge 
+University Press): 268-301. 
+Heritage, J. 1984.  Garfinkel and Ethnomethodology. (Cambridge: Polity Press). 
+Hernandez-Flores, Nieves. 2008. “Politeness and Other Types of Facework: 
+Communicative and Social Meaning in a Television Panel Discussion.” 
+Pragmatics 18, no. 4: 689-706.  
+Honda, Atsuko. 2002. “Conflict Management in Japanese Public Affairs Talk Shows.” 
+Journal of Pragmatics 39, no. 8: 1436-1453. 
+https://www.alarabiya.net/programs/arab-conversation 
+https://www.bbc.com/arabic/tvandradio/2016/05/000000_hadith_new 
+https://www.france24.com/ar/برامج/النقاش/ 
+https://www.skynewsarabia.com/program/niransadiqa- نيران-صديقة  
+https://www.youtube.com/watch?v=53x1AZzGRrI [Palestine political topic] 
+https://www.youtube.com/watch?v=8m0U3ijmIDo [Iran political topic] 
+https://www.youtube.com/watch?v=Bu4ar6c4J1w [Gulf countries political topic) 
+https://www.youtube.com/watch?v=Lt7X92q9cz4 [Turkey political topic] 
+https://www.youtube.com/watch?v=MWxbFSa0gQI [Libya political topic] 
+https://www.youtube.com/watch?v=nLBibCA-gzQ [Yemen political topic] 
+https://www.youtube.com/watch?v=oDNMshUusM4 [Judiciary and political system in 
+Arab countries] 
+https://www.youtube.com/watch?v=P0e_kSiIaFA [Sudan political topic]   
+https://www.youtube.com/watch?v=TM73yQu75QI [Iraq political topic] 
+https://www.youtube.com/watch?v=ujpaTwk9Z0o [Arab springs political topic]  
+https://www.youtube.com/watch?v=xGXChZPZZ5w [Syria political topic] 
+https://www.youtube.com/watch?v=xleM6iMyPmk [Islam and France political topic] 
+I J A Z  A R A B I :  J o u r n a l  o f  A r a b i c  L e a r n i n g 
+D O I :  10.18860 /ijazarabi. V8i2.26630 
+I S S N ( p r i n t ) :  2 6 2 0 - 5 9 1 2  | I S S N ( o n l i n e ) : 2 6 2 0 - 5 9 4 7 
+e j o u r n a l . u i n - m a l a n g . a c . i d / i n d e x . p h p / i j a z a r a b i / i n d e x  | 1055 
+ 
+Vol. 8 No. 2 / June 2025  
+ 
+Copyright © 2024, This is an open access article under the CC BY-SA 4.0 license 
+(https://creativecommons.org/licenses/by-sa/4.0/) 
+Hutchby, Ian and Wooffitt, Robin. 2008.  Conversation Analysis. 2nd Ed. (Cambridge: 
+Polity Press). 
+Jefferson, Gail. 2004. “Glossary of Transcript Symbols with an Introduction.” In: G. 
+Lerner, ed., Conversation Analysis: Studies from the First Generation. 
+(Amsterdam: John Benjamins Publishing): 13-34. 
+Kakava, Christina. 2002. “Opposition in Modern Greek Discourse: Cultural and 
+Contextual Constraints.” Journal of Pragmatics, 34, no.10-11: 1537-1568. 
+Kendrick, Kobin and Torreira, Francisco. 2015. “The Timing and Construction of 
+Preference: A Quantitative Study.” Discourse Processes 52, no. 4: 255-289. 
+Kenzhekanova, Kuralay. 2015. “Linguistic Features of Political Discourse.” 
+Mediterranean Journal of Social Sciences 6, no. 6: 192-199. 
+Kotthoff, Helga. 1993. “Disagreement and Concession in Disputes: On the Context 
+Sensitivity of Preference Structures.” Language in Society 22, no. 2: 193-216. 
+Kuo, Sai-hua. 1994. “Agreement and Disagreement Strategies in a Radio Conversation.” 
+Research on Language and Social Interaction 22, no. 2: 95-121. 
+Leech, Geoffrey. 2007. “Politeness: Is There an East-West Divide?.” Journal of 
+Politeness Research 3, no. 2: 167-206. 
+Lerch, Agnes. 2005. “The Concept of Preference and Its Manifestation in Hungarian 
+Verbal Conflict Sequences.” Acta Linguistica Hungarica 52, no. 1: 41-75. 
+Levinson, Stephen. 1983. Pragmatics. (Cambridge: Cambridge University Press). 
+LoCastro, Virginia. 1986. “Yes, I Agree With You, But…: Agreement and Disagreement 
+in Japanese and American English”. Paper presented at the Japan Association 
+of Language Teachers’ International Conference on Language Teaching and 
+Learning. Hamamatsu, Japan, November 22-24, 1986: 1-20. 
+Locher, Miriam. 2004. Power and Politeness in Action: Disagreement in Oral 
+Communication. (Berlin: Mouton de Gruyter). 
+Migdadi, Fathi, Badarneh, Muhammad and Abu Abbas, Khaled. 2013. “Conflict Talk and 
+Argumentative Strategies in Highly Adversarial Talk Shows”. In: P. Chilton, 
+ed., Lodz Papers in Pragmatics, 9, no.1: 93-121. 
+Muntigl, Peter and Turnbull, William. 1998. “Conversational Structure and Facework in 
+Arguing.” Journal of Pragmatics 29, no. 3: 225-256. 
+Paltridge, Brian. 2012. Discourse Analysis: An Introduction. (London: Bloomsbury 
+Academic).  
+Partington, Alan. 2003. The Linguistics of Political Argument: The Spin-Doctor and The 
+Wolfpack at The White House. (London: Routledge). 
+Patrona, Marianna. 2006. “Constructing the Expert as a Public Speaker: Face 
+Considerations on Floor-Claiming in Greek Television Discussion Programs.” 
+Journal of Pragmatics 38, no. 12: 2124-2143. 
+Pomerantz, Anita and Heritage, John. 2012. “Preference.” In: J. Sidnell, ed., The 
+Handbook of Conversation Analysis. (Oxford: Wiley-Blackwell): 210-228. 
+Pomerantz, Anita. 1984. “Agreeing and Disagreeing with Assessments: Some Features 
+of Preferred/Dispreferred Turn Shape.” In: M. Atkinson, ed., Structure of Social 
+Action: Studies in Conversational Analysis. (Cambridge: Cambridge University 
+Press): 57-103. 
+Raymond, Geoffrey. 2003. “Grammar and Social Organization: Yes/No Interrogatives 
+and The Structure of Responding.” American Social Review 68, no. 6: 939-967. 
+I J A Z  A R A B I :  J o u r n a l  o f  A r a b i c  L e a r n i n g 
+D O I :  10.18860 /ijazarabi. V8i2.26630 
+I S S N ( p r i n t ) :  2 6 2 0 - 5 9 1 2  | I S S N ( o n l i n e ) : 2 6 2 0 - 5 9 4 7 
+e j o u r n a l . u i n - m a l a n g . a c . i d / i n d e x . p h p / i j a z a r a b i / i n d e x  | 1056 
+ 
+Vol. 8 No. 2 / June 2025  
+ 
+Copyright © 2024, This is an open access article under the CC BY-SA 4.0 license 
+(https://creativecommons.org/licenses/by-sa/4.0/) 
+Rees-Miller, Janie. 2000. “Power, Severity and Context in Disagreement.” Journal of 
+Pragmatics 32, no. 8: 1087-1111. 
+Rendle-Short, Johanna. 2015. “Dispreferred Responses When Texting: Delaying That 
+‘No’ Response.” Discourse and Communication 9, no. 6: 643-661. 
+Renwick, George. 1980. Interact: Guidelines for Australians and North Americans. 
+(Chicago: Intercultural Press). 
+Robinson, Jeffrey. 2020. “Revisiting Preference Organization in Context: A Qualitative 
+and Quantitative Examination of Responses to Information Seeking.” Research 
+on Language and Social Interaction 53, no. 2: 197-222. 
+Sacks, Harvey, Schegloff, Emanuel and Jefferson, Gail. 1974. “A Simplest Systematics 
+for the Organization of Turn-Taking for Conversation.” Language 50, no. 4: 
+696-735. 
+Sacks, Harvey. 1987. “On Preferences for Agreement and Contiguity in Sequences in 
+Conversation.” In: G. Button, ed., Talk and Social Organization. (Clevedon: 
+Multilingual Matters): 54-69. 
+Schegloff, Emanuel and Sacks, Harvey. 1973. “Opening Up Closings.” Semiotica 8, no. 
+4: 289-327. 
+Schiffrin, Deborah.  1984. “Jewish Argument as Sociability.” Language in Society 13, 
+no. 3: 311-335. 
+Scott, Suzanne. 2002. “Linguistic Feature Variation Within Disagreement: An Empirical 
+Investigation.” Text-Interdisciplinary Journal for the Study of Discourse 22, no. 
+2: 301-328. 
+Sifianou, Maria. 2012. “Disagreement, Face and Politeness.” Journal of Pragmatics 44, 
+no. 12: 1554-1564. 
+Stivers, Tanya et al. 2009. “Universals and Cultural Variation in Turn-Taking in 
+Conversation.” Paper presented at the Proceedings of the National Academy of 
+Sciences, 106, no. 26: 10587-10592. Accessed October 23, 2021, doi: 
+10.1073/pnas.0903616106. 
+Stivers, Tanya. 2010. “An Overview of The Question-Response System in American 
+English Conversation.” Journal of Pragmatics 42, no. 10: 2772-2781. 
+Wierzbicka, Anna. 1991. Cross-Cultural Pragmatics: The Semantics of Human 
+Interaction. (Berlin: Mouton de Gruyter). 
+Zhu, Weihua. 2019.  Interaction in Mandarin Chinese and English as a Multilingua 
+Franca: Context, Practice, and Perception. (New York: Routledge). 

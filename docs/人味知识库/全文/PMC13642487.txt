@@ -1,0 +1,242 @@
+# Cognitive impairment in heart transplantation: prevalence, trajectories, and prognostic impact - a systematic review.
+
+- 作者：Parrotta I, Valente M, Piazzalunga E, Scarpa E, Mantini D, Danesin L, Rossi C, Borgese L, Golfieri L, Burgio F, Potena L.
+- 出处：Aging clinical and experimental research 2026
+- DOI：10.1007/s40520-026-03356-w
+- PMCID：PMC13642487
+
+pmc Aging Clin Exp Res Aging Clin Exp Res 365 springeropen 101132995 Aging Clinical and Experimental Research 1594-0667 1720-8319 pmc-is-collection-domain yes pmc-collection-title Springer PMC13642487 PMC13642487.1 13642487 13642487 42070000 10.1007/s40520-026-03356-w 3356 1 Review Cognitive impairment in heart transplantation: prevalence, trajectories, and prognostic impact - a systematic review Parrotta I. 1 3 Valente M. 2 Piazzalunga Elena elena.piazzalunga@hsancamillo.it 1 4 Scarpa E. 1 Mantini D. 3 Danesin L. 1 Rossi C. 2 Borgese L. 2 Golfieri L. 2 Burgio F. 1 Potena L. 2 1 https://ror.org/03njebb69 grid.492797.6 0000 0004 1805 3485 IRCCS San Camillo Hospital, Venice, Italy 2 https://ror.org/01111rn36 grid.6292.f 0000 0004 1757 1758 IRCCS Azienda Ospedaliero-Universitaria di Bologna, Bologna, Italy 3 Movement Control and Neuroplasticity Research Group, Leuven, Belgium 4 https://ror.org/0290wsh42 grid.30420.35 0000 0001 0724 054X Department of Cognitive Brain Sciences, University School for Advanced Studies IUSS Pavia, Pavia, Italy 2 5 2026 2026 38 1 522936 199 15 12 2025 19 2 2026 02 05 2026 08 10 2026 19 11 2026 © The Author(s) 2026 2026 https://creativecommons.org/licenses/by-nc-nd/4.0/ Open Access This article is licensed under a Creative Commons Attribution-NonCommercial-NoDerivatives 4.0 International License, which permits any non-commercial use, sharing, distribution and reproduction in any medium or format, as long as you give appropriate credit to the original author(s) and the source, provide a link to the Creative Commons licence, and indicate if you modified the licensed material. You do not have permission under this licence to share adapted material derived from this article or parts of it. The images or other third party material in this article are included in the article’s Creative Commons licence, unless indicated otherwise in a credit line to the material. If material is not included in the article’s Creative Commons licence and your intended use is not permitted by statutory regulation or exceeds the permitted use, you will need to obtain permission directly from the copyright holder. To view a copy of this licence, visit http://creativecommons.org/licenses/by-nc-nd/4.0/ . 
+## Background/Aim
+
+Heart transplantation (HTx) represents the definitive treatment for patients with end-stage heart failure (HF). Neurological complications, particularly cognitive impairment (CI), may influence prognosis, thereby affecting the overall benefits of HTx. CI in HF is associated with disease severity, extracardiac dysfunction, and peri- or intra-operative factors such as prolonged ventilation, cerebral hypoperfusion, and systemic inflammation. However, existing studies on CI in HTx candidates are highly heterogeneous, limiting comparability and highlighting the need for a clearer understanding of its impact in both candidates and recipients.
+
+## Methods
+
+This systematic review was registered with PROSPERO (CRD42024549051) and conducted in accordance with PRISMA guidelines. PubMed, Scopus, and Embase were searched for studies published between 2013 and June 2025. Eligible studies assessed cognitive function in adult HF patients undergoing HTx.
+
+## Results
+
+Of 1188 records screened, eight studies met the inclusion criteria. Most cognitive studies employed the Montreal Cognitive Assessment (MoCA), while two used comprehensive neuropsychological batteries. Evidence confirmed that CI is common among HF and HTx populations. Incorporating cognitive status into frailty assessments enhanced prediction of adverse outcomes, including prolonged hospitalization and reduced survival. Cognitive decline was frequently observed in the immediate post-transplant period, often linked to high-dose immunosuppressive therapy and anemia, while long-term improvements were reported in attention, memory, and executive function.
+
+## Conclusions
+
+Cognitive assessment is essential in HTx candidates, as CI has a major impact on survival. Further studies are needed to clarify long-term cognitive trajectories and the role of immunosuppressive therapy in shaping outcomes.
+
+## Keywords
+ Transplant Cognitive impairment Frailty Neuropsychological assessment pmc-status-qastatus 0 pmc-status-live yes pmc-status-embargo no pmc-status-released yes pmc-prop-open-access yes pmc-prop-olf no pmc-prop-manuscript no pmc-prop-legally-suppressed no pmc-prop-has-pdf yes pmc-prop-has-supplement no pmc-prop-pdf-only no pmc-prop-suppress-copyright no pmc-prop-is-real-version no pmc-prop-is-scanned-article no pmc-prop-preprint no pmc-prop-in-epmc yes pmc-license-ref CC BY-NC-ND issue-copyright-statement © Springer Nature Switzerland AG 2026 
+## Introduction
+
+Heart transplantation (HTx) is the ultimate therapeutic option for patients with end-stage heart failure (HF), offering an opportunity to improve both life expectancy and quality of life. Neurological impairment, particularly neurocognitive dysfunction, before and after cardiac surgery has a substantial impact on the expected benefits of HTx [ 1 ].
+
+Cognitive impairment (CI) is common in patients with HF and is associated with adverse prognosis and reduced quality of life [ 2 , 3 ]. Its development may be influenced by disease severity, extracardiac dysfunction, and peri-/intra-operative factors such as prolonged ventilation, cerebral hypoperfusion, and systemic inflammation. In addition, cardiometabolic comorbidities, particularly diabetes, which are common in patients with advanced heart failure, have been associated with an increased risk of cognitive decline and may independently contribute to or exacerbate mild cognitive impairment, representing important clinical modifiers when interpreting cognitive performance in the pre-transplant setting [ 4 , 5 ].
+
+Following HTx, improved adherence to treatment may help mitigate the progression of certain deficits, particularly those involving attention and memory [ 6 ]. Nevertheless, available studies on CI in HTx candidates remain heterogeneous and difficult to compare, highlighting the need to better define its impact in both candidates and recipients [ 7 ].
+
+Moreover, while survival rates have significantly improved, understanding the impact of neurocognitive impairments in HTx candidates and recipients on their quality of life (QoL) is crucial. HF itself has detrimental effects on QoL, which can be further compromised by functional impairments, comorbidities, and symptoms of depression [ 8 ]. Importantly, for many patients, maintaining or improving QoL is of equal or greater importance than longevity as the primary goal of treatment.
+
+Several longitudinal studies have assessed changes in QoL among transplant recipients over time, identifying factors that influence long-term outcomes [ 9 ]. These include age, pre-transplant health status, the presence of complications, social support, and coping mechanisms. In addition, the post-transplant period is characterized by an elevated risk of both rejection and infection, necessitating lifelong immunosuppressive therapy and continuous monitoring. The adoption of healthier lifestyles, adherence to pharmacological treatment, and access to high-quality medical care have been shown to significantly improve both survival and QoL in HTx recipients [ 10 ].
+
+This review primarily aims to analyze whether cognitive assessment is performed in this population prior to HTx and which tests are administered. Subsequently, the effect of HTx on cognitive abilities will be evaluated. In addition, the review seeks to identify factors related to cardiac surgery that may influence QoL in this population.
+
+## Methods
+
+## Search strategy and selection criteria
+
+This systematic review was registered with PROSPERO, CRD42024549051, and followed the guidelines of the Preferred Reporting Items for Systematic Review and Meta-Analyses (PRISMA) protocol [ 11 ] to ensure the reporting of all relevant information related to the systematic review.
+
+Three databases (Pubmed, Scopus, and Embase) were systematically searched for primary studies published from 2013 to June 2025. A three-step search strategy was undertaken to build the final search query. An initial exploratory search in PubMed was conducted as a test to capture titles and abstracts, with search terms comprising common keywords and free vocabulary. The results were analyzed to validate and build the final query. The validated search strategy was then adapted to the syntax of each database and included the following terms, searched within titles, abstracts and keywords:
+
+((heart transplant*) AND (heart failure)) AND ((cognitive test*) OR (cognitive evaluation) OR (cognitive function*) OR (cognitive assessment) OR (neuropsych*) OR (cognitive impairment) OR (cognitive dysfunction) OR (attention) OR (memory) OR (language) OR (working memory) OR (executive function*) OR (visual-spatial perception)).
+
+Duplicates were manually removed, and the reference list of all identified studies was screened for additional studies.
+
+Details on inclusion and exclusion criteria are reported in Table  1 , according to the Population, Intervention, Outcomes, and Study Design (PIOS) framework [ 12 , 13 ]. Briefly, articles were considered eligible if they were: (i) peer-reviewed; (ii) written in English or other languages known by the authors (i.e., French, Italian, or Spanish); (iii) published after 2013; (iv) on human individuals with chronic heart conditions; vii) scores on any validated cognitive test or questionnaire for the assessment of quality of life.
+
+## Results
+
+## Study selection
+
+The initial search identified 1188 records. After removal of duplicates, 1016 articles remained. During abstract screening, 954 studies were excluded and 15 could not be retrieved. A total of 47 articles were selected for full-text review. Of these, 40 were excluded. One additional article was identified through citation searching and included in the full-text review. In the end, eight articles met the inclusion criteria (Fig.  1 ; Tables  2 , 3 ).
+
+ Fig. 1 
+PRISMA flow diagram of study selection. The figure illustrates the process of study identification, screening, eligibility assessment, and final inclusion in the systematic review
+
+Among the included articles, six were longitudinal studies [ 3 , 12 – 14 , 16 , 17 ]; and two [ 15 , 20 ] were cross-sectional studies. Most of these studies examined cognitive assessment as a predictor of survival, except for two [ 17 , 20 ]. One study compared cardiac and physical performance across groups by stratifying participants into transplant patients, healthy controls, and HF patients [ 15 ]. Roman et al. [ 17 ] is the only study that investigated the characteristics of end-stage HF patients stratified by cognitive performance.
+
+## Overview of main findings
+
+The cognitive assessment tools used were not consistent across studies. Six studies utilized the Montreal Cognitive Assessment (MoCA) [ 3 , 12 , 13 , 14 , 16 , 17 ]. Among these, four studies [ 14 , 16 , 18 , 19 ] analyzed individual MoCA items, while two [ 3 , 15 ] focused on specific MoCA domains, including “naming,” “orientation,” and “attention.” Two studies assessed the cognitive profile using a comprehensive neuropsychological battery covering all major cognitive domains [ 17 , 20 ].
+
+Several studies incorporated frailty into their analyses. With the exception of Xiong et al. (2022), all used the MoCA in patients with physical frailty [ 3 ]; Macdonald et al. [ 16 ] adapted the frailty phenotype by integrating cognitive status, while three studies stratified participants based on both physical and cognitive frailty [ 14 , 18 , 19 ]. Across these, adding cognitive assessment to physical frailty increased the proportion of individuals classified as frail and strengthened the association with mortality risk and prolonged hospital stay [ 19 ].
+
+## Cognitive Impairment Before heart transplantation
+
+One study [ 20 ] primarily compared cardiorespiratory fitness and cognitive performance across HF, HTx, and healthy controls (HC). Both HF and HTx groups exhibited lower cognitive performance compared to HC, and cognition was directly associated with peak VO₂ (cardiorespiratory fitness) and VT1 (ventilatory threshold) [ 20 ].
+
+In the study by Macdonald et al., 41% of transplant candidates showed abnormal MoCA scores at baseline (32% among non-frail and 63% among frail participants). Three studies (Aili, Jha, and Jha), conducted in advanced HF patients referred for HTx, stratified participants by both physical and cognitive frailty. These studies reported that a substantial proportion of candidates were cognitively frail, with abnormal MoCA scores in 38%, 69%, and 64% of subjects, respectively.
+
+Roman et al. provided the largest sample ( n  = 956), characterizing transplant-eligible HF patients by cognitive status. This study identified impairments across nearly all domains (processing speed, memory, executive function), demonstrating that cognitive deficits among transplant candidates occur independently of chronological age or neurological comorbidities.
+
+## Post-transplant cognitive changes
+
+One study conducted both baseline and follow-up assessments in the same population [ 3 ]. Xiong et al. performed neuropsychological testing approximately 10 days post-HTx and again at two years post-HTx. They observed a significant immediate post-transplant decline, particularly in patients with pre-existing impairment and in attention and orientation, while observed recovery and improvement – especially in thinking – at two years post-HTx.
+
+Bürker et al. examined patients who had survived at least 16 years after HTx. They estimated pre-transplant intelligence quotient (IQ) levels and identified persistent deficits, primarily in processing speed, executive functions, language, and memory. Exploratory analyses suggested that premorbid IQ and hemoglobin levels were associated with cognitive performance. With the exception of attention, group comparisons (MCI vs. non-MCI) for composite scores remained statistically significant, supporting the view that observed impairments are likely acquired rather than pre-existing, and higher premorbid IQ may confer greater cognitive reserve.
+
+## Discussion
+
+## Overview of main findings
+
+The primary objective of this review was to examine how cognitive impairment is assessed in HTx candidates and to understand the progression of this condition following HTx. Cognitive functions were comprehensively investigated in two studies [ 3 , 15 ], while the remaining six assessed cognitive impairment using screening tools such as the MoCA.
+
+## Cognitive impairment before heart transplantation
+
+Five of the eight cognitive studies had post-transplant survival as their primary outcome, whereas only two specifically examined cognitive abilities in relation to cardiac performance.
+
+Notably, both survival studies assessed the impact of cognitive performance within the context of frailty. The evaluation of frailty in older HTx candidates is increasingly integrated into eligibility assessments, as it is a more reliable predictor of adverse outcomes than chronological age alone [ 2 , 21 ]. While physical frailty is already recognized as a predictor of reduced post-transplant survival and prolonged intensive care unit (ICU) stay, both studies [ 16 , 18 ] demonstrated that incorporating cognitive impairment into the frailty phenotype (cognitive frailty) further increased the prevalence of frailty. Moreover, considering cognitive performance alongside physical frailty enhanced the predictive power for post-HTx outcomes and was also associated with longer intubation times [ 14 , 18 ]. Importantly, although cognitive impairment is often attributed to pathological aging, it is plausible that HF-related mechanisms themselves contribute to these deficits, independent of frailty.
+
+In this context, the increased prevalence of frailty due to cognitive impairment in patients with end-stage HF is likely secondary to the underlying disease [ 22 ]. This is supported by evidence of correlations between reduced cognitive performance and poorer cardiac function, including low resting cardiac index, higher NYHA class, and reduced left ventricular ejection fraction [ 23 , 24 ].
+
+## Early post-transplant cognitive changes
+
+Cognitive deficits often persist in the early post-operative period after HTx, likely influenced by high-dose immunosuppressive therapy and anemia [ 25 , 26 ]. Although immunosuppressive therapy is lifelong, its negative cognitive impact appears to be most pronounced in the early phase, when dosages are highest and peri-operative conditions still affect cerebral function. In the long term, however, cognitive functioning tends to improve, as shown in the three studies that investigated HTx patients, probably reflecting a combination of reduced drug burden, improved cardiac output, and overall physical recovery [ 3 , 15 , 17 ].
+
+## Long-term cognitive recovery and residual deficits
+
+Specifically, Xiong et al. reported that, 10 days post-transplant, attention and orientation worsened, particularly in patients with poorer baseline cognitive function. This finding suggests that cognitive sequelae after HTx are not solely attributable to pre-existing impairment, but also directly influenced by the procedure. Importantly, two years post-transplant, recovery of attention, visuospatial skills, and short-term memory was associated with improved survival.
+
+Similarly Roman et al. provided supporting evidence by performing a large neuropsychological evaluation of HTx candidates. They found that cognitive functions such as executive function, memory, and processing speed declined with increasing B-type natriuretic peptide (BNP) levels and impaired left ventricular diastolic function. This association remained significant even when adjusted for concomitant neurological conditions, leading to a prevalence of mild cognitive impairment (MCI) in this group that exceeded rates typically observed in individuals over 65 years of age [ 15 , 27 ].Considering these heterogeneous patterns and temporal changes, a more integrative interpretation of cognitive trajectories across the transplant pathway is needed.
+
+## Conceptual framework of cognitive trajectories in heart transplant candidates and recipients
+
+Although the available literature remains heterogeneous and limited in scope, the evidence gathered in this review suggests that cognitive dysfunction in heart transplant candidates and recipients follows a three-phase trajectory, characterized by distinct patterns of impairment and recovery [ 3 , 15 , 17 ].
+
+Pre-transplant cognitive vulnerability – cardiac-driven neurocognitive decline.
+
+Prior to transplantation, patients commonly display deficits in executive functions, memory, attention, and processing speed, independent of age or neurological comorbidities [ 17 ] Impairments correlate with markers of cardiac severity such as elevated BNP, diastolic dysfunction, and reduced cardiac output [ 17 , 22 , 23 ]. These findings support the hypothesis that HF-related mechanisms—including cerebral hypoperfusion, inflammation, and metabolic derangements—directly contribute to neurocognitive decline [ 22 ]. This phase reflects a state of intrinsic vulnerability in which cognitive impairment increases frailty and may compromise eligibility, adherence, and post-operative trajectories [ 14 , 16 , 18 ].
+
+ 2. 
+Early post-transplant cognitive disruption – surgery- and therapy-related effects.
+
+The immediate postoperative period is characterized by a transient decline—particularly in attention, orientation, and working memory—most pronounced during the first days to weeks after HTx [ 3 ]. This deterioration is plausibly associated with high-dose immunosuppressive therapy, anemia, peri-operative instability, and prolonged mechanical ventilation [ 25 ]. Individuals with poorer pre-operative cognitive function tend to show the greatest decline, reflecting an interaction between baseline vulnerability and transplant-related stressors [ 3 ]. This phase represents a period of acute cognitive disruption during which early recognition may help reduce ICU burden and short-term morbidity [ 19 ].
+
+ 3. 
+Late post-transplant cognitive reorganization – recovery with possible residual deficits.
+
+In the long term, most patients demonstrate improvement in visuospatial abilities, attention, and short-term memory, likely reflecting enhanced cardiac output, reduced systemic inflammation, and treatment stabilization [ 3 , 15 ]. However, persistent deficits—especially in processing speed and executive functioning—remain detectable in a subset of long-term survivors [ 15 ]. Premorbid intellectual functioning and physiological variables such as peak VO₂ appear to modulate recovery, supporting the concept of individual variability in neurocognitive resilience [ 15 , 20 ].
+
+Taken together, these three phases outline a dynamic, non-linear trajectory of cognitive functioning around the transplant period [ 3 , 15 , 17 ]. Understanding this trajectory underscores the need for systematic cognitive assessments both before and after HTx and provides a rationale for developing targeted interventions—including cognitive prehabilitation and structured postoperative monitoring—to reduce vulnerability and enhance long-term outcomes [ 6 , 28 ].
+
+## Impact on quality of life and hospitalization outcomes
+
+QoL represents a critical outcome for HF patients undergoing cardiac replacement surgery. Available evidence using heterogeneous tools (Kansas City Cardiomyopathy Questionnaire KCCQ [ 29 , 30 ], EuroQol 5-Dimension-5-Level Questionnaire EQ-5D-5 L [ 31 ], Short Form Health Survey 36 SF-36 Symptom Checklist-90 SCL-90 [ 32 ]) shows cognitive impairment compromises treatment adherence and exacerbates psychological symptoms, mutually influencing each other and severely impacting QoL for both patients and caregivers [ 32 ].
+
+The findings confirm existing literature indicating that patients with severe HF are more exposed to neurological and neuropsychological complications. Cognitive impairment in one or more domains may compromise adherence to medical treatment, psychological symptoms and both negatively affect patients’ QoL. Although the results of Mapelli et al. study highlight that replacement surgery, in this case LVAD implantation, in patients with heart failure may have a favorable impact on reduce and/or stabilize potential neurological and/or neurocognitive complications, the findings also clearly emphasize the mutual and reciprocal influence of neurocognitive complications and psychiatric or psychological symptoms [ 32 ].
+
+These factors not only affect the quality of life of patients but also have a significant impact on the onset of psychological issues among their caregivers. Furthermore, social living conditions, as well as the severity of functional and cognitive impairments, are increasingly recognized for their impact on cardiovascular outcomes, particularly in relation to daily self-management, treatment adherence, rehabilitation, and length of hospitalization [ 33 ].
+
+In summary, the quality of life (QoL) of patients with heart failure and/or those undergoing replacement surgery, such as heart transplantation and/or LVAD implantation, appears to both influence and be influenced by the occurrence of neuropsychological complications. Interventions aimed at stabilizing the cardiac condition seem to have a positive impact on several neurocognitive domains, thereby reducing psychiatric and/or psychological complications throughout the course of the disease, ultimately preserving QoL for both patients and caregivers [ 32 ].
+
+Several studies have highlighted that patients with cardiac disease and their caregivers, particularly those with chronic heart failure, are more likely to experience psychiatric and psychological symptoms, alongside neurological events, infections, and right heart failure [ 33 , 34 , 35 , 36 , 37 , 38 ]. Additionally, the presence of neurocognitive complications, by increasing both the duration and frequency of hospitalizations required for disease management (Pavol), may exacerbate social and rehabilitative challenges in patients with heart failure. This condition can severely affect treatment adherence, patients’ quality of life, rehabilitation pathways, and the recovery of functional autonomy in activities of daily living [ 31 ].
+
+## Clinical implications and future research directions
+
+Several studies in the literature clearly highlight that the presence of neurological problems and/or neurocognitive impairments, across different chronic diseases, is closely associated with longer hospital stays, increased hospitalization costs, and even higher mortality rates in inpatient settings [ 37 , 38 ].
+
+The findings of this review clearly highlight the close relationship between the neuropsychological and psychological dimensions—particularly quality of life—in patients with heart failure. It is also noteworthy that these factors provide important parameters for reflection that go beyond the current conceptualization of quality of life in the literature. In particular, the circular impact of these two dimensions can be observed not only on the duration and recurrence of hospitalizations, but also on rehabilitation and treatment pathways, as well as on the patient’s overall social and care framework.
+
+Assessing cognitive function in adult patients awaiting HTx may therefore have significant implications for post-surgical trajectories. Early detection and treatment of deficits before they progress to MCI could improve treatment adherence, shorten hospital stays, reduce the risk of post-transplant depression, and ultimately enhance survival [ 39 , 40 ]. Moreover, identifying and implementing multidimensional prehabilitation programs tailored to individual patients prior to surgery has been suggested as a strategy to mitigate adverse effects of the procedure and improve outcomes [ 28 ]. In particular, several key determinants warrant consideration: socioeconomic barriers and lower educational attainment, which may limit access to pre-HTx neuropsychological evaluation (Jha et al., 2016). Cognitive assessment should be interpreted within the context of education level, health literacy, and cultural background, as these factors substantially influence test performance. The use of unadjusted screening instruments may therefore increase the risk of misclassification, potentially leading to false-positive results, particularly among individuals with lower educational attainment or from culturally diverse populations [ 41 ]. Depression, affecting an estimated 20–42% of patients with advanced heart failure awaiting HTx, represents a major confounding factor, as it may both mimic and exacerbate cognitive impairment [ 42 ]. In contrast to cognitive decline, for which standardized pre-HTx screening remains inconsistent, depression assessment is already embedded within guideline-recommended psychosocial evaluation, with validated tools and structured clinical pathways available [ 43 ] (Table  4 ).
+
+Despite clear evidence linking cognitive impairment with relevant clinical outcomes, often more strongly than physical frailty, our review highlights how rarely pre-transplant cognitive assessments are performed in clinical practice. Given the high prevalence and heterogeneous nature of cognitive impairment in heart transplant candidates, systematic formal neuropsychological assessment may be appropriate as part of routine transplant evaluation, particularly in patients aged ≥ 65 years. Second-level investigations, such as structural brain imaging or selected blood-based biomarkers, could be considered when a neurodegenerative etiology is clinically suspected.
+
+Moreover, no diagnostic or therapeutic strategies are currently available to specifically address these deficits and their sequelae post-transplant. To our knowledge, no studies have systematically examined the role of immunosuppressive therapy in the progression of cognitive impairment in HTx recipients.
+
+The assessment of cognitive performance and its impact on functional outcomes is often underestimated, even in patients evaluated for other types of solid-organ transplantation. For this reason, early efforts have emerged to validate transplant-specific tools capable of identifying cognitive deficits before surgery and thereby reducing their downstream impact after the procedure [ 44 ]. Early recognition of such deficits may help identify patients who could benefit from targeted cognitive pre-habilitation programs. Although only few studies have examined the effects of multicomponent training in this population, preliminary results are promising [ 45 ]. The validation and implementation of these programs are increasingly expanding within solid-organ transplant evaluations, demonstrating improvements in outcomes, including quality of life and the potential reversibility of frailty [ 46 ].
+
+Furthermore, these findings are consistent with recent ESC Guidelines, which emphasize that frailty—including its cognitive and psychosocial components—is a dynamic and potentially reversible condition whose assessment is essential in older adults with cardiovascular disease. The Guidelines further highlight the absence of standardized screening protocols for cognitive and mental health assessment in complex cardiac populations, reinforcing the need for structured neuropsychological evaluation and multidisciplinary management pathways for HTx candidates [ 47 ].
+
+What clearly emerges is that there are important clinical implications derived from assessing both frailty and cognition—two interconnected, modifiable factors capable of altering post-transplant trajectories.
+
+This gap in the literature underscores the need for further research into the long-term cognitive effects of immunosuppressive treatment. A better understanding of how these therapies contribute to cognitive decline could help develop strategies to minimize their impact and improve overall QoL in heart transplant patients.
+
+## Study limitations
+
+To our knowledge, this is the first systematic review that integrates physical and cognitive frailty, hemodynamic characteristics, and functional outcomes in elderly subjects candidates for heart transplants. However, some limitations need to be mentioned.
+
+First, the number of eligible studies was small, particularly regarding quality of life, which limits the generalizability of our findings. Second, considerable heterogeneity existed across studies in terms of design, sample size, patient characteristics, and assessment tools, especially the reliance on screening instruments such as the MoCA rather than comprehensive neuropsychological batteries. Third, most studies were observational, with limited follow-up, which restricts conclusions about causality and long-term outcomes. Fourth, potential publication bias cannot be excluded, as studies reporting negative or inconclusive findings may have been less likely to be published. Finally, our search was limited to studies published in selected languages, which may have excluded relevant work from other regions.
+
+Despite these limitations, the results converge to highlight the urgent need for structured diagnostic pathways in this population and emphasize the importance of further investigations to better characterize the pathophysiological mechanisms underlying cognitive impairment associated with heart failure. These mechanisms may differ in both clinical and epidemiological profiles from those observed in neurodegenerative diseases [ 22 ]. In older candidates with screening-detected MCI, second-level neuropsychological testing, neuroimaging, and emerging blood biomarkers should be considered to establish an accurate differential diagnosis between HF-related impairment and early neurodegenerative processes.
+
+## Conclusions
+
+This review highlights the importance of systematically assessing cognitive function in heart transplant candidates, as cognitive impairment has a significant impact on both post-surgical outcomes and quality of life.
+
+Despite strong evidence linking cognitive deficits to poorer survival and longer intensive care unit (ICU) stays after transplantation, pre-transplant cognitive assessments are still rarely performed, revealing a critical gap in current clinical practice.
+
+Future research should prioritize the development of diagnostic and therapeutic strategies for cognitive impairment in this population, with particular attention to the long-term effects of immunosuppressive therapy on cognitive outcomes.
+
+## Abbreviations
+ HTx 
+Heart transplantation
+ HF 
+heart failure
+ CI 
+Cognitive impairment
+ QoL 
+quality of life
+ PRISMA 
+Preferred Reporting Items for Systematic Review and Meta-Analyses
+ PIOS 
+Population, Intervention, Outcomes, and Study Design
+ MoCA 
+Montreal Cognitive Assessment
+ HC 
+healthy controls
+ VO2 
+cardiorespiratory fitness
+ VT1 
+ventilatory threshold
+ NPSI 
+neuropsychological assessment
+ IQ 
+intelligence quotient
+ MCI 
+mild cognitive impairment
+ KCCQ 
+Kansas City Cardiomyopathy Questionnaire
+ EQ-5D-5L 
+EuroQol 5-Dimension-5-Level Questionnaire
+ SF-36 
+Short Form Health Survey 36
+ SCL-90 
+Symptom Checklist-90
+ ICU 
+intensive care unit
+ NYHA 
+New York Heart Association
+ BNP 
+B-type Natriuretic Peptide
+ DA 
+depression and anxiety
+
+ Publisher’s Note 
+
+Springer Nature remains neutral with regard to jurisdictional claims in published maps and institutional affiliations.
+
+I. Parrotta and M. Valente shared first authorship.
+
+F. Burgio and L. Potena shared last authorship.
+
+## Author contributions
+
+Conceptualization and Methodology: Ilaria Parrotta, Marco Valente. Data Analysis and Writing – Original Draft: Elena Piazzalunga, Elena Scarpa, Laura Danesin. Supervision and Writing – Review & Editing: Luciano Potena, Dante Mantini, Lucia Golfieri, Francesca Burgio.
+
+## Data availability
+
+No datasets were generated or analysed during the current study.
+
+## Declarations
+
+## Competing interests
+
+The authors declare no competing interests.

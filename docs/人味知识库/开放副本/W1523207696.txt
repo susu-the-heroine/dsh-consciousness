@@ -1,0 +1,2756 @@
+Judgment and Decision Making, Vol. 7, No. 3, May 2012, pp. 332–359
+A new intuitionism: Meaning, memory, and development in
+Fuzzy-Trace Theory
+Valerie F. Reyna ∗
+Abstract
+Combining meaning, memory, and development, the perennially popular topic of intuition can be approached in
+a new way. Fuzzy-trace theory integrates these topics by distinguishing between meaning-based gist representations,
+which support fuzzy (yet advanced) intuition, and superﬁcial verbatim representations of information, which support
+precise analysis. Here, I review the counterintuitive ﬁndings that led to the development of the theory and its most recent
+extensions to the neuroscience of risky decision making. These ﬁndings include memory interference (worse verbatim
+memory is associated with better reasoning); nonnumerical framing (framing effects increase when numbers are deleted
+from decision problems); developmental decreases in gray matter and increases in brain connectivity; developmental
+reversals in memory, judgment, and decision making (heuristics and biases based on gist increase from childhood to
+adulthood, challenging conceptions of rationality); and selective attention effects that provide critical tests comparing
+fuzzy-trace theory, expected utility theory, and its variants (e.g., prospect theory). Surprising implications for judgment
+and decision making in real life are also discussed, notably, that adaptive decision making relies mainly on gist-based
+intuition in law, medicine, and public health.
+Keywords: fuzzy-trace theory, prospect theory, dual-process theory, choice, gist, memory, heuristics and biases, devel-
+opmental reversal, framing effect.
+1 Introduction
+What are the cutting-edge approaches to judgment and
+decision making that will be inﬂuential in the next
+decade? Which hot topics today will turn into the en-
+during foundational assumptions of tomorrow? These
+questions concern new investigators, as they place bets
+with their most precious commodity, their time, by choos-
+ing topics in hopes of making an impact on the ﬁeld.
+However, although new investigators strive to be origi-
+This article is based on a Presidential Address to the Society
+for Judgment and Decision Making, November 2010. I am grate-
+ful to my colleagues and collaborators, especially my dear SJDM
+friends. Special thanks are due to Bill and Kay Estes, Farrell
+Lloyd, Baruch Fischhoff, Chris Wolfe, Richard Durán, and, my hus-
+band, Chuck Brainerd. You have all made an enormous difference
+in my life and in my work. Also, I thank Grover (Russ) White-
+hurst and Secretary Rod Paige for giving me the opportunity to cre-
+ate national programs and policies, including a new research agency.
+To the funding agencies that made my work possible—the private
+foundations, National Science Foundation, and National Institutes of
+Health—thank you for your support (most recently, RO1MH-061211,
+R21CA149796, R13CA126359, BCS-0840111, and RC1AG036915–
+01). This manuscript was completed while the author was a Distin-
+guished Fellow, with support from the Sage Center for the Study of the
+Mind at University of California, Santa Barbara. Request reprints at
+http://www.human.cornell.edu/hd/reyna/publications.cfm.
+∗Cornell University, Center for Behavioral Economics and Deci-
+sion Research, Human Development, Psychology, Cognitive Science,
+and Neuroscience (IMAGINE Program), Cornell University, Ithaca, NY
+14853. Email: vr53@cornell.edu
+nal and forward thinking, they are also counseled to con-
+duct programmatic and cumulative research. That is, to
+make progress on important topics, scientists must build
+on prior accomplishments, their own and those of others.
+In this essay, I provide an overview of recent devel-
+opments in one theory, and their origins in prior scien-
+tiﬁc research. Moreover, the topics were chosen with a
+view to the future. These are my bets about which ap-
+proaches have been productive and are gathering momen-
+tum. Fortunately, these prognostications are more than
+simply my opinions (barely more than that perhaps) be-
+cause they are based on the behavior of a community of
+scholars. These ideas continue to gain greater currency as
+our ﬁeld searches for new paradigms and preoccupations
+(e.g., Burson, Larrick, & Lynch, 2009; De Neys & Van-
+derputte, 2011; Kühberger & Tanner, 2010; Stanovich &
+West, 2008).
+What are the topics that I, and others, believe are
+taking off and will continue to progress? Among the
+new trends, the most established topic—one that draws
+on a rich supply of prior research—is memory. Re-
+searchers are increasingly turning to memory for expla-
+nations of judgment and decision making (for a review
+of the literature illustrating this point, see Weber & John-
+son, 2009). Memory is much more than memorization,
+as I presently explain. A growing number of contem-
+porary theories have memory as a common denomina-
+tor (e.g., see Dougherty, Franco-Watkins, & Thomas,
+332
+https://doi.org/10.1017/S1930297500002291 Published online by Cambridge University Press
+Judgment and Decision Making, Vol. 7, No. 3, May 2012 The gist of intuition 333
+2008; Pleskac & Busemeyer, 2010; Ratcliff & McK-
+oon, 2008; Schooler & Hertwig, 2005; Weber, Johnson,
+Milch, Chang, Brodschool, & Goldstein, 2007).
+Development, deﬁned as changes across the lifespan,
+is another topic that has gained ground. Because of
+links to aging and to adolescent risk taking in psychia-
+try, public health, and neuroscience, this topic has surged
+in popularity, although it is less established within judg-
+ment and decision making (e.g., see Baron, 2007; Casey,
+Getz, & Galvan, 2008; Figner, Mackinlay, Wilkening,
+& Weber, 2009; Jacobs & Klaczynski, 2005; Lejuez et
+al., 2002; Levin & Hart, 2003; Mikels & Reed, 2009;
+Steinberg, 2008; see also Brainerd, Reyna, & Howe,
+2009). Notwithstanding that Tversky and Kahneman
+(1983) drew on Piagetian cognitive illusions to charac-
+terize heuristics and biases (e.g., Bruner, 1966), theo-
+ries of adult judgment and decision making are only
+now incorporating developmental results in their core as-
+sumptions. Developmental results inform conceptions of
+whether choices are rational, adaptive, or good (Reyna &
+Farley, 2006). These results have been surprising. Know-
+ing that children reason rationally (in the classic sense)
+and that adults forego rational reasoning—which they are
+capable of—in favor of heuristics and biases casts expla-
+nations of judgment and decision making in an entirely
+new light (Reyna & Brainerd, 1994; 2011).1
+Last, the topic of meaning is the least established
+among the new trends. Nevertheless, the concept of
+meaning has tremendous potential to organize thinking
+about judgment and decision making, to propel the ﬁeld
+forward in new and original directions, and to effect prac-
+tical changes in real-world behavior (e.g., Peters et al.,
+2006; Sunstein, 2008). As Sunstein (2008) advises, “un-
+derstanding of meaning and its malleability. . . suggests
+some tools that policymakers might use” (p. 146) and he
+exhorts public and private institutions to employ “mean-
+ing entrepreneurs” to move behavior in better directions.2
+Combining meaning, memory, and development, the
+perennially popular topic of intuition can be approached
+in a new way. Fuzzy-trace theory integrates these top-
+ics by distinguishing between meaning-based memory
+representations—gist—and superﬁcial verbatim repre-
+sentations of information. (People use their memories to
+represent information even when the information is visi-
+ble.) Intuition, in this view, relies on the meaning-based
+gist representations, but it is not developmentally primi-
+tive (Barrouillet, 2011a). On the contrary, intuitive think-
+1By “heuristics and biases”, I refer to the vast literature illustrating
+such empirical effects in adults as the representativeness heuristic, fram-
+ing biases, and so on (Gilovich, Grifﬁn, & Kahneman, 2002). Many of
+these effects have been shown to increase developmentally (i.e., from
+childhood to adulthood; see Table 3 in Reyna & Farley, 2006, for a
+summary; Reyna & Brainerd, 2011).
+2See also, “The Meaning of Consumption,” an interdisciplinary con-
+ference at Cornell University, August 14–17, 2008.
+ing underlies the most advanced thinking (e.g., Adam &
+Reyna, 2005; Reyna & Lloyd, 2006).
+However, intuition produces meaning-based distor-
+tions in memory and reasoning. These distortions in-
+crease from childhood to adulthood, creating “develop-
+mental reversals” (i.e., children “outperform” adults un-
+der conditions that elicit meaning-based biases; Reyna &
+Farley, 2006, Table 3). These ﬁndings were predicted by
+the framework described here (e.g., Reyna & Ellis, 1994),
+but they violate core assumptions of other dual-process
+and developmental theories (despite recent acknowledge-
+ment of their reality and attempts at post hoc reconcil-
+iation; e.g., for illuminating discussions, see the recent
+special issue on dual-process theories in Developmental
+Review: Barrouillet, 2011a; Stanovich, West, & Toplak,
+2011).
+In the section below on Origins, I describe how this in-
+tegrated account of meaning, memory, and development
+came about. Before that account, however, I summarize
+the central premises of fuzzy-trace theory; provide exam-
+ples of how these premises are supported by critical tests
+of explicit hypotheses; and describe how these theoretical
+ideas differ from others.
+1.1 Preamble
+1.1.1 Verbatim and gist representations
+Fuzzy-trace theory encompasses memory, reasoning,
+judgment, and decision making—and their development
+across the life span (see Reyna & Brainerd, 1995a,
+1995b). Although I provide a summary of the basic tenets
+of the theory here, the evidence for it comes from a very
+large literature; so no single study tests the entire theory.
+The basic tenets are fairly simple, however: The central
+tenet is that people encode, store, retrieve, and forget ver-
+batim and gist memories separately and roughly in par-
+allel. (My colleagues and I have conducted experiments,
+and constructed models, that differentiate retrieval from
+storage, storage from forgetting, and so on; e.g., Brainerd,
+Reyna & Howe, 2009; Reyna & Brainerd, 1995a.) The
+distinction between verbatim and gist memory was es-
+tablished in psycholinguistics (for an overview, see Clark
+& Clark, 1977). Verbatim memory is memory for sur-
+face form, for example, memory representations of exact
+words, numbers and pictures. Verbatim memory is a sym-
+bolic, mental representation of the stimulus, not the stim-
+ulus itself. Gist memory is memory for essential mean-
+ing, the “substance” of information irrespective of exact
+words, numbers, or pictures. Hence, gist is a symbolic,
+mental representation of the stimulus that captures mean-
+ing.
+However, psycholinguists did not consider verbatim
+and gist memory representations to be independent; the
+https://doi.org/10.1017/S1930297500002291 Published online by Cambridge University Press
+Judgment and Decision Making, Vol. 7, No. 3, May 2012 The gist of intuition 334
+independence idea was introduced in fuzzy-trace theory.
+(For summaries of critical tests of this idea, see Reyna,
+1992; 1995; Reyna & Brainerd, 1995a.) Instead, psy-
+cholinguists assumed that gist memories were derived
+from verbatim memories, and the latter faded away—
+the kernel of meaning (gist memory) was extracted from
+information and the husk of the surface form (verbatim
+memory) was discarded (see also Kintsch, 1974). This
+notion that gist is extracted from verbatim memory re-
+mains a popular misconception.
+Disproving this claim that verbatim and gist are de-
+rived in tandem, many experiments have shown that ver-
+batim and gist memory representations are actually ex-
+tracted in parallel from the same stimulus (e.g., Reyna
+& Brainerd, 1992; 1995a). Thus, fuzzy-trace theory
+falls into the class of parallel models (Sloman, 2002),
+as opposed to the class of default-interventionist models
+(Evans, 2008; Kahneman, 2003; but, for discussion of
+fuzzy-trace theory’s assumptions about monitoring and
+inhibition, see Reyna, in press; Reyna & Mills, 2007b;
+Reyna, Estrada et al., 2011). For example, independent
+storage is exempliﬁed in experiments on subliminal se-
+mantic priming, showing that semantic priming can occur
+(e.g., presenting the word “doctor” increases processing
+speed for the word “nurse”) even when exemplar words
+(“doctor”) are presented so fast that they cannot be en-
+coded (i.e., verbatim memory for exemplar words is at
+chance). (Research on subliminal semantic priming and
+its relation to gist is summarized in chapter 4 of Brainerd
+& Reyna, 2005.) Conversely, storage of verbatim memo-
+ries can occur without storage of gist; for example, when
+nonsense syllables are presented (rather than meaningful
+words or sentences), memory fades quickly and meaning-
+based false memory effects disappear (Brainerd, Reyna,
+& Brandse, 1995). That is, false recognition of similar
+(but never-presented) nonsense syllables is not stable over
+time, but gist-based false recognition is stable over time.
+In addition, retrieval dissociation has been dramat-
+ically demonstrated in experiments that test whether
+recognition of verbatim and gist memories of sentences
+covary (if gist were derived from verbatim memories,
+such covariance should be detected; Reyna & Kiernan,
+1994; 1995). Crucially, memory dependency is as-
+sessed by examining contingencies within subjects and
+within problems: The question is whether gist memory
+for presented sentences (“recognition” of novel sentences
+that express meaning) depends on verbatim memory for
+those same sentences? Under typical recognition test-
+ing conditions (testing after a short buffer and control-
+ling for word familiarity and a host of other factors),
+the answer is no. Verbatim memory for presented sen-
+tences is stochastically independent of gist memory for
+those sentences (i.e., independent of erroneous “recog-
+nition” of gist-consistent paraphrases and inferences).
+(Even when more than a dozen experiments from dif-
+ferent investigators were examined, no verbatim-gist co-
+variance was detected; Brainerd & Reyna, 1992.) After
+one week, recognition of these same presented sentences
+and gist-consistent paraphrases/inferences becomes pos-
+itively dependent—converging evidence demonstrated
+that recognition after a week was based on gist (Reyna
+& Kiernan, 1994; 1995). After a delay, gist memory is
+being used to accept both presented items and meaning-
+consistent gist items.
+However, when verbatim memory is stronger (e.g.,
+through repetition of presented items and more imme-
+diate testing), negative dependency is detected between
+recognition of presented items and meaning-consistent
+items, the opposite of dependency results after a delay.
+Negative dependency is detected because verbatim mem-
+ory is being used to both accept presented items and
+to reject meaning-consistent gist items (e.g., Reyna &
+Kiernan, 1995; see Reyna & Brainerd, 1995a). Thus,
+the gamut of relations between presented and meaning-
+consistent (never-presented) items—independence, pos-
+itive dependency, and negative dependency—has been
+demonstrated for the very same items under predicted
+conditions. Each of these studies was designed to test
+predictions of fuzzy-trace theory (i.e., predictions were
+deduced from a ﬁnite set of premises), rather than stum-
+bling on these effects and explaining them after the fact.
+Certainly, science can progress by stumbling on effects,
+but my remarks pertain to the viability and generativeness
+of the present theory.
+One might argue that gist-based results, such as erro-
+neous recognition of meaning-consistent items (corrected
+for response bias) and positive dependency between pre-
+sented and unpresented items after a delay, occur because
+memory is constructive or schematic (e.g., Bransford &
+Franks, 1971; Loftus & Doyle, 1987). “Constructive”
+memory usually refers to the classic idea discussed ear-
+lier that people extract meaning from presented informa-
+tion (discarding surface form) later using what they re-
+member of the meaning to infer what actually occurred
+(i.e., memories are constructed from meaning). The idea
+of “schematic” memory is similar; memories are said to
+be selectively encoded, stored, and retrieved based on
+prior knowledge organized into “schemas” (e.g., Alba &
+Hasher, 1983).
+If words such as “constructive” and “schematic” are
+taken merely as descriptions of some memory effects
+(i.e., gist effects), then they are not theoretical claims
+about underlying mechanisms. However, when these
+words characterize memory at a theoretical level, then
+these theories have been shown to be resoundingly false
+by many investigators (e.g., for one summary, see Reyna
+& Lloyd, 1997). For example, Alba and Hasher’s 1983
+review of the literature asked, “Is memory schematic?”
+https://doi.org/10.1017/S1930297500002291 Published online by Cambridge University Press
+Judgment and Decision Making, Vol. 7, No. 3, May 2012 The gist of intuition 335
+and many experiments were presented demonstrating that
+the answer to this question is “no.” In those days, two
+theoretical camps contended with one another to explain
+memory: constructive or schema theorists versus ver-
+bal learning or associative activation theorists (Anderson,
+1971; 1975). In this article, I focus on psychological
+claims (e.g., the deﬁnition of association psychologically
+as a stimulus-stimulus or stimulus-response pairing), as
+opposed to ways in which psychological claims might
+be formalized or represented, as in associative activation
+networks, propositional logic, or production rules. (It
+is not that those formalizations are unimportant, but the
+mechanics of implementation should not overshadow the
+psychological substance.) Associative activation mod-
+els (in which association is a psychological claim) char-
+acterize memory as mindless stimulus-stimulus associa-
+tions (strengthened through pairing in experience) (e.g.,
+Robinson & Roediger, 1997). Research on fuzzy-trace
+theory has cataloged many effects that cannot be ex-
+plained by association models (e.g., Brainerd & Reyna,
+2005). Although each side of the memory debate con-
+cluded that their criticisms of the other side were sound,
+their predictions and results often contradicted one an-
+other (e.g., Reyna & Brainerd, 1995a). The experiments
+presented earlier (e.g., Reyna & Kiernan, 1994, 1995;
+and other experiments) demonstrated that both sides were
+“right” inasmuch as each side had half of the story–
+gist-consistent results and verbatim-consistent results–
+sometimes for the same stimuli.
+Note that attempts to “postdict” opposing results are
+not evidence for a theory’s truth in either memory or in
+judgment and decision making; postdictions do not com-
+pare favorably to actual predictions (Glöckner & Betsch,
+2011). So, summarizing this conﬂicting literature by say-
+ing that memory is constructive, except when it is not
+constructive, is not an argument that favors constructive
+memory theories because there is no mechanism in those
+theories that predicts when memory is constructive versus
+not. Parachuting in concepts such as “tags” to accommo-
+date conﬂicting ﬁndings, as in schema-plus-tag models,
+was ultimately unsuccessful, weakening the core assump-
+tions of the approach and reducing falsiﬁability. Analo-
+gous criticisms can be made of association theories that
+characterize memory as associative except when it is not
+associative.
+Association models, and corresponding simulation
+models, have many strengths (McClelland & Rumelhart,
+1981), but they also have weaknesses in failing to cap-
+ture meaning (associations can mimic understanding but
+through mindless memorization of what has been paired
+with what). Simulation models of known effects are
+sophisticated examples of postdiction (e.g., Dougherty,
+Getty, & Ogden’s, 1999, impressive MINERVA-DM
+model incorporates known effects). Some simulations
+have too many assumptions relative to the degrees of free-
+dom in the data (or assumptions are opaque—it is not
+clear how effects are simulated) to be falsiﬁable. Mod-
+els that are not falsiﬁable cannot be assumed to be true
+because there is no way to determine whether they are
+true. Naturally, all models have boundary conditions and
+gray areas in which predictions are not fully speciﬁed;
+otherwise, scientiﬁc knowledge would be complete and
+perfect, which it surely is not.
+However, association models fail to predict a host of
+observed phenomena, such as stability of false memo-
+ries over time (both associative activation at study and
+at test have been ruled out as explanations for this phe-
+nomenon; e.g., Brainerd, Yang, Reyna, Howe, & Mills
+2008). Association—mindless memorization of learned
+answers to stock questions—also cannot predict far trans-
+fer of learning to novel instances (e.g., Reyna & Brainerd,
+1992). Can some post hoc explanation using associations
+be constructed to account for these results?; yes, but by
+that measure all theories can account for all results. As-
+sociation is an inherently meaningless relation (by def-
+inition), and hence does not easily explain phenomena
+caused by meaning. Therefore, successful simulations do
+not protect association models from empirical counterex-
+amples. Considering the evidence as a whole, central fea-
+tures of both traditional constructivist (or schema) and as-
+sociative memory models have been disputed by results
+from many experiments, even taking into consideration
+legitimate methodological critiques of the critiques.
+Fuzzy-trace theory carefully built on the foundations
+and results of both memory-model traditions, but it makes
+speciﬁc predictions about the conditions under which
+verbatim versus gist memory will control performance
+(Brainerd et al., 1999; Reyna & Brainerd, 1995a, 2011;
+it also drew on earlier efforts such as Pennington &
+Hastie’s, 1992, story model). For example, verbatim
+memory is more accessible immediately after stimulus
+presentation (compared to after a long-term retention in-
+terval); for cues that re-present stimuli (compared to un-
+presented meaning-consistent cues and even less so for
+unrelated cues); for adults (compared to children; both
+gist and verbatim memory ability develop in childhood);
+for novel metaphors (compared to less distinctive literal
+language); and for tasks that explicitly instruct subjects to
+base responses on verbatim memory (as opposed to gist)
+(see Brainerd & Reyna, 2005; Reyna & Brainerd, 1995a;
+Reyna & Kiernan, 1994; 1995).
+In addition to many experiments that explicitly tested
+opposing predictions (e.g., of fuzzy-trace theory vs.
+schema theory or vs. association theories), mathemati-
+cal models have been developed, and tested, for a variety
+of memory, judgment, and decision making tasks (e.g.,
+models of recognition, recall, disjunction fallacies, deci-
+sion making, and so on; e.g., Brainerd, Reyna, & Howe,
+https://doi.org/10.1017/S1930297500002291 Published online by Cambridge University Press
+Judgment and Decision Making, Vol. 7, No. 3, May 2012 The gist of intuition 336
+2009; Reyna & Brainerd, 2011). These models capture
+very simple assumptions about verbatim and gist repre-
+sentations, such as the deﬁnition of what verbatim and
+gist memories are, the assumption of independence, and
+differential forgetting of verbatim relative to gist memory
+over time, which not only ﬁt data but also predict para-
+doxes in memory, judgment, and decision making.
+For example, these assumptions predict that meaning-
+based “false” memories will be more consistent over time
+than true memories (Gallo, 2006; Reyna & Brainerd,
+1995a). Interviewed immediately after study, recognition
+of true memories is based on verbatim representations,
+whereas “recognition” of meaning-based false memories
+is based on gist (measures control for response bias). Af-
+ter a delay, both recognition judgments are based on gist
+memories. Therefore, the conditional probability (second
+interview conditional on ﬁrst interview) of saying “yes”
+to a true memory is lower than the conditional probabil-
+ity of saying “yes” to a false memory. All other factors
+equal, witnesses telling the truth will be less consistent
+on subsequent interviews, compared to those whose tes-
+timony is based on false memories (Reyna, Mills et al.,
+2006).
+Figure 1 provides an overview of how the verbatim-
+gist distinction plays out in a variety of tasks. Each type
+of representation that I have discussed—verbatim and
+gist—supports a different kind of processing. The pre-
+cise details of verbatim representations support precise
+processing, such as analyses or computations using exact
+numbers. Processing (as opposed to representation) in-
+volves retrieving reasoning principles and applying those
+principles to representations (e.g., see Reyna & Brain-
+erd, 1992; 1995a). A small number of reasoning prin-
+ciples seem to cover a large number of reasoning, judg-
+ment, and decision-making tasks. These principles are
+often engaged without conscious deliberation, even be-
+fore formal computational rules such as multiplication
+are learned in school (as shown by functional measure-
+ment research, e.g., Acredolo et al., 1989). When careful
+methodological controls are used, children as young as
+ﬁve or six exhibit the basic competence underlying many
+reasoning principles, even though their performance con-
+tinues to improve and become less variable from child-
+hood to adulthood (see Reyna, Estrada et al., 2011; Van
+Duijvenvoorde, Jansen, Bredman, & Huizenga, 2012).
+To take one example relevant to probability, the ratio
+principle is a commonly used reasoning principle (e.g.,
+probability depends on the ratio of the frequency of tar-
+get events to the total frequency of target and non-target
+events, or, alternatively, to their odds; see Reyna & Brain-
+erd, 1994). For people who are adept at computation,
+ratios seem to be calculated quickly and automatically
+(for a review of the literature on numeracy—how peo-
+ple understand and use numbers—see Reyna, Nelson, et
+al., 2009). When people lack understanding of the gist of
+task information, these ratios have been shown to be im-
+ported mechanically into judgment-and-decision-making
+tasks by people high in numeracy, even when the ratios
+make no sense and produce wrong answers. The latter is
+an example of verbatim-based analysis: processing exact
+information in a rote fashion rather than in a meaningful
+fashion. In contrast, as I discuss below, gist representa-
+tions support the fuzzy and impressionistic, but meaning-
+ful, processes of intuition.
+In general, adults encode both verbatim and gist rep-
+resentations in parallel, and they default to relying on
+gist representations to generate responses whenever the
+task permits (i.e., adults have a fuzzy-processing prefer-
+ence). Different task requirements are illustrated from
+left to right in Figure 1: When memory tasks require ex-
+act matches to presented information, verbatim represen-
+tations are used to reject meaning-consistent distractors
+(i.e., verbatim trumps gist). Presented with “The bird is in
+the cage” and “The cage is under the table” a person with
+this task instruction should reject the test probe “The bird
+is under the table.” These tasks go against the grain of
+normal thinking, the fuzzy-processing preference. Thus,
+they are difﬁcult and unnatural; gist-based responses rou-
+tinely bleed through in these tasks. For example, even
+in verbatim memory tasks, gist-based “false” memories
+(e.g., recognizing “The bird is under the table” as having
+been presented) are reported erroneously (e.g., Reyna &
+Kiernan, 1995).
+Continuing to the right in Figure 1, when a memory
+task requires recognizing the meaning of presented in-
+formation, both verbatim representations of presented in-
+formation and gist representations of meaning-consistent
+distractors produce correct acceptances. People can rec-
+ognize “The bird is in the cage” as being “true” either by
+remembering it verbatim or by recognizing that it is con-
+sistent with the gist of what was presented. Thus, even
+“memory” tasks such as recognition involve both verba-
+tim and gist memories, if task instructions do not limit re-
+sponses to only verbatim (directly studied) answers (e.g.,
+Reyna & Kiernan, 1994; Reyna & Mills, 2007b; see also
+Brainerd et al., 2009). After a delay, such recognition re-
+sponses are governed primarily by gist—as most recogni-
+tion tasks are in real life (e.g., Reyna, 2008; Reyna, Mills
+et al., 2006).
+In concert with the fuzzy-processing preference, rea-
+soning, judgment, and decision-making tasks generally
+rely on gist representations, as shown in the second row,
+in the third box to the right, in Figure 1. In fact, when the
+task requires non-literal comprehension, gist representa-
+tions of meaning are used to reject literal responses based
+on verbatim representations (rote memory for presented
+information) (i.e., gist trumps verbatim). For example,
+simply retrieving the exact words of a poem or a textbook
+https://doi.org/10.1017/S1930297500002291 Published online by Cambridge University Press
+Judgment and Decision Making, Vol. 7, No. 3, May 2012 The gist of intuition 337
+Figure 1: Tenets of fuzzy-trace theory tested in research on memory, judgment, and decision making
+Stimulus = Event or information
+Encode and store verbatim 
+representation.
+Encode and store gist 
+representation(s).
+Task =
+Recognize exact 
+words/numbers.
+Verbatim trumps gist.
+Task =
+Recognize meaning.
+Use verbatim and gist.
+Task =
+Process only meaning 
+(reject literal), as in 
+metaphor 
+comprehension.
+Gist trumps verbatim.
+Task =
+Decide.
+Use verbatim and gist.
+If verbatim is 
+indifferent, then 
+simplest gist trumps.
+If simplest gist is indifferent, then more 
+precise gist representation is used. 
+Categorical gist (some‐none, sure‐risky) 
+gives way to ordinal gist (less‐more, 
+low‐high).
+does not sufﬁce to demonstrate understanding. Processes
+that manipulate rote, verbatim information fall short in
+such tasks (e.g., “The prison guard is a hard rock” liter-
+ally interpreted as the guard had hard muscles or “The
+man is wearing a loud tie” literally interpreted as the man
+is wearing a tie that plays loud music; Reyna, 1996b).
+People with Asperger’s syndrome or autism, for example,
+tend to rely on verbatim-based processes; they have difﬁ-
+culty with non-literal language, such as metaphor, but are
+less subject to gist-based biases in reasoning, judgment,
+and decision-making (Reyna & Brainerd, 2011).
+The three examples of tasks in Figure 1 that I have dis-
+cussed so far correspond to three instructional require-
+ments: accept only presented information (reject mean-
+ing), accept either presented information or its meaning,
+and accept only meaning (reject presented information)
+(e.g., Brainerd et al., 1999; Reyna, Holliday, & Marche,
+2002; Reyna & Kiernan, 1994, 1995). The ﬁrst instruc-
+tion is given to witnesses in the courtroom; the second
+instruction applies to tests in the classroom; and the third
+instruction applies to creative endeavors that incorporate
+the past but do not recapitulate it (e.g., new patents or
+fashion design).
+Finally, the right-most box in Figure 1 illustrates how
+information is processed when a task does not require
+verbatim or gist representations. Again, both verbatim
+and gist representations are encoded in parallel, but gist
+is preferred by most adults (the fuzzy-processing prefer-
+ence). Adults begin with the lowest (categorical) level of
+gist and only proceed to higher (more precise) levels if the
+lower levels do not allow them to perform the task (e.g.,
+to differentiate between options in a choice task). For ex-
+ample, as shown in Figure 1, nominal or categorical gist
+(e.g., some lives are saved; some money is won; no lives
+are saved; no money is won) is the simplest gist of num-
+bers, such as numerical outcomes and probability values.
+If categorical distinctions fail to discriminate options, or-
+dinal distinctions (e.g., more lives are saved; more money
+is won; fewer lives are saved; less money is won) are
+used, and so on until options can be discriminated (see
+Figure 2 for a worked example). Gist reﬂects meaning,
+and so does not map one-to-one to verbatim quantities: a
+non-zero amount can be categorized as nil; a 20% chance
+of rain is low, whereas a 20% chance of a heart attack is
+high (Reyna, in press; Stone, Yates, & Parker, 1994).
+When verbatim and gist representations conﬂict (e.g.,
+analysis of exact numbers favors one option and qualita-
+tive intuition favors the other option), most people still
+prefer to rely on gist, but people with high need for cog-
+nition are likely to monitor this conﬂict and inhibit in-
+https://doi.org/10.1017/S1930297500002291 Published online by Cambridge University Press
+Judgment and Decision Making, Vol. 7, No. 3, May 2012 The gist of intuition 338
+Figure 2: Example of fuzzy-trace theory explanation of decision making for a gain-framed option
+Stimulus = 200 saved vs. 1/3
+probability 600 saved and 2/3 
+probability 0 saved.
+Verbatim representation:
+200 saved vs. 1/3 probability 600 
+saved and 2/3 probability 0 saved.
+Quantitative comparison:
+200(1.0) = 1/3(600) + 2/3(0)
+200 = 200.
+Retrieve cued value/principle:
+Quantitative evaluation = 
+probability X outcome.
+Indifferent
+Gist representation:
+Save some vs. save some or save none.
+Qualitative comparison:
+Save some = save some.
+Save some > save none.
+Retrieve cued value/principle:
+Saving some lives is better 
+than saving none.
+Choose sure thing
+Simplest 
+gist trumps
+coherent responses (e.g., Stanovich & West, 2008). In
+fuzzy-trace theory, intuition and impulsivity (lack of in-
+hibition) are distinct processes; for example, gist-based
+intuition increases with development from childhood to
+adulthood, whereas impulsivity decreases (e.g., Reyna, in
+press; Reyna & Brainerd, 2011; Reyna & Rivers, 2008).
+This development occurs because of experience in life,
+analogous to the development for adults from novice to
+expert in a domain of expertise (Reyna & Lloyd, 2006).
+As noted earlier, when people lack understanding of in-
+formation, as, for example, patients do when they ﬁrst re-
+ceive a rare medical diagnosis, they fall back on verbatim
+representations (as subjects did in the nonsense syllable
+experiment; see also Reyna, 2008). Within the limits of
+their knowledge, however, people strive to extract the gist
+and base their decisions on the simplest gist that allows
+them to accomplish the task (Reyna, 2012).
+In sum, fuzzy-trace theory’s tenet about independent
+“dual” verbatim and gist representations has survived
+strong tests, including tests of single and double disso-
+ciation, overcoming shortcomings identiﬁed for standard
+dual-process theories (e.g., Keren & Schul, 2009). There-
+fore, one crucial way that fuzzy-trace theory differs from
+other dual-process theories is that it has passed empirical
+tests that are required to assert dual systems or processes
+(e.g., see Reyna & Brainerd, 2008, for a recent sum-
+mary of evidence concerning Epstein, 2008’s, cognitive-
+experiential-self theory, or CEST, among other dual-
+process approaches; see also, Reyna, in press; Reyna &
+Brainerd, 2011; Reyna, Nelson et al., 2009). Neverthe-
+less, earlier approaches have informed fuzzy-trace the-
+ory (e.g., Anderson, 1971; Estes, 1980; Fischhoff, 2008;
+Hogarth & Einhorn, 1992; Kahneman, 2003; MacGre-
+gor & Slovic, 1986; Tversky & Kahneman, 1981 and
+others). For instance, gestalt theorists mounted devastat-
+ing criticisms of association theories that remain relevant
+https://doi.org/10.1017/S1930297500002291 Published online by Cambridge University Press
+Judgment and Decision Making, Vol. 7, No. 3, May 2012 The gist of intuition 339
+to such theories today. However, gestalt theory incorpo-
+rated nativist assumptions and lacked the concept of re-
+trieval cuing; these and many other features distinguish
+gestalt theory from fuzzy-trace theory, despite embracing
+the former’s distinction between nonproductive (associa-
+tive) and productive thought (Wertheimer, 1938). Adap-
+tive decision-making models were a major inﬂuence on
+fuzzy-trace theory because they link memory to decision
+making, but they lack the verbatim-gist distinction and
+thus cannot account for required crossover effects and
+other gist results (e.g., Payne et al., 1993). These and
+many other theories have inspired breakthroughs in psy-
+chology and cognate ﬁelds; fuzzy-trace theory has been
+held to account for the results generated from these ap-
+proaches, while striving to go beyond them in terms of
+new effects and new predictions.
+1.2 Origins
+My ﬁrst duty in discussing the origins of fuzzy-trace the-
+ory is to thank the teachers whose work had a tremendous
+inﬂuence on me: my graduate-school mentors, William
+K. Estes, for his memory models, and George A. Miller,
+for his work in psycholinguistics. Not coincidentally,
+Miller was the maven of meaning. The seminal expo-
+sure to psycholinguistics, however, occurred under the
+tutelage of my undergraduate advisor, the developmental
+psychologist Rachel Joffe Falmagne, notably, Kintsch’s
+(1974) classic, The Representation of Meaning in Mem-
+ory. This work brought memory and psycholinguistics
+together, relying on the distinction between verbatim and
+gist representations, later central to fuzzy-trace theory
+(see also Clark & Clark, 1977). The surface form—the
+exact words of a sentence—constitutes the verbatim level
+of representation; the text-based representation (gener-
+ated through comprehension and inference) and situation
+models (incorporating extra-textual information, such as
+world knowledge) together are what would now be called
+a hierarchy of gist in fuzzy-trace theory (Reyna & Brain-
+erd, 1995a). A hierarchy of gist is a collection of gist
+representations for the same stimulus at multiple levels of
+speciﬁcity and involving multiple levels of information—
+from the semantics of a word or sentence, to inferences
+derived deductively from sets of sentences, to pragmatic
+inferences that integrate world knowledge with textual in-
+formation (e.g., Kinstch, 1974; Reyna & Kiernan, 1994).
+Therefore, prior work on meaning and memory in-
+formed the origins of fuzzy-trace theory. The concept
+of gist addressed the criticisms aimed at the concept of
+schema, while conserving many of its useful features, and
+extending them to non-linguistic stimuli, such as numbers
+(e.g., Alba & Hasher, 1983). Predictions of fuzzy-trace
+theory, then, overlap somewhat but also differ in impor-
+tant ways from those of schema theory (e.g., Reyna &
+Lloyd, 1997). Mental models have more in common with
+fuzzy-trace theory than schema theory does, and were
+also a formative inﬂuence, but they lack the duality (and,
+thus, opposing predictions) of gist versus verbatim repre-
+sentations (see Barrouillet, 2011b; Johnson-Laird, 2010).
+Dual opposing predictions (opposing under conditions
+speciﬁed by the theory) are required to account for other-
+wise paradoxical results (e.g., Reyna & Brainerd, 1995a;
+Reyna & Kiernan, 1994; 1995).
+With training in both memory and psycholinguistics, I
+embarked on a postdoctoral fellowship with Amos Tver-
+sky and my formal foray into judgment and decision
+making. The success of the Tversky-Kahneman research
+program provoked disputes about rationality that were
+heated and instructive (e.g., at the Foundations and Appli-
+cations of Utility, Risk and Decision Theory Conference
+at Duke University in 1990). Amos was the ﬁrst person
+to teach me about a scientiﬁc approach to intuition and to
+intuitionism, rounding out my preparation. In the follow-
+ing, I explain how these intellectual inﬂuences regarding
+memory, meaning, and development led to a theory of
+intuition, fuzzy-trace theory.
+1.3 A road less traveled: Three themes that
+organize the evidence
+The empirical evidence that culminated in the current ver-
+sion of fuzzy-trace theory can be organized into three
+themes. Given my inﬂuences, it makes sense that the
+early work began with the question, “Does judgment and
+decision making process memory?” I refer to “memory”
+in the Simon (1955) sense that memory resources (or ca-
+pacity) constrain rationality, an assumption that most of
+us take for granted today, but which must be amended in
+important respects to capture the data. That is, does mem-
+ory, including working memory capacity, inﬂuence the
+quality of judgment and decision making (e.g., Corbin,
+McElroy, & Black, 2010)? The answer to that question
+turned out to be “no”, no in the narrow sense of process-
+ing exact memories for numbers and no in the traditional
+sense of memory capacity. (For a review of experiments
+distinguishing dual-task interference from processing ca-
+pacity and traditional memory capacity, see Reyna, 1995;
+Reyna & Brainerd, 1995a; for an overview, see Reyna,
+2005.)
+Another major theme of my work was the relation be-
+tween the two kinds of memory that are important in
+judgment and decision making–verbatim and gist mem-
+ory (Brainerd & Reyna, 1990; for summaries, see Reyna
+& Mills, 2007a; 2007b). Deﬁnitions of verbatim and
+gist memory were operationalized and formalized, build-
+ing on research in psycholinguistics per the earlier dis-
+cussion (e.g., Brainerd et al., 1999; Reyna & Brainerd,
+1995b; Reyna & Kiernan, 1994). The relation between
+https://doi.org/10.1017/S1930297500002291 Published online by Cambridge University Press
+Judgment and Decision Making, Vol. 7, No. 3, May 2012 The gist of intuition 340
+true (verbatim-based) and “false” (gist-based) memory
+occupied this middle period because it offered an oppor-
+tunity to study the fuzzy boundary between memory as
+traditionally deﬁned (exact memory for information), on
+the one hand, and reasoning, judgment and decision mak-
+ing, on the other hand. “False” memories, it turned out,
+were often the product of gist-based reasoning, judgment,
+or decision-making processes, mistakenly attributed to
+actual experience (e.g., Kim & Cabeza, 2007; Reyna,
+Holliday, & Marche, 2002). These verbatim-gist distinc-
+tions have ﬁgured extensively in neuroscience research
+on memory (e.g., Dennis, Kim, & Cabeza, 2008; Schac-
+ter, Guerin, & St. Jacques, 2011; Slotnick & Schacter,
+2004).
+Most recently, I have focused on a third theme, whether
+gist-based intuition is primitive, as assumed in stan-
+dard dual-process theories, or advanced, as suggested
+in gestalt theory (Reyna & Brainerd, 1998). Research
+concerning intuitive processes in judgment and decision
+making has shown that advanced cognition relies on gist-
+based intuition (e.g., Reyna & Farley, 2006; Reyna &
+Hamilton, 2001; Reyna & Lloyd, 2006). Table 1 sum-
+marizes major domains of evidence gathered under each
+of the three themes. Before I proceed to speciﬁc ﬁndings,
+however, it is useful to explain basic concepts and relate
+them to intuition.
+2 Terms and concepts
+2.1 What is intuition?
+Intuition has remained a hot topic, both in the ﬁeld and
+in the popular press (Baron, 1998; Gigerenzer, 2007;
+Glöckner & Witteman, 2010; Hogarth, 2001; Plessner,
+Betsch, & Betsch, 2007). The standard view of intu-
+ition is captured in dual-process approaches pitting intu-
+ition and emotion against logic and deliberation: the old
+reptilian brain and limbic system (intuition) versus the
+neocortex (rationality; e.g., De Martino, Kumaran, Sey-
+mour, & Dolan, 2006). This familiar dualism harkens
+back to Descartes and to Freud’s primary and secondary
+processes (Reyna, Nelson, Han, & Dieckmann, 2009). In
+this standard view, intuition is the old system of animal
+impulses and low-level decision making (the experien-
+tial system “1” to reﬂect its primacy in evolution) as con-
+trasted with conscious cognition and high-level decision
+making (the rational system “2” to reﬂect its recency in
+evolution; Epstein, 1994; Stanovich & West, 2008).
+The problem with this familiar dualism is that the data
+do not consistently support it. People higher in self-
+reported rational, as opposed to intuitive, thinking do not
+consistently show fewer biases and heuristics; in fact,
+they are more prone to certain biases (Peters et al., 2006;
+Reyna & Brainerd, 2008; Reyna et al., 2009). These
+results are a problem for dual-process models because
+they directly contradict explicit predictions of those mod-
+els (e.g., Epstein’s rational-experiential inventory, REI,
+is supposed to explain and predict biases; see Reyna &
+Brainerd, 2008). Indeed, a major motivation for dual-
+process theories has been to account for both logical or
+rational thinking and violations of logic and probabil-
+ity theory as manifested in heuristics and biases; the lat-
+ter were said to originate chieﬂy through intuition (e.g.,
+Epstein, 1994; Kahneman, 2003; Peters et al., 2006).
+(Again, the question is not whether standard intuition
+theorists can provide post hoc rationalizations of results
+that run counter to their core mechanisms, but, rather, the
+question is what the mechanisms of those theories actu-
+ally predict.) Not all intuition theorists are standard dual-
+ists, however (e.g., Betsch & Glöckner, 2010).
+As fuzzy-trace theory predicts, unconscious gist-based
+intuition often produces superior reasoning (when there
+is a gist to uncover) compared to conscious analytical
+thought that focuses on superﬁcial details (Dijksterhuis,
+Bos, van der Leij, & van Baaren, 2009). The over-
+all developmental shift, according to fuzzy-trace the-
+ory, is from greater reliance on verbatim-based analysis
+to greater reliance on gist-based intuition in reasoning,
+judgment, and decision making (e.g., Reyna & Brainerd,
+1995a, 2011). Rather than facilitating reasoning (or be-
+ing neutral) as classic decision theories assume, verba-
+tim memory can interfere with reasoning. To take one
+example of a counterintuitive effect of verbatim memory
+on reasoning, experiments on fuzzy-trace theory showed
+that removing numbers and other background informa-
+tion (so that verbatim memory faded) systematically im-
+proved reasoning involving those numbers, especially in
+reasoners likely to focus on superﬁcial details. In these
+problems, quantitative information suggested the wrong
+answer, but the qualitative gist supported the right an-
+swer (Brainerd & Reyna, 1995). Therefore, worse mem-
+ory for numbers was associated with better reasoning per-
+formance (this effect was not about a few data points;
+rather, there was a negative dependency, an inverse corre-
+lation, between memory accuracy and reasoning perfor-
+mance across the range of data points; Reyna & Brainerd,
+1995a). Conversely, increasing cognitive load to high lev-
+els has been shown to leave gist-based reasoning unim-
+paired (e.g., see Brainerd & Reyna, 1992; Reyna, 1995;
+Reyna & Brainerd, 1990).
+Rather than discard the classic distinction between in-
+tuition and analysis entirely, fuzzy-trace theory reﬁned
+and augmented it. (For a review of how the theory han-
+dles conﬂicts between emotion and inhibition, see Rivers
+et al., 2008.) Two kinds of reasoning—verbatim-based
+analysis and gist-based intuition—were retained in the
+theory, accompanied by developmental and individual
+differences in impulsivity (or lack of inhibition; Reyna,
+https://doi.org/10.1017/S1930297500002291 Published online by Cambridge University Press
+Judgment and Decision Making, Vol. 7, No. 3, May 2012 The gist of intuition 341
+Table 1: Examples of domains of evidence for fuzzy-trace theory with illustrative references (core judgment-and-
+decision-making overviews are Reyna, 2008; Reyna & Brainerd, 1995a; 2008; 2011; Reyna, Estrada et al., 2011)
+Comprehension and reasoning
+Logical reasoning (e.g., transitive inference; Reyna & Brainerd, 1990)
+Pragmatic inference (Reyna & Kiernan, 1994)
+Moral reasoning (Reyna & Casillas, 2009)
+Metaphor comprehension (Reyna & Kiernan, 1995)
+Recognition and recall
+True and false memory (Reyna, Mills, Estrada, & Brainerd, 2006)
+Effects of emotion on memory (Brainerd, Holliday, Reyna, Yang, & Toglia, 2010)
+Probability judgment
+Conjunction and disjunction fallacies (Wolfe & Reyna, 2010)
+Base-rate neglect (Reyna, 2004)
+Hindsight bias (Reyna, 2005)
+Denominator neglect (Reyna & Brainerd, 2008)
+Conversion errors in conditional probability judgment (Lloyd & Reyna, 2001)
+Risk perception
+Gist-based distortions in risk perception (Reyna, 2008)
+Opposite correlations between risk perception and risk taking (Mills, Reyna, & Estrada, 2008)
+Effects of knowledge and cuing on risk perception (Reyna & Adam, 2003)
+Decision making
+Framing effects and variations (Reyna, Estrada et al., 2011)
+Preference reversals (Reyna & Brainerd, 1995a)
+Effects of emotion on judgment and decision making (Rivers et al., 2008)
+Effects of expertise on judgment and decision making (Reyna & Lloyd, 2006)
+Effects of numeracy on risk perception and decision making (Reyna, Nelson et al., 2009)
+Development
+Adolescent risk taking (Reyna & Farley, 2006)
+Developmental increases in intuition (i.e., developmental reversals; Brainerd, Reyna, & Ceci, 2008)
+Developmental reversals in risky decision making (Reyna & Brainerd, 2011)
+Estrada, et al., 2011; Reyna & Rivers, 2008). Note that
+there is a role for rote stimulus-response (or stimulus-
+stimulus) associations in fuzzy-trace theory. These kinds
+of mindless associations or rote computations would fall
+under verbatim-based processes, as opposed to gist-based
+processes (e.g., matching bias, Evans, 2011; see also Lib-
+erali et al., 2011; Wolfe, Reyna, & Brainerd, 2005). As-
+sociation, as in stimulus-response driven choice, is an ex-
+ample of rote processing, and, thus, are verbatim-based
+processes, as opposed to intuition as deﬁned in fuzzy-
+trace theory (see Glöckner & Witteman, 2010). These
+fuzzy-trace theory distinctions are not simply opinions,
+but, instead, are justiﬁed by speciﬁc ﬁndings (e.g., see
+Brainerd et al., 1999; Reyna & Brainerd, 1995a, 1995b).
+Intuition in fuzzy-trace theory is similar to the old
+ideas about intuition in some ways: It is fuzzy rather
+than precise, operates in parallel rather than being se-
+rial, and typically is unconscious and automatic (a con-
+clusion resting on evidence from mathematical mod-
+els and experiments). However, intuition is not neces-
+sarily primitive and it is not a result of rote stimulus-
+response (or stimulus-stimulus) associations, in contrast
+to Sloman’s (1996, 2002) and others’ conceptions (e.g.,
+Gilovich, Grifﬁn, & Kahneman, 2002; Glöckner & Wit-
+teman, 2010). Rather than being mindless and low-level,
+the core construct of cognition in fuzzy-trace theory (the
+fuzzy trace, also called gist) is based on meaning—on
+extracting the essential, bottom-line meaning of informa-
+tion.
+https://doi.org/10.1017/S1930297500002291 Published online by Cambridge University Press
+Judgment and Decision Making, Vol. 7, No. 3, May 2012 The gist of intuition 342
+Figure 3: A new intuitionism: Fuzzy meaning
+INTUITION
+ MEANINGGIST
+Hence, fuzzy-trace theory differs from standard views
+of intuition, which is what is new about this new intu-
+itionism. On the one hand, there is the classical view of
+intuition as an unconscious, fuzzy, parallel process, and
+then, on the other hand, there are notions of meaning, and
+usually meaning and intuition do not go together. How-
+ever, in this theory, gist—the central construct—is at the
+intersection between intuition and meaning (Figure 3). In
+real life, in natural decision making, people are mean-
+ing makers. They look for meaning (e.g., for patterns
+that can be interpreted), and they base their judgments
+and decisions on that essential meaning (e.g., Gaissmaier
+& Schooler, 2008; Proulx & Heine, 2009; Reyna, 2012;
+Wolford, Newman, Miller, & Wig, 2004). What is the
+meaning of the event or the information, in the broad
+sense? Typically, people encode multiple meanings for
+a given stimulus. The gist representations of a stimulus
+encompass the meaning to us as individuals, the mean-
+ing to us based on our life history, and the meaning in
+our culture (Reyna, 2004, 2008; Reyna & Adam, 2003;
+Reyna et al., 2009). In the following section, I discuss
+how this concept of gist representations of information
+plays out in speciﬁc psychological phenomena, and how
+representations are combined with retrieval of social val-
+ues and moral principles, which are then applied to those
+representations to produce judgments and decisions.
+3 Sample phenomena
+3.1 Risk-taking: Framing effects in adults
+In this section, I discuss examples of phenomena stud-
+ied under the rubric of fuzzy-trace theory. As noted, the
+early work on framing was aimed at the question, “Do
+judgment and decision making process memory in the
+narrow sense?”, and the answer was, surprisingly, no.
+As an example, precise verbatim information (e.g., exact
+numbers) was neither necessary nor sufﬁcient to observe
+framing effects (e.g., Kühberger & Tanner, 2010; Reyna
+& Brainerd, 1991, 1995a). I ﬁrst discuss psychophysi-
+cal predictions of traditional approaches, such as prospect
+theory, followed by predictions from fuzzy-trace theory
+for these same manipulations (see Figure 2). The main
+point of these comparisons is not whether prospect the-
+ory might accommodate some of these results after the
+fact, but whether the psychophysics of numbers is both
+necessary and sufﬁcient to observe the range of observed
+framing effects.
+Framing effects describe shifts in risk preferences, for
+instance, from risk aversion when prospects are described
+in terms of gains (e.g., money won or number of people
+saved) to risk seeking when the same prospects are de-
+scribed in terms of losses (e.g., money lost or number of
+people who died; Tversky & Kahneman, 1986; cumula-
+tive prospect theory predicts risk seeking for gains with
+small probabilities and risk aversion for losses with small
+probabilities, but the decisions in Figures 4 and 5 do not
+involve small probabilities). Most theories of framing ef-
+fects rely on the psychophysics of quantities, exempli-
+ﬁed in perceived diminishing returns as quantities, such
+as money, increase. (Technically, the concept is dimin-
+ishing marginal utility.) Expected utility theory, subjec-
+tive expected utility theory, prospect theory, cumulative
+prospect theory and so on rely on the general psychophys-
+ical account of diminishing returns for outcomes, and that
+outcomes trade off with probabilities (i.e., are combined
+multiplicatively); in some accounts probabilities are pro-
+cessed nonlinearly, too (Tversky & Kahneman, 1986;
+1992). Experiments show that adults process both out-
+comes and probabilities (so failing to encode or process
+probability does not account for results presented below),
+and that they combine numerical outcomes and probabil-
+ities multiplicatively (see Reyna & Brainerd, 1994; Fig-
+ures 1 & 2). Although adults process outcomes and prob-
+abilities multiplicatively (i.e., they compute something
+like expected value), the issue is whether framing effects
+arise from this numerical processing.
+Early research on fuzzy-trace theory challenged the
+predictions of psychophysical theories (e.g., Reyna &
+Brainerd, 1991; Reyna & Ellis, 1994). For example, how
+could framing effects derive from the psychophysics of
+quantities if numbers could be removed from the prob-
+lems and framing effects increased? This effect is called
+the nonnumerical framing effect (see Reyna & Brainerd,
+1995a). If one ignores the psychophysical mechanisms
+through which framing effects are produced in prospect
+theory, non-numerical loss-versus-gain differences can be
+explained by invoking evaluation from a reference point
+and loss aversion. However, it is difﬁcult, to explain
+larger framing effects under some deletion conditions
+compared to when numbers are present. The issue at
+hand, nonetheless, is whether the psychophysics of nu-
+merical quantities (e.g., dollars, probabilities) is neces-
+sary to observe framing effects.
+https://doi.org/10.1017/S1930297500002291 Published online by Cambridge University Press
+Judgment and Decision Making, Vol. 7, No. 3, May 2012 The gist of intuition 343
+Figure 4 shows results from three different conditions
+in which numerical information was deleted. In some
+problems, we took outcomes out and put vague phrases
+in (e.g., a 1/3 probability of saving many people and
+2/3 probability of saving no one); in some problems, we
+only took the probabilities out and put in vague phrases
+(e.g., some probability of saving 600 people and a higher
+probability of saving no one); and in some problems,
+we took them both out and put in vague phrases (Reyna
+& Brainerd, 1991, 1995a). As is evident from Figure
+4, framing effects were preserved in all conditions, and
+were largest when both numerical outcomes and proba-
+bilities were deleted. If all of the numbers are taken out
+of these problems, and replaced with vague phrases, the
+necessary ingredients according to expected utility the-
+ory, prospect theory, and so on, have been deleted. The
+nonlinear perception of the numbers is supposed to cause
+the framing effect. However, nonnumerical framing ef-
+fects demonstrate that numbers are not necessary to ob-
+serve the effect. These results cannot be explained by am-
+biguity aversion because a) in some conditions, subjects
+preferred the ambiguous option, but moreover b) prefer-
+ence ratings remained high even when both options were
+ambiguous.
+But, are these numbers sufﬁcient to cause framing ef-
+fects? Again, the most popular and enduring theories of
+decision making have assumed that the psychophysics of
+these numbers was sufﬁcient to cause framing effects. To
+test the sufﬁciency hypothesis, another class of manipu-
+lations was implemented called selective attention effects
+(e.g., Reyna & Brainerd, 1995a, 2011). It is not obvious
+how to explain all of the critical selective attention results
+using prospect theory or any of the other expected utility
+variants (Table 2; see also Kühberger & Tanner, 2010):
+For example, how could deleting zero make framing ef-
+fects disappear? Deleting zero focuses attention on the
+speciﬁc numbers critical to either to prospect theory or to
+utility theory; yet, it eliminates framing effects.
+Figure 5 shows effects of selectively focusing attention
+on parts of the gamble; two variations on selective atten-
+tion effects are displayed. (Note that missing parts of the
+gamble were presented in the preamble to eliminate am-
+biguity; thus, when all three groups had the same infor-
+mation, the pattern shown in Figure 5 is observed; Reyna
+& Brainerd, 1995a; 2011.) These experiments address the
+question of whether supposedly key numbers are sufﬁ-
+cient to observe framing effects. For example, in the gain
+frame of the Asian disease problem, the key numbers, ac-
+cording to expected utility and prospect theory, are 200
+saved versus a 1/3 probability of 600 saved. In the loss
+frame, the key numbers according to these theories are
+400 die versus 2/3 probability that 600 die. These num-
+bers are supposed to provide everything needed to show
+framing effects. (The zero complement of the gamble lit-
+erally multiplies out to equal zero.) Thus, focusing at-
+tention on these numbers should produce identical fram-
+ing effects (compared to full-complement, traditional ver-
+sions of the problem), according to psychophysical theo-
+ries.
+In contrast, according to fuzzy trace theory, an attenu-
+ation of framing should be observed under this condition
+of focusing on “key” numbers because the decision maker
+does not focus on the categorical contrast between some
+and none, a simple gist (discussed below). As you can
+see in Figure 5, there is little or no framing effect when
+attention is focused on the supposedly critical numbers,
+an effect that has been replicated in different languages
+and cultures (e.g., Betsch & Kraus, 1999; Kühberger,
+1995; Kühberger & Tanner, 2010; Mandel, 2001; Stocké,
+1998). When the categorical contrast is put in the back-
+ground, the decision becomes about “six of one versus
+half a dozen of another” (as the aphorism goes), and no
+framing effect is observed.
+What happens if the opposite truncation of the gam-
+ble is performed, another selective attention manipulation
+(Table 2)? In this variation of the gain frame, for example,
+the 1/3 probability of 600 saved is put in the background
+information, and the focus is on the contrast between 200
+saved and none saved. According to fuzzy trace theory,
+this variation highlights the some-none contrast: some
+people are saved or there is a categorical possibility that
+no one is saved. Therefore, an increase in the framing
+effect should be observed, and, in fact, this is what the
+studies showed (Figure 5). As noted earlier, this categor-
+ical gist is encoded in parallel with verbatim analysis of
+something like expected value; so the claim is not that
+people are insensitive to expected value, on the contrary
+(see Reyna & Brainerd, 1995a; Figures 1 & 2). When the
+expected values of the options are equal (or close to it),
+however, focusing attention on categorical contrasts be-
+tween options produces sharp preferences, in spite of the
+equivalence in expected value.
+This series of experiments on selective attention ef-
+fects pits predictions characterizing decision making in
+terms of psychophysical transformations of probabilities
+and outcomes, which trade off, against predictions that
+decision making boils down to essential meaning: sim-
+ple categorical or ordinal distinctions (e.g., better to save
+some lives than to save none; for a recent summary of
+these effects and a model, see Reyna & Brainerd, 2011).
+The effects shown in Figures 4 and 5—making framing
+effects disappear and making these effects larger—fall
+out of the assumptions of fuzzy-trace theory. It is possi-
+ble to explain some of these ﬁndings with prospect theory
+(or cumulative prospect theory) by going beyond its psy-
+chophysical mechanisms, but it is not obvious how all of
+the effects in Figures 4 and 5 can be accommodated by
+that approach.
+https://doi.org/10.1017/S1930297500002291 Published online by Cambridge University Press
+Judgment and Decision Making, Vol. 7, No. 3, May 2012 The gist of intuition 344
+Figure 4: Nonnumerical framing effects. Deleting numbers from framing problems and replacing them with vague
+words, “some” and “none” (probabilities deleted = 200 saved vs. some probability of saving 600 and a higher proba-
+bility of saving none; outcomes deleted = some saved vs. 1/3 probability of saving many and 2/3 probability of saving
+none; both deleted = some saved vs. some probability of some saved and some probability none saved); Reyna &
+Brainerd, 1991, 1995
+36
+40
+10
+73 75
+86
+0
+10
+20
+30
+40
+50
+60
+70
+80
+90
+100 %  Choosing  gamble
+Gain Loss
+Outcomes deleted
+Gain Loss Gain Loss
+Probabilities deleted Both deleted
+Fuzzy-trace theory’s assumptions built directly on
+those of prospect theory, not only about gain-loss dis-
+tinctions, but also about editing and cancellation (Tver-
+sky & Kahneman, 1986; 1992). Prospect theory seems
+to capture what people do when they process numbers,
+but more often than not, people make decisions based
+on crude qualitative contrasts (some-none or low-high)
+rather than on numerical details (Reyna, 2008). How peo-
+ple mentally represent quantities in judgments and deci-
+sions, along with the social and moral values that they
+retrieve and apply to their representations, determine be-
+haviors, such as choices.
+Moreover, the level of representation is not arbitrary,
+but, rather, begins at the lowest or simplest level of gist
+(the nominal, or categorical, level) and proceeds up the
+hierarchy of gist (increasing in precision) until a choice
+can be made (e.g., Hans & Reyna, 2011). Applying this
+principle, the representation of the gamble “1/3 probabil-
+ity of saving 600 lives and 2/3 probability of saving no
+one” in the Asian disease problem is most simply char-
+acterized in categorical terms: save some people or save
+none. Similarly, the simplest representation of the sure
+option of “200 saved” in the Asian disease problem is
+some saved. The fuzzy-processing principle stipulates
+that the lowest level of gist, the categorical or some-none
+distinction, is attempted ﬁrst because it is the simplest gist
+(e.g., Reyna & Brainerd, 1995a). That is, if one thinks of
+any kind of numerical quantity, the simplest distinction
+that can be made is at the nominal (some vs. none) level,
+corresponding to the lowest scale of measurement. This
+level is sufﬁcient to discriminate options, so the decision
+maker does not proceed to more precise representations
+(as would be required to discriminate between two gam-
+bles; see Reyna & Brainerd, 1995a; 2011). Thus, the gist
+of the Asian disease problem boils down to a choice be-
+tween saving some people versus saving some people or
+saving none, favoring the selection of the sure option in
+the gain frame; the same simple dichotomization favors
+selection of the gamble option in the loss frame (Reyna,
+2008).
+However, implicit in these preferences is a principle of
+valuing human life (Reyna & Casillas, 2009). (Other de-
+cisions cue other values, such as valuing money or health,
+which are then applied to representations of the decision
+options in order to generate a preference.) Retrieving and
+applying a value for human life (e.g., for the Asian dis-
+ease problem) is required in order to generate a prefer-
+ence between the sure option (save some people) and the
+gamble (save some people or save none). If decision mak-
+ers had this some-none representation, but did not have
+this human-life value, they would not necessarily have a
+preference, even though the representation was simple. It
+is this value, retrieved in the context of choice, that al-
+lows someone to decide between the sure option versus
+https://doi.org/10.1017/S1930297500002291 Published online by Cambridge University Press
+Judgment and Decision Making, Vol. 7, No. 3, May 2012 The gist of intuition 345
+Table 2: Predictions of prospect theory and fuzzy-trace theory for three selective attention conditions (one example
+shown, but effects have been replicated for many problems).
+Condition Focus on nonzero comple-
+ment
+Focus on both comple-
+ments: Traditional presen-
+tation
+Focus on zero complement
+Stimulus: Gains 200 lives saved vs. 1/3
+probability of 600 lives
+saved
+200 lives saved vs. 1/3
+probability of 600 lives
+saved and 2/3 probability
+of 0 lives saved
+200 lives saved vs. 2/3
+probability of 0 lives saved
+Stimulus: Losses 400 people die vs. 2/3
+probability that 600 die
+400 people die vs. 2/3
+probability that 600 die
+and 2/3 probability that 0
+die
+400 people die vs. 2/3
+probability that 0 die
+Ambiguity No ambiguity: Deleted
+information provided in
+preamble/instructions and
+subjects tested afterwards.
+No ambiguity: Subjects
+tested afterwards.
+No ambiguity: Deleted
+information provided in
+preamble/instructions and
+subjects tested afterwards.
+Predicted result:
+Prospect theory
+Framing effect: Identical
+to traditional presentation
+Framing effect Framing effect (or larger?)
+Predicted result:
+Fuzzy-trace theory
+No framing effect Framing effect Larger framing effect
+Observed result No framing effect Framing effect Larger framing effect
+the gamble option. Stored in long-term memory is a qual-
+itative social value for human life—a moral value—that
+saving some people is better than saving none (Reyna &
+Casillas, 2009; see also Mills et al., 2008; Reyna, Estrada
+et al., 2011).
+Therefore, in the gain frame, because saving some peo-
+ple is better than saving none, one prefers the sure op-
+tion. In the loss frame, the mental processes are analo-
+gous to those in the gain frame, but the resulting pref-
+erence is exactly the opposite. If some people die for
+sure, and none dying is preferred over some dying, now
+one chooses the gamble option. Algorithmically applying
+the same representation and retrieval processes (e.g., re-
+trieval of social/moral values) to the loss frame produces
+the framing effect—and accounts for its variations. Ad-
+ditional variations include that framing effects increase,
+rather than disappear, with repeated choices presented
+within subjects (e.g., in contrast to decision ﬁeld theory’s
+predictions; see Reyna & Brainerd, 1995a). Also, fram-
+ing effects disappear if people are told that whatever they
+choose will be re-enacted many times, effectively remov-
+ing the zero outcome of the gamble, and, hence, removing
+the categorical contrast between some and none (Reyna,
+2008; Reyna & Brainerd, 1995a). These effects, as well
+as the nonnumerical and selective attention effects dis-
+cussed earlier, are predicted by the representational and
+retrieval assumptions of fuzzy-trace theory.
+3.2 Risk-taking: Framing effects in chil-
+dren and adolescents
+After the initial demonstrations of nonnumerical framing
+and selective attention effects, Ellis and I conducted the
+ﬁrst study on framing in children—showing that framing
+effects developed with age (Reyna & Ellis, 1994). This
+result mirrored other emerging developmental results for
+similar reasons. Reyna and Ellis argued that the represen-
+tativeness heuristic and other biases increased with age,
+too, because of an increased reliance on gist-based in-
+tuition (e.g., Davidson, 1995; Jacobs & Potenza, 1991).
+Young children were found to be loss averse, as adults
+are (Reyna, 1996a), but they roughly calculated and re-
+https://doi.org/10.1017/S1930297500002291 Published online by Cambridge University Press
+Judgment and Decision Making, Vol. 7, No. 3, May 2012 The gist of intuition 346
+Figure 5: Selective attention effects. Framing problems with variations in gambles—focusing on nonzero complement
+shown at the left, both complements (traditional presentation) shown in the middle, or zero complements shown at the
+right. Labels are shown for the Asian disease problem, but the data are from multiple problems (each of which shows
+the effect).
+51
+58
+53
+81
+26
+81
+52
+48
+31
+61
+23
+78
+0
+10
+20
+30
+40
+50
+60
+70
+80
+90
+Reyna
+%  Choosing  gamble
+Gain Loss
+1/3 600
+saved
+Gain Loss Gain Loss
+2/3 600 
+die
+2/3 0
+saved
+1/3 600 saved, 
+2/3 0 saved
+2/3 600 die, 
+1/3 0 die
+1/3 0
+die
+Reyna & Brainerd (1991) Kuhlberger & Tanner (2010)
+sponded similarly to gain and loss frames in true fram-
+ing (as opposed to reﬂection) problems: when net gains
+are the same for gains and for so-called “losses” prob-
+lems (for reﬂection problems, gains are compared to ac-
+tual losses). In particular, young children did not show
+framing effects for true framing problems when “losses”
+were explicitly displayed in front of them, eliminating the
+need to subtract or to remember outcomes (for discussion,
+see Reyna, Estrada, et al., 2011). Rather than show gist-
+based framing effects, young children appear to roughly
+calculate expected value, and they modulate their choices
+based on the magnitudes of risks and rewards (e.g., Figner
+et al., 2009; Reyna & Farley, 2006; Schlottmann & An-
+derson, 1994).
+However, fuzzy-trace theory does not assume that
+verbatim-based analysis (e.g., of risk and reward) is re-
+placed by gist-based intuition in development. Instead,
+fuzzy-trace theory incorporates a duality: numerical cal-
+culation (verbatim-based analysis) and gist-based intu-
+ition both develop from childhood to adulthood. When
+instructions are simpliﬁed and tasks are clear, young chil-
+dren (four to six years of age, depending on the study)
+behave rationally, in the sense that they traded off risks
+and rewards (for a review, see Reyna & Farley, 2006).
+Their ability to calculate—to multiply magnitudes of
+risks and rewards—improved during roughly the same
+period that framing biases and other numerical fallacies
+also emerged (Reyna & Brainerd, 1994).
+Therefore, cuing and context elicited mathematically
+astute judgments early in development (e.g., Acredolo
+et al., 1989; Rakow & Rahim, 2009; Siegler, 1981) fol-
+lowed by heuristics and biases later in development that,
+thus, coexisted with mathematical competence. Further-
+more, mathematical performance improved during the
+same period in which heuristics and biases emerged for
+seemingly mathematical tasks, such as probability judg-
+ment and decision making (i.e., framing problems in
+which expected value, as a function of numerical prob-
+abilities and numerical outcomes, varied; Figner et al.,
+2009; Levin, Hart, Weller, & Harshman, 2007; Levin,
+Weller, Pederson, & Harshman, 2007; Reyna & Brainerd,
+1993, 1994, 2008). In sum, framing and other judgment-
+and-decision-making biases grew with age during child-
+hood, consistent with fuzzy-processing preferences be-
+ing present in adulthood (see also Markovits & Dumas,
+1999 and Morsanyi & Handley, 2008, but see Klaczyn-
+ski, 2005).
+https://doi.org/10.1017/S1930297500002291 Published online by Cambridge University Press
+Judgment and Decision Making, Vol. 7, No. 3, May 2012 The gist of intuition 347
+3.3 Gist-based intuition increases with age
+and experience
+More generally, the emergence of framing effects is an
+example of how reliance on gist-based intuition increases
+with age and experience. If one considers theories of
+the development of reasoning from childhood to adult-
+hood, there are many reasons to expect that reasoning
+should only get better (in the traditional sense of being
+more quantitatively sophisticated and less biased). Work-
+ing memory capacity increases, inhibition and cognitive
+control improve, and metacognition develops during that
+age period (e.g., Bjorklund, 2012). A person becomes a
+better computer all the way around, from childhood, to
+adolescence, to adulthood. In all standard developmental
+and dual process theories — if an age difference is ob-
+served — it should generally reﬂect improvement in rea-
+soning and judgment-and-decision-making performance.
+However, there are many demonstrations of the opposite
+developmental trend–the framing example is only one of
+them–of increases in biases with age (Reyna & Brainerd,
+2011; Reyna & Farley, 2006). Increases in biases or dis-
+tortions are called developmental reversals because they
+reverse the usual expectation of developmental progress
+(e.g., Brainerd, Reyna, & Ceci, 2008; Reyna & Ellis,
+1994; Reyna & Farley, 2006).
+Developmental reversals were predicted by fuzzy-trace
+theory, but they have been found serendipitously, too. Ac-
+cording to the theory, these increases are predicted be-
+cause they reﬂect gist-based meaning biases. Shown in
+false memory as well as in reasoning, meaning-based
+processing increases with age from childhood to adult-
+hood. (For a review of studies on developmental in-
+creases in memory distortion, see Brainerd, Reyna, &
+Zember, 2011.) A study conducted by Markovits and
+Dumas (1999) is instructive for understanding increases
+in reasoning biases. They presented transitive inference
+problems to young children (transitive inference ques-
+tions are on IQ tests—A is bigger than B, B is bigger than
+C, therefore A is bigger than C). Young children gener-
+ally get these problems right (Reyna & Brainerd, 1990;
+Reyna & Kiernan, 1994). For example, “Paul is taller
+than Harry, and Harry is taller than Sam; is Paul is taller
+than Sam?” Young children get that problem right. What
+if Paul is a friend of Harry, and Harry is a friend of Sam,
+is Paul necessarily a friend of Sam? Young children say,
+“No! That’s not logical,” which is correct.
+As children get older, systematic errors go up in the
+friendship version of the problems. Older children are
+more likely to conclude erroneously that Paul is a friend
+of Sam. That erroneous inference increases with prag-
+matic knowledge, social knowledge, and so on, because
+knowledge supports the processing of meaning (e.g.,
+Reyna, 1996a). However, as the emergence of framing
+effects shows, knowledge differences are not essential to
+observing increases in gist-based intuition. Older theo-
+ries acknowledge the possibility of meaning-based dis-
+tortions, but they claim either that reasoning is inherently
+biased or that such biases are artifacts (e.g., Liben, 1977).
+Both verbatim analysis (e.g., calculating expected value)
+and gist-based intuition (e.g., belief bias as illustrated in
+inferences about friendship) coexist in the adult mind, ac-
+cording to fuzzy-trace theory. The interplay of these two
+kinds of processing has been used most recently to ex-
+plain adult biases in conjunction and disjunction judg-
+ments (e.g., Brainerd & Reyna, 2008; Brainerd, Reyna,
+& Aydin, 2010; Brainerd, Reyna, Holliday, & Nakamura,
+2012; Reyna & Brainerd, 2008; Wolfe & Reyna, 2010).
+To summarize, during childhood, despite increasing
+skill in calculation, including in calculating probabili-
+ties and expected value, the tendency to use the bottom-
+line meaning in many situations goes up faster than the
+tendency to rely on computational ability. Mathemati-
+cal models are useful in testing such predictions involv-
+ing opposing processes, in this instance, verbatim-based
+analysis versus gist-based intuition (e.g., Reyna & Brain-
+erd, 2011). Models incorporating simple assumptions
+from fuzzy-trace theory have been tested for goodness-
+of-ﬁt to real data and evaluated against alternative models
+(e.g., see Brainerd, Reyna, & Howe, 2009; Brainerd et al.,
+1999). The heart of a mathematical model of a psycho-
+logical process, such as decision making, is not the math-
+ematics, but, rather, the interpretation of the mathematics
+in terms of core constructs. The core constructs in fuzzy-
+trace theory are verbatim and gist representations that
+are encoded and processed in parallel, and which support
+analysis versus intuition, respectively. Verbatim and gist
+representations compete against each other for control of
+task performance; the winner depends on which memory
+is more accessible and the constraints of the task (see Fig-
+ure 1). In general, gist is more accessible and more use-
+ful than verbatim representations—especially when gist
+is informed by age and experience.
+3.4 Risk-taking from lab to life: Adoles-
+cents and young adults
+As noted earlier, gist-based “false” memory has been a re-
+search theme, explained by the same processes discussed
+hitherto for judgment and decision making. False mem-
+ory, occurring when people remember things that never
+happened as though they did happen, typically derives
+from unconscious meaning-based inferences (e.g., Brain-
+erd & Reyna, 2005; Reyna, Holliday, & Marche, 2002).
+A lesson learned from the false-memory literature is that
+seemingly “artiﬁcial” laboratory tasks explain real-world
+forensic situations—when those tasks tap causal mecha-
+nisms (Brainerd, Reyna, & Estrada, 2006; Reyna, Mills,
+https://doi.org/10.1017/S1930297500002291 Published online by Cambridge University Press
+Judgment and Decision Making, Vol. 7, No. 3, May 2012 The gist of intuition 348
+Estrada, & Brainerd, 2006). Indeed, the conclusions dis-
+cussed below are drawn from an extensive review of the
+literature on real-life risk taking as well as from labora-
+tory data from behavioral and brain studies (Reyna & Far-
+ley, 2006; Reyna, Chapman et al., 2012). Popular myths,
+such as that adolescents underestimate risks, have been
+studied extensively and ruled out by multiple investiga-
+tors. Therefore, underestimation of risk, changes in be-
+liefs, and other conventional wisdom do not account for
+the effects I now discuss.
+Applying the lesson that laboratory ﬁndings bear on
+real life to the problem of risk taking, I have more re-
+cently examined risky decision making of adolescents,
+portrayed in the literature as paradigmatic examples of ir-
+rational decision makers (Reyna, et al., 2005; Steinberg,
+2008). Extrapolating decision-making mechanisms from
+laboratory to life, is it possible to explain adolescent risk
+taking? Laboratory tasks reveal that overall risk taking
+(collapsing gains and losses) declines from childhood to
+adulthood, a robust pattern across studies (Boyer, 2008;
+Reyna & Farley, 2006). (Tasks that add the experience of
+actual outcomes—children experience wins and losses—
+cloud assessment of risk preferences per se: Figner et al.,
+2009; Reyna & Brainerd, 1994).
+As noted earlier, around preschool age, there is no
+consistent difference between risk preferences for gains
+(e.g., win 2 prizes) and for identical net gains (e.g., have
+4 prizes, then lose 2 prizes) phrased in terms of losses
+(in contrast, aversion to actual losses is present early in
+childhood, Reyna, 1996a). The biasing effect of context,
+that net gains were achieved as a result of losses, emerges
+in childhood (Galvan, 2012). Although risk preferences
+for gains versus gains framed as losses are similar in
+preschoolers, such preferences begin to diverge for ele-
+mentary schoolers.
+Speciﬁcally, a pattern of preferences begins to emerge
+around second grade that my colleagues and I have called
+reverse framing (Estrada & Reyna, 2011; Reyna & El-
+lis, 1994; Reyna, Estrada, et al., 2011; these problems do
+not involve small probabilities, and so results are not pre-
+dicted by cumulative prospect theory). Reverse framing
+is the opposite of standard framing: It is a preference for
+the gamble option in the gain frame, but the sure option in
+the loss frame. Recall that, when expected value is equal,
+risk and reward trade off in these problems. Thus, in re-
+verse framing, second graders choose the gamble more in
+the gain frame; they go for the larger rewards (i.e., the
+greater gains in the gamble; see also Reyna & Farley,
+2006). Apparently, second graders compare numerical
+outcomes in the loss frame, too; they go for the smaller
+losses in the sure thing, relative to the losses in the gam-
+ble (focusing on probabilities would have produced oppo-
+site preferences). So, unlike younger children who pro-
+cess both risk and reward—two dimensions—older chil-
+dren mainly focus on the one dimension of reward out-
+comes. (To clarify, younger children are capable of pro-
+cessing both dimensions under carefully simpliﬁed con-
+ditions, but their preferences shift during this period to
+a focus on outcomes; and each of these developmental
+differences should be distinguished from the additional
+complexities of strategy selection as information value
+varies; see Mata, Helversen, & Rieskamp, 2011).
+In early adolescence, the emergence of standard fram-
+ing can be detected (e.g., Chien et al., 1996; Reyna &
+Ellis,1994; Reyna, Estada, et al., 2011). As the studies
+discussed in an earlier section show, standard framing is
+evidence for a qualitative processing strategy—the assim-
+ilation of different numerical outcomes into a categorical
+gist of “some,” as opposed to none (and assimilation of
+probabilities into sure vs. variable). (Standard framing is
+evidence for qualitative processing because that hypothe-
+sis accounts for all of the effects reviewed earlier, as op-
+posed to alternative hypotheses that do not account for all
+of the effects.) Consistent with this hypothesis, younger
+adolescents who are just beginning to exhibit standard
+framing, are more likely to assimilate outcomes when
+the outcomes are similar to one another than when they
+differ: Therefore, it makes sense that standard framing
+emerges ﬁrst for smaller outcomes (e.g., 1 prize for sure
+vs. 50% chance of 2 prizes or nothing), but reverse fram-
+ing remains for larger outcomes (e.g., 30 prizes for sure
+vs. a 50% chance of 60 prizes or nothing). In other words,
+the difference in outcomes is greater for larger (e.g., 60 –
+30 = 30) than for smaller outcomes (e.g., 2 – 1 = 1). High
+school students also show reverse framing for larger out-
+comes (e.g., Estrada & Reyna, 2011; Reyna, Estrada et
+al., 2011).
+Thus, children and adolescents are sensitive to quan-
+titative differences between outcomes, manifest in a re-
+verse framing pattern, whereas adults rarely exhibit re-
+verse framing (e.g., DeMartino et al., 2006; Levin, Gaeth,
+Schreiber, & Lauriola, 2002; Reyna, Estrada et al., 2011).
+This developmental trend from a focus on quantitative
+differences to qualitative categories is consistent with
+fuzzy-trace theory’s assumption of increases in gist-based
+intuition with age. Intriguingly, deviation from consis-
+tency across frames grows with age until the adult pattern
+of standard framing is evident. By traditional yardsticks
+(e.g., Tversky & Kahneman, 1986), then, irrationality
+grows from childhood to adulthood. Yet, youth are as-
+sumed to be more irrational in their risk taking in real
+life, compared to adults (Committee on the Science of
+Adolescence, 2011; Reyna & Farley, 2006; Steinberg,
+2008). How can the risk preferences of lab and life be
+reconciled?
+For gains, the downward trend across age in prefer-
+ence for risk, as measured objectively in the laboratory,
+is fairly stable. Most real-life risk taking in developed
+https://doi.org/10.1017/S1930297500002291 Published online by Cambridge University Press
+Judgment and Decision Making, Vol. 7, No. 3, May 2012 The gist of intuition 349
+countries involves gains rather than losses, and thus pref-
+erences in the lab and in life can be somewhat recon-
+ciled (Reyna & Rivers, 2008). In addition, real-life in-
+creases in risk taking, such as in drunk driving and un-
+protected sex, are associated empirically with increased
+freedom and, hence, greater “risk opportunity” in older
+adolescence and young adulthood, compared to younger
+ages (Gerrard et al., 2008). However, as illustrated by
+reverse framing, adolescents also differ cognitively and
+motivationally from adults (e.g., see also Chick & Reyna,
+2012; Galvan, 2012). Youth are more likely to compare
+reward magnitudes, and to take risks to achieve more pos-
+itive outcomes. According to fuzzy-trace theory, their
+greater reliance on verbatim-based analysis (e.g., quanti-
+tative differences) aids and abets the motivational shifts in
+adolescence that support risk taking. The cognitive shift
+from greater reliance on verbatim-based analysis (e.g.,
+quantitative differences) to gist-based intuition (qualita-
+tive contrasts) in adults discourages risk taking because
+it allows adults to avoid unhealthy outcomes–even when
+unhealthy outcomes are unlikely, such as HIV infection
+(Reyna, Estrada et al., 2011; Rivers et al., 2008).
+In 2006, based on a review of the literature in many
+domains of adolescent risk taking, Reyna and Farley
+concluded that precise, hair-splitting calculation of risks
+and rewards promotes risk taking among adolescents,
+whereas simple, all-or-none gist protects against un-
+healthy risk taking—the opposite of most theories of risk
+taking (e.g., Fischhoff, 2008). This prediction was also
+borne out in subsequent studies (e.g., Mills, Reyna, &
+Estrada, 2008; Reyna, Estrada et al., 2011). Moreover,
+cognitive measures of verbatim-based analysis versus
+gist-based intuition (i.e., verbatim hairsplitting vs. sim-
+ple categorical gist) predicted larger variance, and unique
+variance, in real-life self-reported risk taking, compared
+to motivational factors such as reward sensitivity (e.g.,
+sensation seeking; Reyna, Estrada et al., 2011).
+Reverse framing, in particular, loaded with other mea-
+sures of verbatim-based analysis in principal component
+analyses, and these verbatim measures predicted greater
+vulnerability to real-life risk taking. In contrast, gist-
+based intuition was consistently associated with lower
+levels of unhealthy risk taking. For example, agreement
+with simple gist principles such as “Avoid risk” and with
+categorical gist statements such as “It only takes once to
+get pregnant” was associated with lower levels of sexual
+initiation, lower intentions to have sex, and fewer sex-
+ual partners (Reyna, Estrada et al., 2011). Consistent
+with fuzzy-trace theory, gist-based intuition was more
+“advanced” in the sense that it was associated with bet-
+ter outcomes (for discussion of coherence and correspon-
+dence criteria of rationality in fuzzy-trace theory, see
+Adam & Reyna, 2005; Reyna, 2008; Reyna & Adam,
+2003; Reyna & Brainerd, 1994; Reyna, Lloyd & Brain-
+erd, 2003; Reyna & Farley, 2006; Reyna & Lloyd, 2006).
+Most theories of adolescent risk taking recognize that
+something like inhibition or cognitive control (which in-
+cludes the ability to regulate emotions) also develops dur-
+ing this period. This assumption is shared by fuzzy-trace
+theory (e.g., Reyna, in press; Reyna & Mills, 2007b).
+However, fuzzy-trace theory parts company with tradi-
+tional theories by assuming that such inhibition is a third
+factor, beyond the two types of reasoning referred to as
+verbatim-based analysis and gist-based intuition. Em-
+pirical evidence bears this out: behavioral inhibition in-
+creases with age during adolescence and young adulthood
+and accounts for unique variance beyond reasoning styles
+(Reyna, Estrada et al., 2011). The growth of inhibition
+is consistent with the development of fronto-striatal cir-
+cuitry during this period (Casey et al., 2008; Giedd et al.,
+2012; see also Roiser et al., 2009).
+Thus, mature adults differ from immature adolescents
+in more than the ability to rein in emotional and moti-
+vational responses (e.g., to tempting rewards), although
+such differences are important (Somerville et al., 2010).
+Adolescents also differ in the way in which they think
+about reward. If offered a million dollars to play Russian
+roulette, an adult quickly refuses. An adolescent appears
+to conduct a cost-beneﬁt analysis, which is irrational un-
+der these circumstances, according to fuzzy-trace theory
+(e.g., Reyna et al., 2005). Compensatory reasoning—
+is the reward worth the risk—sounds smart and it ﬁts
+traditional deﬁnitions of rationality. Many economists
+would make the argument that it is rational to play Rus-
+sian roulette if the reward were large enough (or to smoke
+if the beneﬁts outweighed the costs for that individual;
+Reyna & Farley, 2006). Others would say that the game
+has inﬁnite disutility, which is another way to say that it
+seems categorically crazy, a gist-based, all-or-none intu-
+ition.
+Therefore, investigating rationality through the lens of
+teenage behavior challenges basic assumptions (e.g., for
+a recent review of research on adolescent risk taking, see
+Reyna, Chapman, Dougherty, & Confrey, 2012; for a re-
+view of theory, including the neuroscience of risky deci-
+sion making, see Reyna & Rivers, 2008). Although some
+theorists have argued that adolescents are more impulsive
+than adults are—but equivalent to adults cognitively—
+fuzzy-trace theory implies that there are important cogni-
+tive changes from childhood to adulthood. These cogni-
+tive changes should produce decreases in risk preference
+for gains (or rewards) (Reyna, Estrada et al., 2011). Af-
+ter reviewing the literature on children’s and adolescents’
+risk taking (see Reyna & Farley, 2006), it became appar-
+ent that many take risks because they analyze and trade
+off risk and reward. Simple alternative explanations, such
+as that adolescents lack experience and thus must delib-
+erate (Hogarth, 2001), are not antithetical to this hypoth-
+https://doi.org/10.1017/S1930297500002291 Published online by Cambridge University Press
+Judgment and Decision Making, Vol. 7, No. 3, May 2012 The gist of intuition 350
+esis. However, they do not explain the range of results
+encompassed by the fuzzy-trace theory hypothesis that
+lacking experience contributes to reliance on a particular
+kind of processing, verbatim-based analysis of risk and
+reward, and a lack of fundamental insight into the gist of
+risky decisions (see Reyna, Estrada et al., 2011).
+Explicitly, one-time risks (e.g., having unprotected sex
+one time) are often low and rewards (or beneﬁts) are high;
+this imbalance promotes risk taking if one analyzes risk
+and reward. Drawing on results from both the framing
+task and other risk-taking research inside and outside of
+the lab, it appears that, as teens become adults, they do
+less analysis for the decisions that matter (e.g., Lenert,
+Sherbourne, & Reyna, 2001). They do not engage in
+compensatory reasoning, despite encoding risk and re-
+ward and despite being capable of multiplying them in
+a compensatory fashion. Rather, decisions are based on
+the bottom line gist, as adolescents grow up into mature
+adults (Committee on the Science of Adolescence; Board
+on Children, Youth, and Families; Institute of Medicine
+and National Research Council, 2011). A summary paper
+in Medical Decision Making reviews implications for pre-
+vention problems in public health, especially concerning
+teenagers and infectious diseases, such as HIV (Reyna,
+2008). A randomized control trial of over 800 adoles-
+cents followed for one year found that inculcating gist-
+based intuitions using fuzzy-trace theory produced sig-
+niﬁcant reductions in risk taking relative to a control cur-
+riculum and to another comprehensive risk-reduction cur-
+riculum (Reyna, Mills, & Estrada, 2008).
+3.5 Risk-taking from lab to life: Experts
+At the top of the developmental heap, experts have been
+a focus of research on fuzzy-trace theory (e.g., Adam &
+Reyna, 2005; Reyna, 2004; Reyna & Adam, 2003; Reyna
+& Lloyd, 2006; Reyna, Lloyd, & Brainerd, 2003). Ex-
+perts are entrusted with decisions about health and safety,
+and, thus, their risk perception and decision processes are
+important to understand. For example, an emergency-
+room physician must decide whether a patient is at risk
+of a heart attack; a meteorologist must decide whether
+a community is at risk of being struck by a hurricane;
+and a lawyer must evaluate potential damage awards and
+decide whether a client should settle or risk going to
+trial (e.g., Hans & Reyna, 2011; Reyna, 2004). In ad-
+dition to domain knowledge, conventional wisdom and
+many theories suggest that experts apply precise analyti-
+cal and numerical reasoning skills to achieve the best out-
+comes, whereas novices are more likely to reason non-
+analytically and non-numerically (e.g. Epstein, 1994; Pe-
+ters et al., 2006; but see Betsch & Haberstroh, 2005, for
+alternative views of expertise).
+However, recent research on individual differences in
+analytical and numerical reasoning challenges conven-
+tional assumptions about advanced reasoning (e.g., Lib-
+erali et al., 2011; Reyna & Brainerd, 2008; for a review
+of the literature on numeracy, see Reyna, Nelson, Han, &
+Dieckmann, 2009). For example, even experts in quanti-
+tative ﬁelds struggle with concepts such as risk and prob-
+ability (e.g., Nelson et al., 2008; Perneger & Agoritsas,
+2011; Reyna & Brainerd, 2007; Reyna, Lloyd, & Whalen,
+2001). Furthermore, those high in numeracy are prone to
+systematic errors when their processing is rote or verba-
+tim (e.g., Peters et al., 2006; see Reyna et al., 2009).
+According to fuzzy-trace theory, experts differ devel-
+opmentally from novices, and should rely more often on
+gist-based intuition rather than verbatim-based analysis
+(see also Hogarth & Einhorn, 1992; Shanteau, 1992).
+This view is not unlike Hogarth’s (2001) idea of edu-
+cated intuition, which experts acquire as a result of ex-
+perience that affords insight. As might be expected from
+our discussion of the gist origins of framing effects, a re-
+cent study comparing risk experts (i.e., experienced in-
+telligence ofﬁcers) to college students and to non-expert
+adults found that the framing bias was signiﬁcantly larger
+among the experts who had extensive real-world experi-
+ence with risk, even when sensation seeking and other
+factors were controlled (Reyna, 2011a). Thus, experts fo-
+cus on the “deep structure” of decisions in their domain
+of expertise, on gist representations that eschew surface
+details, despite encoding both gist and verbatim (surface)
+representations (e.g., Chi & Feltovich,1981).
+Consistent with this developmental expectation, my
+colleagues and I have found that experts used less in-
+formation, and processed it less precisely, to make de-
+cisions, compared to novices (e.g., Reyna, 2004; Reyna
+& Lloyd, 2006; Reyna et al., 2003). For example, we
+have shown that more-expert physicians have better dis-
+crimination than less-expert physicians regarding predic-
+tions of medical outcomes, but the former rely on simpler
+gist-based representations to achieve this discrimination
+(Lloyd & Reyna, 2009; Reyna & Lloyd, 2006). Hence,
+precise information processing was not associated with
+better judgments of patient risks or better emergency-
+room decisions about patients—on the contrary.
+Nevertheless, experts’ risk and probability judgments
+violated internal coherence (e.g., Adam & Reyna, 2005;
+Reyna & Adam, 2003; Reyna & Lloyd, 2006). In particu-
+lar, for judgments regarding emergency room admissions,
+about 1 out of 3 judgments were incoherent among physi-
+cians, for real as well as hypothetical patients. These
+physicians judged the probability that a patient was at
+risk of a myocardial infarction (heart attack) or had clin-
+ically signiﬁcant coronary artery disease, or both, to be
+lower than the probability that the same patient had one
+or the other condition. The three elicited probability judg-
+ments were incoherent; the logic of their probabilities
+https://doi.org/10.1017/S1930297500002291 Published online by Cambridge University Press
+Judgment and Decision Making, Vol. 7, No. 3, May 2012 The gist of intuition 351
+just did not make sense (see Reyna et al., 2003, for an
+overview). Yet, those physicians who displayed this inter-
+nal incoherence, nevertheless, were able to discriminate
+low-risk from high-risk patients very effectively. My re-
+search team and I followed patient’s actual outcomes af-
+ter they had been seen in the emergency department and
+veriﬁed that more expert physicians (cardiologists) were
+better able to discriminate low versus high risk patients
+(based on practice guidelines and on subsequent cardiac
+outcomes within a year), but they were still as prone to
+heuristics and biases as generalist physicians.
+More generally, experts show framing biases, conjunc-
+tion and disjunction fallacies, and so on despite good cor-
+respondence (e.g., good discrimination of low vs. high
+risk; Adam & Reyna, 2005; Kostopoulo, 2009; Per-
+neger & Agoritsas, 2011; Reyna, 2004; Reyna & Adam,
+2003; Reyna, Lloyd, & Brainerd, 2003; Reyna, Lloyd,
+& Whalen, 2001). For example, physicians exhibit base-
+rate neglect: Suppose that the base rate of a disease is
+10% and a diagnostic test for that disease is 80% accu-
+rate (i.e., an 80% chance of a “positive” result if the pa-
+tient has the disease; an 80% chance of a “negative” result
+if the patient does not have the disease). If a patient has
+a positive test result, how likely is it that he or she has
+the disease; is it closer to 30% or to 70%? As Reyna
+(2004) reported for a sample of 82 physicians, only 31%
+of physicians selected the correct answer (of 30%), well
+below chance. Despite almost daily feedback about how
+base rates combine with diagnostic test results (and for-
+mal training in Bayes’ theorem as part of medical edu-
+cation), these experts violated coherence. For these and
+other biases that violate coherence, coherence and cor-
+respondence do not appear to converge with experience
+over time, which makes sense given their explanations
+derived from fuzzy-trace theory. (See Reyna et al., 2003;
+for process models, see Reyna, 1991; Reyna & Brainerd,
+2008; Reyna & Mills, 2007a; Wolfe & Reyna, 2010.) As
+predicted by fuzzy-trace theory, measures of coherence
+and correspondence are not the same thing. The inten-
+sion, or gist, of probabilities does not obey the same rules
+as the extension, or reality, of the outcomes (see Reyna,
+1991; Reyna & Brainerd, 2008; Reyna & Farley, 2006).
+In sum, there are people who are logically coherent and
+those who have good outcomes, and these are not neces-
+sarily the same people. Coherence errors (internal incon-
+sistency, such as violations of axioms of preference) are
+not necessarily related to correspondence errors (external
+correspondence to reality), such as good vs. bad medical
+outcomes. Fuzzy-trace theory provides a perspective on
+rationality that encompasses both coherence and corre-
+spondence (see also Reyna & Farley, 2006). Degrees of
+rationality are distinguished in fuzzy-trace theory based
+on process models identifying the cognitive loci of er-
+rors in different tasks; some errors are dumber than oth-
+ers and they tend to occur earlier in development (Reyna
+& Brainerd, 2011; Reyna et al., 2003; Reyna & Farley,
+2006). Errors of both coherence and correspondence gen-
+erally decrease with greater reliance on gist-based intu-
+ition. Therefore, the answer to the question, “Does the
+brain calculate [numerical] value?” is “yes” in fuzzy-
+trace theory (Vlaev, Chater, Stewart, & Brown, 2011),
+and this valuation sometimes wins out, but the more de-
+velopmentally advanced brain relies mainly on the results
+of qualitative, meaning-based processes despite verbatim
+valuation.
+4 Overview and future directions
+The research reviewed here points up the importance of
+memory, meaning and development in judgment and de-
+cision making. Research on recall, recognition, and rea-
+soning has shown that people mentally represent informa-
+tion in different types of representations—verbatim and
+multiple gist representations of the same information—
+and these representations are encoded, stored and re-
+trieved roughly in parallel. Distinctions between verba-
+tim and gist representations account for double dissocia-
+tions, crossover interactions and developmental reversals
+and, moreover, predict such counterintuitive effects.
+When people make judgments or decision based on in-
+formation, they process both verbatim and gist represen-
+tations, and sometimes the verbatim details (e.g., when
+expected values of options differ) carry the day. More of-
+ten than not, however, adults rely on the essential mean-
+ing or gist of the options—and this tendency to rely on
+gist increases with development, that is, with age and
+experience. Much is known about the factors that in-
+ﬂuence meaning or gist extraction, based on research in
+psycholinguistics. Fuzzy-trace theory draws on this prior
+research, as well as research on emotion. Mood, valence,
+arousal, and discrete emotions shape the gist of infor-
+mation, consistent with theories of affect as information.
+Fuzzy-trace theory also builds on gestalt theory’s dis-
+tinction between rote (verbatim) versus meaningful (gist)
+processing, and on schema theory and mental models ap-
+proaches, although it differs in important ways from each
+of these approaches.
+The mental representations that people extract are not
+arbitrary. For numerical information, a hierarchy of gist
+representations is encoded, that are analogous to scales
+of measurement in terms of variations in precision: from
+nominal to ordinal to interval (or linear) representations
+of numerical valuation. Once information is mentally
+represented and depending on the cues in the environ-
+ment, people retrieve values and principles that are stored
+in gist form in long-term memory (Figure 2). They apply
+these values and principles to mental representations to
+https://doi.org/10.1017/S1930297500002291 Published online by Cambridge University Press
+Judgment and Decision Making, Vol. 7, No. 3, May 2012 The gist of intuition 352
+produce judgments and decisions. People retrieve moral
+values such as “Saving some people is better than saving
+none” or “Thou shalt not kill,” and social norms such as
+the equity principle (all else equal, everyone should re-
+ceive the same—the same pay, the same number of cook-
+ies, the same economic opportunity and so on). Together,
+these theoretical ideas explain task variability (that con-
+text and framing shifts judgment and decision making in
+predictable ways) and task calibration (that precise re-
+sponse formats and task requirements can shift the level
+of representation that is relied on away from a fuzzy-
+processing default).
+Critical tests of expected utility theory, prospect theory,
+and fuzzy-trace theory have been conducted, producing
+multiple nonnumerical framing, selective attention, and
+other effects, which consistently support fuzzy-trace the-
+ory’s predictions. Fuzzy-trace theory is the only dual-
+process theory that predicts developmental reversals—
+that biases based on fuzzy gist should increase with de-
+velopment (i.e., adults and experts should be more biased
+than children and novices, respectively). The ﬁrst studies
+of framing effects in children and adolescents conﬁrmed
+these predictions, and these results have been joined by a
+growing number of others illustrating developmental re-
+versals for biases and heuristics (see Reyna & Brainerd,
+2011). Both verbatim-based analysis and gist-based in-
+tuition develop in parallel during childhood, and both are
+available as modes of processing in adulthood, making
+fuzzy-trace theory a dual-process theory.
+There is a “third” process in fuzzy-trace theory, how-
+ever, that also varies with development and across in-
+dividuals. Developmental increases in inhibition occur
+alongside developments in representation and retrieval,
+and counteract unhealthy risk taking. Although this re-
+view did not emphasize processing interference between
+overlapping classes (which accounts for denominator ne-
+glect and other errors in probability judgment, such as
+base-rate neglect, conjunction, and disjunction fallacies),
+developmental improvements in inhibition help to coun-
+teract these mental bookkeeping errors as well (see Reyna
+& Brainerd, 2008; Reyna & Mills, 2007a). Theory-based
+interventions have been used to reduce these errors, such
+as base rate neglect, implementing tagging manipulations
+originally discovered with children that reduce interfer-
+ence from overlapping classes. Supposed frequency ef-
+fects have been shown to be a special case of “tagging”
+manipulations that do not depend on frequency formats
+(i.e., they work equally well with normalized probabili-
+ties to reduce errors, based on mechanisms delineated in
+fuzzy-trace theory; Reyna, 1991; Lloyd & Reyna, 2001;
+Wolfe & Reyna, 2010).
+These tenets of fuzzy-trace theory also explain phe-
+nomena outside of the laboratory, such as false memory
+and legal decision making in the court room; risk percep-
+tion and communication in health (e.g., cancer screening,
+HIV prevention, genetic testing, and vaccination); med-
+ical and surgical decision making by patients and physi-
+cians (e.g., informed consent for carotid endarterectomy,
+triage decisions for patients with chest pain, and choosing
+surgery to treat prostate cancer); and risk taking among
+adolescents (e.g., unprotected sex and underage drink-
+ing). The development of risky decision in childhood
+and adolescence has been a particular focus of the theory,
+with the surprising discovery that youth reason more ra-
+tionally in the classic sense than adults do, inspiring new
+conceptions of rationality, assessed in terms of both co-
+herence and correspondence (e.g., Reyna & Adam, 2003;
+Reyna & Farley, 2006).
+Fuzzy-trace theory is being applied to develop new
+measures of ﬁnancial literacy, of gist-based numeracy,
+and of intertemporal choice (i.e., delay discounting).
+Most important, the theory has been integrated with re-
+search on neurobiological development, for example, the
+massive pruning of gray matter that accompanies expe-
+rience from childhood through young adulthood and the
+increased connectivity between prefrontal cortex and stri-
+atal regions during the same period (Reyna, Chapman,
+et al., 2012). Thus, to oversimplify, research on neu-
+robiology and on fuzzy-trace theory supports the view
+that judgment and decision making become more stream-
+lined and better integrated, rather than more detailed and
+elaborate, as development progresses (Reyna, Estrada et
+al., 2011). Neuroimaging evidence further suggests that
+qualitative gist-based intuition underlies framing biases
+in risky decision making, in contrast to traditional theo-
+ries of quantitative valuation (Reyna, 2011b).
+References
+Acredolo, C., O’Connor, J., Banks, L., & Horobin, K.
+(1989). Children’s ability to make probability esti-
+mates: Skills revealed through application of Ander-
+son’s functional measurement methodology. Child De-
+velopment, 60, 933–945.
+Adam, M. B., & Reyna, V. F. (2005). Coherence
+and correspondence criteria for rationality: Experts’
+estimation of risks of sexually transmitted infec-
+tions.Journal of Behavioral Decision Making, 18, 169–
+186. doi:10.1002/bdm.493
+Alba, J., & Hasher, L. (1983). Is memory schematic?
+Psychological Bulletin, 93, 203–231.
+Anderson, N. H. (1971). Integration theory and attitude
+change. Psychological Review, 78, 171–206.
+Anderson, J. R. (1975). Review of W. Kintsch, The Rep-
+resentation of Meaning in memory. American Journal
+of Psychology, 88, 524–532.
+Baron, J. (1998). Judgment misguided: Intuition and er-
+https://doi.org/10.1017/S1930297500002291 Published online by Cambridge University Press
+Judgment and Decision Making, Vol. 7, No. 3, May 2012 The gist of intuition 353
+ror in public decision making. New York: Oxford Uni-
+versity Press.
+Baron, J. (2007). President’s column: More attention to
+development. Society for Judgment and Decision Mak-
+ing Newsletter, 26, 3–4.
+Barrouillet, P. (2011a). Dual-process theories and cogni-
+tive development: Advances and challenges. Develop-
+mental Review, 31, 79–85.
+Barrouillet, P. (2011b). Dual-process theories of reason-
+ing: The test of development. Developmental Review,
+31, 151–179.
+Betsch, T. & Glöckner, A. (2010). Intuition in judgment
+and decision making—Extensive thinking without ef-
+fort. Psychological Inquiry, 21, 279–294.
+Betsch, T. & Haberstroh, S. (Eds.). (2005). The routines
+of decision making. Mahwah, NJ: Lawrence Erlbaum.
+Betsch, T., & Kraus, M. (1999). Die Auswirkungen
+von Ergebnis-Framing und dem Wechsel der Problem-
+domäne auf monetäre Entscheidungen [The effects of
+outcome framing and change of problem domain on
+monetary decisions]. Zeitschrift für Experimentelle
+Psychologie, 46, 296–304.
+Bjorklund, D. F. (2012). Children’s thinking: cognitive
+development and individual differences (5th ed.). Bel-
+mont, CA: Wadsworth.
+Boyer, T. W. (2006). The development of risk-taking: A
+multi-perspective review. Developmental Review, 26,
+291–345.
+Brainerd, C. J., Holliday, R. E., Reyna, V. F., Yang, Y., &
+Toglia, M. P. (2010). Developmental reversals in false
+memory: Effects of emotional valence and arousal.
+Journal of Experimental Child Psychology, 10, 137–
+154. doi:10.1016/j.jecp.2010.04.013
+Brainerd, C. J., & Reyna, V. F. (1990). Gist is the
+grist: Fuzzy-trace theory and the new intuitionism.
+Developmental Review, 10, 3–47. doi:10.1016/0273–
+2297(90)90003-M
+Brainerd, C. J., & Reyna, V. F. (1992). Explaining ’mem-
+ory free’ reasoning. Psychological Science, 3, 332–
+339. doi:10.1111/j.1467–9280.1992.tb00042.x
+Brainerd, C. J., & Reyna, V. F. (1993). Memory
+independence and memory interference in cognitive
+development. Psychological Review, 100, 42–67.
+doi:10.1037/0033–295X.100.1.42
+Brainerd, C. J., & Reyna, V. F. (1995). Autosuggestibility
+in memory development. Cognitive Psychology, 28,
+65–101. doi:10.1006/cogp.1995.1003
+Brainerd, C. J., & Reyna, V. F. (2005).
+The science of false memory. New
+York, NY: Oxford University Press.
+doi:10.1093/acprof:oso/9780195154054.001.0001
+Brainerd, C. J., & Reyna, V. F. (2008). Episodic over-
+distribution: A signature effect of familiarity without
+recollection. Journal of Memory and Language, 58,
+765–786. doi:10.1016/j.jml.2007.08.006
+Brainerd, C. J., Reyna, V. F., & Aydin, C. (2010). Re-
+membering in contradictory minds: Disjunction falla-
+cies in episodic memory. Journal of Experimental Psy-
+chology: Learning, Memory, and Cognition, 36, 711–
+735. doi:10.1037/a0018995
+Brainerd, C. J., Reyna, V. F., & Brandse, E. (1995). Are
+children’s false memories more persistent than their
+true memories? Psychological Science, 6, 359–364.
+doi:10.1111/j.1467–9280.1995.tb00526.x
+Brainerd, C. J., Reyna, V. F., & Ceci, S. J. (2008). De-
+velopmental reversals in false memory: A review of
+data and theory. Psychological Bulletin, 134, 343–382.
+doi:10.1037/0033–2909.134.3.343
+Brainerd, C. J., Reyna, V. F., & Estrada, S. (2006). Recol-
+lection rejection of false narrative statements. Memory,
+14, 672–691. doi:10.1080/09658210600648449
+Brainerd, C. J., Reyna, V. F., Holliday, R. E., &
+Nakamura, K. (2012). Overdistribution in source
+memory. Journal of Experimental Psychology:
+Learning, Memory, and Cognition, 38, 413–439.
+doi:10.1037/a0025645
+Brainerd, C. J., Reyna, V. F., & Howe, M. L. (2009).
+Trichotomous processes in early memory develop-
+ment, aging, and neurocognitive impairment: A uni-
+ﬁed theory. Psychological Review, 116, 783–832.
+doi:10.1037/a0016963
+Brainerd, C. J., Reyna, V. F., & Mojardin, A. H. (1999).
+Conjoint recognition. Psychological Review, 106,
+160–179. doi:10.1037/0033–295X.106.1.160
+Brainerd, C. J., Reyna, V. F., & Zember, E. (2011).
+Theoretical and forensic implications of developmen-
+tal studies of the DRM illusion. Memory & Cognition,
+39, 365–380. doi:10.3758/s13421–010–0043–2
+Brainerd, C. J., Yang, Y., Reyna, V. F., Howe, M. L., &
+Mills, B. A. (2008). Semantic processing in “associa-
+tive” false memory. Psychonomic Bulletin & Review,
+15, 1035–1053. doi:10.3758/PBR.15.6.1035
+Bransford, J. D., & Franks, J. J. (1971). The abstraction
+of linguistic ideas. Cognitive Psychology, 2, 331–350.
+doi:10.1016/0010–0285(71)90019–3
+Bruner, J. S. (1966). On the conservation of liquids. In
+J. S. Bruner, R. R. Olver, & P. M. Greenﬁeld, et al.
+(Eds.), Studies in Cognitive Growth. (pp. 183–207).
+New York: Wiley.
+Burson, K. A., Larrick, R. P., & Lynch, J. G. (2009).
+Research report: Six of one, half dozen of the other:
+Expanding and contracting numerical dimensions pro-
+duces preference reversals. Psychological Science, 20,
+1074–1078.
+Casey, B. J., Getz, S., & Galvan, A. (2008). The adoles-
+cent brain. Developmental Review, 28, 62–77.
+https://doi.org/10.1017/S1930297500002291 Published online by Cambridge University Press
+Judgment and Decision Making, Vol. 7, No. 3, May 2012 The gist of intuition 354
+Chi, M. T. H., P. J. Feltovich, et al. (1981). Categoriza-
+tion and representation physics problems by experts
+and novices. Cognitive Science, 5, 121–152.
+Chick, C. F., & Reyna, V. F. (2012). A fuzzy-trace theory
+of adolescent risk-taking: Beyond self-control and sen-
+sation seeking. In V. F. Reyna, S. B. Chapman, M. R.
+Dougherty & J. Confrey (Eds.), The adolescent brain:
+Learning, reasoning, and decision making (pp. 379–
+428). Washington, DC: American Psychological As-
+sociation.
+Chien, Y., Lin, C., & Worthley, J. (1996). Effect of fram-
+ing on adolescents’ decision making. Perceptual and
+Motor Skills, 83, 811–819.
+Clark, H. H., & Clark, E. V. (1977). Psychology and
+language : An introduction to psycholinguistics. New
+York: Harcourt Brace Jovanovich.
+Committee on the Science of Adolescence; Board on
+Children, Youth, and Families; Institute of Medicine
+and National Research Council, (2011). The science of
+adolescent risk-taking: Workshop report. Washington,
+DC: National Academies Press.
+Corbin, J., McElroy, T., & Black, C. (2010). Memory re-
+ﬂected in our decisions: Higher working memory ca-
+pacity predicts greater bias in risky choice. Judgment
+and Decision Making, 5, 110–115.
+Davidson, D. (1995). The representativeness heuristic
+and the conjunction fallacy effect in children’s decision
+making. Merrill-Palmer Quarterly: Journal of Devel-
+opmental Psychology, 41, 328–346.
+De Martino, B., Kumaran, D., Seymour, B., & Dolan,
+R. J. (2006). Frames, biases, and rational decision-
+making in the human brain. Science, 313, 684–687.
+doi:10.1126/science.1128356
+De Neys, W., & Vanderputte, K. (2011). When less is not
+always more: Stereotype knowledge and reasoning de-
+velopment. Developmental Psychology, 47, 432–441.
+Dennis, N. A., Cabeza, R., & Kim, H. (2008). Age-
+related differences in brain activity during true and
+false memory retrieval. Journal of Cognitive Neuro-
+science, 20, 1390–1402.
+Dijksterhuis, A., Bos, M. W., van der Leij, A., & van
+Baaren, R. B. (2009). Predicting soccer matches af-
+ter unconscious and conscious thought as a function of
+expertise. Psychological Science, 20, 1381–1387.
+Dougherty, M. R., Gettys, C. F., & Ogden, E. E. (1999).
+MINERVA-DM: A memory processes model for judg-
+ments of likelihood. Psychological Review, 106, 180–
+209. doi:10.1037/0033–295X.106.1.180
+Dougherty, M. R., Franco-Watkins, A. M., & Thomas,
+R. (2008). Psychological plausibility of the theory
+of probabilistic mental models and the fast and frugal
+heuristics. Psychological Review, 115, 199–211.
+Epstein, S. (1994). Integration of the cognitive and the
+psychodynamic unconscious. American Psychologist,
+49, 709–724.
+Epstein, S. (2008). Intuition from the perspective of
+cognitive-experiential self-theory. In H. Plessner, C.
+Betsch & T. Betsch (Eds.), Intuition in Judgment and
+Decision Making (pp. 23–37). New York: Lawrence
+Erlbaum.
+Estes, W. K. (1980). Is human memory obsolete? Ameri-
+can Scientist, 68, 62–69.
+Estrada, S. M., & Reyna, V. F. (2011, March). Fram-
+ing, mood effects, and risky decision making in chil-
+dren, adolescents, and adults. Poster presented at the
+Annual Meeting of the Society for Research in Child
+Development, Montreal, Quebec, CA.
+Evans, J. S. B. T. (2008). Dual-processing accounts of
+reasoning, judgment, and social cognition. Annual Re-
+view of Psychology, 59, 255–278.
+Evans, J. S. B. T. (2011). Dual-process theories of rea-
+soning: Contemporary issues and developmental ap-
+plications. Developmental Review, 31, 86–102.
+Figner, B., Weber, E. U., Mackinlay, R. J., & Wilken-
+ing, F. (2009). Affective and deliberative processes
+in risky choice: Age differences in risk taking in the
+Columbia card task. Journal of Experimental Psychol-
+ogy: Learning Memory and Cognition, 35, 709–730.
+Fischhoff, B. (2008). Assessing adolescent decision-
+making competence. Developmental Review, 28, 12–
+28.
+Gaissmaier, W., & Schooler, L. J. (2008). The smart po-
+tential behind probability matching. Cognition, 109,
+416–4221.
+Gallo, D. A. (2006). Associative illusions of memory:
+False memory research in DRM and related tasks. New
+York: Psychology Press.
+Galvan, A. (2012). Risky Behavior in Adolescents: The
+Role of the Developing Brain. In V. F. Reyna, S. Chap-
+man, M. Dougherty, & J. Confrey. (Eds.), The Adoles-
+cent Brain: Learning, Reasoning, and Decision Mak-
+ing (pp. 267–289). Washington, DC: American Psy-
+chological Association.
+Gerrard, M., Gibbons, F. X., Houlihan, A. E., Stock,
+M. L., & Pomery, E. A. (2008). A dual process ap-
+proach to health risk decision-making: The prototype-
+willingness model. Developmental Review, 28, 29–61.
+Giedd, J., et al. (2012). Anatomic magnetic resonance
+imaging of the developing child and adolescent brain.
+In V. F. Reyna, S. Chapman, M. Dougherty, & J. Con-
+frey. (Eds.), The Adolescent Brain: Learning, Reason-
+ing, and Decision Making (pp. 15–35). Washington,
+DC: American Psychological Association.
+Gigerenzer, G. (2007). Gut feelings: The intelligence of
+the unconscious.New York: Viking Press.
+Gilovich, T., Grifﬁn, D. W., & Kahneman, D. (2002).
+The psychology of intuitive judgment: Heuristic and
+biases. Cambridge: Cambridge University Press.
+https://doi.org/10.1017/S1930297500002291 Published online by Cambridge University Press
+Judgment and Decision Making, Vol. 7, No. 3, May 2012 The gist of intuition 355
+Glöckner, A., & Betsch, T. (2011). The empirical content
+of theories in judgment and decision making: Short-
+comings and remedies. Judgment and Decision Mak-
+ing, 6, 712–722.
+Glöckner, A., & Witteman, C. L. M. (Eds.). (2010).
+Foundations for tracing intuition: Challenges and
+methods. Hove, UK: Psychology Press.
+Hans, V. P., & Reyna, V. F. (2011). To dollars from sense:
+Qualitative to quantitative translation in jury damage
+awards. Journal of Empirical Legal Studies, 8, 120–
+147.
+Hogarth, R. M. (2001). Educating intuition. Chicago:
+University of Chicago Press.
+Hogarth, R. M., & Einhorn, H. J. (1992). Order effects in
+belief updating: The belief adjustment model. Cogni-
+tive Psychology, 24, 1–55.
+Jacobs, J. E., & Klaczynski, P. A. (2005). The Devel-
+opment of Judgment and Decision Making in Children
+and Adolescents. Mahwah, NJ: L. Erlbaum Associates.
+Jacobs, J. E., & Potenza, M. (1991). The use of judg-
+ment heuristics to make social and object decisions:
+A developmental perspective. Child Development, 62,
+166–178. doi:10.1111/j.1467–8624.1991.tb01522.x
+Johnson-Laird, P. N. (2010). Mental models and
+human reasoning. Proceedings of the Na-
+tional Academy of Sciences, 107, 18243–18250.
+doi:10.1073/pnas.1012933107
+Kahneman, D. (2003). A perspective on judgment
+and choice: Mapping bounded rationality. Ameri-
+can Psychologist, 58, 697–720. doi:10.1037/0003–
+066X.58.9.697
+Keren, G., & Schul, Y. (2009). Two is not always better
+than one. Perspectives on Psychological Science, 4,
+533–550. doi:10.1111/j.1745–6924.2009.01164.x
+Kim, H., & Cabeza, R. (2007). Trusting our memo-
+ries: Dissociating the neural correlates of conﬁdence
+in veridical versus illusory memories. The Journal of
+Neuroscience: The Ofﬁcial Journal of the Society for
+Neuroscience, 27, 12190–12197.
+Kintsch, W. (1974). The representation of meaning in
+memory. Hillsdale, N.J.: Lawrence Erlbaum Asso-
+ciates; distributed by Halsted Press Division, Wiley,
+New York.
+Klaczynski, P. A. (2005). Metacognition and cognitive
+variability: A two-process model of decision making
+and its development. In J. E. Jacobs & P. A. Klaczynski
+(Eds.), The development of decision making in children
+and adolescents (pp. 39–76). Mahwah, NJ: Erlbaum.
+Kostopoulou, O. (2009). Uncertainty in medical deci-
+sions. In M. W. Kattan (Ed). Encyclopedia of medical
+decision making (pp. 1–4). Thousand Oaks, CA: Sage
+Publications.
+Kühberger, A. (1995). The framing of decisions: A new
+look at old problems.Organizational Behavior and Hu-
+man Decision Processes, 62, 230–240.
+Kühberger, A., & Tanner, C. (2010). Risky choice fram-
+ing: Task versions and a comparison of prospect theory
+and fuzzy-trace theory. Journal of Behavioral Decision
+Making, 23, 314–329.
+Lejuez, C. W., Read, J. P., Kahler, C. W., Richards, J. B.,
+Ramsey, S. E., Stuart, G. L., &. Brown, R. A. (2002).
+Evaluation of a behavioral measure of risk taking: The
+balloon analogue risk task (BART). Journal of Exper-
+imental Psychology: Applied Journal of Experimental
+Psychology: Applied, 8, 75–84.
+Lenert, L. A., Sherbourne, C. D., & Reyna, V.
+F. (2001). Utility elicitation using single-item
+questions compared with a computerized inter-
+view. Medical Decision Making, 21, 97–104.
+doi:10.1177/0272989X0102100202
+Levin, I. P., Gaeth, G. J., Schreiber, J., & Lauriola, M.
+(2002). A new look at framing effects: Distribution of
+effect sizes, individual differences, and independence
+of types of effects. Organizational Behavior and Hu-
+man Decision Processes, 88, 411–429.
+Levin, I. P., & Hart, S. S. (2003). Risk preferences in
+young children: Early evidence of individual differ-
+ences in reaction to potential gains and losses. Journal
+of Behavioral Decision Making, 16, 397–414.
+Levin, I. P., Hart, S. S., Weller, J. A., & Harshman, L. A.
+(2007). Stability of choices in a risky decision mak-
+ing ask: A 3-year longitudinal study with children and
+adults. Journal of Behavioral Decision Making, 20,
+241–252.
+Levin, I. P., Weller, J. A., Pederson, A. A., & Harshman,
+L. A. (2007). Age-related differences in adaptive de-
+cision making: Sensitivity to expected value in risky
+choice. Judgment and Decision Making, 2, 225–233.
+Liben, L. S. (1977). Memory in the context of cogni-
+tive development: The Piagetian approach. In R. V.
+Kail Jr., & J. W. Hagen (Eds.), Perspectives on the De-
+velopment of Memory and Cognition (pp. 297–331).
+Hillsdale, NJ: Lawrence Erlbaum Associates.
+Liberali, J. M., Reyna, V. F., Furlan, S., Stein, L. M., &
+Pardo, S.T. (2011). Individual differences in numer-
+acy and cognitive reﬂection, with implications for bi-
+ases and fallacies in probability judgment Journal of
+Behavioral Decision Making. Advance online publica-
+tion. doi:10.1002/bdm.752
+Lloyd, F. J., & Reyna, V. F. (2001). A web exer-
+cise in evidence-based medicine using cognitive the-
+ory. Journal of General Internal Medicine, 16, 94–99.
+doi:10.1111/j.1525–1497.2001.00214.x
+Lloyd, F. J., & Reyna, V. F. (2009). Clinical gist
+and medical education. JAMA: The Journal of
+the American Medical Association, 302, 1332–1333.
+doi:10.1001/jama.2009.1383
+https://doi.org/10.1017/S1930297500002291 Published online by Cambridge University Press
+Judgment and Decision Making, Vol. 7, No. 3, May 2012 The gist of intuition 356
+Loftus, E. F. & Doyle, J. (1987). Eyewitness testimony:
+Civil and criminal. New York: Kluwer.
+MacGregor, D. & Slovic, P. (1986). Graphical represen-
+tation of judgmental information. Human Computer
+Interaction, 2, 179–200.
+Mandel, D. R. (2001). Gain-loss framing and choice:
+Separating outcome formulations from descriptor for-
+mulations. Organizational Behavior and Human Deci-
+sion Processes, 85, 56–76.
+Markovits, H. & Dumas, C. (1999). Developmental pat-
+terns in the understanding of social and physical transi-
+tivity. Journal of Experimental Child Psychology, 73,
+95–114.
+Mata, R., von Helversen, B., & Rieskamp, J. (2011).
+When easy comes hard: The development of adaptive
+strategy selection. Child Development, 82, 687–700.
+McClelland, J. L., & Rumelhart, D. E. (1981). An in-
+teractive activation model of context effects in letter
+perception: I. An account of basic ﬁndings. Psy-
+chological Review, 88, 375–407. doi:10.1037/0033–
+295X.88.5.375
+Mikels, J. A., & Reed, A. E. (2009). Monetary losses
+do not loom large in later life: Age differences in the
+framing effect. Journals of Gerontology - Series B Psy-
+chological Sciences and Social Sciences, 64, 457–460.
+Mills, B., Reyna, V. F., & Estrada, S. (2008). Ex-
+plaining contradictory relations between risk percep-
+tion and risk taking. Psychological Science, 19, 429–
+433. doi:10.1111/j.1467–9280.2008.02104.x
+Morsanyi, K., & Handley, S. J. (2008). How smart do you
+need to be to get it wrong? The role of cognitive ca-
+pacity in the development of heuristic-based judgment.
+Journal of Experimental Child Psychology, 99, 18–36.
+Nelson, W., Reyna, V. F., Fagerlin, A., Lipkus, I., &
+Peters, E. (2008). Clinical implications of numeracy:
+Theory and practice. Annals of Behavioral Medicine,
+35, 261–274. doi:10.1007/s12160–008–9037–8
+Payne, J. W., Bettman, J. R., & Johnson, E. J. (1993).
+The adaptive decision maker. New York: Cambridge
+University Press.
+Pennington, N., & Hastie, R. (1992). Explaining the evi-
+dence: Tests of the story model for juror decision mak-
+ing. Journal of Personality and Social Psychology, 62,
+189–206.
+Perneger, T. V., & Agoritsas, T. (2011). Doctors and pa-
+tients’ susceptibility to framing bias: A randomized
+trial. Journal of General Internal Medicine. Advance
+online publication. doi:10.1007/s11606–011–1810-x
+Peters, E., Vastfjall, D., Slovic, P., Mertz, C. K., Maz-
+zocco, K., & Dickert, S. (2006). Numeracy and deci-
+sion making. Psychological Science, 17, 407–413.
+Pleskac, T. J. & Busemeyer, J. R. (2010).Two stage dy-
+namic signal detection: A theory of choice, decision
+time, and conﬁdence. Psychological Review, 117,
+864–901.
+Plessner, H., Betsch, C., & Betsch, T. (2007). Intuition in
+Judgment and Decision Making. New York: Taylor &
+Francis.
+Proulx, T., & Heine, S. J. (2009). Connections from
+Kafka: Exposure to meaning threats improves implicit
+learning of artiﬁcial grammar. Psychological Science,
+20, 1125–1131.
+Rakow, T., & Rahim, S. B. (2009). Developmen-
+tal insights into experience-based decision making.
+Journal of Behavioral Decision Making, 23, 69–82.
+doi:10.1002/bdm.672
+Ratcliff, R., & McKoon, G. (2008). The diffusion deci-
+sion model: Theory and data for two-choice decision
+tasks. Neural Computation, 20, 873–922.
+Reyna, V. F. (1991). Class inclusion, the conjunc-
+tion fallacy, and other cognitive illusions. Devel-
+opmental Review, 11, 317–336. doi:10.1016/0273–
+2297(91)90017-I
+Reyna, V. F. (1992). Reasoning, remembering, and their
+relationship: Social, cognitive, and developmental is-
+sues. In M. L. Howe, C. J. Brainerd, & V. F. Reyna
+(Eds.), Development of long-term retention (pp. 103–
+127). New York, NY: Springer-Verlag.
+Reyna, V. F. (1995). Interference effects in memory and
+reasoning: A fuzzy-trace theory analysis. In F. N.
+Dempster & C. J. Brainerd (Eds.), Interference and
+inhibition in cognition (pp. 29–59). San Diego, CA:
+Academic Press.
+Reyna, V. F. (1996a). Conceptions of memory devel-
+opment, with implications for reasoning and decision
+making. Annals of Child Development, 12, 87–118.
+Reyna, V. F. (1996b). Meaning, memory and the inter-
+pretation of metaphors. In J. Mio & A. Katz (Eds.),
+Metaphor: implications and applications (pp. 39–57).
+Hillsdale, NJ: Erlbaum.
+Reyna, V. F. (2004). How people make decisions
+that involve risk: A dual-processes approach. Cur-
+rent Directions in Psychological Science, 13, 60–66.
+doi:10.1111/j.0963–7214.2004.00275.x
+Reyna, V. F. (2005). Fuzzy-trace theory, judgment, and
+decision-making: A dual-processes approach. In C.
+Izawa, & N. Ohta (Eds.), Human Learning and Mem-
+ory: Advances in Theory and Application: The 4th
+Tsukuba international Conference on Memory (pp.
+236–256). Mahwah, NJ: L. Erlbaum Associates.
+Reyna, V. F. (2008). A theory of medical decision making
+and health: Fuzzy trace theory. Medical Decision Mak-
+ing, 28, 850–865. doi:10.1177/0272989X08327066
+Reyna, V.F. (2011a, August). Intuitive and unconscious
+cognitive processes in fuzzy-trace theory: An advanced
+approach. Paper presented at the 23rd Subjective
+https://doi.org/10.1017/S1930297500002291 Published online by Cambridge University Press
+Judgment and Decision Making, Vol. 7, No. 3, May 2012 The gist of intuition 357
+Probability, Utility, and Decision Making Conference,
+Kingston upon Thames, United Kingdom.
+Reyna, V. F. (2012). Risk perception and com-
+munication in vaccination decisions: A fuzzy-
+trace theory approach. Vaccine. 30, 3790-3797.
+doi:10.1016/j.vaccine.2011.11.070
+Reyna, V. F. (2011b, September-October). Risk, ratio-
+nality, and neurodevelopment. Paper presented at the
+Annual Meeting of the Society for Neuroeconomics,
+Evanston, IL.
+Reyna, V. F. (in press). Intuition, reasoning, and develop-
+ment: A fuzzy-trace theory approach. In P. Barrouillet
+& C. Gauffroy (Eds.), The development of thinking and
+reasoning. Hove, UK: Psychology Press.
+Reyna, V. F., & Adam, M. B. (2003). Fuzzy-trace the-
+ory, risk communication, and product labeling in sexu-
+ally transmitted diseases. Risk Analysis, 23, 325–342.
+doi:10.1111/1539–6924.00332
+Reyna, V. F., Adam, M. B., Poirier, K., LeCroy, C. W.,
+& Brainerd, C. J. (2005). Risky decision-making in
+childhood and adolescence: A fuzzy-trace theory ap-
+proach. In J. E. Jacobs, & P. A. Klaczynski (Eds.), The
+development of judgment and decision making in chil-
+dren and adolescents (pp. 77–106). Mahwah, N.J.: L.
+Erlbaum Associates.
+Reyna, V. F., & Brainerd, C. J. (1990). Fuzzy process-
+ing in transitivity development. Annals of Operations
+Research, 23, 37–63.
+Reyna, V. F., & Brainerd, C. J. (1991). Fuzzy-trace theory
+and framing effects in choice: Gist extraction, trunca-
+tion, and conversion. Journal of Behavioral Decision
+Making, 4, 249–262. doi:10.1002/bdm.3960040403
+Reyna, V. F., & Brainerd, C. J. (1992). A fuzzy-trace
+theory of reasoning and remembering: Paradoxes, pat-
+terns, and parallelism. In A. Healy, S. Kosslyn, & R.
+Shiffrin (Eds.), From learning processes to cognitive
+processes: Essays in honor of William K. Estes (vol. 2,
+pp. 235–259). Hillsdale, NJ: Erlbaum.
+Reyna, V. F., & Brainerd, C. J. (1993). Fuzzy memory
+and mathematics in the classroom. In G. M. Davies, &
+R. H. Logie (Eds.), Memory in everyday life (pp. 91–
+119). Amsterdam: North Holland Press.
+Reyna, V. F., & Brainerd, C. J. (1994). The origins of
+probability judgment: A review of data and theories.
+In G. Wright, & P. Ayton (Eds.), Subjective Probability
+(pp. 239–272). New York, NY: Wiley.
+Reyna, V. F., & Brainerd, C. J. (1995a). Fuzzy-trace
+theory: An interim synthesis. Learning and In-
+dividual Differences, 7, 1–75. doi:10.1016/1041–
+6080(95)90031–4
+Reyna, V. F., & Brainerd, C. J. (1995b). Fuzzy-trace
+theory: Some foundational issues. Learning and In-
+dividual Differences, 7, 145–162. doi:10.1016/1041–
+6080(95)90028–4
+Reyna, V. F., & Brainerd, C. J. (1998). Fuzzy-trace
+theory and false memory: New frontiers. Jour-
+nal of Experimental Child Psychology, 71, 194–209.
+doi:10.1006/jecp.1998.2472
+Reyna, V. F., & Brainerd, C. J. (2007). The importance of
+mathematics in health and human judgment: Numer-
+acy, risk communication, and medical decision mak-
+ing. Learning and Individual Differences, 17, 147–
+159. doi:10.1016/j.lindif.2007.03.010
+Reyna, V. F., & Brainerd, C. J. (2008). Numeracy, ratio
+bias, and denominator neglect in judgments of risk and
+probability. Learning and Individual Differences, 18,
+89–107. doi:10.1016/j.lindif.2007.03.011
+Reyna, V. F., & Brainerd, C. J. (2011). Dual processes in
+decision making and developmental neuroscience: A
+fuzzy-trace model. Developmental Review, 31, 180–
+206. doi:10.1016/j.dr.2011.07.004
+Reyna, V. F., & Casillas, W. (2009). Development and
+dual processes in moral reasoning: A fuzzy-trace the-
+ory approach. In D. M. Bartels, C. W. Bauman, L. J.
+Skitka & D. L. Medin (Eds.), The psychology of learn-
+ing and motivation (Vol. 50), (pp. 207–239). London:
+Academic.
+Reyna, V. F., Chapman, S. B., Dougherty, M. R., & Con-
+frey, J. (Eds.). (2012). The adolescent brain: Learn-
+ing, reasoning and decision making. Washington, DC:
+American Psychological Association.
+Reyna, V. F., & Ellis, S. C. (1994). Fuzzy-trace theory
+and framing effects in children’s risky decision mak-
+ing. Psychological Science, 5, 275–279.
+Reyna, V. F., Estrada, S. M., DeMarinis, J. A., Myers, R.
+M., Stanisz, J. M., & Mills, B. A. (2011). Neurobio-
+logical and memory models of risky decision making
+in adolescents versus young adults. Journal of Exper-
+imental Psychology: Learning, Memory, and Cogni-
+tion, 37, 1125–1142. doi:10.1037/a0023943
+Reyna, V. F., & Farley, F. (2006). Risk and rationality
+in adolescent decision making: Implications for the-
+ory, practice, and public policy. Psychological Science
+in the Public Interest, 7, 1–44. doi:10.1111/j.1529–
+1006.2006.00026.x
+Reyna, V. F., & Hamilton, A. J. (2001). The im-
+portance of memory in informed consent for surgi-
+cal risk. Medical Decision Making, 21, 152–155.
+doi:10.1177/0272989X0102100209
+Reyna, V. F., Holliday, R. E., & Marche, T. A. (2002).
+Explaining the development of false memories. Devel-
+opmental Review, 22, 436–489. doi:10.1016/S0273–
+2297(02)00003–5
+Reyna, V. F., & Kiernan, B. (1994). Development of
+gist versus verbatim memory in sentence recognition:
+Effects of lexical familiarity, semantic content, encod-
+ing instructions, and retention interval. Developmental
+Psychology, 30, 178–191.
+https://doi.org/10.1017/S1930297500002291 Published online by Cambridge University Press
+Judgment and Decision Making, Vol. 7, No. 3, May 2012 The gist of intuition 358
+Reyna, V. F., & Kiernan, B. (1995). Children’s memory
+and metaphorical interpretation. Metaphor and Sym-
+bolic Activity, 10, 309–331.
+Reyna, V. F., & Lloyd, F. J. (1997). Theories of false
+memory in children and adults. Learning and Indi-
+vidual Differences, 9, 95–123. doi:10.1016/S1041–
+6080(97)90002–9
+Reyna, V. F., & Lloyd, F. J. (2006). Physician decision
+making and cardiac risk: Effects of knowledge, risk
+perception, risk tolerance, and fuzzy processing. Jour-
+nal of Experimental Psychology: Applied, 12, 179–
+195. doi:10.1037/1076–898X.12.3.179
+Reyna, V. F., Lloyd, F. J., & Brainerd, C. J. (2003). Mem-
+ory, development, and rationality: An integrative the-
+ory of judgment and decision-making. In S. L. Schnei-
+der, & J. Shanteau (Eds.), Emerging Perspectives on
+Judgment and Decision Research (pp. 201–245). Cam-
+bridge; New York: Cambridge University Press.
+Reyna, V. F., Lloyd, F. J., & Whalen, P. (2001).
+Genetic testing and medical decision making.
+Archives of Internal Medicine, 161, 2406–2408.
+doi:10.1001/archinte.161.20.2406
+Reyna, V. F., & Mills, B. (2007a). Converging evi-
+dence supports fuzzy-trace theory’s nested sets hypoth-
+esis, but not the frequency hypothesis. Behavioral and
+Brain Sciences, 30, 278–280.
+Reyna, V. F., & Mills, B. (2007b). Interference pro-
+cesses in fuzzy-trace theory. In D. S. Gorfein, & C.
+M. MacLeod (Eds.), Inhibition in Cognition (pp. 185–
+210). Washington, DC: American Psychological As-
+sociation.
+Reyna, V. F., Mills, B., Estrada, S., & Brainerd, C. J.
+(2006). False memory in children: Data, theory, and
+legal implications. In M. P. Toglia, J. D. Read, D. F.
+Ross & R. C. L. Lindsay (Eds.), The handbook of eye-
+witness psychology memory for events. (pp. 473–510).
+Mahwah, NJ: Erlbaum.
+Reyna, V. F., Nelson, W. L., Han, P. K., & Dieckmann,
+N. F. (2009). How numeracy inﬂuences risk compre-
+hension and medical decision making. Psychological
+Bulletin, 135, 943–973. doi: 10.1037/a0017327
+Reyna, V. F., & Rivers, S. E. (2008). Current theories
+of risk and rational decision making. Developmental
+Review, 28, 1–11. doi:10.1016/j.dr.2008.01.002
+Rivers, S. E., Reyna, V. F., & Mills, B. (2008). Risk tak-
+ing under the inﬂuence: A fuzzy-trace theory of emo-
+tion in adolescence. Developmental Review, 28, 107–
+144. doi:10.1016/j.dr.2007.11.002
+Robinson, K. J., & Roediger III, H. L. (1997). Associa-
+tive processes in false recall and false recognition. Psy-
+chological Science, 8, 231–237.
+Roiser, J. P., De Martino, B., Tan, G. C. Y., Kumaran, D.,
+Seymour, B., Wood, N. W., & Dolan, R. J. (2009). A
+genetically mediated bias in decision making driven by
+failure of amygdala control. Journal of Neuroscience,
+29, 5985–5991.
+Schacter, D. L., Guerin, S. A., & St. Jacques, P. L. (2011).
+Memory distortion: An adaptive perspective. Trends in
+Cognitive Sciences, 15, 467–474.
+Schlottmann, A., & Anderson, N. H. (1994). Children’s
+judgments of expected value. Developmental Psychol-
+ogy, 30, 56–66. doi:10.1037/0012–1649.30.1.56
+Schooler, L. J., & Hertwig, R. (2005). How forgetting
+aids heuristic inference. Psychological Review, 112,
+610–628.
+Shanteau, J. (1992). Competence in experts: The role
+of task characteristics. Organizational Behavior and
+Human Decision Processes, 53, 252–266.
+Siegler, R. S. (1981). Developmental sequences within
+and between concepts. Society for Research in Child
+Development Monographs, 46, 1–84.
+Simon, H. A. (1955). A behavioral model of rational
+choice. Quarterly Journal of Economics, 69, 99–118.
+Sloman, S. A. (1996). The empirical case for two systems
+of reasoning. Psychological Bulletin, 119, 3–22.
+Sloman, S. A. (2002). Two systems of reasoning. In T.
+Gilovich, D. Grifﬁn & D. Kahneman (Eds.), Heuristics
+and biases: The psychology of intuitive judgment (pp.
+379–396). New York: Cambridge University Press.
+Slotnick, S. D., & Schacter, D. L. (2004). A sensory sig-
+nature that distinguishes true from false memories. Na-
+ture Neuroscience, 7, 664–672.
+Somerville, L. H., Jones, R. M., & Casey, B. J. (2010).
+A time of change: Behavioral and neural correlates of
+adolescent sensitivity to appetitive and aversive envi-
+ronmental cues. Brain and Cognition, 72, 124–133.
+Stanovich, K. E., & West, R. F. (2008). On the relative
+independence of thinking biases and cognitive abil-
+ity. Journal of Personality and Social Psychology, 94,
+672–695.
+Stanovich, K. E., West, R. F., & Toplak, M. W. (2011).
+The complexity of developmental predictions from
+dual process models. Developmental Review, 31, 103–
+118.
+Steinberg L. (2008). A social neuroscience perspective
+on adolescent risk-taking. Developmental Review, 28,
+78–106.
+Stocké, V. (1998). Framing oder Informationsknappheit?
+Zur Erklärung der Formulierungseffekte beim Asian-
+Disease-Problem [Framing or scarceness of informa-
+tion? On the explanation of wording effects in the
+Asian-disease problem]. In U. Druwe & V. Kunz
+(Hrsg.) (Eds.), Anomalien in der Handlungs- und
+Entscheidungstheorie [Anomalies in theories of action
+and choice] (pp. 197–218). Leske + Budrich.
+Stone, E. R., Yates, J. F., & Parker, A. M. (1994).
+Risk communication: Absolute versus relative expres-
+sions of low-probability risks. Organizational Be-
+https://doi.org/10.1017/S1930297500002291 Published online by Cambridge University Press
+Judgment and Decision Making, Vol. 7, No. 3, May 2012 The gist of intuition 359
+havior and Human Decision Processes, 60, 387–408.
+doi:10.1006/obhd.1994.1091
+Sunstein C.R. (2008). Adolescent risk-taking and social
+meaning: A commentary. Developmental Review, 28,
+145–152.
+Tversky, A., & Kahneman, D. (1981). The framing of
+decisions and the psychology of choice. Science, 211,
+453–458.
+Tversky, A., & Kahneman, D. (1983). Extensional vs.
+intuitive reasoning: The conjunction fallacy in proba-
+bility judgment. Psychological Review, 90 , 293–315.
+Tversky, A., & Kahneman, D. (1986). Rational choice
+and the framing of decisions. Journal of Business, 59,
+251–278.
+Tversky, A., & Kahneman, D. (1992). Advances in
+prospect theory: Cumulative representation of uncer-
+tainty. Journal of Risk and Uncertainty, 5, 297–323.
+doi:10.1007/BF00122574
+Van Duijvenvoorde, A. C. K., Jansen, B. R. J., Bredman,
+J. & Huizenga, H. M. (2012). Age-related changes
+in decision-making: Comparing informed and non-
+informed situations. Developmental Psychology, 48,
+192–203.
+Vlaev, I., Chater, N., Stewart, N., & Brown,
+G. D. A. (2011). Does the brain calculate
+value? Trends in Cognitive Sciences, 15, 546-554.
+doi:10.1016/j.tics.2011.09.008
+Weber, E. U., Johnson, E. J., Milch, K., Chang, H., Brod-
+scholl, J., & Goldstein, D. (2007). Asymmetric dis-
+counting in intertemporal choice: A query theory ac-
+count. Psychological Science, 18, 516–523.
+Wertheimer, M. (1938). Gestalt theory. In W. D. El-
+lis (Ed.), A source book of Gestalt psychology (pp. 1–
+11). London, England: Kegan Paul, Trench, Trubner
+& Company.
+Wolfe, C. R., & Reyna, V. F. (2010). Semantic co-
+herence and fallacies in estimating joint probabilities.
+Journal of Behavioral Decision Making, 23, 203–223.
+doi:10.1002/bdm.650
+Wolfe, C. R., Reyna, V. F., & Brainerd, C. J. (2005).
+Fuzzy-trace theory: Implications for transfer in teach-
+ing and learning. In J. P. Mestre (Ed.), Transfer of
+learning from a modern multidisciplinary perspective
+(pp. 53–88). Greenwich, CT: Information Age Pub-
+lishing.
+Wolford, G., Newman, S. E., Miller, M. B., & Wig,
+G. S. (2004). Searching for patterns in random se-
+quences. Canadian Journal of Experimental Psychol-
+ogy, 58, 221–228.
+https://doi.org/10.1017/S1930297500002291 Published online by Cambridge University Press

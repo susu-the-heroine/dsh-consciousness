@@ -1,0 +1,569 @@
+Memory & Cognition
+1984,12(2),118-122
+The spacingeffect in free recall
+emerges with development
+THOMAS C. TOPPINO and WILLIAM DiGEORGE
+Villanova University, Villanova, Pennsylvania
+In two experiments, children were shown a series of pictures of common objects and were asked
+to free recall which pictured objects had been presented. Some pictures were presented twice,
+with repetitions being either massed or spaced apart. Results indicated that preschoolers ben­
+efited from repetition but that they recalled massed and spaced repetitions equally well. In con­
+trast, first-graders produced the typical spacing effect by recalling spaced repetitions better
+than they did massed repetitions. This finding that the spacing effect in free recall emerges
+with development suggests that the phenomenon cannot be explained solely in terms of a primi­
+tive encoding mechanism that is hard-wired into the memory system. Rather, an adequate ac­
+count must include processes that are acquired or that develop during childhood. Further dis­
+cussion focuses on implications of our findings for specific theories of the spacing effect and for
+the direction of future research.
+That repetition improves memory is one of the most
+widely accepted generalizations that we have about
+learning and memory. Repetition seems to underlie
+many common learning strategies and is incorporated
+into many teaching techniques. It is commonly exploited
+in attempts at persuasion. Indeed, there is evidence that
+repetition increases the credibility of plausible state­
+ments (Hasher, Goldstein, & Toppino, 1977)-a phenom­
+enon that may be mediated by the memorability of
+repeated events (Bacon, 1979). Qualifying the generali­
+zation that repetition facilitates memory, however, is
+the fact that its effectiveness depends critically on the
+spacing between repetitions. When repetitions are
+presented in immediate succession (massed presenta­
+tions), their beneficial effect is often minimal. However,
+as repetitions become more distributed or spaced apart,
+memory for repeated information typically improves.
+The latter phenomenon is known as the spacing
+effect and has proved to be an extraordinarily robust
+finding, It has been obtained with a wide variety of
+materials ranging from nonsense syllables and words to
+picture and prose passages (Kraft & Jenkins, 1981). It
+has been demonstrated with virtually every standard
+memory task from free recall to recognition (Hintzman,
+1974), and occurs despite variation in task parameters
+such as rate and modality of presentation (e.g., Melton,
+1970). The phenomenon is obtained in incidental learn­
+ing conditions (e.g., Maskarinec & Thompson, 1976;
+Shaughnessy, 1976), as well as in intentional learning
+We would like to thank Jane Flamish for her assistance in pre­
+paring the stimuli and Pamela Blewitt for her helpful comments
+on an earlier draft of this paper. Reprint requests should be sent
+to Thomas C. Toppino, Department of Psychology, Villanova
+University, Villanova, Pennsylvania 19085.
+conditions (e.g., Hintzman & Rogers, 1973; Melton,
+1967; Underwood, 1969). And, the effect often has
+persisted despite attempts to eliminate or attenuate it
+(e.g., Bird, Nicholson, & Ringer, 1978; Hintzman,
+Summers, Eki, & Moore, 1975; Jensen & Freund, 1981 ;
+Shaughnessy, 1976).
+The uncommon generality and persistence of the
+spacing effect has led some investigators to propose that
+the phenomenon reflects the automatic operation of
+some fundamental memory process (e.g., Jensen &
+Freund, 1981) that may even be hard-wired into the
+memory system (e.g., Hintzm an, 1974; Landauer, 1969;
+Peterson, 1966). This hypothesis received support from
+a recent study by Cornell (1980), in which 5- and
+6-month-old infants appeared to exhibit a spacing effect.
+Babies viewed human faces with repetitions spaced
+either 3 sec or 1 min apart. After a retention interval
+that ranged from 5 sec to 1 h, a recognition test was
+administered in which infants were exposed simultane­
+ously to an old and a new face and in which a preference
+for viewing the new face was interpreted as evidence for
+recognition. Results indicated that, for the longer reten­
+tion intervals, the infants showed a preference for the
+new face following spaced repetitions but not following
+massed repetitions.
+Although very fundamental-even primitive-memory
+processes must have been involved for Cornell (1980)
+to have obtained a spaced-repetition effect in infants, we
+were concerned about the degree to which this conclu­
+sion could be generalized to other situations. First,
+infant recognition procedures depending on differential
+viewing time for two stimuli are drastically different
+from the procedures used to study conscious episodic
+memory with older children and adults. There is no
+guarantee that the two kinds of procedure tap into the
+same processes (Werner & Perlmutter, 1979). Second, it
+Copyright 1984 Psychonomic Society, Inc. 118
+has been suggested that different information may
+underlie repetition and spaced-repetition effects in
+recognition tasks and other tasks such as free recall.
+For example, according to Glenberg (1979; Glenberg &
+Smith, 1981), recognition depends primarily on the
+encoding of characteristic information that distinguishes
+one to-be-remembered item from another, whereas free
+recall depends more heavily on the encoding of context­
+ual information, Thus, even if we extrapolate from
+Cornell's findings and conclude that primitive mech­
+anisms are sufficient to produce a spacing effect in the
+recognition memory of older children and adults, it
+does not necessarily follow that this is true of the
+spacing effect in general, because the mechanisms may
+not operate automatically on the information that
+mediates performance in other memory tasks.
+To explore this issue further, we decided to investi­
+gate the spacing effect in free recall and to do so with a
+population of preschool children who seem to possess
+the following characteristics. First, they are old enough
+to perform conscious, episodic memory tasks such as
+those employed with adults. And, second, they are so
+young that they are unlikely to use intentional memori­
+zation strategies as adults do (Myers & Perlmutter,
+1978; Paris, 1978). Rather, remembering for them seems
+to be the result ofmore fundamental memory processes.
+EXPERIMENT 1
+Method
+Subjects and Design. The subjects were 20 children from
+suburban nursery schools [mean age =4 years 4 months (44);
+range =4~ to 5~1. They participated in a single-factor experi­
+ment in which the spacing between repetitions (massed vs.
+spaced) was manipulated as a within-subjects variable.
+Materials. Four 22-position lists were developed, two using
+each of two different list structures constructed with the same
+set of general constraints, as follows. To control for serial posi­
+tion effects during free recall, the first and last 3 serial positions
+were reserved for once-presented items that served as primacy
+and recency buffers, respectively. The middle portions of the
+list structures consisted of 16 positions that were designated for
+the presentation of four once-presented filler items and six
+twice-presented items. Of the latter items, three were massed
+repetitions (separated by no other items) and three were spaced
+repetitions (separated by the presentation of three other items).
+To control further for possible extended recency effects (e.g.,
+Underwood, 1969), massed and spaced repetitions were located
+in the list structures such that they were equated with respect
+to the mean serial positions of their second occurrences.
+The four actual experimental lists were constructed from a
+pool of 16 pictures of unrelated common objects that were
+selected because they could be labeled easily and unambiguously
+by preschool children. To create the first list involving each list
+structure, pictures were assigned to serve as primacy buffers,
+recency buffers, fillers, massed repetitions, and spaced repeti­
+tions. They were then assigned to serial positions in the list
+structures. The second list involving each list structure was
+composed by interchanging the pictures that served as massed
+and as spaced repetitions, respectively. Thus, across lists, the
+same set of items served equally often in each repetition condition.
+Procedure. The children participated individually. Five
+children received each of the four lists. The experimenter pre­
+sented the sequence of pictures manually at a 5-5ec rate. As each
+SPACING EFFECT 119
+Table 1
+Mean Percent Correct Recall in Two Experiments as a Function
+of Grade Leveland Presentation Condition
+Single Massed Spaced
+Presentation Repetitions Repetitions
+-----------
+Experiment 1
+Preschoolers 11.2 46.7 46.7
+Experiment 2
+Preschoolers 13.9 34.7 32.0
+First Graders 20.8 37.5 54.2
+picture was presented, the children were required to label it.
+Following list presentation, the children were allowed 3 min
+for oral free recall.
+Results and Discussion
+The mean percentages of correct recall of repeated
+items are presented in Table 1. Clearly, the spacing
+between repetitions had no effect on performance,
+However, there were several reasons for exercising cau­
+tion in interpreting these results.
+First, accepting an unreplicated null effect is always
+risky, and this is especially so when it involves the
+failure to obtain a phenomenon that is as general and
+robust as the spacing effect. Second, a skeptic might
+question whether repetition had affected performance at
+all in Experiment 1. Even though the children recalled
+only 11.2% of the once-presented items in the middle
+region ofthe list (in comparison with 46.7% for repeated
+items), we had made no effort to equate once-presented
+and repeated items in terms of item difficulty or serial
+position. It could be argued that either or both ofthese
+factors could have accounted for the apparent repetition
+effect that we obtained. Third, as far as we know, no
+other spaced-repetition study had ever used the pro­
+cedures that we employed (i.e., recall of pictures).
+Thus, before we took seriously the failure to obtain a
+spacing effect with these procedures in one population,
+it was important to demonstrate that the procedures
+did result in a spacing effect in another, older popula­
+tion. Experiment 2 was designed with the foregoing
+points in mind.
+EXPERIMENT 2
+Method
+Subjects and Design. The subjects were 18 nursery school
+children (mean age =44; range =3-11 to 5-2) and 18 first-grade
+children (mean age = 6-8; range 6-5 to 74). In addition to the
+grade-level factor, presentation condition (once-presented,
+massed repetition, and spaced repetition) was manipulated with­
+in subjects.
+Procedure and Materials. The procedure was identical to that
+used in Experiment 1. With regard to materials, list structures
+and lists were constructed in the same manner as those in Ex­
+periment 1. The only differences were as follows. Lists contained
+27 serial positions. The first 3 and last 4 positions were reserved
+for primacy and recency buffers, respectively. The middle por­
+tion of the list structures contained four once-presented items,
+120 TOPPINO AND DiGEORGE
+four massed repetitions, and four spaced repetitions. Two items
+from each of these three conditions occurred in the first half of
+the list, whereas the remaining two items from each condition
+occurred in the second half of the list. The mean serial position
+of once-presented items was equated with that of the second
+OCcurrences of massed and spaced repetitions.
+Six lists, three for each of two list structures, were con­
+structed from a pool of 19 pictures of common unrelated ob­
+jects. So that the same set of items would serve in all three
+repetition conditions (i.e., once-presented, massed repetition,
+and spaced repetition), a Latin-square principle was used to
+counterbalance the pictures serving in these conditions across
+the three lists involving each list structure. Three children from
+each grade level received each of the six lists.
+Results and Discussion
+The mean percentages of correct recall are presented
+in Table 1. A series of planned comparisons were con­
+ducted on the data. For preschool children, repeated
+items were recalled better than once-presented items
+[F(l,34) = 10.02, p < .01] , but there was no difference
+between recall ofmassed and spaced repetitions [F(I,34)
+< 1.00] (MSe = 452.75 in both cases). Thus, in a situa­
+tion in which preschoolers clearly benefited from
+repetition, we were able to replicate our previous fmding
+that they do not exhibit a spacing effect in free recall.
+We were also able to demonstrate that exactly the same
+procedures produced a spacing effect in first-grade
+children. These children not only recalled repeated items
+better than they did once-presented items [F(1,34) =
+22.67, p < .01], but, more importantly, they also
+recalled spaced repetitions better than they did massed
+repetitions [F(1,34) =7.56, p < .01] (MSe =330.88
+in both cases).'
+GENERAL DISCUSSION
+Our fundamental findings were that preschoolers do
+not exhibit a spacing effect in free recall, although they
+do benefit from repetition. With further development,
+however, the spacing effect does emerge. These findings
+place constraints on the hypothesis that the spacing
+effect is due to a mechanism that is hard-wired into the
+memory system and that operates automatically. If such
+a mechanism exists, as suggested by Cornell's (1980)
+data, its field of operation may be limited to recogni­
+tion memory. The spacing effect in free recall appears to
+depend upon the development of other (but perhaps
+analogous) mechanisms. At the very least, if a primitive
+mechanism does underlie the spacing effect in free
+recall, it is apparently not sufficient to produce the
+phenomenon until it has been augmented by the de­
+velopment of other processes.
+With regard to the implications of our findings for
+specific theories of the spacing effect, it is convenient
+to consider two major categories of theory: deficient­
+processing theories and encoding variability theories.
+According to the former type of theory, poor memory
+for massed repetitions is explained by assuming that one
+presentation or the other is not fully processed. With
+increased spacing, the shortchanged presentation receives
+more processing, and thus memory improves. According
+to the latter kind of theory, repetition facilitates mem­
+ory to the extent that each presentation is encoded
+differently, thereby establishing more ways to access
+the information at retrieval. When repetitions are massed,
+both presentations are likely to be encoded similarly.
+However, as spacing between repetitions increases, en­
+codings become increasingly different, and this pro­
+duces better memory.
+Among the major deficient-processing theories, the
+one that seems most compatible with our results pro­
+poses that subjects adopt a voluntary strategy in which
+they do not attend to and fully process the second
+occurrence of a massed repetition, but in which they
+devote more attention to the second occurrence as
+spacing increases. To account for our findings, one might
+assume that this strategy develops or is acquired between
+the ages of approximately 4 and 6 years. Although it is
+not at all clear why such a strategy would be acquired
+at this point in development, it is at least plausible.
+Research with tasks involving selective attention such
+as memory for central versus incidental information
+(e.g., Hagen & Stanovich, 1977), concept identification
+(e.g., Johnson, Warner, & Silleroy, 1971; Toppino, Lee,
+Johnson, & Shishko, 1979), and same-different judg­
+ments of multidimensional stimuli (e.g., Pick & Frankel,
+1974) has indicated that there is a general trend for
+attention to become increasingly "active and directed"
+(Pick, Christy, & Frankel, 1972, p. 165) with develop­
+ment. The emergence of the strategy under considera­
+tion here may be another indication of this general
+developmental trend.
+Other deficient-processing theories fare less well with
+our data. Two of these, consolidation theory and habit­
+uation theory, have not been convincingly confirmed or
+disconfirmed by previous research (e.g., Hintzman,
+1974; Hintzman, Summers, & Block, 1975). In light of
+the unusual generality and persistence of the spacing
+effect, these theories have remained somewhat attractive
+for the same reason that they cannot explain Our find­
+ings. That is, they attribute the spacing effect to involun­
+tary processes associated with the basic neurophysiology
+of memory. According to the first theory, deficient
+processing occurs because consolidation ofone presenta­
+tion interferes with consolidation of the other when
+repetitions are too close together. According to the
+second theory, encoding one presentation temporarily
+habituates some encoding process such that it cannot
+properly respond to a second presentation until suf­
+ficient time has passed for recovery to have taken
+place. To account for our results, these theories would
+have to make the implausible assumption that the time
+course of consolidation or habituation-recovery gets
+substantially longer between the ages of 4 and 6 years.
+A final deficient-processing theory is based on the
+assumption that massed repetitions receive less total
+rehearsal than do spaced repetitions. Although this
+theory has difficulty with other fmdings (see Hintzman,
+1974, for a review), it is discussed here because, at first
+glance, it seems able to account for our data. That is,
+research on the development of rehearsal indicates that
+preschoolers are unlikely to engage in spontaneous
+rehearsal, whereas first-graders may do so (e.g., Flavell,
+Beach, & Chinsky, 1966; Keeney, Cannizzo, & Flavell,
+1967). Thus, if the spacing effect were based on re­
+hearsal, it seems reasonable that preschoolers would not
+show an effect but that first-graders might. Unfortu­
+nately, this explanation does not hold up on closer
+analysis.
+According to the theory, massed and spaced repeti­
+tions differ in how much rehearsal is given to the first
+presentation before the second presentation occurs
+(Rundus, 1971). It is assumed that an item is rehearsed
+not only at the time of its own presentation, but also
+during the presentation of subsequent items. Thus,
+there is more opportunity for rehearsal between repeti­
+tions for spaced than for massed repetitions. If an item
+were rehearsed only during its own presentation, two
+presentations would lead to the same amount ofrehearsal
+regardless of the spacing between them. Therein lies the
+problem that this theory has with our fmdings. Although
+first-graders might exhibit spontaneous rehearsal, they
+would be expected to rehearse only one item at a time
+and only the most recently presented item (e.g., Ornstein,
+Naus, & Liberty, 1975; Ornstein, Naus, & Stone, 1977).
+Thus, if rehearsal underlies the spacing effect, we should
+have obtained no spacing effect for either preschool or
+first-grade children.
+Now consider theories that can be classified as encod­
+ing variability theories (e.g., Bower, 1972; Glenberg,
+1979; McFarland, Rhodes, & Frey, 1979). These theo­
+ries are often vague with regard to whether variable
+encoding is an involuntary result of basic memory
+mechanisms or whether it is the result of voluntary
+strategies. Regardless of what produces variable encod­
+ing, however, these theories suggest either implicitly or
+explicitly that the probability of successfully retrieving
+a trace of a repeated item equals the probability of
+retrieving information encoded on the first presentation,
+information encoded on the second presentation, or
+both. It is assumed that, with increasing spacing, the
+total probability of successful retrieval increases because
+the information encoded on the first and second pre­
+sentations becomes increasingly independent (i.e., less
+overlapping).
+Although different encoding variability theories
+vary in a number of details, they all seem compatible
+with the following general account of our results.
+The performance of first-graders is explained in the
+manner that has already been outlined. The perfor­
+mance of preschoolers, however, is explained by as­
+suming that they encode every item presentation as
+a completely independent event. Thus, they would
+recall repeated items better than they would once­
+presented items. But, because their encodings would
+be independent regardless of the spacing between repe-
+SPACING EFFECT 121
+titions, spacing would not influence their performance.
+The above hypothesis is attractive in its simplicity
+and apparent plausibility. However, there is also reason
+to question the adequacy of an account of our data
+based on encoding variability theories. These theories
+imply that repetition produces its maximum effect when
+the information encoded on each presentation is com­
+pletely independent. This maximum level of perfor­
+mance can be estimated using the proportion (P) of
+once-presented items correctly recalled as an estimate of
+the probability of successfully retrieving a single inde­
+pendent presentation. The estimated probability, then,
+of retrieving either or both oftwo independent presenta­
+tions is given by P + P - p2 , or 2P - p2 . In Experi­
+ment 2, preschool children recalled .139 of the once­
+presented items. Thus, the estimated probability of re­
+calling one or both of two independent events was
+.259, which was reliably lower than the obtained level of
+recall (.333) for repeated items [t(17) = 2.31, p < .05] .2
+In short, preschoolers recalled repeated items signifi­
+cantly better than should have been possible according
+to encoding variability theories."
+In summary and conclusion, our fmdings place limits
+on the kind ofexplanation that will provide an adequate
+general account of the spacing effect. Such an explana­
+tion cannot rely solely on automatic encoding processes
+that are operative from early infancy, but must incorpo­
+rate processes that become active later in childhood. Of
+the major theories that have been offered to explain the
+spacing effect in adults, the one that seems most easily
+reconciled with our fmdings attributes the spacing effect
+to a strategy in which subjects voluntarily divert atten­
+tional processing from the second occurrence of a
+massed repetition. Further research will be necessary to
+determine whether the difference in performance be­
+tween preschool and first-grade children is best ex­
+plained by the acquisition ofsuch an attentional strategy
+or by the development of some other process or set of
+processes. However, a more important point may be that
+our fmdings suggest that a new approach to the study of
+spaced-repetitions may be productive.
+The last 15 years have witnessed a great number of
+experiments investigating the effects of spaced repeti­
+tions in human adults. Because adult subjects produce
+the spacing effect in most circumstances, the predomi­
+nant research strategy for isolating the underlying
+mechanism(s) has involved fmding conditions that
+eliminate or attenuate the effect. Unfortunately, this
+approach has not led to a generally accepted explana­
+tion of the spacing effect. Our fmdings suggest that it
+may be fruitful to take a nearly opposite, but comple­
+mentary, approach-a developmental approach (see also
+Toppino & DeMesquita, in press, and Wilson, 1976).
+We have found a population of children who do not yet
+exhibit the spacing effect in free recall. Iffuture research
+can discover what developments or acquisitions lead to
+the emergence of the spacing effect in children, the
+findings should illuminate the mechanisms underlying
+the spacing effect in general.
+122 TOPPINO AND DiGEORGE
+REFERENCES
+BACON, F. T. (1979). Credibility of repeated statements: memory
+for trivia. Journal ojExperimental Psychology: Human Learn­
+ing and Memory, 5, 241-252.
+BIRD, C. P., NICHOLSON, A. J., & RINGER, S. (1978). Resistance
+of the spacing effect to variations in encoding. American Jour­
+nal ofPsychology, 91, 713-721.
+BOWER, G. H. (1972). Stimulus-sampling theory of encoding vari­
+ability. In A. W. Melton & E. Martin (Eds.), Coding processes
+in human memory. Washington, DC: V. H. Winston.
+CORNELL, E. H. (1980). Distributed study facilitates infants' de­
+layed recognition memory. Memory & Cognition, 8, 539-542.
+FLAVELL, J. H., BEACH, D. H., & CHINSKY, J. M. (1966). Spon­
+taneous verbal rehearsal in a memory task as a function of age.
+Child Development, 37, 283-299.
+GLENBERG, A. M. (1979). Component-levels theory of the effects
+of spacing of repetitions on recall and recognition. Memory &
+Cognition, 7, 95-112.
+GLENBERG, A. M., & SMITH, S. M. (1981). Spacing repetition
+and solving problems are not the same. Journal of VerbalLearn­
+ing and Verbal Behavior, 20,110-119.
+HAGEN, J. W., & STANOVICH, K. G. (1977). Memory: Strategies
+of acquisition. In R. V. Kail, Jr., & J. W. Hagen (Eds.), Per­
+spectives on the development ofmemory and cognition. Hills­
+dale, NJ: Erlbaum.
+HASHER, L., GOLDSTEIN, D., & TOPPINO, T. (1977). Frequency
+and the conference of referential validity. Journal of Verbal
+Learning and Verbal Behavior, 16, 107-112.
+HINTZMAN, D. L. (1974). Theoretical implications of the spacing
+effect. In R. L. Solso (Ed.), Theories in cognitive psychology:
+The Loyola Symposium. Hillsdale, NJ: ErIbaum.
+HINTZMAN, D. L., & ROGERS, M. K. (1973). Spacing effects in
+picture memory. Memory & Cognition, 1, 430-434.
+HINTZMAN, D. L., SUMMERS, J. J., & BLOCK, R. A. (197S). What
+causes the spacing effect? Some effects of repetition, duration,
+and spacing on memory for pictures. Memory & Cognition, 3,
+287-294.
+HINTZMAN, D. L., SUMMERS, J. J., EKI, N. T., & MOORE, M. D.
+(197S). Voluntary attention and the spacing effect. Memory &
+Cognition, 3, S76-580.
+JENSEN, T. D., & FREUND, J. S. (1981). Persistence of the spac­
+ing effect in incidental free recall: The effect of external list
+comparisons and intertask correlations. Bulletin ofthe Psycho­
+nomic Society, 18, 183-186.
+JOHNSON, P. J., WARNER, M. L., & SILLEROY, R. S. (1971).
+Factors influencing children's concept identification perfor­
+mance with nonpreferred relevant attributes. Journal ofExperi­
+mental Child Psychology, 11,430-441.
+KEENEY,T. J., CANNIZZO, S. R., & FLAVELL, J. H. (1967). Spon­
+taneous and induced verbal rehearsal in a recall task. Child De­
+velopment,38,953-966.
+KRAFT, R. N., &JENKINS, J. J. (1981). The lag effect with aurally
+presented passages. Bulletin of the Psychonomic Society, 17,
+132-134.
+LANDAUER, T. K. (1969). Reinforcement as consolidation. Psy­
+chological Review, 76, 82-96.
+MASKARINEC, A. S., & THOMPSON, C. P. (1976). The within­
+list distributed practice effect: Tests of the varied context and
+varied encoding hypothesis. Memory & Cognition, 4, 741-746.
+McFARLAND, C. E., RHODES, D. D., & FREY, T. J. (1979). Se­
+mantic-feature variability and the spacing effect. Journal of
+VerbalLearning and Verbal Behavior, 18, 163-172.
+MELTON, A. W. (1967). Repetition and retrieval from memory.
+Science, 158, 532.
+MELTON, A. W. (1970). The situation with respect to the spacing
+of repetitions and memory. Journal of Verbal Learning and
+Verbal Behavior, 9, 596-606.
+MYERS, N. A., & PERLMUTTER, M. (1978). Memory in the years
+from two to five. In P. A. Ornstein (Ed.), Memory development
+in children. Hillsdale, NJ: Erlbaum.
+ORNSTEIN, P. A., NAUS, M. J., & LIBERTY, C. (1975). Rehearsal
+and organizational processes in children's memory. Child De­
+velopment, 26,818-830.
+ORNSTEIN, P. A., NAUS, M. J., & STONE, B. P. (1977). Rehear­
+sal training and developmental differences in memory. Develop­
+mentalPsychology, 13, 15-24.
+PARIS, S. G. (1978). The development of inference and transfor­
+mation as memory operations. In P. A. Ornstein (Ed.), Memory
+development in children. Hillsdale, NJ: Erlbaum.
+PETERSON, L. R. (1966). Short-term verbal memory and learning.
+Psychological Review, 73,193-207.
+PICK, A. D., CHRISTY, M. D., & FRANKEL, G. W. (1972). A de­
+velopmental study of visual selective attention. Journal ofEx­
+perimental Child Psychology, 14, 165-175.
+PICK, A. D., & FRANKEL, G. W. (1974). A developmental study
+of strategies of visual selectivity. Child Development, 45,
+1162-1165.
+RUNDUS, D. (1971). Analysis of rehearsal processes in free recall.
+Journal ofExperimental Psychology, 89, 63-77.
+SHAUGHNESSY, J. J. (1976). Persistence of the spacing effect in
+free recall under varying incidental learning conditions. Mem­
+ory& Cognition, 4, 369-377.
+TOPPINO, T. C., & DEMESQUITA,M. (in press). Effects of spacing
+repetitions on children's memory. Journal of Experimental
+Child Psychology.
+TOPPINO, T. C., LEE, N. D., JOHNSON, P. J., & SHISHKO,S. A
+(1979). Effect of perceptual pretraining on children's concept
+performance with nonpreferred relevant dimensions: Evidence
+for the role of attentional strategies. Developmental Psychol­
+ogy, 15, 190-196.
+UNDERWOOD, B. J. (1969). Some correlates of item repetition ir
+free-recall learning. Journal of Verbal Learning and Verbal Be
+havior, 8, 83-94.
+WERNER, J. S., & PERLMUTTER, M. (1979). Development of vi­
+sual memory in infants. In H. W. Reese & L. P. Lipsitt (Eds.),
+Advances in child development and behavior (Vol. 14). New
+York: Academic Press.
+WILSON, W. P. (1976). Developmental changes in the lag effect:
+An encoding hypothesis for repeated word recall. Journal ofEx
+perimental Child Psychology, 12, 113-122.
+NOTES
+1. A 2 x 2 mixed analysis of variance involving grade leve
+(first-grade vs. preschool) and the spacing between repetition
+(massed vs, spaced) indicated that these variables interacted si~
+nificantly [F(1,34) =4.65, MSe = 365.60, p < .05], thus COl
+roborating the results of the planned comparisons.
+2. The difference between predicted and obtained values i
+probably underestimated, because the proportion of once
+presented items recalled almost surely was constrained by
+floor effect.
+3. For first-graders, the estimated maximum level of reca
+of repeated items, assuming that repetitions were encoded indi
+pendently, was .373. This was reliably lower than the obtaine
+level of recall for spaced repetitions [t(17) = 3.67, p < .01 ]
+(Manuscript received May 27, 1983;
+revision accepted for publication November 11, 1983.)

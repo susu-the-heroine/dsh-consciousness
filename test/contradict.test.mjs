@@ -48,8 +48,10 @@ ok(hasNegation('我不去') && !hasNegation('我去'), '否定识别')
 ok(contentChars('我不吃辣，一点辣都受不了').size > 2, '内容字抽得出')
 
 // 五、共同字要露出来，方便人看
+// 2026-11-21：原来写成「先判冲突、冲突了才断言共同字」——万一哪天这层不标了，
+// 这条断言会被整段跳过：不记通过、也不记失败，白丢一条。改成无论冲突与否都断言一次。
 const r = contradicts('我不吃辣', '我吃爆辣火锅')
-if (r.conflict) ok(r.shared.includes('辣'), '能说出共同字', r.shared.join(''))
+ok(r.conflict && r.shared.includes('辣'), '能说出共同字（且这一对该判冲突）', 'conflict=' + r.conflict + ' shared=' + r.shared.join(''))
 
 console.log('\n通过 ' + pass + ' · 失败 ' + fail)
 process.exit(fail ? 1 : 0)

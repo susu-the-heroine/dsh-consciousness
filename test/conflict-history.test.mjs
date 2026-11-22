@@ -3,7 +3,16 @@
  * ========================
  * 跑法：node test/conflict-history.test.mjs
  */
-import { existsSync, rmSync } from 'node:fs'
+import { existsSync, rmSync, mkdtempSync } from 'node:fs'
+import { tmpdir } from 'node:os'
+import { join } from 'node:path'
+
+// 2026-11-21：这份测试原来直接对着真库里的关系历史文件动手——开头删、结尾删。
+// 也就是说跑一次，他的关系历史就没了。跟前面几份一个毛病：测试没把自己关进沙箱。
+// 现在先换到临时家目录，再导入那些会算路径的库。
+const __home = mkdtempSync(join(tmpdir(), 'c2-conflict-'))
+process.env.USERPROFILE = __home
+process.env.HOME = __home
 
 const BASE = new URL('../', import.meta.url).href
 const C = await import(BASE + 'lib/conflict.js')
@@ -83,6 +92,7 @@ RL2: {
 }
 
 if (existsSync(F)) rmSync(F)
+try { rmSync(__home, { recursive: true, force: true }) } catch {}
 
 console.log('\n通过 ' + pass + ' · 失败 ' + fail)
 process.exit(fail ? 1 : 0)

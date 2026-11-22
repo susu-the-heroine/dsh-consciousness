@@ -1,0 +1,27 @@
+lib/cap.js:95  * 全文件没人调它，先按真实语义写清，免得下一个人 `if (hasMustKeep(x))` 用反。
+lib/embed-js.js:10  *   所以它是"字面层的加强版"，不是语义层的等价物。
+lib/gate.js:118  // 因为它只留"字面或词对得上"的，纯语义候选在排序前就被筛掉了。
+lib/gate.js:130  const sem = num(why, '语义')
+lib/gate.js:139  // 反例闸：留下来的如果全是"只靠弱语义沾边"的，等于库里没这件事。
+lib/gate.js:141  // 做法：这种全薄的局面返回空，让上层走"语义保底"，明确标成凑出来的，不装成答案。
+lib/gate.js:149  const sem = num(why, '语义')
+lib/gate.js:157  try { for (const x of kept0) { if (Array.isArray(x.why)) x.why.push('语义薄') } } catch {}
+lib/routes.js:1450  // 这一路一直只认 main（上面 readSea('main') 也是），先保持语义不变，只换成原子写
+lib/routes.js:3409  ? '语义层正常，所有记忆都有对应当前文本的向量'
+lib/routes.js:3412  : '有记忆缺向量或向量已陈旧（文本改过没重算），语义召回不完整'),
+lib/searchlog.js:40  // 2026-11-19：带上"为什么是这条"。w=命中路径（字面/语义/别名/图/拼音…），
+lib/tools.js:415  + '字面重合 ' + dupGate.jac.toFixed(2) + '、语义 ' + dupGate.cos.toFixed(2) + '。\n'
+lib/tools.js:1699  hit.why.push('语义 ' + sim.toFixed(2))
+lib/tools.js:1703  // 稀有词把关（工具侧）：纯语义命中，得有一个"这件事独有"的词真出现过
+lib/tools.js:1726  scored.push({ p, hit: sim * 2, score: _s2, why: ['语义 ' + sim.toFixed(2)] })
+lib/tools.js:1738  if (eh.down) vectorNote = '\n（语义层这会儿没连上，只按字面找的。可能漏掉意思相近但用词不同的那些。）'
+lib/tools.js:1960  // 全被筛掉时留一条语义最像的，标明"语义保底"，别让换词问法直接归零
+lib/tools.js:1968  try { _sem.why = Array.isArray(_sem.why) ? _sem.why.concat(['语义保底']) : ['语义保底'] } catch {}
+lib/tools.js:1991  // 2026-11-11 试出来的：问「腰疼」，一条只靠语义沾边的"保险栓"压在了
+lib/tools.js:2022  // 问了却没真答上：只剩"语义保底 / 直扫救回"捞回来的，说明库里没这件事。
+lib/tools.js:2031  return (w.includes('语义保底') || w.includes('直扫救回') || w.includes('没这个值'))
+lib/tools.js:2533  if (ws.length) whyTxt = ' 〔' + ws.join(' · ').replace(/语义\s/g, '形近 ') + '〕'
+lib/tools.js:2616  // 现在只判一件事：前几条都没有这个形状的值，而且语义也不高——才算"没记过"。
+lib/tools.js:2891  const _noSem = scored.length > 0 && scored.every((x) => !/语义/.test(Array.isArray(x.why) ? x.why.join(' ') : ''))
+lib/tools.js:2985  ? '\n（这次是直扫找的、没走语义。用上了就 memory_judge 标一下' + (logId ? '，logId=' + logId : '') + '；没对上就标 miss。）'
+lib/write-js.js:48  // 语义去重不做（同标题不同时间是两件事），这里只堵"同一件事被连写两遍"。

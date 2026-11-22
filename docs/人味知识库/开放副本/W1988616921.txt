@@ -1,0 +1,685 @@
+Psychonomic Bulletin & Review
+2004, 11 (1), 143-149
+Fuzzy-trace theory is a global memory model developed
+to explaincertain counterintuitivefindingsconcerningthe
+relationship between memory and reasoning in children
+(Brainerd & Reyna, 1992, 1993; Reyna, 1995; Reyna &
+Brainerd, 1995). Fuzzy-trace theory posits that there are
+two distinct types of memory traces formed for every ex-
+perience: a verbatim trace of informationcomponents,such
+as surface form and source information, and a gist trace,
+“defined as an abstract representation of semantic content
+that does not incorporate details of surface form” (Reyna
+& Kiernan, 1994, p. 180). According to the theory, these
+different traces operate under different constraints.
+The verbatim trace is subject to rapid decay, whereas the
+gist trace is long lasting (Brainerd & Reyna, 1996, 1998).
+Different tasks access different traces—that is, memory
+questionstap verbatim traces, and reasoning questionstap
+gist traces (Reyna, 1995). The verbatim trace is sensitive to
+retroactive interference, whereas the gist trace is resistant
+to interference (Brainerd & Reyna, 1993). The two types
+of traces are formed in parallel during encoding—that is,
+the types of traces are independent (Brainerd & Reyna,
+1993, 1998). Finally, it is assumed that comparisons based
+on verbatim traces use an identity rule in which any stimu-
+lus that is not identicalto the memory trace is automatically
+rejected. In contrast, gist-based comparisons rely on over-
+all similarity (Brainerd & Reyna, 1998; Brainerd, Reyna,
+& Kneer, 1995).
+Much of the research on fuzzy-trace theory has focused
+on the role of gist in false recall and recognition. Accep-
+tance of critical lures (semantically related nonstudied
+items) on a recognition test has been thought to be the re-
+sult of accessing the gist representation of targets, rather
+than the verbatim representation. When a gist trace is ac-
+cessed, the memory decision is based on similarity, caus-
+ing related lures to be accepted at a higher rate than unre-
+lated lures. In cases in which the verbatim trace is accessed,
+related lures can be rejected, because an identity rule is
+used for the memory decision.The theory can account for
+false memory effects found using the associative list par-
+adigm (e.g., Payne, Elie, Blackwell, & Neuschatz, 1996),
+short text passages (e.g., Brainerd & Mojardin, 1998;
+Reyna & Kiernan, 1994), and related word lists (e.g., Brain-
+erd & Reyna, 1996; Brainerd, Reyna, & Brandse, 1995).
+Less research has focused on the verbatim memory
+component of fuzzy-trace theory. The verbatim trace has
+been described as an accurate (i.e., nonelaborated) repre-
+sentation of experienced events. It has been implicated as
+the trace that is used to evoke a remember recognition re-
+sponsein Tulving’s (1985)remember/know method (Wright
+& Loftus, 1998). Brainerd and Reyna (1998) have de-
+scribed the retrieval of verbatim memory in terms very
+similar to the remember instructions of the remember/
+know paradigm—for example, “Retrieval of verbatim
+traces produces access to representations of well-defined
+surface structures, leading to feelings of re-experiencing
+those surface structures” (p. 87). However, the types of in-
+formation stored in verbatim traces are not well defined.
+Verbatim memory is differentiated from a sensory repre-
+sentation (Brainerd & Reyna, 1993) and from the articu-
+latory loop (Reyna & Brainerd, 1995) but is thought to
+store information about surface form, including detailed
+episodic information (Brainerd & Reyna, 1993, 1998).
+These descriptions of the information stored in the verba-
+tim trace suggest that perceptual information may be one
+of the types of information stored.
+143 Copyright 2004 Psychonomic Society, Inc.
+The research reported herein served to fulfill part of the requirements
+for the master’s thesis of the first author. Please send correspondence to
+D. R. Gerkens, Department of Psychology,Texas A&M University, Col-
+lege Station, TX 77843-4235(e-mail: drgerkens@neo.tamu.edu).
+Effects of perceptual modality
+on verbatim and gist memory
+DAVID R. GERKENS and STEVEN M. SMITH
+Texas A&M University, College Station, Texas
+In two experiments, predictions of the fuzzy-trace theory of memory were tested. Perceptual infor-
+mation may play a role in retrievaland recognition processesfor verbatim,but not for gist, memory. Per-
+ceptual modality effects were assessed in the present study by presenting three-sentence stories (e.g.,
+The bird is in the cage. The cage is over the table. The bird is yellow) and then testing recognition of
+probes that varied on three dimensions: (1) semantic accuracy (true vs. false), (2) wording (all origi-
+nal words vs. one novel word included), and (3) sentence type (premise vs. inference).In Experiment 1,
+study modality (auditory vs. visual) was manipulated, and in Experiment 2, both study and test modal-
+ities were manipulated. Despite replicating a number of findings consistent with fuzzy-trace theory
+(e.g.,instruction and probe type effects),the results of both experiments failed to support the idea that
+perceptual information plays a role in performance on verbatim memory tests.
+144 GERKENS AND SMITH
+Other findingsalso suggestthat perceptualinformation
+is a component of the verbatim memory trace. For exam-
+ple, Brainerd,Reyna,and Brandse (1995) foundincreased
+false alarms to nonpresented nonsense word lures that
+rhymed with presented nonsense words. False alarms to
+nonsense words that rhyme with presented nonsense
+words cannot be attributed to gist memory but, rather,
+must be attributed to verbatim memory. To further support
+this idea, Brainerd, Reyna, and Brandse tested the persis-
+tence of these false alarms, using the rationale that false
+alarms are due to accessing stable gist traces when mean-
+ing is involved (i.e., in the word condition), whereas hits
+are due to accessingverbatimtraces. Therefore, false alarms
+should show greater persistence than hits. However, in
+Brainerd,Reyna, and Brandse’s nonsenseword condition,
+false alarms couldnot have been due to gist, becausethere
+was no meaning associated with the lures. Therefore, false
+alarms to rhyming nonsense words should not be persis-
+tent. These false alarms showed low persistence, much
+like hits. These results suggest that perceptual informa-
+tion, such as phonological or articulatory information,
+plays a role in verbatim memory access.
+Brainerd,Wright, Reyna,and Mojardin(2001) statedthat
+“increased physical resemblance makes distractors better
+retrieval cues for verbatim traces of the correspondingtar-
+gets, leading to distractor rejection” (p. 308), again im-
+plyingthat perceptualinformation plays an importantrole
+in recognitionmemory tasks. Furthermore, the claim that
+source information is stored in verbatim traces implicates
+perceptual information. For example, Hicks and Marsh
+(2001) tested source information in which the only differ-
+ence in conditions was the speaker’s voice, a perceptual
+characteristic.
+Other research has shown effects of perceptual infor-
+mation on memory tests. Many list-learningstudies,which
+test verbatimmemory, have shown that changesin speaker’s
+voice between study and test influence recognition per-
+formance (e.g., Brainerd, Reyna, & Kneer, 1995; Geisel-
+man & Bjork,1980;Geiselman & Glenny, 1977;Goldinger,
+1996; Hintzman, Block, & Inskeep, 1972; Palmeri,
+Goldinger, &, Pisoni, 1993; Pilotti, Bergman, Gallo, Som-
+mers, & Roediger, 2000; Sheffert, 1998). Effects of
+modality switches, however, have been more equivocal;
+whereas some studies have found effects of modality
+switches on recognition (e.g., Dean, Yekovich, & Gray,
+1988; Gallo, McDermott, Percer, & Roediger, 2001; Kel-
+logg, 2001; Kirsner, 1974), others have not (e.g., Craik,
+Moscovitch,& McDowd, 1994; Hayman & Rickards,1995;
+Pilotti et al., 2000). These results strengthen the hypothesis
+that perceptual information is part of the verbatim mem-
+ory trace and, therefore, that manipulations of perceptual
+factors, such as modality, will affect verbatimtests of recog-
+nition memory.
+If perceptual detail is stored in the verbatim memory
+trace and perceptual similarity influences the likelihood
+of accessing verbatim memory, changes in modality be-
+tween study and test should adversely impact recognition
+performance in tests that tap verbatim memory. This pre-
+diction was tested in the present experiments. Three sen-
+tence passages adopted from Reyna and Kiernan (1994)
+were used in the present study. These passages were con-
+structedso as to be similar to Bransford and Franks’s (1971)
+passages in that they allow for inferences to be made about
+the relationships of objects, as well as directly stating
+some relationships.Two types of memory tests were given,
+verbatim and gist. Verbatim instructions stated that the
+participants should only respond yes if the test sentence
+was identical to a presented sentence. Gist instructions
+stated that the participants should respond yes whenever
+the test sentence was consistent in meaning with the pre-
+sented sentences. If perceptual characteristics influence
+verbatim memory retrieval, changes in modality between
+study and test should adversely affect verbatim memory
+tests, but not gist tests. Failure to find a modality shift ef-
+fect on verbatim tests would suggest that perceptual in-
+formation is not utilized in memory for text passages.
+EXPERIMENT 1
+In Experiment1, the participantsstudiedthree sentence
+passages and were given sentence recognition memory
+tests. The test modality was always visual, and study
+modality was either auditory (inconsistent modality) or
+visual (consistent modality). Instruction at test was ma-
+nipulated as a within-subjects variable. The participants
+received verbatim instructions (i.e., the participants were
+told to respond yes only if the probe sentence was exactly,
+word for word, the same as the sentence from the story) on
+half of the trials and gist instructions(i.e., the participants
+were told to respond yes whenever the probe sentence had
+the same meaning as the sentencefrom the story, even when
+it was not word for word the same) on the other half. Test
+items included presented sentences, nonpresented infer-
+ences, and sentences that were true or false in relation to
+the semantic context of the presented stories. In addition,
+some of the test sentencescontainednovel words, whereas
+others consisted entirely of presented words (see Table 1).
+Table 1
+Example Story and the Nine Variations
+of Test Sentence Types
+Story
+The bird is inside the cage.
+The cage is under the table.
+The bird has yellow feathers.
+Test Sentences
+TPO: The bird is inside the cage.
+TPO: The cage is under the table.
+TPN: The table is above the cage.
+TIO: The bird is under the table.
+TIN: The table is above the bird.
+FPO: The table is under the cage.
+FPN: The bird is above the cage.
+FIO: The table is under the bird.
+FIN: The bird is above the table.
+Note—T, true; F, false; P, premise; I, inference; O, original; N, novel.
+Half the stories represented spatial relations (e.g., the one above), and
+the other half were linear relations (e.g., a . b, b . c).
+MODALITY AND FUZZY TRACE 145
+The claim that physicalcharacteristics influence verba-
+tim recognition leads to the prediction that, given verba-
+tim instructions,correct recognitionwould be greater and
+false recognition of differently worded true premises or
+inferences would be lower in the consistentmodalitycon-
+dition,as compared with the inconsistentmodality condi-
+tion.There shouldnot be a modalityeffect on false probes,
+becausethey should all be easily rejected regardless of in-
+struction condition. As in previous studies, there should
+be more false alarms to true test sentences than to false
+ones and more false alarms to test sentencesconsistingen-
+tirely of original words than to those containing novel
+words. The gist instructionconditiontypically produces a
+high proportion of yes responses to all true test sentences
+and a low acceptance rate of all false test sentences. The
+more semantically similar the presented and the test sen-
+tences,the more yesresponsesshouldoccur. A modalityshift
+effect in the gist instruction condition was not predicted.
+Method
+Participants. Fifty-six students received partial course credit in
+their introductory psychology course for their participation in the
+experiment. Participation was voluntary, and other options were
+available to earn equal credit.
+Materials. Eight three-sentence stories were presented to each
+participant (see Table 1). Two of the three sentences in each story de-
+scribed relationships among objects. The third always stated a tan-
+gential fact. The test sentences varied on three dimensions. First,
+each test sentence was either true or false regarding the relationships
+stated in the story. Second, test sentences stated either premises or
+inferences from the story. Third, either the test sentences were en-
+tirely made up of original words from the story or an antonym of the
+adjective describing a relationship in the story replaced the original
+adjective. A tape player was used for the auditory story presentation
+condition. Visual story presentation was done using a JavaScript
+program that runs through Netscape Navigator. All the participants
+completed a distractor task and the test on the computer. Story pre-
+sentation and test sentences were presented in fixed random order.
+The order of tests always matched the order of story presentation.
+Procedure. Each experimental group session ranged in size from
+10 to 20 participants, and each session was held in a computer lab-
+oratory classroom. The experimenter first walked the group through
+an example of the procedure, in which the participants responded to
+one story for which verbatim instructions were used and another story
+for which gist instructions were used. In the visual presentation con-
+dition, the text of each story was shown for 6 sec on a computer screen.
+In the auditory presentation condition, the participants heard the sto-
+ries being read at a rate of 2 sec per sentence (6 sec per story). The
+stories were recorded by a female experimenter and were played on
+an audiotape deck during the experimental sessions. Following story
+presentation, the participants had a perceptual identification task.
+This task created a delay between story presentation and test, and it
+helped the participants to get accustomed to timed responding on
+the computer keyboard. After the perceptual identification task, the
+participants saw a brief instruction reminding them of the meanings
+of the two different recognition questions. Each story had its own
+test page. Test sentences were presented one at a time. There were
+nine test sentences for each story (see Table 1). Each participant
+completed one block of four stories and tests for which the verbatim
+instructions were used and one block of four stories and tests for
+which the gist instructions were used (i.e., there were two cycles of
+study and test).
+Results
+A 2 (study presentation) 3 2 (instruction) 3 8 (test
+sentence type) analysis of variance (ANOVA) was com-
+puted, using the proportion of yes responses as the depen-
+dent measure. Instruction and test sentence type were
+within-subjects manipulations, and study presentation
+was a between-subjectsfactor. None of the effects involv-
+ing modalitywas statisticallysignificant (all ps . .10; see
+Table 2). These results fail to support the hypothesis that
+perceptualinformation is utilizedin verbatim recognition
+tasks of verbal material. Other typical fuzzy-trace theory
+predictions, however, were supported.
+There was a significant main effect of instruction
+[F(1,54)5 88.19,MSe 5 0.073;partialr2 5 .62], with more
+yes responses for the gist instructionthan for the verbatim
+instruction. There was also a main effect of test sentence
+type[F(7,378)5 122.61,MSe 5 0.051;partial r2 5 .69], and
+a test sentence type 3 instructioninteraction[F(7,378)5
+32.63, MSe 5 0.043; partial r2 5 .38; see Table 2]. All
+other effects failed to reach statistical significance.
+Simple main effect analyses revealed a significanteffect
+of test sentencetypein boththe verbatim[F(7,385)5 65.23,
+MSe 5 0.044; partial r2 5 .54] and the gist [F(7,385) 5
+98.30,MSe 5 0.050;partialr2 5 .64] instructionconditions.
+Table 2
+Mean Proportion of Ye s Responses to Test Sentences
+as a Function of Test Instruction and Study Modality
+(Auditory or Visual) in Experiment 1
+Instruction
+Verbatim Gist
+Auditory Visual Auditory Visual
+Sentence Response (n 5 20) (n 5 36) Response (n 5 20) (n 5 36)
+Ty pe Typ e MSEMSE Type MSEMSE
+TPO hit .78 .039 .77 .036 hit .89 .028 .81 .027
+TPN fa .14 .056 .19 .046 hit .63 .059 .56 .050
+TIO fa .36 .056 .36 .049 hit .89 .038 .75 .041
+TIN fa .11 .046 .19 .048 hit .65 .046 .58 .053
+FPO fa .36 .056 .32 .044 fa .16 .038 .26 .040
+FPN fa .08 .037 .13 .029 fa .13 .034 .15 .032
+FIO fa .10 .033 .10 .029 fa .16 .045 .18 .031
+FIN fa .11 .029 .15 .034 fa .09 .088 .20 .038
+Note—T, true; F, false; P, premise; I, inference; O, original; N, novel; fa, false alarms.
+146 GERKENS AND SMITH
+In the verbatiminstructioncondition,pairedt tests indicated
+a significant difference in test sentence acceptance be-
+tween hits and false alarms [t(55) 5 14.18,SE 5 0.04].The
+participantswere reliably better at rejecting test sentences
+with a novel word than sentences composed entirely of
+presented words [t(55) 5 13.19, SE 5 0.03, for true test
+sentences and t(55) 5 4.54, SE 5 0.02, for false test sen-
+tences;Table 2]. False premise with originalwordingprobes
+were accepted 33% of the time. The other false test sen-
+tences were never accepted more than 15% of the time. In
+the gist instruction condition, paired t tests revealed that
+true test sentences were accepted more often than false
+test sentences[t(55) 5 12.84,SE 5 0.04].Again, test sen-
+tences with all originalwording were accepted more often
+than were test sentences that included a novel word
+[t(55) 5 7.32, SE 5 0.03, for true probes and t(55) 5 2.44,
+SE 5 0.02, for false probes; see Table 2].
+Discussion
+Experiment 1 failed to support the hypothesis that per-
+ceptual information is an active component of the verba-
+tim memory trace during recognition.According to fuzzy-
+tracetheory, recognitionjudgmentsmade underthe verbatim
+instruction condition should be based primarily on iden-
+tity judgments. The test sentence should activate the ver-
+batim representation of the item, and if the test sentence
+differs from the memorial representation, it should be re-
+jected. The failure of a modality shift between study and
+test to impact these identity judgments clearly suggests
+that perceptual features of the test sentences are not part
+of this verbatim recognitionprocess. These results appear
+to be at odds with the results of many studies that imply
+that perceptual characteristics are part of the verbatim
+trace. Furthermore, it is difficult to reconcile the claim that
+source information is a component of the verbatim trace
+with the apparent lack of perceptual information in that
+memory trace.
+Novel words helped the participants to reject items ap-
+propriatelyin the verbatim instructioncondition,whereas
+novelwords inhibitedacceptanceof true test sentencesin-
+appropriately in the gist instruction condition. The latter
+finding, that participants appear to be making similarity-
+based judgments when they should be processing mean-
+ing, replicates the verbatim-exit bias found by Brainerd
+and Reyna (1993), who used 5-year old participants. It is
+striking that this exit bias was seen with adults, who
+should be able to perform the semantic processing re-
+quested withouttoo much effort. Adult participantswould
+not be expected to resort to a simple novelty check rule.
+One reason for finding the verbatim-exit bias could be the
+relatively high level of verbatim memory in the present
+study, as compared with that found with young children
+(e.g., Brainerd & Reyna, 1993). That is, the ready acces-
+sibility of verbatim memory traces may have biased the
+participants to invoke a novelty check rule. The effect of
+wordingin the gist instructionreflects the use of a novelty
+check verbatim-exit bias even though the participants
+should have processed meaning, rather than surface form.
+With the exception of the true inference with original
+wording and the false premise with original wording test
+sentences, false recognition was low in the verbatim in-
+struction condition. This fits with the fuzzy-trace theory
+explanation,because these test sentences were most sim-
+ilar in surface form to the presented sentences.
+EXPERIMENT 2
+In Experiment 1, modality effects were examined with
+procedures commonly used to study fuzzy-trace theory,
+but there is a possibility that effects found with that pro-
+cedure are due to differences in encoding in the differing
+study modalities, rather than being the result of a shift in
+perceptual modality. To separate these differences, the
+modality of both study and test sessions were indepen-
+dently manipulated in Experiment 2. This manipulation
+provided an opportunity to replicate the lack of a modal-
+ity shift effect and to test whether the huge auditory ad-
+vantage found in Maylor and Mo (1999) would hold with
+material other than associative lists. It was also clear that
+the participantsin Experiment1 were able to discern which
+type of test they would receive for a given story prior to its
+presentation. As has been shown by Murphy and Shapiro
+(1994), this also may have influenced verbatim respond-
+ing. Experiment 2 was designed to prevent the participants
+from knowing which type of test they would receive for
+any given story (during encoding).
+Method
+Participants. One hundred twenty-three students received partial
+course credit in their introductory psychology course for their par-
+ticipation in the experiment. Participation was voluntary, and other
+options were available to earn equal credit.
+Materials. The materials in Experiment 1 were used again in Ex-
+periment 2. In addition, an audiotape recording of the test sentences
+was used at test, with a 4-sec delay between test sentence presenta-
+tions for the auditory testing condition.
+Procedure. The procedure was the same as that used in Experi-
+ment 1, with three exceptions. First, an auditory test was used in half
+of the conditions, resulting in conditions in which there were visual-
+study–visual-test (VV), visual-study– auditory-test (VA), auditory-
+study–auditory-test (AA), and auditory-study– visual-test (AV) con-
+ditions. Second, in the visual study conditions, story presentations
+were changed so that each sentence of the story was presented for
+2 sec individually, rather than displaying the entire story for 6 sec.
+Finally, instruction was varied in a fixed but unpredictable order. The
+participants did not know which instruction they would use on any
+given test until the test page appeared or the test reading began. The
+instruction condition was presented on the top of each test page for
+the visual test condition and was stated in between the announce-
+ment of the test number and the first test sentence for each test in the
+auditory test condition.
+Results
+A 2 (instruction)3 2 (study modality)3 2 (test modality)3
+8 (test sentence type) ANOVA was performed using the
+proportionof yes responses as the dependentmeasure. As
+in Experiment 1, instruction and test sentence type were
+within-subjects factors. Modality at study and test were
+both between-subjects factors. Notably, the study modal-
+MODALITY AND FUZZY TRACE 147
+ity main effect, the test modality main effect, and the study
+modality3 test modality interaction all failed to reach sta-
+tistical significance ( ps . .13; see Table 3). That is, the
+lack of a modality shift effect seen in Experiment 1 was
+replicated. As was expected, the instruction main effect,
+the test sentence type main effect, and the test sentence
+type3 instructioninteractionwere significant[F(1,119)5
+100.53, MSe 5 0.093, F(7,833) 5 397.79, MSe 5 0.047,
+and F(7,833) 5 35.68, MSe 5 0.043, respectively; see
+Table 3]. These effects were quite large (partial r2 5 .46,
+.77, and .23, respectively).
+A simple main effect analysis showed that for the ver-
+batim instructioncondition,there was an effect of test sen-
+tence type [F(7,854)5 153.63,MSe 5 0.047], and paired
+t tests revealed a pattern very similar to that found in Ex-
+periment 1; the true premise with original wording test
+sentences were accepted at a higher rate than all the other
+test sentence types [t(122) 5 25.21,SE 5 0.02], and true
+test sentences were accepted more often than false test
+sentences [t(122) 5 16.56, SE 5 0.02]. Again, novel
+words appeared to help the participants to reject test sen-
+tences, and the sentences with all original words were dif-
+ficult for the participantsto reject for true probes [t(122) 5
+15.59, SE 5 0.02] and for false probes [t(122) 5 2.56,
+SE 5 0.01; see Table 3]. There was also an effect of test
+sentencetype in the gist instructioncondition[F(7,854)5
+301.30, MSe 5 0.046]. Paired t tests again showed a pat-
+tern similar to the one found in Experiment 1. Hits were
+accepted at a higherrate than false alarms for false probes
+[t(122) 5 24.24,SE 5 0.02]. Novel words appeared to in-
+hibit the ability of the participants to accept true test sen-
+tences—that is, the verbatim-exit bias was replicated for
+true probes [t(122) 5 11.86, SE 5 0.02] and for false
+probes [t(122) 5 5.22,SE 5 .01; see Table 3]. Acceptance
+of false test sentences was always less than 28%. These
+results mirror those of Experiment 1 and Reyna and Kier-
+nan (1994) and support some of the basic assumptions of
+fuzzy-trace theory.
+There were also significantinstruction3 test modality
+and test sentence type 3 test modality interactions
+[F(1,119) 5 4.98, MSe 5 0.093, and F(7,833) 5 3.61,
+MSe 5 0.047, respectively]. These effects were much
+smaller than the standard fuzzy-trace theory findings re-
+ported above (partial r2 5 .02 and .01, respectively). Be-
+cause these interactions do not involve study modality,
+they are not theoretically relevant to the primary hypoth-
+esis, but follow-up Tukey tests were performed for the sake
+of completeness. These tests revealed that test modality
+did not influenceverbatimrespondingbut that,for gist in-
+structions, acceptance rates were higher in the auditory
+test conditionthan in the visual condition.The second set
+of Tukey tests showed that acceptance rates were higher
+for the true premise with novel wording and the true in-
+ference with novel wording test sentences in the auditory
+testingthan in the visualtestingcondition.Althoughthese
+findingslack theoreticalrelevance,they are important be-
+cause they demonstratethe statisticalpower to detect small
+effects even for interactions involving a between-subjects
+variable.
+Discussion
+The result of theoretical interest in Experiment 2 was
+the failure to find a study modality 3 test modality inter-
+action on responses that tap the verbatim memory trace.
+Table 3
+Mean Proportion of Yes Responses to Test Sentences as a Function
+of Test Instructions, Study Modality, and Test Modality in Experiment 2
+Study Modality/Test Modality
+Auditory/Visual Visual/Visual Auditory/Auditory Visual/Auditory
+Test Sentence (n 5 30) (n 5 33) (n 5 33) (n 5 27)
+Ty pe MSEMSEMSEMSE
+Verbatim Instruction
+TPO / hit .85 .021 .77 .027 .82 .029 .81 .033
+TPN / fa .33 .054 .34 .053 .42 .057 .34 .070
+TIO / fa .43 .052 .52 .050 .52 .068 .40 .060
+TIN / fa .33 .063 .32 .052 .37 .065 .31 .063
+FPO / fa .23 .043 .28 .037 .17 .037 .18 .042
+FPN / fa .11 .029 .14 .029 .10 .027 .09 .036
+FIO / fa .09 .025 .08 .023 .08 .026 .10 .033
+FIN / fa .15 .043 .12 .027 .11 .027 .10 .036
+Gist Instruction
+TPO / hit .86 .024 .87 .023 .91 .022 .88 .022
+TPN / hit .58 .042 .54 .042 .77 .041 .70 .050
+TIO / hit .84 .044 .73 .039 .86 .038 .87 .039
+TIN / hit .63 .048 .55 .053 .76 .038 .69 .049
+FPO / fa .21 .036 .27 .044 .20 .043 .21 .044
+FPN / fa .10 .023 .13 .033 .09 .028 .16 .038
+FIO / fa .13 .033 .18 .031 .14 .039 .13 .034
+FIN / fa .06 .026 .13 .029 .13 .033 .11 .031
+Note—T, true; F, false; P, premise; I, inference; O, original; N, novel; fa, false alarms.
+148 GERKENS AND SMITH
+Given the claim that physical resemblance plays a role in
+determining access of verbatim memory traces, fuzzy-
+trace theory predicts a decrement in correct recognition
+and an increase in false recognition for true items, regard-
+less of whether the shift is from auditory to visual or from
+visualto auditory. On the basis of Maylorand Mo’s (1999)
+results, one would expect an advantage in the auditory
+study condition. This advantage should have been espe-
+cially apparent in the auditory test condition,because the
+hypothesized adverse effects of the modality shift were
+removed. In the present study, no auditory study advan-
+tage was found. This finding replicates the results of Ex-
+periment 1 and stands in contrast to the results of Maylor
+and Mo, which have also been challengedby the results of
+Gallo et al. (2001).
+Potentialproblems due to differentialencodingacross in-
+struction conditionswere also addressed in Experiment 2.
+The present results support Murphy and Shapiro’s (1994)
+finding that knowledge of a verbatim test prior to study
+enhanced performance. Performance on verbatim recog-
+nition was better in Experiment 1 than in Experiment 2,
+numerically speaking. Although the number of hits were
+roughly equivalent in both experiments, acceptance of
+lures was somewhat lower in Experiment 1 than in Exper-
+iment 2.
+GENERAL DISCUSSION
+In the present experiments, the role of perceptual fea-
+tures in recognition memory tests was examined. As-
+sumptions of fuzzy-trace theory and the treatment of ver-
+batim memory in the literature suggest that perceptual
+features influence the access of verbatim memory on
+recognition tests. For example, Brainerd, Reyna, and
+Brandse (1995)statedthat false alarms to nonsensewords
+that rhymed with presented nonsense words were caused
+by the verbatim memory trace. These errors must have
+been based on the verbatim memory trace, because there
+presumably was no semantic representation of nonsense
+words (i.e., gist trace). Furthermore, source information
+has been identified as a component of the verbatim mem-
+ory trace. Hicks and Marsh (2001) manipulatedspeaker in
+Experiments2a and 2b as their source manipulationto en-
+sure that only perceptual characteristics differentiated the
+two sources. That is, their source identification could be
+based only on perceptual differences in the voices. Con-
+sequently, one must infer that perceptual characteristics
+should be a component of the verbatim memory trace.
+In the present study, two experiments failed to support
+the idea that perceptual features are involved in recogni-
+tion memory of prose, a task that should tap verbatim
+memory. According to fuzzy-trace theory, the more simi-
+lar a test sentence is to a presented sentence, the higher
+the probabilitythat the verbatim representation of the pre-
+sented sentencewill be accessed.Test sentencesthat match
+in perceptual characteristics, as well as wording, should
+increase the probability of accessing the verbatim mem-
+ory trace. The results from the present experiments do not
+support the idea that perceptual characteristics influence
+the probabilitythat the verbatim trace is accessed. If they
+do, switching modality between study and test should ad-
+versely influencerecognitionunderverbatiminstructions.
+No modalityshift effect was found in either of the present
+experiments.
+The present results are consistent with recent findings
+in which correct recognition of compound words, com-
+posite errors, and feature errors was compared (Jones, Ja-
+coby, & Gellis, 2001). The materials in Jones et al.’s study
+were very similar to those used in the present experiments.
+For example, a composite lure in their study was analo-
+gous to the true inference with original wording test sen-
+tences used in the present study. The similarities between
+studies,includingthe failure to find a modalityshift effect
+in both, suggest that the findings are not simply due to a
+lack of statistical power but, rather, represent a true non-
+effect. The failure to find modalityshift effects in the pres-
+ent experiments and in Jones et al.’s study suggests that
+these effects may be specific to the list-learning para-
+digms in which they are sometimes found.
+REFERENCES
+Brainerd, C. J., & Mojardin, A. H.(1998). Children’s and adults’
+spontaneousfalse memories: Long-term persistence and mere-testing
+effects. Child Development, 69, 1361-1377.
+Brainerd, C. J., & Reyna, V. F. (1992).Explaining“memory-free” rea-
+soning. Psychological Science, 3, 332-339.
+Brainerd, C. J., & Reyna, V. F. (1993). Memory independence and
+memory interference in cognitive development. Psychological Re-
+view, 100, 42-67.
+Brainerd, C. J., & Reyna, V. F. (1996). Mere memory testing creates
+false memories in children. Developmental Psychology, 32, 467-476.
+Brainerd, C. J., & Reyna, V. F. (1998).Fuzzy-trace theory and children’s
+false memories. Journalof Experimental Child Psychology, 71, 81-129.
+Brainerd, C. J., Reyna, V. F., & Brandse, E. (1995). Are children’s
+false memories more persistent than their true memories? Psycholog-
+ical Sciences, 6, 359-364.
+Brainerd, C. J., Reyna, V. F., & Kneer, R. (1995). False-recognition
+reversal: When similarity is distinctive. Journal of Memory & Lan-
+guage, 34, 157-185.
+Brainerd, C. J., Wright, R., Reyna, V. F., & Mojardin, A. H. (2001).
+Conjoint recognition and phantom recollection. Journal of Experi-
+mental Psychology: Learning, Memory, & Cognition, 27, 307-327.
+Bransford, J. D., & Franks, J. J. (1971). The abstraction of linguistic
+ideas. Cognitive Psychology, 2, 331-350.
+Craik, F. I. M., Moscovitch, M., & McDowd, J. M. (1994).Contribu-
+tion of surface and conceptual information to performance on implicit
+and explicit memory tasks. Journal of Experimental Psychology:
+Learning, Memory, & Cognition, 20, 864-875.
+Dean, R. S., Yekovich, F. R., & Gray, J. W. (1988). The effect of
+modality on long-term recognition memory. Contemporary Educa-
+tional Psychology, 13, 102-115.
+Gallo, D. A., McDermott, K. B., Percer, J. M., & Roediger, H. L., III
+(2001). Modality effects in false recall and false recognition. Journal
+of Experimental Psychology: Learning, Memory, & Cognition, 27,
+339-353.
+Geiselman, R. E., & Bjork, R. A. (1980).Primary versus secondary re-
+hearsal in imagined voices: Differential effects on recognition. Cog-
+nitive Psychology, 12, 188-205.
+Geiselman, R. E., & Glenny, J. (1977).Effects of imagining speakers’
+voices on the retention of words presented visually. Memory & Cog-
+nition, 5, 499-504.
+MODALITY AND FUZZY TRACE 149
+Goldinger, S. D. (1996). Words and voices: Episodic traces in spoken
+word identification and recognition memory. Journal of Experimen-
+tal Psychology: Learning, Memory, & Cognition, 22, 1166-1183.
+Hayman, C. A. G., & Rickards, C. (1995). A dissociation in the effects
+of study modality on tests of implicit and explicit memory. Memory
+& Cognition, 23, 95-112.
+Hicks, J. L., & Marsh, R. L. (2001). False recognition occurs more fre-
+quently during source identificationthan during old–new recognition.
+Journal of Experimental Psychology: Learning, Memory, & Cogni-
+tion, 27, 375-383.
+Hintzman, D. L., Block, R. A., & Inskeep, N. R. (1972). Memory for
+mode of input. Journal of Verbal Learning & Verbal Behavior, 11,
+741-749.
+Jones, T. C., Jacoby, L. L., & Gellis, L. A. (2001). Cross-modal fea-
+ture and conjunction errors in recognition memory. Journal of Mem-
+ory & Language, 44, 131-152.
+Kellogg, R. T. (2001). Presentation modality and mode of recall in ver-
+bal false memory. Journal of Experimental Psychology: Learning,
+Memory, & Cognition, 27, 913-919.
+Kirsner, K. (1974). Modality differences in recognition memory for
+words and their attributes. Journal of Experimental Psychology, 102,
+579-584.
+Maylor, E. A., & Mo, A. (1999).Effects of study–test modality on false
+recognition. British Journal of Psychology, 90, 477-493.
+Murphy, G. L., & Shapiro, A. M. (1994). Forgetting of verbatim in-
+formation in discourse. Memory & Cognition, 22, 85-94.
+Palmeri, T. J., Goldinger, S. D., & Pisoni, D. B. (1993). Episodic en-
+coding of voice attributes and recognition memory. Journalof Exper-
+imental Psychology: Learning, Memory, & Cognition, 19, 309-328.
+Payne, D. G., Elie, C. J., Blackwell, J. M., & Neuschatz, J. S. (1996).
+Memory illusions: Recalling, recognizing, and recollecting events that
+never occurred. Journal of Memory & Language, 35, 261-285.
+Pilotti, M., Bergman, E. T., Gallo, D. A., Sommers, M., & Roedi-
+ger, H. L., III (2000). Direct comparison of auditory implicit mem-
+ory tests. Psychonomic Bulletin & Review, 7, 347-353.
+Reyna, V. F. (1995). Interference effects in memory and reasoning: A
+fuzzy-trace theory analysis. In F. N. Dempster & C. J. Brainerd (Eds.),
+Interference and inhibition in cognition(pp. 29-59). San Diego: Aca-
+demic Press.
+Reyna, V. F., & Brainerd, C. J. (1995). Fuzzy-trace theory: Some
+foundational issues. Learning & Individual Differences, 7, 145-162.
+Reyna, V. F., & Kiernan, B. (1994). Development of gist versus ver-
+batim memory in sentence recognition: Effects of lexical familiarity,
+semantic content, encoding instructions, and retention interval. De-
+velopmental Psychology, 30, 178-191.
+Sheffert, S. M. (1998). Contributionsof surface and conceptual infor-
+mation to recognition memory. Perception & Psychophysics, 60,
+1141-1152.
+Tulving, E. (1985). Memory and consciousness. CanadianPsychology,
+26, 1-12.
+Wright, D. B., & Loftus, E. F. (1998). How misinformation alters
+memories. Journal of Experimental Child Psychology, 71, 155-164.
+(Manuscript received November 14, 2001;
+revision accepted for publication October 24, 2002.)

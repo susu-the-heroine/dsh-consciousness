@@ -1,0 +1,499 @@
+[
+ {
+  "id": "PMC12022350",
+  "bytes": 3681,
+  "hasAbstract": true,
+  "hasResults": true,
+  "hasDiscussion": true
+ },
+ {
+  "id": "PMC12476623",
+  "bytes": 1639,
+  "hasAbstract": true,
+  "hasResults": true,
+  "hasDiscussion": true
+ },
+ {
+  "id": "PMC12620347",
+  "bytes": 5072,
+  "hasAbstract": true,
+  "hasResults": true,
+  "hasDiscussion": true
+ },
+ {
+  "id": "PMC12703064",
+  "bytes": 2201,
+  "hasAbstract": true,
+  "hasResults": false,
+  "hasDiscussion": false
+ },
+ {
+  "id": "PMC12729277",
+  "bytes": 2201,
+  "hasAbstract": true,
+  "hasResults": false,
+  "hasDiscussion": false
+ },
+ {
+  "id": "PMC12729583",
+  "bytes": 2201,
+  "hasAbstract": true,
+  "hasResults": false,
+  "hasDiscussion": false
+ },
+ {
+  "id": "PMC12864043",
+  "bytes": 3924,
+  "hasAbstract": true,
+  "hasResults": true,
+  "hasDiscussion": true
+ },
+ {
+  "id": "PMC12865666",
+  "bytes": 400,
+  "hasAbstract": false,
+  "hasResults": false,
+  "hasDiscussion": false
+ },
+ {
+  "id": "PMC12918763",
+  "bytes": 1422,
+  "hasAbstract": true,
+  "hasResults": true,
+  "hasDiscussion": true
+ },
+ {
+  "id": "PMC12920783",
+  "bytes": 2583,
+  "hasAbstract": true,
+  "hasResults": true,
+  "hasDiscussion": false
+ },
+ {
+  "id": "PMC12938793",
+  "bytes": 2201,
+  "hasAbstract": true,
+  "hasResults": false,
+  "hasDiscussion": false
+ },
+ {
+  "id": "PMC12962919",
+  "bytes": 1840,
+  "hasAbstract": false,
+  "hasResults": true,
+  "hasDiscussion": true
+ },
+ {
+  "id": "PMC13056835",
+  "bytes": 2083,
+  "hasAbstract": true,
+  "hasResults": true,
+  "hasDiscussion": true
+ },
+ {
+  "id": "PMC13121483",
+  "bytes": 3401,
+  "hasAbstract": false,
+  "hasResults": true,
+  "hasDiscussion": true
+ },
+ {
+  "id": "PMC13179315",
+  "bytes": 2001,
+  "hasAbstract": true,
+  "hasResults": true,
+  "hasDiscussion": true
+ },
+ {
+  "id": "PMC13183633",
+  "bytes": 1890,
+  "hasAbstract": false,
+  "hasResults": false,
+  "hasDiscussion": true
+ },
+ {
+  "id": "PMC13232424",
+  "bytes": 3864,
+  "hasAbstract": true,
+  "hasResults": true,
+  "hasDiscussion": true
+ },
+ {
+  "id": "PMC13249210",
+  "bytes": 2201,
+  "hasAbstract": false,
+  "hasResults": false,
+  "hasDiscussion": true
+ },
+ {
+  "id": "PMC13253582",
+  "bytes": 5203,
+  "hasAbstract": true,
+  "hasResults": true,
+  "hasDiscussion": true
+ },
+ {
+  "id": "PMC13269229",
+  "bytes": 4002,
+  "hasAbstract": true,
+  "hasResults": false,
+  "hasDiscussion": true
+ },
+ {
+  "id": "PMC13299244",
+  "bytes": 400,
+  "hasAbstract": false,
+  "hasResults": false,
+  "hasDiscussion": false
+ },
+ {
+  "id": "PMC13332346",
+  "bytes": 2201,
+  "hasAbstract": true,
+  "hasResults": false,
+  "hasDiscussion": false
+ },
+ {
+  "id": "PMC13376647",
+  "bytes": 2200,
+  "hasAbstract": true,
+  "hasResults": false,
+  "hasDiscussion": false
+ },
+ {
+  "id": "PMC13379389",
+  "bytes": 3909,
+  "hasAbstract": true,
+  "hasResults": true,
+  "hasDiscussion": true
+ },
+ {
+  "id": "PMC13385171",
+  "bytes": 1811,
+  "hasAbstract": false,
+  "hasResults": true,
+  "hasDiscussion": true
+ },
+ {
+  "id": "PMC13388895",
+  "bytes": 1621,
+  "hasAbstract": false,
+  "hasResults": true,
+  "hasDiscussion": true
+ },
+ {
+  "id": "PMC13429876",
+  "bytes": 2349,
+  "hasAbstract": true,
+  "hasResults": true,
+  "hasDiscussion": true
+ },
+ {
+  "id": "PMC13444370",
+  "bytes": 2212,
+  "hasAbstract": false,
+  "hasResults": true,
+  "hasDiscussion": true
+ },
+ {
+  "id": "PMC13461669",
+  "bytes": 5104,
+  "hasAbstract": true,
+  "hasResults": true,
+  "hasDiscussion": true
+ },
+ {
+  "id": "PMC13511703",
+  "bytes": 400,
+  "hasAbstract": false,
+  "hasResults": false,
+  "hasDiscussion": false
+ },
+ {
+  "id": "PMC13521503",
+  "bytes": 1483,
+  "hasAbstract": true,
+  "hasResults": true,
+  "hasDiscussion": true
+ },
+ {
+  "id": "PMC13561296",
+  "bytes": 2882,
+  "hasAbstract": true,
+  "hasResults": false,
+  "hasDiscussion": true
+ },
+ {
+  "id": "PMC13581884",
+  "bytes": 4002,
+  "hasAbstract": true,
+  "hasResults": false,
+  "hasDiscussion": true
+ },
+ {
+  "id": "PMC13603245",
+  "bytes": 400,
+  "hasAbstract": false,
+  "hasResults": false,
+  "hasDiscussion": false
+ },
+ {
+  "id": "PMC13603254",
+  "bytes": 400,
+  "hasAbstract": false,
+  "hasResults": false,
+  "hasDiscussion": false
+ },
+ {
+  "id": "PMC13603915",
+  "bytes": 400,
+  "hasAbstract": false,
+  "hasResults": false,
+  "hasDiscussion": false
+ },
+ {
+  "id": "PMC13604749",
+  "bytes": 2201,
+  "hasAbstract": true,
+  "hasResults": false,
+  "hasDiscussion": false
+ },
+ {
+  "id": "PMC13618130",
+  "bytes": 2201,
+  "hasAbstract": false,
+  "hasResults": false,
+  "hasDiscussion": true
+ },
+ {
+  "id": "PMC13640599",
+  "bytes": 3511,
+  "hasAbstract": true,
+  "hasResults": false,
+  "hasDiscussion": true
+ },
+ {
+  "id": "PMC13642487",
+  "bytes": 1314,
+  "hasAbstract": false,
+  "hasResults": true,
+  "hasDiscussion": true
+ },
+ {
+  "id": "PMC13662049",
+  "bytes": 1811,
+  "hasAbstract": true,
+  "hasResults": true,
+  "hasDiscussion": true
+ },
+ {
+  "id": "PMC13667423",
+  "bytes": 400,
+  "hasAbstract": false,
+  "hasResults": false,
+  "hasDiscussion": false
+ },
+ {
+  "id": "PMC13683627",
+  "bytes": 860,
+  "hasAbstract": false,
+  "hasResults": true,
+  "hasDiscussion": true
+ },
+ {
+  "id": "PMC13684137",
+  "bytes": 1298,
+  "hasAbstract": false,
+  "hasResults": false,
+  "hasDiscussion": true
+ },
+ {
+  "id": "PMC13693475",
+  "bytes": 1392,
+  "hasAbstract": true,
+  "hasResults": false,
+  "hasDiscussion": true
+ },
+ {
+  "id": "PMC13694694",
+  "bytes": 3118,
+  "hasAbstract": true,
+  "hasResults": false,
+  "hasDiscussion": true
+ },
+ {
+  "id": "PMC13701592",
+  "bytes": 2201,
+  "hasAbstract": true,
+  "hasResults": false,
+  "hasDiscussion": false
+ },
+ {
+  "id": "PMC13701690",
+  "bytes": 400,
+  "hasAbstract": false,
+  "hasResults": false,
+  "hasDiscussion": false
+ },
+ {
+  "id": "PMC13704290",
+  "bytes": 2201,
+  "hasAbstract": true,
+  "hasResults": false,
+  "hasDiscussion": false
+ },
+ {
+  "id": "PMC13706823",
+  "bytes": 2201,
+  "hasAbstract": true,
+  "hasResults": false,
+  "hasDiscussion": false
+ },
+ {
+  "id": "PMC13710047",
+  "bytes": 3840,
+  "hasAbstract": true,
+  "hasResults": false,
+  "hasDiscussion": true
+ },
+ {
+  "id": "PMC13712656",
+  "bytes": 2058,
+  "hasAbstract": false,
+  "hasResults": true,
+  "hasDiscussion": true
+ },
+ {
+  "id": "PMC13718586",
+  "bytes": 437,
+  "hasAbstract": false,
+  "hasResults": true,
+  "hasDiscussion": true
+ },
+ {
+  "id": "PMC13719418",
+  "bytes": 1853,
+  "hasAbstract": false,
+  "hasResults": true,
+  "hasDiscussion": true
+ },
+ {
+  "id": "PMC13724034",
+  "bytes": 2216,
+  "hasAbstract": true,
+  "hasResults": false,
+  "hasDiscussion": true
+ },
+ {
+  "id": "PMC13731349",
+  "bytes": 2265,
+  "hasAbstract": false,
+  "hasResults": true,
+  "hasDiscussion": true
+ },
+ {
+  "id": "PMC13736592",
+  "bytes": 400,
+  "hasAbstract": false,
+  "hasResults": false,
+  "hasDiscussion": false
+ },
+ {
+  "id": "PMC13736625",
+  "bytes": 1836,
+  "hasAbstract": false,
+  "hasResults": false,
+  "hasDiscussion": true
+ },
+ {
+  "id": "PMC13751779",
+  "bytes": 3979,
+  "hasAbstract": true,
+  "hasResults": false,
+  "hasDiscussion": true
+ },
+ {
+  "id": "PMC13754811",
+  "bytes": 2869,
+  "hasAbstract": true,
+  "hasResults": false,
+  "hasDiscussion": true
+ },
+ {
+  "id": "PMC13755587",
+  "bytes": 2200,
+  "hasAbstract": false,
+  "hasResults": false,
+  "hasDiscussion": true
+ },
+ {
+  "id": "PMC13759859",
+  "bytes": 3492,
+  "hasAbstract": true,
+  "hasResults": true,
+  "hasDiscussion": true
+ },
+ {
+  "id": "PMC13763000",
+  "bytes": 413,
+  "hasAbstract": true,
+  "hasResults": false,
+  "hasDiscussion": false
+ },
+ {
+  "id": "PMC13773932",
+  "bytes": 2213,
+  "hasAbstract": false,
+  "hasResults": true,
+  "hasDiscussion": true
+ },
+ {
+  "id": "PMC13773963",
+  "bytes": 2308,
+  "hasAbstract": true,
+  "hasResults": true,
+  "hasDiscussion": false
+ },
+ {
+  "id": "PMC13774219",
+  "bytes": 4138,
+  "hasAbstract": true,
+  "hasResults": true,
+  "hasDiscussion": true
+ },
+ {
+  "id": "PMC13774249",
+  "bytes": 2703,
+  "hasAbstract": false,
+  "hasResults": true,
+  "hasDiscussion": true
+ },
+ {
+  "id": "PMC13776937",
+  "bytes": 3669,
+  "hasAbstract": true,
+  "hasResults": false,
+  "hasDiscussion": true
+ },
+ {
+  "id": "PMC13779021",
+  "bytes": 2257,
+  "hasAbstract": true,
+  "hasResults": true,
+  "hasDiscussion": true
+ },
+ {
+  "id": "PMC8249088",
+  "bytes": 2201,
+  "hasAbstract": true,
+  "hasResults": false,
+  "hasDiscussion": false
+ },
+ {
+  "id": "PMC9994702",
+  "bytes": 3031,
+  "hasAbstract": true,
+  "hasResults": true,
+  "hasDiscussion": true
+ }
+]

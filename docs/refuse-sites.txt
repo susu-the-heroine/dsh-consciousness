@@ -1,0 +1,7 @@
+2254 | return { ok: true, log: notRecorded(query), conf: 'none' }  <= return { ok: true, log: R3.knownNoDetail(query, _sub), conf: / } catch {} / }
+2284 | return { ok: true, log: notRecorded(query), conf: 'none' }  <= const _sem1 = Number((_w1.match(/语义\s*([0-9.]+)/) || [])[1]  / const _lit = /字面|实体|别名/.test(_w1) / if (_sem1 > 0 && _rareCount === 0 && !_lit && _sem1
+2381 | if (!_any) { try { noteSlow({ ms: Date.now() - _slowT0, sea, q: query, seg: { ze  <= for (const g of _qg) if (_tg.has(g)) { _any = true; break } / if (_any) break / }
+2401 | if (String(process.env.C2_FAKE_GATE || '') === '1' && _cov < Number(tuning().wea  <= const _hit0 = Number(scored[0].hit) || 0 / if (_cov < Number(tuning().weakCov ?? 0.2) || _hit0 < Number / if (tw && tw.fuzzy) _timeNote = '\n（你给的是大跨度时
+2764 | return { ok: true, logId, log: notRecorded(query), conf: 'none' }  <= const _anyName = ((data && data.points) || []).some((p) => ( / if (!_anyName) { / noteRefusal(sea, query, 'name-subject')
+2820 | else return { ok: true, logId, log: notRecorded(query), conf: 'none' }  <= if (RC.shouldRefuseCos(c, _th)) { / // 默认不拒答，只标一句不确定：拒掉会连对的一起丢（2026-11-19） / if (String(process.env.C2_UNCERTAIN || '1') === '1') _uncNot
+2834 | if (!_near) { noteRefusal(sea, query, _shapeKind || 'shape'); return { ok: true,  <= if (_shapeRefuse && String(process.env.C2_GHOST_REFUSE || '1 / // 判据收到 lib/subject.js：问句里连续三个字以上原样出现在库里同一条，才算这事记着。 / const _near = (await import('./su

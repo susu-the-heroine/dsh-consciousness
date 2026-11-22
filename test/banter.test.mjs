@@ -33,6 +33,10 @@ ok(!isBanter('你每次都这样，我真服了').banter, '没有笑点 → 真�
 ok(!isBanter('哈哈哈你怎么不找个楼跳了').banter, '带笑也不算：那句话太重')
 
 ok(isBanter('').banter === false, '空句不闹')
+// 2026-11-21：只测了空串，没测「一串空格」和「没传值」——这两种在真调用里更常见
+// （模板拼出来是空的）。补上，免得哪天塌成「空也算闹」。
+ok(isBanter('   \n\t ').banter === false, '全是空白也不算闹')
+ok(isBanter(undefined).banter === false, '没给东西不炸，也不算闹')
 
 console.log('\n通过 ' + pass + ' · 失败 ' + fail)
 process.exit(fail ? 1 : 0)

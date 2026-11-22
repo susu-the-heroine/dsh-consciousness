@@ -1,0 +1,708 @@
+Memory & Cognition
+1974, Vol. 2 (4), 742-748
+The spacing effect in the learning of word pairs
+and the components of word pairs*
+JOHN J. SHAUGHNESSY,JOEL ZIMMERMANt, and BENTON J. UNDERWOOD
+Northwestern University, Evanston, Illinois 60201
+Following the presentation of a single list of word pairs consisting of a three-letter word on the left
+and ~ five-letter word o~ the righ.t, groups o~ 64 Ss each were asked to recall the (a) three-letter words,
+(b) five-letter words,. (c) intact pairs, or (d) ~Ive-Ie.tter words with the three-letter words provided. Two
+types of repeated 'paIrs were p~esent~d, one In wh~ch the same three- and five-letter words were repeated
+together (same pairs) and one In which the same five-letter word was repeated with different three-letter
+",:,ords (different pairs). For half of the Ss in each recall group, the repetitions of a pair containing a given
+flve-Iett~r word were massed (MP); for the other half, the repetitions were distributed (DP). Recall of MP
+same pairs and the components of these pairs was consistently poorer than that of DP same pairs. Recall
+of the repeated component of the different pairs was also poorer under MP than under DP The results
+were interpreted as supportive of an attenuation-of-attention explanation of the spacing effect.
+One of the most consistent findings reported in the
+recent literature is that free recall of items occurring two
+or more times within a single trial is higher following a
+distributed practice schedule (DP) than following a
+massed practice schedule (MP). This difference has been
+referred to as the spacing effect. Hintzman's review
+(1974) of the evidence pertaining to the spacing effect
+indicates that no completely adequate theoretical
+account is available. Nevertheless, what has been referred
+to as the attenuation-of-attention hypothesis has been
+shown to have some explanatory value. Since certain
+conditions of the present experiment were viewed as
+representing tests of this hypothesis, the assumptions
+underlying the hypothesis will be stated explicitly.
+The first assumption is that the total time law (i.e.,
+that the amount learned is a direct function of effective
+study time) is correct. Since MP and DP items are
+exposed for the same nominal time but DP items are
+better recalled, it must follow that there is a greater
+discrepancy between nominal and effective study time
+for MP items than for DP items. Some support for this
+assumption can be found in studies which used
+self-paced study procedures in free recall (Zimmerman,
+1973; Shaughnessy, Zimmerman, & Underwood, 1972).
+These studies showed that Ss spent less time studying
+MP items than DP items. A substantial portion of the
+spacing effect in recall could be accounted for on the
+basis of the differences in exposure duration.
+The second assumption is that attention reduction is
+not limited to the item being presented at the moment.
+There is assumed to be a commensurate reduction in the
+rehearsal of other items in the list during the interval in
+which the processing of the presented item is reduced.
+*This research was supported by the Personnel and Training
+Research Programs, Psychological Sciences Division, Office of
+Naval Research, under Contract N00014-67-A-Q356-Q010
+Contract Authority Identification No. NR 154-321. Requests fo;
+reprints should be sent to Benton J. Underwood, Department of
+Psychology, Northwestern University, Evanston, Illinois 60201.
+tPresentlyat Social Research, Inc.. Chicago, DIinois.
+This assumption that attention reduction may reach a
+level where essentially all displaced rehearsal stops is
+suggested by the fact that the MP-DP differences in
+recall remain substantial even when unmixed lists are
+used (Underwood, 1969). If displaced rehearsal occurs
+effectively in a list consisting entirely of MP items, the
+overall recall should be as great as that for a list
+consisting entirely of DP items. In the study just cited,
+this was not the case.
+The third assumption is that attenuation of attention
+is directly related to the degree of redundancy between
+the information being presented at the moment and the
+information available in memory. Information is more
+redundant for successive occurrences of MP items than
+for DP items, thus producing a larger discrepancy
+between nominal and effective study time for the former
+than for the latter. The present experiment can be
+viewed as a test of this third assumption.
+The usual free-recall task, constituted of a list of
+single words, lacks flexibility when the desire is to vary
+redundancy. Therefore, we have turned to the
+paired-associate format. In particular, the interest was in
+studying the learning of MP pairs when the redundancy
+was varied. Consider three successively presented pairs in
+which, in one case, the pairs are identical (A-B, A-B,
+A-B) and, in the other, the left-hand terms differ (A-B,
+CoB, D-B). The two situations may be called same pairs
+and different pairs, respectively. The same pairs, when
+presented according to an MP schedule, represent the
+case of maximal redundancy, and it would be
+anticipated that the recall of the pairs or of the
+components of the pairs would be severely depressed as
+compared with the recall following a DP schedule. For
+the different pairs, the expectation changes.
+Redundancy is less for these pairs than for the same
+pairs, so learning should be better. The
+attenuation-of-attention hypothesis, however, as
+developed thus far, does not allow for a prediction as to
+whether the enhanced learning for the different pairs
+742
+SPACING EFFECT IN LEARNING WORD PAIRS 743
+will generalize to both redundant and nonredundant
+components alike. For example, it is logically possible
+that the lack of redundancy among the left-hand terms
+in the different pairs could have absolutely no effect on
+the learning of the right-hand terms. It is even possible
+that the presence of the redundant right-hand terms may
+produce a deficit in the learning of the nonredundant
+left-hand terms. At this time, it is an empirical question
+as to what influence the presence of nonredundant
+components will have on the learning of redundant
+components, and vice versa.
+The basic plan of the experiment, then, was to present
+same and different pairs under MP schedules to
+determine the influence of these manipulations on the
+learning of the components of the pairs as well as on the
+learning of the intact pairs. Corresponding conditions
+followed DP schedules because these schedules produce
+results which serve as reference values for the amount
+learned under conditions of minimal redundancy.
+METHOD
+Lists
+Each S was presented with a single list of word pairs which
+consisted of a total of 60 list positions. There were six pairs
+presented as a primacy buffer, six pairs as a recency buffer, eight
+pairs presented once each in the body of the list (singles), eight
+pairs presented twice each (Frequency 2), and eight pairs
+presented three times each (Frequency 3). All pairs consisted of
+a three-letter word on the left (stimulus) and a five-letter word
+on the right (response). The designation of the three-letter words
+as stimuli and the five-letter words as responses was done
+primarily for ease of reference. The Ss were not specifically
+instructed to treat the two classes differently; they were simply
+told to try to learn as many pairs as possible. For half of the
+pairs presented at Frequency 2 and Frequency 3, when a given
+response was repeated, it was paired with the same stimulus each
+time (same pairs). For the other half of the repeated pairs at
+both frequencies, when a given response was repeated, it was
+paired with a different stimulus each time (different pairs). Thus,
+a total of 48 stimuli and 36 responses was required to construct
+the list.
+Forty-eight three-letter words were chosen to serve as stimuli
+and 36 five-letter words with Thorndike-Lorge frequencies of
+from 20 to 40 on the G count (Thorndike & Lorge, 1944) were
+chosen to serve as responses. In both samples, words were chosen
+such that the first letters of the words were approximately
+equally distributed across the letters of the alphabet. In order to
+insure that a particular set of items was not confounded with a
+particular condition, four different random assignments of items
+to list functions were made. The assignments of items to these
+four forms were random, with the restrictions that no item could
+serve the same function in more than one form and that no two
+of the stimuli assigned to a given response in a given form could
+begin with the same first letter. This latter restriction applies, of
+course, only to the different pairs.
+In order to avoid using prohibitively long lists, the MP-DP
+manipulation was carried out as a between-Ss manipulation.
+Each of the four forms just described was used once for the
+construction of an MP list and once for the construction of a DP
+list. After placing the primacy items in the first six positions and
+the recency items in the last six positions, the remaining 48 list
+positions were divided into four equal parts. Two singles were
+placed in each of the four list quarters, and these pairs occupied
+the same positions in both the MP and the DP lists. The repeated
+pairs were distributed approximately equally across the list
+quarters, although the exact list positions of given items
+obviously differed for the MP and DP lists. For both the MP and
+the DP lists, the positions occupied by same pairs in two of the
+forms were used for different pairs in the other two forms, and
+vice versa. In the DP lists, pairs were assigned to list positions
+such that both the position of last occurrence and the lag
+between repetitions were comparable for same pairs and
+different pairs.
+Procedure
+As the Ss arrived for the experimental session, they were
+assigned to one of five different recall conditions (by means of a
+seating assignment) according to a block randomized schedule.
+In the initial instructions read to the Ss, the exact nature of the
+memory test was not described, but all Ss were told that (a) they
+would be presented with a long list of pairs of words comprised
+of a three-letter word on the left and a five-letter word on the
+right; (b) they were to try to learn as many pairs as possible by
+associating the three-letter word to the five-letter word; (c) they
+would receive specific recall instructions immediately following
+the list presentation; (d) different Ss would be given different
+memory tests; (e) no Ss would be required to remember the
+order in which the pairs were presented; (f) some of the pairs
+would be repeated; and (g) sometimes a given five-letter word
+would be repeated with different three-letter words. The Ss were
+asked subsequent to list presentation to recall stimulus terms
+(stimulus recall), response terms (response recall), intact pairs
+(pair recall), response terms with the stimulus terms provided
+(cued recall), or intact pairs with both the stimulus and response
+terms provided (matching).
+The pairs were presented by means of a Kodak Carousel
+projector at a 5-sec rate. Immediately following the presentation
+of the last slide, Ss were given an instruction sheet appropriate to
+their recall condition. They were told to read the instructions, to
+ask any questions they might have individually, to begin to
+follow the instructions, and to continue trying to recall until
+told to stop. All Ss were given 10 min for recall.
+Ss in the stimulus-recall and response-recall groups were told
+that "thinking of' the other member of the pair might help
+them but that they were not restricted to this means of recalling
+the appropriate words. Ss in the pair-recall group were told that,
+if the same pair had occurred more than once, they needed to
+write it only once, but if the same five-letter word had been
+paired with different three-letter words, they were to write each
+of these pairings.
+In the cued-recall group, Ss were given a list of all the stimulus
+words from the study list, randomly ordered, with those
+stimulus words that were presented more than once during study
+also appearing the same number of times on the cuing sheet. The
+repetitions of the stimulus words from the same pairs were
+included on the cuing sheet in an attempt to equate the number
+of opportunities for the recall of response terms included in
+same pairs and in different pairs. The repetitions were positioned
+randomly, with the restriction that the same stimulus word not
+occur in successive positions on the cuing sheet. In addition, six
+three-letter words were included on the sheet that had not been
+presented during study, with two of these words appearing once,
+two twice, and two three times. The Ss were told that the
+three-letter words were not listed in the same order as they had
+been presented during study and that some of the three-letter
+words on the sheet had not been presented. They were also told
+that, if a three-letter word appeared on the sheet more than
+once, they were to write the appropriate five-letter word each
+time.
+Ss in the matching group were given the same cuing sheet, as
+were Ss in the cued-recall group, and they were given an
+alphabetical listing of the response words. This list included
+some five-letter words (six) that were not presented during
+744 SHAUGHNESSY, ZIMMERMAN, AND UNDERWOOD
+study, and the Ss were so instructed. It should be noted that the
+use of the alphabetical list of response words proved to be a
+cumbersome task for many Ss and that these Ss approached the
+matching task as if it were a cued-recall task. Because of this
+procedural difficulty, the data for the matching condition will
+not be presented.
+Design and Subjects
+There were 10 basic independent groups formed by the
+factorial combination of the MP-DP variable and the five types
+of recall tests. Thirty-two undergraduates were assigned to each
+of the 10 groups, for a total of 320 Ss,In addition, of the 32 Ss
+in each group, groups of 8 Ss were assigned to each of the four
+forms of the lists. The Ss participated in the experiment in
+groups of varying size, with all Ss within any experimental
+session receiving the same form of either the MP or the DP list
+but with the five types of recall being requested of an
+approximately equal number of Ss within each session.
+RESULTS
+The recall results will be presented in the following
+order. First, to determine the effect of the MP-DP
+variable on the same pairs and different pairs per se, the
+recall of the pair-recall group will be examined. Second,
+in order to assess the spacing effect on redundant pair
+members, the response-recall results will be presented.
+Third, an examination of the stimulus-recall results will
+provide an assessment of the spacing effect on the
+nonredundant components of the pairs. Finally, the
+results in the cued-recall group will allow for an
+assessment of the spacing effect in the recall of one
+component of a pair when the other component has
+been provided. For all analyses, values reported
+represent percentage values based upon a transformation
+of means obtained following an arc sine transformation
+of the raw score recall. Also, variation due to the four
+different forms of the MP and DPlists was accounted for
+in each analysis, but none of the effects of forms was
+evaluated.
+Pair Recall
+The scoring procedure used to evaluate the recall of
+pairs involved determining the percent recalled of a given
+type of pair, using as a base the total possible number of
+different pairs of that type. For the same pairs at
+Frequency 2, each of four pairs was repeated intact
+twice and, as such, the total possible recall in this
+condition was four. For the same pairs at Frequency 3,
+the number possible was still four, with each pair having
+been presented three times. The situation changes for
+the different pairs. At Frequency 2, each of four
+responses was paired with a different stimulus on each
+repetition and, thus, the total number of possible pairs
+to be recalled was eight. Likewise, the total number of
+possible pairs at Frequency 3 was 12. The mean percent
+recall, using this scoring procedure, for same and
+different pairs as a function of MP-DP and frequency is
+presented in the uppermost portion of Table 1. The
+mean percent recall of singles is also included in the
+table.
+The recall of singles did not differ for the Ss assigned
+to MP lists (4.0%) as compared to that for Ss assigned to
+DP lists (2.8%), F < 1. Analysis of the recall of repeated
+pairs indicated that the following effects were significant
+statistically (p < .01). It should be noted again that the
+percentage values reported for the various effects
+represent transformations of arc sine means. Therefore,
+it is not possible to obtain exactly the values reported by
+averaging those values presented in Table 1. The
+resultant discrepancies, however, should be minor.
+Table 1
+Mean Percent Recall of Same and Different Pairs and Components of Pairs as a
+Function of Recall Instructions, MP-DP, and l<'requency
+Frequency 2 Frequency 3
+Same Different Same Different
+Singles Pairs Pairs Pairs Pairs
+MP Mean 4.0 6.3 4.4 15.2 8.6 SD 13.96 15.68 14.71 19.12 13.54
+Pair Recall Mean 2.8 23.6 9.5 33.9 11.0DP SD 11.89 17.56 15.82 22.73 13.38
+MP Mean 6.8 13.5 10.3 8.4 16.4 SD 12.61 17.56 18.75 20.45 17.53
+Response Recall Mean 7.2 21.6 18.9 41.8 33.9DP SD 14.28 19.88 21.62 20.35 19.40
+MP Mean 5.0 10.4 11.8 13.5 17.6 SD 14.78 18.75 12.72 17.96 11.37
+Stimulus Recall Mean 11.4 35.5 17.6 46.7 21.6DP SD 12.57 13.49 14.40 17.08 10.12
+MP Mean 5.6 31.1 11.7 31.6 11.9 SD 16.28 24.77 17.89 24.94 16.37
+Cued Recall Mean 11.0 45.9 22.5 70.6 22.1DP SD 20.60 27.03 22.60 23.25 18.74
+Note-Percentage values are based upon a transformation ofmean obtained following an arc sine transformation of the raw-score
+recall. Standard deviations are in arc sine units (degrees).
+SPACINGEFFECT IN LEARNING WORDPAIRS 745
+(a) Overall, pairs repeated according to a DP schedule
+(18.6%) were better recalled than those repeated
+according to an MP schedule (8.2%), F(1 ,56) '= 8.61.
+(b) Frequency-3 pairs (l6.2%) were better recalled than
+Frequency-Z pairs (10.0%), F(1,56) '= 8.36. (c) Same
+pairs (l8.6%) were better recalled than different pairs
+(8.2%), F(1,56) '= 27.37. (d) Summing over the
+frequency variable, the MP·DP difference was greater for
+same pairs (1O.4%vs 28.6%) than for different pairs
+(6.3% vs 10.2%), F(I,56) '= 7.64. As can be seen in
+Table 1, this interaction of the MP-DP and
+same-different variables did not differ for Frequency-2
+as compared to Frequency-3 pairs. At both frequencies,
+the interaction of the MP-DP and same-different
+variables would seem to have been produced by the
+relatively high recall of DP same pairs.
+In that the source of the interaction of the MP-DP and
+same-different variables is critical to the predictions
+derived from the attenuation-of-attention hypothesis, it
+was decided to perform Tukey's HSD test (cf. Keppel,
+1973) on the pairwise comparisons of the four means
+comprising the interaction. The values are presented in
+Table 2. As indicated in the table, recall of DP same
+pairs was better than that of any of the other three types
+of pairs, which did not differ from each other. Support
+for the attenuation-of-attention hypothesis could be
+inferred from the fact that the recall of repeated intact
+pairs under MP (MP same pairs) was not better than that
+of the MP different pairs, which were presented only
+once each. Both of these types of pairs were more
+poorly recalled than intact pairs repeated under
+conditions assumed to minimize attenuation of attention
+(DP same pairs). The fact that DP different pairs were
+only slightly, and not significantly, better recalled than
+MP different pairs may be taken to indicate that,
+whatever attenuation of attention was produced by the
+presence of the single redundant component, the
+attenuation was not sufficient to influence the recall of
+the pairs.
+ResponseRecall
+The mean percent recall of response terms for singles
+and for same and different pairs as a function of MP-DP
+and frequency is presented in Table 1. The maximum
+possible recall for all repeated responses was four. As
+was the case in the recall of pairs, the mean percent of
+singles recalled by Ss assigned to the MP and DP groups
+did not differ, F < 1. For repeated responses, recall was
+better under DP (28.6%) than under MP (12.0%)
+[F(1,56) '= 19.35, p<.OI]; recall was better for
+Frequency-3 responses (23.8%) than for Frequency-2
+responses (15.8%) [F(1,56) '= 5.35, p < .05] ; and there
+was an interaction of the MP-DP and frequency variables
+such that the MP-DP difference was smaller for
+Frequency-2 responses (11.8% vs 20.2%) than for
+Frequency-3 responses (12.1% vs 37.8%)
+[F(I,56) == 4.92, p < .05].
+The pairwise comparisons of the mean percent recall
+of responses from MP same, MP different, DP same, and
+Table 2
+Mean Percent Recall of MP and DP Same and Different Pairs
+and Components as a Function of Recall Instructions
+MP MP DP DP
+Same Different Different Same
+Pairs Pairs Pairs Pairs
+Pair Recall 10.4 6.3 10.2 28.6
+Response Recall 10.8 13.2 26.2 31.2
+Stimulus Recall 11.8 14.6 19.6 41.0
+Note-Underlined means are not significantly different from
+each other (p > .05). For pair recall the critical range is
+6.40 deg, for response recall 8.56 deg, and for stimulus recall
+7. 76 deg.
+DP different pairs provide evidence concerning the
+presumed effect of attenuation of attention on the
+redundant component of these pairs. The relevant values
+are again presented in Table 2. It is clear that the pattern
+of results for response recall is different from that
+present for pair recall. The responses repeated under DP
+were better recalled than those repeated under MP
+regardless of whether the response presented under MP
+was accompanied by a redundant (MP same) or
+nonredundant (MP different) component. In other
+words, the recall results lend support to the conclusion
+that the presence of a nonredundant component did not
+seem to reduce the attenuation of attention to the
+redundant component.
+Stimulus Recall
+The mean percent recall of stimulus terms for singles
+and for same and different pairs as a function of MP-DP
+and frequency is presented in Table 1. The percentage
+values for stimuli from repeated pairs were determined
+the same way as was done for pair recall. Though the
+effect was small, the mean percent recall of singles for Ss
+assigned to DP lists (I 1.4%) was better than that for Ss
+assigned to MP lists (5.0%) [F(1 ,56) =4.06, P < .05] .
+The pattern of results for the recall of stimulus terms
+from repeated pairs was almost identical to that for the
+recall of pairs per se. In general, the stimulus terms were
+better recalled than the pairs, but the effects of the
+MP-DP, frequency, and same-different variables were
+comparable to those found in pair recall. The recall of
+stimuli was better following DP (29.8%) than MP
+(I3.2%) [F(1,56) '= 29.11], better for Frequency 3
+(24.0%) than Frequency 2 (18.0%) [F(I ,56) '= 8.28] ,
+and better for same pairs (25.0%) than different pairs
+(I 7.0%) [F( 1,56) '= 7.28]. Also, summing over the
+frequency variable, the MP-DP difference was greater for
+same pairs (11.8% vs 41.0%) than for different pairs
+(14.6% vs 19.6%), F( 1,56) '= 14.64. All of these effects
+were significant at the .01 level.
+As stated in the introduction, the effects of the
+presence of a redundant component on the recall of a
+nonredundant component could not be predicted from
+present statements of the attenuation-of-attention
+hypothesis. To assessthese effects, pairwise comparisons
+746 SHAUGHNESSY,ZIMMERMAN, AND UNDERWOOD
+comparable to those made for pair recall and response
+recall were again made for stimulus recall. The means for
+these comparisons involving the recall of stimuli are
+presented in Table 2. Again, the pattern of results is
+comparable to that found in pair recall. Stimuli from DP
+same pairs were better recalled than those from any of
+the other three types of pairs, which did not differ from
+each other. Evidence for the presumed effects of
+attenuation can be found in that repeated stimuli from
+MP same pairs were no better recalled than stimuli
+presented only once in MP different pairs. The fact that
+stimuli from MP different pairs (14.6%) were slightly less
+well recalled than those from DP different pairs (19.6%)
+might be taken as an indication that some of the
+attenuation to the redundant response terms under MP
+did affect the recall of the stimuli. The magnitude of the
+effect, however, is slight at best.
+Cued Recall
+The mean percent recall of response terms when
+stimulus terms were provided for singles and for same
+and different pairs as a function of MP-DP and
+frequency is presented in Table 1. The percentage values
+for repeated pairs involve the same bases as were used
+for pair and stimulus recall. Recall of singlesfor those Ss
+assigned to DP lists (11.0%) was not statistically
+significantly different from that for those assigned to MP
+lists (5.6%) [F(1,56) = 1.52, n>.05]. The only
+significant sources of variation in the analysis of the
+repeated pairs were the main effects of the MP-DP and
+same-different variables. Cued recall of DP pairs (39.6%)
+was greater than that of MP pairs (20.8%)
+[F(1,56) = 9.38, P < .01], and cued recall of same pairs
+(44.8%) was greater than that of different pairs (16.7%)
+[F(1,56) = 82.86, p < .01] . As was the case in response
+recall, the MP·DP difference in cued recall was smaller
+for Frequency-2 pairs (20.6% vs 33.7%) than for
+Frequency-3 pairs (20.9% vs 45.8%), but this interaction
+was not significant statistically [F(1,56 = 2.40, p > .05] .
+Also, as was the case in pair recall and in stimulus recall,
+the MP·DP difference in cued recall was greater for same
+pairs (31.4% vs 58.6%) than for different pairs (11.8% vs
+22.3%), but, again, this interaction was not significant
+statistically [F(1,56) =3.93, p >.05]. Although the two
+interactions were not significant statistically, they might
+be taken as an indication that cued recall was influenced
+by factors affecting the recall of responses as well as by
+factors affecting the appropriate pairing of stimulus and
+response terms.
+Comparing the pair-recall and cued-recall groups
+directly, it can be seen that recall for all types of pairs
+was better when one of the members of each pair was
+provided at the time of recall. For the MP same pairs,
+this increase was particularly striking, especially at
+Frequency 2. It would appear that, although attenuation
+of attention could be assumed to be present for the MP
+same pairs (as evidenced by the analysis of pair recall),
+Ss were able to recognize stimulus terms that they were
+not able to recall and to produce the appropriate
+response to these stimuli. A possible explanation for this
+finding, as well as for the effects found with the other
+types of recall, will be presented in the discussion.
+DISCUSSION
+Three issues will be considered in this section. First,
+the results will be summarized with an emphasis on how
+the findings are related to the third assumption of the
+attenuation-of-attention hypothesis that was presented
+in the introduction. Next, a more detailed explanation
+of these effects will be proposed, including a
+consideration of how it is that Ss may have gone about
+trying to learn the word pairs in the present experiment.
+Finally, the relationship of the findings of the present
+study to certain of the theories which have been
+proposed to account for the spacing effect in free recall
+will be discussed.
+The present experiment was intended primarily as a
+test of the third assumption of the
+attenuation-of-attention hypothesis. This assumption, as
+stated in the introduction, is that attenuation of
+attention is directly related to the degree of redundancy
+between the information being presented at the moment
+and the information available in memory. The test of
+this assumption involved requiring Ss to learn pairs in
+which either both members of the pair provided
+redundant information (same pairs) or one member
+provided redundant information and one member was
+new (different pairs). It was anticipated that recall of
+same pairs repeated under MP would be poorer than that
+of same pairs repeated under DP. Also, it was expected
+that the recall of the components of same pairs would be
+poorer following MP than following DP. Both of these
+expectations were confirmed. An additional source of
+evidence for the assumption that attention deficits were
+present for the MP same pairs can be found by
+comparing the recall of these pairs with that of the MP
+different pairs. Recall of the repeated MP same pairs was
+not significantly better than the recall of the MP
+different pairs, each of which had been presented only
+once.
+No predictions were made concerning the recall ofthe
+components of the different pairs or concerning the
+effects of providing access to one of the pair members at
+the time of recall (cued recall). It seemed equally
+plausible that the presence of a nonredundant
+component could enhance the recall of a redundant
+component or that the presence of a redundant
+component could inhibit the recall of a nonredundant
+component. In fact, neither of these effects was found.
+Recall of the redundant component of pairs including a
+nonredundant component (response recall of MP
+different pairs) was no better than that of the same
+component accompanied by a redundant component
+(response recall of MP same pairs). Likewise, the
+presence of the redundant component did not seem to
+be effective in lowering the recall of the nonredundant
+component (there was no difference in stimulus recall
+SPACING EFFECT IN LEARNING WORDPAIRS 747
+from MP different andDP different pairs). Finally, the
+cued-recall results indicated that providing access to one
+of the pair members at the time of recall enhanced recall
+for all pairs, but particularly for MP same pairs.
+As stated in the introduction, the DP same and DP
+different pairs were assumed to provide conditions of
+repetition with minimal attenuation of attention. That
+this was the case is evidenced by the fact that recall
+increased for DP same pairs as compared to singles and
+for Frequency-3 DP same pairs as compared to
+Frequency-2 DP same pairs. Similar increases as a
+function of frequency were found for component and
+cued recall of DP same pairs. The repeated component
+of DP different pairs (the response) also showed an
+increase as a function of frequency. That the repetition
+of nominally identical events enhances the learning of
+these events is not surprising. What is surprising is that
+the beneficial effects of repetition are absent under
+certain conditions, namely, those assumed to involve
+attenuation of attention.
+A possible explanation in terms of the
+attenuation-of-attention hypothesis will now be
+provided for the results summarized above. It should be
+emphasized, however, that this explanation has been
+suggested by the nature of the results rather than by any
+a priori assumptions of the attenuation-of-attention
+hypothesis. The present results seem to indicate that
+attenuation of attention can operate selectively. In order
+to allow for this selective attenuation, it would seem
+necessary to propose that Ss are faced with at least a
+twofold task when they are required to learn a list of
+word pairs. First, the Ss would need to establish a
+connection or association between the components of
+each of the pairs with the list context. This can be
+viewed as comparable to the response learning stage of
+the traditional two-stage theory of paired-associate
+learning (Underwood, Runquist, & Schulz, 1959), but,
+of course, in the present situation both the stimuli and
+responses would need to be learned. The processes
+involved could be similar to those proposed by Bower
+(1972), whereby an item comes to be associated with an
+appropriate list marker, although the specifics of how
+the association to the list context is established are not
+of immediate concern. The second task facing Ss in the
+present situation would be finding some way to connect
+or associate the two components of a given pair to each
+other. This can be viewed as comparable to the
+associative stage of the traditional two-stage theory of
+paired-associate learning.
+If it is plausible that these two tasks are involved in
+the learning of word pairs, then it would also seem
+reasonable to assume that, in a paced study procedure,
+Ss apportion the available time to these tasks in some
+systematic fashion. Recall of the components was better
+than the recall of the pairs following a single
+presentation. Any direct comparison of component and
+pair recall is difficult in that pair recall requires the joint
+recall of stimulus and response terms, while component
+recall requires the recall of only one of the components.
+Nonetheless, the superiority of component recall might
+be taken as evidence that the initial presentation of a
+pair may have been devoted primarily to the learning of
+the components. Of course, the learning of the
+components and the learning of the association cannot
+be viewed as completely independent processes, and
+what is being considered here is the relative emphasis
+placed on these two processes during any given
+presentation. Associations between the components of a
+given pair were being established on the initial
+presentation, as evidenced by the fact that cued recall
+(based presumably on the association between pair
+members) was as good as the recall of either component
+following only a single presentation. The apportionment
+of study time in situations assumed to involve
+attenuation of attention (MP same and MP different)
+will now be considered.
+On the initial presentation of an MP same pair, it is
+assumed that Ss spend more time learning the
+components of the pair and less time on the association
+between pair members. On the second and third
+presentations of an MP same pair, attention to the
+components is reduced, but time is spent on associating
+the pair members. It must be remembered that the
+attenuation of attention to the components is not
+assumed to be complete in that recall of MP same
+responses and stimuli was better than recall of singles.
+Also, the attention given to learning the association for
+MP same pairs is not assumed to be as great as that for
+DP same pairs in that recall of MP same pairs was
+consistently poorer than that of DP same pairs. The
+primary evidence for the differential attenuation of
+attention to the components and to the association
+between the pair members is that cued recall of MP same
+pairs showed such a marked increase over that of singles
+as compared to the increases over the singles found with
+response recall and stimulus recall.
+The recall of the components of the MP different
+pairs provides another source of evidence for differential
+attenuation of attention. The second and third MP
+different pairs containing a given response term involved
+the introduction of one redundant component
+(response), one nonredundant component (stimulus),
+and a nonredundant association. The primary reduction
+in attention would be expected for the redundant
+response. The recall results are supportive of this
+position in that MP different responses were more
+poorly recalled than DP different responses.
+Insofar as the procedures of the present experiment
+involved the paired-associate format, the relationship of
+the results to the situation involving the free recall of
+single items is not a direct one. Nonetheless, there is a
+relationship, especially when the results are viewed in
+terms of certain of the theories that have been proposed
+to account for the spacing effect in free recall.
+According to these theories (see Hintzman, 1974, fora
+review of specific theories), it is assumed that Ss encode
+the to-be-remembered word along several of a variety of
+dimensions. The resultant encodings are assumed to
+748 SHAUGHNESSY, ZIMMERMAN, AND UNDERWOOD
+serve as recall cues for the to-be-remembered item. Thus,
+the storage and retrieval of to-be-remembered words
+implies the storage of compounds consisting of
+encodings (cues) and to-be-remembered items. If these
+compounds are at all analogous to the word pairs used in
+the present study, the results indicate that the mere
+presence of multiple encodings may not necessarily
+enhance the recall of the to-be-remembered item. The
+present procedures allow for an assessment of the effects
+of experimental manipulations on the components of
+compounds. In the typical situation involving the free
+recall of single items, the effects of these manipulations
+on the encodings of the to-be-remembered words must
+be inferred from the recall of the to-be-remembered
+items themselves.
+REFERENCES
+Bower, G. H. Stimulus-sampling theory of encoding variability.
+In A. W. Melton and E. Martin (Eds.), Coding processes in
+human memory. Washington, D.C: Winston, 1972.
+Pp.85-123.
+Hintzman, D. L. Theoretical implications of the spacing effect.
+Paper presented at the Loyola Symposium on Cognitive
+Psychology, Chicago, May 1973. To be published in R. L.
+Solso (Ed.), Theories of cognitive psychology: The Loyola
+symposium. Washington, D.C: Winston, 1974.
+Keppel, G. Design and analysis: A researcher's handbook.
+Englewood Cliffs, N.J: Prentice-Hall, 1973.
+Shaughnessy, J. J., Zimmerman, J., & Underwood, B. J. Further
+evidence on the MP-DP effect in free-recall learning. Journal
+of Verbal Learning & Verbal Behavior, 1972, 11, 1-12.
+Thorndike, E. L., & Lorge, I. The teacher's word book of 30,000
+words. New York: Columbia University Press, 1944.
+Underwood, B. J. Some correlates of item repetition in
+free-recall learning. Journal of Verbal Learning & Verbal
+Behavior, 1969, 8, 83-94.
+Underwood, B. J., Runquist, W. N., & Schulz, R. W. Response
+learning in paired-associate lists as a function of intralist
+similarity, Journal of Experimental Psychology, 1959, 58,
+70-78.
+Zimmerman, J. The effect of massed and distributed
+presentations in free-recall learning: A test of the
+attenuation-of-attention hypothesis. Unpublished doctoral
+dissertation, Northwestern University, 1973.
+(Received for publication March 13, 1974;
+revision received April 24, 1974.)

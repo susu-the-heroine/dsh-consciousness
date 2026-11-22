@@ -1,0 +1,10 @@
+{
+ "title": "AI-generated language remains systematically distinguishable from human communication.",
+ "authors": "Pagan N, Törnberg P, Bail CA, Barrie C.",
+ "year": "2026",
+ "journal": "Proceedings of the National Academy of Sciences of the United States of America",
+ "doi": "10.1073/pnas.2531748123",
+ "pmid": "42863061",
+ "pmcid": "PMC13684137",
+ "abstract": "Large language models (LLMs) are increasingly used in the social sciences to simulate human behavior and communication, yet validation methods for these applications remain limited. Existing evaluations often rely on human judgments of plausibility, a coarse, difficult-to-scale, and often unreliable benchmark for distinguishing AI-generated from human text. As a result, researchers lack robust tools for assessing the realism of LLM-generated language and for calibrating models to real-world data. We address this gap in two ways. First, we introduce the Conversational Human Authenticity Test (CHAT), a validation framework that combines aggregate metrics of detectability and semantic similarity with interpretable linguistic features, including stylistic markers and topical patterns, to assess how closely LLMs approximate human language in a given dataset. Second, we benchmark nine open-weight LLMs across five calibration strategies, including fine-tuning, stylistic prompting, and context retrieval, on user interactions from X, Bluesky, and Reddit. We find that even after calibration, LLM outputs remain clearly distinguishable from human text, especially in affective tone and emotional expression. Instruction-tuned models generally underperform base models, and larger models do not obviously improve human-likeness. We also identify a trade-off between realism and semantic fidelity: methods that make outputs seem more human often move them further from the content of human responses. Together, these results provide a scalable framework for validation and calibration in LLM-based social simulation while underscoring current limits in reproducing human communication."
+}

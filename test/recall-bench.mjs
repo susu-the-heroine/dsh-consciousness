@@ -57,9 +57,12 @@ for (const [q, wantList, why] of CASES) {
   }
   const rank = rankOf(wantList)
   const firstIsBest = ids[0] === wantList[0]
+  // 2026-11-21：没翻到时名次是 99，判「大于等于一」就恒真——这条曾经永远报满、
+  // 而且漏的一条都不记（「没有名次」是 99 不是 0）。跟给别人的那份模板是同一个错法。
+  const inTop = rank <= TOPK
   if (firstIsBest) hit1++
-  if (rank >= 1) hit5++
-  if (!rank) miss.push({ q, want: wantList[0], got: ids, why })
+  if (inTop) hit5++
+  if (!inTop) miss.push({ q, want: wantList[0], got: ids, why })
   const mark = firstIsBest ? '①' : (rank ? '第' + rank : '✗')
   console.log('  ' + mark.padEnd(4) + q.padEnd(16) + '期望 #' + wantList.join('/#').padEnd(6) + '拿到 ' + (ids.length ? ids.join(' ') : '（空）'))
 }

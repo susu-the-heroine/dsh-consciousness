@@ -2,7 +2,7 @@
 
 > 中文说明见 [README.md](README.md)。
 
-Zero dependencies. 46,591 lines. 64 capabilities. A 22.9 MB quantized embedding model ships inside the package. Nothing leaves your machine.
+Long-term memory for DSH. Zero dependencies. 46,591 lines. 64 capabilities. A 22.9 MB quantized embedding model ships inside the package. Nothing leaves your machine.
 
 It remembers finer than most: facts, moods, catchphrases, whether you end a sentence with a period. It returns tighter: three-way recall — semantic, literal, entity — reranked, top five only, each with the original line and its date.
 

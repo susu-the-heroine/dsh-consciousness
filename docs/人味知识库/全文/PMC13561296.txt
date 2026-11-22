@@ -1,0 +1,221 @@
+# Metal hypersensitivity in spinal surgery: mechanisms, diagnosis, and management - a narrative review.
+
+- 作者：Adebusoye FT, Karkhanis S, Shet V, Mane RS, Aroori P, Lucke-Wold B, Chan JL, Hoh D, Decker M, Fields DP, Roth SG, Krafft PR.
+- 出处：Annals of medicine and surgery (2012) 2026
+- DOI：10.1097/ms9.0000000000005461
+- PMCID：PMC13561296
+
+2638 amsu Annals of Medicine and Surgery Ann Med Surg (Lond) Wolters Kluwer Health PMC13561296 13561296 13561296 42724903 10.1097/MS9.0000000000005461 Metal hypersensitivity in spinal surgery: mechanisms, diagnosis, and management – a narrative review Adebusoye Favour Tope MD a * Karkhanis Simran MBBS b Shet Vallabh MBBS c Mane Rohan S MD d Aroori Parinita MBBS e Lucke-Wold Brandon MD, PhD f Chan Julie L MD, PhD f Hoh Daniel MD, MBA f Decker Matthew MD, MBA, MPH f Fields Daryl Pinion II MD, PhD f Roth Steven G MD f Krafft Paul R MD f a Faculty of Medicine, Sumy State University, Sumy, Ukraine b School of Medicine and Dentistry, University of Lancashire, Preston, United Kingdom c Department of Internal Medicine, University of Connecticut, Connecticut, USA d Faculty of Medicine, University of Nis, Niš, Serbia e Faculty of Medicine, Kalinga Institute of Medical Sciences, Bhubaneswar, India f Department of Neurosurgery, University of Florida, Gainesville, Florida, United States * 
+Corresponding author. Address: Faculty of Medicine, Sumy State University, Sanatorna St, 31, Sumy, Sumy Oblast 40000, Ukraine. Tel.: +380 639759910. E-mail: favouradebusoye@gmail.com (F.T. Adebusoye).
+ 21 8 2026 88 9 5836 5836–5846 11 9 2026 Copyright © 2026 The Author(s). Published by Wolters Kluwer Health, LLC. This is an open access article distributed under the terms of the Creative Commons Attribution-Non Commercial-No Derivatives License 4.0 (CCBY-NC-ND), where it is permissible to download and share the work provided it is properly cited. The work cannot be changed in any way or used commercially without permission from the journal. 
+## Abstract
+
+Metal hypersensitivity in spinal surgery is an immune-mediated reaction to metal ions released from implants like pedicle screws and rods, presenting a notable clinical challenge. Common allergens such as nickel, cobalt, and chromium can trigger delayed-type IV hypersensitivity, resulting in pain, inflammation, implant loosening, and the need for revision surgery. Risk factors include prior metal exposure through jewelry or implants, as well as comorbidities like diabetes and behaviors like smoking. Diagnosis is complex, as symptoms often resemble infection or mechanical failure, necessitating the use of tools like patch testing, lymphocyte transformation testing, and histopathological analysis. Management strategies focus on preoperative risk assessment, selection of hypoallergenic materials like PEEK or titanium, and revision surgery when hypersensitivity is confirmed. Multidisciplinary collaboration involving spine surgeons, allergists, and dermatologists is crucial for accurate diagnosis, effective treatment, and improved patient outcomes, emphasizing the importance of tailored implant choices and vigilant postoperative care.
+
+ Keywords: hypersensitivity, hypoallergenic materials, metal hypersensitivity, spinal implants, Type IV
+ status released display-pdf yes is-olf no is-manuscript no is-preprint no is-journal-matter no is-scanned no is-retracted no 
+Received 2026 Feb 13; Accepted 2026 Jul 9; Revised 2026 Jul 3; Collection date 2026 Sep.
+
+## Introduction
+
+Metal hypersensitivity, also known as metal allergy, is an immune-mediated reaction that occurs when metal ions released from implanted devices trigger a host immune response[ 1 ]. These reactions can manifest locally at the site of implantation or systemically, leading to pain, inflammation, implant loosening, and, in some cases, the need for revision surgery [ 1 , 2 ] . In spinal surgery, where implants such as pedicle screws, rods, and interbody cages are routinely used, hypersensitivity presents a potential challenge to achieving long-term surgical success [ 2 , 3 ] . Prevalence estimates indicate that metal hypersensitivity affects 10–15% of the general population, with nickel being the most frequent sensitizer, followed by cobalt and chromium[ 4 ]. Among patients with orthopedic implants in certain studies, metal sensitivity rates were 20% in controls without an implant, 48.1% with stable implants, and 59.6% with unstable implants, the latter referring to loosening or mechanical failure[ 4 ]. Data in spinal surgery are more limited, though pediatric and adult cohorts demonstrate measurable rates of both suspected and confirmed hypersensitivity, consistent with findings in broader orthopedic populations[ 5 ]. Registry data from large joint arthroplasty further support the link between hypersensitivity and increased revision rates over time[ 2 ].
+
+HIGHLIGHTS
+
+Metal hypersensitivity in spinal surgery is an underrecognized type IV immune-mediated complication associated with nickel, cobalt, chromium, and titanium implants, leading to pain, inflammation, osteolysis, and the need for revision surgery.
+
+Clinical presentation often mimics infection or mechanical failure, requiring careful differentiation using patch testing, lymphocyte transformation testing (LTT), imaging, and histopathology (e.g., ALVAL).
+
+Risk factors include prior metal exposure, a history of contact dermatitis, and comorbidities such as diabetes and smoking, supporting the need for structured preoperative risk stratification.
+
+Confirmed cases frequently demonstrate symptom resolution following hardware removal and replacement with hypoallergenic materials such as PEEK, CF-PEEK, or commercially pure titanium.
+
+Optimal management requires a multidisciplinary approach involving spine surgeons, allergists, dermatologists, and pathologists, with an emphasis on individualized implant selection and vigilant postoperative surveillance.
+
+Risk factors for developing metal hypersensitivity include prior exposure to metals through jewelry, occupational contact, or previous implants[ 4 ]. Patient-related comorbidities such as diabetes, smoking, and osteoporosis contribute to poor outcomes, while implant-related factors such as micromotion, wear, and corrosion accelerate ion release and potentiate immune responses[ 2 ]. Furthermore, the clinical relevance is highlighted by reports of delayed hypersensitivity reactions occurring weeks to years after implantation, often associated with chronic pain, implant loosening, or hardware failure [ 2 , 6 ] . In pediatric populations undergoing early-onset scoliosis correction, hypersensitivity, though less frequently confirmed, remains a recognized consideration for long-term outcomes[ 5 ]. Management strategies include preoperative screening through patch testing in selected high-risk patients, consideration of hypoallergenic implant materials, and multidisciplinary evaluation of symptomatic cases [ 4 , 7 ] . Although definitive treatment often requires revision surgery with alternative materials, preventive measures and careful patient selection remain critical to reducing risk[ 6 ].
+
+With reliance on metallic implants continuing to grow worldwide, hypersensitivity represents both a clinical and an economic burden, driving interest in improved diagnostics and patient-specific approaches [ 2 , 7 ] . This review outlines the current understanding and management of metal hypersensitivity in spine surgery.
+
+## Methods
+
+This narrative review was conducted to summarize the available evidence on the mechanisms, diagnosis, and management of metal hypersensitivity in spinal surgery.
+
+A structured literature search was performed in PubMed, Embase, Scopus, Web of Science, and Google Scholar for English-language studies published from 2000 to [final search month/year]. Search terms included combinations of “metal hypersensitivity,” “metal allergy,” “spine surgery,” “spinal instrumentation,” “patch testing,” “lymphocyte transformation test,” and “revision surgery.” All records were imported into a reference manager, and duplicates were removed. FTA and SK independently screened titles and abstracts, followed by full-text review of eligible studies. Disagreements were resolved by discussion, with RSM serving as a third reviewer when necessary.
+
+Studies were included if they were peer-reviewed, English-language articles addressing the mechanisms, diagnosis, or management of metal hypersensitivity in spinal surgery. Eligible designs included case reports, case series, cohort studies, systematic reviews, and meta-analyses. Editorials, opinion pieces, and irrelevant studies were excluded. Reference lists were also screened manually. A total of 210 records were identified, of which 26 studies were included in the final synthesis. Among these, 11 case reports were analyzed in detail to characterize clinical presentation, diagnostic approaches, and outcomes following revision surgery (Table 1 ).
+
+Given the limited and heterogeneous nature of the literature, evidence was interpreted in three domains: (1) spine-specific clinical studies, (2) broader orthopedic implant literature, and (3) mechanistic or immunologic studies, with greater weight given to spine-specific data. Case reports published from 2013 onward were prioritized to reflect contemporary implant materials and diagnostic practices.
+
+An overview of the literature search methodology is summarized in Table 2 .
+
+## Pathophysiology and immunological mechanisms
+
+The pathophysiology of metal hypersensitivity in spinal implants involves a delayed-type hypersensitivity reaction, classified as a type IV immune response, distinct from immediate IgE-mediated allergies[ 8 ]. Metal ions released from implants, such as nickel (Ni 2 ⁺), cobalt (Co 2 ⁺), chromium (Cr 3 ⁺), and titanium act as haptens, binding to endogenous proteins to form immunogenic complexes [ 7 , 8 ] . These hapten-protein adducts alter self-proteins, rendering them antigenic and triggering immune recognition[ 8 ]. In spinal surgery, where implants endure mechanical stress and micromotion, corrosion accelerates ion release, with meta-analyses showing significant postoperative elevations: chromium (SMD: 2.50, 95% CI: 1.74–3.26), titanium (SMD: 2.05, 95% CI: 1.41–2.70), and cobalt (SMD: 2.28, 95% CI: 1.24–3.32)[ 9 ].
+
+The process unfolds in two phases: sensitization and elicitation. During sensitization, metal ions penetrate tissues, binding to proteins via coordinate bonds (e.g., histidine’s imidazole nitrogen or cysteine’s thiol). This activates antigen-presenting cells (APCs) like dendritic cells, which mature and migrate to lymph nodes. There, they present metal-modified peptides on major histocompatibility complex (MHC) class II molecules to naïve CD4⁺ T cells, leading to clonal expansion and differentiation into effector and memory T cells, including tissue-resident memory T cells (T_RM)[ 9 ]. Nickel, the most common allergen, activates Toll-like receptor 4 (TLR4) via primate-specific histidines (H456, H458), inducing reactive oxygen species (ROS) and pro-inflammatory cytokines like TNF-α, IL-1β, and IL-6[ 9 ]. Cobalt and palladium similarly engage TLR4, with cobalt activating the NLRP3 inflammasome in macrophages [ 7 , 9 ] . In the elicitation phase, re-exposure activates memory T cells, recruiting CD4⁺ and CD8⁺ T cells to the site. These produce cytokines such as IFN-γ, IL-17, and IL-4, driving a mixed Th1/Th2/Th17 response[ 9 ]. Histopathologically, this manifests as aseptic lymphocyte-dominated vasculitis-associated lesions (ALVAL), with perivascular lymphocytic infiltrates, macrophages, and fibrin deposition[ 9 ]. In spinal contexts, this leads to osteolysis, pseudotumor formation, and hardware loosening, as seen in case reports of posterior fusions[ 6 ].
+
+Distinguishing hypersensitivity from particle-induced osteolysis is key: hypersensitivity is adaptive, T-cell–mediated, and ion-specific, while osteolysis is innate, macrophage-driven by debris[ 10 ]. Cross-reactivity among metals (e.g., Ni and Pd; up to 95% co-sensitization) complicates matters, with shared TCR recognition[ 9 ]. Regulatory T cells (CD4⁺CD25⁺) maintain tolerance in non-allergic individuals, but impairment in hypersensitive patients amplifies responses[ 9 ]. A summary of metal-induced immunological reactions is provided in Table 1 , and a schematic representation is shown in Fig. 1 .
+
+ Figure 1. 
+A schematic representation of the pathophysiology of metal hypersensitivity reactions (created with BioRender.com).
+
+## Reported cases of metal hypersensitivity in spinal implants
+
+A number of patients with spinal implants have been reported to develop metal hypersensitivity reactions [ 6 , 11 – 20 ] . Reported patients are predominantly adults, although ages vary, and they have undergone procedures like posterior lumbar decompression and fusion (PLDF), total disc replacement (TDR), anterior cervical discectomy and fusion (ACDF), and posterior cervical or thoracic fixation. Time to presentation varies from weeks to several years after implantation, with many cases demonstrating delayed onset following an initial asymptomatic period. Common clinical features include persistent or recurrent pain, neurological symptoms, and dermatologic manifestations such as rash or pruritus, with occasional systemic symptoms including fatigue or weight loss. Imaging findings are typically nonspecific but may demonstrate hardware loosening, osteolysis, or soft-tissue inflammation. Notably, routine laboratory markers (ESR, CRP, and CBC) are frequently normal, and the infectious workup is commonly negative across reported cases.
+
+Patch testing is the most frequently used confirmatory modality, often identifying hypersensitivity to nickel, cobalt, chromium, or less commonly, titanium. Lymphocyte transformation testing and histopathology are less consistently reported but, when performed, may demonstrate lymphocyte-predominant inflammation supportive of hypersensitivity. Management typically involves removal or revision of the offending implants, often with replacement using hypoallergenic materials (e.g., pure titanium or CF-PEEK), leading to resolution or significant improvement of symptoms in most reported cases. This consistent pattern of symptom resolution following implant removal serves as an important retrospective indicator supporting the diagnosis, although it remains based on low-level evidence.
+
+As such, while these reports provide important clinical insights, the overall level of evidence remains low and limits the generalizability of conclusions. A summary of this section is provided in Table 3 .
+
+## Preoperative evaluation of metal hypersensitivity
+
+## Risk stratification
+
+Preoperative risk stratification for metal hypersensitivity in spinal surgery is essential to identify patients at elevated risk, guide implant selection, and reduce the likelihood of adverse reactions or revision procedures[ 4 ]. The evaluation begins with a thorough clinical history, emphasizing prior exposures to metals through jewelry, occupational contact, or previous implants[ 4 ]. Additional factors, including comorbidities such as diabetes, obesity, and smoking, further increase risk by impairing immune tolerance and wound healing[ 2 ]. Based on these considerations, patients may be stratified into low-, moderate-, or high-risk categories, which then inform decisions regarding preoperative testing and implant choice [ 2 , 4 ] . The summary of this section is provided in Figure 2 .
+
+ Figure 2. 
+A schematic representation of the preoperative evaluation and intraoperative management of metal hypersensitivity (created with BioRender.com).
+
+## Diagnosis
+
+Diagnosing metal hypersensitivity in spinal surgery is challenging and often uncertain, as symptoms are nonspecific and overlap with more common postoperative complications[ 18 ]. Patients typically present with complaints such as persistent pain, swelling, erythema, delayed wound healing, or systemic manifestations including dermatitis and fatigue [ 6 , 18 ] . These symptoms may appear weeks to years post-implantation and are particularly concerning in spinal cases, where inflammatory reactions near neural structures can exacerbate radiculopathy or myelopathy [ 6 , 12 ] . A notable case reported by Shang X et al [ 6 ] described a woman who developed recurrent back pain, urinary retention, and aseptic loosening three months after lumbar fusion; MRI demonstrated a peri-implant “cloud sign,” highlighting the diagnostic complexity. Much of the mechanistic understanding of metal hypersensitivity is derived from immunologic and arthroplasty literature rather than spine-specific studies, and direct clinical correlation in spinal populations remains limited [ 6 , 12 ] .
+
+Patch testing remains the most widely used and clinically accessible tool for evaluating metal hypersensitivity, detecting delayed-type reactions to metals such as nickel, cobalt, and chromium [ 11 , 13 , 15 , 16 ] . However, its diagnostic accuracy in implant-related reactions is limited, particularly in reflecting deep peri-implant immune responses, and false negatives may occur[ 21 ]. Lymphocyte transformation testing (LTT) may provide additional immunologic insight by assessing lymphocyte reactivity to metal antigens, but its availability is limited, results are not standardized across laboratories, and clinically relevant thresholds remain poorly defined [ 20 , 22 , 23 ] . LTT may provide additional immunologic insight, but its availability is limited, results are not standardized across laboratories, and clinical thresholds remain poorly defined. [ 20 , 22 , 23 ] Histopathological findings, such as lymphocyte-predominant inflammation or ALVAL-like features, can support the diagnosis but are not specific and may overlap with other inflammatory processes. Serum metal ion levels may be elevated following spinal instrumentation, but lack specificity and do not reliably correlate with hypersensitivity reactions [ 20 , 22 , 23 ] .
+
+Imaging serves as an adjunct rather than a confirmatory tool: radiographs may demonstrate osteolysis; MRI can show soft-tissue edema; and CT may assist in distinguishing inflammation from infection [ 6 , 9 ] . Importantly, metal hypersensitivity remains a diagnosis of exclusion and should only be considered after more common causes of postoperative symptoms, such as infection, mechanical loosening, pseudarthrosis, or adjacent segment disease, have been systematically ruled out [ 6 , 11 , 18 , 22 , 23 ] .
+
+Diagnostic approaches are largely extrapolated from dermatologic and orthopedic literature, as spine-specific validation studies for patch testing and lymphocyte transformation testing remain scarce [ 6 , 22 , 23 ] . A summary of this section is provided in Figure 2 .
+
+## Surgical decision-making
+
+Surgical decision-making hinges on diagnostic certainty. When hypersensitivity is confirmed, hardware removal or revision with hypoallergenic implants remains the most effective treatment[ 12 ]. Titanium and polymer-based alternatives, such as PEEK or tantalum, are most commonly used in these settings[ 12 ]. However, unnecessary revision carries significant morbidity, including infection and instability. In patients with inconclusive findings, conservative strategies, such as anti-inflammatory therapy or low-dose naltrexone, may be trialed before proceeding to revision[ 24 ]. Expert consensus increasingly favors a multidisciplinary approach that weighs risks and benefits, particularly in pediatric populations where growth considerations complicate implant selection and revision[ 5 ]. Ultimately, surgical decision-making benefits from an individualized framework in which combined diagnostic methods support accurate identification of hypersensitivity, ensuring both patient safety and cost-effective management[ 23 ].
+
+No single test is definitive, and a combination of clinical assessment, imaging, laboratory testing, and histopathology is typically required [ 6 , 11 , 18 , 22 , 23 ] . A summary of this section is provided in Figure 2 .
+
+## Intraoperative management
+
+Once confirmed, the management of metal hypersensitivity frequently involves revision surgery to remove allergenic hardware and replace it with hypoallergenic alternatives, aiming to alleviate symptoms and restore stability [ 6 , 18 ] . Intraoperative strategies during revision focus on meticulous hardware removal, tissue assessment, and implant substitution. Surgeons begin by exposing the surgical site, often encountering scar tissue or granulation tissue that complicates dissection [ 6 , 12 , 18 ] .
+
+For instance, in a case of a 41-year-old woman 6 years post-anterior lumbar interbody fusion (ALIF), the interbody device was found loose amid dense scar tissue, requiring careful mobilization to avoid neurovascular injury[ 18 ]. The procedure involved extracting the nickel-containing implant and replacing it with a PEEK interbody, which lacks common allergens, to prevent further sensitization[ 18 ]. In another reported case, a 52-year-old woman with posterior lumbar decompression and fusion (PLDF) developed recurrent low back pain and sciatica months after the initial surgery, leading to revision after a diagnosis of metal hypersensitivity via tissue histology showing lymphocyte-dominant inflammation[ 6 ]. Intraoperatively, pedicle screws were notably loose, easily removable without resistance, indicating fixation failure due to osteolysis and an inflammatory response[ 6 ]. No pus or necrosis was observed, but granulation tissue around the screws was biopsied. The hardware was fully excised, and although immediate replacement was not detailed, postoperative antibiotic lavage was used prophylactically despite negative cultures, highlighting the need to differentiate metal hypersensitivity from low-grade infection[ 6 ]. Pain relief was significant after removal, though residual instability from bone destruction necessitated possible further stabilization[ 6 ]. A similar approach was seen in a 32-year-old man with thoracic fusion who developed a rash 2 years postoperatively[ 12 ]. Patch testing confirmed cobalt, manganese, and chromium sensitivities, prompting revision due to incomplete arthrodesis[ 12 ]. Intraoperatively, the original titanium-alloy hardware (with trace cobalt-chrome content) was removed under imaging guidance and replaced with commercially pure titanium constructs to eliminate allergens[ 12 ]. This minimized the risk of reactions, with the rash resolving within weeks.
+
+Across cases, intraoperative considerations include preoperative allergy-guided material selection, such as pure titanium or PEEK, to avoid cross-reactivity [ 6 , 12 , 17 , 19 ] . Blood metal ion levels, while not diagnostic for loosening, may inform systemic involvement[ 6 ]. Challenges like scar adhesion or loose components demand advanced techniques, including fluoroscopy for precise extraction and ensuring spinal stability during the transition[ 6 ]. Outcomes generally improve, with symptom resolution after revisions, though risks of incomplete relief from instability persist [ 6 , 12 , 18 ] .
+
+Current management strategies are predominantly informed by case-based evidence and extrapolation from arthroplasty practice, with limited spine-specific outcome data. A summary of this section is provided in Figure 2 .
+
+## Postoperative management and a multidisciplinary medical approach
+
+## Postoperative surveillance and symptom management
+
+Following revision spinal surgery for metal hypersensitivity, vigilant postoperative surveillance is essential to detect residual or recurrent issues and ensure optimal recovery. Patients should undergo regular clinical evaluations focusing on persistent or recurrent symptoms such as back pain, sciatica, skin rashes, edema, or hardware-related complications, such as loosening or osteolysis [ 2 , 6 , 18 ] . Imaging modalities, including X-rays, CT scans, and MRI, are crucial for assessing implant stability, identifying fluid collections (e.g., presacral collections), and ruling out infection or pseudoarthrosis [ 2 , 6 , 18 ] . Monitoring metal ion levels in serum, particularly for nickel, cobalt, chromium, and titanium, is recommended, as elevations can persist above normal for up to 4 years post-revision, although levels decrease rapidly initially and are not definitive indicators of failure[ 2 ]. Patch testing for specific metal allergens should be conducted postoperatively if not done pre-revision to confirm sensitization and guide future interventions. Histopathological examination of tissues from the surgical site, looking for lymphocytic infiltration or chronic inflammation, serves as the gold standard for ongoing assessment [ 11 , 18 ] .
+
+Symptom management after revision surgery targets residual pain, inflammation, and functional limitations stemming from prior hypersensitivity [ 6 , 13 , 14 ] . Analgesics, non-steroidal anti-inflammatory drugs, and targeted physical therapy form the cornerstone, addressing low back pain and sciatica that may linger due to lumbar instability or endplate damage[ 6 ]. In cases of suspected ongoing inflammation, short courses of corticosteroids can mitigate eczematous dermatitis or perivascular lymphocytic infiltrates as observed on pathology [ 6 , 13 , 14 ] . A summary of this section is shown in Figure 3 .
+
+ Figure 3. 
+A schematic representation of postoperative surveillance and symptom management for metal hypersensitivity (created with BioRender.com).
+
+## Multidisciplinary coordination
+
+A multidisciplinary approach is pivotal for effective management, integrating expertise from neurosurgeons, allergists, dermatologists, pathologists, and orthopedic specialists [ 12 – 14 ] . Coordination begins with shared diagnostic protocols, including patch testing for metals, such as nickel and cobalt, and intraoperative biopsies evaluating lymphocytic patterns that hypersensitivity [ 12 – 14 ] . Surgeons lead revision procedures, selecting alternative implants (e.g., PEEK or titanium) based on allergy profiles, while allergists interpret tests and recommend avoidance strategies. Dermatologists manage cutaneous manifestations, such as spongiotic dermatitis, through topical treatments. Pathologists provide histopathological insights, distinguishing allergy from infection based on the presence of eosinophils or chronic inflammation [ 12 – 14 ] . This team collaborates on ruling out differentials such as aseptic loosening through imaging and laboratory studies. Regular multidisciplinary meetings facilitate case reviews, especially for complex presentations such as abdominal pain or food intolerance linked to hypersensitivity. Patient-centered care involves educating patients on symptom monitoring and coordinating follow-ups, ensuring seamless transitions between specialties to prevent delays in intervention and optimize outcomes in this underreported complication [ 12 – 14 ] . The summary of this section is provided in Figure 4 .
+
+ Figure 4. 
+A schematic representation of the multidisciplinary coordination of metal hypersensitivity (created with BioRender.com).
+
+## Future directions
+
+## Standardized diagnostics
+
+To ensure effective management and prevention of metal hypersensitivity in spinal surgery, future research should prioritize the development of standardized diagnostic protocols that integrate clinical history, dermatologic testing, and histopathological criteria[ 23 ]. Longitudinal registry-based studies and large-scale prospective efforts are needed to define the true incidence of metal hypersensitivity, establish patient-specific risk factors, quantify associations with revision rates, and guide implant surveillance strategies [ 25 , 26 ]. These efforts should also define the appropriate role and interpretation of patch testing, LTT, and histopathological evaluation, while exploring emerging biomarkers and advanced imaging modalities that may improve diagnostic accuracy[ 27 ].
+
+## Biomaterial innovation and immunomodulation
+
+Advances in biomaterials hold significant potential to mitigate hypersensitivity risk. Emerging options such as ceramic coatings, polymer composites, and surface-modified titanium alloys should be rigorously tested for safety, durability, and immunological compatibility[ 6 ]. PEEK and ceramic-coated implants have already shown promise in case reports, but broader evaluation in spine-specific populations is critical before widespread adoption [ 6 , 12 , 19 ] . Future studies should directly compare these materials with titanium alloys and other hypoallergenic implants to determine their relative effectiveness in reducing hypersensitivity reactions while maintaining favorable clinical outcomes[ 27 ].
+
+Precision medicine approaches, including genetic and immunological profiling, may one day enable preoperative identification of patients at high risk for hypersensitivity, guided by immunopathological insights from studies describing ALVAL[ 22 ]. Non-surgical immunomodulatory therapies, such as corticosteroids or experimental agents like low-dose naltrexone, warrant further investigation to assess whether symptom control can be achieved without immediate revision surgery[ 4 ].
+
+## Long-term and multidisciplinary care
+
+Finally, long-term care models must extend beyond surgical revision to encompass holistic patient monitoring and multidisciplinary collaboration. Coordinated care among spine surgeons, allergists, dermatologists, and pathologists has the potential to enhance diagnostic accuracy, reduce unnecessary revisions, and improve long-term quality of life for affected patients[ 26 ]. These collaborations can be further strengthened through standardized referral pathways and spine-focused multidisciplinary clinics, providing a framework for coordinated patient care and collaborative research[ 27 ].
+
+## Conclusion
+
+Metal hypersensitivity is an uncommon but clinically important complication in spinal surgery that may lead to pain, implant loosening, and revision surgery. It is driven by a delayed immune response to metal ions such as nickel, cobalt, and chromium. Diagnosis remains challenging because its presentation often mimics infection or mechanical failure, and adjunctive tests such as patch testing and lymphocyte transformation testing are frequently used. Some patients experience improvement after revision to hypoallergenic implants, including PEEK or ceramic-coated devices, although such procedures carry inherent risks. Nevertheless, the current evidence base is limited, heterogeneous, and largely derived from case reports and extrapolated from the orthopedic literature. Consequently, many recommendations are founded on low-level evidence, emphasizing the need for prospective spine-specific studies to better establish diagnostic accuracy and optimize management strategies.
+
+## Acknowledgements
+
+No funding or grant was received by any of the authors.
+
+## Footnotes
+
+Favour Tope Adebusoye, Paul R. Krafft, and Simran Karkhanis have contributed equally and are co-first authors.
+
+Sponsorships or competing interests that may be relevant to content are disclosed at the end of this article.
+
+## Contributor Information
+
+Favour Tope Adebusoye, Email: Favouradebusoye@gmail.com.
+
+Simran Karkhanis, Email: sskarkhanis@uclan.ac.uk.
+
+Vallabh Shet, Email: vallabhshet@gmail.com.
+
+Rohan S. Mane, Email: unirohan0987@gmail.com.
+
+Parinita Aroori, Email: pari.aroori@gmail.com.
+
+Brandon Lucke-Wold, Email: Brandon.Lucke-Wold@neurosurgery.ufl.edu.
+
+Julie L. Chan, Email: Julie.Chan@neurosurgery.ufl.edu.
+
+Daniel Hoh, Email: daniel.hoh@neurosurgery.ufl.edu.
+
+Matthew Decker, Email: matthew.decker@neurosurgery.ufl.edu.
+
+Daryl Pinion Fields, II, Email: darylfields88@gmail.com.
+
+Steven G. Roth, Email: steven.roth@neurosurgery.ufl.edu.
+
+Paul R. Krafft, Email: Paul.Krafft@neurosurgery.ufl.edu.
+
+## Ethical approval
+
+Not required.
+
+## Consent
+
+Not required.
+
+## Sources of funding
+
+No funding was received.
+
+## Author contributions
+
+F.T.A. conceived the study and contributed to the study design. S.K. conducted the literature review and assisted in manuscript drafting. V.S. and R.S.M. contributed to manuscript writing. P.A. assisted in editing and critical revision of the manuscript. B.L.W., J.L.C., D.H., M.D., D.P.F., S.G.R., and P.R.K. provided senior oversight, critical revisions, and final approval of the manuscript. All authors have proofread the paper and approved the final submission.
+
+## Conflicts of interest disclosure
+
+The authors declare no conflicts of interest.
+
+## Research registration unique identifying number (UIN)
+
+No human subjects involved.
+
+## Guarantor
+
+Favour Tope Adebusoye.
+
+## Provenance and peer review
+
+Not invited.
+
+## Data availability statement
+
+Not applicable.
+
+## References
+
+## Associated Data
+
+## Data Availability Statement
+
+Not applicable.

@@ -1,0 +1,723 @@
+https://dspace.org/
+Everyday Antiracism in Action: Preference Organization 
+in Responses to Racism
+Whitehead, Kevin A
+2015
+Sage
+http://hdl.handle.net/10539/17795
+Whitehead, K. A. (2015). Everyday antiracism in action: Preference organization in 
+responses to racism. Journal of Language and Social Psychology. DOI: 10.1177
+/0261927X15586433.
+Downloaded from a DSpace repository. https://dspace.org/
+1 
+ 
+Everyday Antiracism in Action: Preference Organization in Responses to Racism 
+ 
+Kevin A. Whiteheadi 
+ 
+ 
+Journal of Language and Social Psychology, DOI: 10.1177/0261927X15586433 (Published 
+online: 15 May 2015)
+                                                i University of the Witwatersrand, Johannesburg, South Africa 
+Corresponding Author: 
+Kevin A. Whitehead, Department of Psychology, University of the Witwatersrand, Private Bag 3, P.O. Wits, 
+2050, South Africa 
+E-mail: kevin.whitehead@wits.ac.za 
+2 
+ 
+Abstract 
+This paper examines features of preference organization in disaffiliative responses to possibly 
+racist actions, drawing on a corpus of over 120 hours of recorded interactions from South 
+African radio call-in shows. My analysis demonstrates how features of dispreferred turn 
+shapes provide producers of possibly racist actions with opportunities to withdraw or back 
+down from them. In cases where these opportunities are not taken up, subsequent responses 
+may progressively include more features of preferred turn shapes. Responses may also 
+include features of preferred turn shapes from the outset, thereby treating the prior actions as 
+unequivocally racist. Responses that treat prior actions as such, however, also recurrently 
+exhibit features of dispreference, thereby displaying speakers’ orientations to “cross-cutting 
+preferences” in responding to racism, with disaffiliative responses being “dispreferred” 
+actions in some senses but “preferred” actions in others. I conclude by discussing the 
+implications of these findings for everyday antiracism in interactional settings.  
+ 
+Keywords 
+Racism, antiracism, interaction, conversation analysis, preference organization  
+3 
+ 
+Research on what Essed (1991) calls “everyday racism” has described the significance of 
+seemingly mundane manifestations of racism located in everyday situations and practices, 
+thereby drawing attention to a range of phenomena that had previously been under-examined 
+in the social sciences (Essed, 1991). This shift has been associated with the emergence of a 
+related body of research on “everyday antiracism” (see, for example, Mitchell, Every, & 
+Ranzijn, 2011), focusing on the ways in which ordinary people resist or challenge racism in 
+their everyday lives (cf. Durrheim, Mtose & Brown's [2011] concept of "race trouble", which 
+refers to exchanges in which matters of race and racism are at stake for participants).  
+While research on everyday antiracism has made valuable contributions, no previous 
+studies of which I am aware have closely examined the moment-by-moment production of 
+everyday antiracist actions in naturally occurring interactions (but see Robles, 2015 [this 
+issue]; Stokoe, 2015 [this issue]). Instead, studies of this type of everyday antiracism have 
+relied on hypothetical scenarios (e.g., Guerin, 2003) and retrospective self-report methods 
+such as interviews (e.g., Mitchell, et al., 2011) and diaries (e.g., Hyers, 2007). In this paper, I 
+address this gap in the literature by drawing on research on what conversation analysts refer 
+to as “preference organization” to examine some features of disaffiliative responses to 
+instances of what come to be treated as racially problematic, or possibly racist,1 actions in 
+everyday interactions. I begin with a brief discussion of the findings with respect to 
+preference organization that are of central relevance for my analysis. 
+ 
+Preference Organization in Talk-In-Interaction 
+A number of seminal conversation analytic studies have described a collection of practices 
+through which affiliative actions (or those that advance social solidarity) are promoted over 
+disaffiliative actions (Heritage, 1984). These studies have focused on sequences in which a 
+range of actions that make relevant alternative possible responses, with the different 
+4 
+ 
+alternatives displaying different alignments toward the action they are responding to 
+(Schegloff, 2007). For example, assessments and claims can be responded to with either 
+agreement or disagreement; offers and invitations can either be accepted or rejected; requests 
+can either be granted or denied; and so on (Heritage, 1984; Schegloff, 2007). Examination of 
+the practices through which these alternative responses are produced demonstrates recurrent 
+orientations to their asymmetrical character, with aligning or “preferred” responses 
+(agreement, acceptance, etc.) recurrently produced straightforwardly and without delay, while 
+disaligning or “dispreferred” responses (disagreement, rejection, etc.) recurrently delayed, 
+mitigated, and accompanied by accounts (see, for example, Heritage, 1984; Pomerantz, 1978, 
+1984; Schegloff, 2007). “Preference” thus refers here to systematic structural asymmetries in 
+the “turn shapes” of the different possible responses, rather than to the psychological state of 
+the individuals producing them – that is, it is the features of the responding turn rather than 
+the speaker’s motives, desires, etc. that provides for its characterization as either “preferred” 
+or “dispreferred” (Schegloff, 2007). 
+ A significant consequence of the features of dispreferred turn shapes is that they offer 
+resources for recognizing incipient disaligning responses, providing opportunities for either 
+party to preempt them, or for speakers to revise or back down from their prior actions in order 
+to permit preferred responses to be produced instead (see, for example, Lerner, 1996; 
+Schegloff, 2007). These factors contribute to the greater aggregate frequency of preferred 
+responses (Schegloff, 2007), and the attendant minimization of the likelihood of interactional 
+difficulties associated with dispreferred responses (Heritage, 1984; Lerner, 1996).  However, 
+as Schegloff (2007, p. 73) notes, in cases where disaffiliation does occur (e.g., during the 
+course of arguments or conflicts), features of preferred responses can serve “as a kind of 
+metric for the seriousness which the parties wish to accord their misalignment”. Thus, the 
+5 
+ 
+production of a dispreferred action (e.g., disagreement) in a preferred turn shape (immediate, 
+unmitigated, etc.) can be a resource for displaying strong disaffiliation. 
+ An additional important consideration relates to cases in which there are multiple 
+preferences. This results from an utterance serving both as an action that makes particular 
+preferred or dispreferred responses relevant, and as a vehicle for other distinct actions that 
+also make preferred or dispreferred responses relevant (Schegloff, 2007). In some cases, 
+these multiple preferences are congruent (i.e., the same response is preferred for both actions 
+implemented by the prior utterance), while in others they are “cross-cutting”, meaning that 
+the preferred response for one aspect of the utterance is the dispreferred response for the 
+other (Schegloff, 2007). For example, agreement is a preferred response to assessments, but 
+assessments can also be used as a vehicle for producing actions, such as compliments or self-
+deprecations, for which disagreement is the preferred response (Pomerantz, 1978, 1984). 
+Such cases present difficulties for responders with respect to choosing which practice or set 
+of practices to employ in responding (Schegloff, 2007). As the data I examine below 
+demonstrate, this can result in responses that exhibit features of both preferred and 
+dispreferred turn shapes. Prior to presenting this data, however, I turn to a brief discussion of 
+the way in which responses to possible racism can be understood as constituting a type of 
+cross-cutting preference. 
+ 
+Cross-Cutting Preferences in Responding to Possible Racism 
+A wealth of research in recent decades has examined the details of “race talk” – the ways in 
+which race is introduced into spoken interactions, and how it is managed during their course. 
+One prominent thrust of this work has focused on the practices speakers can use in order to 
+shape how their utterances may be heard and responded to, and particularly to mitigate the 
+possibility of being treated as prejudiced or racist on the basis of their talk (see, for example, 
+6 
+ 
+Barnes, Palmary, & Durrheim, 2001; Condor, Figgou, Abell, Gibson, & Stevenson, 2006). 
+These practices demonstrate speakers’ orientations to a (relatively contemporary) set of 
+norms proscribing open expressions of racism, such that expressions of this nature may make 
+speakers vulnerable to sanctioning or other interactional difficulties. 
+ A related area that has drawn the attention of researchers in the field more recently 
+relates to the difficulties surrounding responding to racialized (and thus potentially racist) 
+descriptions, claims, complaints, assessments, and the like. On the one hand, disagreeing or 
+sanctioning responses to such actions, by virtue of being disaffiliative, constitute a threat to 
+solidarity between the participants (see, for example, Guerin, 2003; Hyers, 2007). This is 
+particularly so as a consequence of this type of response effectively constituting an 
+accusation of racism against the responded-to party, and in light of the increasing degree to 
+which such accusations are liable to be treated as normative breaches on a par with (or even 
+worse than) the possible racism to which they are responding (see, for example, Augoustinos 
+& Every, 2007). On the other hand, agreeing or affiliating with a possibly racist action – or 
+even simply failing to directly challenge it – may place participants in a morally 
+compromised position as a result of being seen as complicit with the action (see, for example, 
+Condor, et al., 2006). This risk is particularly heightened in cases where there is a co-present 
+or overhearing audience that includes people whose solidarity with a potential responder may 
+depend in part on whether s/he takes up an opportunity to challenge a racist action. In light of 
+these considerations, and as my analysis demonstrates, disaffiliative responses to possible 
+racism can be seen to constitute an instance of cross-cutting preferences, being dispreferred 
+actions in some senses but preferred actions in others. 
+  
+ 
+ 
+7 
+ 
+Data and Method 
+The analysis that follows is based on a data set consisting of over 120 hours of recorded 
+interactions from call-in shows on three South African radio stations. These recordings were 
+produced between 2006 and 2013, but predominantly in 2008, and were designed to include 
+broadcasts in a range of different time slots, both government- and independently-operated 
+stations, and stations that reach substantial proportions of the country’s population. The 
+recordings include a total of over 620 stretches of interaction in which race was observably 
+made relevant, with the present analysis drawing on a collection of 53 cases in which 
+disaffiliative responses to racialized actions (including assessments, claims, accounts, 
+complaints, etc.) were produced, and where the racialized character of the action being 
+responded to was clearly treated as the basis for the disalignment. 
+Although it should be noted that the data set was not intended to provide a statistically 
+representative sample of radio broadcasts (or interactions more generally) in South Africa as 
+a whole, there are good reasons why South Africa offers a particularly suitable setting for the 
+examination of the phenomena on which my analysis focuses. Specifically, the country 
+relatively recently transitioned from a system in which race was a rigidly legislated basis of 
+social organization to one in which racism is explicitly outlawed and non-racialism is 
+enshrined as a constitutionally-protected value. However, race remains a highly salient 
+feature of everyday life in South Africa, and contestations over matters of race and racism 
+abound (see, for example, Cresswell, Whitehead, & Durrheim, 2014; Durrheim, et al., 2011). 
+As a result, the kinds of disaffiliative responses to possible instances of racism that I examine 
+in this paper are (as noted below) relatively plentiful in my data. 
+ Moreover, while the focus of the present analysis is not specifically on the features of 
+radio interactions as a particular form of institutional interaction (see, for example, Hester & 
+Fitzgerald, 1999; Hutchby, 1991), at least two features of this interactional setting make it an 
+8 
+ 
+especially useful site for the purposes of this analysis. Firstly, by virtue of being produced for 
+an overhearing audience, these interactions take place in a setting in which the contingencies 
+surrounding responses to possible racism described above are particularly relevant. Secondly, 
+although they frequently work to maintain a “neutralistic” stance (Clayman, 1992), hosts on 
+the shows also systematically orient to a role of moderating the positions taken by callers and 
+policing the expression of particularly extreme views. The practices hosts use in responding 
+to possibly racist actions on the part of callers are thus readily available for scrutiny in this 
+setting. In addition, although it remains an open question as to whether these practices match 
+those that may be employed in other interactional contexts, it is likely that the generic 
+features of preference organization on which I focus in the following sections would be 
+potentially available as resources for participants in a wider range of contexts. 
+The analysis follows a conversation analytic approach (Sacks, Schegloff, & Jefferson, 
+1974; Schegloff, 2007), aided by detailed transcripts produced using the notations developed 
+primarily by Gail Jefferson (Jefferson, 2004). I begin the analysis by focusing on features of 
+preference organization in responses to possibly racist actions that provide resources through 
+which speakers of the actions can revise or back down from them, thus offering such speakers 
+the benefit of the doubt with respect to whether the action was intentionally racist. I then 
+examine progressive movement from the initial affordance of this type of benefit of the doubt 
+toward its withdrawal. Finally, I consider responses that, from the outset, do not allow for 
+such a benefit of the doubt. The data excerpts included below were selected based on how 
+clearly they demonstrate the main features of these phenomena, while exemplifying the range 
+of variation observed in the collection as a whole.  
+ 
+ 
+ 
+9 
+ 
+Offering the Benefit of the Doubt through Dispreferred Turn Shapes 
+Excerpt 1 shows part of a discussion of a controversial newspaper column addressing the 
+legacies of colonialism in Africa. A number of callers earlier in the discussion have argued 
+that the column constituted an instance of racism for several reasons, one of which was what 
+the callers took to be a claim that colonialism benefited Africa rather than being harmful. In 
+his contribution to this discussion, the caller in Excerpt 1 appears to align with this view over 
+a number of successive turn constructional units (TCUs; see Sacks et al. [1974]), each of 
+which is followed by a pause as the host declines to respond at places available for him to do 
+so. 
+ 
+Excerpt 1 [549, 702 4-23-08] 
+1   C:  U:m, (.) I just wanna say that like um (.) Africa isn't  
+2       the only third world country that benefited from colonialism.  
+3       (1.0)  
+4   C:  There a lot of countries that >benefited from colonialism<  
+5       like um, (.) Asian countries, and South American countries,  
+6       Hong Kong, >and that (so/stuff.)<  
+7       (0.5)  
+8   C:  So I’m you know just saying, (.) tch fact is fact, the white-  
+9       (0.2) the white (.) countries were (1.0) have helped a lot of 
+10      countries develop, they also caused a lot of hh you know,  
+11      problems (there.)  
+12      (0.6) 
+13  C:  I’m- (.) I’m Chinese, so I'm not defending the white people 
+14      >or anything,< I'm just saying, (0.5) you know (y-) (.) just-  
+15      this- the- the fact is the fact, huh? 
+16      (0.2) 
+17  H:  Mm. 
+10 
+ 
+18      (0.7) 
+19  H:  Mokay. .hh Thanks very much for your call, Grant. 
+20  C:  Thanks, by[e.] 
+21  H:            [C ]ool. 
+ 
+ By beginning his contribution with the claim that “Africa isn’t the only third world 
+country that benefited from colonialism” (lines 1-2), the caller displays an assumption that 
+colonialism did in fact serve to benefit Africa, thereby implicitly aligning with the position 
+that has been identified by prior callers as the basis for denouncing the column as racist. The 
+completion of this claim constitutes a place where the host could have produced an aligning 
+or disaligning response, but no response is forthcoming during a relatively lengthy 1.0-second 
+pause (line 3). While this pause may be a result of the host giving the caller an opportunity to 
+continue his point, it may also indicate that the host is specifically withholding a response at a 
+place where one was relevant, in which case the pause could be a marker of incipient 
+disagreement (Heritage, 1984) with the caller’s claim.  
+ Following this pause, the caller elaborates his claim by suggesting that “a lot of 
+countries” benefited in this way (line 4), which serves to upgrade the claim from the 
+unspecified number of such beneficiaries referred to in his first TCU. He then produces a 
+three-part list that offers examples of these claimed beneficiaries, followed by a “generalized 
+list completer” (Jefferson, 1990), which serves to show that there are other countries that 
+could be named in addition to the ones he has listed (lines 5-6). Through this elaboration and 
+upgrade of his prior claim, the caller pursues a response by producing another place at which 
+a response from the host is made relevant. The host, however, again declines to respond 
+during another relatively lengthy pause (line 7), providing further (albeit not yet conclusive) 
+evidence for the incipient disagreement possibly conveyed by the pause in line 4.  
+11 
+ 
+ The caller then embarks on a further pursuit of a response, beginning by producing 
+the upshot that he had previously projected but not produced, as shown by his use of a turn-
+initial “so” (Raymond, 2004). This upshot restates, in slightly different terms, his case that 
+colonialism on the part of “the white (.) countries” (line 9) has “helped a lot of countries 
+develop” (lines 9-10), and presents this as a matter of “fact” (line 8). However, prior to 
+reaching an intonational possible completion of this TCU (see Sacks, et al., 1974), the caller 
+mitigates his claim by suggesting “they also caused a lot of hh you know, problems (there)” 
+(lines 10-11). The caller thus offers a counter to his own prior claims, which suggests an 
+orientation on his part to a potential problem with the apparently pro-colonial thrust of his 
+prior utterances, and thus provides evidence for his treatment of the host’s prior withholding 
+of responses as indicating incipient disagreement. In addition, this utterance provides a third 
+place at which a response from the host is relevant – and one at which the host may be more 
+inclined to produce an aligning response as a result of the more balanced claim the caller has 
+now offered, in contrast to the upgraded version he produced in lines 4-6. The host 
+nonetheless continues to withhold a response during a 0.6-second pause at line 12, thereby 
+further reinforcing his incipient resistance of the caller’s claims, but still without placing this 
+resistance explicitly “on the record”. 
+ The caller then begins another TCU with a change of tack, as he produces a racial 
+and/or ethnic self-identification (“I’m Chinese,” line 13) and then treats it (as shown by the 
+connecting word “so” – see Raymond, [2004]) as the basis for a denial that he is “defending 
+the white people”.2 By producing this denial, the caller treats the defense of “the white 
+people” (and by implication, in the context of this discussion, the colonial system for which 
+they were responsible) as a problematic action, such that it warrants denial. More specifically, 
+by employing an explicit racial categorization here, he treats the colonial domination he is 
+referring to as an explicitly racially organized (and hence racist) arrangement. As such, he 
+12 
+ 
+implicitly treats any defense of “the white people” in this context as effectively a defense of 
+racism, and thereby an instance of racism in its own right. The caller’s denial here thus 
+provides further retrospective evidence of his treatment of the host’s withheld responses as 
+constituting disaffiliation from a potentially racist defense of colonialism, while working to 
+distance the position he has taken from association with such an action.  
+ Following this denial, however, the caller re-asserts a slightly reformulated version of 
+his claim that “the fact is the fact,” followed by a tag question, “huh?” (line 15), which serves 
+as a further pursuit of agreement from the host while also serving to downgrade the strength 
+of the caller’s claim (Heritage & Raymond, 2005). After another brief pause (line 16), the 
+host produces his first verbal response, in the form of the token “Mm” (line 17), which offers 
+weak acknowledgment of the caller’s claim but stops short of offering clear agreement (see 
+Gardner’s [1997] analysis of the use of this token). Following another relatively lengthy 
+pause (line 18), the host produces what appears to be a contraction of “Mm” and “okay” 
+(“Mokay”). The “mm” and “okay” components of this utterance both serve to further display 
+acknowledgment of the caller’s point (Beach, 1993; Gardner, 1997), while the “okay” 
+component also possibly serves to display alignment with the caller (Beach, 1993). In 
+addition, the “okay” component marks a transition toward bringing the call to a close (Beach, 
+1993)  – an outcome that is completed by the host subsequently thanking the caller for his 
+call, and the caller aligning with this move to closing in his next turn (line 20). 
+ This excerpt thus demonstrates how one recurrent feature of dispreferred turn shapes 
+(delays) can be treated by participants as foreshadowing resistance to a possibly racist action. 
+However, the ambiguity with respect to whether the host’s non-responses constitute 
+resistance to the caller’s claims, as opposed to merely giving him the opportunity to continue 
+his point, provide a resource by which the trajectory of the exchange could be changed from 
+one apparently headed toward disalignment to an outcome of possible alignment. As a result, 
+13 
+ 
+the caller was able to take the opportunity to revise his potentially racist utterance and deny 
+its problematic character without the host explicitly producing the kind of agreement or 
+disagreement that would be associated with the kind of risks described above. In the 
+following excerpt, which is drawn from a discussion of violence against women, 
+disagreement is produced more explicitly, but is characterized by a number of features of 
+dispreference that similarly provide the speaker of a potentially racist action with the 
+opportunity to back down from his action.  
+ 
+Excerpt 2 [129, SAfm 4-21-08] 
+1   C:  But there are many factors in my opinion, (0.2) u:m: (0.7)  
+2       women’s rights, h (.) um: they are much more modern, (0.5)  
+3       a[nd I] think uh: males has to accept that. h 
+4   H:   [Mm. ] 
+5       (0.2) 
+6   H:  Mm. 
+7       (0.2) 
+8   C:  U:m: (0.4) [if ] she’s got a point of view or:: (.) I think .hh 
+9 (H:)             [Tch] 
+10      from: being: a: non-white South African, (.h) we have a 
+11      different attitude towards females. h 
+12      (.) 
+13  H:  (M-) well that- the- uh- I once did a .hh eh POWA, People 
+14      Opposing Women Abuse, who’ve been doing a lot of work in this 
+15      field for many many years, [.hh ] and doing a great job at it,  
+16  C:                             [Yes.] 
+17  H:  .hh they once did a study, and they found that it was as 
+18      prevalent in Sandton as it was .hh in Soweto. 
+19  C:  Alright that’s [(            )] 
+20  H:                 [ So it’s not  ] whi:te or bla:ck, it’s not uh:  
+14 
+ 
+21      [.hh] 
+22  C:  [Oka]y I was stereotypical [(in          )] 
+23  H:                             [ Ja, it’s not ] moneyed or poor. .hh 
+24      It’s: quite a South African phenomenon. 
+25      (.)  
+26  H:  There are so many guys, .hh beating up their wives in their  
+27      mansions man. 
+ 
+ The caller in this case begins by producing an account for violence against women 
+that associates it with the “modern” nature of “women’s rights” (line 2) and the degree to 
+which men accept such rights (lines 3 and 8), with the host (in contrast to the non-responses 
+in Excerpt 1) producing one weak acknowledgment token in overlap with this account (line 
+4) and a second (line 6) following a brief pause after the first possible completion of the 
+account (line 5). After continuing his account (following another brief pause in line 7), the 
+caller shifts to a racialized account that attributes such violence to the “different attitude 
+towards females” held by “non-white South African[s]” (lines 10-11). It is noteworthy that 
+the caller mitigates this claim by prefacing it with “I think” (line 8) and by displaying his co-
+membership in the category “non-white”, by using the pronoun “we” (line 10). However, in 
+the context of this discussion, this claim may be heard as suggesting that the “attitude” of this 
+group of people is associated with a proclivity toward committing violence against women.  
+While this suggestion is implied in the caller’s claim rather than explicitly stated, 
+evidence for this potential hearing is provided in the host’s disagreeing response, which 
+discounts the empirical basis of a link between race and violence against women. This 
+response is delayed by a brief pause (line 12), a turn-initial “well” (line 13), and a number of 
+repairs and restarts (line 13), which foreshadow the disaffiliation that follows. The 
+formulation of the response itself reflects further elements of its dispreferred character, as the 
+15 
+ 
+host accounts for his disagreement by describing a study produced by an advocacy 
+organization (lines 13-15 and 17-18), which he suggests disconfirms the caller’s claim of a 
+racial basis for women abuse (lines 20, 23-24 and 26-27). In the course of this account, he 
+positively assesses the work done by the organization (line 15), thereby producing it as an 
+authoritative source of information on the matter at hand. By attributing his opposition to the 
+caller’s claim to an organization that he treats as having this type of expertise on this topic, 
+the host produces his disagreement as deriving from empirical facts produced by a third-party 
+source, rather than as a matter of personal difference of opinion or antipathy between the 
+caller and himself.  
+It is also noteworthy that the host’s account of the study initially departs from the 
+racialized claim the caller has offered by introducing geographical location as a relevant 
+consideration, as he reports the study as finding such abuse to be equally prevalent in two 
+contrasting areas of Johannesburg, Sandton and Soweto (lines 17-18). Then, in producing the 
+upshots of this account (line 20), the host re-introduces race and suggests that the study 
+discounts it as an explanation for women abuse, before suggesting that the study also 
+discounts wealth as an explanation (line 23). He thus offers a generalized claim about the 
+inadequacy of a range of factors3 in accounting for this type of abuse, thereby mitigating his 
+disagreement with the caller by producing his account as disagreeing with a broader class of 
+(incorrect) claims that others might produce, rather than specifically targeting the caller and 
+his racialized claim. 
+Even before the host begins to produce the upshots of his account, the caller displays 
+acceptance of the account (line 19), before acknowledging (partly in overlap with the host’s 
+continuing production of the upshots) that he had been “stereotypical” in his prior claim (line 
+22). As a result, although the caller has not taken the opportunity to retract or revise his claim 
+provided by the initial delays in the host’s response (as was the case in Excerpt 1), he does 
+16 
+ 
+concede its incorrectness immediately after the first possible completion of the host’s 
+disagreeing account, and acknowledges his culpability in being “stereotypical” immediately 
+after the host’s production of the race-relevant upshot of his account. The caller thus 
+relatively quickly backs away from his claim and moves into alignment with the host, while 
+also treating his claim, in light of the host’s response, as being problematic on the basis of its 
+“stereotypical” depiction of “non-whites”. He thereby takes an upgraded, more direct position 
+against his own claim than the host has taken, which enables him to effectively achieve a 
+fuller retraction of his claim than he might have been able to had the host’s challenge been 
+more direct and/or personalized.4 The features of dispreference in the host’s response thus 
+facilitate the return to alignment between the caller and the host, and mitigate the potential 
+damage to the caller’s reputation that may otherwise have occurred. 
+ 
+Withdrawing the Benefit of the Doubt 
+In the excerpts examined in the previous section, and in a large majority of cases in the data 
+set as a whole, features of the responses to potentially racist actions provided the speaker of 
+the action with opportunities to back down from the action, thereby giving them the benefit of 
+the doubt with respect to the intent behind the action. Moreover, in these cases (and typically 
+throughout the data set), the original speakers made use of these opportunities, thereby 
+mitigating the reputational damage that may have resulted from immediate sanctioning or 
+direct accusations of racism, and arriving at aligning positions with their co-participants. In 
+this section, I examine a case in which the original speaker declines this type of opportunity 
+to back down, resulting in the progressive withdrawal of this benefit of the doubt. In this 
+case, a caller contributes to a discussion of challenges facing the South African education 
+system by using a previous caller’s mention of school busing as an occasion for producing a 
+17 
+ 
+racialized complaint about children being bused from the “black townships” in which they 
+live to attend schools in (implicitly) “white” areas. 
+ 
+Excerpt 3 [427, 702 4-7-08] 
+1 C: Okay now the w- the (.) what the lady was talking about  
+2  busing, 
+3  (.) 
+4 C: what is happening is that there are schools in the  
+5  township(s), .h but children are being bused from the  
+6  black townships, (.) into the suburbs, (0.5) uh which is  
+7  causing overcrowding in thee u:m (0.2) Model C schools  
+8  in the suburbs, .h and the schools in the townships are  
+9  being empty.  
+10  (0.2)  
+11 H: Bu- u- (.) bu: but I mean people have to go to school.  
+12  (0.4)  
+13 H: [  So:::  ]  
+14 C: [They have] to go to school. .h [What I]'m saying is they  
+15 H:                                 [Okay. ]  
+16 C: are busing black children, (.) from the black areas, .h  
+17  into the (0.4) erstwhi[le w]hite areas, into the Model  
+18 H:                       [.hh ] 
+19 C: [C schools, (they're overcrowding them,)] 
+20 H: [ Bu- i- I you know I'm sorry. Millie,  ] this:  
+21  [this black areas ] and-  
+22 C: [Yes I'm a racist.]  
+23  (0.2)  
+24 H: Ah well then I'm not go[nna talk to you any]more. 
+25 C:                        [(          ) No no-] ((call is  
+26  cut off))  
+18 
+ 
+27  (0.3)  
+28 H: Bye Millie. ((host takes next call)) 
+ 
+The host initial disagreement with the caller’s complaint exhibits a dispreferred turn 
+shape, shown by the short pause before his response (line 10), and the account he produces 
+for his disagreement (line 11). It is also noteworthy that he doesn’t take up the racialized 
+character of the complaint, instead displaying a problem with understanding the basis of the 
+caller’s complaint as she has formulated it. As in the excerpts shown in the previous section, 
+this gives the caller the opportunity to back down from the racialisation of her complaint 
+without it ever being explicitly treated as problematic. When the caller does not speak during 
+a relatively substantial pause (line 12), the host prompts an action from her using a stretched 
+stand-alone “So:::” (Raymond, 2004), and at the same time the caller begins a response in 
+overlap with the host (lines 13 and 14). However, rather than taking the opportunity to back 
+down, the caller reiterates her complaint in a more clearly racialized way, making it 
+unequivocally clear that she is complaining specifically about “black children from the black 
+areas” being bused into “erstwhile white areas” (lines 16-17).  
+The host then produces another disagreeing response, this time explicitly objecting to 
+the racialization of the caller’s complaint (lines 20-21). The sequential positioning of this 
+response, which begins in overlap with the caller’s ongoing turn (line 19), is characteristic of 
+a preferred turn shape, and thereby serves as a way of upgrading the host’s disagreement with 
+the caller (Schegloff, 2007). However, the host still partially treats what he is doing as a 
+dispreferred action by apologizing as he does it, and it is also slightly delayed by the restarts 
+at the beginning of his turn (line 20). The caller then speaks in overlap with the host, 
+apparently recognizing what aspect of her complaint he is specifically going to object to 
+19 
+ 
+before he actually mentions race, and admits to being “a racist” (line 22), thereby orienting to 
+the host as having been headed towards an accusation of this sort.  
+Following a pause in line 23, the host terminates his interaction with the caller, using 
+her admission of being a racist as a warrant for doing so (line 24), and completing this course 
+of action despite her overlapping protests (line 25). This action by the host again exhibits 
+characteristics of both preferred (shown by the unequivocal and unapologetic character of his 
+termination of the call, despite her objections) and dispreferred (shown by the slight delay 
+and the account he provides for ending the call) turn shapes. This suggests an orientation on 
+the host’s part to the cross-cutting preferences associated with responding to what has now 
+been produced as an unequivocally racist action. This orientation is also evident in cases in 
+which an action is treated as unequivocally racist from the outset, an instance of which I 
+examine in the following section. 
+ 
+When No Benefit of the Doubt is Given 
+Excerpt 4 shows an exchange involving a caller who has called to complain about comments 
+reportedly made by the president of the African National Congress Youth League (ANCYL; 
+the youth wing of South Africa’s ruling ANC party) about student demographics at a large 
+South African university. Specifically, the caller has (prior to the transcribed section of the 
+call shown below) complained about the ANCYL president stating that “every time he turns 
+his head around, he only sees Indians in the KwaZulu Natal University, and it's a little 
+Bombay”. Following the host’s (non-transcribed) commiserations with the caller’s complaint, 
+the caller launches an attack on “the African community”, which he thereby implicitly 
+associates with the ANCYL president about whom he has complained (lines 1 and 3-5). 
+ 
+Excerpt 4 [390, 702 6-19-07] 
+20 
+ 
+1   C:  You know people:, I don't- don't understand them you see,  
+2   H:  Mm¿  
+3   C:  U:h: especially the (a-) African community:, eh- they- eh-  
+4       they are brought up (0.2) with: hate, with no father  
+5       [care (or whatever.)]  
+6   H:  [  A::h   no   I    ] think that's going a little too far,  
+7       Jay. U::h with respect, I mean I understand your grievance  
+8       but I think when you start generalizing like that you  
+9       certainly uh .hhhh you're just incorrect.  
+10      (0.4)  
+11  H:  Basically. 
+12      (0.2)  
+13  H:  pshm ((chuckle)) .hhh You can't £generalize like that,£ you  
+14      can't say an £entire gro(h)up of people are such and such,  
+15      come on.£ .hh We all know that.  
+ 
+ Unlike the initial responses in the previous excerpts, the host’s response in this case 
+exhibits features typical of a preferred turn shape. Specifically, it is produced without delay, 
+slightly in overlap with the end of the caller’s turn, beginning with a stretched “A::h” (line 6) 
+that appears to be designed as an immediate marker of disagreement, rather than being a “pre-
+pausal” (Schegloff, 2007, p. 68) that serves only to delay the onset of the host’s turn. The 
+host goes on to chastise the caller for “generalizing like that” (lines 8 and 13-15), thereby 
+treating the broad claim the caller has made about “the African community” as the specific 
+basis for the his objections. In addition, the host’s use of the extreme case formulation “We 
+all know that” (line 15) serves as a claim that the caller has violated a norm of which “we all” 
+are aware, thus treating him as self-evidently culpable for his transgression. It also appears 
+that (as in Excerpt 3) the host terminates the phone connection with the caller, thereby 
+21 
+ 
+ensuring that he did not have the opportunity to respond to the host’s sanctioning. However, 
+(also as in Excerpt 3), the host’s response also exhibits a number of features typical of 
+dispreferred turn shapes, including mitigations (“I think” and “a little too far”; line 6), a claim 
+of “respect” for the caller (line 7), a concession of the validity of the caller’s grievance 
+against the ANCYL president (lines 7-8), and accounts for his disagreement and sanctioning 
+(lines 8-9 and 13-14).  
+This combination of features of preferred and dispreferred turn shapes in the host’s 
+response serve to display his disagreement as being strong and justified, but nonetheless as a 
+delicate matter and as reluctantly produced. As a result, and as in Excerpt 3, they are 
+evidence for an orientation on his part to the cross-cutting preferences associated with 
+responses to the kinds of culpably racist actions produced by the callers in these cases. 
+ 
+Conclusions 
+In this paper I have examined some features of responses to potentially racist actions, and 
+thus of everyday antiracism, in interactional settings. My analysis demonstrates some ways in 
+which features of turn shapes associated with preference organization provide co-participants 
+with resources for managing the cross-cutting preferences associated with responding to 
+potential racism. Specifically, features of responses that display disaffiliation or incipient 
+disaffiliation in dispreferred turn shapes (characterized by delays, mitigations, accounts, etc.) 
+can provide prior speakers with structural opportunities to recognize and repair the racially 
+problematic nature of their actions. When they take up these opportunities, a return to mutual 
+alignment can be achieved without speakers directly or explicitly being accused of racism, 
+thereby avoiding or mitigating both the potential reputational damage and the threats to 
+solidarity between themselves and their co-participants that may be associated with such 
+accusations. On the other hand, when speakers pursue or upgrade a problematic action, 
+22 
+ 
+responses can progressively take on more features of preferred turn shapes. Alternatively, 
+features of preferred turn shapes can be employed immediately, without first providing prior 
+speakers with opportunities to repair their actions. In cases in which such features are 
+employed, they serve as resources for displaying strong disaffiliation from what are thereby 
+treated as unquestionably racist actions. However, responses in these cases may nonetheless 
+include features of dispreferred actions, thereby displaying an orientation to the threats to 
+solidarity resulting from such responses and treating them as reluctantly produced. 
+ These findings demonstrate the moment-by-moment decision-making and 
+collaborative work required for actions to be realized as, for example, potentially racist but 
+with no malicious intent (and thus not warranting direct antiracist intervention), versus 
+culpably and maliciously racist (and thus requiring intervention). That is, the data 
+demonstrate how responders to racialized actions contingently decide, based on the details of 
+the action they are responding to, whether it is an instance of (merely) potential racism, as 
+opposed to unequivocal racism, and may adjust this assessment as further evidence for one 
+possibility or the other emerges. Conversely, potential transgressors can choose whether to 
+revise, withdraw, pursue, etc. their actions based on the details of unfolding responses, and 
+what these details reveal about the likely reputational outcomes of the options available to 
+them. As a result, the findings reveal some of the complex details of everyday antiracism in 
+action in the unfolding of naturally occurring interactional exchanges, and thus of the situated 
+production and management of “race trouble”. 
+ 
+Acknowledgments 
+I would like to thank Doug Maynard and Geoff Raymond for making the observations that 
+eventually evolved into the analysis reported on in this paper, and Brett Bowman and the 
+anonymous reviewers of the paper for their helpful comments on an earlier draft. I am also 
+23 
+ 
+indebted to Liz Stokoe for her help and support in organizing the ICCA-14 panel for which 
+the paper was originally prepared, and to Liz Stokoe, Jessica Robles and Tanya Romaniuk for 
+their work on the panel. 
+ 
+Author’s note 
+Earlier versions of portions of this paper were presented at the 4th International Conference 
+on Conversation Analysis (ICCA-14) in Los Angeles in June 2014. 
+ 
+Declaration of Conflicting Interests 
+The author declared no potential conflicts of interests with respect to the authorship and/or 
+publication of this article. 
+ 
+Funding 
+The author received no financial support for the research and/or authorship of this article. 
+ 
+Notes 
+1. I use the term “possibly racist” (rather than simply “racist”) in view of the way in which 
+characterizations of actions as instances of racism, although they may be based on a range 
+of common features that make them recognizable (and thus analyzable) as such, are 
+subject to (re)negotiation by participants in the moment-by-moment unfolding of 
+interactions (cf. Durrheim, et al., 2011). This is also consistent with the stance described 
+by Schegloff (1996, pp. 116-117) with respect to the characterization of an object of 
+analysis as “a possible X”. 
+24 
+ 
+2. cf. Whitehead’s (2012) discussion of speakers’ similar treatment of racial categories as a 
+basis for authority in taking positions on race-relevant matters; also see Cresswell, et al. 
+(2014). 
+3. In doing this, the host produces associations between particular racial categories, 
+geographical locations, and class statuses – see Whitehead (2013, 2014) for further 
+analyses of these phenomena. 
+4. The mitigated and inexplicit character of the caller’s claim may have also contributed to 
+his subsequent ability to back down from it. 
+ 
+References 
+Augoustinos, M., & Every, D. (2007). Contemporary racist discourse: Taboos against racism 
+and making racist accusations. In A. Weatherall, B. M. Watson & C. Gallois (Eds.), 
+Language, discourse and social psychology (pp. 233-254). London, UK: Palgrave 
+Macmillan. 
+Barnes, B., Palmary, I., & Durrheim, K. (2001). The denial of racism: The role of humor, 
+personal experience, and self-censorship. Journal of Language and Social 
+Psychology, 20, 321-338.  
+Beach, W. A. (1993). Transitional regularities for "casual" "okay" usages. Journal of 
+Pragmatics, 19, 325-352.  
+Clayman, S. E. (1992). Footing in the achievement of neutrality: The case of news interview 
+discourse. In P. Drew & J. Heritage (Eds.), Talk at work: Interaction in institutional 
+settings (pp. 163-198). Cambridge, UK: Cambridge University Press. 
+Condor, S., Figgou, L., Abell, J., Gibson, S., & Stevenson, C. (2006). "They're not racist..." 
+Prejudice, denial, mitigation and suppression in dialogue. British Journal of Social 
+Psychology, 45, 441-462.  
+25 
+ 
+Cresswell, C., Whitehead, K. A., & Durrheim, K. (2014). The anatomy of "race trouble" in 
+online interactions. Ethnic and Racial Studies, 37, 2512-2528.  
+Durrheim, K., Mtose, X., & Brown, L. (2011). Race trouble: Race, identity and inequality in 
+post-apartheid South Africa. Scottsville, South Africa: University of KwaZulu-Natal 
+Press. 
+Essed, P. (1991). Understanding everyday racism: An interdisciplinary theory. Newbury 
+Park, CA: Sage. 
+Gardner, R. (1997). The conversation object "Mm": A weak and variable acknowledging 
+token. Research on Language and Social Interaction, 30, 131-156.  
+Guerin, B. (2003). Combating prejudice and racism: New interventions from a functional 
+analysis of racist language. Journal of Community and Applied Social Psychology, 13, 
+29-45.  
+Heritage, J. (1984). Garfinkel and ethnomethodology. Cambridge, UK: Polity. 
+Heritage, J., & Raymond, G. (2005). The terms of agreement: Indexing epistemic authority 
+and subordination in talk-in-interaction. Social Psychology Quarterly, 68, 15-38.  
+Hester, S., & Fitzgerald, R. (1999). Category, predicate and contrast. Some organisational 
+features of a radio phone in show. In P. L. Jalbert (Ed.), Media studies: 
+Ethnomethodological approaches (pp. 171-193). Boston, MA: University Press of 
+America. 
+Hutchby, I. (1991). The organisation of talk on talk radio. In P. Scannell (Ed.), Broadcast talk 
+(pp. 119-137). London, UK: Sage. 
+Hyers, L. L. (2007). Resisting prejudice every day: Exploring women's assertive responses to 
+anti-Black racism, anti-Semitism, heterosexism, and sexism. Sex Roles, 56, 1-12.  
+Jefferson, G. (1990). List construction as a task and resource. In G. Psathas (Ed.), Interaction 
+competence (pp. 63-92). Lanham, MD: University Press of America. 
+26 
+ 
+Jefferson, G. (2004). "At first I thought": A normalizing device for extraordinary events In G. 
+H. Lerner (Ed.), Conversation analysis: Studies from the first generation (pp. 131-
+167). Philadelphia, PA: John Benjamins. 
+Lerner, G. H. (1996). Finding "face" in the preference structures of talk-in-interaction. Social 
+Psychology Quarterly, 59, 303-321.  
+Mitchell, M., Every, D., & Ranzijn, R. (2011). Everyday antiracism in interpersonal contexts: 
+Constraining and facilitating factors for "speaking up" against racism. Journal of 
+Community and Applied Social Psychology, 21, 329-341.  
+Pomerantz, A. (1978). Compliment responses: Notes on the co-operation of multiple 
+constraints. In J. Schenkein (Ed.), Studies in the organization of conversational 
+interaction (pp. 79-112). New York, NY: Academic Press. 
+Pomerantz, A. (1984). Agreeing and disagreeing with assessments: Some features of 
+preferred/dispreferred turn shapes. In J. M. Atkinson & J. Heritage (Eds.), Structures 
+of social action: Studies in conversation analysis (pp. 57-101). Cambridge, UK: 
+Cambridge University Press. 
+Raymond, G. (2004). Prompting action: The stand-alone "so" in ordinary conversation. 
+Research on Language and Social Interaction, 37, 185-218.  
+Robles, J. S. (2015). Extreme case (re)formulation as a practice for making hearably-racist 
+talk repairable. Journal of Language and Social Psychology.  
+Sacks, H., Schegloff, E. A., & Jefferson, G. (1974). A simplest systematics for the 
+organization of turn taking in conversation. Language, 50, 696-735.  
+Schegloff, E. A. (1996). Turn organization: One intersection of grammar and interaction. In 
+E. Ochs, S. A. Thompson & E. A. Schegloff (Eds.), Interaction and grammar (pp. 52-
+133). Cambridge, UK: Cambridge University Press. 
+27 
+ 
+Schegloff, E. A. (2007). Sequence organization in interaction: A primer in conversation 
+analysis (Vol. 1). Cambridge, UK: Cambridge University Press. 
+Stokoe, E. (2015). Identifying and responding to possible -isms in institutional encounters: 
+Alignment, impartiality and the implications for communication training. Journal of 
+Language and Social Psychology.  
+Whitehead, K. A. (2012). Racial categories as resources and constraints in everyday 
+interactions: Implications for non-racialism in post-apartheid South Africa. Ethnic and 
+Racial Studies, 35, 1248-1265.  
+Whitehead, K. A. (2013). Race-class intersections as interactional resources in post-apartheid 
+South Africa. In C. M. Pascale (Ed.), Social inequality and the politics of 
+representation: A global landscape (pp. 49-63). Newbury Park, CA: Sage. 
+Whitehead, K. A. (2014). Racialized place references in everyday interactions. Paper 
+presented at the 4th Apartheid Archive Conference, Pretoria, South Africa. 
+ 
+Author Biography 
+Kevin Whitehead is an Associate Professor in the Department of Psychology at the 
+University of the Witwatersrand, Johannesburg. His research employs an 
+ethnomethodological, conversation analytic approach to examine race and other categorical 
+forms of social organization and inequality, focusing on ways in which racial and other social 
+categories are used, reproduced and resisted in talk-in-interaction.  
+ 

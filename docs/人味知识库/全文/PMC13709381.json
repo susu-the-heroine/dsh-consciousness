@@ -1,0 +1,10 @@
+{
+ "title": "Optimal Sensor Placement for Bridge Structural Health Monitoring: A Systematic Review with Bibliometric Analysis and Methodological Quality Assessment.",
+ "authors": "Rodríguez Wlack GL, Fuentes N, Peña Fritz Á, Crawford B, Soto R.",
+ "year": "2026",
+ "journal": "Sensors (Basel, Switzerland)",
+ "doi": "10.3390/s26206661",
+ "pmid": "42944524",
+ "pmcid": "PMC13709381",
+ "abstract": "Optimal Sensor Placement (OSP) is a key step in the design of Structural Health Monitoring (SHM) systems for bridges and requires combining civil engineering constraints with computational optimization. This systematic review, conducted following PRISMA 2020 guidelines, analyzes 49 studies through bibliometric analysis, a synthesis of optimization strategies, sensor modalities and research motivations, and a tailored Quality Assessment rubric. Accordingly, its quantitative results describe publication patterns, coded categories and methodological quality scores rather than bridge-specific dynamic parameters. Accelerometers are the most frequently used sensor modality, and improving data quality is the most frequently reported motivation (45 of 49 studies), whereas cost reduction, communication efficiency and energy efficiency appear in 11 studies each. Only 15 studies included experimental or field validation on physical bridges, and robustness against uncertainty was the weakest quality dimension, revealing a persistent simulation-to-reality gap. To organize these findings, the Sensor Placement Optimization Maturity Levels (SPO-ML) typology and a Unified Operational Decision Framework are proposed as literature-informed, preliminary guidance relating algorithm selection to structural complexity and network constraints. Future OSP research should prioritize field validation, robustness under uncertainty, and reproducible reporting of bridge and instrumentation characteristics."
+}

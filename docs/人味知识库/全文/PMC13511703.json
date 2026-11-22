@@ -1,0 +1,10 @@
+{
+ "title": "Technological Advances in Molecular Diagnostic Methods for Hereditary Diseases in Preconception and Prenatal Settings.",
+ "authors": "Kong D, Zhao J, Diao H, Qiu S, Peng Y, Liu T.",
+ "year": "2026",
+ "journal": "Current issues in molecular biology",
+ "doi": "10.3390/cimb48080756",
+ "pmid": "42651755",
+ "pmcid": "PMC13511703",
+ "abstract": "Precision prevention and control of genetic diseases represent a major public health challenge. This paper provides a structured narrative review of advances in molecular diagnostic technologies across the preconception, preimplantation, and prenatal stages over the past five years. In the preconception phase, next-generation sequencing has become central to carrier screening, while long-read sequencing significantly enhances detection capabilities for complex variants. In the preimplantation phase, research has increasingly focused on non-invasive preimplantation genetic testing, leveraging maternal contamination quantification algorithms and deep learning models to address DNA contamination challenges. During the prenatal phase, stratified diagnostic strategies combining chromosomal microarray analysis and whole-exome sequencing have improved the diagnostic evaluation of fetal structural anomalies. Simultaneously, non-invasive prenatal testing is expanding to include microdeletion/duplication and monogenic disease screening, though positive screening results still require invasive diagnostic confirmation. Future trends lie in multi-technology integration, multi-omics data fusion, and artificial intelligence-assisted decision-making, aiming to enhance resolution while balancing health-economic considerations and ethical standards."
+}

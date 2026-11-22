@@ -1,0 +1,10 @@
+{
+ "title": "Uncanny Valley in Conversation? Effects of Internal and External Human-Likeness on Intimacy and Trust.",
+ "authors": "Jang J, Lee JG, Song H.",
+ "year": "2026",
+ "journal": "Behavioral sciences (Basel, Switzerland)",
+ "doi": "10.3390/bs16101794",
+ "pmid": "42938512",
+ "pmcid": "PMC13701690",
+ "abstract": "Conversational agents built on large language models increasingly converse like humans, expressing emotions and disclosing their own experiences. Human-likeness, however, has been studied largely as a matter of appearance-how human an agent looks. Language now also lets an agent display internal human-likeness by conveying an inner life, raising the question of how deeply an AI should express its own experiences-and whether that depends on its appearance. In a 2 (appearance: machine-like vs. human-like) × 3 (self-disclosure: none vs. low vs. high) between-subjects experiment, 193 university students completed a single, brief, fully scripted counseling session with an AI counselor prototype and evaluated it on six measures, controlling for prior mind perception. The effects of disclosure depth depended on appearance: with the machine-like counselor, intimacy and social presence peaked at low and declined at high disclosure, with trust and perceived authenticity showing the same direction-an uncanny valley-like pattern-whereas with the human-like counselor evaluations generally rose with depth. Deeper disclosure was not judged more inappropriate, and moderated mediation analyses showed that deepening disclosure from low to high reduced anthropomorphism-and, through it, intimacy and trust-only for the machine-like counselor. Internal and external human-likeness were read together: how deeply an AI should speak about itself cannot be decided apart from how it looks."
+}
