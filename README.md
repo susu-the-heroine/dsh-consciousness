@@ -221,4 +221,4 @@ max 更吃 token。不知道选哪个就留在 high。
 
 ## 许可
 
-PolyForm Noncommercial 1.0.0，只许非商业用。见 [LICENSE](LICENSE)。
+PolyForm Noncommercial 1.0.0（SPDX：`PolyForm-Noncommercial-1.0.0`），只许非商业用。见 [LICENSE](LICENSE)。
