@@ -1,7 +1,7 @@
 {
   "name": "dsh-consciousness2",
-  "version": "0.5.1",
-  "description": "零依赖的长期记忆：四万六千行、六十四项能力，22.9 MB 向量模型在包里。记事、记情绪、也记你怎么说话",
+  "version": "0.5.4",
+  "description": "识海：给任何 AI 装上一份长期记忆。DSH 里是插件，别处走 MCP 或 OpenAI 兼容接口，同一个内核。",
   "author": {
     "name": "苏苏侠",
     "url": "https://gitee.com/susu-the-heroine"
@@ -80,7 +80,9 @@
     "emotion",
     "forgetting-curve",
     "忆",
-    "识海"
+    "识海",
+    "mcp",
+    "agent"
   ],
   "bugs": {
     "url": "https://github.com/susu-the-heroine/dsh-consciousness/issues"
@@ -88,5 +90,8 @@
   "bin": {
     "sea-api": "bin/sea-api.mjs",
     "sea-check": "bin/sea-check.mjs"
+  },
+  "scripts": {
+    "audit:parity": "node scripts/parity-inventory.mjs && node scripts/parity-audit.mjs"
   }
 }
