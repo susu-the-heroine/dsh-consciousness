@@ -2,7 +2,7 @@
 
 **作者：苏苏侠** · [gitee.com/susu-the-heroine](https://gitee.com/susu-the-heroine)
 
-给 DSH 用的长期记忆，已过 L5 运行验证。零依赖，不用 Python、不联网，四万六千行，六十四项能力，模型 22.9 MB 塞在包里，一个字都不出你这台电脑。
+给任何 AI 用的长期记忆：DSH 里是插件，Claude Desktop / Cursor / Cline 走 MCP，其余聊天软件走 OpenAI 兼容反代，同一个内核、同一套数据。已过 L5 运行验证。零依赖，不用 Python、不联网，四万六千行，六十四项能力，模型 22.9 MB 塞在包里，一个字都不出你这台电脑。
 
 记的比谁都细：事实、情绪、口头禅、句末点不点标点。查的比谁都准：三路召回，重排取前五，每条带原话和日期。
 
@@ -11,6 +11,25 @@
 ---
 
 **问题、反馈、要新版本，进群：1134693158**
+
+## 两种装法
+
+**给任何 AI（MCP / 反代）**
+
+```
+npm i -g shihai-mcp
+shihai start
+```
+
+页面在 `http://127.0.0.1:7788`。MCP 客户端把 `shibai.mjs mcp` 挂上就是 23 个工具；聊天软件把 baseURL 指到 `http://127.0.0.1:7789/v1` 就是带记忆的对话。
+
+**给 DSH（插件）**
+
+```
+dsh plugin --profile desktop add dsh-consciousness2
+```
+
+---
 
 ## 装
 
