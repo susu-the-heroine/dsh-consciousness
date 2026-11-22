@@ -195,3 +195,7 @@ $pkg | ConvertTo-Json -Depth 20 | Set-Content "$profile\package.json" -Encoding 
 ## 要发版
 
 照 [docs/发版清单.md](docs/发版清单.md) 从上往下做，一步都别省。
+
+## 装完之后
+
+侧边栏进识海，工具栏上多一个「性格」：左边看她自己说话像不像人，右边看她从你身上学走的习惯。默认关，想开在 `~/.dsh/consciousness-tuning.json` 里写 `{"styleOn": 1}`。
