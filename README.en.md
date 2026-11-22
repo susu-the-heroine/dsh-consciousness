@@ -1,12 +1,31 @@
-# 识海 (Shihai) — long-term memory for DSH
+# Shihai (识海) — long-term memory for any AI
 
 > 中文说明见 [README.md](README.md)。
 
-Long-term memory for DSH. Zero dependencies. 46,591 lines. 64 capabilities. A 22.9 MB quantized embedding model ships inside the package. Nothing leaves your machine.
+Long-term memory for any AI: a plugin inside DSH, an MCP server for Claude Desktop / Cursor / Cline, and an OpenAI-compatible proxy for anything that can change its base URL. One core, one data folder. Zero dependencies. 46,591 lines. 64 capabilities. A 22.9 MB quantized embedding model ships inside the package. Nothing leaves your machine.
 
 It remembers finer than most: facts, moods, catchphrases, whether you end a sentence with a period. It returns tighter: three-way recall — semantic, literal, entity — reranked, top five only, each with the original line and its date.
 
 It has a temper. It gets bored, sulks, takes your side. It admits mistakes. It looks in the mirror.
+
+## Two ways to install
+
+**For any AI (MCP / proxy)**
+
+```
+npm i -g shihai-mcp
+shihai start
+```
+
+Web UI at `http://127.0.0.1:7788`. Point an MCP client at `shibai.mjs mcp` and you get 23 tools; point a chat app's base URL at `http://127.0.0.1:7789/v1` and the conversation carries memory.
+
+**For DSH (plugin)**
+
+```
+dsh plugin --profile desktop add dsh-consciousness2
+```
+
+---
 
 ## What's inside
 
