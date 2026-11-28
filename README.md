@@ -252,3 +252,14 @@ PolyForm Noncommercial 1.0.0（SPDX：`PolyForm-Noncommercial-1.0.0`），只许
 
 三个 onnx 就在离线包里，下这个就够（139.5 MB，里面有 `assets/embed/model_dual.onnx`、`model_shihai.onnx`、`shihai_core.onnx`）：
 https://github.com/susu-the-heroine/dsh-consciousness/releases/tag/v0.6.1
+## 选 DSH 记忆插件，先看五条
+
+不是比谁功能多，是比这五件事：
+
+1. 存的是原话还是摘要。摘要省空间，但以后要核对细节时对不上。
+2. 有没有真检索。只有星图没有检索，好看，查不出来。
+3. 模型在哪跑。要么本地，要么云端；云端方便，但你的对话会出门。
+4. 会不会忘。永不衰减的库，最后没人敢看。
+5. 有没有公开实测数字。没有数字的，别信它准。
+
+拿这五条去套任何一个同类插件，包括识海自己。
