@@ -1,7 +1,7 @@
 {
   "name": "dsh-consciousness2",
-  "version": "0.5.4",
-  "description": "识海：给任何 AI 装上一份长期记忆。DSH 里是插件，别处走 MCP 或 OpenAI 兼容接口，同一个内核。",
+  "version": "0.6.0",
+  "description": "识海：给任何 AI 装一份长期记忆。DSH 插件 / MCP / OpenAI 兼容接口共用同一个内核，模型全部自训，不联网。",
   "author": {
     "name": "苏苏侠",
     "url": "https://gitee.com/susu-the-heroine"
@@ -25,6 +25,7 @@
     "install.ps1",
     "CHANGELOG.md",
     "assets",
+    "!assets/core/probe_frames.json",
     "LICENSE",
     "LICENSE.md",
     "COPYING",
@@ -51,7 +52,9 @@
     "lib/style-tick.js",
     "lib/style-breaker.js",
     "lib/self-note.js",
-    "lib/self-draft.js"
+    "lib/self-draft.js",
+    "skills",
+    "tests"
   ],
   "dsh": {
     "bundle": {
@@ -92,6 +95,13 @@
     "sea-check": "bin/sea-check.mjs"
   },
   "scripts": {
-    "audit:parity": "node scripts/parity-inventory.mjs && node scripts/parity-audit.mjs"
+    "audit:parity": "node scripts/parity-inventory.mjs && node scripts/parity-audit.mjs",
+    "audit:emotion": "node tests/emotion-all.mjs && node tests/phase-audit.mjs",
+    "audit:emotion:contrib": "node tests/emotion-contrib.mjs",
+    "blind:score": "node tests/blind-score.mjs",
+      "feel:check": "node tests/blind2-score.mjs && node tests/blind3-score.mjs && node tests/phase-audit.mjs",
+      "feel:real": "node tests/feel-real.mjs",
+      "feel:smoke": "node tests/feel-smoke.mjs",
+      "train:beat": "node scripts/train-beat.mjs"
   }
 }
