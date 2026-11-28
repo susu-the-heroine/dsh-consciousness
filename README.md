@@ -243,3 +243,7 @@ max 更吃 token。不知道选哪个就留在 high。
 ## 许可
 
 PolyForm Noncommercial 1.0.0（SPDX：`PolyForm-Noncommercial-1.0.0`），只许非商业用。见 [LICENSE](LICENSE)。
+
+## 外部文章
+
+- 掘金：给 DSH 写了个长期记忆插件，检索模型是自己训的 —— https://juejin.cn/post/7713039104955170866
