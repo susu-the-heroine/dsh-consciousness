@@ -247,3 +247,4 @@ PolyForm Noncommercial 1.0.0（SPDX：`PolyForm-Noncommercial-1.0.0`），只许
 ## 外部文章
 
 - 掘金：给 DSH 写了个长期记忆插件，检索模型是自己训的 —— https://juejin.cn/post/7713039104955170866
+- CSDN：DSH 长期记忆插件识海安装与使用 —— https://blog.csdn.net/2601_97591200/article/details/171555807
