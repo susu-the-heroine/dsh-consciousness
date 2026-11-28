@@ -1,7 +1,7 @@
 {
   "name": "dsh-consciousness2",
-  "version": "0.6.0",
-  "description": "识海：给任何 AI 装一份长期记忆。DSH 插件 / MCP / OpenAI 兼容接口共用同一个内核，模型全部自训，不联网。",
+  "version": "0.6.1",
+  "description": "识海：给 DSH 用的长期记忆插件。一条记忆一个神经元，会亮会暗会沉；也有 MCP 与 OpenAI 兼容接口，同一个自训内核。不装 Python、不联网。",
   "author": {
     "name": "苏苏侠",
     "url": "https://gitee.com/susu-the-heroine"
