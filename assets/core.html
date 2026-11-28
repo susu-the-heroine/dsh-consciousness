@@ -1,0 +1,463 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>识海内核 · 运行</title>
+<style>
+  *{margin:0;padding:0;box-sizing:border-box}
+  html,body{height:100%;overflow:hidden;background:#02040a}
+  body{
+    font-family:"Cascadia Mono","JetBrains Mono",Consolas,"Sarasa Mono SC",monospace;
+    color:#7fe3ff;
+    -webkit-font-smoothing:antialiased;
+  }
+  canvas#rain{position:fixed;inset:0;z-index:1;opacity:.42}
+  #stage{position:fixed;inset:0;z-index:2;display:grid;
+    grid-template-columns:1fr 360px;
+    grid-template-rows:auto 1fr auto;
+    gap:18px;padding:26px 30px 20px}
+  /* 顶部：当前这句话 */
+  #head{grid-column:1/2;grid-row:1/2}
+  #kicker{font-size:10px;letter-spacing:.42em;color:#2f6d8c}
+  #sentence{
+    font-size:27px;line-height:1.42;color:#d8f6ff;
+    text-shadow:0 0 22px rgba(80,210,255,.42),0 0 3px rgba(140,235,255,.7);
+    word-break:break-all;min-height:78px;max-width:min(78ch,100%)}
+  #sentence span{opacity:0;transition:opacity .09s}
+  #sentence span.on{opacity:1}
+  /* 主体：代码雨文本块（真数据格式化） */
+  #stream{grid-column:1/2;grid-row:2/3;overflow:hidden;
+    font-size:11.5px;line-height:1.62;color:#3f8ba8;
+    mask-image:linear-gradient(180deg,transparent,#000 12%,#000 84%,transparent)}
+  #stream div{white-space:pre}
+  #stream .hi{color:#8ce9ff}
+  #stream .em{color:#f0c682}
+  #stream .neg{color:#9c8fd6}
+  #stream .dim{color:#1f4a5c}
+  /* 右侧：四层注意力 */
+  #side{grid-column:2/3;grid-row:1/3;display:flex;flex-direction:column;gap:14px}
+  .lyr{border:1px solid rgba(60,150,190,.2);border-radius:8px;padding:9px 10px;
+    background:linear-gradient(180deg,rgba(6,20,32,.72),rgba(3,10,18,.72));
+    transition:border-color .3s,box-shadow .3s}
+  .lyr.live{border-color:rgba(120,230,255,.6);box-shadow:0 0 26px rgba(70,200,255,.22)}
+  /* 2026-11-28（他说两块风格不一样）：右栏几块一律均分高度、格子铺满，
+     不然第二块会被 256 个方格的自然高度撑大，和上面那块对不上。 */
+  #side .lyr{flex:1 1 0;min-height:0;display:flex;flex-direction:column}
+  #side .lyr .grid{flex:1 1 auto;min-height:0;grid-template-rows:repeat(16,1fr)}
+  #side .lyr .grid i{aspect-ratio:auto;height:100%;width:100%}
+  .lyr .tag{font-size:9.5px;letter-spacing:.3em;color:#2d6a86;margin-bottom:6px;display:flex;justify-content:space-between}
+  .lyr.live .tag{color:#9fe9ff}
+  .grid{display:grid;grid-template-columns:repeat(16,1fr);gap:1px}
+  .grid i{display:block;aspect-ratio:1;background:#0a1a26;border-radius:1px}
+  /* 底部：三个头 */
+  #heads{grid-column:1/3;grid-row:3/4;display:flex;gap:26px;align-items:flex-end;
+    border-top:1px solid rgba(60,150,190,.16);padding-top:12px}
+  .head{flex:0 0 auto}
+  .head .n{font-size:9.5px;letter-spacing:.3em;color:#2d6a86;margin-bottom:5px}
+  .head .v{font-size:19px;color:#d8f6ff;letter-spacing:.04em}
+  .head .bar{height:3px;width:150px;background:rgba(50,120,160,.18);margin-top:6px;border-radius:2px;overflow:hidden}
+  .head .bar i{display:block;height:100%;width:0%;background:linear-gradient(90deg,#3fb4e0,#a8f0ff);transition:width .3s}
+  #verdict{margin-left:auto;text-align:right}
+  #verdict .v{font-size:26px;color:#e9fbff;letter-spacing:.16em}
+  #clock{position:fixed;right:30px;top:26px;z-index:3;font-size:10px;letter-spacing:.34em;color:#2b637e}
+  body.no-att #side{display:none}
+  body.no-att #stage{grid-template-columns:1fr}
+  #backBtn{
+    position:fixed;top:18px;right:22px;z-index:8;display:inline-flex;align-items:center;gap:7px;
+    padding:8px 15px;border-radius:9px;cursor:pointer;
+    background:rgba(8,24,36,.78);border:1px solid rgba(120,225,255,.34);
+    color:#bfe9ff;font:12px/1 "Cascadia Mono",Consolas,monospace;letter-spacing:.16em;
+    text-decoration:none;transition:.16s}
+  #backBtn:hover{background:rgba(20,64,92,.9);border-color:rgba(120,235,255,.7);
+    box-shadow:0 0 20px rgba(80,210,255,.28)}
+  #boot{position:fixed;inset:0;z-index:9;display:flex;align-items:center;justify-content:center;
+    background:#02040a;color:#4aa8c8;font-size:12px;letter-spacing:.4em;transition:opacity .5s}
+  #boot.off{opacity:0;pointer-events:none}
+</style>
+</head>
+<body>
+<canvas id="rain"></canvas>
+<div id="clock">SHIHAI CORE · RUNNING</div>
+
+<div id="stage">
+  <div id="head">
+    <div id="kicker">现在判这一句</div>
+    <a id="backBtn" href="/consciousness?sea=main" title="回到识海（Esc）">← 返回识海</a>
+<div id="sentence"></div>
+  </div>
+
+  <div id="stream"></div>
+
+  <div id="side"></div>
+
+  <div id="heads">
+    <div class="head"><div class="n">情绪</div><div class="v" id="hEmo">—</div><div class="bar"><i id="bEmo"></i></div></div>
+    <div class="head"><div class="n">写入闸</div><div class="v" id="hGate">—</div><div class="bar"><i id="bGate"></i></div></div>
+    <div class="head"><div class="n">人话</div><div class="v" id="hHuman">—</div><div class="bar"><i id="bHuman"></i></div></div>
+    <div id="verdict"><div class="n" style="font-size:9.5px;letter-spacing:.3em;color:#2d6a86">判定</div><div class="v" id="vMain">—</div></div>
+  </div>
+</div>
+
+<div id="boot">载入识海内核…</div>
+
+<script>
+const EL = id => document.getElementById(id)
+const SIDE = EL('side'), STREAM = EL('stream'), SENT = EL('sentence')
+
+let FRAMES = []
+let fi = 0
+
+/* ---------- 背景数字雨：全是真的 token id 和 logit ---------- */
+const cv = EL('rain'), cx = cv.getContext('2d')
+let W = 0, H = 0, dpr = Math.min(devicePixelRatio || 1, 2)
+const COLS = 78
+let drops = []
+function sizeRain(){
+  W = innerWidth; H = innerHeight
+  cv.width = W * dpr; cv.height = H * dpr
+  cv.style.width = W + 'px'; cv.style.height = H + 'px'
+  cx.setTransform(dpr, 0, 0, dpr, 0, 0)
+  drops = Array.from({length: COLS}, (_, i) => ({
+    x: i * (W / COLS), y: Math.random() * H, v: 26 + Math.random() * 62,
+  }))
+}
+sizeRain()
+addEventListener('resize', sizeRain)
+
+let pool = []   // 要撒下去的字符池，从真数据里来
+function refillPool(f){
+  const p = []
+  if (Array.isArray(f.ids)) for (const id of f.ids) p.push(String(id))
+  // 2026-11-28：按海现算的帧没有 att/act（模型不导出中间层），这里以前直接取 [3]，
+  // 一取就 null 崩，整页什么都不显示。有才用，没有就跳过。
+  if (Array.isArray(f.act) && Array.isArray(f.act[3])) {
+    for (const v of f.act[3].slice(0, 20)) p.push(v.toFixed(1))
+  }
+  if (Array.isArray(f.att) && Array.isArray(f.att[3])) {
+    for (const v of f.att[3].flat().slice(0, 40)) p.push(v.toFixed(3))
+  }
+  for (const v of f.emotion) p.push((v >= 0 ? '+' : '') + v.toFixed(2))
+  for (const v of f.gate) p.push((v >= 0 ? '+' : '') + v.toFixed(2))
+  pool = p.length ? p : ['0']
+}
+
+function rainTick(){
+  cx.fillStyle = 'rgba(2,4,10,.13)'
+  cx.fillRect(0, 0, W, H)
+  cx.font = '11px "Cascadia Mono",monospace'
+  for (const d of drops){
+    const ch = pool[(Math.random() * pool.length) | 0] || '0'
+    const a = .10 + Math.random() * .30
+    cx.fillStyle = `rgba(90,205,240,${a})`
+    cx.fillText(ch, d.x, d.y)
+    d.y += d.v * 0.016
+    if (d.y > H + 20){ d.y = -20; d.v = 26 + Math.random() * 62 }
+  }
+  requestAnimationFrame(rainTick)
+}
+rainTick()
+
+/* ---------- 四层注意力格子 ---------- */
+let cells = []
+function buildSide(){
+  SIDE.innerHTML = ''
+  cells = []
+  // 没有 att 的海：右栏不空着，改成「这一句的 token 方块」——每个格子是一个真实 token id
+  if (!Array.isArray(FRAMES[0] && FRAMES[0].att)) {
+    const box = document.createElement('div')
+    box.className = 'lyr'
+    box.innerHTML = `<div class="tag"><span>这一句的 token</span><span class="pct">—</span></div>
+      <div class="grid"></div>`
+    const g = box.querySelector('.grid')
+    const arr = []
+    for (let i = 0; i < 256; i++){ const c = document.createElement('i'); g.appendChild(c); arr.push(c) }
+    SIDE.appendChild(box)
+    cells.push({ box, arr, pct: box.querySelector('.pct') })
+    // 第二块：整个库，一条记忆一格
+    const box2 = document.createElement('div')
+    box2.className = 'lyr'
+    box2.innerHTML = `<div class="tag"><span>库里全部记忆</span><span class="pct">—</span></div>
+      <div class="grid"></div>`
+    const g2 = box2.querySelector('.grid')
+    const arr2 = []
+    for (let i = 0; i < 256; i++){ const c = document.createElement('i'); g2.appendChild(c); arr2.push(c) }
+    SIDE.appendChild(box2)
+    cells.push({ box: box2, arr: arr2, pct: box2.querySelector('.pct'), kind: 'lib' })
+    return
+  }
+  for (let l = 0; l < 4; l++){
+    const box = document.createElement('div')
+    box.className = 'lyr'
+    box.innerHTML = `<div class="tag"><span>层 ${l + 1} / 4</span><span class="pct">—</span></div>
+      <div class="grid"></div>`
+    const g = box.querySelector('.grid')
+    const arr = []
+    for (let i = 0; i < 256; i++){
+      const c = document.createElement('i')
+      g.appendChild(c); arr.push(c)
+    }
+    SIDE.appendChild(box)
+    cells.push({ box, arr, pct: box.querySelector('.pct') })
+  }
+}
+
+let _libTimer = null
+function startLibPulse(){
+  if (_libTimer) return
+  _libTimer = setInterval(() => { try { pulseLib() } catch {} }, 1800)
+}
+function pulseLib(){
+  const cell = cells.find((c) => c && c.kind === 'lib')
+  if (!cell) return
+  for (let n = 0; n < 22; n++){
+    const i = (Math.random() * 256) | 0
+    const c = cell.arr[i]
+    if (!c) continue
+    c.style.boxShadow = '0 0 15px rgba(170,245,255,.98)'
+    c.style.filter = 'brightness(1.7)'
+    setTimeout(() => { c.style.boxShadow = 'none'; c.style.filter = 'none' }, 460)
+  }
+}
+
+function paintLib(){
+  const cell = cells.find((c) => c && c.kind === 'lib')
+  if (!cell) return
+  // 数据来源：优先用后端给的整库分布；没有就用页面手上的帧——
+  // 一帧就是库里的一条记忆，拿它的闸门分数上色，立刻就能亮，不用等重启。
+  let lib = (FRAMES[0] && Array.isArray(FRAMES[0].lib)) ? FRAMES[0].lib : []
+  if (!lib.length) {
+    lib = FRAMES.map((f) => {
+      const g = Array.isArray(f.gate) ? (Number(f.gate[1]) - Number(f.gate[0])) : 0
+      return Math.max(0, Math.min(1, (g + 3) / 9))
+    })
+  }
+  if (!lib.length) { cell.pct.textContent = '—'; return }
+  cell.box.classList.add('live')
+  // 2026-11-28（他要「和老块一样颜色」）：老块的规则是 id % 3000 直接定明暗，
+  // 这里就照抄同一条：拿每条记忆首 token 的 id 当明暗。公式、发光阈值全都一样。
+  for (let i = 0; i < 256; i++){
+    const fr = FRAMES[i % (FRAMES.length || 1)] || {}
+    const id = Number((Array.isArray(fr.ids) && fr.ids[0]) || 0)
+    const v = Math.min(1, (id % 3000) / 3000)
+    const r = Math.round(20 + v * 120), gg = Math.round(70 + v * 175), bb = Math.round(110 + v * 145)
+    cell.arr[i].style.background = `rgb(${r},${gg},${bb})`
+    cell.arr[i].style.boxShadow = v > .55 ? `0 0 ${(v * 9).toFixed(1)}px rgba(120,235,255,.8)` : 'none'
+  }
+  cell.pct.textContent = lib.length + ' 条'
+  startLibPulse()
+}
+
+// 2026-11-28：两块方块必须同一套颜色。以前 token 块用 id、库块用闸门分，
+// 公式各写各的，出来一亮一灰。这里统一成一个函数，各自拉满 0~1。
+// 2026-11-28（他要求「都用上面那块老块的颜色」）：
+// 这就是原来注意力格子那组数，一个字没改。两块共用，保证观感一致。
+function paintCell(el, v){
+  if (!el) return
+  const t = Math.max(0, Math.min(1, Number(v) || 0))
+  const r = Math.round(20 + t * 120)
+  const g = Math.round(70 + t * 175)
+  const b = Math.round(110 + t * 145)
+  el.style.background = `rgb(${r},${g},${b})`
+  el.style.boxShadow = t > .55 ? `0 0 ${(t * 9).toFixed(1)}px rgba(120,235,255,.8)` : 'none'
+  el.style.filter = 'none'
+}
+// 2026-11-28（他说新块没老块好看）：老块的明暗是满幅铺开的，
+// 新块原来按数值线性归一，大半格挤在中灰，看着就“平”。
+// 改成按名次铺开——每格都拿到 0~1 的不同位置，对比度跟老块一致。
+function normalize(arr){
+  const n = arr.length
+  if (!n) return []
+  const idx = arr.map((v, i) => [Number(v) || 0, i]).sort((a, b) => a[0] - b[0])
+  const out = new Array(n)
+  for (let r = 0; r < n; r++) out[idx[r][1]] = n === 1 ? 0.6 : r / (n - 1)
+  return out
+}
+
+function paintLayer(l, att){
+  const c = cells[l]
+  c.box.classList.add('live')
+  let mx = 0
+  for (const row of att) for (const v of row) if (v > mx) mx = v
+  if (mx <= 0) mx = 1
+  const flat = att.flat()
+  for (let i = 0; i < 256; i++){
+    const v = flat[i] / mx
+    const r = Math.round(20 + v * 120)
+    const gg = Math.round(70 + v * 175)
+    const b = Math.round(110 + v * 145)
+    c.arr[i].style.background = `rgb(${r},${gg},${b})`
+    c.arr[i].style.boxShadow = v > .55 ? `0 0 ${(v * 9).toFixed(1)}px rgba(120,235,255,.8)` : 'none'
+  }
+  c.pct.textContent = (mx * 100).toFixed(0) + '%'
+}
+
+/* ---------- 代码流：把真数据打成代码块 ---------- */
+function line(txt, cls){
+  const d = document.createElement('div')
+  if (cls) d.className = cls
+  d.textContent = txt
+  STREAM.appendChild(d)
+  while (STREAM.childNodes.length > 240) STREAM.removeChild(STREAM.firstChild)
+  STREAM.scrollTop = STREAM.scrollHeight
+}
+
+/* ---------- 一句话的完整播放 ---------- */
+const sleep = ms => new Promise(r => setTimeout(r, ms))
+
+async function play(f){
+  refillPool(f)
+
+  // 1. 落字
+  SENT.innerHTML = ''
+  // 2026-11-28（他说「这字太多了」）：长记忆不整段铺，截到 46 字，余下的用省略号
+  const _full = String(f.text || '')
+  const _shown = _full.length > 46 ? _full.slice(0, 46) + '…' : _full
+  const chars = [..._shown]
+  const spans = chars.map(ch => {
+    const s = document.createElement('span')
+    s.textContent = ch
+    SENT.appendChild(s)
+    return s
+  })
+  line(`> encode("${_shown.slice(0, 30)}")`, 'dim')
+  line(`  tokens=${f.len}  seq=64  dim=512  layers=4  heads=8`, 'dim')
+  for (let i = 0; i < spans.length; i++){
+    spans[i].classList.add('on')
+    if (i % 3 === 0) await sleep(11)
+  }
+  await sleep(120)
+
+  // 2. token id
+  line(`  ids = [${f.ids.join(', ')}]`, 'hi')
+  // 只有一格（token 方块）时别按四格循环，以前这里直接崩
+  for (let l = 0; l < cells.length; l++) if (cells[l]) cells[l].box.classList.remove('live')
+  await sleep(150)
+
+  // 3. 四层（只有带 att 的帧才画；按每个海现算的帧没有 att，老实说没有）
+  if (Array.isArray(f.att) && f.att.length === 4 && Array.isArray(f.act)) {
+    for (let l = 0; l < 4; l++){
+      line(`  layer[${l}]  qkv 64x512  att 8x64x64  ->  softmax  ->  ff 512->2048->512`, 'dim')
+      paintLayer(l, f.att[l])
+      const act = f.act[l]
+      const peak = Math.max(...act)
+      line(`    att.mean=${(f.att[l].flat().reduce((a, b) => a + b, 0) / 256).toFixed(4)}  act.peak=${peak.toFixed(2)}@t${act.indexOf(peak)}`, 'hi')
+      await sleep(230)
+    }
+  } else {
+    // 用真实 token id 点亮方块：id 越大越亮，位置按顺序铺
+    if (cells[0] && Array.isArray(f.ids)) {
+      cells[0].box.classList.add('live')
+      // 老块的算法一个字都不动：id % 3000 直接当明暗，别套名次归一
+      const ids = f.ids
+      for (let i = 0; i < 256; i++){
+        const id = Number(ids[i % (ids.length || 1)]) || 0
+        const v = Math.min(1, (id % 3000) / 3000)
+        const r = Math.round(20 + v * 120), gg = Math.round(70 + v * 175), bb = Math.round(110 + v * 145)
+        cells[0].arr[i].style.background = `rgb(${r},${gg},${bb})`
+        cells[0].arr[i].style.boxShadow = v > .55 ? `0 0 ${(v * 9).toFixed(1)}px rgba(120,235,255,.8)` : 'none'
+      }
+      cells[0].pct.textContent = ids.length + ' tok'
+    }
+    line('  这一海不导出中间层，右栏放的是真实 token', 'dim')
+  }
+  await sleep(120)
+
+  // 4. 三个头
+  const LAB = ['neg', 'neu', 'pos']
+  const bi = f.emotion.indexOf(Math.max(...f.emotion))
+  const emo = LAB[bi]
+  const gate = f.gate[1] - f.gate[0]
+  const human = f.human[1] - f.human[0]
+
+  line(`  head.emotion  [${f.emotion.map(v => v.toFixed(2)).join(', ')}]  -> ${emo}`, bi === 2 ? 'em' : (bi === 0 ? 'neg' : 'hi'))
+  line(`  head.gate     [${f.gate.map(v => v.toFixed(2)).join(', ')}]  -> ${gate.toFixed(3)}`, gate >= 0 ? 'em' : 'neg')
+  line(`  head.human    [${f.human.map(v => v.toFixed(2)).join(', ')}]  -> ${human.toFixed(3)}`, human >= 0 ? 'em' : 'neg')
+
+  EL('hEmo').textContent = emo.toUpperCase()
+  // 情绪条：按真概率给宽度，夹在 4%~100% 之间，别一直贴满
+  const _emoW = Math.max(4, Math.min(100, Math.abs(Number(f.emotion[bi]) || 0) / 3 * 100))
+  EL('bEmo').style.width = _emoW.toFixed(0) + '%'
+  EL('hGate').textContent = gate >= 0 ? '值得记' : '不值得'
+  EL('bGate').style.width = Math.min(100, Math.abs(gate) / 5 * 100).toFixed(0) + '%'
+  EL('hHuman').textContent = human >= 0 ? '像人话' : '像报告'
+  EL('bHuman').style.width = Math.min(100, Math.abs(human) / 5 * 100).toFixed(0) + '%'
+
+  const verdict = gate >= 0 ? (human >= 0 ? '记下' : '记下·像报告') : '不记'
+  EL('vMain').textContent = verdict
+  line(`  => ${verdict}`, 'em')
+  line('', 'dim')
+
+  await sleep(680)
+}
+
+/* ---------- 主循环：自动跑，不停 ---------- */
+async function loop(){
+  while (true){
+    const list = FRAMES
+    if (!list.length) { await sleep(1000); continue }
+    const f = list[fi % list.length]
+    fi++
+    try { await play(f) } catch (e) {
+      console.error(e)
+      try { EL('clock').textContent = 'ERR ' + (e && e.message ? e.message : e) } catch {}
+      await sleep(500)
+    }
+  }
+}
+
+/* 2026-11-28（他要「循环播放库并且实时更新」）：
+   每 30 秒重拉一次帧。库里新写的记忆会进来，删掉的自然消失。
+   不打断正在播的那一句——只在播完一帧的间隙替换数组。 */
+let refreshing = false
+async function refresh(){
+  if (refreshing) return
+  refreshing = true
+  try {
+    const r = await fetch('/consciousness/core/frames', { cache: 'no-store' })
+    if (r.ok) {
+      const next = await r.json()
+      if (Array.isArray(next) && next.length) { FRAMES = next; try { paintLib() } catch {} }
+    }
+  } catch {}
+  refreshing = false
+  setTimeout(refresh, 30000)
+}
+
+async function boot(){
+  try {
+    const r = await fetch('/consciousness/core/frames', { cache: 'no-store' })
+    if (!r.ok) throw new Error('HTTP ' + r.status)
+    FRAMES = await r.json()
+  } catch (e){
+    EL('boot').textContent = '载入失败：' + e.message
+    return
+  }
+  if (!FRAMES.length){ EL('boot').textContent = '没有帧数据'; return }
+  try {
+    buildSide()
+    paintLib()
+    // 遮罩直接撤掉：不靠 transition，省得半透明盖着看不出东西
+    EL('boot').classList.add('off')
+    EL('boot').style.display = 'none'
+    // 先立刻完整播一帧，再进循环
+    try { await play(FRAMES[0]) ; fi = 1 } catch (e) { console.error(e) }
+    loop()
+    refresh()
+  } catch (e) {
+    EL('boot').textContent = '出错：' + (e && e.message ? e.message : e)
+    console.error(e)
+  }
+}
+try {
+  document.getElementById('backBtn').addEventListener('click', function(ev){
+    if (history.length > 1) { ev.preventDefault(); history.back() }
+  })
+  addEventListener('keydown', function(ev){ if (ev.key === 'Escape') location.href = '/consciousness?sea=main' })
+} catch {}
+boot()
+</script>
+
+
+</body>
+</html>
