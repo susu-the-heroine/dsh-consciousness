@@ -391,6 +391,8 @@ function _applyInner(ctx) {
       ctx.on('webserver/index-inject', (table) => {
         try {
           if (!Array.isArray(table)) return
+          // 2026-11-28：挂件脚本关掉了（INJECT_TEXT 已置空），别往表里推空条目
+          if (!INJECT_TEXT) return
           if (table.some((r) => r && typeof r.text === 'string' && r.text.includes('/dsh-consciousness/widget.js'))) return
           table.push({ kind: 'script', placement: 'body', text: INJECT_TEXT })
         } catch {
